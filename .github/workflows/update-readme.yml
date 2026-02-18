@@ -1,0 +1,52 @@
+name: Update README
+
+on:
+  schedule:
+    # Run every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch:  # Allow manual trigger
+  push:
+    branches: [main]
+    paths:
+      - 'templates/**'
+      - 'update_readme.py'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Clean generated files
+        run: rm -rf README.md cves.json cve-pipeline-status.json ghsa-advisories.json ghsa-advisories-full.json cve-records/
+
+      - name: Update README
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 update_readme.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git status --porcelain README.md cves.json ghsa-advisories.json cve-pipeline-status.json cve-records/ | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md ghsa-advisories.json ghsa-advisories-full.json cves.json cve-records/ cve-pipeline-status.json repo-only-ghsas.json
+          git commit -m "chore: update CVE/GHSA tracker [$(date -u '+%Y-%m-%d %H:%M UTC')]"
+          git push

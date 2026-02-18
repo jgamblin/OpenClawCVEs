@@ -1,0 +1,205 @@
+# 🛡️ OpenClaw CVE & Security Advisory Tracker
+
+> **Automated security tracking for [OpenClaw](https://github.com/openclaw/openclaw)** (formerly Clawdbot / Moltbot) — the open-source personal AI assistant.
+
+---
+
+<table>
+<tr>
+<td align="center" width="25%">
+
+### 🔴 {{ counts.total_ghsas }}
+**Total Security<br>Advisories**
+
+</td>
+<td align="center" width="25%">
+
+### 🟠 {{ counts.total_cves }}
+**CVE IDs<br>Assigned**
+
+</td>
+<td align="center" width="25%">
+
+### 🟢 {{ counts.cves_published }}
+**CVEs Published<br>in cvelistV5**
+
+</td>
+<td align="center" width="25%">
+
+### ⏳ {{ counts.cves_reserved }}
+**CVEs Reserved<br>(Pending)**
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td align="center" width="20%">
+
+**{{ counts.severity_critical }}** Critical
+
+</td>
+<td align="center" width="20%">
+
+**{{ counts.severity_high }}** High
+
+</td>
+<td align="center" width="20%">
+
+**{{ counts.severity_medium }}** Medium
+
+</td>
+<td align="center" width="20%">
+
+**{{ counts.severity_low }}** Low
+
+</td>
+<td align="center" width="20%">
+
+**{{ counts.ghsas_no_cve }}** Awaiting CVE
+
+</td>
+</tr>
+</table>
+
+<sub>Last updated: {{ updated_at }} · Updates every hour via [GitHub Actions](.github/workflows/update-readme.yml)</sub>
+
+---
+
+## Project Identity
+
+| Field | Value |
+|-------|-------|
+| **Current Name** | OpenClaw |
+| **Previous Names** | Moltbot (second name), Clawdbot (original name) |
+| **Repository** | [openclaw/openclaw](https://github.com/openclaw/openclaw) |
+| **npm Package** | `openclaw` (formerly `clawdbot`) |
+| **License** | MIT |
+
+<details>
+<summary><strong>Search terms for CVE discovery</strong></summary>
+
+To find all CVEs, search for: `openclaw`, `clawdbot`, `moltbot`, `clawhub`, `pkg:npm/clawdbot`, `pkg:npm/openclaw`
+
+</details>
+
+---
+
+## CVEs Published in cvelistV5 ({{ counts.cves_published }})
+
+These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) repository:
+
+| CVE ID | Severity | CVSS | Title | CWE | Published |
+|--------|----------|------|-------|-----|-----------|
+{% for cve in published_cves -%}
+| [{{ cve.cve_id }}]({{ cve.advisory_url }}) | **{{ cve.severity }}** | {{ cve.cvss }} | {{ cve.title }} | {{ cve.cwes }} | {{ cve.date_published }} |
+{% endfor %}
+<details>
+<summary><strong>Detailed CVE Analysis (click to expand)</strong></summary>
+
+{% for cve in published_cves %}
+### {{ cve.cve_id }} — {{ cve.title }}
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | {{ cve.cvss }} ({{ cve.severity }}) — `{{ cve.vector_string }}` |
+| **CWE** | {{ cve.cwes_long }} |
+| **Affected** | {{ cve.affected_versions }} |
+| **Vendor/Product** | {{ cve.vendor }} / {{ cve.product }} |
+| **Advisory** | [{{ cve.ghsa_id }}]({{ cve.advisory_url }}) |
+{% if cve.cisa_ssvc %}| **CISA SSVC** | {{ cve.cisa_ssvc }} |{% endif %}
+
+{{ cve.description }}
+
+{% if cve.naming_note %}> **Naming note:** {{ cve.naming_note }}
+{% endif %}
+{% if cve.references %}**References:**
+{% for ref in cve.references %}- [{{ ref.name }}]({{ ref.url }})
+{% endfor %}{% endif %}
+---
+
+{% endfor %}
+</details>
+
+---
+
+## CVE Publication Pipeline
+
+Of {{ counts.total_cves }} GHSAs with CVE IDs, **{{ counts.cves_published }}** are fully published and **{{ counts.cves_reserved }}** remain `RESERVED`.
+
+```
+┌─────────────┐     ┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
+│  1. GitHub   │     │  2. GHSA goes   │     │  3. CNA submits  │     │ 4. cvelistV5│
+│  reserves    │ ──► │  public with    │ ──► │  CVE record via  │ ──► │ bot commits │
+│  CVE ID      │     │  CVE ID shown   │     │  CVE Services    │     │ JSON file   │
+│ (RESERVED)   │     │                 │     │  (PUBLISHED)     │     │             │
+└─────────────┘     └─────────────────┘     └──────────────────┘     └─────────────┘
+```
+
+| CVE ID | State | cvelistV5 | GHSA Published | CNA |
+|--------|-------|-----------|----------------|-----|
+{% for item in pipeline_status -%}
+| {{ item.cve_id }} | {% if item.state == "PUBLISHED" %}**PUBLISHED**{% else %}RESERVED{% endif %} | {% if item.in_cvelist %}✅{% else %}❌{% endif %} | {{ item.ghsa_published }} | {{ item.cna or "—" }} |
+{% endfor %}
+---
+
+## All Security Advisories ({{ counts.total_ghsas }})
+
+### GHSAs with CVE IDs ({{ counts.total_cves }})
+
+| GHSA | CVE | Severity | Title | Published |
+|------|-----|----------|-------|-----------|
+{% for a in ghsas_with_cve -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id }} | {{ a.severity | upper }} | {{ a.title }} | {{ a.published }} |
+{% endfor %}
+### GHSAs Without CVE — Potential Future CVEs ({{ counts.ghsas_indexed_no_cve }})
+
+| GHSA | Severity | Title | Published |
+|------|----------|-------|-----------|
+{% for a in ghsas_no_cve -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {% if a.severity | lower in ["critical"] %}**{{ a.severity | upper }}**{% else %}{{ a.severity | upper }}{% endif %} | {{ a.title }} | {{ a.published }} |
+{% endfor %}
+{% if repo_only_ghsas %}
+### Repo-Only Advisories (~{{ counts.repo_only }} more)
+
+These advisories are listed on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but lack Advisory DB package mappings:
+
+| GHSA | Severity | Title |
+|------|----------|-------|
+{% for a in repo_only_ghsas -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {% if a.severity | lower in ["critical"] %}**{{ a.severity | upper }}**{% else %}{{ a.severity | upper }}{% endif %} | {{ a.title }} |
+{% endfor %}{% endif %}
+
+---
+
+## Naming Inconsistencies
+
+| CVE | vendor | product | packageURL | Description Names |
+|-----|--------|---------|------------|-------------------|
+{% for n in naming_issues -%}
+| {{ n.cve_id }} | `{{ n.vendor }}` | `{{ n.product }}` | {{ n.purl or "—" }} | {{ n.desc_names }} |
+{% endfor %}
+---
+
+## Vulnerability Categories
+
+| Category | Count | Examples |
+|----------|-------|----------|
+{% for cat in vuln_categories -%}
+| **{{ cat.name }}** | {{ cat.count }} | {{ cat.examples }} |
+{% endfor %}
+---
+
+## Data Sources
+
+| Source | URL |
+|--------|-----|
+| CVE List v5 | [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) |
+| GitHub Advisory DB | [github.com/advisories](https://github.com/advisories?query=openclaw) |
+| Repo Security Tab | [openclaw/openclaw/security](https://github.com/openclaw/openclaw/security/advisories) |
+| CVE Services API | `https://cveawg.mitre.org/api/cve-id/{CVE-ID}` |
+
+---
+
+<sub>This tracker is auto-generated by [`update_readme.py`](update_readme.py). Data files: [`ghsa-advisories.json`](ghsa-advisories.json), [`cves.json`](cves.json), [`cve-pipeline-status.json`](cve-pipeline-status.json)</sub>

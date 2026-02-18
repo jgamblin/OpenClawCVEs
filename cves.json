@@ -1,228 +1,42 @@
 [
   {
-    "cveId": "CVE-2026-25475",
-    "state": "PUBLISHED",
-    "datePublished": "2026-02-04T19:55:36.228Z",
-    "dateUpdated": "2026-02-05T14:32:36.477Z",
-    "assignerShortName": "GitHub_M",
-    "title": "OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction",
-    "description": "OpenClaw is a personal AI assistant. Prior to version 2026.1.30, the isValidMedia() function in src/media/parse.ts allows arbitrary file paths including absolute paths, home directory paths, and directory traversal sequences. An agent can read any file on the system by outputting MEDIA:/path/to/file, exfiltrating sensitive data to the user/channel. This issue has been patched in version 2026.1.30.",
-    "vendor": "openclaw",
-    "product": "openclaw",
-    "packageURL": "",
-    "affectedVersions": [
-      {
-        "version": "< 2026.1.30",
-        "status": "affected"
-      }
-    ],
-    "cvss": 6.5,
-    "severity": "MEDIUM",
-    "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
-    "cwes": [
-      {
-        "cweId": "CWE-200",
-        "description": "CWE-200: Exposure of Sensitive Information to an Unauthorized Actor"
-      },
-      {
-        "cweId": "CWE-22",
-        "description": "CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r8g4-86fx-92mq"
-    ],
-    "advisory": "GHSA-r8g4-86fx-92mq",
-    "cisaSsvc": [
-      {
-        "Exploitation": "none"
-      },
-      {
-        "Automatable": "no"
-      },
-      {
-        "Technical Impact": "partial"
-      }
-    ]
-  },
-  {
-    "cveId": "CVE-2026-25253",
-    "state": "PUBLISHED",
-    "datePublished": "2026-02-01T22:34:17.590Z",
-    "dateUpdated": "2026-02-03T15:32:57.600Z",
-    "assignerShortName": "mitre",
-    "title": null,
-    "description": "OpenClaw (aka clawdbot or Moltbot) before 2026.1.29 obtains a gatewayUrl value from a query string and automatically makes a WebSocket connection without prompting, sending a token value.",
-    "vendor": "OpenClaw",
-    "product": "OpenClaw",
-    "packageURL": "pkg:npm/clawdbot",
-    "affectedVersions": [
-      {
-        "lessThan": "2026.1.29",
-        "status": "affected",
-        "version": "0",
-        "versionType": "custom"
-      }
-    ],
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
     "cvss": 8.8,
-    "severity": "HIGH",
-    "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-    "cwes": [
-      {
-        "cweId": "CWE-669",
-        "description": "CWE-669 Incorrect Resource Transfer Between Spheres"
-      }
-    ],
-    "references": [
-      "https://depthfirst.com/post/1-click-rce-to-steal-your-moltbot-data-and-keys",
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq",
-      "https://openclaw.ai/blog",
-      "https://ethiack.com/news/blog/one-click-rce-moltbot",
-      "https://x.com/0xacb/status/2016913750557651228"
-    ],
-    "advisory": "",
-    "cisaSsvc": [
-      {
-        "Exploitation": "poc"
-      },
-      {
-        "Automatable": "no"
-      },
-      {
-        "Technical Impact": "total"
-      }
-    ]
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
-    "cveId": "CVE-2026-25157",
-    "state": "PUBLISHED",
-    "datePublished": "2026-02-04T19:55:38.493Z",
-    "dateUpdated": "2026-02-05T14:32:32.289Z",
-    "assignerShortName": "GitHub_M",
-    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
-    "description": "OpenClaw is a personal AI assistant. Prior to version 2026.1.29, there is an OS command injection vulnerability via the Project Root Path in sshNodeCommand. The sshNodeCommand function constructed a shell script without properly escaping the user-supplied project path in an error message. When the cd command failed, the unescaped path was interpolated directly into an echo statement, allowing arbitrary command execution on the remote SSH host. The parseSSHTarget function did not validate that SSH target strings could not begin with a dash. An attacker-supplied target like -oProxyCommand=... would be interpreted as an SSH configuration flag rather than a hostname, allowing arbitrary command execution on the local machine. This issue has been patched in version 2026.1.29.",
-    "vendor": "openclaw",
-    "product": "openclaw",
-    "packageURL": "",
-    "affectedVersions": [
-      {
-        "version": "< 2026.1.29",
-        "status": "affected"
-      }
-    ],
-    "cvss": 7.8,
+    "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
-    "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-    "cwes": [
-      {
-        "cweId": "CWE-78",
-        "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585"
-    ],
-    "advisory": "GHSA-q284-4pvr-m585",
-    "cisaSsvc": [
-      {
-        "Exploitation": "none"
-      },
-      {
-        "Automatable": "no"
-      },
-      {
-        "Technical Impact": "total"
-      }
-    ]
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "date_published": "2026-02-01",
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
-    "cveId": "CVE-2026-25593",
-    "state": "PUBLISHED",
-    "datePublished": "2026-02-06T20:56:02.824Z",
-    "dateUpdated": "2026-02-09T15:27:48.829Z",
-    "assignerShortName": "GitHub_M",
-    "title": "OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply",
-    "description": "OpenClaw is a personal AI assistant. Prior to 2026.1.20, an unauthenticated local client could use the Gateway WebSocket API to write config via config.apply and set unsafe cliPath values that were later used for command discovery, enabling command injection as the gateway user. This vulnerability is fixed in 2026.1.20.",
-    "vendor": "openclaw",
-    "product": "openclaw",
-    "packageURL": "",
-    "affectedVersions": [
-      {
-        "version": "< 2026.1.20",
-        "status": "affected"
-      }
-    ],
+    "cve_id": "CVE-2026-25593",
+    "severity": "HIGH",
     "cvss": 8.4,
-    "severity": "HIGH",
-    "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
-    "cwes": [
-      {
-        "cweId": "CWE-78",
-        "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
-      },
-      {
-        "cweId": "CWE-306",
-        "description": "CWE-306: Missing Authentication for Critical Function"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-g55j-c2v4-pjcg"
-    ],
-    "advisory": "GHSA-g55j-c2v4-pjcg",
-    "cisaSsvc": [
-      {
-        "Exploitation": "none"
-      },
-      {
-        "Automatable": "no"
-      },
-      {
-        "Technical Impact": "total"
-      }
-    ]
+    "title": "OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply",
+    "date_published": "2026-02-06",
+    "ghsa_id": "GHSA-g55j-c2v4-pjcg"
   },
   {
-    "cveId": "CVE-2026-24763",
-    "state": "PUBLISHED",
-    "datePublished": "2026-02-02T21:53:07.640Z",
-    "dateUpdated": "2026-02-04T16:53:56.345Z",
-    "assignerShortName": "GitHub_M",
-    "title": "Authenticated Command Injection in OpenClaw Docker Execution via PATH Environment Variable",
-    "description": "OpenClaw (formerly  Clawdbot) is a personal AI assistant you run on your own devices. Prior to 2026.1.29, a command injection vulnerability existed in OpenClaw’s Docker sandbox execution mechanism due to unsafe handling of the PATH environment variable when constructing shell commands. An authenticated user able to control environment variables could influence command execution within the container context. This vulnerability is fixed in 2026.1.29.",
-    "vendor": "clawdbot",
-    "product": "clawdbot",
-    "packageURL": "",
-    "affectedVersions": [
-      {
-        "version": "< 2026.1.29",
-        "status": "affected"
-      }
-    ],
-    "cvss": 8.8,
+    "cve_id": "CVE-2026-25157",
     "severity": "HIGH",
-    "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-    "cwes": [
-      {
-        "cweId": "CWE-78",
-        "description": "CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v",
-      "https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.1.29"
-    ],
-    "advisory": "GHSA-mc68-q9jw-2h3v",
-    "cisaSsvc": [
-      {
-        "Exploitation": "none"
-      },
-      {
-        "Automatable": "no"
-      },
-      {
-        "Technical Impact": "total"
-      }
-    ]
+    "cvss": 7.8,
+    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
+    "date_published": "2026-02-04",
+    "ghsa_id": "GHSA-q284-4pvr-m585"
+  },
+  {
+    "cve_id": "CVE-2026-25475",
+    "severity": "MEDIUM",
+    "cvss": 6.5,
+    "title": "OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction",
+    "date_published": "2026-02-04",
+    "ghsa_id": "GHSA-r8g4-86fx-92mq"
   }
 ]

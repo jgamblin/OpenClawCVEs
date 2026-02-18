@@ -2,6 +2,10 @@
 # fetch-openclaw-cves.sh — Search the CVEProject/cvelistV5 GitHub repo for
 # CVEs related to OpenClaw (and its previous names) and output a JSON summary.
 #
+# ⚠️  DEPRECATED: This script is superseded by update_readme.py, which fetches
+# all CVE/GHSA data and renders the README automatically. Kept for reference
+# and ad-hoc manual queries.
+#
 # Requirements: gh (GitHub CLI, authenticated), jq, base64
 # Usage: ./fetch-openclaw-cves.sh [--json] [--raw]
 #
