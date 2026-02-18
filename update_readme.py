@@ -364,6 +364,19 @@ def parse_cve_record(record: dict) -> dict:
 
 REPO_ONLY_GHSAS_FILE = ROOT / "repo-only-ghsas.json"
 
+SEVERITY_BADGES = {
+    "critical": "![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square)",
+    "high": "![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square)",
+    "medium": "![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square)",
+    "moderate": "![Medium](https://img.shields.io/badge/MODERATE-e17055?style=flat-square)",
+    "low": "![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square)",
+}
+
+
+def severity_badge(severity: str) -> str:
+    """Return a Shields.io badge for a severity level."""
+    return SEVERITY_BADGES.get(severity.lower(), severity.upper())
+
 
 def load_repo_only_ghsas() -> list[dict]:
     """Load repo-only GHSAs from the external JSON file."""
@@ -563,6 +576,47 @@ def collect_data(local_only: bool = False) -> dict:
 
     total_ghsas = len(ghsas) + len(repo_only_ghsas)
 
+    # ── Add severity badges to all records ──
+    for cve in published_cves:
+        cve["severity_badge"] = severity_badge(cve.get("severity", ""))
+
+    all_ghsas_combined = ghsas_with_cve + ghsas_no_cve
+    for g in all_ghsas_combined:
+        g["severity_badge"] = severity_badge(g.get("severity", ""))
+    for g in repo_only_ghsas:
+        g["severity_badge"] = severity_badge(g.get("severity", ""))
+
+    # ── Severity-grouped advisory lists ──
+    all_ghsas_sorted = sorted(all_ghsas_combined, key=lambda x: x["published"], reverse=True)
+    ghsas_critical_high = [g for g in all_ghsas_sorted if g["severity"].lower() in ("critical", "high")]
+    ghsas_medium = [g for g in all_ghsas_sorted if g["severity"].lower() in ("medium", "moderate")]
+    ghsas_low = [g for g in all_ghsas_sorted if g["severity"].lower() == "low"]
+
+    # ── Insights ──
+    categorized_total = sum(c["count"] for c in vuln_categories)
+    top_cwe = None
+    if categorized_total > 0:
+        top_cat = max(vuln_categories, key=lambda c: c["count"])
+        top_cwe = {
+            "name": top_cat["name"],
+            "count": top_cat["count"],
+            "total": categorized_total,
+            "pct": round(top_cat["count"] / categorized_total * 100),
+        }
+
+    sync_rate_pct = round(cves_published_count / len(all_cve_ids) * 100) if all_cve_ids else 0
+
+    # Date range of advisories
+    all_dates = [g["published"] for g in ghsas if g.get("published")]
+    if all_dates:
+        earliest = min(all_dates)[:10]
+        latest = max(all_dates)[:10]
+        advisory_date_range = f"{earliest} → {latest}"
+    else:
+        advisory_date_range = "N/A"
+
+    high_impact_pct = round((severity_critical + severity_high) / total_ghsas * 100) if total_ghsas else 0
+
     return {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "counts": {
@@ -585,21 +639,28 @@ def collect_data(local_only: bool = False) -> dict:
             {"critical": 0, "high": 1, "medium": 2, "moderate": 2, "low": 3}.get(x["severity"].lower(), 4),
             x["published"]
         )),
+        "ghsas_critical_high": ghsas_critical_high,
+        "ghsas_medium": ghsas_medium,
+        "ghsas_low": ghsas_low,
         "repo_only_ghsas": repo_only_ghsas,
         "naming_issues": naming_issues,
         "vuln_categories": vuln_categories,
+        "top_cwe": top_cwe,
+        "sync_rate_pct": sync_rate_pct,
+        "advisory_date_range": advisory_date_range,
+        "high_impact_pct": high_impact_pct,
     }
 
 
-def render_readme(data: dict) -> str:
-    """Render the README from the Jinja2 template."""
+def render_template(template_name: str, data: dict) -> str:
+    """Render a Jinja2 template with the given data."""
     env = Environment(
         loader=FileSystemLoader(str(TEMPLATES_DIR)),
         keep_trailing_newline=True,
         trim_blocks=True,
         lstrip_blocks=True,
     )
-    template = env.get_template("README.md.j2")
+    template = env.get_template(template_name)
     return template.render(**data)
 
 
@@ -616,13 +677,20 @@ def main():
           f"{data['counts']['total_cves']} CVEs assigned, "
           f"{data['counts']['cves_published']} published in cvelistV5")
 
-    readme_content = render_readme(data)
-
+    # Render README
+    readme_content = render_template("README.md.j2", data)
     readme_path = ROOT / "README.md"
     with open(readme_path, "w") as f:
         f.write(readme_content)
-
     print(f"\n✅ README.md updated ({len(readme_content)} bytes)")
+
+    # Render ADVISORIES.md
+    advisories_content = render_template("ADVISORIES.md.j2", data)
+    advisories_path = ROOT / "ADVISORIES.md"
+    with open(advisories_path, "w") as f:
+        f.write(advisories_content)
+    print(f"✅ ADVISORIES.md updated ({len(advisories_content)} bytes)")
+
     print(f"   Last updated: {data['updated_at']}")
 
 

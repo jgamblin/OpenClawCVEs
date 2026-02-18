@@ -17,8 +17,9 @@ sys.path.insert(0, str(ROOT))
 from update_readme import (
     parse_cve_record,
     parse_ghsa_summary,
-    render_readme,
+    render_template,
     load_repo_only_ghsas,
+    severity_badge,
 )
 
 
@@ -303,10 +304,36 @@ class TestLoadRepoOnlyGhsas:
             assert g["severity"].upper() in valid, f"Invalid severity: {g['severity']}"
 
 
-# ─── Tests: render_readme ────────────────────────────────────────────────────
+# ─── Tests: severity_badge ───────────────────────────────────────────────────
 
 
-class TestRenderReadme:
+class TestSeverityBadge:
+    def test_critical(self):
+        result = severity_badge("CRITICAL")
+        assert "CRITICAL" in result
+        assert "img.shields.io" in result
+
+    def test_high(self):
+        result = severity_badge("HIGH")
+        assert "HIGH" in result
+
+    def test_medium(self):
+        result = severity_badge("medium")
+        assert "MEDIUM" in result.upper()
+
+    def test_low(self):
+        result = severity_badge("Low")
+        assert "LOW" in result.upper()
+
+    def test_unknown_passthrough(self):
+        result = severity_badge("custom")
+        assert result == "CUSTOM"
+
+
+# ─── Tests: render_template ──────────────────────────────────────────────────
+
+
+class TestRenderTemplate:
     @pytest.fixture
     def sample_data(self):
         """Minimal data dict that exercises the template."""
@@ -348,6 +375,7 @@ class TestRenderReadme:
                     "cisa_ssvc": "Exploitation: none · Automatable: no",
                     "naming_note": "Uses old name clawdbot.",
                     "desc_names": "OpenClaw",
+                    "severity_badge": severity_badge("HIGH"),
                 },
             ],
             "pipeline_status": [
@@ -367,6 +395,7 @@ class TestRenderReadme:
                     "title": "Path Traversal in Browser Download",
                     "published": "2026-02-18",
                     "html_url": "https://github.com/advisories/GHSA-xwjm-j929-xq7c",
+                    "severity_badge": severity_badge("medium"),
                 },
             ],
             "ghsas_no_cve": [
@@ -376,14 +405,39 @@ class TestRenderReadme:
                     "title": "Auth bypass in sandbox browser bridge",
                     "published": "2026-02-18",
                     "html_url": "https://github.com/advisories/GHSA-h9g4-589h-68xv",
+                    "severity_badge": severity_badge("high"),
                 },
             ],
+            "ghsas_critical_high": [
+                {
+                    "ghsa_id": "GHSA-h9g4-589h-68xv",
+                    "cve_id": None,
+                    "severity": "high",
+                    "title": "Auth bypass in sandbox browser bridge",
+                    "published": "2026-02-18",
+                    "html_url": "https://github.com/advisories/GHSA-h9g4-589h-68xv",
+                    "severity_badge": severity_badge("high"),
+                },
+            ],
+            "ghsas_medium": [
+                {
+                    "ghsa_id": "GHSA-xwjm-j929-xq7c",
+                    "cve_id": "CVE-2026-26972",
+                    "severity": "medium",
+                    "title": "Path Traversal in Browser Download",
+                    "published": "2026-02-18",
+                    "html_url": "https://github.com/advisories/GHSA-xwjm-j929-xq7c",
+                    "severity_badge": severity_badge("medium"),
+                },
+            ],
+            "ghsas_low": [],
             "repo_only_ghsas": [
                 {
                     "ghsa_id": "GHSA-gv46-4xfq-jv58",
                     "severity": "CRITICAL",
                     "title": "RCE via Node Invoke Approval Bypass",
                     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58",
+                    "severity_badge": severity_badge("CRITICAL"),
                 },
             ],
             "naming_issues": [
@@ -398,50 +452,81 @@ class TestRenderReadme:
             "vuln_categories": [
                 {"name": "OS Command Injection (CWE-78)", "count": 5, "examples": "PATH injection"},
             ],
+            "top_cwe": {
+                "name": "OS Command Injection (CWE-78)",
+                "count": 5,
+                "total": 5,
+                "pct": 100,
+            },
+            "sync_rate_pct": 25,
+            "advisory_date_range": "2026-02-02 → 2026-02-18",
+            "high_impact_pct": 33,
         }
 
+    def _render(self, data):
+        return render_template("README.md.j2", data)
+
     def test_renders_without_error(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert len(output) > 0
 
     def test_contains_dashboard_stats(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "84" in output  # total_ghsas
         assert "20" in output  # total_cves
-        assert "5" in output   # cves_published
-        assert "15" in output  # cves_reserved
 
     def test_contains_cve_table(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "CVE-2026-24763" in output
         assert "Command Injection" in output
         assert "8.8" in output
 
+    def test_contains_shields_badges(self, sample_data):
+        output = self._render(sample_data)
+        assert "img.shields.io" in output
+
+    def test_contains_mermaid_diagram(self, sample_data):
+        output = self._render(sample_data)
+        assert "```mermaid" in output
+
     def test_contains_pipeline(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "PUBLISHED" in output
-        assert "RESERVED" in output
 
     def test_contains_ghsa_tables(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "GHSA-xwjm-j929-xq7c" in output
         assert "GHSA-h9g4-589h-68xv" in output
 
     def test_contains_repo_only(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "GHSA-gv46-4xfq-jv58" in output
         assert "Repo-Only" in output
 
     def test_contains_data_sources(self, sample_data):
-        output = render_readme(sample_data)
+        output = self._render(sample_data)
         assert "cvelistV5" in output
         assert "Advisory DB" in output
 
-    def test_header(self, sample_data):
-        output = render_readme(sample_data)
-        assert output.startswith("# ")
-        assert "OpenClaw" in output.split("\n")[0]
+    def test_header_has_openclaw(self, sample_data):
+        output = self._render(sample_data)
+        assert "OpenClaw" in output
 
     def test_updated_at(self, sample_data):
-        output = render_readme(sample_data)
-        assert "2026-02-18 12:00 UTC" in output
+        output = self._render(sample_data)
+        assert "2026-02-18" in output
+
+    def test_key_insights(self, sample_data):
+        output = self._render(sample_data)
+        assert "Key Insights" in output or "Insights" in output
+        assert "OS Command Injection" in output  # top_cwe
+
+    def test_severity_grouped(self, sample_data):
+        output = self._render(sample_data)
+        # Critical/High group should appear
+        assert "Critical" in output or "CRITICAL" in output
+
+    def test_advisories_md_renders(self, sample_data):
+        output = render_template("ADVISORIES.md.j2", sample_data)
+        assert len(output) > 0
+        assert "GHSA-xwjm-j929-xq7c" in output

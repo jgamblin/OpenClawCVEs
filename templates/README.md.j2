@@ -1,8 +1,24 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/advisories-{{ counts.total_ghsas }}-red?style=for-the-badge" alt="Total Advisories">
+  <img src="https://img.shields.io/badge/CVEs_assigned-{{ counts.total_cves }}-orange?style=for-the-badge" alt="CVEs Assigned">
+  <img src="https://img.shields.io/badge/CVEs_published-{{ counts.cves_published }}-brightgreen?style=for-the-badge" alt="CVEs Published">
+  <img src="https://img.shields.io/badge/reserved-{{ counts.cves_reserved }}-yellow?style=for-the-badge" alt="Reserved">
+</p>
+
 # 🛡️ OpenClaw CVE & Security Advisory Tracker
 
-> **Automated security tracking for [OpenClaw](https://github.com/openclaw/openclaw)** (formerly Clawdbot / Moltbot) — the open-source personal AI assistant.
+> **Real-time, automated vulnerability intelligence for the [OpenClaw](https://github.com/openclaw/openclaw) ecosystem, synchronizing GitHub Security Advisories with the CVE&nbsp;V5 infrastructure.**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/last_updated-{{ updated_at | replace(' ', '_') | replace(':', '%3A') }}-blue" alt="Last Updated">
+  <img src="https://img.shields.io/github/license/jgamblin/OpenClawCVEs?color=green" alt="License">
+  <img src="https://img.shields.io/badge/data_source-cvelistV5-purple" alt="Data Source">
+  <img src="https://img.shields.io/badge/updates-hourly-informational" alt="Update Frequency">
+</p>
 
 ---
+
+### 📊 Security Pulse
 
 <table>
 <tr>
@@ -33,41 +49,20 @@
 </tr>
 </table>
 
-<table>
-<tr>
-<td align="center" width="20%">
-
-**{{ counts.severity_critical }}** Critical
-
-</td>
-<td align="center" width="20%">
-
-**{{ counts.severity_high }}** High
-
-</td>
-<td align="center" width="20%">
-
-**{{ counts.severity_medium }}** Medium
-
-</td>
-<td align="center" width="20%">
-
-**{{ counts.severity_low }}** Low
-
-</td>
-<td align="center" width="20%">
-
-**{{ counts.ghsas_no_cve }}** Awaiting CVE
-
-</td>
-</tr>
-</table>
-
-<sub>Last updated: {{ updated_at }} · Updates every hour via [GitHub Actions](.github/workflows/update-readme.yml)</sub>
+**Severity Distribution:** &ensp;`🟣 CRITICAL ({{ counts.severity_critical }})` · `🔴 HIGH ({{ counts.severity_high }})` · `🟡 MEDIUM ({{ counts.severity_medium }})` · `🟢 LOW ({{ counts.severity_low }})` · `⚪ Awaiting CVE ({{ counts.ghsas_no_cve }})`
 
 ---
 
-## Project Identity
+### ⚡ Quick Links
+
+| | | | |
+|:---:|:---:|:---:|:---:|
+| [🚀 Published CVEs](#-cves-published-in-cvelistv5-{{ counts.cves_published }}) | [⏳ Publication Pipeline](#-cve-publication-pipeline) | [📋 All Advisories](#-all-security-advisories-{{ counts.total_ghsas }}) | [📊 Vuln Categories](#-vulnerability-categories) |
+| [🔑 Key Insights](#-key-insights) | [🏗️ Project Identity](#-project-identity) | [📁 Full Advisory List](ADVISORIES.md) | [🔒 Security Policy](SECURITY.md) |
+
+---
+
+## 🏗️ Project Identity
 
 | Field | Value |
 |-------|-------|
@@ -75,7 +70,7 @@
 | **Previous Names** | Moltbot (second name), Clawdbot (original name) |
 | **Repository** | [openclaw/openclaw](https://github.com/openclaw/openclaw) |
 | **npm Package** | `openclaw` (formerly `clawdbot`) |
-| **License** | MIT |
+| **Author** | Peter Steinberger (steipete) |
 
 <details>
 <summary><strong>Search terms for CVE discovery</strong></summary>
@@ -86,17 +81,18 @@ To find all CVEs, search for: `openclaw`, `clawdbot`, `moltbot`, `clawhub`, `pkg
 
 ---
 
-## CVEs Published in cvelistV5 ({{ counts.cves_published }})
+## 🚀 CVEs Published in cvelistV5 ({{ counts.cves_published }})
 
 These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) repository:
 
 | CVE ID | Severity | CVSS | Title | CWE | Published |
 |--------|----------|------|-------|-----|-----------|
 {% for cve in published_cves -%}
-| [{{ cve.cve_id }}]({{ cve.advisory_url }}) | **{{ cve.severity }}** | {{ cve.cvss }} | {{ cve.title }} | {{ cve.cwes }} | {{ cve.date_published }} |
+| [{{ cve.cve_id }}]({{ cve.advisory_url }}) | {{ cve.severity_badge }} | {{ cve.cvss }} | {{ cve.title }} | {{ cve.cwes }} | {{ cve.date_published }} |
 {% endfor %}
+
 <details>
-<summary><strong>Detailed CVE Analysis (click to expand)</strong></summary>
+<summary><strong>📖 Detailed CVE Analysis (click to expand)</strong></summary>
 
 {% for cve in published_cves %}
 ### {{ cve.cve_id }} — {{ cve.title }}
@@ -124,71 +120,108 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 
 ---
 
-## CVE Publication Pipeline
+## ⏳ CVE Publication Pipeline
 
 Of {{ counts.total_cves }} GHSAs with CVE IDs, **{{ counts.cves_published }}** are fully published and **{{ counts.cves_reserved }}** remain `RESERVED`.
 
-```
-┌─────────────┐     ┌─────────────────┐     ┌──────────────────┐     ┌─────────────┐
-│  1. GitHub   │     │  2. GHSA goes   │     │  3. CNA submits  │     │ 4. cvelistV5│
-│  reserves    │ ──► │  public with    │ ──► │  CVE record via  │ ──► │ bot commits │
-│  CVE ID      │     │  CVE ID shown   │     │  CVE Services    │     │ JSON file   │
-│ (RESERVED)   │     │                 │     │  (PUBLISHED)     │     │             │
-└─────────────┘     └─────────────────┘     └──────────────────┘     └─────────────┘
+```mermaid
+graph LR
+    A["1️⃣ GitHub Reserves<br/>CVE ID<br/><b>RESERVED</b>"] --> B["2️⃣ GHSA Goes Public<br/>with CVE ID Shown"]
+    B --> C["3️⃣ CNA Submits<br/>CVE Record via<br/>CVE Services<br/><b>PUBLISHED</b>"]
+    C --> D["4️⃣ cvelistV5 Bot<br/>Commits JSON File"]
+
+    style A fill:#fee,stroke:#c33,color:#333
+    style B fill:#fff3cd,stroke:#856404,color:#333
+    style C fill:#d4edda,stroke:#155724,color:#333
+    style D fill:#cce5ff,stroke:#004085,color:#333
 ```
 
 | CVE ID | State | cvelistV5 | GHSA Published | CNA |
 |--------|-------|-----------|----------------|-----|
 {% for item in pipeline_status -%}
-| {{ item.cve_id }} | {% if item.state == "PUBLISHED" %}**PUBLISHED**{% else %}RESERVED{% endif %} | {% if item.in_cvelist %}✅{% else %}❌{% endif %} | {{ item.ghsa_published }} | {{ item.cna or "—" }} |
+| {{ item.cve_id }} | {% if item.state == "PUBLISHED" %}✅ **PUBLISHED**{% else %}⏳ RESERVED{% endif %} | {% if item.in_cvelist %}✅{% else %}❌{% endif %} | {{ item.ghsa_published }} | {{ item.cna or "—" }} |
 {% endfor %}
+
 ---
 
-## All Security Advisories ({{ counts.total_ghsas }})
+## 🔑 Key Insights
 
-### GHSAs with CVE IDs ({{ counts.total_cves }})
+{% if top_cwe %}
+| Insight | Detail |
+|---------|--------|
+| **Dominant Weakness** | {{ top_cwe.pct }}% of categorized issues relate to **{{ top_cwe.name }}** ({{ top_cwe.count }}/{{ top_cwe.total }}) |
+| **V5 Sync Rate** | {{ counts.cves_published }}/{{ counts.total_cves }} CVE IDs ({{ sync_rate_pct }}%) have full cvelistV5 records |
+| **Advisory Velocity** | {{ counts.total_ghsas }} security advisories across {{ advisory_date_range }} |
+| **Top Severity** | {{ counts.severity_critical }} Critical + {{ counts.severity_high }} High = {{ counts.severity_critical + counts.severity_high }} high-impact issues ({{ high_impact_pct }}%) |
+{% endif %}
+
+### Vulnerability Categories
+
+| Category | Count | Examples |
+|----------|------:|----------|
+{% for cat in vuln_categories -%}
+{% if cat.count > 0 -%}
+| **{{ cat.name }}** | {{ cat.count }} | {{ cat.examples }} |
+{% endif -%}
+{% endfor %}
+
+---
+
+## 📋 All Security Advisories ({{ counts.total_ghsas }})
+
+### Critical & High Severity
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
-{% for a in ghsas_with_cve -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id }} | {{ a.severity | upper }} | {{ a.title }} | {{ a.published }} |
+{% for a in ghsas_critical_high -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
 {% endfor %}
-### GHSAs Without CVE — Potential Future CVEs ({{ counts.ghsas_indexed_no_cve }})
 
-| GHSA | Severity | Title | Published |
-|------|----------|-------|-----------|
-{% for a in ghsas_no_cve -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {% if a.severity | lower in ["critical"] %}**{{ a.severity | upper }}**{% else %}{{ a.severity | upper }}{% endif %} | {{ a.title }} | {{ a.published }} |
+### Medium Severity
+
+| GHSA | CVE | Severity | Title | Published |
+|------|-----|----------|-------|-----------|
+{% for a in ghsas_medium -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
+{% endfor %}
+
+### Low Severity
+
+| GHSA | CVE | Severity | Title | Published |
+|------|-----|----------|-------|-----------|
+{% for a in ghsas_low -%}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
 {% endfor %}
 {% if repo_only_ghsas %}
+
 ### Repo-Only Advisories (~{{ counts.repo_only }} more)
 
-These advisories are listed on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but lack Advisory DB package mappings:
+These advisories are listed on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but not yet indexed in the GitHub Advisory Database. See the [full advisory list](ADVISORIES.md) for details.
+
+<details>
+<summary><strong>Show {{ counts.repo_only }} repo-only advisories</strong></summary>
 
 | GHSA | Severity | Title |
 |------|----------|-------|
 {% for a in repo_only_ghsas -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {% if a.severity | lower in ["critical"] %}**{{ a.severity | upper }}**{% else %}{{ a.severity | upper }}{% endif %} | {{ a.title }} |
-{% endfor %}{% endif %}
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.severity_badge }} | {{ a.title }} |
+{% endfor %}
+
+</details>
+{% endif %}
 
 ---
 
 ## Naming Inconsistencies
+
+The OpenClaw project has been renamed multiple times, causing inconsistencies across CVE records:
 
 | CVE | vendor | product | packageURL | Description Names |
 |-----|--------|---------|------------|-------------------|
 {% for n in naming_issues -%}
 | {{ n.cve_id }} | `{{ n.vendor }}` | `{{ n.product }}` | {{ n.purl or "—" }} | {{ n.desc_names }} |
 {% endfor %}
----
 
-## Vulnerability Categories
-
-| Category | Count | Examples |
-|----------|-------|----------|
-{% for cat in vuln_categories -%}
-| **{{ cat.name }}** | {{ cat.count }} | {{ cat.examples }} |
-{% endfor %}
 ---
 
 ## Data Sources
@@ -202,4 +235,10 @@ These advisories are listed on the [repo security page](https://github.com/openc
 
 ---
 
-<sub>This tracker is auto-generated by [`update_readme.py`](update_readme.py). Data files: [`ghsa-advisories.json`](ghsa-advisories.json), [`cves.json`](cves.json), [`cve-pipeline-status.json`](cve-pipeline-status.json)</sub>
+<p align="center">
+  <sub>
+    Auto-generated by <a href="update_readme.py"><code>update_readme.py</code></a> · Updated hourly via <a href=".github/workflows/update-readme.yml">GitHub Actions</a><br>
+    Data: <a href="ghsa-advisories.json"><code>ghsa-advisories.json</code></a> · <a href="cves.json"><code>cves.json</code></a> · <a href="cve-pipeline-status.json"><code>cve-pipeline-status.json</code></a><br><br>
+    Maintained by <a href="https://github.com/jgamblin">Jerry Gamblin</a> · <a href="https://github.com/jgamblin/OpenClawCVEs">OpenClawCVEs</a>
+  </sub>
+</p>
