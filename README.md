@@ -2,32 +2,38 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/advisories-92-red?style=for-the-badge" alt="Total Advisories">
-  <img src="https://img.shields.io/badge/CVEs_assigned-21-orange?style=for-the-badge" alt="CVEs Assigned">
-  <img src="https://img.shields.io/badge/CVEs_published-5-brightgreen?style=for-the-badge" alt="CVEs Published">
+  <img src="https://img.shields.io/badge/CVEs-21-orange?style=for-the-badge" alt="CVEs Assigned">
+  <img src="https://img.shields.io/badge/published-5-brightgreen?style=for-the-badge" alt="CVEs Published">
   <img src="https://img.shields.io/badge/reserved-16-yellow?style=for-the-badge" alt="Reserved">
 </p>
 
-> **Real-time, automated vulnerability intelligence for the [OpenClaw](https://github.com/openclaw/openclaw) ecosystem, synchronizing GitHub Security Advisories with the CVE&nbsp;V5 infrastructure.**
+<p align="center">
+  Real-time, automated vulnerability intelligence for the <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ecosystem<br>
+  synchronizing GitHub Security Advisories with the CVE V5 infrastructure.
+</p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/last_updated-2026-02-18_18%3A09_UTC-blue" alt="Last Updated">
-  <img src="https://img.shields.io/github/license/jgamblin/OpenClawCVEs?color=green" alt="License">
-  <img src="https://img.shields.io/badge/data_source-cvelistV5-purple" alt="Data Source">
-  <img src="https://img.shields.io/badge/updates-hourly-informational" alt="Update Frequency">
+  <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
+  <img src="https://img.shields.io/badge/high-50-d63031?style=flat-square" alt="High">
+  <img src="https://img.shields.io/badge/medium-32-e17055?style=flat-square" alt="Medium">
+  <img src="https://img.shields.io/badge/low-5-27ae60?style=flat-square" alt="Low">
+  <img src="https://img.shields.io/badge/awaiting_CVE-71-lightgrey?style=flat-square" alt="Awaiting CVE">
+</p>
+
+<p align="center">
+  <sub>Last updated: 2026-02-18 18:10 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---
 
-**Severity Distribution:** &ensp;`🟣 CRITICAL (5)` · `🔴 HIGH (50)` · `🟡 MEDIUM (32)` · `🟢 LOW (5)` · `⚪ Awaiting CVE (71)`
-
----
-
-### ⚡ Quick Links
-
-| | | | |
-|:---:|:---:|:---:|:---:|
-| [🚀 Published CVEs](#-cves-published-in-cvelistv5-5) | [⏳ Publication Pipeline](#-cve-publication-pipeline) | [📋 All Advisories](#-all-security-advisories-92) | [📊 Vuln Categories](#-vulnerability-categories) |
-| [🔑 Key Insights](#-key-insights) | [🏗️ Project Identity](#-project-identity) | [📁 Full Advisory List](ADVISORIES.md) | [🔒 Security Policy](SECURITY.md) |
+<p align="center">
+  <a href="#-cves-published-in-cvelistv5-5">Published CVEs</a> ·
+  <a href="#-cve-publication-pipeline">Pipeline</a> ·
+  <a href="#-all-security-advisories-92">Advisories</a> ·
+  <a href="#-vulnerability-categories">Categories</a> ·
+  <a href="#-key-insights">Insights</a> ·
+  <a href="#-project-identity">Identity</a>
+</p>
 
 ---
 
