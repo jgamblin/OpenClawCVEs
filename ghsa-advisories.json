@@ -1,5 +1,125 @@
 [
   {
+    "ghsa_id": "GHSA-37gc-85xm-2ww6",
+    "cve_id": "CVE-2026-27009",
+    "severity": "medium",
+    "title": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-37gc-85xm-2ww6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h7f7-89mm-pqh6",
+    "cve_id": "CVE-2026-27008",
+    "severity": "medium",
+    "title": "OpenClaw hardened the skill download target directory validation",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-h7f7-89mm-pqh6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-73"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xxvh-5hwj-42pp",
+    "cve_id": "CVE-2026-27007",
+    "severity": "medium",
+    "title": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-xxvh-5hwj-42pp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-1254"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-6hf3-mhgc-cm65",
+    "cve_id": "CVE-2026-27004",
+    "severity": "medium",
+    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-6hf3-mhgc-cm65",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-209",
+      "CWE-346"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-chf7-jq6g-qrwv",
+    "cve_id": "CVE-2026-27003",
+    "severity": "medium",
+    "title": "OpenClaw: Telegram bot token exposure via logs",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-chf7-jq6g-qrwv",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-522"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w235-x559-36mg",
+    "cve_id": "CVE-2026-27002",
+    "severity": "high",
+    "title": "OpenClaw: Docker container escape via unvalidated bind mount config injection",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-w235-x559-36mg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-250"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2qj5-gwg2-xwc4",
+    "cve_id": "CVE-2026-27001",
+    "severity": "high",
+    "title": "OpenClaw: Unsanitized CWD path injection into LLM prompts",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-2qj5-gwg2-xwc4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-h9g4-589h-68xv",
     "cve_id": null,
     "severity": "high",

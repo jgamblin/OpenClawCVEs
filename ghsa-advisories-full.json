@@ -1,5 +1,639 @@
 [
   {
+    "ghsa_id": "GHSA-37gc-85xm-2ww6",
+    "cve_id": "CVE-2026-27009",
+    "url": "https://api.github.com/advisories/GHSA-37gc-85xm-2ww6",
+    "html_url": "https://github.com/advisories/GHSA-37gc-85xm-2ww6",
+    "summary": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
+    "description": "## Summary\nStored XSS in the OpenClaw Control UI when rendering assistant identity (name/avatar) into an inline `<script>` tag without script-context-safe escaping. A crafted value containing `</script>` could break out of the script tag and execute attacker-controlled JavaScript in the Control UI origin.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.14`\n- Fixed in: `>= 2026.2.15` (next release; fix is already merged on `main`)\n\n## Details\nThe gateway Control UI HTML response previously injected `assistantName` and `assistantAvatar` directly into an inline `<script>` block using `JSON.stringify(...)`. `JSON.stringify` does not prevent `</script>` from terminating the script element, enabling stored XSS if an operator/admin sets the assistant identity to a malicious string.\n\nOpenClaw\u2019s Control UI is intended for local use only (see `SECURITY.md`); this advisory\u2019s CVSS reflects a loopback-only/local-access deployment assumption.\n\n## Impact\nAn attacker with the ability to set assistant identity values (config or agent identity) could cause JavaScript execution for Control UI visitors, enabling token/session theft and privileged actions in the UI.\n\n## Fix\n- Removed inline script injection and serve bootstrap config from a JSON endpoint.\n- Added a restrictive Content Security Policy for the Control UI (`script-src 'self'`, no inline scripts).\n\n## Fix Commit(s)\n- `adc818db4a4b3b8d663e7674ef20436947514e1b`\n- `3b4096e02e7e335f99f5986ec1bd566e90b14a7e`\n\n## Release Process Note\nThis advisory pre-sets the patched version to the planned next release (`2026.2.15`). Once that version is published to npm, this advisory can be published without further edits.\n\nThanks @Adam55A-code for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-37gc-85xm-2ww6",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-37gc-85xm-2ww6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27009",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-37gc-85xm-2ww6",
+      "https://github.com/openclaw/openclaw/commit/3b4096e02e7e335f99f5986ec1bd566e90b14a7e",
+      "https://github.com/openclaw/openclaw/commit/adc818db4a4b3b8d663e7674ef20436947514e1b",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-37gc-85xm-2ww6"
+    ],
+    "published_at": "2026-02-18T22:44:33Z",
+    "updated_at": "2026-02-18T22:44:37Z",
+    "github_reviewed_at": "2026-02-18T22:44:33Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N",
+        "score": 5.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-79",
+        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Adam55A-code",
+          "id": 208555906,
+          "node_id": "U_kgDODG5Pgg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/208555906?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Adam55A-code",
+          "html_url": "https://github.com/Adam55A-code",
+          "followers_url": "https://api.github.com/users/Adam55A-code/followers",
+          "following_url": "https://api.github.com/users/Adam55A-code/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Adam55A-code/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Adam55A-code/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Adam55A-code/subscriptions",
+          "organizations_url": "https://api.github.com/users/Adam55A-code/orgs",
+          "repos_url": "https://api.github.com/users/Adam55A-code/repos",
+          "events_url": "https://api.github.com/users/Adam55A-code/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Adam55A-code/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:N",
+      "score": 5.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-h7f7-89mm-pqh6",
+    "cve_id": "CVE-2026-27008",
+    "url": "https://api.github.com/advisories/GHSA-h7f7-89mm-pqh6",
+    "html_url": "https://github.com/advisories/GHSA-h7f7-89mm-pqh6",
+    "summary": "OpenClaw hardened the skill download target directory validation",
+    "description": "## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.14`\n- Fixed in: planned release `2026.2.15`\n\n## Impact\nA bug in `download` skill installation allowed `targetDir` values from skill frontmatter to resolve outside the per-skill tools directory if not strictly validated.\nIn the admin-only `skills.install` flow, this could write files outside the intended install sandbox.\n\n## Fix Commit(s)\n- 2363e1b08 fix(security): restrict skill download target paths\n- b6305e972 test(skills): split installer security coverage\n\n## Acknowledgement\nThanks @Adam55A-code for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-h7f7-89mm-pqh6",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-h7f7-89mm-pqh6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27008",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-h7f7-89mm-pqh6",
+      "https://github.com/openclaw/openclaw/commit/2363e1b0853a028e47f90dcc1066e3e9809d65f1",
+      "https://github.com/openclaw/openclaw/commit/b6305e97256d67e439719faacf5af3de9727d6e1",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-h7f7-89mm-pqh6"
+    ],
+    "published_at": "2026-02-18T22:44:18Z",
+    "updated_at": "2026-02-18T22:44:22Z",
+    "github_reviewed_at": "2026-02-18T22:44:18Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.8
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-73",
+        "name": "External Control of File Name or Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Adam55A-code",
+          "id": 208555906,
+          "node_id": "U_kgDODG5Pgg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/208555906?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Adam55A-code",
+          "html_url": "https://github.com/Adam55A-code",
+          "followers_url": "https://api.github.com/users/Adam55A-code/followers",
+          "following_url": "https://api.github.com/users/Adam55A-code/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Adam55A-code/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Adam55A-code/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Adam55A-code/subscriptions",
+          "organizations_url": "https://api.github.com/users/Adam55A-code/orgs",
+          "repos_url": "https://api.github.com/users/Adam55A-code/repos",
+          "events_url": "https://api.github.com/users/Adam55A-code/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Adam55A-code/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-xxvh-5hwj-42pp",
+    "cve_id": "CVE-2026-27007",
+    "url": "https://api.github.com/advisories/GHSA-xxvh-5hwj-42pp",
+    "html_url": "https://github.com/advisories/GHSA-xxvh-5hwj-42pp",
+    "summary": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
+    "description": "## Description\n\n`normalizeForHash` in `src/agents/sandbox/config-hash.ts` recursively sorted arrays that contained only primitive values. This made order-sensitive sandbox configuration arrays hash to the same value even when order changed.\n\nIn OpenClaw sandbox flows, this hash is used to decide whether existing sandbox containers should be recreated. As a result, order-only config changes (for example Docker `dns` and `binds` array order) could be treated as unchanged and stale containers could be reused.\n\nThis is a configuration integrity issue affecting sandbox recreation behavior.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected: `<=2026.2.14`\n- Patched (planned next release): `>=2026.2.15`\n- Latest published npm version at triage time (2026-02-16): `2026.2.14`\n\n## Remediation\n\nArray ordering is now preserved during hash normalization; only object key ordering remains normalized for deterministic hashing.\n\n## Fix Commit(s)\n\n- `41ded303b4f6dae5afa854531ff837c3276ad60b`\n\n## Release Process Note\n\n`patched_versions` is pre-set to the planned next release (`2026.2.15`) so after npm publish, the advisory can be published directly without reopening version metadata edits.\n\nThanks @kexinoh ( of Tencent zhuque Lab, by https://github.com/Tencent/AI-Infra-Guard) for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-xxvh-5hwj-42pp",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-xxvh-5hwj-42pp",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27007",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xxvh-5hwj-42pp",
+      "https://github.com/openclaw/openclaw/commit/41ded303b4f6dae5afa854531ff837c3276ad60b",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-xxvh-5hwj-42pp"
+    ],
+    "published_at": "2026-02-18T22:44:10Z",
+    "updated_at": "2026-02-18T22:44:12Z",
+    "github_reviewed_at": "2026-02-18T22:44:10Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "score": 4.8
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-1254",
+        "name": "Incorrect Comparison Logic Granularity"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "kexinoh",
+          "id": 91727108,
+          "node_id": "U_kgDOBXelBA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/91727108?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kexinoh",
+          "html_url": "https://github.com/kexinoh",
+          "followers_url": "https://api.github.com/users/kexinoh/followers",
+          "following_url": "https://api.github.com/users/kexinoh/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kexinoh/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kexinoh/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kexinoh/subscriptions",
+          "organizations_url": "https://api.github.com/users/kexinoh/orgs",
+          "repos_url": "https://api.github.com/users/kexinoh/repos",
+          "events_url": "https://api.github.com/users/kexinoh/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kexinoh/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-6hf3-mhgc-cm65",
+    "cve_id": "CVE-2026-27004",
+    "url": "https://api.github.com/advisories/GHSA-6hf3-mhgc-cm65",
+    "html_url": "https://github.com/advisories/GHSA-6hf3-mhgc-cm65",
+    "summary": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
+    "description": "## Vulnerability\n\nIn some shared-agent deployments, OpenClaw session tools (`sessions_list`, `sessions_history`, `sessions_send`) allowed broader session targeting than some operators intended. This is primarily a configuration/visibility-scoping issue in multi-user environments where peers are not equally trusted.\n\nIn Telegram webhook mode, monitor startup also did not fall back to per-account `webhookSecret` when only the account-level secret was configured.\n\n## Typical Use Case Context\n\nMost regular OpenClaw deployments run a single agent, or run in trusted environments. In those setups, practical risk from this issue is generally low.\n\n## Impact\n\n- Shared-agent, multi-user, less-trusted environments: session-tool access could expose transcript content across peer sessions.\n- Single-agent or trusted environments: practical impact is limited.\n- Telegram webhook mode: account-level secret wiring could be missed unless an explicit monitor webhook secret override was provided.\n\n## Affected Packages / Versions\n\n- Package: npm `openclaw`\n- Affected versions: `<= 2026.2.14`\n- Patched version: `2026.2.15` (planned next release)\n\n## Remediation\n\n- Add and enforce `tools.sessions.visibility` (`self | tree | agent | all`) across session tools, defaulting to `tree`.\n- Keep sandbox clamping behavior so sandboxed runs can be restricted to spawned/session-tree visibility.\n- Resolve Telegram webhook secret from account config fallback in monitor webhook startup.\n\n## Fix Commit(s)\n\n- `c6c53437f7da033b94a01d492e904974e7bda74c`\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-6hf3-mhgc-cm65",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-6hf3-mhgc-cm65",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27004",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-6hf3-mhgc-cm65",
+      "https://github.com/openclaw/openclaw/commit/c6c53437f7da033b94a01d492e904974e7bda74c",
+      "https://github.com/advisories/GHSA-6hf3-mhgc-cm65"
+    ],
+    "published_at": "2026-02-18T22:43:53Z",
+    "updated_at": "2026-02-18T22:43:57Z",
+    "github_reviewed_at": "2026-02-18T22:43:53Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.9
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-209",
+        "name": "Generation of Error Message Containing Sensitive Information"
+      },
+      {
+        "cwe_id": "CWE-346",
+        "name": "Origin Validation Error"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-chf7-jq6g-qrwv",
+    "cve_id": "CVE-2026-27003",
+    "url": "https://api.github.com/advisories/GHSA-chf7-jq6g-qrwv",
+    "html_url": "https://github.com/advisories/GHSA-chf7-jq6g-qrwv",
+    "summary": "OpenClaw: Telegram bot token exposure via logs",
+    "description": "## Vulnerability\n\nTelegram bot tokens can appear in error messages and stack traces (for example, when request URLs include `https://api.telegram.org/bot<token>/...`). OpenClaw previously logged these strings without redaction, which could leak the bot token into logs, crash reports, CI output, or support bundles.\n\n## Impact\n\nDisclosure of a Telegram bot token allows an attacker to impersonate the bot and take over Bot API access.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected: `<= 2026.2.14`\n- Fixed: `>= 2026.2.15` (next release)\n\n## Mitigation\n\n- Upgrade to `openclaw >= 2026.2.15` when released.\n- Rotate the Telegram bot token if it may have been exposed.\n\n## Fix Commit(s)\n\n- cf6990701b258bb9cc4ac7f6c7bdf05016e7f6e46\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-chf7-jq6g-qrwv",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-chf7-jq6g-qrwv",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27003",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-chf7-jq6g-qrwv",
+      "https://github.com/openclaw/openclaw/commit/cf69907015b659e5025efb735ee31bd05c4ee3d5",
+      "https://github.com/advisories/GHSA-chf7-jq6g-qrwv"
+    ],
+    "published_at": "2026-02-18T22:43:21Z",
+    "updated_at": "2026-02-18T22:43:22Z",
+    "github_reviewed_at": "2026-02-18T22:43:21Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.9
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-w235-x559-36mg",
+    "cve_id": "CVE-2026-27002",
+    "url": "https://api.github.com/advisories/GHSA-w235-x559-36mg",
+    "html_url": "https://github.com/advisories/GHSA-w235-x559-36mg",
+    "summary": "OpenClaw: Docker container escape via unvalidated bind mount config injection",
+    "description": "## Summary\nA configuration injection issue in the Docker tool sandbox could allow dangerous Docker options (bind mounts, host networking, unconfined profiles) to be applied, enabling container escape or host data access.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.14`\n- Fixed version: `>= 2026.2.15` (next release)\n\n## Impact\nIf an attacker can influence sandbox Docker configuration (or an operator pastes untrusted config), they may be able to:\n- mount sensitive host paths (e.g. `/etc`, `/proc`, `/sys`, `/dev`, Docker socket)\n- use `network=host` to bypass container network isolation\n- use `seccompProfile=unconfined` / `apparmorProfile=unconfined` to weaken isolation\n\nThis can lead to host secret exfiltration or full host control (via Docker socket exposure).\n\n## Fix\nOpenClaw now blocks dangerous sandbox Docker settings:\n- runtime enforcement when building `docker create` args\n- config-schema validation for `network=host`, `seccompProfile=unconfined`, `apparmorProfile=unconfined`\n- security audit findings to surface dangerous sandbox docker config\n\n## Workarounds\n- Do not configure `agents.*.sandbox.docker.binds` to mount system directories or Docker socket paths.\n- Keep `agents.*.sandbox.docker.network` at `none` (default) or `bridge`.\n- Do not use `unconfined` for seccomp/AppArmor profiles.\n\n## Fix Commit(s)\n- 887b209db47f1f9322fead241a1c0b043fd38339\n- 1b6704ef5800152c777ea52b77aa2c8a46c13705 (docs)\n\n## Release Process Note\nThis advisory is pre-populated with the planned fixed version (`>= 2026.2.15`). Once `openclaw@2026.2.15` is published to npm, publishing this advisory should be a single-click action.\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-w235-x559-36mg",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-w235-x559-36mg",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27002",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-w235-x559-36mg",
+      "https://github.com/openclaw/openclaw/commit/887b209db47f1f9322fead241a1c0b043fd38339",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-w235-x559-36mg"
+    ],
+    "published_at": "2026-02-18T22:42:42Z",
+    "updated_at": "2026-02-18T22:42:47Z",
+    "github_reviewed_at": "2026-02-18T22:42:42Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 7.7
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-250",
+        "name": "Execution with Unnecessary Privileges"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-2qj5-gwg2-xwc4",
+    "cve_id": "CVE-2026-27001",
+    "url": "https://api.github.com/advisories/GHSA-2qj5-gwg2-xwc4",
+    "html_url": "https://github.com/advisories/GHSA-2qj5-gwg2-xwc4",
+    "summary": "OpenClaw: Unsanitized CWD path injection into LLM prompts",
+    "description": "## Overview\nOpenClaw embedded the current working directory (workspace path) into the agent system prompt without sanitization. If an attacker can cause OpenClaw to run inside a directory whose name contains control/format characters (for example newlines or Unicode bidi/zero-width markers), those characters could break the prompt structure and inject attacker-controlled instructions.\n\n## Impact\nPrompt injection may alter agent behavior and could lead to unintended tool use or disclosure of sensitive information.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Vulnerable versions: `< 2026.2.15` (latest published vulnerable version as of 2026-02-16: `2026.2.14`)\n- Patched versions: `>= 2026.2.15`\n\n## Fix\nThe workspace path is now sanitized before it is embedded into any LLM prompt output, stripping Unicode control/format characters and explicit line/paragraph separators. Workspace path resolution also applies the same sanitization as defense-in-depth.\n\n## Fix Commit(s)\n- `6254e96acf16e70ceccc8f9b2abecee44d606f79`\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-2qj5-gwg2-xwc4",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-2qj5-gwg2-xwc4",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27001",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-2qj5-gwg2-xwc4",
+      "https://github.com/openclaw/openclaw/commit/6254e96acf16e70ceccc8f9b2abecee44d606f79",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-2qj5-gwg2-xwc4"
+    ],
+    "published_at": "2026-02-18T22:42:29Z",
+    "updated_at": "2026-02-18T22:42:30Z",
+    "github_reviewed_at": "2026-02-18T22:42:29Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 8.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-77",
+        "name": "Improper Neutralization of Special Elements used in a Command ('Command Injection')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-h9g4-589h-68xv",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-h9g4-589h-68xv",

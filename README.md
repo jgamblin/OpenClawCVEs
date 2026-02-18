@@ -1,14 +1,14 @@
 # 🛡️ OpenClaw CVE & Security Advisory Tracker
 
 <p align="center">
-  <img src="https://img.shields.io/badge/advisories-92-red?style=for-the-badge" alt="Total Advisories">
-  <img src="https://img.shields.io/badge/CVEs-21-orange?style=for-the-badge" alt="CVEs Assigned">
+  <img src="https://img.shields.io/badge/advisories-99-red?style=for-the-badge" alt="Total Advisories">
+  <img src="https://img.shields.io/badge/CVEs-28-orange?style=for-the-badge" alt="CVEs Assigned">
   <img src="https://img.shields.io/badge/published-5-brightgreen?style=for-the-badge" alt="CVEs Published">
-  <img src="https://img.shields.io/badge/reserved-16-yellow?style=for-the-badge" alt="Reserved">
+  <img src="https://img.shields.io/badge/reserved-23-yellow?style=for-the-badge" alt="Reserved">
   <br>
   <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
-  <img src="https://img.shields.io/badge/high-50-d63031?style=flat-square" alt="High">
-  <img src="https://img.shields.io/badge/medium-32-e17055?style=flat-square" alt="Medium">
+  <img src="https://img.shields.io/badge/high-52-d63031?style=flat-square" alt="High">
+  <img src="https://img.shields.io/badge/medium-37-e17055?style=flat-square" alt="Medium">
   <img src="https://img.shields.io/badge/low-5-27ae60?style=flat-square" alt="Low">
   <img src="https://img.shields.io/badge/awaiting_CVE-71-lightgrey?style=flat-square" alt="Awaiting CVE">
 </p>
@@ -16,7 +16,7 @@
 An automated tracker that continuously monitors [OpenClaw](https://github.com/openclaw/openclaw) security advisories across the GitHub Advisory Database, repo-level security advisories, and the [CVE V5 (cvelistV5)](https://github.com/CVEProject/cvelistV5) registry. Every hour it pulls the latest data, reconciles GHSA → CVE publication state, and regenerates this dashboard so you always have an up-to-date picture of the project's vulnerability landscape.
 
 <p align="center">
-  <sub>Last updated: 2026-02-18 22:14 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
+  <sub>Last updated: 2026-02-18 23:12 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---
@@ -24,7 +24,7 @@ An automated tracker that continuously monitors [OpenClaw](https://github.com/op
 <p align="center">
   <a href="#-cves-published-in-cvelistv5-5">Published CVEs</a> ·
   <a href="#-cve-publication-pipeline">Pipeline</a> ·
-  <a href="#-all-security-advisories-92">Advisories</a> ·
+  <a href="#-all-security-advisories-99">Advisories</a> ·
   <a href="#-vulnerability-categories">Categories</a> ·
   <a href="#-key-insights">Insights</a> ·
   <a href="#-project-identity">Identity</a>
@@ -152,7 +152,7 @@ OpenClaw is a personal AI assistant. Prior to version 2026.1.30, the isValidMedi
 
 ## ⏳ CVE Publication Pipeline
 
-Of 21 GHSAs with CVE IDs, **5** are fully published and **16** remain `RESERVED`.
+Of 28 GHSAs with CVE IDs, **5** are fully published and **23** remain `RESERVED`.
 
 ```mermaid
 graph LR
@@ -189,6 +189,13 @@ graph LR
 | CVE-2026-26328 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-26329 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-26972 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27001 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27002 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27003 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27004 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27007 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27008 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27009 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 
 ---
 
@@ -196,10 +203,10 @@ graph LR
 
 | Insight | Detail |
 |---------|--------|
-| **Dominant Weakness** | 26% of categorized issues relate to **Allowlist Bypass** (25/95) |
-| **V5 Sync Rate** | 5/21 CVE IDs (24%) have full cvelistV5 records |
-| **Advisory Velocity** | 92 security advisories across 2026-02-02 → 2026-02-18 |
-| **Top Severity** | 5 Critical + 50 High = 55 high-impact issues (60%) |
+| **Dominant Weakness** | 26% of categorized issues relate to **Allowlist Bypass** (25/98) |
+| **V5 Sync Rate** | 5/28 CVE IDs (18%) have full cvelistV5 records |
+| **Advisory Velocity** | 99 security advisories across 2026-02-02 → 2026-02-18 |
+| **Top Severity** | 5 Critical + 52 High = 57 high-impact issues (58%) |
 
 ### Vulnerability Categories
 
@@ -210,17 +217,19 @@ graph LR
 | **SSRF** | 6 | Image tool fetch, Feishu extension, attachment/media URLs, IPv6 bypass |
 | **Auth Bypass / Missing Auth** | 16 | WebSocket config.apply, webhook verification, browser relay, sandbox bridge |
 | **Allowlist Bypass** | 25 | Telegram usernames, Matrix displayName, Slack DM, Twitch, voice-call |
-| **Injection (XSS/CSRF/Prompt)** | 14 | XSS in Control UI, prompt injection via Slack/CWD/logs, CSRF |
+| **Injection (XSS/CSRF/Prompt)** | 17 | XSS in Control UI, prompt injection via Slack/CWD/logs, CSRF |
 | **Denial of Service** | 5 | Unbounded media fetch, webhook body buffering, archive expansion |
 
 ---
 
-## 📋 All Security Advisories (92)
+## 📋 All Security Advisories (99)
 
 ### Critical & High Severity
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-w235-x559-36mg](https://github.com/advisories/GHSA-w235-x559-36mg) | CVE-2026-27002 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Docker container escape via unvalidated bind mount config injection | 2026-02-18 |
+| [GHSA-2qj5-gwg2-xwc4](https://github.com/advisories/GHSA-2qj5-gwg2-xwc4) | CVE-2026-27001 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Unsanitized CWD path injection into LLM prompts | 2026-02-18 |
 | [GHSA-3fqr-4cg8-h96q](https://github.com/advisories/GHSA-3fqr-4cg8-h96q) | CVE-2026-26317 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | 2026-02-18 |
 | [GHSA-m7x8-2w3w-pr42](https://github.com/advisories/GHSA-m7x8-2w3w-pr42) | CVE-2026-26323 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a command injection in maintainer clawtributors updater | 2026-02-18 |
 | [GHSA-cv7m-c9jx-vg7q](https://github.com/advisories/GHSA-cv7m-c9jx-vg7q) | CVE-2026-26329 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a path traversal in browser upload allows local file read | 2026-02-18 |
@@ -267,6 +276,11 @@ graph LR
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-37gc-85xm-2ww6](https://github.com/advisories/GHSA-37gc-85xm-2ww6) | CVE-2026-27009 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection | 2026-02-18 |
+| [GHSA-h7f7-89mm-pqh6](https://github.com/advisories/GHSA-h7f7-89mm-pqh6) | CVE-2026-27008 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw hardened the skill download target directory validation | 2026-02-18 |
+| [GHSA-xxvh-5hwj-42pp](https://github.com/advisories/GHSA-xxvh-5hwj-42pp) | CVE-2026-27007 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation | 2026-02-18 |
+| [GHSA-6hf3-mhgc-cm65](https://github.com/advisories/GHSA-6hf3-mhgc-cm65) | CVE-2026-27004 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw session tool visibility hardening and Telegram webhook secret fallback | 2026-02-18 |
+| [GHSA-chf7-jq6g-qrwv](https://github.com/advisories/GHSA-chf7-jq6g-qrwv) | CVE-2026-27003 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Telegram bot token exposure via logs | 2026-02-18 |
 | [GHSA-xwjm-j929-xq7c](https://github.com/advisories/GHSA-xwjm-j929-xq7c) | CVE-2026-26972 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Path Traversal in Browser Download Functionality | 2026-02-18 |
 | [GHSA-g34w-4xqq-h79m](https://github.com/advisories/GHSA-g34w-4xqq-h79m) | CVE-2026-26328 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw iMessage group allowlist authorization inherited DM pairing-store identities | 2026-02-18 |
 | [GHSA-jfv4-h8mc-jcp8](https://github.com/advisories/GHSA-jfv4-h8mc-jcp8) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Process Safety - Unvalidated PID Kill via SIGKILL in Process Cleanup | 2026-02-18 |

@@ -1,16 +1,23 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 92 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 99 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-18 22:14 UTC</sub>
+<sub>Last updated: 2026-02-18 23:12 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (21)
+## GHSAs with CVE IDs (28)
 
 | GHSA | CVE | Severity | Title | Packages | Published |
 |------|-----|----------|-------|----------|-----------|
+| [GHSA-37gc-85xm-2ww6](https://github.com/advisories/GHSA-37gc-85xm-2ww6) | CVE-2026-27009 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection | npm/openclaw | 2026-02-18 |
+| [GHSA-h7f7-89mm-pqh6](https://github.com/advisories/GHSA-h7f7-89mm-pqh6) | CVE-2026-27008 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw hardened the skill download target directory validation | npm/openclaw | 2026-02-18 |
+| [GHSA-xxvh-5hwj-42pp](https://github.com/advisories/GHSA-xxvh-5hwj-42pp) | CVE-2026-27007 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation | npm/openclaw | 2026-02-18 |
+| [GHSA-6hf3-mhgc-cm65](https://github.com/advisories/GHSA-6hf3-mhgc-cm65) | CVE-2026-27004 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw session tool visibility hardening and Telegram webhook secret fallback | npm/openclaw | 2026-02-18 |
+| [GHSA-chf7-jq6g-qrwv](https://github.com/advisories/GHSA-chf7-jq6g-qrwv) | CVE-2026-27003 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Telegram bot token exposure via logs | npm/openclaw | 2026-02-18 |
+| [GHSA-w235-x559-36mg](https://github.com/advisories/GHSA-w235-x559-36mg) | CVE-2026-27002 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Docker container escape via unvalidated bind mount config injection | npm/openclaw | 2026-02-18 |
+| [GHSA-2qj5-gwg2-xwc4](https://github.com/advisories/GHSA-2qj5-gwg2-xwc4) | CVE-2026-27001 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Unsanitized CWD path injection into LLM prompts | npm/openclaw | 2026-02-18 |
 | [GHSA-xwjm-j929-xq7c](https://github.com/advisories/GHSA-xwjm-j929-xq7c) | CVE-2026-26972 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Path Traversal in Browser Download Functionality | npm/openclaw | 2026-02-18 |
 | [GHSA-3fqr-4cg8-h96q](https://github.com/advisories/GHSA-3fqr-4cg8-h96q) | CVE-2026-26317 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | npm/openclaw, npm/clawdbot | 2026-02-18 |
 | [GHSA-m7x8-2w3w-pr42](https://github.com/advisories/GHSA-m7x8-2w3w-pr42) | CVE-2026-26323 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a command injection in maintainer clawtributors updater | npm/openclaw | 2026-02-18 |
@@ -148,6 +155,13 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-26328 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-26329 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-26972 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27001 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27002 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27003 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27004 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27007 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27008 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27009 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 
 ---
 
