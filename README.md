@@ -5,14 +5,7 @@
   <img src="https://img.shields.io/badge/CVEs-21-orange?style=for-the-badge" alt="CVEs Assigned">
   <img src="https://img.shields.io/badge/published-5-brightgreen?style=for-the-badge" alt="CVEs Published">
   <img src="https://img.shields.io/badge/reserved-16-yellow?style=for-the-badge" alt="Reserved">
-</p>
-
-<p align="center">
-  Real-time, automated vulnerability intelligence for the <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ecosystem<br>
-  synchronizing GitHub Security Advisories with the CVE V5 infrastructure.
-</p>
-
-<p align="center">
+  <br>
   <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
   <img src="https://img.shields.io/badge/high-50-d63031?style=flat-square" alt="High">
   <img src="https://img.shields.io/badge/medium-32-e17055?style=flat-square" alt="Medium">
@@ -21,7 +14,15 @@
 </p>
 
 <p align="center">
-  <sub>Last updated: 2026-02-18 18:10 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
+  An automated tracker that continuously monitors <a href="https://github.com/openclaw/openclaw">OpenClaw</a> security advisories<br>
+  across the GitHub Advisory Database, repo-level security advisories, and the<br>
+  <a href="https://github.com/CVEProject/cvelistV5">CVE V5 (cvelistV5)</a> registry. Every hour it pulls the latest data, reconciles<br>
+  GHSA → CVE publication state, and regenerates this dashboard so you always<br>
+  have an up-to-date picture of the project's vulnerability landscape.
+</p>
+
+<p align="center">
+  <sub>Last updated: 2026-02-18 18:12 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---

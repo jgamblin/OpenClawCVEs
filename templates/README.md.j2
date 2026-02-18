@@ -5,19 +5,20 @@
   <img src="https://img.shields.io/badge/CVEs-{{ counts.total_cves }}-orange?style=for-the-badge" alt="CVEs Assigned">
   <img src="https://img.shields.io/badge/published-{{ counts.cves_published }}-brightgreen?style=for-the-badge" alt="CVEs Published">
   <img src="https://img.shields.io/badge/reserved-{{ counts.cves_reserved }}-yellow?style=for-the-badge" alt="Reserved">
-</p>
-
-<p align="center">
-  Real-time, automated vulnerability intelligence for the <a href="https://github.com/openclaw/openclaw">OpenClaw</a> ecosystem<br>
-  synchronizing GitHub Security Advisories with the CVE V5 infrastructure.
-</p>
-
-<p align="center">
+  <br>
   <img src="https://img.shields.io/badge/critical-{{ counts.severity_critical }}-8e44ad?style=flat-square" alt="Critical">
   <img src="https://img.shields.io/badge/high-{{ counts.severity_high }}-d63031?style=flat-square" alt="High">
   <img src="https://img.shields.io/badge/medium-{{ counts.severity_medium }}-e17055?style=flat-square" alt="Medium">
   <img src="https://img.shields.io/badge/low-{{ counts.severity_low }}-27ae60?style=flat-square" alt="Low">
   <img src="https://img.shields.io/badge/awaiting_CVE-{{ counts.ghsas_no_cve }}-lightgrey?style=flat-square" alt="Awaiting CVE">
+</p>
+
+<p align="center">
+  An automated tracker that continuously monitors <a href="https://github.com/openclaw/openclaw">OpenClaw</a> security advisories<br>
+  across the GitHub Advisory Database, repo-level security advisories, and the<br>
+  <a href="https://github.com/CVEProject/cvelistV5">CVE V5 (cvelistV5)</a> registry. Every hour it pulls the latest data, reconciles<br>
+  GHSA → CVE publication state, and regenerates this dashboard so you always<br>
+  have an up-to-date picture of the project's vulnerability landscape.
 </p>
 
 <p align="center">
