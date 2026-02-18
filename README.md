@@ -18,37 +18,6 @@
 
 ---
 
-### 📊 Security Pulse
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-### 🔴 92
-**Total Security<br>Advisories**
-
-</td>
-<td align="center" width="25%">
-
-### 🟠 21
-**CVE IDs<br>Assigned**
-
-</td>
-<td align="center" width="25%">
-
-### 🟢 5
-**CVEs Published<br>in cvelistV5**
-
-</td>
-<td align="center" width="25%">
-
-### ⏳ 16
-**CVEs Reserved<br>(Pending)**
-
-</td>
-</tr>
-</table>
-
 **Severity Distribution:** &ensp;`🟣 CRITICAL (5)` · `🔴 HIGH (50)` · `🟡 MEDIUM (32)` · `🟢 LOW (5)` · `⚪ Awaiting CVE (71)`
 
 ---
