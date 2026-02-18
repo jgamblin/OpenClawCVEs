@@ -10,7 +10,7 @@
 > **Real-time, automated vulnerability intelligence for the [OpenClaw](https://github.com/openclaw/openclaw) ecosystem, synchronizing GitHub Security Advisories with the CVE&nbsp;V5 infrastructure.**
 
 <p align="center">
-  <img src="https://img.shields.io/badge/last_updated-2026-02-18_18%3A08_UTC-blue" alt="Last Updated">
+  <img src="https://img.shields.io/badge/last_updated-2026-02-18_18%3A09_UTC-blue" alt="Last Updated">
   <img src="https://img.shields.io/github/license/jgamblin/OpenClawCVEs?color=green" alt="License">
   <img src="https://img.shields.io/badge/data_source-cvelistV5-purple" alt="Data Source">
   <img src="https://img.shields.io/badge/updates-hourly-informational" alt="Update Frequency">
