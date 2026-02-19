@@ -1,5 +1,39 @@
 [
   {
+    "ghsa_id": "GHSA-fh3f-q9qw-93j9",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw replaced a deprecated sandbox hash algorithm",
+    "published": "2026-02-19",
+    "html_url": "https://github.com/advisories/GHSA-fh3f-q9qw-93j9",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.14"
+    ],
+    "cwes": [
+      "CWE-328"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-p536-vvpp-9mc8",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a Web Fetch DoS via unbounded response parsing",
+    "published": "2026-02-19",
+    "html_url": "https://github.com/advisories/GHSA-p536-vvpp-9mc8",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.15"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-37gc-85xm-2ww6",
     "cve_id": "CVE-2026-27009",
     "severity": "medium",

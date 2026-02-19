@@ -1,5 +1,201 @@
 [
   {
+    "ghsa_id": "GHSA-fh3f-q9qw-93j9",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-fh3f-q9qw-93j9",
+    "html_url": "https://github.com/advisories/GHSA-fh3f-q9qw-93j9",
+    "summary": "OpenClaw replaced a deprecated sandbox hash algorithm",
+    "description": "## Affected Packages / Versions\n- npm package: `openclaw`\n- Affected versions: `<= 2026.2.14`\n- Fixed version (pre-set): `2026.2.15`\n\n## Description\nThe sandbox identifier cache key for Docker/browser sandbox configuration used SHA-1 to hash normalized configuration payloads.\n\nSHA-1 is deprecated for cryptographic use and has known collision weaknesses. In this code path, deterministic IDs are used to decide whether an existing sandbox container can be reused safely. A collision in this hash could let one configuration be interpreted as another under the same sandbox cache identity, increasing the risk of cache poisoning and unsafe sandbox state reuse.\n\nThe implementation now uses SHA-256 for these deterministic hashes to restore collision resistance for this security-relevant identifier path.\n\n## Fix Commit(s)\n- `559c8d993`\n\n## Release Process Note\n`patched_versions` is pre-set to `2026.2.15` for the next release. After that release is published, mark this advisory ready for publication.\n\nThanks @kexinoh ( of Tencent zhuque Lab, by https://github.com/Tencent/AI-Infra-Guard) for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-fh3f-q9qw-93j9",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-fh3f-q9qw-93j9",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-fh3f-q9qw-93j9",
+      "https://github.com/openclaw/openclaw/commit/559c8d9930eebb5356506ff1a8cd3dbaec92be77",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-fh3f-q9qw-93j9"
+    ],
+    "published_at": "2026-02-19T19:41:07Z",
+    "updated_at": "2026-02-19T19:41:09Z",
+    "github_reviewed_at": "2026-02-19T19:41:07Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.14",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+        "score": 5.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-328",
+        "name": "Use of Weak Hash"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "kexinoh",
+          "id": 91727108,
+          "node_id": "U_kgDOBXelBA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/91727108?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kexinoh",
+          "html_url": "https://github.com/kexinoh",
+          "followers_url": "https://api.github.com/users/kexinoh/followers",
+          "following_url": "https://api.github.com/users/kexinoh/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kexinoh/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kexinoh/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kexinoh/subscriptions",
+          "organizations_url": "https://api.github.com/users/kexinoh/orgs",
+          "repos_url": "https://api.github.com/users/kexinoh/repos",
+          "events_url": "https://api.github.com/users/kexinoh/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kexinoh/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+      "score": 5.4
+    }
+  },
+  {
+    "ghsa_id": "GHSA-p536-vvpp-9mc8",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-p536-vvpp-9mc8",
+    "html_url": "https://github.com/advisories/GHSA-p536-vvpp-9mc8",
+    "summary": "OpenClaw has a Web Fetch DoS via unbounded response parsing",
+    "description": "### Summary\nThe `web_fetch` tool could be used to crash the OpenClaw Gateway process (OOM / resource exhaustion) by fetching and attempting to parse attacker-controlled web pages with oversized response bodies or pathological HTML nesting.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.14`\n- Fixed versions: `>= 2026.2.15`\n\n### Impact\nAn attacker can social-engineer a user (or any automation that uses `web_fetch`) into fetching a malicious URL that returns extremely large or deeply nested HTML. The Gateway may exhaust memory or become unresponsive, causing a denial of service.\n\n### Fix\nThe Gateway now caps the downloaded response body size before any HTML parsing and adds additional guards to avoid running Readability/DOM parsing on pathological HTML.\n\n### Fix Commit(s)\n- 166cf6a3e04c7df42bea70a7ad5ce2b9df46d147\n\n### Release Process Note\nThis advisory is prepared for the next npm release. Once `openclaw@2026.2.15` is published, publish this advisory without further edits.\n\nThanks @xuemian168 for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-p536-vvpp-9mc8",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-p536-vvpp-9mc8",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-p536-vvpp-9mc8",
+      "https://github.com/openclaw/openclaw/commit/166cf6a3e04c7df42bea70a7ad5ce2b9df46d147",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://github.com/advisories/GHSA-p536-vvpp-9mc8"
+    ],
+    "published_at": "2026-02-19T19:40:56Z",
+    "updated_at": "2026-02-19T19:40:58Z",
+    "github_reviewed_at": "2026-02-19T19:40:56Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.15",
+        "first_patched_version": "2026.2.15",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "xuemian168",
+          "id": 38741078,
+          "node_id": "MDQ6VXNlcjM4NzQxMDc4",
+          "avatar_url": "https://avatars.githubusercontent.com/u/38741078?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/xuemian168",
+          "html_url": "https://github.com/xuemian168",
+          "followers_url": "https://api.github.com/users/xuemian168/followers",
+          "following_url": "https://api.github.com/users/xuemian168/following{/other_user}",
+          "gists_url": "https://api.github.com/users/xuemian168/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/xuemian168/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/xuemian168/subscriptions",
+          "organizations_url": "https://api.github.com/users/xuemian168/orgs",
+          "repos_url": "https://api.github.com/users/xuemian168/repos",
+          "events_url": "https://api.github.com/users/xuemian168/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/xuemian168/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "ShangzhiXu",
+          "id": 63028857,
+          "node_id": "MDQ6VXNlcjYzMDI4ODU3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/63028857?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/ShangzhiXu",
+          "html_url": "https://github.com/ShangzhiXu",
+          "followers_url": "https://api.github.com/users/ShangzhiXu/followers",
+          "following_url": "https://api.github.com/users/ShangzhiXu/following{/other_user}",
+          "gists_url": "https://api.github.com/users/ShangzhiXu/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/ShangzhiXu/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/ShangzhiXu/subscriptions",
+          "organizations_url": "https://api.github.com/users/ShangzhiXu/orgs",
+          "repos_url": "https://api.github.com/users/ShangzhiXu/repos",
+          "events_url": "https://api.github.com/users/ShangzhiXu/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/ShangzhiXu/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "coordinator"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+      "score": 6.5
+    }
+  },
+  {
     "ghsa_id": "GHSA-37gc-85xm-2ww6",
     "cve_id": "CVE-2026-27009",
     "url": "https://api.github.com/advisories/GHSA-37gc-85xm-2ww6",

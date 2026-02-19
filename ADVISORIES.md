@@ -1,9 +1,9 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 99 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 101 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 19:21 UTC</sub>
+<sub>Last updated: 2026-02-19 20:14 UTC</sub>
 
 ---
 
@@ -42,7 +42,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (42)
+## GHSAs Without CVE — Potential Future CVEs (44)
 
 | GHSA | Severity | Title | CWEs | Published |
 |------|----------|-------|------|-----------|
@@ -86,6 +86,8 @@
 | [GHSA-w2cg-vxx6-5xjg](https://github.com/advisories/GHSA-w2cg-vxx6-5xjg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: denial of service through large base64 media files allocating large buffers before limit checks | CWE-400 | 2026-02-18 |
 | [GHSA-v773-r54f-q32w](https://github.com/advisories/GHSA-v773-r54f-q32w) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Slack: dmPolicy=open allowed any DM sender to run privileged slash commands | CWE-285 | 2026-02-18 |
 | [GHSA-xvhf-x56f-2hpp](https://github.com/advisories/GHSA-xvhf-x56f-2hpp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw exec approvals: safeBins could bypass stdin-only constraints via shell expansion | CWE-78 | 2026-02-18 |
+| [GHSA-fh3f-q9qw-93j9](https://github.com/advisories/GHSA-fh3f-q9qw-93j9) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw replaced a deprecated sandbox hash algorithm | CWE-328 | 2026-02-19 |
+| [GHSA-p536-vvpp-9mc8](https://github.com/advisories/GHSA-p536-vvpp-9mc8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Web Fetch DoS via unbounded response parsing | CWE-400 | 2026-02-19 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026-02-17 |
 | [GHSA-g27f-9qjv-22pm](https://github.com/advisories/GHSA-g27f-9qjv-22pm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw log poisoning (indirect prompt injection) via WebSocket headers | CWE-117 | 2026-02-17 |
 
