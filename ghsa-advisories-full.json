@@ -3441,7 +3441,7 @@
     "cve_id": "CVE-2026-26327",
     "url": "https://api.github.com/advisories/GHSA-pv58-549p-qh99",
     "html_url": "https://github.com/advisories/GHSA-pv58-549p-qh99",
-    "summary": "OpenClaw allows unauthenticated discovery TXT records could steer routing and TLS pinning",
+    "summary": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
     "description": "## Summary\n\nDiscovery beacons (Bonjour/mDNS and DNS-SD) include TXT records such as `lanHost`, `tailnetDns`, `gatewayPort`, and `gatewayTlsSha256`. TXT records are unauthenticated.\n\nPrior to the fix, some clients treated TXT values as authoritative routing/pinning inputs:\n\n- iOS and macOS: used TXT-provided host hints (`lanHost`/`tailnetDns`) and ports (`gatewayPort`) to build the connection URL.\n- iOS and Android: allowed the discovery-provided TLS fingerprint (`gatewayTlsSha256`) to override a previously stored TLS pin.\n\nOn a shared/untrusted LAN, an attacker could advertise a rogue `_openclaw-gw._tcp` service. This could cause a client to connect to an attacker-controlled endpoint and/or accept an attacker certificate, potentially exfiltrating Gateway credentials (`auth.token` / `auth.password`) during connection.\n\n## Distribution / Exposure\n\nThe iOS and Android apps are currently alpha/not broadly shipped (no public App Store / Play Store release). Practical impact is primarily limited to developers/testers running those builds, plus any other shipped clients relying on discovery on a shared/untrusted LAN.\n\nCVSS can still be used for the technical (base) severity of the bug; limited distribution primarily affects environmental risk.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected: `<= 2026.2.13` (latest published on npm as of 2026-02-14)\n- Patched: planned for `>= 2026.2.14` (not yet published at time of writing)\n\n## Fix\n\n- Clients now prefer the resolved service endpoint (SRV + A/AAAA) over TXT-provided routing hints.\n- Discovery-provided fingerprints no longer override stored TLS pins.\n- iOS/Android: first-time TLS pins require explicit user confirmation (fingerprint shown; no silent TOFU).\n- iOS/Android: discovery-based direct connects are TLS-only.\n- Android: hostname verification is no longer globally disabled (only bypassed when pinning).\n\n## Fix Commit(s)\n\n- d583782ee322a6faa1fe87ae52455e0d349de586\n\n## Credits\n\nThanks @simecek for reporting.",
     "type": "reviewed",
     "severity": "high",
@@ -3464,7 +3464,7 @@
       "https://github.com/advisories/GHSA-pv58-549p-qh99"
     ],
     "published_at": "2026-02-18T00:33:35Z",
-    "updated_at": "2026-02-18T00:33:37Z",
+    "updated_at": "2026-02-19T22:56:54Z",
     "github_reviewed_at": "2026-02-18T00:33:35Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

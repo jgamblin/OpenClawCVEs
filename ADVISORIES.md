@@ -3,7 +3,7 @@
 > Complete listing of all 104 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 22:12 UTC</sub>
+<sub>Last updated: 2026-02-19 23:13 UTC</sub>
 
 ---
 
@@ -23,7 +23,7 @@
 | [GHSA-m7x8-2w3w-pr42](https://github.com/advisories/GHSA-m7x8-2w3w-pr42) | CVE-2026-26323 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a command injection in maintainer clawtributors updater | npm/openclaw | 2026-02-18 |
 | [GHSA-cv7m-c9jx-vg7q](https://github.com/advisories/GHSA-cv7m-c9jx-vg7q) | CVE-2026-26329 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a path traversal in browser upload allows local file read | npm/openclaw | 2026-02-18 |
 | [GHSA-g34w-4xqq-h79m](https://github.com/advisories/GHSA-g34w-4xqq-h79m) | CVE-2026-26328 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw iMessage group allowlist authorization inherited DM pairing-store identities | npm/openclaw, npm/clawdbot | 2026-02-18 |
-| [GHSA-pv58-549p-qh99](https://github.com/advisories/GHSA-pv58-549p-qh99) | CVE-2026-26327 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw allows unauthenticated discovery TXT records could steer routing and TLS pinning | npm/openclaw | 2026-02-18 |
+| [GHSA-pv58-549p-qh99](https://github.com/advisories/GHSA-pv58-549p-qh99) | CVE-2026-26327 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning | npm/openclaw | 2026-02-18 |
 | [GHSA-8mh7-phf8-xgfm](https://github.com/advisories/GHSA-8mh7-phf8-xgfm) | CVE-2026-26326 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw skills.status could leak secrets to operator.read clients | npm/openclaw | 2026-02-17 |
 | [GHSA-h3f9-mjwj-w476](https://github.com/advisories/GHSA-h3f9-mjwj-w476) | CVE-2026-26325 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Node host system.run rawCommand/command mismatch can bypass allowlist/approvals | npm/openclaw | 2026-02-17 |
 | [GHSA-jrvc-8ff5-2f9f](https://github.com/advisories/GHSA-jrvc-8ff5-2f9f) | CVE-2026-26324 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a SSRF guard bypass via full-form IPv4-mapped IPv6 (loopback / metadata reachable) | npm/openclaw | 2026-02-17 |
@@ -148,20 +148,20 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-25593 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
 | CVE-2026-26316 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26317 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
-| CVE-2026-26319 | ✅ **PUBLISHED** | ❌ | 2026-02-17 | — |
-| CVE-2026-26320 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26321 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26322 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26323 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26324 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26325 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26326 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26327 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26328 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26329 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26972 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27001 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27002 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-26319 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26320 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26321 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26322 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26323 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26324 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26325 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26326 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26327 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26328 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
+| CVE-2026-26329 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
+| CVE-2026-26972 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
+| CVE-2026-27001 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
+| CVE-2026-27002 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
 | CVE-2026-27003 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-27004 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-27007 | ⏳ RESERVED | ❌ | 2026-02-18 | — |

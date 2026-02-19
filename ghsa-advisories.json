@@ -670,7 +670,7 @@
     "ghsa_id": "GHSA-pv58-549p-qh99",
     "cve_id": "CVE-2026-26327",
     "severity": "high",
-    "title": "OpenClaw allows unauthenticated discovery TXT records could steer routing and TLS pinning",
+    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
     "published": "2026-02-18",
     "html_url": "https://github.com/advisories/GHSA-pv58-549p-qh99",
     "packages": [

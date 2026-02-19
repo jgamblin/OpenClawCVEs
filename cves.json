@@ -16,6 +16,14 @@
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
+    "cve_id": "CVE-2026-26323",
+    "severity": "HIGH",
+    "cvss": 8.6,
+    "title": "OpenClaw has a command injection in maintainer clawtributors updater",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-m7x8-2w3w-pr42"
+  },
+  {
     "cve_id": "CVE-2026-25593",
     "severity": "HIGH",
     "cvss": 8.4,
@@ -30,6 +38,14 @@
     "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
     "date_published": "2026-02-04",
     "ghsa_id": "GHSA-q284-4pvr-m585"
+  },
+  {
+    "cve_id": "CVE-2026-26322",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw Gateway tool allowed unrestricted gatewayUrl override",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-g6q9-8fvw-f7rf"
   },
   {
     "cve_id": "CVE-2026-25474",
@@ -48,6 +64,38 @@
     "ghsa_id": "GHSA-pchc-86f6-8758"
   },
   {
+    "cve_id": "CVE-2026-26319",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw is Missing Webhook Authentication in Telnyx Provider Allows Unauthenticated Requests",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-4hg8-92x6-h2f3"
+  },
+  {
+    "cve_id": "CVE-2026-26321",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-8jpq-5h99-ff5r"
+  },
+  {
+    "cve_id": "CVE-2026-26324",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has a SSRF guard bypass via full-form IPv4-mapped IPv6 (loopback / metadata reachable)",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-jrvc-8ff5-2f9f"
+  },
+  {
+    "cve_id": "CVE-2026-26325",
+    "severity": "HIGH",
+    "cvss": 7.2,
+    "title": "OpenClaw Node host system.run rawCommand/command mismatch can bypass allowlist/approvals",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-h3f9-mjwj-w476"
+  },
+  {
     "cve_id": "CVE-2026-26317",
     "severity": "HIGH",
     "cvss": 7.1,
@@ -56,12 +104,36 @@
     "ghsa_id": "GHSA-3fqr-4cg8-h96q"
   },
   {
+    "cve_id": "CVE-2026-26320",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-7q2j-c4q5-rm27"
+  },
+  {
+    "cve_id": "CVE-2026-26327",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pv58-549p-qh99"
+  },
+  {
     "cve_id": "CVE-2026-25475",
     "severity": "MEDIUM",
     "cvss": 6.5,
     "title": "OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction",
     "date_published": "2026-02-04",
     "ghsa_id": "GHSA-r8g4-86fx-92mq"
+  },
+  {
+    "cve_id": "CVE-2026-26326",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw skills.status could leak secrets to operator.read clients",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-8mh7-phf8-xgfm"
   },
   {
     "cve_id": "CVE-2026-24764",
