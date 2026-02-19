@@ -40,6 +40,22 @@
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
   },
   {
+    "cve_id": "CVE-2026-26316",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pchc-86f6-8758"
+  },
+  {
+    "cve_id": "CVE-2026-26317",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-3fqr-4cg8-h96q"
+  },
+  {
     "cve_id": "CVE-2026-25475",
     "severity": "MEDIUM",
     "cvss": 6.5,

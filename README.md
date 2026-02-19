@@ -1,30 +1,30 @@
 # 🛡️ OpenClaw CVE & Security Advisory Tracker
 
 <p align="center">
-  <img src="https://img.shields.io/badge/advisories-102-red?style=for-the-badge" alt="Total Advisories">
+  <img src="https://img.shields.io/badge/advisories-104-red?style=for-the-badge" alt="Total Advisories">
   <img src="https://img.shields.io/badge/CVEs-28-orange?style=for-the-badge" alt="CVEs Assigned">
-  <img src="https://img.shields.io/badge/published-7-brightgreen?style=for-the-badge" alt="CVEs Published">
-  <img src="https://img.shields.io/badge/reserved-21-yellow?style=for-the-badge" alt="Reserved">
+  <img src="https://img.shields.io/badge/published-10-brightgreen?style=for-the-badge" alt="CVEs Published">
+  <img src="https://img.shields.io/badge/reserved-18-yellow?style=for-the-badge" alt="Reserved">
   <br>
   <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
   <img src="https://img.shields.io/badge/high-53-d63031?style=flat-square" alt="High">
-  <img src="https://img.shields.io/badge/medium-39-e17055?style=flat-square" alt="Medium">
-  <img src="https://img.shields.io/badge/low-5-27ae60?style=flat-square" alt="Low">
-  <img src="https://img.shields.io/badge/awaiting_CVE-74-lightgrey?style=flat-square" alt="Awaiting CVE">
+  <img src="https://img.shields.io/badge/medium-40-e17055?style=flat-square" alt="Medium">
+  <img src="https://img.shields.io/badge/low-6-27ae60?style=flat-square" alt="Low">
+  <img src="https://img.shields.io/badge/awaiting_CVE-76-lightgrey?style=flat-square" alt="Awaiting CVE">
 </p>
 
 An automated tracker that continuously monitors [OpenClaw](https://github.com/openclaw/openclaw) security advisories across the GitHub Advisory Database, repo-level security advisories, and the [CVE V5 (cvelistV5)](https://github.com/CVEProject/cvelistV5) registry. Every hour it pulls the latest data, reconciles GHSA → CVE publication state, and regenerates this dashboard so you always have an up-to-date picture of the project's vulnerability landscape.
 
 <p align="center">
-  <sub>Last updated: 2026-02-19 21:13 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
+  <sub>Last updated: 2026-02-19 22:12 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---
 
 <p align="center">
-  <a href="#-cves-published-in-cvelistv5-7">Published CVEs</a> ·
+  <a href="#-cves-published-in-cvelistv5-10">Published CVEs</a> ·
   <a href="#-cve-publication-pipeline">Pipeline</a> ·
-  <a href="#-all-security-advisories-102">Advisories</a> ·
+  <a href="#-all-security-advisories-104">Advisories</a> ·
   <a href="#-vulnerability-categories">Categories</a> ·
   <a href="#-key-insights">Insights</a> ·
   <a href="#-project-identity">Identity</a>
@@ -51,7 +51,7 @@ To find all CVEs, search for: `openclaw`, `clawdbot`, `moltbot`, `clawhub`, `pkg
 
 ---
 
-## 🚀 CVEs Published in cvelistV5 (7)
+## 🚀 CVEs Published in cvelistV5 (10)
 
 These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) repository:
 
@@ -62,6 +62,8 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 | [CVE-2026-25593](https://github.com/openclaw/openclaw/security/advisories/GHSA-g55j-c2v4-pjcg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.4 | OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply | CWE-78, CWE-306 | 2026-02-06 |
 | [CVE-2026-25157](https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.8 | OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand | CWE-78 | 2026-02-04 |
 | [CVE-2026-25474](https://github.com/openclaw/openclaw/security/advisories/GHSA-mp5h-m6qj-6292) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.5 | OpenClaw has a Telegram webhook request forgery (missing `channels.telegram.webhookSecret`) → auth bypass | CWE-345 | 2026-02-19 |
+| [CVE-2026-26316](https://github.com/openclaw/openclaw/security/advisories/GHSA-pchc-86f6-8758) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.5 | OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust | CWE-863 | 2026-02-19 |
+| [CVE-2026-26317](https://github.com/openclaw/openclaw/security/advisories/GHSA-3fqr-4cg8-h96q) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.1 | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | CWE-352 | 2026-02-19 |
 | [CVE-2026-25475](https://github.com/openclaw/openclaw/security/advisories/GHSA-r8g4-86fx-92mq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 6.5 | OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction | CWE-200, CWE-22 | 2026-02-04 |
 | [CVE-2026-24764](https://github.com/openclaw/openclaw/security/advisories/GHSA-782p-5fr5-7fj8) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 3.7 | OpenClaw Affected by Remote Code Execution via System Prompt Injection in Slack Channel Descriptions | CWE-74, CWE-94 | 2026-02-19 |
 
@@ -154,6 +156,42 @@ OpenClaw is a personal AI assistant. In versions 2026.1.30 and below, if channel
 - [https://github.com/openclaw/openclaw/releases/tag/v2026.2.1](https://github.com/openclaw/openclaw/releases/tag/v2026.2.1)
 ---
 
+### CVE-2026-26316 — OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 7.5 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N` |
+| **CWE** | CWE-863 (CWE-863: Incorrect Authorization) |
+| **Affected** | < 2026.2.13 |
+| **Vendor/Product** | openclaw / @openclaw/bluebubbles |
+| **Advisory** | [GHSA-pchc-86f6-8758](https://github.com/openclaw/openclaw/security/advisories/GHSA-pchc-86f6-8758) |
+
+OpenClaw is a personal AI assistant. Prior to 2026.2.13, the optional BlueBubbles iMessage channel plugin could accept webhook requests as authenticated based only on the TCP peer address being loopback (`127.0.0.1`, `::1`, `::ffff:127.0.0.1`) even when the configured webhook secret was missing or incorrect. This does not affect the default iMessage integration unless BlueBubbles is installed and enabled. Version 2026.2.13 contains a patch. Other mitigations include setting a non-empty BlueBubbles webhook password and avoiding deployments where a public-facing reverse proxy forwards to a loopback-bound Gateway without strong upstream authentication.
+
+**References:**
+- [https://github.com/openclaw/openclaw/commit/743f4b28495cdeb0d5bf76f6ebf4af01f6a02e5a](https://github.com/openclaw/openclaw/commit/743f4b28495cdeb0d5bf76f6ebf4af01f6a02e5a)
+- [https://github.com/openclaw/openclaw/commit/f836c385ffc746cb954e8ee409f99d079bfdcd2f](https://github.com/openclaw/openclaw/commit/f836c385ffc746cb954e8ee409f99d079bfdcd2f)
+- [https://github.com/openclaw/openclaw/releases/tag/v2026.2.13](https://github.com/openclaw/openclaw/releases/tag/v2026.2.13)
+---
+
+### CVE-2026-26317 — OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 7.1 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L` |
+| **CWE** | CWE-352 (CWE-352: Cross-Site Request Forgery (CSRF)) |
+| **Affected** | <= 2026.1.24-3 |
+| **Vendor/Product** | openclaw / clawdbot |
+| **Advisory** | [GHSA-3fqr-4cg8-h96q](https://github.com/openclaw/openclaw/security/advisories/GHSA-3fqr-4cg8-h96q) |
+
+OpenClaw is a personal AI assistant. Prior to 2026.2.14, browser-facing localhost mutation routes accepted cross-origin browser requests without explicit Origin/Referer validation. Loopback binding reduces remote exposure but does not prevent browser-initiated requests from malicious origins. A malicious website can trigger unauthorized state changes against a victim's local OpenClaw browser control plane (for example opening tabs, starting/stopping the browser, mutating storage/cookies) if the browser control service is reachable on loopback in the victim's browser context. Starting in version 2026.2.14, mutating HTTP methods (POST/PUT/PATCH/DELETE) are rejected when the request indicates a non-loopback Origin/Referer (or `Sec-Fetch-Site: cross-site`). Other mitigations include enabling browser control auth (token/password) and avoid running with auth disabled.
+
+> **Naming note:** Uses old name `openclaw/clawdbot` as vendor/product.
+**References:**
+- [https://github.com/openclaw/openclaw/commit/b566b09f81e2b704bf9398d8d97d5f7a90aa94c3](https://github.com/openclaw/openclaw/commit/b566b09f81e2b704bf9398d8d97d5f7a90aa94c3)
+- [https://github.com/openclaw/openclaw/releases/tag/v2026.2.14](https://github.com/openclaw/openclaw/releases/tag/v2026.2.14)
+---
+
 ### CVE-2026-25475 — OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction
 
 | Field | Detail |
@@ -192,7 +230,7 @@ OpenClaw (formerly Clawdbot) is a personal AI assistant users run on their own d
 
 ## ⏳ CVE Publication Pipeline
 
-Of 28 GHSAs with CVE IDs, **7** are fully published and **21** remain `RESERVED`.
+Of 28 GHSAs with CVE IDs, **10** are fully published and **18** remain `RESERVED`.
 
 ```mermaid
 graph LR
@@ -215,9 +253,9 @@ graph LR
 | CVE-2026-25474 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-25475 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
 | CVE-2026-25593 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
-| CVE-2026-26316 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26317 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26319 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
+| CVE-2026-26316 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26317 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26319 | ✅ **PUBLISHED** | ❌ | 2026-02-17 | — |
 | CVE-2026-26320 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
 | CVE-2026-26321 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
 | CVE-2026-26322 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
@@ -243,10 +281,10 @@ graph LR
 
 | Insight | Detail |
 |---------|--------|
-| **Dominant Weakness** | 25% of categorized issues relate to **Allowlist Bypass** (25/100) |
-| **V5 Sync Rate** | 7/28 CVE IDs (25%) have full cvelistV5 records |
-| **Advisory Velocity** | 102 security advisories across 2026-02-02 → 2026-02-19 |
-| **Top Severity** | 5 Critical + 53 High = 58 high-impact issues (57%) |
+| **Dominant Weakness** | 26% of categorized issues relate to **Allowlist Bypass** (26/101) |
+| **V5 Sync Rate** | 10/28 CVE IDs (36%) have full cvelistV5 records |
+| **Advisory Velocity** | 104 security advisories across 2026-02-02 → 2026-02-19 |
+| **Top Severity** | 5 Critical + 53 High = 58 high-impact issues (56%) |
 
 ### Vulnerability Categories
 
@@ -256,13 +294,13 @@ graph LR
 | **Path Traversal (CWE-22)** | 16 | MEDIA: paths, plugin install, browser downloads, Zip Slip, transcript paths |
 | **SSRF** | 6 | Image tool fetch, Feishu extension, attachment/media URLs, IPv6 bypass |
 | **Auth Bypass / Missing Auth** | 16 | WebSocket config.apply, webhook verification, browser relay, sandbox bridge |
-| **Allowlist Bypass** | 25 | Telegram usernames, Matrix displayName, Slack DM, Twitch, voice-call |
+| **Allowlist Bypass** | 26 | Telegram usernames, Matrix displayName, Slack DM, Twitch, voice-call |
 | **Injection (XSS/CSRF/Prompt)** | 17 | XSS in Control UI, prompt injection via Slack/CWD/logs, CSRF |
 | **Denial of Service** | 6 | Unbounded media fetch, webhook body buffering, archive expansion |
 
 ---
 
-## 📋 All Security Advisories (102)
+## 📋 All Security Advisories (104)
 
 ### Critical & High Severity
 
@@ -317,6 +355,7 @@ graph LR
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-6c9j-x93c-rw6j](https://github.com/advisories/GHSA-6c9j-x93c-rw6j) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw safeBins file-existence oracle information disclosure | 2026-02-19 |
 | [GHSA-fh3f-q9qw-93j9](https://github.com/advisories/GHSA-fh3f-q9qw-93j9) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw replaced a deprecated sandbox hash algorithm | 2026-02-19 |
 | [GHSA-p536-vvpp-9mc8](https://github.com/advisories/GHSA-p536-vvpp-9mc8) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Web Fetch DoS via unbounded response parsing | 2026-02-19 |
 | [GHSA-37gc-85xm-2ww6](https://github.com/advisories/GHSA-37gc-85xm-2ww6) | CVE-2026-27009 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection | 2026-02-18 |
@@ -348,6 +387,7 @@ graph LR
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-4685-c5cp-vp95](https://github.com/advisories/GHSA-4685-c5cp-vp95) | — | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags | 2026-02-19 |
 | [GHSA-782p-5fr5-7fj8](https://github.com/advisories/GHSA-782p-5fr5-7fj8) | CVE-2026-24764 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Affected by Remote Code Execution via System Prompt Injection in Slack Channel Descriptions | 2026-02-17 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | — | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | 2026-02-17 |
 | [GHSA-g27f-9qjv-22pm](https://github.com/advisories/GHSA-g27f-9qjv-22pm) | — | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw log poisoning (indirect prompt injection) via WebSocket headers | 2026-02-17 |
@@ -406,6 +446,8 @@ The OpenClaw project has been renamed multiple times, causing inconsistencies ac
 | CVE-2026-25593 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-25157 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-25474 | `openclaw` | `openclaw` | — | OpenClaw |
+| CVE-2026-26316 | `openclaw` | `@openclaw/bluebubbles` | — | OpenClaw |
+| CVE-2026-26317 | `openclaw` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
 | CVE-2026-25475 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-24764 | `clawdbot` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
 

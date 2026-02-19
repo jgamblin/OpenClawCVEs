@@ -1,5 +1,40 @@
 [
   {
+    "ghsa_id": "GHSA-6c9j-x93c-rw6j",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw safeBins file-existence oracle information disclosure",
+    "published": "2026-02-19",
+    "html_url": "https://github.com/advisories/GHSA-6c9j-x93c-rw6j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "cwes": [
+      "CWE-203"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-4685-c5cp-vp95",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags",
+    "published": "2026-02-19",
+    "html_url": "https://github.com/advisories/GHSA-4685-c5cp-vp95",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "cwes": [
+      "CWE-78",
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-r5fq-947m-xm57",
     "cve_id": null,
     "severity": "high",

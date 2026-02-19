@@ -1,5 +1,179 @@
 [
   {
+    "ghsa_id": "GHSA-6c9j-x93c-rw6j",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-6c9j-x93c-rw6j",
+    "html_url": "https://github.com/advisories/GHSA-6c9j-x93c-rw6j",
+    "summary": "OpenClaw safeBins file-existence oracle information disclosure",
+    "description": "An information disclosure vulnerability in OpenClaw's `tools.exec.safeBins` approval flow allowed a file-existence oracle.\n\nWhen safe-bin validation examined candidate file paths, command allow/deny behavior could differ based on whether a path already existed on the host filesystem. An attacker could probe for file presence by comparing outcomes for existing vs non-existing filenames.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Latest published vulnerable version at triage time: `2026.2.17`\n- Planned patched version: `2026.2.19`\n\n## Impact\nAttackers with access to this execution surface could infer whether specific files exist (for example secrets/config files), enabling filesystem enumeration and improving follow-on attack planning.\n\n## Fix\nThe safe-bin policy was changed to deterministic argv-only validation without host file-existence checks. File-oriented flags are blocked for safe-bin mode (for example `sort -o`, `jq -f`, `grep -f`), and trusted-path checks remain enforced.\n\n## Fix Commit(s)\n- `bafdbb6f112409a65decd3d4e7350fbd637c7754`\n\nThanks @nedlir for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-6c9j-x93c-rw6j",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-6c9j-x93c-rw6j",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-6c9j-x93c-rw6j",
+      "https://github.com/openclaw/openclaw/commit/bafdbb6f112409a65decd3d4e7350fbd637c7754",
+      "https://github.com/advisories/GHSA-6c9j-x93c-rw6j"
+    ],
+    "published_at": "2026-02-19T22:06:26Z",
+    "updated_at": "2026-02-19T22:06:28Z",
+    "github_reviewed_at": "2026-02-19T22:06:26Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.17",
+        "first_patched_version": "2026.2.19",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+        "score": 4.3
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-203",
+        "name": "Observable Discrepancy"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "nedlir",
+          "id": 66902031,
+          "node_id": "MDQ6VXNlcjY2OTAyMDMx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/66902031?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nedlir",
+          "html_url": "https://github.com/nedlir",
+          "followers_url": "https://api.github.com/users/nedlir/followers",
+          "following_url": "https://api.github.com/users/nedlir/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nedlir/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nedlir/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nedlir/subscriptions",
+          "organizations_url": "https://api.github.com/users/nedlir/orgs",
+          "repos_url": "https://api.github.com/users/nedlir/repos",
+          "events_url": "https://api.github.com/users/nedlir/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nedlir/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N",
+      "score": 4.3
+    }
+  },
+  {
+    "ghsa_id": "GHSA-4685-c5cp-vp95",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-4685-c5cp-vp95",
+    "html_url": "https://github.com/advisories/GHSA-4685-c5cp-vp95",
+    "summary": "OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags",
+    "description": "## Summary\n`tools.exec.safeBins` could be bypassed for filesystem access when `sort` output flags (`-o` / `--output`) or recursive `grep` flags were allowed through safe-bin execution paths.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Patched versions: `>= 2026.2.19`\n- Latest published version at triage time: `2026.2.17`\n\n## Impact\nIn deployments that enabled `tools.exec.safeBins`, an attacker with access to command execution flows could turn intended stdin-only safe-bin usage into file writes (`sort -o`) or recursive file reads (`grep -R`).\n\n## Fix Commit(s)\n- `cfe8457a0f4aae5324daec261d3b0aad1461a4bc`\n\nThanks @nedlir for reporting.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-4685-c5cp-vp95",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-4685-c5cp-vp95",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-4685-c5cp-vp95",
+      "https://github.com/openclaw/openclaw/commit/cfe8457a0f4aae5324daec261d3b0aad1461a4bc",
+      "https://github.com/advisories/GHSA-4685-c5cp-vp95"
+    ],
+    "published_at": "2026-02-19T22:06:00Z",
+    "updated_at": "2026-02-19T22:06:03Z",
+    "github_reviewed_at": "2026-02-19T22:06:00Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.17",
+        "first_patched_version": "2026.2.19",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+        "score": 3.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      },
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "nedlir",
+          "id": 66902031,
+          "node_id": "MDQ6VXNlcjY2OTAyMDMx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/66902031?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nedlir",
+          "html_url": "https://github.com/nedlir",
+          "followers_url": "https://api.github.com/users/nedlir/followers",
+          "following_url": "https://api.github.com/users/nedlir/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nedlir/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nedlir/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nedlir/subscriptions",
+          "organizations_url": "https://api.github.com/users/nedlir/orgs",
+          "repos_url": "https://api.github.com/users/nedlir/repos",
+          "events_url": "https://api.github.com/users/nedlir/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nedlir/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
+      "score": 3.6
+    }
+  },
+  {
     "ghsa_id": "GHSA-r5fq-947m-xm57",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-r5fq-947m-xm57",
@@ -5251,12 +5425,13 @@
       "https://github.com/openclaw/openclaw/commit/633fe8b9c17f02fcc68ecdb5ec212a5ace932f09",
       "https://github.com/openclaw/openclaw/commit/ca92597e1f9593236ad86810b66633144b69314d",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.1",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-25474",
       "https://github.com/advisories/GHSA-mp5h-m6qj-6292"
     ],
     "published_at": "2026-02-17T18:46:16Z",
-    "updated_at": "2026-02-17T18:46:17Z",
+    "updated_at": "2026-02-19T21:23:55Z",
     "github_reviewed_at": "2026-02-17T18:46:16Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T07:17:45Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5341,12 +5516,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-782p-5fr5-7fj8",
       "https://github.com/openclaw/openclaw/commit/35eb40a7000b59085e9c638a80fd03917c7a095e",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.3",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-24764",
       "https://github.com/advisories/GHSA-782p-5fr5-7fj8"
     ],
     "published_at": "2026-02-17T18:40:11Z",
-    "updated_at": "2026-02-17T18:40:12Z",
+    "updated_at": "2026-02-19T21:14:24Z",
     "github_reviewed_at": "2026-02-17T18:40:11Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T07:17:44Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {

@@ -1,9 +1,9 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 102 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 104 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 21:13 UTC</sub>
+<sub>Last updated: 2026-02-19 22:12 UTC</sub>
 
 ---
 
@@ -42,7 +42,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (45)
+## GHSAs Without CVE — Potential Future CVEs (47)
 
 | GHSA | Severity | Title | CWEs | Published |
 |------|----------|-------|------|-----------|
@@ -87,10 +87,12 @@
 | [GHSA-w2cg-vxx6-5xjg](https://github.com/advisories/GHSA-w2cg-vxx6-5xjg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: denial of service through large base64 media files allocating large buffers before limit checks | CWE-400 | 2026-02-18 |
 | [GHSA-v773-r54f-q32w](https://github.com/advisories/GHSA-v773-r54f-q32w) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Slack: dmPolicy=open allowed any DM sender to run privileged slash commands | CWE-285 | 2026-02-18 |
 | [GHSA-xvhf-x56f-2hpp](https://github.com/advisories/GHSA-xvhf-x56f-2hpp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw exec approvals: safeBins could bypass stdin-only constraints via shell expansion | CWE-78 | 2026-02-18 |
+| [GHSA-6c9j-x93c-rw6j](https://github.com/advisories/GHSA-6c9j-x93c-rw6j) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw safeBins file-existence oracle information disclosure | CWE-203 | 2026-02-19 |
 | [GHSA-fh3f-q9qw-93j9](https://github.com/advisories/GHSA-fh3f-q9qw-93j9) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw replaced a deprecated sandbox hash algorithm | CWE-328 | 2026-02-19 |
 | [GHSA-p536-vvpp-9mc8](https://github.com/advisories/GHSA-p536-vvpp-9mc8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Web Fetch DoS via unbounded response parsing | CWE-400 | 2026-02-19 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026-02-17 |
 | [GHSA-g27f-9qjv-22pm](https://github.com/advisories/GHSA-g27f-9qjv-22pm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw log poisoning (indirect prompt injection) via WebSocket headers | CWE-117 | 2026-02-17 |
+| [GHSA-4685-c5cp-vp95](https://github.com/advisories/GHSA-4685-c5cp-vp95) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags | CWE-78, CWE-184 | 2026-02-19 |
 
 ---
 
@@ -144,9 +146,9 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-25474 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-25475 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
 | CVE-2026-25593 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
-| CVE-2026-26316 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
-| CVE-2026-26317 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-26319 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
+| CVE-2026-26316 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26317 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26319 | ✅ **PUBLISHED** | ❌ | 2026-02-17 | — |
 | CVE-2026-26320 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
 | CVE-2026-26321 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
 | CVE-2026-26322 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
