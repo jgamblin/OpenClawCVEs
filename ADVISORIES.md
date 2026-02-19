@@ -3,7 +3,7 @@
 > Complete listing of all 99 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 00:41 UTC</sub>
+<sub>Last updated: 2026-02-19 01:39 UTC</sub>
 
 ---
 
@@ -135,7 +135,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE ID | State | In cvelistV5 | GHSA Published | CNA |
 |--------|-------|:------------:|----------------|-----|
 | CVE-2026-24763 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
-| CVE-2026-24764 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
+| CVE-2026-24764 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-25157 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
 | CVE-2026-25253 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | mitre |
 | CVE-2026-25474 | ⏳ RESERVED | ❌ | 2026-02-17 | — |
