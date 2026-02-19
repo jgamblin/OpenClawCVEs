@@ -1,9 +1,9 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 101 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 102 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 20:14 UTC</sub>
+<sub>Last updated: 2026-02-19 21:13 UTC</sub>
 
 ---
 
@@ -42,7 +42,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (44)
+## GHSAs Without CVE — Potential Future CVEs (45)
 
 | GHSA | Severity | Title | CWEs | Published |
 |------|----------|-------|------|-----------|
@@ -71,6 +71,7 @@
 | [GHSA-rq6g-px6m-c248](https://github.com/advisories/GHSA-rq6g-px6m-c248) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | CWE-284, CWE-639 | 2026-02-18 |
 | [GHSA-q447-rj3r-2cgh](https://github.com/advisories/GHSA-q447-rj3r-2cgh) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by denial of service via unbounded webhook request body buffering | CWE-400 | 2026-02-18 |
 | [GHSA-j27p-hq53-9wgc](https://github.com/advisories/GHSA-j27p-hq53-9wgc) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by denial of service via unbounded URL-backed media fetch | CWE-400 | 2026-02-18 |
+| [GHSA-r5fq-947m-xm57](https://github.com/advisories/GHSA-r5fq-947m-xm57) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a path traversal in apply_patch could write/delete files outside the workspace | CWE-22 | 2026-02-19 |
 | [GHSA-rmxw-jxxx-4cpc](https://github.com/advisories/GHSA-rmxw-jxxx-4cpc) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Matrix allowlist bypass via displayName and cross-homeserver localpart matching | CWE-290 | 2026-02-17 |
 | [GHSA-mv9j-6xhh-g383](https://github.com/advisories/GHSA-mv9j-6xhh-g383) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's unauthenticated Nostr profile HTTP endpoints allow remote profile/config tampering | CWE-285, CWE-306 | 2026-02-17 |
 | [GHSA-wfp2-v9c7-fh79](https://github.com/advisories/GHSA-wfp2-v9c7-fh79) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by SSRF via attachment/media URL hydration | CWE-918 | 2026-02-17 |

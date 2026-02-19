@@ -1,5 +1,22 @@
 [
   {
+    "ghsa_id": "GHSA-r5fq-947m-xm57",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw has a path traversal in apply_patch could write/delete files outside the workspace",
+    "published": "2026-02-19",
+    "html_url": "https://github.com/advisories/GHSA-r5fq-947m-xm57",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.14"
+    ],
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-fh3f-q9qw-93j9",
     "cve_id": null,
     "severity": "medium",

@@ -1,5 +1,92 @@
 [
   {
+    "ghsa_id": "GHSA-r5fq-947m-xm57",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-r5fq-947m-xm57",
+    "html_url": "https://github.com/advisories/GHSA-r5fq-947m-xm57",
+    "summary": "OpenClaw has a path traversal in apply_patch could write/delete files outside the workspace",
+    "description": "## Summary\n\nIn affected versions, when `apply_patch` was enabled and the agent ran without filesystem sandbox containment, crafted paths could cause file writes/deletes outside the configured workspace directory.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected: `<= 2026.2.13`\n- Fixed: `>= 2026.2.14`\n\n## Details\n\nThe non-sandbox path resolution in `apply_patch` did not enforce workspace containment. Inputs like `../../...` or absolute paths could escape the working directory in non-sandboxed mode.\n\n## Impact\n\nPractical impact depends on deployment and who can trigger tool execution. This is most relevant when tool invocation is exposed to less-trusted callers or when operators expected workspace-only containment.\n\n## Workarounds\n\n- Keep `tools.exec.applyPatch.enabled` disabled if you do not need `apply_patch`.\n- Keep `tools.exec.applyPatch.workspaceOnly` at its secure default of `true`.\n- Restrict who can trigger tool execution (and which tools are allowlisted).\n\n## Configuration Note\n\n`tools.exec.applyPatch.workspaceOnly: false` intentionally opts out of workspace containment and can re-enable outside-workspace writes/deletes.\n\n## Fix\n\n- PR: https://github.com/openclaw/openclaw/pull/16405\n- Merge commit: `5544646a09c0121fca7d7093812dc2de8437c7f1`\n\n## Credits\n\nThanks to @p80n-sec for reporting this issue.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-r5fq-947m-xm57",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-r5fq-947m-xm57",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r5fq-947m-xm57",
+      "https://github.com/openclaw/openclaw/pull/16405",
+      "https://github.com/openclaw/openclaw/commit/5544646a09c0121fca7d7093812dc2de8437c7f1",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://github.com/advisories/GHSA-r5fq-947m-xm57"
+    ],
+    "published_at": "2026-02-19T20:45:58Z",
+    "updated_at": "2026-02-19T20:46:01Z",
+    "github_reviewed_at": "2026-02-19T20:45:58Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.14",
+        "first_patched_version": "2026.2.14",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "p80n-sec",
+          "id": 33259962,
+          "node_id": "MDQ6VXNlcjMzMjU5OTYy",
+          "avatar_url": "https://avatars.githubusercontent.com/u/33259962?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/p80n-sec",
+          "html_url": "https://github.com/p80n-sec",
+          "followers_url": "https://api.github.com/users/p80n-sec/followers",
+          "following_url": "https://api.github.com/users/p80n-sec/following{/other_user}",
+          "gists_url": "https://api.github.com/users/p80n-sec/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/p80n-sec/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/p80n-sec/subscriptions",
+          "organizations_url": "https://api.github.com/users/p80n-sec/orgs",
+          "repos_url": "https://api.github.com/users/p80n-sec/repos",
+          "events_url": "https://api.github.com/users/p80n-sec/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/p80n-sec/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    }
+  },
+  {
     "ghsa_id": "GHSA-fh3f-q9qw-93j9",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-fh3f-q9qw-93j9",
