@@ -5489,6 +5489,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
       "score": 7.5
+    },
+    "epss": {
+      "percentage": 0.00017,
+      "percentile": 0.0395
     }
   },
   {
@@ -5584,6 +5588,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
       "score": 3.7
+    },
+    "epss": {
+      "percentage": 0.00028,
+      "percentile": 0.07863
     }
   },
   {
