@@ -1361,7 +1361,7 @@
   },
   {
     "ghsa_id": "GHSA-jfv4-h8mc-jcp8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27486",
     "url": "https://api.github.com/advisories/GHSA-jfv4-h8mc-jcp8",
     "html_url": "https://github.com/advisories/GHSA-jfv4-h8mc-jcp8",
     "summary": "OpenClaw: Process Safety - Unvalidated PID Kill via SIGKILL in Process Cleanup",
@@ -1374,6 +1374,10 @@
       {
         "value": "GHSA-jfv4-h8mc-jcp8",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27486",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -1384,7 +1388,7 @@
       "https://github.com/advisories/GHSA-jfv4-h8mc-jcp8"
     ],
     "published_at": "2026-02-18T17:41:09Z",
-    "updated_at": "2026-02-18T17:41:09Z",
+    "updated_at": "2026-02-20T19:26:43Z",
     "github_reviewed_at": "2026-02-18T17:41:09Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -1509,7 +1513,7 @@
   },
   {
     "ghsa_id": "GHSA-4564-pvr2-qq4h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27487",
     "url": "https://api.github.com/advisories/GHSA-4564-pvr2-qq4h",
     "html_url": "https://github.com/advisories/GHSA-4564-pvr2-qq4h",
     "summary": "OpenClaw: Prevent shell injection in macOS keychain credential write",
@@ -1522,6 +1526,10 @@
       {
         "value": "GHSA-4564-pvr2-qq4h",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27487",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -1534,7 +1542,7 @@
       "https://github.com/advisories/GHSA-4564-pvr2-qq4h"
     ],
     "published_at": "2026-02-18T17:39:00Z",
-    "updated_at": "2026-02-18T17:39:00Z",
+    "updated_at": "2026-02-20T19:26:57Z",
     "github_reviewed_at": "2026-02-18T17:39:00Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

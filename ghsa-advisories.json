@@ -258,7 +258,7 @@
   },
   {
     "ghsa_id": "GHSA-jfv4-h8mc-jcp8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27486",
     "severity": "medium",
     "title": "OpenClaw: Process Safety - Unvalidated PID Kill via SIGKILL in Process Cleanup",
     "published": "2026-02-18",
@@ -292,7 +292,7 @@
   },
   {
     "ghsa_id": "GHSA-4564-pvr2-qq4h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27487",
     "severity": "high",
     "title": "OpenClaw: Prevent shell injection in macOS keychain credential write",
     "published": "2026-02-18",
