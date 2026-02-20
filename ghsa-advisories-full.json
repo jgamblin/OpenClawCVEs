@@ -482,12 +482,13 @@
       "https://github.com/openclaw/openclaw/commit/3b4096e02e7e335f99f5986ec1bd566e90b14a7e",
       "https://github.com/openclaw/openclaw/commit/adc818db4a4b3b8d663e7674ef20436947514e1b",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27009",
       "https://github.com/advisories/GHSA-37gc-85xm-2ww6"
     ],
     "published_at": "2026-02-18T22:44:33Z",
-    "updated_at": "2026-02-18T22:44:37Z",
+    "updated_at": "2026-02-20T16:47:41Z",
     "github_reviewed_at": "2026-02-18T22:44:33Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -573,12 +574,13 @@
       "https://github.com/openclaw/openclaw/commit/2363e1b0853a028e47f90dcc1066e3e9809d65f1",
       "https://github.com/openclaw/openclaw/commit/b6305e97256d67e439719faacf5af3de9727d6e1",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27008",
       "https://github.com/advisories/GHSA-h7f7-89mm-pqh6"
     ],
     "published_at": "2026-02-18T22:44:18Z",
-    "updated_at": "2026-02-18T22:44:22Z",
+    "updated_at": "2026-02-20T16:47:35Z",
     "github_reviewed_at": "2026-02-18T22:44:18Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -663,12 +665,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-xxvh-5hwj-42pp",
       "https://github.com/openclaw/openclaw/commit/41ded303b4f6dae5afa854531ff837c3276ad60b",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27007",
       "https://github.com/advisories/GHSA-xxvh-5hwj-42pp"
     ],
     "published_at": "2026-02-18T22:44:10Z",
-    "updated_at": "2026-02-18T22:44:12Z",
+    "updated_at": "2026-02-20T16:47:26Z",
     "github_reviewed_at": "2026-02-18T22:44:10Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -752,12 +755,13 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-6hf3-mhgc-cm65",
       "https://github.com/openclaw/openclaw/commit/c6c53437f7da033b94a01d492e904974e7bda74c",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27004",
       "https://github.com/advisories/GHSA-6hf3-mhgc-cm65"
     ],
     "published_at": "2026-02-18T22:43:53Z",
-    "updated_at": "2026-02-18T22:43:57Z",
+    "updated_at": "2026-02-20T16:47:20Z",
     "github_reviewed_at": "2026-02-18T22:43:53Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -845,12 +849,13 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-chf7-jq6g-qrwv",
       "https://github.com/openclaw/openclaw/commit/cf69907015b659e5025efb735ee31bd05c4ee3d5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27003",
       "https://github.com/advisories/GHSA-chf7-jq6g-qrwv"
     ],
     "published_at": "2026-02-18T22:43:21Z",
-    "updated_at": "2026-02-18T22:43:22Z",
+    "updated_at": "2026-02-20T16:47:11Z",
     "github_reviewed_at": "2026-02-18T22:43:21Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:16Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -935,12 +940,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-w235-x559-36mg",
       "https://github.com/openclaw/openclaw/commit/887b209db47f1f9322fead241a1c0b043fd38339",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27002",
       "https://github.com/advisories/GHSA-w235-x559-36mg"
     ],
     "published_at": "2026-02-18T22:42:42Z",
-    "updated_at": "2026-02-18T22:42:47Z",
+    "updated_at": "2026-02-20T16:47:05Z",
     "github_reviewed_at": "2026-02-18T22:42:42Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:16Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -1025,12 +1031,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-2qj5-gwg2-xwc4",
       "https://github.com/openclaw/openclaw/commit/6254e96acf16e70ceccc8f9b2abecee44d606f79",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27001",
       "https://github.com/advisories/GHSA-2qj5-gwg2-xwc4"
     ],
     "published_at": "2026-02-18T22:42:29Z",
-    "updated_at": "2026-02-18T22:42:30Z",
+    "updated_at": "2026-02-20T16:47:00Z",
     "github_reviewed_at": "2026-02-18T22:42:29Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:16Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -1700,12 +1707,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-xwjm-j929-xq7c",
       "https://github.com/openclaw/openclaw/commit/7f0489e4731c8d965d78d6eac4a60312e46a9426",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.13",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26972",
       "https://github.com/advisories/GHSA-xwjm-j929-xq7c"
     ],
     "published_at": "2026-02-18T17:37:52Z",
-    "updated_at": "2026-02-18T17:37:54Z",
+    "updated_at": "2026-02-20T16:46:20Z",
     "github_reviewed_at": "2026-02-18T17:37:52Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:16Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -2514,12 +2522,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-3fqr-4cg8-h96q",
       "https://github.com/openclaw/openclaw/commit/b566b09f81e2b704bf9398d8d97d5f7a90aa94c3",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26317",
       "https://github.com/advisories/GHSA-3fqr-4cg8-h96q"
     ],
     "published_at": "2026-02-18T00:53:59Z",
-    "updated_at": "2026-02-18T00:54:00Z",
+    "updated_at": "2026-02-20T16:46:05Z",
     "github_reviewed_at": "2026-02-18T00:53:59Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T22:16:47Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3154,12 +3163,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-m7x8-2w3w-pr42",
       "https://github.com/openclaw/openclaw/commit/a429380e337152746031d290432a4b93aa553d55",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26323",
       "https://github.com/advisories/GHSA-m7x8-2w3w-pr42"
     ],
     "published_at": "2026-02-18T00:46:54Z",
-    "updated_at": "2026-02-18T00:46:56Z",
+    "updated_at": "2026-02-20T16:45:55Z",
     "github_reviewed_at": "2026-02-18T00:46:54Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3268,12 +3278,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-cv7m-c9jx-vg7q",
       "https://github.com/openclaw/openclaw/commit/3aa94afcfd12104c683c9cad81faf434d0dadf87",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26329",
       "https://github.com/advisories/GHSA-cv7m-c9jx-vg7q"
     ],
     "published_at": "2026-02-18T00:46:49Z",
-    "updated_at": "2026-02-18T00:46:50Z",
+    "updated_at": "2026-02-20T16:45:49Z",
     "github_reviewed_at": "2026-02-18T00:46:49Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:15Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3358,12 +3369,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-g34w-4xqq-h79m",
       "https://github.com/openclaw/openclaw/commit/872079d42fe105ece2900a1dd6ab321b92da2d59",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26328",
       "https://github.com/advisories/GHSA-g34w-4xqq-h79m"
     ],
     "published_at": "2026-02-18T00:43:54Z",
-    "updated_at": "2026-02-18T00:43:55Z",
+    "updated_at": "2026-02-20T16:45:40Z",
     "github_reviewed_at": "2026-02-18T00:43:54Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-20T00:16:15Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3461,12 +3473,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-pv58-549p-qh99",
       "https://github.com/openclaw/openclaw/commit/d583782ee322a6faa1fe87ae52455e0d349de586",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26327",
       "https://github.com/advisories/GHSA-pv58-549p-qh99"
     ],
     "published_at": "2026-02-18T00:33:35Z",
-    "updated_at": "2026-02-19T22:56:54Z",
+    "updated_at": "2026-02-20T16:45:31Z",
     "github_reviewed_at": "2026-02-18T00:33:35Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:26Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3676,12 +3689,13 @@
       "https://github.com/openclaw/openclaw/commit/d3428053d95eefbe10ecf04f92218ffcba55ae5a",
       "https://github.com/openclaw/openclaw/commit/ebc68861a61067fc37f9298bded3eec9de0ba783",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26326",
       "https://github.com/advisories/GHSA-8mh7-phf8-xgfm"
     ],
     "published_at": "2026-02-17T21:43:41Z",
-    "updated_at": "2026-02-17T21:43:42Z",
+    "updated_at": "2026-02-20T16:45:25Z",
     "github_reviewed_at": "2026-02-17T21:43:41Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3790,12 +3804,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-h3f9-mjwj-w476",
       "https://github.com/openclaw/openclaw/commit/cb3290fca32593956638f161d9776266b90ab891",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26325",
       "https://github.com/advisories/GHSA-h3f9-mjwj-w476"
     ],
     "published_at": "2026-02-17T21:42:49Z",
-    "updated_at": "2026-02-17T21:42:52Z",
+    "updated_at": "2026-02-20T16:44:54Z",
     "github_reviewed_at": "2026-02-17T21:42:49Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3880,12 +3895,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-jrvc-8ff5-2f9f",
       "https://github.com/openclaw/openclaw/commit/c0c0e0f9aecb913e738742f73e091f2f72d39a19",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26324",
       "https://github.com/advisories/GHSA-jrvc-8ff5-2f9f"
     ],
     "published_at": "2026-02-17T21:42:40Z",
-    "updated_at": "2026-02-17T21:42:42Z",
+    "updated_at": "2026-02-20T16:44:49Z",
     "github_reviewed_at": "2026-02-17T21:42:40Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -3970,12 +3986,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-g6q9-8fvw-f7rf",
       "https://github.com/openclaw/openclaw/commit/c5406e1d2434be2ef6eb4d26d8f1798d718713f4",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26322",
       "https://github.com/advisories/GHSA-g6q9-8fvw-f7rf"
     ],
     "published_at": "2026-02-17T21:42:15Z",
-    "updated_at": "2026-02-17T21:42:17Z",
+    "updated_at": "2026-02-20T16:44:39Z",
     "github_reviewed_at": "2026-02-17T21:42:15Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -4060,12 +4077,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-8jpq-5h99-ff5r",
       "https://github.com/openclaw/openclaw/commit/5b4121d6011a48c71e747e3c18197f180b872c5d",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26321",
       "https://github.com/advisories/GHSA-8jpq-5h99-ff5r"
     ],
     "published_at": "2026-02-17T21:41:52Z",
-    "updated_at": "2026-02-17T21:41:53Z",
+    "updated_at": "2026-02-20T16:44:34Z",
     "github_reviewed_at": "2026-02-17T21:41:52Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -4150,12 +4168,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-7q2j-c4q5-rm27",
       "https://github.com/openclaw/openclaw/commit/28d9dd7a772501ccc3f71457b4adfee79084fe6f",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26320",
       "https://github.com/advisories/GHSA-7q2j-c4q5-rm27"
     ],
     "published_at": "2026-02-17T21:41:40Z",
-    "updated_at": "2026-02-17T21:41:42Z",
+    "updated_at": "2026-02-20T16:44:26Z",
     "github_reviewed_at": "2026-02-17T21:41:40Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:25Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -4241,12 +4260,13 @@
       "https://github.com/openclaw/openclaw/commit/29b587e73cbdc941caec573facd16e87d52f007b",
       "https://github.com/openclaw/openclaw/commit/f47584fec86d6d73f2d483043a2ad0e7e3c50411",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26319",
       "https://github.com/advisories/GHSA-4hg8-92x6-h2f3"
     ],
     "published_at": "2026-02-17T21:40:46Z",
-    "updated_at": "2026-02-17T21:40:47Z",
+    "updated_at": "2026-02-20T16:44:20Z",
     "github_reviewed_at": "2026-02-17T21:40:46Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T23:16:24Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5011,12 +5031,14 @@
       "https://github.com/openclaw/openclaw/commit/743f4b28495cdeb0d5bf76f6ebf4af01f6a02e5a",
       "https://github.com/openclaw/openclaw/commit/f836c385ffc746cb954e8ee409f99d079bfdcd2f",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.12",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-26316",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.13",
       "https://github.com/advisories/GHSA-pchc-86f6-8758"
     ],
     "published_at": "2026-02-17T21:33:51Z",
-    "updated_at": "2026-02-17T21:33:51Z",
+    "updated_at": "2026-02-20T16:44:14Z",
     "github_reviewed_at": "2026-02-17T21:33:51Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-02-19T22:16:47Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
