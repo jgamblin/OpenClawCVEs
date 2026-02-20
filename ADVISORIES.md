@@ -3,7 +3,7 @@
 > Complete listing of all 104 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-19 23:13 UTC</sub>
+<sub>Last updated: 2026-02-20 00:38 UTC</sub>
 
 ---
 
@@ -157,16 +157,16 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-26325 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26326 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26327 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
-| CVE-2026-26328 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
-| CVE-2026-26329 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
-| CVE-2026-26972 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
-| CVE-2026-27001 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
-| CVE-2026-27002 | ✅ **PUBLISHED** | ❌ | 2026-02-18 | — |
-| CVE-2026-27003 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27004 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27007 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27008 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
-| CVE-2026-27009 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-26328 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26329 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26972 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27001 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27002 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27003 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27004 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27007 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27008 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27009 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 
 ---
 
