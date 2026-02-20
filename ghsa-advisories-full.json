@@ -1,5 +1,162 @@
 [
   {
+    "ghsa_id": "GHSA-cxpw-2g23-2vgw",
+    "cve_id": "CVE-2026-27576",
+    "url": "https://api.github.com/advisories/GHSA-cxpw-2g23-2vgw",
+    "html_url": "https://github.com/advisories/GHSA-cxpw-2g23-2vgw",
+    "summary": "OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs",
+    "description": "## Vulnerability\n\nThe ACP bridge accepted very large prompt text blocks and could assemble oversized prompt payloads before forwarding them to `chat.send`.\n\nBecause ACP runs over local stdio, this mainly affects local ACP clients (for example IDE integrations) that send unusually large inputs.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Patched version: `2026.2.18` (planned next release)\n\n## Impact\n\n- Local ACP sessions may become less responsive when very large prompts are submitted\n- Larger-than-expected model usage/cost when oversized text is forwarded\n- No privilege escalation and no direct remote attack path in the default ACP model\n\n## Affected Components\n\n- `src/acp/event-mapper.ts`\n- `src/acp/translator.ts`\n\n## Remediation\n\n- Enforce a 2 MiB prompt-text limit before concatenation\n- Count inter-block newline separator bytes during pre-concatenation size checks\n- Keep final outbound message-size validation before `chat.send`\n- Avoid stale active-run session state when oversized prompts are rejected\n- Add regression tests for oversize rejection and active-run cleanup\n\n## Fix Commit(s)\n\n- `732e53151e8fbdfc0501182ddb0e900878bdc1e3`\n- `ebcf19746f5c500a41817e03abecadea8655654a`\n- `63e39d7f57ac4ad4a5e38d17e7394ae7c4dd0b9c`\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-cxpw-2g23-2vgw",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-cxpw-2g23-2vgw",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27576",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-cxpw-2g23-2vgw",
+      "https://github.com/openclaw/openclaw/commit/63e39d7f57ac4ad4a5e38d17e7394ae7c4dd0b9c",
+      "https://github.com/openclaw/openclaw/commit/8ae2d5110f6ceadef73822aa3db194fb60d2ba68",
+      "https://github.com/openclaw/openclaw/commit/ebcf19746f5c500a41817e03abecadea8655654a",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.19",
+      "https://github.com/advisories/GHSA-cxpw-2g23-2vgw"
+    ],
+    "published_at": "2026-02-20T21:52:44Z",
+    "updated_at": "2026-02-20T21:52:44Z",
+    "github_reviewed_at": "2026-02-20T21:52:44Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.17",
+        "first_patched_version": "2026.2.19",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "score": 4.8
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-w45g-5746-x9fp",
+    "cve_id": "CVE-2026-27488",
+    "url": "https://api.github.com/advisories/GHSA-w45g-5746-x9fp",
+    "html_url": "https://github.com/advisories/GHSA-w45g-5746-x9fp",
+    "summary": "OpenClaw hardened cron webhook delivery against SSRF",
+    "description": "## Affected Packages / Versions\n\n- `openclaw` npm package versions `<= 2026.2.17`.\n\n## Vulnerability\nCron webhook delivery in `src/gateway/server-cron.ts` used `fetch()` directly, so webhook targets could reach private/metadata/internal endpoints without SSRF policy checks.\n\n## Fix Commit(s)\n- `99db4d13e`\n- `35851cdaf`\n\nThanks @Adam55A-code for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-w45g-5746-x9fp",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-w45g-5746-x9fp",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27488",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-w45g-5746-x9fp",
+      "https://github.com/openclaw/openclaw/commit/99db4d13e5c139883ef0def9ff963e9273179655",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.19",
+      "https://github.com/advisories/GHSA-w45g-5746-x9fp"
+    ],
+    "published_at": "2026-02-20T21:13:03Z",
+    "updated_at": "2026-02-20T21:13:06Z",
+    "github_reviewed_at": "2026-02-20T21:13:03Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.17",
+        "first_patched_version": "2026.2.19",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:N/SI:L/SA:L",
+        "score": 6.9
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Adam55A-code",
+          "id": 208555906,
+          "node_id": "U_kgDODG5Pgg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/208555906?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Adam55A-code",
+          "html_url": "https://github.com/Adam55A-code",
+          "followers_url": "https://api.github.com/users/Adam55A-code/followers",
+          "following_url": "https://api.github.com/users/Adam55A-code/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Adam55A-code/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Adam55A-code/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Adam55A-code/subscriptions",
+          "organizations_url": "https://api.github.com/users/Adam55A-code/orgs",
+          "repos_url": "https://api.github.com/users/Adam55A-code/repos",
+          "events_url": "https://api.github.com/users/Adam55A-code/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Adam55A-code/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-r6h2-5gqq-v5v6",
     "cve_id": "CVE-2026-27485",
     "url": "https://api.github.com/advisories/GHSA-r6h2-5gqq-v5v6",

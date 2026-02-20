@@ -1,5 +1,39 @@
 [
   {
+    "ghsa_id": "GHSA-cxpw-2g23-2vgw",
+    "cve_id": "CVE-2026-27576",
+    "severity": "medium",
+    "title": "OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs",
+    "published": "2026-02-20",
+    "html_url": "https://github.com/advisories/GHSA-cxpw-2g23-2vgw",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w45g-5746-x9fp",
+    "cve_id": "CVE-2026-27488",
+    "severity": "medium",
+    "title": "OpenClaw hardened cron webhook delivery against SSRF",
+    "published": "2026-02-20",
+    "html_url": "https://github.com/advisories/GHSA-w45g-5746-x9fp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-r6h2-5gqq-v5v6",
     "cve_id": "CVE-2026-27485",
     "severity": "medium",

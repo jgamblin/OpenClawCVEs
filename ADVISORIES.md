@@ -1,16 +1,18 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 106 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 108 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-20 21:09 UTC</sub>
+<sub>Last updated: 2026-02-20 22:09 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (32)
+## GHSAs with CVE IDs (34)
 
 | GHSA | CVE | Severity | Title | Packages | Published |
 |------|-----|----------|-------|----------|-----------|
+| [GHSA-cxpw-2g23-2vgw](https://github.com/advisories/GHSA-cxpw-2g23-2vgw) | CVE-2026-27576 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs | npm/openclaw | 2026-02-20 |
+| [GHSA-w45g-5746-x9fp](https://github.com/advisories/GHSA-w45g-5746-x9fp) | CVE-2026-27488 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw hardened cron webhook delivery against SSRF | npm/openclaw | 2026-02-20 |
 | [GHSA-r6h2-5gqq-v5v6](https://github.com/advisories/GHSA-r6h2-5gqq-v5v6) | CVE-2026-27485 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Reject symlinks in local skill packaging script | npm/openclaw | 2026-02-20 |
 | [GHSA-wh94-p5m6-mr7j](https://github.com/advisories/GHSA-wh94-p5m6-mr7j) | CVE-2026-27484 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows | npm/openclaw | 2026-02-20 |
 | [GHSA-37gc-85xm-2ww6](https://github.com/advisories/GHSA-37gc-85xm-2ww6) | CVE-2026-27009 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection | npm/openclaw | 2026-02-18 |
@@ -173,6 +175,8 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-27485 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
 | CVE-2026-27486 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-27487 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
+| CVE-2026-27488 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
+| CVE-2026-27576 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
 
 ---
 
