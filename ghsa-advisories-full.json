@@ -1,5 +1,187 @@
 [
   {
+    "ghsa_id": "GHSA-r6h2-5gqq-v5v6",
+    "cve_id": "CVE-2026-27485",
+    "url": "https://api.github.com/advisories/GHSA-r6h2-5gqq-v5v6",
+    "html_url": "https://github.com/advisories/GHSA-r6h2-5gqq-v5v6",
+    "summary": "OpenClaw: Reject symlinks in local skill packaging script",
+    "description": "## Vulnerability\n\n`skills/skill-creator/scripts/package_skill.py` (a local helper script used when authors package skills) previously followed symlinks while building `.skill` archives.\n\nIf an author runs this script on a crafted local skill directory containing symlinks to files outside the skill root, the resulting archive can include unintended file contents.\n\n## Severity and Exposure\n\n- **Severity: Low**\n- **Execution context:** local/manual workflow only (skill author packaging step)\n- **No remote trigger:** this is not reachable via normal OpenClaw gateway/chat runtime paths\n- **No extraction Zip Slip in this finding:** this issue is limited to packaging-time symlink following\n\n## Impact\n\n- Potential unintentional disclosure of local files from the packaging machine into a generated `.skill` artifact.\n- Requires local execution of the packaging script on attacker-controlled skill contents.\n\n## Affected Components\n\n- `skills/skill-creator/scripts/package_skill.py`\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Latest published version during triage: `2026.2.17`\n- Vulnerable version range: `<= 2026.2.17`\n- Planned patched version (next release): `2026.2.18`\n\n## Remediation\n\n- Reject symlinks during skill packaging.\n- Add regression tests for symlink file and symlink directory cases.\n- Update packaging guidance to document the symlink restriction.\n\n## Fix Commit(s)\n\n- `c275932aa4230fb7a8212fe1b9d2a18424874b3f`\n- `ee1d6427b544ccadd73e02b1630ea5c29ba9a9f0`\n\n## Related PR\n\n- https://github.com/openclaw/openclaw/pull/20796\n\n## Release Process Note\n\n`patched_versions` is pre-set to the planned next release (`2026.2.18`). Once npm `openclaw@2026.2.18` is published, this advisory is ready to publish without additional edits.\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-r6h2-5gqq-v5v6",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-r6h2-5gqq-v5v6",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27485",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r6h2-5gqq-v5v6",
+      "https://github.com/openclaw/openclaw/pull/20796",
+      "https://github.com/openclaw/openclaw/commit/c275932aa4230fb7a8212fe1b9d2a18424874b3f",
+      "https://github.com/openclaw/openclaw/commit/ee1d6427b544ccadd73e02b1630ea5c29ba9a9f0",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.19",
+      "https://github.com/advisories/GHSA-r6h2-5gqq-v5v6"
+    ],
+    "published_at": "2026-02-20T21:05:45Z",
+    "updated_at": "2026-02-20T21:05:46Z",
+    "github_reviewed_at": "2026-02-20T21:05:45Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.18",
+        "first_patched_version": "2026.2.19",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "score": 4.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-61",
+        "name": "UNIX Symbolic Link (Symlink) Following"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wh94-p5m6-mr7j",
+    "cve_id": "CVE-2026-27484",
+    "url": "https://api.github.com/advisories/GHSA-wh94-p5m6-mr7j",
+    "html_url": "https://github.com/advisories/GHSA-wh94-p5m6-mr7j",
+    "summary": "OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows",
+    "description": "## Overview\n\nDiscord moderation action handling (`timeout`, `kick`, `ban`) used sender identity from request parameters in tool-driven flows, instead of trusted runtime sender context.\n\n## Impact\n\nIn setups where Discord moderation actions are enabled and the bot has the necessary guild permissions, a non-admin user could request moderation actions by spoofing sender identity fields.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Latest published affected version (as of 2026-02-19): `2026.2.17`\n- Affected range: `<=2026.2.17`\n- Fixed in planned next release: `2026.2.18`\n\n## Fix\n\n- Moderation authorization now uses trusted sender context (`requesterSenderId`) instead of untrusted action params.\n- Added permission checks for required guild capabilities per action.\n\n## Fix Commit(s)\n\n- `775816035ecc6bb243843f8000c9a58ff609e32d`\n\nThanks @aether-ai-agent for reporting.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-wh94-p5m6-mr7j",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-wh94-p5m6-mr7j",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27484",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-wh94-p5m6-mr7j",
+      "https://github.com/openclaw/openclaw/commit/775816035ecc6bb243843f8000c9a58ff609e32d",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.19",
+      "https://github.com/advisories/GHSA-wh94-p5m6-mr7j"
+    ],
+    "published_at": "2026-02-20T21:02:31Z",
+    "updated_at": "2026-02-20T21:02:33Z",
+    "github_reviewed_at": "2026-02-20T21:02:31Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.18",
+        "first_patched_version": "2026.2.18",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+        "score": 2.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-6c9j-x93c-rw6j",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-6c9j-x93c-rw6j",

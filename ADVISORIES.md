@@ -1,16 +1,18 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 104 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 106 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-20 20:11 UTC</sub>
+<sub>Last updated: 2026-02-20 21:09 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (30)
+## GHSAs with CVE IDs (32)
 
 | GHSA | CVE | Severity | Title | Packages | Published |
 |------|-----|----------|-------|----------|-----------|
+| [GHSA-r6h2-5gqq-v5v6](https://github.com/advisories/GHSA-r6h2-5gqq-v5v6) | CVE-2026-27485 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Reject symlinks in local skill packaging script | npm/openclaw | 2026-02-20 |
+| [GHSA-wh94-p5m6-mr7j](https://github.com/advisories/GHSA-wh94-p5m6-mr7j) | CVE-2026-27484 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows | npm/openclaw | 2026-02-20 |
 | [GHSA-37gc-85xm-2ww6](https://github.com/advisories/GHSA-37gc-85xm-2ww6) | CVE-2026-27009 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection | npm/openclaw | 2026-02-18 |
 | [GHSA-h7f7-89mm-pqh6](https://github.com/advisories/GHSA-h7f7-89mm-pqh6) | CVE-2026-27008 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw hardened the skill download target directory validation | npm/openclaw | 2026-02-18 |
 | [GHSA-xxvh-5hwj-42pp](https://github.com/advisories/GHSA-xxvh-5hwj-42pp) | CVE-2026-27007 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation | npm/openclaw | 2026-02-18 |
@@ -167,6 +169,8 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-27007 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27008 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27009 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27484 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
+| CVE-2026-27485 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
 | CVE-2026-27486 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-27487 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 

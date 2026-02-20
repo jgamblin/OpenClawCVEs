@@ -1,5 +1,39 @@
 [
   {
+    "ghsa_id": "GHSA-r6h2-5gqq-v5v6",
+    "cve_id": "CVE-2026-27485",
+    "severity": "medium",
+    "title": "OpenClaw: Reject symlinks in local skill packaging script",
+    "published": "2026-02-20",
+    "html_url": "https://github.com/advisories/GHSA-r6h2-5gqq-v5v6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.18"
+    ],
+    "cwes": [
+      "CWE-61"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wh94-p5m6-mr7j",
+    "cve_id": "CVE-2026-27484",
+    "severity": "low",
+    "title": "OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows",
+    "published": "2026-02-20",
+    "html_url": "https://github.com/advisories/GHSA-wh94-p5m6-mr7j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.18"
+    ],
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-6c9j-x93c-rw6j",
     "cve_id": null,
     "severity": "medium",

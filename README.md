@@ -1,22 +1,22 @@
 # 🛡️ OpenClaw CVE & Security Advisory Tracker
 
 <p align="center">
-  <img src="https://img.shields.io/badge/advisories-104-red?style=for-the-badge" alt="Total Advisories">
-  <img src="https://img.shields.io/badge/CVEs-30-orange?style=for-the-badge" alt="CVEs Assigned">
+  <img src="https://img.shields.io/badge/advisories-106-red?style=for-the-badge" alt="Total Advisories">
+  <img src="https://img.shields.io/badge/CVEs-32-orange?style=for-the-badge" alt="CVEs Assigned">
   <img src="https://img.shields.io/badge/published-28-brightgreen?style=for-the-badge" alt="CVEs Published">
-  <img src="https://img.shields.io/badge/reserved-2-yellow?style=for-the-badge" alt="Reserved">
+  <img src="https://img.shields.io/badge/reserved-4-yellow?style=for-the-badge" alt="Reserved">
   <br>
   <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
   <img src="https://img.shields.io/badge/high-53-d63031?style=flat-square" alt="High">
-  <img src="https://img.shields.io/badge/medium-40-e17055?style=flat-square" alt="Medium">
-  <img src="https://img.shields.io/badge/low-6-27ae60?style=flat-square" alt="Low">
+  <img src="https://img.shields.io/badge/medium-41-e17055?style=flat-square" alt="Medium">
+  <img src="https://img.shields.io/badge/low-7-27ae60?style=flat-square" alt="Low">
   <img src="https://img.shields.io/badge/awaiting_CVE-74-lightgrey?style=flat-square" alt="Awaiting CVE">
 </p>
 
 An automated tracker that continuously monitors [OpenClaw](https://github.com/openclaw/openclaw) security advisories across the GitHub Advisory Database, repo-level security advisories, and the [CVE V5 (cvelistV5)](https://github.com/CVEProject/cvelistV5) registry. Every hour it pulls the latest data, reconciles GHSA → CVE publication state, and regenerates this dashboard so you always have an up-to-date picture of the project's vulnerability landscape.
 
 <p align="center">
-  <sub>Last updated: 2026-02-20 20:11 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
+  <sub>Last updated: 2026-02-20 21:09 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---
@@ -24,7 +24,7 @@ An automated tracker that continuously monitors [OpenClaw](https://github.com/op
 <p align="center">
   <a href="#-cves-published-in-cvelistv5-28">Published CVEs</a> ·
   <a href="#-cve-publication-pipeline">Pipeline</a> ·
-  <a href="#-all-security-advisories-104">Advisories</a> ·
+  <a href="#-all-security-advisories-106">Advisories</a> ·
   <a href="#-vulnerability-categories">Categories</a> ·
   <a href="#-key-insights">Insights</a> ·
   <a href="#-project-identity">Identity</a>
@@ -575,7 +575,7 @@ OpenClaw (formerly Clawdbot) is a personal AI assistant users run on their own d
 
 ## ⏳ CVE Publication Pipeline
 
-Of 30 GHSAs with CVE IDs, **28** are fully published and **2** remain `RESERVED`.
+Of 32 GHSAs with CVE IDs, **28** are fully published and **4** remain `RESERVED`.
 
 ```mermaid
 graph LR
@@ -619,6 +619,8 @@ graph LR
 | CVE-2026-27007 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27008 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27009 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27484 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
+| CVE-2026-27485 | ⏳ RESERVED | ❌ | 2026-02-20 | — |
 | CVE-2026-27486 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 | CVE-2026-27487 | ⏳ RESERVED | ❌ | 2026-02-18 | — |
 
@@ -629,9 +631,9 @@ graph LR
 | Insight | Detail |
 |---------|--------|
 | **Dominant Weakness** | 26% of categorized issues relate to **Allowlist Bypass** (26/101) |
-| **V5 Sync Rate** | 28/30 CVE IDs (93%) have full cvelistV5 records |
-| **Advisory Velocity** | 104 security advisories across 2026-02-02 → 2026-02-19 |
-| **Top Severity** | 5 Critical + 53 High = 58 high-impact issues (56%) |
+| **V5 Sync Rate** | 28/32 CVE IDs (88%) have full cvelistV5 records |
+| **Advisory Velocity** | 106 security advisories across 2026-02-02 → 2026-02-20 |
+| **Top Severity** | 5 Critical + 53 High = 58 high-impact issues (55%) |
 
 ### Vulnerability Categories
 
@@ -647,7 +649,7 @@ graph LR
 
 ---
 
-## 📋 All Security Advisories (104)
+## 📋 All Security Advisories (106)
 
 ### Critical & High Severity
 
@@ -702,6 +704,7 @@ graph LR
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-r6h2-5gqq-v5v6](https://github.com/advisories/GHSA-r6h2-5gqq-v5v6) | CVE-2026-27485 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Reject symlinks in local skill packaging script | 2026-02-20 |
 | [GHSA-6c9j-x93c-rw6j](https://github.com/advisories/GHSA-6c9j-x93c-rw6j) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw safeBins file-existence oracle information disclosure | 2026-02-19 |
 | [GHSA-fh3f-q9qw-93j9](https://github.com/advisories/GHSA-fh3f-q9qw-93j9) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw replaced a deprecated sandbox hash algorithm | 2026-02-19 |
 | [GHSA-p536-vvpp-9mc8](https://github.com/advisories/GHSA-p536-vvpp-9mc8) | — | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Web Fetch DoS via unbounded response parsing | 2026-02-19 |
@@ -734,6 +737,7 @@ graph LR
 
 | GHSA | CVE | Severity | Title | Published |
 |------|-----|----------|-------|-----------|
+| [GHSA-wh94-p5m6-mr7j](https://github.com/advisories/GHSA-wh94-p5m6-mr7j) | CVE-2026-27484 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows | 2026-02-20 |
 | [GHSA-4685-c5cp-vp95](https://github.com/advisories/GHSA-4685-c5cp-vp95) | — | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags | 2026-02-19 |
 | [GHSA-782p-5fr5-7fj8](https://github.com/advisories/GHSA-782p-5fr5-7fj8) | CVE-2026-24764 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Affected by Remote Code Execution via System Prompt Injection in Slack Channel Descriptions | 2026-02-17 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | — | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | 2026-02-17 |
