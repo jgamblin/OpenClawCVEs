@@ -12,6 +12,10 @@
     "affected_versions": [
       "<= 2026.2.17"
     ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
     "cwes": [
       "CWE-400"
     ]
@@ -29,6 +33,10 @@
     "affected_versions": [
       "<= 2026.2.17"
     ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
     "cwes": [
       "CWE-918"
     ]
@@ -46,6 +54,10 @@
     "affected_versions": [
       "<= 2026.2.18"
     ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
     "cwes": [
       "CWE-61"
     ]
@@ -63,6 +75,10 @@
     "affected_versions": [
       "< 2026.2.18"
     ],
+    "fixed_versions": [
+      "2026.2.18"
+    ],
+    "fixed_version": "2026.2.18",
     "cwes": [
       "CWE-862"
     ]
@@ -80,6 +96,10 @@
     "affected_versions": [
       "<= 2026.2.17"
     ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
     "cwes": [
       "CWE-203"
     ]
@@ -97,6 +117,10 @@
     "affected_versions": [
       "<= 2026.2.17"
     ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
     "cwes": [
       "CWE-78",
       "CWE-184"
@@ -115,6 +139,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-22"
     ]
@@ -132,6 +160,10 @@
     "affected_versions": [
       "<= 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-328"
     ]
@@ -149,6 +181,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-400"
     ]
@@ -166,6 +202,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-79"
     ]
@@ -183,6 +223,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-73"
     ]
@@ -200,6 +244,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-1254"
     ]
@@ -217,6 +265,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-209",
       "CWE-346"
@@ -235,6 +287,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-522"
     ]
@@ -252,6 +308,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-250"
     ]
@@ -269,6 +329,10 @@
     "affected_versions": [
       "< 2026.2.15"
     ],
+    "fixed_versions": [
+      "2026.2.15"
+    ],
+    "fixed_version": "2026.2.15",
     "cwes": [
       "CWE-77"
     ]
@@ -286,6 +350,10 @@
     "affected_versions": [
       ">= 2026.1.29-beta.1, < 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-306"
     ]
@@ -303,6 +371,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-918"
     ]
@@ -320,6 +392,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-22"
     ]
@@ -337,6 +413,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-283"
     ]
@@ -354,6 +434,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-352"
     ]
@@ -371,6 +455,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-78"
     ]
@@ -388,6 +476,10 @@
     "affected_versions": [
       "< 2026.2.13"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-22"
     ]
@@ -405,6 +497,10 @@
     "affected_versions": [
       ">= 2026.1.12, <= 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-22"
     ]
@@ -422,6 +518,10 @@
     "affected_versions": [
       ">= 2026.1.5, < 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-22"
     ]
@@ -439,6 +539,10 @@
     "affected_versions": [
       "< 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-22"
     ]
@@ -456,6 +560,10 @@
     "affected_versions": [
       "< 2026.2.13"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-345"
     ]
@@ -473,6 +581,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-78",
       "CWE-427",
@@ -492,6 +604,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-918"
     ]
@@ -509,6 +625,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-306"
     ]
@@ -528,6 +648,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-284",
       "CWE-290"
@@ -548,6 +672,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-284",
       "CWE-639"
@@ -568,6 +696,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-352"
     ]
@@ -587,6 +719,10 @@
       "< 2026.2.13",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-400"
     ]
@@ -606,6 +742,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-400"
     ]
@@ -625,6 +765,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-400"
     ]
@@ -642,6 +786,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-400"
     ]
@@ -659,6 +807,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-285"
     ]
@@ -676,6 +828,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-78"
     ]
@@ -693,6 +849,10 @@
     "affected_versions": [
       ">= 2026.1.8, < 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-78"
     ]
@@ -710,6 +870,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-22"
     ]
@@ -729,6 +893,10 @@
       "< 2026.2.14",
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-284",
       "CWE-863"
@@ -747,6 +915,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-345"
     ]
@@ -766,6 +938,10 @@
       "< 2026.2.14",
       "<= 2026.1.24-3"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-290",
       "CWE-863"
@@ -784,6 +960,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-200"
     ]
@@ -801,6 +981,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-284"
     ]
@@ -818,6 +1002,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-918"
     ]
@@ -835,6 +1023,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-918"
     ]
@@ -852,6 +1044,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-22"
     ]
@@ -869,6 +1065,10 @@
     "affected_versions": [
       ">= 2026.2.6-0, < 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-451"
     ]
@@ -886,6 +1086,10 @@
     "affected_versions": [
       "< 2026.2.14"
     ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
     "cwes": [
       "CWE-306"
     ]
@@ -903,6 +1107,10 @@
     "affected_versions": [
       ">= 2026.1.20, < 2026.2.1"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-22"
     ]
@@ -920,6 +1128,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-269",
       "CWE-863"
@@ -938,6 +1150,10 @@
     "affected_versions": [
       "< 2026.2.1"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-201"
     ]
@@ -955,6 +1171,10 @@
     "affected_versions": [
       ">= 2026.1.29, < 2026.2.1"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-285"
     ]
@@ -972,6 +1192,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-287"
     ]
@@ -989,6 +1213,10 @@
     "affected_versions": [
       "< 2026.2.1"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-285"
     ]
@@ -1006,6 +1234,10 @@
     "affected_versions": [
       ">= 2026.1.14-1, < 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-290"
     ]
@@ -1025,6 +1257,10 @@
       "< 2026.2.13",
       "< 2026.2.13"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-863"
     ]
@@ -1042,6 +1278,10 @@
     "affected_versions": [
       "< 2026.2.13"
     ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
     "cwes": [
       "CWE-117"
     ]
@@ -1059,6 +1299,10 @@
     "affected_versions": [
       "< 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-285",
       "CWE-306"
@@ -1077,6 +1321,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-918"
     ]
@@ -1094,6 +1342,10 @@
     "affected_versions": [
       "< 2026.2.1"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-345"
     ]
@@ -1111,6 +1363,10 @@
     "affected_versions": [
       "< 2026.2.3"
     ],
+    "fixed_versions": [
+      "2026.2.3"
+    ],
+    "fixed_version": "2026.2.3",
     "cwes": [
       "CWE-74",
       "CWE-94"
@@ -1129,6 +1385,10 @@
     "affected_versions": [
       "< 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-306"
     ]
@@ -1146,6 +1406,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-918"
     ]
@@ -1163,6 +1427,10 @@
     "affected_versions": [
       ">= 2026.1.14-1, < 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-284"
     ]
@@ -1180,6 +1448,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-78"
     ]
@@ -1199,6 +1471,10 @@
       ">= 2026.1.20, < 2026.2.1",
       "<= 0.1.0"
     ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
     "cwes": [
       "CWE-306"
     ]
@@ -1216,6 +1492,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-78"
     ]
@@ -1233,6 +1513,10 @@
     "affected_versions": [
       "< 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-23",
       "CWE-73",
@@ -1253,6 +1537,10 @@
     "affected_versions": [
       ">= 2.0.0-beta3, < 2026.2.12"
     ],
+    "fixed_versions": [
+      "2026.2.12"
+    ],
+    "fixed_version": "2026.2.12",
     "cwes": [
       "CWE-330",
       "CWE-639"
@@ -1271,6 +1559,10 @@
     "affected_versions": [
       "< 2026.2.2"
     ],
+    "fixed_versions": [
+      "2026.2.2"
+    ],
+    "fixed_version": "2026.2.2",
     "cwes": [
       "CWE-306"
     ]
@@ -1288,6 +1580,10 @@
     "affected_versions": [
       "< 2026.1.20"
     ],
+    "fixed_versions": [
+      "2026.1.20"
+    ],
+    "fixed_version": "2026.1.20",
     "cwes": [
       "CWE-20",
       "CWE-78",
@@ -1307,6 +1603,10 @@
     "affected_versions": [
       "<= 2026.1.29"
     ],
+    "fixed_versions": [
+      "2026.1.30"
+    ],
+    "fixed_version": "2026.1.30",
     "cwes": [
       "CWE-22",
       "CWE-200"
@@ -1325,6 +1625,10 @@
     "affected_versions": [
       "< 2026.1.29"
     ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
     "cwes": [
       "CWE-78"
     ]
@@ -1342,6 +1646,10 @@
     "affected_versions": [
       "<= 2026.1.28"
     ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
     "cwes": [
       "CWE-668"
     ]
@@ -1359,6 +1667,10 @@
     "affected_versions": [
       "<= 2026.1.24"
     ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
     "cwes": [
       "CWE-78"
     ]
@@ -1376,6 +1688,10 @@
     "affected_versions": [
       "< 2026.1.29"
     ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
     "cwes": [
       "CWE-669"
     ]

@@ -180,6 +180,16 @@ def check_cvelist_exists(cve_id: str) -> bool:
 def parse_ghsa_summary(adv: dict) -> dict:
     """Extract key fields from a raw GHSA advisory."""
     vulns = adv.get("vulnerabilities", [])
+    fixed_versions = [
+        v.get("first_patched_version")
+        for v in vulns
+        if v.get("first_patched_version")
+    ]
+    fixed_versions_unique = []
+    for v in fixed_versions:
+        if v and v not in fixed_versions_unique:
+            fixed_versions_unique.append(v)
+
     return {
         "ghsa_id": adv.get("ghsa_id", ""),
         "cve_id": adv.get("cve_id"),
@@ -195,6 +205,8 @@ def parse_ghsa_summary(adv: dict) -> dict:
             v.get("vulnerable_version_range", "")
             for v in vulns
         ],
+        "fixed_versions": fixed_versions_unique,
+        "fixed_version": ", ".join(fixed_versions_unique) if fixed_versions_unique else "",
         "cwes": [
             c.get("cwe_id", "") for c in adv.get("cwes", [])
         ],
@@ -462,6 +474,17 @@ def collect_data(local_only: bool = False) -> dict:
                     published_cves.append(parse_cve_record(record))
 
     published_cves.sort(key=lambda x: x.get("cvss") or 0, reverse=True)
+
+    # Patch in fixed versions from GHSA data (first_patched_version)
+    ghsa_fixed_by_id = {g.get("ghsa_id"): g.get("fixed_version", "") for g in ghsas if g.get("ghsa_id")}
+    ghsa_fixed_by_cve = {g.get("cve_id"): g.get("fixed_version", "") for g in ghsas_with_cve if g.get("cve_id")}
+    for cve in published_cves:
+        fixed = ""
+        if cve.get("ghsa_id"):
+            fixed = ghsa_fixed_by_id.get(cve["ghsa_id"], "")
+        if not fixed and cve.get("cve_id"):
+            fixed = ghsa_fixed_by_cve.get(cve["cve_id"], "")
+        cve["fixed_version"] = fixed
 
     # Patch in GHSA titles for CVEs with missing/poor titles
     ghsa_title_map = {g["cve_id"]: g["title"] for g in ghsas_with_cve if g.get("cve_id")}

@@ -55,10 +55,10 @@ To find all CVEs, search for: `openclaw`, `clawdbot`, `moltbot`, `clawhub`, `pkg
 
 These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) repository:
 
-| CVE ID | Severity | CVSS | Title | CWE | Published |
-|--------|----------|------|-------|-----|-----------|
+| CVE ID | Severity | CVSS | Title | CWE | Fixed in | Published |
+|--------|----------|------|-------|-----|----------|-----------|
 {% for cve in published_cves -%}
-| [{{ cve.cve_id }}]({{ cve.advisory_url }}) | {{ cve.severity_badge }} | {{ cve.cvss }} | {{ cve.title }} | {{ cve.cwes }} | {{ cve.date_published }} |
+| [{{ cve.cve_id }}]({{ cve.advisory_url }}) | {{ cve.severity_badge }} | {{ cve.cvss }} | {{ cve.title }} | {{ cve.cwes }} | {{ cve.fixed_version or "—" }} | {{ cve.date_published }} |
 {% endfor %}
 
 <details>
@@ -141,26 +141,26 @@ graph LR
 
 ### Critical & High Severity
 
-| GHSA | CVE | Severity | Title | Published |
-|------|-----|----------|-------|-----------|
+| GHSA | CVE | Severity | Title | Fixed in | Published |
+|------|-----|----------|-------|----------|-----------|
 {% for a in ghsas_critical_high -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.fixed_version or "—" }} | {{ a.published }} |
 {% endfor %}
 
 ### Medium Severity
 
-| GHSA | CVE | Severity | Title | Published |
-|------|-----|----------|-------|-----------|
+| GHSA | CVE | Severity | Title | Fixed in | Published |
+|------|-----|----------|-------|----------|-----------|
 {% for a in ghsas_medium -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.fixed_version or "—" }} | {{ a.published }} |
 {% endfor %}
 
 ### Low Severity
 
-| GHSA | CVE | Severity | Title | Published |
-|------|-----|----------|-------|-----------|
+| GHSA | CVE | Severity | Title | Fixed in | Published |
+|------|-----|----------|-------|----------|-----------|
 {% for a in ghsas_low -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.published }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id or "—" }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.fixed_version or "—" }} | {{ a.published }} |
 {% endfor %}
 {% if repo_only_ghsas %}
 

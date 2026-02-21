@@ -254,12 +254,14 @@ class TestParseGhsaSummary:
         assert result["severity"] == "medium"
         assert "Path Traversal" in result["title"]
         assert result["published"] == "2026-02-18"
+        assert result["fixed_version"] == "2026.2.13"
 
     def test_without_cve(self):
         result = parse_ghsa_summary(SAMPLE_GHSA_NO_CVE)
         assert result["ghsa_id"] == "GHSA-h9g4-589h-68xv"
         assert result["cve_id"] is None
         assert result["severity"] == "high"
+        assert result["fixed_version"] in ("", None)
 
     def test_packages(self):
         result = parse_ghsa_summary(SAMPLE_GHSA_WITH_CVE)

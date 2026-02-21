@@ -9,20 +9,20 @@
 
 ## GHSAs with CVE IDs ({{ counts.total_cves }})
 
-| GHSA | CVE | Severity | Title | Packages | Published |
-|------|-----|----------|-------|----------|-----------|
+| GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
+|------|-----|----------|-------|----------|----------|-----------|
 {% for a in ghsas_with_cve -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.packages | join(", ") }} | {{ a.published }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.cve_id }} | {{ a.severity_badge }} | {{ a.title }} | {{ a.packages | join(", ") }} | {{ a.fixed_version or "—" }} | {{ a.published }} |
 {% endfor %}
 
 ---
 
 ## GHSAs Without CVE — Potential Future CVEs ({{ counts.ghsas_indexed_no_cve }})
 
-| GHSA | Severity | Title | CWEs | Published |
-|------|----------|-------|------|-----------|
+| GHSA | Severity | Title | CWEs | Fixed in | Published |
+|------|----------|-------|------|----------|-----------|
 {% for a in ghsas_no_cve -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.severity_badge }} | {{ a.title }} | {{ a.cwes | join(", ") }} | {{ a.published }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.severity_badge }} | {{ a.title }} | {{ a.cwes | join(", ") }} | {{ a.fixed_version or "—" }} | {{ a.published }} |
 {% endfor %}
 
 ---
