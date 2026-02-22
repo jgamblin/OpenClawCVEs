@@ -29,7 +29,7 @@
       "https://github.com/advisories/GHSA-cxpw-2g23-2vgw"
     ],
     "published_at": "2026-02-20T21:52:44Z",
-    "updated_at": "2026-02-20T21:52:44Z",
+    "updated_at": "2026-02-22T01:12:35Z",
     "github_reviewed_at": "2026-02-20T21:52:44Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -60,7 +60,32 @@
         "name": "Uncontrolled Resource Consumption"
       }
     ],
-    "credits": [],
+    "credits": [
+      {
+        "user": {
+          "login": "aether-ai-agent",
+          "id": 261339948,
+          "node_id": "U_kgDOD5O7LA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/261339948?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/aether-ai-agent",
+          "html_url": "https://github.com/aether-ai-agent",
+          "followers_url": "https://api.github.com/users/aether-ai-agent/followers",
+          "following_url": "https://api.github.com/users/aether-ai-agent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/aether-ai-agent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/aether-ai-agent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/aether-ai-agent/subscriptions",
+          "organizations_url": "https://api.github.com/users/aether-ai-agent/orgs",
+          "repos_url": "https://api.github.com/users/aether-ai-agent/repos",
+          "events_url": "https://api.github.com/users/aether-ai-agent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/aether-ai-agent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
     "cvss": {
       "vector_string": null,
       "score": null
