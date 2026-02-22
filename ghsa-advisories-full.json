@@ -64,6 +64,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 6e-05,
+      "percentile": 0.00284
     }
   },
   {
@@ -154,6 +158,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00039,
+      "percentile": 0.11686
     }
   },
   {
@@ -246,6 +254,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 7e-05,
+      "percentile": 0.00441
     }
   },
   {
@@ -336,6 +348,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0003,
+      "percentile": 0.08521
     }
   },
   {
@@ -887,8 +903,8 @@
       "score": 5.8
     },
     "epss": {
-      "percentage": 0.00017,
-      "percentile": 0.03903
+      "percentage": 0.0002,
+      "percentile": 0.05082
     }
   },
   {
@@ -983,8 +999,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00013,
-      "percentile": 0.01961
+      "percentage": 0.00014,
+      "percentile": 0.0231
     }
   },
   {
@@ -1078,8 +1094,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00013,
-      "percentile": 0.02028
+      "percentage": 0.00011,
+      "percentile": 0.01498
     }
   },
   {
@@ -1176,8 +1192,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 7e-05,
-      "percentile": 0.00546
+      "percentage": 6e-05,
+      "percentile": 0.00397
     }
   },
   {
@@ -1270,8 +1286,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00014,
-      "percentile": 0.02417
+      "percentage": 0.00013,
+      "percentile": 0.01975
     }
   },
   {
@@ -1365,8 +1381,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.0004,
-      "percentile": 0.12133
+      "percentage": 0.00045,
+      "percentile": 0.13836
     }
   },
   {
@@ -1460,8 +1476,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.0002,
-      "percentile": 0.05066
+      "percentage": 0.00018,
+      "percentile": 0.04492
     }
   },
   {
@@ -1815,6 +1831,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00013,
+      "percentile": 0.01949
     }
   },
   {
@@ -1969,6 +1989,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:L",
       "score": 7.6
+    },
+    "epss": {
+      "percentage": 0.00054,
+      "percentile": 0.16791
     }
   },
   {
@@ -2148,8 +2172,8 @@
       "score": 6.7
     },
     "epss": {
-      "percentage": 0.00014,
-      "percentile": 0.02388
+      "percentage": 0.00017,
+      "percentile": 0.0387
     }
   },
   {
@@ -3636,8 +3660,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.0055,
-      "percentile": 0.67507
+      "percentage": 0.00175,
+      "percentile": 0.38928
     }
   },
   {
@@ -3731,8 +3755,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00055,
-      "percentile": 0.172
+      "percentage": 0.0004,
+      "percentile": 0.12247
     }
   },
   {
@@ -4463,8 +4487,8 @@
       "score": 7.6
     },
     "epss": {
-      "percentage": 0.00012,
-      "percentile": 0.01748
+      "percentage": 0.00013,
+      "percentile": 0.01979
     }
   },
   {
@@ -4558,8 +4582,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.00055,
-      "percentile": 0.17182
+      "percentage": 0.0006,
+      "percentile": 0.18896
     }
   },
   {
@@ -4653,8 +4677,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00061,
-      "percentile": 0.19096
+      "percentage": 0.00024,
+      "percentile": 0.06351
     }
   },
   {
@@ -4749,8 +4773,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.00028,
-      "percentile": 0.07849
+      "percentage": 0.00031,
+      "percentile": 0.09004
     }
   },
   {
@@ -7447,8 +7471,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.00049,
-      "percentile": 0.15263
+      "percentage": 0.00057,
+      "percentile": 0.17861
     }
   },
   {
