@@ -1,30 +1,30 @@
 # 🛡️ OpenClaw CVE & Security Advisory Tracker
 
 <p align="center">
-  <img src="https://img.shields.io/badge/advisories-104-red?style=for-the-badge" alt="Total Advisories">
-  <img src="https://img.shields.io/badge/CVEs-31-orange?style=for-the-badge" alt="CVEs Assigned">
-  <img src="https://img.shields.io/badge/published-31-brightgreen?style=for-the-badge" alt="CVEs Published">
+  <img src="https://img.shields.io/badge/advisories-108-red?style=for-the-badge" alt="Total Advisories">
+  <img src="https://img.shields.io/badge/CVEs-34-orange?style=for-the-badge" alt="CVEs Assigned">
+  <img src="https://img.shields.io/badge/published-34-brightgreen?style=for-the-badge" alt="CVEs Published">
   <img src="https://img.shields.io/badge/reserved-0-yellow?style=for-the-badge" alt="Reserved">
   <br>
   <img src="https://img.shields.io/badge/critical-5-8e44ad?style=flat-square" alt="Critical">
-  <img src="https://img.shields.io/badge/high-49-d63031?style=flat-square" alt="High">
+  <img src="https://img.shields.io/badge/high-53-d63031?style=flat-square" alt="High">
   <img src="https://img.shields.io/badge/medium-43-e17055?style=flat-square" alt="Medium">
   <img src="https://img.shields.io/badge/low-7-27ae60?style=flat-square" alt="Low">
-  <img src="https://img.shields.io/badge/awaiting_CVE-73-lightgrey?style=flat-square" alt="Awaiting CVE">
+  <img src="https://img.shields.io/badge/awaiting_CVE-74-lightgrey?style=flat-square" alt="Awaiting CVE">
 </p>
 
 An automated tracker that continuously monitors [OpenClaw](https://github.com/openclaw/openclaw) security advisories across the GitHub Advisory Database, repo-level security advisories, and the [CVE V5 (cvelistV5)](https://github.com/CVEProject/cvelistV5) registry. Every hour it pulls the latest data, reconciles GHSA → CVE publication state, and regenerates this dashboard so you always have an up-to-date picture of the project's vulnerability landscape.
 
 <p align="center">
-  <sub>Last updated: 2026-02-25 13:36 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
+  <sub>Last updated: 2026-02-25 14:27 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates hourly</sub>
 </p>
 
 ---
 
 <p align="center">
-  <a href="#-cves-published-in-cvelistv5-31">Published CVEs</a> ·
+  <a href="#-cves-published-in-cvelistv5-34">Published CVEs</a> ·
   <a href="#-cve-publication-pipeline">Pipeline</a> ·
-  <a href="#-all-security-advisories-104">Advisories</a> ·
+  <a href="#-all-security-advisories-108">Advisories</a> ·
   <a href="#-vulnerability-categories">Categories</a> ·
   <a href="#-key-insights">Insights</a> ·
   <a href="#-project-identity">Identity</a>
@@ -51,15 +51,18 @@ To find all CVEs, search for: `openclaw`, `clawdbot`, `moltbot`, `clawhub`, `pkg
 
 ---
 
-## 🚀 CVEs Published in cvelistV5 (31)
+## 🚀 CVEs Published in cvelistV5 (34)
 
 These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) repository:
 
 | CVE ID | Severity | CVSS | Title | CWE | Fixed in | Published |
 |--------|----------|------|-------|-----|----------|-----------|
+| [CVE-2026-24763](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.8 | OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable | CWE-78 | 2026.1.29 | 2026-02-02 |
+| [CVE-2026-25253](https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.8 | OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-01 |
 | [CVE-2026-26323](https://github.com/openclaw/openclaw/security/advisories/GHSA-m7x8-2w3w-pr42) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw has a command injection in maintainer clawtributors updater | CWE-78 | 2026.2.14 | 2026-02-19 |
 | [CVE-2026-27001](https://github.com/openclaw/openclaw/security/advisories/GHSA-2qj5-gwg2-xwc4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw: Unsanitized CWD path injection into LLM prompts | CWE-77 | 2026.2.15 | 2026-02-19 |
 | [CVE-2026-25593](https://github.com/openclaw/openclaw/security/advisories/GHSA-g55j-c2v4-pjcg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.4 | OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply | CWE-78, CWE-306 | 2026.1.20 | 2026-02-06 |
+| [CVE-2026-25157](https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.8 | OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand | CWE-78 | 2026.1.29 | 2026-02-04 |
 | [CVE-2026-27002](https://github.com/openclaw/openclaw/security/advisories/GHSA-w235-x559-36mg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.7 | OpenClaw: Docker container escape via unvalidated bind mount config injection | CWE-250 | 2026.2.15 | 2026-02-19 |
 | [CVE-2026-26322](https://github.com/openclaw/openclaw/security/advisories/GHSA-g6q9-8fvw-f7rf) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw Gateway tool allowed unrestricted gatewayUrl override | CWE-918 | 2026.2.14 | 2026-02-19 |
 | [CVE-2026-27487](https://github.com/openclaw/openclaw/security/advisories/GHSA-4564-pvr2-qq4h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw: Prevent shell injection in macOS keychain credential write | CWE-78 | 2026.2.14 | 2026-02-21 |
@@ -91,6 +94,44 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 
 <details>
 <summary><strong>📖 Detailed CVE Analysis (click to expand)</strong></summary>
+
+### CVE-2026-24763 — OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 8.8 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H` |
+| **CWE** | CWE-78 (CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')) |
+| **Affected** | < 2026.1.29 |
+| **Vendor/Product** | clawdbot / clawdbot |
+| **Advisory** | [GHSA-mc68-q9jw-2h3v](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) |
+
+OpenClaw (formerly  Clawdbot) is a personal AI assistant you run on your own devices. Prior to 2026.1.29, a command injection vulnerability existed in OpenClaw’s Docker sandbox execution mechanism due to unsafe handling of the PATH environment variable when constructing shell commands. An authenticated user able to control environment variables could influence command execution within the container context. This vulnerability is fixed in 2026.1.29.
+
+> **Naming note:** Uses old name `clawdbot/clawdbot` as vendor/product.
+**References:**
+- [https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75](https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75)
+- [https://github.com/openclaw/openclaw/releases/tag/v2026.1.29](https://github.com/openclaw/openclaw/releases/tag/v2026.1.29)
+---
+
+### CVE-2026-25253 — OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 8.8 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H` |
+| **CWE** | CWE-669 (CWE-669 Incorrect Resource Transfer Between Spheres) |
+| **Affected** | < 2026.1.29 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-g8p2-7wf7-98mq](https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq) |
+
+OpenClaw (aka clawdbot or Moltbot) before 2026.1.29 obtains a gatewayUrl value from a query string and automatically makes a WebSocket connection without prompting, sending a token value.
+
+> **Naming note:** Uses all three names in description. packageURL still references `pkg:npm/clawdbot`.
+**References:**
+- [1-click-rce-to-steal-your-moltbot-data-and-keys](https://depthfirst.com/post/1-click-rce-to-steal-your-moltbot-data-and-keys)
+- [blog](https://openclaw.ai/blog)
+- [one-click-rce-moltbot](https://ethiack.com/news/blog/one-click-rce-moltbot)
+- [2016913750557651228](https://x.com/0xacb/status/2016913750557651228)
+---
 
 ### CVE-2026-26323 — OpenClaw has a command injection in maintainer clawtributors updater
 
@@ -137,6 +178,20 @@ OpenClaw is a personal AI assistant. Prior to version 2026.2.15, OpenClaw embedd
 | **Advisory** | [GHSA-g55j-c2v4-pjcg](https://github.com/openclaw/openclaw/security/advisories/GHSA-g55j-c2v4-pjcg) |
 
 OpenClaw is a personal AI assistant. Prior to 2026.1.20, an unauthenticated local client could use the Gateway WebSocket API to write config via config.apply and set unsafe cliPath values that were later used for command discovery, enabling command injection as the gateway user. This vulnerability is fixed in 2026.1.20.
+
+---
+
+### CVE-2026-25157 — OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 7.8 (HIGH) — `CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H` |
+| **CWE** | CWE-78 (CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')) |
+| **Affected** | < 2026.1.29 |
+| **Vendor/Product** | openclaw / openclaw |
+| **Advisory** | [GHSA-q284-4pvr-m585](https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585) |
+
+OpenClaw is a personal AI assistant. Prior to version 2026.1.29, there is an OS command injection vulnerability via the Project Root Path in sshNodeCommand. The sshNodeCommand function constructed a shell script without properly escaping the user-supplied project path in an error message. When the cd command failed, the unescaped path was interpolated directly into an echo statement, allowing arbitrary command execution on the remote SSH host. The parseSSHTarget function did not validate that SSH target strings could not begin with a dash. An attacker-supplied target like -oProxyCommand=... would be interpreted as an SSH configuration flag rather than a hostname, allowing arbitrary command execution on the local machine. This issue has been patched in version 2026.1.29.
 
 ---
 
@@ -636,7 +691,7 @@ OpenClaw is a personal AI assistant. In versions 2026.2.17 and below, the Discor
 
 ## ⏳ CVE Publication Pipeline
 
-Of 31 GHSAs with CVE IDs, **31** are fully published and **0** remain `RESERVED`.
+Of 34 GHSAs with CVE IDs, **34** are fully published and **0** remain `RESERVED`.
 
 ```mermaid
 graph LR
@@ -652,7 +707,10 @@ graph LR
 
 | CVE ID | State | cvelistV5 | GHSA Published | CNA |
 |--------|-------|-----------|----------------|-----|
+| CVE-2026-24763 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
 | CVE-2026-24764 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-25157 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
+| CVE-2026-25253 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | mitre |
 | CVE-2026-25474 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-25475 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
 | CVE-2026-25593 | ✅ **PUBLISHED** | ✅ | 2026-02-04 | GitHub_M |
@@ -690,26 +748,26 @@ graph LR
 
 | Insight | Detail |
 |---------|--------|
-| **Dominant Weakness** | 27% of categorized issues relate to **Allowlist Bypass** (26/95) |
-| **V5 Sync Rate** | 31/31 CVE IDs (100%) have full cvelistV5 records |
-| **Advisory Velocity** | 104 security advisories across 2026-02-04 → 2026-02-20 |
-| **Top Severity** | 5 Critical + 49 High = 54 high-impact issues (52%) |
+| **Dominant Weakness** | 25% of categorized issues relate to **Allowlist Bypass** (26/103) |
+| **V5 Sync Rate** | 34/34 CVE IDs (100%) have full cvelistV5 records |
+| **Advisory Velocity** | 108 security advisories across 2026-02-02 → 2026-02-20 |
+| **Top Severity** | 5 Critical + 53 High = 58 high-impact issues (54%) |
 
 ### Vulnerability Categories
 
 | Category | Count | Examples |
 |----------|------:|----------|
-| **OS Command Injection (CWE-78)** | 10 | PATH injection, SSH command injection, Docker exec, keychain writes |
+| **OS Command Injection (CWE-78)** | 14 | PATH injection, SSH command injection, Docker exec, keychain writes |
 | **Path Traversal (CWE-22)** | 16 | MEDIA: paths, plugin install, browser downloads, Zip Slip, transcript paths |
 | **SSRF** | 7 | Image tool fetch, Feishu extension, attachment/media URLs, IPv6 bypass |
-| **Auth Bypass / Missing Auth** | 14 | WebSocket config.apply, webhook verification, browser relay, sandbox bridge |
+| **Auth Bypass / Missing Auth** | 16 | WebSocket config.apply, webhook verification, browser relay, sandbox bridge |
 | **Allowlist Bypass** | 26 | Telegram usernames, Matrix displayName, Slack DM, Twitch, voice-call |
-| **Injection (XSS/CSRF/Prompt)** | 16 | XSS in Control UI, prompt injection via Slack/CWD/logs, CSRF |
+| **Injection (XSS/CSRF/Prompt)** | 18 | XSS in Control UI, prompt injection via Slack/CWD/logs, CSRF |
 | **Denial of Service** | 6 | Unbounded media fetch, webhook body buffering, archive expansion |
 
 ---
 
-## 📋 All Security Advisories (104)
+## 📋 All Security Advisories (108)
 
 ### Critical & High Severity
 
@@ -755,6 +813,10 @@ graph LR
 | [GHSA-hv93-r4j3-q65f](https://github.com/advisories/GHSA-hv93-r4j3-q65f) | — | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Hook Session Key Override Enables Targeted Cross-Session Routing | 2026.2.12 | 2026-02-17 |
 | [GHSA-rv39-79c4-7459](https://github.com/advisories/GHSA-rv39-79c4-7459) | — | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw's gateway connect could skip device identity checks when auth.token was present but not yet validated | 2026.2.2 | 2026-02-17 |
 | [GHSA-g55j-c2v4-pjcg](https://github.com/advisories/GHSA-g55j-c2v4-pjcg) | CVE-2026-25593 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw vulnerable to Unauthenticated Local RCE via WebSocket config.apply | 2026.1.20 | 2026-02-04 |
+| [GHSA-q284-4pvr-m585](https://github.com/advisories/GHSA-q284-4pvr-m585) | CVE-2026-25157 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand | 2026.1.29 | 2026-02-02 |
+| [GHSA-g8p2-7wf7-98mq](https://github.com/advisories/GHSA-g8p2-7wf7-98mq) | CVE-2026-25253 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | 2026.1.29 | 2026-02-02 |
+| [GHSA-mc68-q9jw-2h3v](https://github.com/advisories/GHSA-mc68-q9jw-2h3v) | CVE-2026-24763 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable | 2026.1.29 | 2026-02-02 |
+| [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | — | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | 2026.1.29 | 2026-02-02 |
 
 ### Medium Severity
 
@@ -850,9 +912,12 @@ The OpenClaw project has been renamed multiple times, causing inconsistencies ac
 
 | CVE | vendor | product | packageURL | Description Names |
 |-----|--------|---------|------------|-------------------|
+| CVE-2026-24763 | `clawdbot` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
+| CVE-2026-25253 | `OpenClaw` | `OpenClaw` | `pkg:npm/clawdbot` | OpenClaw / clawdbot / Moltbot |
 | CVE-2026-26323 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-27001 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-25593 | `openclaw` | `openclaw` | — | OpenClaw |
+| CVE-2026-25157 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-27002 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-26322 | `openclaw` | `openclaw` | — | OpenClaw |
 | CVE-2026-27487 | `openclaw` | `openclaw` | — | OpenClaw |

@@ -1,5 +1,21 @@
 [
   {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
+    "cve_id": "CVE-2026-25253",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "date_published": "2026-02-01",
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
     "cve_id": "CVE-2026-26323",
     "severity": "HIGH",
     "cvss": 8.6,
@@ -22,6 +38,14 @@
     "title": "OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply",
     "date_published": "2026-02-06",
     "ghsa_id": "GHSA-g55j-c2v4-pjcg"
+  },
+  {
+    "cve_id": "CVE-2026-25157",
+    "severity": "HIGH",
+    "cvss": 7.8,
+    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
+    "date_published": "2026-02-04",
+    "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
     "cve_id": "CVE-2026-27002",
