@@ -80,14 +80,6 @@
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
   },
   {
-    "cve_id": "CVE-2026-26316",
-    "severity": "HIGH",
-    "cvss": 7.5,
-    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pchc-86f6-8758"
-  },
-  {
     "cve_id": "CVE-2026-26319",
     "severity": "HIGH",
     "cvss": 7.5,
@@ -134,14 +126,6 @@
     "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-7q2j-c4q5-rm27"
-  },
-  {
-    "cve_id": "CVE-2026-26327",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pv58-549p-qh99"
   },
   {
     "cve_id": "CVE-2026-26329",
@@ -230,14 +214,6 @@
     "title": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-xxvh-5hwj-42pp"
-  },
-  {
-    "cve_id": "CVE-2026-27576",
-    "severity": "MEDIUM",
-    "cvss": 4.8,
-    "title": "OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs",
-    "date_published": "2026-02-21",
-    "ghsa_id": "GHSA-cxpw-2g23-2vgw"
   },
   {
     "cve_id": "CVE-2026-27485",
