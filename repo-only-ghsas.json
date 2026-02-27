@@ -427,13 +427,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7ff8-xjh3-mgh6"
   },
   {
-    "ghsa_id": "GHSA-7jx5-9fjg-hp4m",
-    "severity": "MEDIUM",
-    "title": "ACP permission auto-approval bypass via untrusted tool metadata",
-    "published": "2026-02-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jx5-9fjg-hp4m"
-  },
-  {
     "ghsa_id": "GHSA-7qf6-h84j-8fq4",
     "severity": "MEDIUM",
     "title": "Microsoft Teams media fetch SSRF hardening: unified guarded fetch across Graph and attachment paths",

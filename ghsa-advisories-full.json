@@ -1,5 +1,96 @@
 [
   {
+    "ghsa_id": "GHSA-7jx5-9fjg-hp4m",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-7jx5-9fjg-hp4m",
+    "html_url": "https://github.com/advisories/GHSA-7jx5-9fjg-hp4m",
+    "summary": "OpenClaw ACP client has permission auto-approval bypass via untrusted tool metadata",
+    "description": "## Vulnerability Summary\n\nThe OpenClaw ACP client could auto-approve tool calls based on untrusted metadata and permissive name heuristics. A malicious or compromised ACP tool invocation could bypass expected interactive approval prompts for read-class operations.\n\n## Affected Packages / Versions\n\n- Package: npm `openclaw`\n- Affected published versions: `<= 2026.2.22-2` (latest published as of February 24, 2026 is `2026.2.22-2`)\n- Patched in code on `main`: `2026.2.23` (released)\n\n## Technical Details\n\n- Permission classification trusted incoming `toolCall.kind` and heuristic name matching.\n- Non-core read-like names and spoofed kind metadata could reach auto-approve paths.\n- `read` operations were not scoped strongly enough to cwd in all metadata/title forms.\n\n## Fix\n\n- Require trusted core tool IDs for auto-approval and ignore untrusted `toolCall.kind` as an authorization source.\n- Scope `read` auto-approval to cwd-resolved paths.\n- Add stricter tool-name validation and regression coverage for spoofed kind and non-core read-like names.\n\n## Affected Functions\n\n- `resolvePermissionRequest`\n- `resolveToolNameForPermission`\n- `shouldAutoApproveToolCall`\n\n## Fix Commit(s)\n\n- `12cc754332f9a7c92e158ce7644aa22df79c0904`\n- `63dcd28ae0be2de1c75af09cc81841cebeec068f`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)\n\n\nThanks @nedlir for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-7jx5-9fjg-hp4m",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-7jx5-9fjg-hp4m",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jx5-9fjg-hp4m",
+      "https://github.com/openclaw/openclaw/commit/12cc754332f9a7c92e158ce7644aa22df79c0904",
+      "https://github.com/openclaw/openclaw/commit/63dcd28ae0be2de1c75af09cc81841cebeec068f",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.23",
+      "https://github.com/advisories/GHSA-7jx5-9fjg-hp4m"
+    ],
+    "published_at": "2026-02-27T22:08:36Z",
+    "updated_at": "2026-02-27T22:08:37Z",
+    "github_reviewed_at": "2026-02-27T22:08:36Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.22-2",
+        "first_patched_version": "2026.2.23",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:L/VA:N/SC:L/SI:N/SA:N",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-639",
+        "name": "Authorization Bypass Through User-Controlled Key"
+      },
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "nedlir",
+          "id": 66902031,
+          "node_id": "MDQ6VXNlcjY2OTAyMDMx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/66902031?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nedlir",
+          "html_url": "https://github.com/nedlir",
+          "followers_url": "https://api.github.com/users/nedlir/followers",
+          "following_url": "https://api.github.com/users/nedlir/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nedlir/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nedlir/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nedlir/subscriptions",
+          "organizations_url": "https://api.github.com/users/nedlir/orgs",
+          "repos_url": "https://api.github.com/users/nedlir/repos",
+          "events_url": "https://api.github.com/users/nedlir/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nedlir/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-82g8-464f-2mv7",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-82g8-464f-2mv7",

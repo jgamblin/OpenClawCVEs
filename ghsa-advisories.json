@@ -1,5 +1,27 @@
 [
   {
+    "ghsa_id": "GHSA-7jx5-9fjg-hp4m",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw ACP client has permission auto-approval bypass via untrusted tool metadata",
+    "published": "2026-02-27",
+    "html_url": "https://github.com/advisories/GHSA-7jx5-9fjg-hp4m",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.22-2"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-639",
+      "CWE-863"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-82g8-464f-2mv7",
     "cve_id": null,
     "severity": "medium",

@@ -3,7 +3,7 @@
 > Complete listing of all 224 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-27 22:08 UTC</sub>
+<sub>Last updated: 2026-02-27 23:10 UTC</sub>
 
 ---
 
@@ -48,7 +48,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (46)
+## GHSAs Without CVE — Potential Future CVEs (47)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
@@ -94,6 +94,7 @@
 | [GHSA-6c9j-x93c-rw6j](https://github.com/advisories/GHSA-6c9j-x93c-rw6j) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw safeBins file-existence oracle information disclosure | CWE-203 | 2026.2.19 | 2026-02-19 |
 | [GHSA-fh3f-q9qw-93j9](https://github.com/advisories/GHSA-fh3f-q9qw-93j9) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw replaced a deprecated sandbox hash algorithm | CWE-328 | 2026.2.15 | 2026-02-19 |
 | [GHSA-p536-vvpp-9mc8](https://github.com/advisories/GHSA-p536-vvpp-9mc8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Web Fetch DoS via unbounded response parsing | CWE-400 | 2026.2.15 | 2026-02-19 |
+| [GHSA-7jx5-9fjg-hp4m](https://github.com/advisories/GHSA-7jx5-9fjg-hp4m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw ACP client has permission auto-approval bypass via untrusted tool metadata | CWE-639, CWE-863 | 2026.2.23 | 2026-02-27 |
 | [GHSA-82g8-464f-2mv7](https://github.com/advisories/GHSA-82g8-464f-2mv7) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Skill env override host env injection via applySkillConfigEnvOverrides (defense-in-depth) | CWE-15, CWE-94, CWE-1341 | 2026.2.21 | 2026-02-27 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026.2.14 | 2026-02-17 |
 | [GHSA-g27f-9qjv-22pm](https://github.com/advisories/GHSA-g27f-9qjv-22pm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw log poisoning (indirect prompt injection) via WebSocket headers | CWE-117 | 2026.2.13 | 2026-02-17 |
@@ -101,7 +102,7 @@
 
 ---
 
-## Repo-Only Advisories (144)
+## Repo-Only Advisories (143)
 
 These advisories are visible on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but are not indexed in the GitHub Advisory Database (no npm package mapping). They cannot be fetched via the Advisory Database API.
 
@@ -168,7 +169,6 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-7f4q-9rqh-x36p](https://github.com/openclaw/openclaw/security/advisories/GHSA-7f4q-9rqh-x36p) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | macOS optional allowlist basename matching could bypass path-based policy | 2026-02-23 |
 | [GHSA-7fcc-cw49-xm78](https://github.com/openclaw/openclaw/security/advisories/GHSA-7fcc-cw49-xm78) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Command injection via Windows shell fallback in Lobster tool execution | 2026-02-21 |
 | [GHSA-7ff8-xjh3-mgh6](https://github.com/openclaw/openclaw/security/advisories/GHSA-7ff8-xjh3-mgh6) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | non-default autoAllowSkills setting could bypass on-miss exec prompt | 2026-02-24 |
-| [GHSA-7jx5-9fjg-hp4m](https://github.com/openclaw/openclaw/security/advisories/GHSA-7jx5-9fjg-hp4m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | ACP permission auto-approval bypass via untrusted tool metadata | 2026-02-24 |
 | [GHSA-7qf6-h84j-8fq4](https://github.com/openclaw/openclaw/security/advisories/GHSA-7qf6-h84j-8fq4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Microsoft Teams media fetch SSRF hardening: unified guarded fetch across Graph and attachment paths | 2026-02-26 |
 | [GHSA-7xhj-55q9-pc3m](https://github.com/openclaw/openclaw/security/advisories/GHSA-7xhj-55q9-pc3m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Hook transform module path allows traversal and arbitrary JavaScript module loading | 2026-02-16 |
 | [GHSA-8cp7-rp8r-mg77](https://github.com/openclaw/openclaw/security/advisories/GHSA-8cp7-rp8r-mg77) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | SSRF guard bypass via IPv6 transition over ISATAP | 2026-02-21 |
