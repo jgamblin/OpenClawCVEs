@@ -95,6 +95,46 @@ def fetch_ghsas() -> list[dict]:
     return all_advisories
 
 
+def fetch_repo_advisories() -> list[dict]:
+    """Fetch all published security advisories directly from the openclaw/openclaw repo.
+
+    This catches advisories that haven't been indexed in the global Advisory
+    Database yet (repo-only GHSAs).  Requires the `gh` CLI with sufficient
+    permissions (public-repo read is enough for published advisories).
+    """
+    all_advisories = []
+    seen_ids = set()
+    page = 1
+
+    while True:
+        data = run_gh(
+            [f"/repos/openclaw/openclaw/security-advisories?per_page=100&state=published&page={page}"],
+            fallback=[]
+        )
+        if not data:
+            break
+        for adv in data:
+            ghsa_id = adv.get("ghsa_id", "")
+            if ghsa_id and ghsa_id not in seen_ids:
+                seen_ids.add(ghsa_id)
+                all_advisories.append(adv)
+        if len(data) < 100:
+            break
+        page += 1
+
+    return all_advisories
+
+
+def parse_repo_advisory_summary(adv: dict) -> dict:
+    """Extract a lightweight summary from a repo-level advisory."""
+    return {
+        "ghsa_id": adv.get("ghsa_id", ""),
+        "severity": (adv.get("severity", "unknown") or "unknown").upper(),
+        "title": (adv.get("summary", "") or "").replace("\n", " ").strip(),
+        "html_url": adv.get("html_url", "") or f"https://github.com/openclaw/openclaw/security/advisories/{adv.get('ghsa_id', '')}",
+    }
+
+
 def fetch_cvelist_cves() -> list[str]:
     """Search cvelistV5 for OpenClaw CVEs via GitHub code search.
 
@@ -369,10 +409,9 @@ def parse_cve_record(record: dict) -> dict:
 # ─── Repo-Only Advisories ───────────────────────────────────────────────────
 
 # These are advisories visible on the repo security page but not indexed in the
-# GitHub Advisory Database. We maintain them in a separate JSON file since
-# there's no public API to enumerate repo-level advisories without collaborator
-# access. The file is updated manually or via scraping the security advisories
-# page.
+# GitHub Advisory Database. They are now auto-refreshed from the repo security
+# advisories API during each update, but we keep the JSON file as a cache for
+# --local runs.
 
 REPO_ONLY_GHSAS_FILE = ROOT / "repo-only-ghsas.json"
 
@@ -405,9 +444,7 @@ def load_repo_only_ghsas() -> list[dict]:
 def collect_data(local_only: bool = False) -> dict:
     """Collect all data needed to render the README."""
 
-    repo_only_ghsas = load_repo_only_ghsas()
-
-    # ── GHSAs ──
+    # ── GHSAs from Advisory DB ──
     if local_only and (DATA_DIR / "ghsa-advisories-full.json").exists():
         print("Loading cached GHSA data...")
         with open(DATA_DIR / "ghsa-advisories-full.json") as f:
@@ -425,10 +462,46 @@ def collect_data(local_only: bool = False) -> dict:
     with open(DATA_DIR / "ghsa-advisories.json", "w") as f:
         json.dump(ghsas, f, indent=2)
 
+    advisory_db_ids = set(g["ghsa_id"] for g in ghsas)
+
+    # ── Repo-only GHSAs (auto-refresh or cached) ──
+    repo_cve_ids = set()  # CVE IDs discovered from repo advisory API
+    if local_only:
+        repo_only_ghsas = load_repo_only_ghsas()
+    else:
+        print("Fetching repo-level security advisories...")
+        raw_repo = fetch_repo_advisories()
+        print(f"  Found {len(raw_repo)} repo advisories")
+        # Capture any CVE IDs assigned via repo advisories that may not be in
+        # the global advisory DB yet.
+        for adv in raw_repo:
+            cve_id = adv.get("cve_id")
+            if cve_id:
+                repo_cve_ids.add(cve_id)
+        # Keep only those NOT already in the Advisory DB (deduplicate)
+        repo_only_ghsas = []
+        for adv in raw_repo:
+            ghsa_id = adv.get("ghsa_id", "")
+            if ghsa_id and ghsa_id not in advisory_db_ids:
+                repo_only_ghsas.append(parse_repo_advisory_summary(adv))
+        severity_order = {"CRITICAL": 0, "HIGH": 1, "MODERATE": 2, "MEDIUM": 2, "LOW": 3}
+        repo_only_ghsas.sort(key=lambda x: (severity_order.get(x["severity"], 4), x["ghsa_id"]))
+        print(f"  Repo-only (not in advisory DB): {len(repo_only_ghsas)}")
+        # Persist for --local runs
+        with open(REPO_ONLY_GHSAS_FILE, "w") as f:
+            json.dump(repo_only_ghsas, f, indent=2)
+            f.write("\n")
+
     # ── Split GHSAs ──
     ghsas_with_cve = [g for g in ghsas if g["cve_id"]]
     ghsas_no_cve = [g for g in ghsas if not g["cve_id"]]
-    all_cve_ids = sorted(set(g["cve_id"] for g in ghsas_with_cve))
+
+    # Collect CVE IDs from both advisory DB and repo-level advisories
+    all_cve_ids_set = set(g["cve_id"] for g in ghsas_with_cve)
+    # Also include CVE IDs discovered via the repo advisory API that may not
+    # have appeared in the global advisory DB yet.
+    all_cve_ids_set |= repo_cve_ids
+    all_cve_ids = sorted(all_cve_ids_set)
 
     # ── CVE Records from cvelistV5 ──
     published_cves = []
@@ -548,7 +621,9 @@ def collect_data(local_only: bool = False) -> dict:
             "reserved": [p for p in pipeline if p["state"] != "PUBLISHED"],
         }, f, indent=2)
 
-    # ── Severity Counts ──
+    # ── Severity Counts (deduplicated) ──
+    # repo_only_ghsas is already guaranteed not to overlap with ghsas (advisory DB),
+    # so a simple concatenation is safe here.
     all_severities = [g["severity"].lower() for g in ghsas] + [
         r["severity"].lower() for r in repo_only_ghsas
     ]
@@ -579,7 +654,7 @@ def collect_data(local_only: bool = False) -> dict:
         {"name": "Denial of Service", "count": 0, "examples": "Unbounded media fetch, webhook body buffering, archive expansion"},
     ]
 
-    # Count categories from all advisory titles
+    # Count categories from all advisory titles (deduplicated)
     all_titles = [g["title"].lower() for g in ghsas] + [r["title"].lower() for r in repo_only_ghsas]
     for title in all_titles:
         if any(w in title for w in ["command injection", "command hijack", "rce", "code execution", "shell injection"]):
