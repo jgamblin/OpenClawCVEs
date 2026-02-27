@@ -52,6 +52,32 @@ def run_gh(args: list[str], fallback=None):
         return fallback
 
 
+def run_gh_paginated(endpoint: str) -> list[dict]:
+    """Run a paginated gh API call and return all results as a single list.
+
+    Uses ``gh api --paginate`` which automatically follows cursor-based
+    pagination (``Link: rel="next"``).  The responses are concatenated JSON
+    arrays, which ``--paginate`` joins with ``][`` — we fix that up here.
+    """
+    try:
+        result = subprocess.run(
+            ["gh", "api", "--paginate", endpoint],
+            capture_output=True, text=True, timeout=120
+        )
+        if result.returncode != 0:
+            return []
+        raw = result.stdout.strip()
+        if not raw:
+            return []
+        # --paginate concatenates JSON arrays: [...][ ...] → fix to valid JSON
+        if "][" in raw:
+            raw = raw.replace("][", ",")
+        data = json.loads(raw)
+        return data if isinstance(data, list) else []
+    except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError):
+        return []
+
+
 def run_curl_json(url: str, fallback=None):
     """Run curl and return parsed JSON."""
     try:
@@ -99,30 +125,21 @@ def fetch_repo_advisories() -> list[dict]:
     """Fetch all published security advisories directly from the openclaw/openclaw repo.
 
     This catches advisories that haven't been indexed in the global Advisory
-    Database yet (repo-only GHSAs).  Requires the `gh` CLI with sufficient
-    permissions (public-repo read is enough for published advisories).
+    Database yet (repo-only GHSAs).  Uses ``gh api --paginate`` to handle the
+    cursor-based pagination this endpoint requires.
     """
-    all_advisories = []
+    all_advisories = run_gh_paginated(
+        "/repos/openclaw/openclaw/security-advisories?per_page=100&state=published"
+    )
+    # Deduplicate by ghsa_id (pagination can occasionally return overlaps)
     seen_ids = set()
-    page = 1
-
-    while True:
-        data = run_gh(
-            [f"/repos/openclaw/openclaw/security-advisories?per_page=100&state=published&page={page}"],
-            fallback=[]
-        )
-        if not data:
-            break
-        for adv in data:
-            ghsa_id = adv.get("ghsa_id", "")
-            if ghsa_id and ghsa_id not in seen_ids:
-                seen_ids.add(ghsa_id)
-                all_advisories.append(adv)
-        if len(data) < 100:
-            break
-        page += 1
-
-    return all_advisories
+    unique = []
+    for adv in all_advisories:
+        ghsa_id = adv.get("ghsa_id", "")
+        if ghsa_id and ghsa_id not in seen_ids:
+            seen_ids.add(ghsa_id)
+            unique.append(adv)
+    return unique
 
 
 def parse_repo_advisory_summary(adv: dict) -> dict:
@@ -453,6 +470,10 @@ def collect_data(local_only: bool = False) -> dict:
     else:
         print("Fetching GHSAs from GitHub Advisory Database...")
         raw_ghsas = fetch_ghsas()
+        if not raw_ghsas:
+            print("ERROR: Advisory DB returned 0 results — possible API failure or rate limit.", file=sys.stderr)
+            print("       Aborting to avoid overwriting good data with empty results.", file=sys.stderr)
+            sys.exit(1)
         with open(DATA_DIR / "ghsa-advisories-full.json", "w") as f:
             json.dump(raw_ghsas, f, indent=2)
 
@@ -472,6 +493,10 @@ def collect_data(local_only: bool = False) -> dict:
     else:
         print("Fetching repo-level security advisories...")
         raw_repo = fetch_repo_advisories()
+        if not raw_repo:
+            print("ERROR: Repo advisory API returned 0 results — possible API failure or rate limit.", file=sys.stderr)
+            print("       Aborting to avoid overwriting good data with empty results.", file=sys.stderr)
+            sys.exit(1)
         print(f"  Found {len(raw_repo)} repo advisories")
         # Capture any CVE IDs assigned via repo advisories that may not be in
         # the global advisory DB yet.
