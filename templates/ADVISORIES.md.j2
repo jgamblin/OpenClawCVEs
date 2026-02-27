@@ -32,10 +32,10 @@
 
 These advisories are visible on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but are not indexed in the GitHub Advisory Database (no npm package mapping). They cannot be fetched via the Advisory Database API.
 
-| GHSA | Severity | Title |
-|------|----------|-------|
+| GHSA | Severity | Title | Published |
+|------|----------|-------|-----------|
 {% for a in repo_only_ghsas -%}
-| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.severity_badge }} | {{ a.title }} |
+| [{{ a.ghsa_id }}]({{ a.html_url }}) | {{ a.severity_badge }} | {{ a.title }} | {{ a.published | default("—") }} |
 {% endfor %}
 
 ---

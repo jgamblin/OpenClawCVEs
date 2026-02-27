@@ -131,6 +131,7 @@ def parse_repo_advisory_summary(adv: dict) -> dict:
         "ghsa_id": adv.get("ghsa_id", ""),
         "severity": (adv.get("severity", "unknown") or "unknown").upper(),
         "title": (adv.get("summary", "") or "").replace("\n", " ").strip(),
+        "published": (adv.get("published_at", "") or "")[:10],
         "html_url": adv.get("html_url", "") or f"https://github.com/openclaw/openclaw/security/advisories/{adv.get('ghsa_id', '')}",
     }
 

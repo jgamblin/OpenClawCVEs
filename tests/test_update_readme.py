@@ -17,6 +17,7 @@ sys.path.insert(0, str(ROOT))
 from update_readme import (
     parse_cve_record,
     parse_ghsa_summary,
+    parse_repo_advisory_summary,
     render_template,
     load_repo_only_ghsas,
     severity_badge,
@@ -287,6 +288,55 @@ class TestParseGhsaSummary:
 # ─── Tests: load_repo_only_ghsas ─────────────────────────────────────────────
 
 
+class TestParseRepoAdvisorySummary:
+    """Tests for parse_repo_advisory_summary."""
+
+    SAMPLE_REPO_ADVISORY = {
+        "ghsa_id": "GHSA-gv46-4xfq-jv58",
+        "severity": "critical",
+        "summary": "Remote Code Execution via Node Invoke Approval Bypass in Gateway",
+        "published_at": "2026-02-14T19:30:00Z",
+        "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58",
+        "cve_id": None,
+    }
+
+    def test_basic_fields(self):
+        result = parse_repo_advisory_summary(self.SAMPLE_REPO_ADVISORY)
+        assert result["ghsa_id"] == "GHSA-gv46-4xfq-jv58"
+        assert result["severity"] == "CRITICAL"
+        assert "Node Invoke" in result["title"]
+        assert result["published"] == "2026-02-14"
+        assert "GHSA-gv46" in result["html_url"]
+
+    def test_severity_uppercased(self):
+        result = parse_repo_advisory_summary({"severity": "medium"})
+        assert result["severity"] == "MEDIUM"
+
+    def test_null_severity_defaults_to_unknown(self):
+        result = parse_repo_advisory_summary({"severity": None})
+        assert result["severity"] == "UNKNOWN"
+
+    def test_missing_published_at(self):
+        result = parse_repo_advisory_summary({"ghsa_id": "GHSA-test-1234-abcd"})
+        assert result["published"] == ""
+
+    def test_html_url_fallback(self):
+        result = parse_repo_advisory_summary({"ghsa_id": "GHSA-test-1234-abcd", "html_url": ""})
+        assert "GHSA-test-1234-abcd" in result["html_url"]
+
+    def test_newlines_stripped_from_title(self):
+        result = parse_repo_advisory_summary({"summary": "line1\nline2"})
+        assert "\n" not in result["title"]
+        assert result["title"] == "line1 line2"
+
+    def test_empty_input(self):
+        result = parse_repo_advisory_summary({})
+        assert result["ghsa_id"] == ""
+        assert result["severity"] == "UNKNOWN"
+        assert result["title"] == ""
+        assert result["published"] == ""
+
+
 class TestLoadRepoOnlyGhsas:
     def test_loads_file(self):
         ghsas = load_repo_only_ghsas()
@@ -296,6 +346,7 @@ class TestLoadRepoOnlyGhsas:
             assert "ghsa_id" in g
             assert "severity" in g
             assert "title" in g
+            assert "published" in g
             assert "html_url" in g
             assert g["ghsa_id"].startswith("GHSA-")
 
@@ -304,6 +355,22 @@ class TestLoadRepoOnlyGhsas:
         valid = {"CRITICAL", "HIGH", "MODERATE", "MEDIUM", "LOW"}
         for g in ghsas:
             assert g["severity"].upper() in valid, f"Invalid severity: {g['severity']}"
+
+    def test_published_dates_are_present(self):
+        ghsas = load_repo_only_ghsas()
+        with_dates = [g for g in ghsas if g.get("published")]
+        assert len(with_dates) == len(ghsas), "All repo-only GHSAs should have published dates"
+
+    def test_no_overlap_with_advisory_db(self):
+        """Repo-only GHSAs should not duplicate advisory DB entries."""
+        import json
+        repo_ghsas = load_repo_only_ghsas()
+        repo_ids = set(g["ghsa_id"] for g in repo_ghsas)
+        with open(ROOT / "ghsa-advisories.json") as f:
+            db_ghsas = json.load(f)
+        db_ids = set(g["ghsa_id"] for g in db_ghsas)
+        overlap = repo_ids & db_ids
+        assert len(overlap) == 0, f"Found {len(overlap)} overlapping GHSAs: {overlap}"
 
 
 # ─── Tests: severity_badge ───────────────────────────────────────────────────
@@ -438,6 +505,7 @@ class TestRenderTemplate:
                     "ghsa_id": "GHSA-gv46-4xfq-jv58",
                     "severity": "CRITICAL",
                     "title": "RCE via Node Invoke Approval Bypass",
+                    "published": "2026-02-14",
                     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58",
                     "severity_badge": severity_badge("CRITICAL"),
                 },

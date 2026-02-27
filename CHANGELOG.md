@@ -50,3 +50,37 @@ All notable changes to the OpenClaw CVE & GHSA Tracker are documented here.
 | Repo-only GHSAs | 29 (17 dupes) | **145** (0 dupes) |
 | Overlap | 17 | **0** |
 | CVEs tracked | 34 | 34 |
+
+## [2026-02-27b] — Repo-only GHSAs as first-class data
+
+### Bug Fixes
+
+- **CI workflow: `repo-only-ghsas.json` missing from change detection.**
+  The "Check for changes" step in `update-readme.yml` did not include
+  `repo-only-ghsas.json` in `git status --porcelain`, so if that file was the
+  only one that changed the commit would be silently skipped. Fixed by adding it
+  to the porcelain check.
+
+- **CI workflow: `repo-only-ghsas.json` not cleaned before rebuild.**
+  The "Clean generated files" step did not remove it, leaving a stale cache
+  during the brief window before `collect_data()` overwrites it. Now cleaned
+  alongside all other generated files.
+
+### New Features
+
+- **Published dates for repo-only GHSAs.**
+  `parse_repo_advisory_summary()` now captures `published_at` as a `published`
+  field (YYYY-MM-DD). Templates updated to show the Published column for
+  repo-only advisories in both README.md and ADVISORIES.md.
+
+- **New tests for `parse_repo_advisory_summary`.**
+  7 unit tests covering basic fields, severity uppercasing, null/missing values,
+  URL fallback, and newline stripping. Also added `test_published_dates_are_present`
+  and `test_no_overlap_with_advisory_db` integration tests to `TestLoadRepoOnlyGhsas`.
+  Total test count: 39 → 48.
+
+### Removed
+
+- **Deprecated shell scripts.**
+  Removed `fetch-openclaw-cves.sh` and `fetch-openclaw-ghsas.sh`, which were
+  already marked as deprecated and fully superseded by `update_readme.py`.

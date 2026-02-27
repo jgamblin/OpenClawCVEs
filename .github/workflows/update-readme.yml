@@ -30,7 +30,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Clean generated files
-        run: rm -rf README.md ADVISORIES.md cves.json cve-pipeline-status.json ghsa-advisories.json ghsa-advisories-full.json cve-records/
+        run: rm -rf README.md ADVISORIES.md cves.json cve-pipeline-status.json ghsa-advisories.json ghsa-advisories-full.json repo-only-ghsas.json cve-records/
 
       - name: Update README
         env:
@@ -40,7 +40,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git status --porcelain README.md ADVISORIES.md cves.json ghsa-advisories.json cve-pipeline-status.json cve-records/ | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+          git status --porcelain README.md ADVISORIES.md cves.json ghsa-advisories.json cve-pipeline-status.json repo-only-ghsas.json cve-records/ | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
