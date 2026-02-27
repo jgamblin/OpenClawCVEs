@@ -1,5 +1,28 @@
 [
   {
+    "ghsa_id": "GHSA-82g8-464f-2mv7",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Skill env override host env injection via applySkillConfigEnvOverrides (defense-in-depth)",
+    "published": "2026-02-27",
+    "html_url": "https://github.com/advisories/GHSA-82g8-464f-2mv7",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-15",
+      "CWE-94",
+      "CWE-1341"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-cxpw-2g23-2vgw",
     "cve_id": "CVE-2026-27576",
     "severity": "medium",

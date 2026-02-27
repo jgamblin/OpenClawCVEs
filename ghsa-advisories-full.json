@@ -1,5 +1,99 @@
 [
   {
+    "ghsa_id": "GHSA-82g8-464f-2mv7",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-82g8-464f-2mv7",
+    "html_url": "https://github.com/advisories/GHSA-82g8-464f-2mv7",
+    "summary": "OpenClaw: Skill env override host env injection via applySkillConfigEnvOverrides (defense-in-depth)",
+    "description": "### Summary\n`applySkillConfigEnvOverrides` previously copied `skills.entries.*.env` values into the host `process.env` without applying the host env safety policy.\n\n### Impact\nIn affected versions, dangerous process-level variables such as `NODE_OPTIONS` could be injected when unset, which can influence runtime/child-process behavior.\n\n### Required attacker capability\nAn attacker must be able to modify OpenClaw local state/config (for example `~/.openclaw/openclaw.json`) to set `skills.entries.<skill>.env` or related skill config values.\n\n### Severity rationale\nPer `SECURITY.md`, anyone who can modify `~/.openclaw` config is already a trusted operator, and mutually untrusted operators sharing one host/config are out of scope. Because exploitation requires trusted-config write access in the documented model, this is classified as a **medium** defense-in-depth issue rather than a cross-boundary critical break.\n\n### Remediation\nFixed in `2026.2.21` by sanitizing skill env overrides and blocking dangerous host env keys (including `NODE_OPTIONS`) before applying overrides, with regression tests covering blocked dangerous keys.\n\n## Fix Commit(s)\n- `8c9f35cdb51692b650ddf05b259ccdd75cc9a83c`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-82g8-464f-2mv7",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-82g8-464f-2mv7",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-82g8-464f-2mv7",
+      "https://github.com/openclaw/openclaw/commit/8c9f35cdb51692b650ddf05b259ccdd75cc9a83c",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.21",
+      "https://github.com/advisories/GHSA-82g8-464f-2mv7"
+    ],
+    "published_at": "2026-02-27T21:36:17Z",
+    "updated_at": "2026-02-27T21:36:18Z",
+    "github_reviewed_at": "2026-02-27T21:36:17Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.21",
+        "first_patched_version": "2026.2.21",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "score": 5.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-15",
+        "name": "External Control of System or Configuration Setting"
+      },
+      {
+        "cwe_id": "CWE-94",
+        "name": "Improper Control of Generation of Code ('Code Injection')"
+      },
+      {
+        "cwe_id": "CWE-1341",
+        "name": "Multiple Releases of Same Resource or Handle"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "nedlir",
+          "id": 66902031,
+          "node_id": "MDQ6VXNlcjY2OTAyMDMx",
+          "avatar_url": "https://avatars.githubusercontent.com/u/66902031?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nedlir",
+          "html_url": "https://github.com/nedlir",
+          "followers_url": "https://api.github.com/users/nedlir/followers",
+          "following_url": "https://api.github.com/users/nedlir/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nedlir/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nedlir/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nedlir/subscriptions",
+          "organizations_url": "https://api.github.com/users/nedlir/orgs",
+          "repos_url": "https://api.github.com/users/nedlir/repos",
+          "events_url": "https://api.github.com/users/nedlir/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nedlir/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-cxpw-2g23-2vgw",
     "cve_id": "CVE-2026-27576",
     "url": "https://api.github.com/advisories/GHSA-cxpw-2g23-2vgw",
@@ -389,7 +483,7 @@
     "url": "https://api.github.com/advisories/GHSA-6c9j-x93c-rw6j",
     "html_url": "https://github.com/advisories/GHSA-6c9j-x93c-rw6j",
     "summary": "OpenClaw safeBins file-existence oracle information disclosure",
-    "description": "An information disclosure vulnerability in OpenClaw's `tools.exec.safeBins` approval flow allowed a file-existence oracle.\n\nWhen safe-bin validation examined candidate file paths, command allow/deny behavior could differ based on whether a path already existed on the host filesystem. An attacker could probe for file presence by comparing outcomes for existing vs non-existing filenames.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Latest published vulnerable version at triage time: `2026.2.17`\n- Planned patched version: `2026.2.19`\n\n## Impact\nAttackers with access to this execution surface could infer whether specific files exist (for example secrets/config files), enabling filesystem enumeration and improving follow-on attack planning.\n\n## Fix\nThe safe-bin policy was changed to deterministic argv-only validation without host file-existence checks. File-oriented flags are blocked for safe-bin mode (for example `sort -o`, `jq -f`, `grep -f`), and trusted-path checks remain enforced.\n\n## Fix Commit(s)\n- `bafdbb6f112409a65decd3d4e7350fbd637c7754`\n\nThanks @nedlir for reporting.",
+    "description": "An information disclosure vulnerability in OpenClaw's `tools.exec.safeBins` approval flow allowed a file-existence oracle.\n\nWhen safe-bin validation examined candidate file paths, command allow/deny behavior could differ based on whether a path already existed on the host filesystem. An attacker could probe for file presence by comparing outcomes for existing vs non-existing filenames.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Latest published vulnerable version at triage time: `2026.2.17`\n- Planned patched version: `2026.2.18`\n\n## Impact\nAttackers with access to this execution surface could infer whether specific files exist (for example secrets/config files), enabling filesystem enumeration and improving follow-on attack planning.\n\n## Fix\nThe safe-bin policy was changed to deterministic argv-only validation without host file-existence checks. File-oriented flags are blocked for safe-bin mode (for example `sort -o`, `jq -f`, `grep -f`), and trusted-path checks remain enforced.\n\n## Fix Commit(s)\n- `bafdbb6f112409a65decd3d4e7350fbd637c7754`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)\n\nThanks @nedlir for reporting.",
     "type": "reviewed",
     "severity": "medium",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-6c9j-x93c-rw6j",
@@ -406,7 +500,7 @@
       "https://github.com/advisories/GHSA-6c9j-x93c-rw6j"
     ],
     "published_at": "2026-02-19T22:06:26Z",
-    "updated_at": "2026-02-19T22:06:28Z",
+    "updated_at": "2026-02-27T21:55:46Z",
     "github_reviewed_at": "2026-02-19T22:06:26Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -474,7 +568,7 @@
     "url": "https://api.github.com/advisories/GHSA-4685-c5cp-vp95",
     "html_url": "https://github.com/advisories/GHSA-4685-c5cp-vp95",
     "summary": "OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags",
-    "description": "## Summary\n`tools.exec.safeBins` could be bypassed for filesystem access when `sort` output flags (`-o` / `--output`) or recursive `grep` flags were allowed through safe-bin execution paths.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Patched versions: `>= 2026.2.19`\n- Latest published version at triage time: `2026.2.17`\n\n## Impact\nIn deployments that enabled `tools.exec.safeBins`, an attacker with access to command execution flows could turn intended stdin-only safe-bin usage into file writes (`sort -o`) or recursive file reads (`grep -R`).\n\n## Fix Commit(s)\n- `cfe8457a0f4aae5324daec261d3b0aad1461a4bc`\n\nThanks @nedlir for reporting.",
+    "description": "## Summary\n`tools.exec.safeBins` could be bypassed for filesystem access when `sort` output flags (`-o` / `--output`) or recursive `grep` flags were allowed through safe-bin execution paths.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.17`\n- Patched versions: `>= 2026.2.18`\n- Latest published version at triage time: `2026.2.17`\n\n## Impact\nIn deployments that enabled `tools.exec.safeBins`, an attacker with access to command execution flows could turn intended stdin-only safe-bin usage into file writes (`sort -o`) or recursive file reads (`grep -R`).\n\n## Fix Commit(s)\n- `cfe8457a0f067c89cb8f0a3684f619bc2b73d680`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)\n\nThanks @nedlir for reporting.",
     "type": "reviewed",
     "severity": "low",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-4685-c5cp-vp95",
@@ -491,7 +585,7 @@
       "https://github.com/advisories/GHSA-4685-c5cp-vp95"
     ],
     "published_at": "2026-02-19T22:06:00Z",
-    "updated_at": "2026-02-19T22:06:03Z",
+    "updated_at": "2026-02-27T21:54:42Z",
     "github_reviewed_at": "2026-02-19T22:06:00Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

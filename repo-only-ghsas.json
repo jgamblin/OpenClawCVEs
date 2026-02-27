@@ -448,13 +448,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xhj-55q9-pc3m"
   },
   {
-    "ghsa_id": "GHSA-82g8-464f-2mv7",
-    "severity": "MEDIUM",
-    "title": "Skill env override host env injection (defense in depth)",
-    "published": "2026-02-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-82g8-464f-2mv7"
-  },
-  {
     "ghsa_id": "GHSA-8cp7-rp8r-mg77",
     "severity": "MEDIUM",
     "title": "SSRF guard bypass via IPv6 transition over ISATAP",
