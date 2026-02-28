@@ -1,16 +1,17 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 224 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 225 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-02-28 01:37 UTC</sub>
+<sub>Last updated: 2026-02-28 02:55 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (39)
+## GHSAs with CVE IDs (40)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
+| [GHSA-7977-c43c-xpwj](https://github.com/advisories/GHSA-7977-c43c-xpwj) | CVE-2026-28363 | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw is vulnerable to validation bypass through GNU long-option abbreviations in allowlist mode | npm/openclaw | 2026.2.23 | 2026-02-27 |
 | [GHSA-cxpw-2g23-2vgw](https://github.com/advisories/GHSA-cxpw-2g23-2vgw) | CVE-2026-27576 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs | npm/openclaw | 2026.2.19 | 2026-02-20 |
 | [GHSA-w45g-5746-x9fp](https://github.com/advisories/GHSA-w45g-5746-x9fp) | CVE-2026-27488 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw hardened cron webhook delivery against SSRF | npm/openclaw | 2026.2.19 | 2026-02-20 |
 | [GHSA-r6h2-5gqq-v5v6](https://github.com/advisories/GHSA-r6h2-5gqq-v5v6) | CVE-2026-27485 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Reject symlinks in local skill packaging script | npm/openclaw | 2026.2.19 | 2026-02-20 |
@@ -298,6 +299,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-27487 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27488 | ✅ **PUBLISHED** | ✅ | 2026-02-20 | GitHub_M |
 | CVE-2026-27576 | ✅ **PUBLISHED** | ✅ | 2026-02-20 | GitHub_M |
+| CVE-2026-28363 | ✅ **PUBLISHED** | ✅ | 2026-02-27 | mitre |
 
 ---
 

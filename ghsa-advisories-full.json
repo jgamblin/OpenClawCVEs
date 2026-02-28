@@ -185,6 +185,76 @@
     }
   },
   {
+    "ghsa_id": "GHSA-7977-c43c-xpwj",
+    "cve_id": "CVE-2026-28363",
+    "url": "https://api.github.com/advisories/GHSA-7977-c43c-xpwj",
+    "html_url": "https://github.com/advisories/GHSA-7977-c43c-xpwj",
+    "summary": "OpenClaw is vulnerable to validation bypass through GNU long-option abbreviations in allowlist mode",
+    "description": "In OpenClaw before 2026.2.23, tools.exec.safeBins validation for sort could be bypassed via GNU long-option abbreviations (such as --compress-prog) in allowlist mode, leading to approval-free execution paths that were intended to require approval. Only an exact string such as --compress-program was denied.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-7977-c43c-xpwj",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28363",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6h-g97w-fg78",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-28363",
+      "https://github.com/openclaw/openclaw/commit/3b8e33037ae2e12af7beb56fcf0346f1f8cbde6f",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.2.23",
+      "https://github.com/advisories/GHSA-7977-c43c-xpwj"
+    ],
+    "published_at": "2026-02-27T06:31:28Z",
+    "updated_at": "2026-02-28T02:17:26Z",
+    "github_reviewed_at": "2026-02-28T02:17:24Z",
+    "nvd_published_at": "2026-02-27T04:16:03Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.23",
+        "first_patched_version": "2026.2.23",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 10.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0
+    },
+    "epss": {
+      "percentage": 0.00084,
+      "percentile": 0.24417
+    }
+  },
+  {
     "ghsa_id": "GHSA-cxpw-2g23-2vgw",
     "cve_id": "CVE-2026-27576",
     "url": "https://api.github.com/advisories/GHSA-cxpw-2g23-2vgw",

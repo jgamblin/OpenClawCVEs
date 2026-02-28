@@ -45,6 +45,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-7977-c43c-xpwj",
+    "cve_id": "CVE-2026-28363",
+    "severity": "critical",
+    "title": "OpenClaw is vulnerable to validation bypass through GNU long-option abbreviations in allowlist mode",
+    "published": "2026-02-27",
+    "html_url": "https://github.com/advisories/GHSA-7977-c43c-xpwj",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-cxpw-2g23-2vgw",
     "cve_id": "CVE-2026-27576",
     "severity": "medium",
