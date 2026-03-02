@@ -1,5 +1,242 @@
 [
   {
+    "ghsa_id": "GHSA-q399-23r3-hfx4",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: system.run approvals did not bind PATH-token executable identity, enabling post-approval executable rebind",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-q399-23r3-hfx4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-367",
+      "CWE-426"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g99v-8hwm-g76g",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw has web_search citation redirect SSRF via private-network-allowing policy",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-g99v-8hwm-g76g",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jr6x-2q95-fh2g",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's authorization mismatch allowed write-scope agent runs to reach owner-only tools",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-jr6x-2q95-fh2g",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-269",
+      "CWE-862"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-7xmq-g46g-f8pv",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: Sandbox media TOCTOU could read files outside sandbox root",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-7xmq-g46g-f8pv",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-59",
+      "CWE-367"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-x82f-27x3-q89c",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-x82f-27x3-q89c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-59",
+      "CWE-367"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
+    "cve_id": null,
+    "severity": "critical",
+    "title": "CpenClaw's ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-6f6j-wx9w-ff4j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.26, < 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-8m9v-xpgf-g99m",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has an unauthorized sender bypass in its stop triggers and /models command authorization",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-8m9v-xpgf-g99m",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-p7gr-f84w-hqg5",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-p7gr-f84w-hqg5",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-269",
+      "CWE-284"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wr6m-jg37-68xh",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has unbounded memory growth in Zalo webhook via query-string key churn (unauthenticated DoS)",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-wr6m-jg37-68xh",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-392f-ggf5-fp3c",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Unicode canonicalization drift in node metadata policy classification could broaden node allowlists",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-392f-ggf5-fp3c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-176",
+      "CWE-436"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-vpj2-69hf-rppw",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Browser control startup could continue unauthenticated after auth bootstrap failure",
+    "published": "2026-03-02",
+    "html_url": "https://github.com/advisories/GHSA-vpj2-69hf-rppw",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.1"
+    ],
+    "fixed_version": "2026.3.1",
+    "cwes": [
+      "CWE-306"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-7jx5-9fjg-hp4m",
     "cve_id": null,
     "severity": "medium",

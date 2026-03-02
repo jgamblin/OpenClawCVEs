@@ -35,13 +35,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-65rx-fvh6-r4h2"
   },
   {
-    "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
-    "severity": "HIGH",
-    "title": "ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6f6j-wx9w-ff4j"
-  },
-  {
     "ghsa_id": "GHSA-796m-2973-wc5q",
     "severity": "HIGH",
     "title": "exec allowlist/safeBins policy-runtime mismatch via env -S wrapper interpretation",
@@ -84,13 +77,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jmmg-jqc7-5qf4"
   },
   {
-    "ghsa_id": "GHSA-jr6x-2q95-fh2g",
-    "severity": "HIGH",
-    "title": "Authorization mismatch allowed write-scope agent runs to reach owner-only tools",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jr6x-2q95-fh2g"
-  },
-  {
     "ghsa_id": "GHSA-mfg5-7q5g-f37j",
     "severity": "HIGH",
     "title": "voice-call media stream validated streams after upgrade, which could allow pre-start unauthenticated sockets to increase resource pressure",
@@ -117,20 +103,6 @@
     "title": "Zip Slip path traversal in tar archive extraction",
     "published": "2026-02-16",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p25h-9q54-ffvw"
-  },
-  {
-    "ghsa_id": "GHSA-p7gr-f84w-hqg5",
-    "severity": "HIGH",
-    "title": "Sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p7gr-f84w-hqg5"
-  },
-  {
-    "ghsa_id": "GHSA-q399-23r3-hfx4",
-    "severity": "HIGH",
-    "title": "system.run approvals did not bind PATH-token executable identity, enabling post-approval executable rebind",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q399-23r3-hfx4"
   },
   {
     "ghsa_id": "GHSA-qcc4-p59m-p54m",
@@ -271,13 +243,6 @@
     "title": "Browser trace/download path symlink escape in temp output handling",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-36h3-7c54-j27r"
-  },
-  {
-    "ghsa_id": "GHSA-392f-ggf5-fp3c",
-    "severity": "MEDIUM",
-    "title": "Unicode canonicalization drift in node metadata policy classification could broaden node allowlists",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-392f-ggf5-fp3c"
   },
   {
     "ghsa_id": "GHSA-3cvx-236h-m9fj",
@@ -476,13 +441,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xhj-55q9-pc3m"
   },
   {
-    "ghsa_id": "GHSA-7xmq-g46g-f8pv",
-    "severity": "MEDIUM",
-    "title": "Sandbox media TOCTOU could read files outside sandbox root",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xmq-g46g-f8pv"
-  },
-  {
     "ghsa_id": "GHSA-8cp7-rp8r-mg77",
     "severity": "MEDIUM",
     "title": "SSRF guard bypass via IPv6 transition over ISATAP",
@@ -509,13 +467,6 @@
     "title": "DUPLICATE of GHSA-3c6h-g97w-fg78: safeBins denied flags can be bypassed via GNU long-option abbreviations",
     "published": "2026-02-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8j9w-9pm5-pv8m"
-  },
-  {
-    "ghsa_id": "GHSA-8m9v-xpgf-g99m",
-    "severity": "MEDIUM",
-    "title": "Unauthorized sender bypass in stop triggers and /models command authorization",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8m9v-xpgf-g99m"
   },
   {
     "ghsa_id": "GHSA-9868-vxmx-w862",
@@ -600,13 +551,6 @@
     "title": "`tools.exec.safeBins` PATH-hijack allowed trojan binaries to bypass allowlist checks",
     "published": "2026-02-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g75x-8qqm-2vxp"
-  },
-  {
-    "ghsa_id": "GHSA-g99v-8hwm-g76g",
-    "severity": "MEDIUM",
-    "title": "web_search citation redirect SSRF via private-network-allowing policy",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g99v-8hwm-g76g"
   },
   {
     "ghsa_id": "GHSA-gq83-8q7q-9hfx",
@@ -847,13 +791,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vmqr-rc7x-3446"
   },
   {
-    "ghsa_id": "GHSA-vpj2-69hf-rppw",
-    "severity": "MEDIUM",
-    "title": "Browser control startup could continue unauthenticated after auth bootstrap failure",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw"
-  },
-  {
     "ghsa_id": "GHSA-vqx8-9xxw-f2m7",
     "severity": "MEDIUM",
     "title": "voice-call Twilio webhook replay could bypass manager dedupe because normalized event IDs were randomized per parse",
@@ -887,20 +824,6 @@
     "title": "Typed sender-key matching for toolsBySender prevents identity-collision policy bypass",
     "published": "2026-02-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpph-cjgr-7c39"
-  },
-  {
-    "ghsa_id": "GHSA-wr6m-jg37-68xh",
-    "severity": "MEDIUM",
-    "title": "Unbounded memory growth in Zalo webhook via query-string key churn (unauthenticated DoS)",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wr6m-jg37-68xh"
-  },
-  {
-    "ghsa_id": "GHSA-x82f-27x3-q89c",
-    "severity": "MEDIUM",
-    "title": "TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x82f-27x3-q89c"
   },
   {
     "ghsa_id": "GHSA-x9cf-3w63-rpq9",
