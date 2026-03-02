@@ -96,7 +96,7 @@
     "url": "https://api.github.com/advisories/GHSA-82g8-464f-2mv7",
     "html_url": "https://github.com/advisories/GHSA-82g8-464f-2mv7",
     "summary": "OpenClaw: Skill env override host env injection via applySkillConfigEnvOverrides (defense-in-depth)",
-    "description": "### Summary\n`applySkillConfigEnvOverrides` previously copied `skills.entries.*.env` values into the host `process.env` without applying the host env safety policy.\n\n### Impact\nIn affected versions, dangerous process-level variables such as `NODE_OPTIONS` could be injected when unset, which can influence runtime/child-process behavior.\n\n### Required attacker capability\nAn attacker must be able to modify OpenClaw local state/config (for example `~/.openclaw/openclaw.json`) to set `skills.entries.<skill>.env` or related skill config values.\n\n### Severity rationale\nPer `SECURITY.md`, anyone who can modify `~/.openclaw` config is already a trusted operator, and mutually untrusted operators sharing one host/config are out of scope. Because exploitation requires trusted-config write access in the documented model, this is classified as a **medium** defense-in-depth issue rather than a cross-boundary critical break.\n\n### Remediation\nFixed in `2026.2.21` by sanitizing skill env overrides and blocking dangerous host env keys (including `NODE_OPTIONS`) before applying overrides, with regression tests covering blocked dangerous keys.\n\n## Fix Commit(s)\n- `8c9f35cdb51692b650ddf05b259ccdd75cc9a83c`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)",
+    "description": "### Summary\n`applySkillConfigEnvOverrides` previously copied `skills.entries.*.env` values into the host `process.env` without applying the host env safety policy.\n\n### Impact\nIn affected versions, dangerous process-level variables such as `NODE_OPTIONS` could be injected when unset, which can influence runtime/child-process behavior.\n\n### Required attacker capability\nAn attacker must be able to modify OpenClaw local state/config (for example `~/.openclaw/openclaw.json`) to set `skills.entries.<skill>.env` or related skill config values.\n\n### Remediation\nFixed in `2026.2.21` by sanitizing skill env overrides and blocking dangerous host env keys (including `NODE_OPTIONS`) before applying overrides, with regression tests covering blocked dangerous keys.\n\n## Fix Commit(s)\n- `8c9f35cdb51692b650ddf05b259ccdd75cc9a83c`\n\nFound using [MCPwner](https://github.com/Pigyon/MCPwner)",
     "type": "reviewed",
     "severity": "medium",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-82g8-464f-2mv7",
@@ -114,7 +114,7 @@
       "https://github.com/advisories/GHSA-82g8-464f-2mv7"
     ],
     "published_at": "2026-02-27T21:36:17Z",
-    "updated_at": "2026-02-27T21:36:18Z",
+    "updated_at": "2026-03-02T17:17:46Z",
     "github_reviewed_at": "2026-02-27T21:36:17Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
