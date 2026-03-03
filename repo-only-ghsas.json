@@ -1,10 +1,10 @@
 [
   {
-    "ghsa_id": "GHSA-gv46-4xfq-jv58",
+    "ghsa_id": "GHSA-4rj2-gpmh-qq5x",
     "severity": "CRITICAL",
-    "title": "Remote Code Execution via Node Invoke Approval Bypass in Gateway",
+    "title": "Inbound allowlist policy bypass in voice-call extension (empty caller ID + suffix matching)",
     "published": "2026-02-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gv46-4xfq-jv58"
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4rj2-gpmh-qq5x"
   },
   {
     "ghsa_id": "GHSA-3c6h-g97w-fg78",
@@ -14,11 +14,32 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6h-g97w-fg78"
   },
   {
+    "ghsa_id": "GHSA-3hcm-ggvf-rch5",
+    "severity": "HIGH",
+    "title": "Exec allowlist bypass via command substitution/backticks inside double quotes",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3hcm-ggvf-rch5"
+  },
+  {
     "ghsa_id": "GHSA-3jx4-q2m7-r496",
     "severity": "HIGH",
     "title": "Hardlink alias checks could bypass workspace-only file boundaries in specific configurations",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3jx4-q2m7-r496"
+  },
+  {
+    "ghsa_id": "GHSA-474h-prjg-mmw3",
+    "severity": "HIGH",
+    "title": "Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3"
+  },
+  {
+    "ghsa_id": "GHSA-56f2-hvwg-5743",
+    "severity": "HIGH",
+    "title": "SSRF in Image Tool Remote Fetch",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-56f2-hvwg-5743"
   },
   {
     "ghsa_id": "GHSA-56pc-6hvp-4gv4",
@@ -49,11 +70,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-796m-2973-wc5q"
   },
   {
-    "ghsa_id": "GHSA-943q-mwmv-hhvh",
+    "ghsa_id": "GHSA-8mvx-p2r9-r375",
     "severity": "HIGH",
-    "title": "OC-02: Gateway /tools/invoke tool escalation + ACP permission auto-approval",
-    "published": "2026-02-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-943q-mwmv-hhvh"
+    "title": "web tools strict URL guard could lose DNS pinning when env proxy is configured",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8mvx-p2r9-r375"
   },
   {
     "ghsa_id": "GHSA-9f72-qcpw-2hxc",
@@ -61,6 +82,13 @@
     "title": "Native prompt image auto-load did not honor tools.fs.workspaceOnly in sandboxed runs",
     "published": "2026-02-25",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9f72-qcpw-2hxc"
+  },
+  {
+    "ghsa_id": "GHSA-fhvm-j76f-qmjv",
+    "severity": "HIGH",
+    "title": "Potential access-group authorization bypass if channel type lookup fails",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fhvm-j76f-qmjv"
   },
   {
     "ghsa_id": "GHSA-g55j-c2v4-pjcg",
@@ -84,13 +112,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hv93-r4j3-q65f"
   },
   {
-    "ghsa_id": "GHSA-hwpq-rrpf-pgcq",
-    "severity": "HIGH",
-    "title": "system.run approval identity mismatch could execute a different binary than displayed",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hwpq-rrpf-pgcq"
-  },
-  {
     "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
     "severity": "HIGH",
     "title": "Browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
@@ -105,11 +126,32 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgrq-9f93-wpp5"
   },
   {
+    "ghsa_id": "GHSA-mp5h-m6qj-6292",
+    "severity": "HIGH",
+    "title": "Telegram webhook requests may be accepted without verifying secret token when webhookSecret is missing",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mp5h-m6qj-6292"
+  },
+  {
+    "ghsa_id": "GHSA-mv9j-6xhh-g383",
+    "severity": "HIGH",
+    "title": "Unauthenticated Nostr profile HTTP endpoints allow remote profile/config tampering",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mv9j-6xhh-g383"
+  },
+  {
     "ghsa_id": "GHSA-mwxv-35wr-4vvj",
     "severity": "HIGH",
     "title": "Gateway plugin auth bypass via encoded dot-segment traversal in protected /api/channels paths",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mwxv-35wr-4vvj"
+  },
+  {
+    "ghsa_id": "GHSA-pchc-86f6-8758",
+    "severity": "HIGH",
+    "title": "BlueBubbles webhook auth bypass via loopback proxy trust",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pchc-86f6-8758"
   },
   {
     "ghsa_id": "GHSA-qcc4-p59m-p54m",
@@ -140,25 +182,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r5h9-vjqc-hq3r"
   },
   {
-    "ghsa_id": "GHSA-r65x-2hqr-j5hf",
-    "severity": "HIGH",
-    "title": "Node reconnect metadata spoofing could bypass platform-based node command policy",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r65x-2hqr-j5hf"
-  },
-  {
     "ghsa_id": "GHSA-rv39-79c4-7459",
     "severity": "HIGH",
     "title": "Gateway connect could skip device identity checks when auth.token was present but not yet validated",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rv39-79c4-7459"
-  },
-  {
-    "ghsa_id": "GHSA-v892-hwpg-jwqp",
-    "severity": "HIGH",
-    "title": "Path traversal (Zip Slip) in archive extraction during explicit installation commands",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v892-hwpg-jwqp"
   },
   {
     "ghsa_id": "GHSA-vffc-f7r7-rx2w",
@@ -203,18 +231,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-27cr-4p5m-74rj"
   },
   {
+    "ghsa_id": "GHSA-2858-xg23-26fp",
+    "severity": "MEDIUM",
+    "title": "Node camera URL payload host-binding bypass allowed gateway fetch pivots",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2858-xg23-26fp"
+  },
+  {
     "ghsa_id": "GHSA-2ch6-x3g4-7759",
     "severity": "MEDIUM",
     "title": "commands.allowFrom sender authorization accepted conversation identifiers via ctx.From",
     "published": "2026-02-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2ch6-x3g4-7759"
-  },
-  {
-    "ghsa_id": "GHSA-2fgq-7j6h-9rm4",
-    "severity": "MEDIUM",
-    "title": "system.run shell-wrapper env injection via SHELLOPTS/PS4 can bypass allowlist intent (RCE)",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2fgq-7j6h-9rm4"
   },
   {
     "ghsa_id": "GHSA-2mc2-g238-722j",
@@ -264,6 +292,13 @@
     "title": "Optional voice-call plugin: webhook verification may be bypassed behind certain proxy configurations",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3m3q-x3gj-f79x"
+  },
+  {
+    "ghsa_id": "GHSA-3pxq-f3cp-jmxp",
+    "severity": "MEDIUM",
+    "title": "Unified root-bound write hardening for browser output and related path-boundary flows",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pxq-f3cp-jmxp"
   },
   {
     "ghsa_id": "GHSA-3x3x-h76w-hp98",
@@ -329,13 +364,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-553v-f69r-656j"
   },
   {
-    "ghsa_id": "GHSA-5847-rm3g-23mw",
-    "severity": "MEDIUM",
-    "title": "Hook auth rate limiter bypass via IPv4-mapped IPv6 client key variants",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5847-rm3g-23mw"
-  },
-  {
     "ghsa_id": "GHSA-5gj7-jf77-q2q2",
     "severity": "MEDIUM",
     "title": "safeBins static default trusted dirs allow writable-dir binary hijack (`jq`)",
@@ -378,18 +406,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-74xj-763f-264w"
   },
   {
+    "ghsa_id": "GHSA-77hf-7fqf-f227",
+    "severity": "MEDIUM",
+    "title": "skills-install-download: tar.bz2 extraction bypassed archive safety parity checks (local DoS)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-77hf-7fqf-f227"
+  },
+  {
     "ghsa_id": "GHSA-792q-qw95-f446",
     "severity": "MEDIUM",
     "title": "Signal reaction-only status events could, in limited cases, be enqueued before access checks",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-792q-qw95-f446"
-  },
-  {
-    "ghsa_id": "GHSA-7f4q-9rqh-x36p",
-    "severity": "MEDIUM",
-    "title": "macOS optional allowlist basename matching could bypass path-based policy",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7f4q-9rqh-x36p"
   },
   {
     "ghsa_id": "GHSA-7fcc-cw49-xm78",
@@ -476,6 +504,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ccg8-46r6-9qgj"
   },
   {
+    "ghsa_id": "GHSA-cfvj-7rx7-fc7c",
+    "severity": "MEDIUM",
+    "title": "stageSandboxMedia destination symlink traversal can overwrite files outside sandbox workspace",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cfvj-7rx7-fc7c"
+  },
+  {
     "ghsa_id": "GHSA-cjv3-m589-v3rx",
     "severity": "MEDIUM",
     "title": "Canvas route hardening for mixed-trust deployments",
@@ -490,25 +525,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f6h3-846h-2r8w"
   },
   {
-    "ghsa_id": "GHSA-f7ww-2725-qvw2",
-    "severity": "MEDIUM",
-    "title": "Node system.run approval bypass via parent-symlink cwd rebind",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f7ww-2725-qvw2"
-  },
-  {
     "ghsa_id": "GHSA-f8mp-vj46-cq8v",
     "severity": "MEDIUM",
     "title": "Shell env fallback trusts unvalidated SHELL path from host environment",
     "published": "2026-02-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8mp-vj46-cq8v"
-  },
-  {
-    "ghsa_id": "GHSA-fqcm-97m6-w7rm",
-    "severity": "MEDIUM",
-    "title": "Message action attachment hydration bypasses local media root checks when sandboxRoot is unset",
-    "published": "2026-02-25",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fqcm-97m6-w7rm"
   },
   {
     "ghsa_id": "GHSA-g75x-8qqm-2vxp",
@@ -530,6 +551,13 @@
     "title": "Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
     "published": "2026-02-25",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gw85-xp4q-5gp9"
+  },
+  {
+    "ghsa_id": "GHSA-h3rm-6x7g-882f",
+    "severity": "MEDIUM",
+    "title": "Node system.run approval hardening wrapper semantic drift can execute unintended local scripts",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h3rm-6x7g-882f"
   },
   {
     "ghsa_id": "GHSA-h656-5vcf-cm23",
@@ -665,11 +693,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj22-xqjr-v83v"
   },
   {
+    "ghsa_id": "GHSA-qw99-grcx-4pvm",
+    "severity": "MEDIUM",
+    "title": "Chrome extension relay binds publicly due to wildcard treated as loopback",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qw99-grcx-4pvm"
+  },
+  {
     "ghsa_id": "GHSA-r294-2894-92j3",
     "severity": "MEDIUM",
     "title": "Stored XSS in exported session HTML viewer via markdown/raw-HTML rendering",
     "published": "2026-02-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r294-2894-92j3"
+  },
+  {
+    "ghsa_id": "GHSA-r54r-wmmq-mh84",
+    "severity": "MEDIUM",
+    "title": "ZIP extraction race could write outside destination via parent symlink rebind",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r54r-wmmq-mh84"
   },
   {
     "ghsa_id": "GHSA-r8g4-86fx-92mq",
@@ -686,6 +728,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r9q5-c7qc-p26w"
   },
   {
+    "ghsa_id": "GHSA-rmxw-jxxx-4cpc",
+    "severity": "MEDIUM",
+    "title": "Matrix allowlist bypass via displayName and cross-homeserver localpart matching",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rmxw-jxxx-4cpc"
+  },
+  {
     "ghsa_id": "GHSA-rv2q-f2h5-6xmg",
     "severity": "MEDIUM",
     "title": "Node role device-identity bypass allows unauthorized node.event injection",
@@ -693,18 +742,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rv2q-f2h5-6xmg"
   },
   {
-    "ghsa_id": "GHSA-rx3g-mvc3-qfjf",
-    "severity": "MEDIUM",
-    "title": "Avatar symlink traversal can expose out-of-workspace local files",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rx3g-mvc3-qfjf"
-  },
-  {
     "ghsa_id": "GHSA-v3j7-34xh-6g3w",
     "severity": "MEDIUM",
     "title": "Loopback CDP probe can leak Gateway token to local listener",
     "published": "2026-02-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v3j7-34xh-6g3w"
+  },
+  {
+    "ghsa_id": "GHSA-v865-p3gq-hw6m",
+    "severity": "MEDIUM",
+    "title": "Encoded-path auth bypass in plugin `/api/channels` route classification",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v865-p3gq-hw6m"
   },
   {
     "ghsa_id": "GHSA-v8cg-4474-49v8",
@@ -756,6 +805,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w9cg-v44m-4qv8"
   },
   {
+    "ghsa_id": "GHSA-wfp2-v9c7-fh79",
+    "severity": "MEDIUM",
+    "title": "SSRF via attachment/media URL hydration",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wfp2-v9c7-fh79"
+  },
+  {
+    "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
+    "severity": "MEDIUM",
+    "title": "Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpg9-4g4v-f9rc"
+  },
+  {
     "ghsa_id": "GHSA-wpph-cjgr-7c39",
     "severity": "MEDIUM",
     "title": "Typed sender-key matching for toolsBySender prevents identity-collision policy bypass",
@@ -763,11 +826,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpph-cjgr-7c39"
   },
   {
+    "ghsa_id": "GHSA-x4vp-4235-65hg",
+    "severity": "MEDIUM",
+    "title": "Pre-auth webhook body parsing can enable unauthenticated slow-request DoS",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x4vp-4235-65hg"
+  },
+  {
     "ghsa_id": "GHSA-x9cf-3w63-rpq9",
     "severity": "MEDIUM",
     "title": "Sensitive file disclosure via stageSandboxMedia",
     "published": "2026-02-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x9cf-3w63-rpq9"
+  },
+  {
+    "ghsa_id": "GHSA-xc7w-v5x6-cc87",
+    "severity": "MEDIUM",
+    "title": "Webhook auth bypass when gateway is behind a reverse proxy (loopback remoteAddress trust)",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xc7w-v5x6-cc87"
   },
   {
     "ghsa_id": "GHSA-xgf2-vxv2-rrmg",
@@ -833,11 +910,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-62f6-mrcj-v8h5"
   },
   {
-    "ghsa_id": "GHSA-6g25-pc82-vfwp",
+    "ghsa_id": "GHSA-782p-5fr5-7fj8",
     "severity": "LOW",
-    "title": "macOS beta onboarding exposed PKCE verifier via OAuth state",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6g25-pc82-vfwp"
+    "title": "Slack integration hardening: prevent channel metadata from influencing system prompts",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-782p-5fr5-7fj8"
   },
   {
     "ghsa_id": "GHSA-8mf7-vv8w-hjr2",
@@ -859,6 +936,13 @@
     "title": "Windows Lobster shell fallback command injection in constrained fallback path",
     "published": "2026-02-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fg3m-vhrr-8gj6"
+  },
+  {
+    "ghsa_id": "GHSA-g27f-9qjv-22pm",
+    "severity": "LOW",
+    "title": "OpenClaw log poisoning (indirect prompt injection) via WebSocket headers",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g27f-9qjv-22pm"
   },
   {
     "ghsa_id": "GHSA-gcj7-r3hg-m7w6",
@@ -901,13 +985,6 @@
     "title": "Cross-account DM pairing authorization bypass via unscoped pairing store access",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vjp8-wprm-2jw9"
-  },
-  {
-    "ghsa_id": "GHSA-ww6v-v748-x7g9",
-    "severity": "LOW",
-    "title": "sandbox network isolation bypass via docker.network=container:<id>",
-    "published": "2026-02-25",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ww6v-v748-x7g9"
   },
   {
     "ghsa_id": "GHSA-x2g4-7mj7-2hhj",
