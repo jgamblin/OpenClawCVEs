@@ -8,6 +8,14 @@
     "ghsa_id": "GHSA-3c6h-g97w-fg78"
   },
   {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "Authenticated Command Injection in OpenClaw Docker Execution via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
     "cve_id": "CVE-2026-26323",
     "severity": "HIGH",
     "cvss": 8.6,
@@ -30,6 +38,14 @@
     "title": "OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply",
     "date_published": "2026-02-06",
     "ghsa_id": "GHSA-g55j-c2v4-pjcg"
+  },
+  {
+    "cve_id": "CVE-2026-25157",
+    "severity": "HIGH",
+    "cvss": 7.8,
+    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
+    "date_published": "2026-02-04",
+    "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
     "cve_id": "CVE-2026-27002",
@@ -64,6 +80,14 @@
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
   },
   {
+    "cve_id": "CVE-2026-26316",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pchc-86f6-8758"
+  },
+  {
     "cve_id": "CVE-2026-26319",
     "severity": "HIGH",
     "cvss": 7.5,
@@ -86,14 +110,6 @@
     "title": "OpenClaw has a SSRF guard bypass via full-form IPv4-mapped IPv6 (loopback / metadata reachable)",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-jrvc-8ff5-2f9f"
-  },
-  {
-    "cve_id": "CVE-2026-26325",
-    "severity": "HIGH",
-    "cvss": 7.2,
-    "title": "OpenClaw Node host system.run rawCommand/command mismatch can bypass allowlist/approvals",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-h3f9-mjwj-w476"
   },
   {
     "cve_id": "CVE-2026-26317",
@@ -166,14 +182,6 @@
     "title": "OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction",
     "date_published": "2026-02-04",
     "ghsa_id": "GHSA-r8g4-86fx-92mq"
-  },
-  {
-    "cve_id": "CVE-2026-26328",
-    "severity": "MEDIUM",
-    "cvss": 6.5,
-    "title": "OpenClaw iMessage group allowlist authorization inherited DM pairing-store identities",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
     "cve_id": "CVE-2026-27009",

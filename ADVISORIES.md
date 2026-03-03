@@ -3,7 +3,7 @@
 > Complete listing of all 246 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-03-03 14:59 UTC</sub>
+<sub>Last updated: 2026-03-03 16:09 UTC</sub>
 
 ---
 
@@ -281,13 +281,13 @@ These advisories are visible on the [repo security page](https://github.com/open
 
 | CVE ID | State | In cvelistV5 | GHSA Published | CNA |
 |--------|-------|:------------:|----------------|-----|
-| CVE-2026-24763 | ✅ **PUBLISHED** | ✅ |  | — |
+| CVE-2026-24763 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 | CVE-2026-24764 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
-| CVE-2026-25157 | ✅ **PUBLISHED** | ✅ |  | — |
+| CVE-2026-25157 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 | CVE-2026-25474 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 | CVE-2026-25475 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 | CVE-2026-25593 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
-| CVE-2026-26316 | ✅ **PUBLISHED** | ❌ |  | — |
+| CVE-2026-26316 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 | CVE-2026-26317 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-26319 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26320 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
@@ -295,10 +295,10 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-26322 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26323 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-26324 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
-| CVE-2026-26325 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
+| CVE-2026-26325 | ✅ **PUBLISHED** | ❌ | 2026-02-17 | — |
 | CVE-2026-26326 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | GitHub_M |
 | CVE-2026-26327 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | — |
-| CVE-2026-26328 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-26328 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | — |
 | CVE-2026-26329 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-26972 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-27001 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
