@@ -8,14 +8,6 @@
     "ghsa_id": "GHSA-3c6h-g97w-fg78"
   },
   {
-    "cve_id": "CVE-2026-25253",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
-    "date_published": "2026-02-01",
-    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
-  },
-  {
     "cve_id": "CVE-2026-26323",
     "severity": "HIGH",
     "cvss": 8.6,
@@ -38,14 +30,6 @@
     "title": "OpenClaw Affected by Unauthenticated Local RCE via WebSocket config.apply",
     "date_published": "2026-02-06",
     "ghsa_id": "GHSA-g55j-c2v4-pjcg"
-  },
-  {
-    "cve_id": "CVE-2026-25157",
-    "severity": "HIGH",
-    "cvss": 7.8,
-    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
-    "date_published": "2026-02-04",
-    "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
     "cve_id": "CVE-2026-27002",
@@ -78,14 +62,6 @@
     "title": "OpenClaw has a Telegram webhook request forgery (missing `channels.telegram.webhookSecret`) \u2192 auth bypass",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
-  },
-  {
-    "cve_id": "CVE-2026-26316",
-    "severity": "HIGH",
-    "cvss": 7.5,
-    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pchc-86f6-8758"
   },
   {
     "cve_id": "CVE-2026-26319",
@@ -134,14 +110,6 @@
     "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-7q2j-c4q5-rm27"
-  },
-  {
-    "cve_id": "CVE-2026-26327",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pv58-549p-qh99"
   },
   {
     "cve_id": "CVE-2026-26329",

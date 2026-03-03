@@ -98,6 +98,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g55j-c2v4-pjcg"
   },
   {
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq",
+    "severity": "HIGH",
+    "title": "1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "published": "2026-01-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq"
+  },
+  {
     "ghsa_id": "GHSA-gp3q-wpq4-5c5h",
     "severity": "HIGH",
     "title": "LINE group allowlist scope mismatch with DM pairing-store entries",
@@ -117,6 +124,13 @@
     "title": "Browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jmmg-jqc7-5qf4"
+  },
+  {
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v",
+    "severity": "HIGH",
+    "title": "Command Injection in Clawdbot Docker Execution via PATH Environment Variable",
+    "published": "2026-01-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v"
   },
   {
     "ghsa_id": "GHSA-mgrq-9f93-wpp5",
@@ -152,6 +166,13 @@
     "title": "BlueBubbles webhook auth bypass via loopback proxy trust",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pchc-86f6-8758"
+  },
+  {
+    "ghsa_id": "GHSA-q284-4pvr-m585",
+    "severity": "HIGH",
+    "title": "OS Command Injection via Project Root Path in sshNodeCommand",
+    "published": "2026-01-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585"
   },
   {
     "ghsa_id": "GHSA-qcc4-p59m-p54m",
