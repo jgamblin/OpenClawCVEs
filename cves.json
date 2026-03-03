@@ -11,9 +11,17 @@
     "cve_id": "CVE-2026-24763",
     "severity": "HIGH",
     "cvss": 8.8,
-    "title": "Authenticated Command Injection in OpenClaw Docker Execution via PATH Environment Variable",
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
     "date_published": "2026-02-02",
     "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
+    "cve_id": "CVE-2026-25253",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "date_published": "2026-02-01",
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
     "cve_id": "CVE-2026-26323",
@@ -112,6 +120,14 @@
     "ghsa_id": "GHSA-jrvc-8ff5-2f9f"
   },
   {
+    "cve_id": "CVE-2026-26325",
+    "severity": "HIGH",
+    "cvss": 7.2,
+    "title": "OpenClaw Node host system.run rawCommand/command mismatch can bypass allowlist/approvals",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-h3f9-mjwj-w476"
+  },
+  {
     "cve_id": "CVE-2026-26317",
     "severity": "HIGH",
     "cvss": 7.1,
@@ -126,6 +142,14 @@
     "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-7q2j-c4q5-rm27"
+  },
+  {
+    "cve_id": "CVE-2026-26327",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pv58-549p-qh99"
   },
   {
     "cve_id": "CVE-2026-26329",
@@ -182,6 +206,14 @@
     "title": "OpenClaw Vulnerable to Local File Inclusion via MEDIA: Path Extraction",
     "date_published": "2026-02-04",
     "ghsa_id": "GHSA-r8g4-86fx-92mq"
+  },
+  {
+    "cve_id": "CVE-2026-26328",
+    "severity": "MEDIUM",
+    "cvss": 6.5,
+    "title": "OpenClaw iMessage group allowlist authorization inherited DM pairing-store identities",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
     "cve_id": "CVE-2026-27009",
