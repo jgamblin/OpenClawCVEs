@@ -7,6 +7,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4rj2-gpmh-qq5x"
   },
   {
+    "ghsa_id": "GHSA-qrq5-wjgg-rvqw",
+    "severity": "CRITICAL",
+    "title": "Path Traversal in Plugin Installation",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qrq5-wjgg-rvqw"
+  },
+  {
+    "ghsa_id": "GHSA-33rq-m5x2-fvgf",
+    "severity": "HIGH",
+    "title": "Twitch allowFrom not enforced in optional plugin, unauthorized chat users can trigger agent pipeline",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-33rq-m5x2-fvgf"
+  },
+  {
     "ghsa_id": "GHSA-3c6h-g97w-fg78",
     "severity": "HIGH",
     "title": "tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode",
@@ -33,6 +47,13 @@
     "title": "Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
     "published": "2026-03-03",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3"
+  },
+  {
+    "ghsa_id": "GHSA-4hg8-92x6-h2f3",
+    "severity": "HIGH",
+    "title": "Missing Webhook Authentication in Telnyx Provider Allows Unauthenticated Requests",
+    "published": "2026-02-15",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4hg8-92x6-h2f3"
   },
   {
     "ghsa_id": "GHSA-56f2-hvwg-5743",
@@ -68,6 +89,27 @@
     "title": "exec allowlist/safeBins policy-runtime mismatch via env -S wrapper interpretation",
     "published": "2026-02-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-796m-2973-wc5q"
+  },
+  {
+    "ghsa_id": "GHSA-7q2j-c4q5-rm27",
+    "severity": "HIGH",
+    "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
+    "published": "2026-02-15",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7q2j-c4q5-rm27"
+  },
+  {
+    "ghsa_id": "GHSA-7vwx-582j-j332",
+    "severity": "HIGH",
+    "title": "MS Teams inbound attachment downloader leaks bearer tokens to allowlisted suffix domains",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7vwx-582j-j332"
+  },
+  {
+    "ghsa_id": "GHSA-8jpq-5h99-ff5r",
+    "severity": "HIGH",
+    "title": "Local file disclosure via sendMediaFeishu in Feishu extension",
+    "published": "2026-02-15",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8jpq-5h99-ff5r"
   },
   {
     "ghsa_id": "GHSA-8mvx-p2r9-r375",
@@ -131,6 +173,13 @@
     "title": "Telegram webhook requests may be accepted without verifying secret token when webhookSecret is missing",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mp5h-m6qj-6292"
+  },
+  {
+    "ghsa_id": "GHSA-mqpw-46fh-299h",
+    "severity": "HIGH",
+    "title": "Authorization bypass: `operator.write` can resolve exec approvals via `chat.send` -> `/approve`",
+    "published": "2026-02-14",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mqpw-46fh-299h"
   },
   {
     "ghsa_id": "GHSA-mv9j-6xhh-g383",
@@ -259,20 +308,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2prf-9cw7-fq62"
   },
   {
-    "ghsa_id": "GHSA-2ww6-868g-2c56",
-    "severity": "MEDIUM",
-    "title": "HTML injection via unvalidated image MIME type in data-URL interpolation",
-    "published": "2026-02-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2ww6-868g-2c56"
-  },
-  {
-    "ghsa_id": "GHSA-33hm-cq8r-wc49",
-    "severity": "MEDIUM",
-    "title": "Temporary path handling could write outside OpenClaw temp boundary",
-    "published": "2026-02-25",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-33hm-cq8r-wc49"
-  },
-  {
     "ghsa_id": "GHSA-354r-7mfh-7rh2",
     "severity": "MEDIUM",
     "title": "Discord DM reaction ingress missed dmPolicy/allowFrom checks in restricted setups",
@@ -315,25 +350,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3xfw-4pmr-4xc5"
   },
   {
-    "ghsa_id": "GHSA-43x4-g22p-3hrq",
-    "severity": "MEDIUM",
-    "title": "Chrome --no-sandbox disabled OS-level browser sandbox in sandbox browser container",
-    "published": "2026-02-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-43x4-g22p-3hrq"
-  },
-  {
     "ghsa_id": "GHSA-45cg-2683-gfmq",
     "severity": "MEDIUM",
     "title": "Browser navigation guard allowed non-network URL schemes, enabling authenticated browser-tool users to access file:// local files.",
     "published": "2026-02-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-45cg-2683-gfmq"
-  },
-  {
-    "ghsa_id": "GHSA-48wf-g7cp-gr3m",
-    "severity": "MEDIUM",
-    "title": "allowlist exec-guard bypass via env -S",
-    "published": "2026-02-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-48wf-g7cp-gr3m"
   },
   {
     "ghsa_id": "GHSA-4cqv-h74h-93j4",
@@ -420,13 +441,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-792q-qw95-f446"
   },
   {
-    "ghsa_id": "GHSA-7fcc-cw49-xm78",
-    "severity": "MEDIUM",
-    "title": "Command injection via Windows shell fallback in Lobster tool execution",
-    "published": "2026-02-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7fcc-cw49-xm78"
-  },
-  {
     "ghsa_id": "GHSA-7ff8-xjh3-mgh6",
     "severity": "MEDIUM",
     "title": "non-default autoAllowSkills setting could bypass on-miss exec prompt",
@@ -439,13 +453,6 @@
     "title": "Microsoft Teams media fetch SSRF hardening: unified guarded fetch across Graph and attachment paths",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7qf6-h84j-8fq4"
-  },
-  {
-    "ghsa_id": "GHSA-7xhj-55q9-pc3m",
-    "severity": "MEDIUM",
-    "title": "Hook transform module path allows traversal and arbitrary JavaScript module loading",
-    "published": "2026-02-16",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xhj-55q9-pc3m"
   },
   {
     "ghsa_id": "GHSA-8cp7-rp8r-mg77",
@@ -574,13 +581,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h9xm-j4qg-fvpg"
   },
   {
-    "ghsa_id": "GHSA-hff7-ccv5-52f8",
-    "severity": "MEDIUM",
-    "title": "Gateway tokenless Tailscale auth applied to HTTP routes",
-    "published": "2026-02-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hff7-ccv5-52f8"
-  },
-  {
     "ghsa_id": "GHSA-j26j-7qc4-3mrf",
     "severity": "MEDIUM",
     "title": "MS Teams fileConsent/invoke missing conversation binding allowed cross-conversation pending-upload consumption",
@@ -686,13 +686,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qhrr-grqp-6x2g"
   },
   {
-    "ghsa_id": "GHSA-qj22-xqjr-v83v",
-    "severity": "MEDIUM",
-    "title": "Telegram message_reaction authorization bypass allows unauthorized system-event injection",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj22-xqjr-v83v"
-  },
-  {
     "ghsa_id": "GHSA-qw99-grcx-4pvm",
     "severity": "MEDIUM",
     "title": "Chrome extension relay binds publicly due to wildcard treated as loopback",
@@ -763,13 +756,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8cg-4474-49v8"
   },
   {
-    "ghsa_id": "GHSA-vj3g-5px3-gr46",
-    "severity": "MEDIUM",
-    "title": "Path traversal in Feishu media temp-file naming allows writes outside os.tmpdir()",
-    "published": "2026-02-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vj3g-5px3-gr46"
-  },
-  {
     "ghsa_id": "GHSA-vmqr-rc7x-3446",
     "severity": "MEDIUM",
     "title": "Non-default safeBins sort configuration can bypass intended allowlist approval constraints",
@@ -789,13 +775,6 @@
     "title": "Trusted-proxy Control UI pairing bypass allowed unpaired node sessions",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vvgp-4c28-m3jm"
-  },
-  {
-    "ghsa_id": "GHSA-w76h-8m22-hpgh",
-    "severity": "MEDIUM",
-    "title": "MSTeams attachment redirect handling could bypass configured media host allowlists",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w76h-8m22-hpgh"
   },
   {
     "ghsa_id": "GHSA-w9cg-v44m-4qv8",
