@@ -35,13 +35,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-33rq-m5x2-fvgf"
   },
   {
-    "ghsa_id": "GHSA-3fqr-4cg8-h96q",
-    "severity": "HIGH",
-    "title": "Cross-Site request forgery (CSRF) through loopback browser mutation endpoints",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3fqr-4cg8-h96q"
-  },
-  {
     "ghsa_id": "GHSA-3hcm-ggvf-rch5",
     "severity": "HIGH",
     "title": "Exec allowlist bypass via command substitution/backticks inside double quotes",
@@ -161,13 +154,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g6q9-8fvw-f7rf"
   },
   {
-    "ghsa_id": "GHSA-g8p2-7wf7-98mq",
-    "severity": "HIGH",
-    "title": "1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
-    "published": "2026-01-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq"
-  },
-  {
     "ghsa_id": "GHSA-gp3q-wpq4-5c5h",
     "severity": "HIGH",
     "title": "LINE group allowlist scope mismatch with DM pairing-store entries",
@@ -238,13 +224,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jrvc-8ff5-2f9f"
   },
   {
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v",
-    "severity": "HIGH",
-    "title": "Command Injection in Clawdbot Docker Execution via PATH Environment Variable",
-    "published": "2026-01-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "ghsa_id": "GHSA-mfg5-7q5g-f37j",
     "severity": "HIGH",
     "title": "voice-call media stream validated streams after upgrade, which could allow pre-start unauthenticated sockets to increase resource pressure",
@@ -308,25 +287,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pv58-549p-qh99"
   },
   {
-    "ghsa_id": "GHSA-q284-4pvr-m585",
-    "severity": "HIGH",
-    "title": "OS Command Injection via Project Root Path in sshNodeCommand",
-    "published": "2026-01-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q284-4pvr-m585"
-  },
-  {
     "ghsa_id": "GHSA-q399-23r3-hfx4",
     "severity": "HIGH",
     "title": "system.run approvals did not bind PATH-token executable identity, enabling post-approval executable rebind",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q399-23r3-hfx4"
-  },
-  {
-    "ghsa_id": "GHSA-q447-rj3r-2cgh",
-    "severity": "HIGH",
-    "title": "Denial of service via unbounded webhook request body buffering",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q447-rj3r-2cgh"
   },
   {
     "ghsa_id": "GHSA-qcc4-p59m-p54m",
@@ -362,13 +327,6 @@
     "title": "Nextcloud Talk allowlist bypass via actor.name display name spoofing",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r5h9-vjqc-hq3r"
-  },
-  {
-    "ghsa_id": "GHSA-rq6g-px6m-c248",
-    "severity": "HIGH",
-    "title": "Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rq6g-px6m-c248"
   },
   {
     "ghsa_id": "GHSA-rv39-79c4-7459",
@@ -644,13 +602,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fqcm-97m6-w7rm"
   },
   {
-    "ghsa_id": "GHSA-g34w-4xqq-h79m",
-    "severity": "MEDIUM",
-    "title": "iMessage group allowlist authorization inherited DM pairing-store identities, enabling cross-context command authorization",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g34w-4xqq-h79m"
-  },
-  {
     "ghsa_id": "GHSA-g99v-8hwm-g76g",
     "severity": "MEDIUM",
     "title": "web_search citation redirect SSRF via private-network-allowing policy",
@@ -670,13 +621,6 @@
     "title": "Harden skill download target directory validation",
     "published": "2026-02-18",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h7f7-89mm-pqh6"
-  },
-  {
-    "ghsa_id": "GHSA-h89v-j3x9-8wqj",
-    "severity": "MEDIUM",
-    "title": "Denial of service through unguarded archive extraction allowing high expansion/resource abuse (ZIP/TAR)",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h89v-j3x9-8wqj"
   },
   {
     "ghsa_id": "GHSA-hjvp-qhm6-wrh2",
@@ -719,13 +663,6 @@
     "title": "Command injection in maintainer clawtributors updater",
     "published": "2026-02-15",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m7x8-2w3w-pr42"
-  },
-  {
-    "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
-    "severity": "MEDIUM",
-    "title": "Telegram allowlist authorization accepted mutable usernames",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mj5r-hh7j-4gxf"
   },
   {
     "ghsa_id": "GHSA-p536-vvpp-9mc8",
@@ -810,13 +747,6 @@
     "title": "OC-13: Docker container escape via unvalidated bind mount config injection",
     "published": "2026-02-18",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w235-x559-36mg"
-  },
-  {
-    "ghsa_id": "GHSA-w2cg-vxx6-5xjg",
-    "severity": "MEDIUM",
-    "title": "Denial of service through large base64 media files allocating large buffers before limit checks",
-    "published": "2026-02-15",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w2cg-vxx6-5xjg"
   },
   {
     "ghsa_id": "GHSA-w45g-5746-x9fp",
@@ -936,13 +866,6 @@
     "title": "Slack integration hardening: prevent channel metadata from influencing system prompts",
     "published": "2026-02-14",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-782p-5fr5-7fj8"
-  },
-  {
-    "ghsa_id": "GHSA-chm2-m3w2-wcxm",
-    "severity": "LOW",
-    "title": "Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch",
-    "published": "2026-02-16",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-chm2-m3w2-wcxm"
   },
   {
     "ghsa_id": "GHSA-cxpw-2g23-2vgw",
