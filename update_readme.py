@@ -64,14 +64,16 @@ def _github_api_get(endpoint: str, timeout: int = 15, fallback=None):
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode())
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
-        future = pool.submit(_do_request)
-        try:
-            return future.result(timeout=timeout)
-        except (concurrent.futures.TimeoutError, urllib.error.URLError,
-                urllib.error.HTTPError, json.JSONDecodeError,
-                TimeoutError, OSError, Exception):
-            return fallback
+    pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    future = pool.submit(_do_request)
+    try:
+        return future.result(timeout=timeout)
+    except (concurrent.futures.TimeoutError, urllib.error.URLError,
+            urllib.error.HTTPError, json.JSONDecodeError,
+            TimeoutError, OSError, Exception):
+        return fallback
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
 
 
 def _github_api_get_paginated(endpoint: str, timeout: int = 15, total_timeout: int = 60) -> list[dict]:
@@ -119,14 +121,16 @@ def _http_get_json(url: str, timeout: int = 10, fallback=None):
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode())
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
-        future = pool.submit(_do_request)
-        try:
-            return future.result(timeout=timeout)
-        except (concurrent.futures.TimeoutError, urllib.error.URLError,
-                urllib.error.HTTPError, json.JSONDecodeError,
-                TimeoutError, OSError, Exception):
-            return fallback
+    pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
+    future = pool.submit(_do_request)
+    try:
+        return future.result(timeout=timeout)
+    except (concurrent.futures.TimeoutError, urllib.error.URLError,
+            urllib.error.HTTPError, json.JSONDecodeError,
+            TimeoutError, OSError, Exception):
+        return fallback
+    finally:
+        pool.shutdown(wait=False, cancel_futures=True)
 
 
 # Keep run_gh for the few places that use --jq or need the gh CLI specifically
