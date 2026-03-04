@@ -21,8 +21,6 @@ import re
 import subprocess
 import sys
 import time
-import urllib.error
-import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -47,33 +45,28 @@ _GH_TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
 
 
 def _github_api_get(endpoint: str, timeout: int = 15, fallback=None):
-    """Call the GitHub REST API directly via urllib (no retries, strict wall-clock timeout).
+    """Call the GitHub REST API via curl subprocess with hard wall-clock timeout.
 
-    Returns parsed JSON on success, *fallback* on any error.
-    The timeout is a hard wall-clock limit enforced via a thread, not just a
-    socket idle timeout.
+    subprocess.run(timeout=N) uses SIGKILL — guaranteed to return in N seconds
+    regardless of server behavior.  No threads, no atexit issues.
     """
     url = endpoint if endpoint.startswith("https://") else f"{GITHUB_API}{endpoint}"
-    req = urllib.request.Request(url)
-    req.add_header("Accept", "application/vnd.github+json")
-    req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    cmd = [
+        "curl", "-s", "-f",
+        "-H", "Accept: application/vnd.github+json",
+        "-H", "X-GitHub-Api-Version: 2022-11-28",
+    ]
     if _GH_TOKEN:
-        req.add_header("Authorization", f"Bearer {_GH_TOKEN}")
+        cmd += ["-H", f"Authorization: Bearer {_GH_TOKEN}"]
+    cmd.append(url)
 
-    def _do_request():
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return json.loads(resp.read().decode())
-
-    pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-    future = pool.submit(_do_request)
     try:
-        return future.result(timeout=timeout)
-    except (concurrent.futures.TimeoutError, urllib.error.URLError,
-            urllib.error.HTTPError, json.JSONDecodeError,
-            TimeoutError, OSError, Exception):
+        result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        if result.returncode != 0:
+            return fallback
+        return json.loads(result.stdout)
+    except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
         return fallback
-    finally:
-        pool.shutdown(wait=False, cancel_futures=True)
 
 
 def _github_api_get_paginated(endpoint: str, timeout: int = 15, total_timeout: int = 60) -> list[dict]:
@@ -94,13 +87,10 @@ def _github_api_get_paginated(endpoint: str, timeout: int = 15, total_timeout: i
         if data is None or not isinstance(data, list):
             break
         results.extend(data)
-        # Check for next page — need to re-request to get Link header
-        # Since _github_api_get doesn't return headers, check if we got a full page
         if len(data) < 100:
             break
         # Build next page URL
         if "?" in url:
-            # Increment page parameter
             m = re.search(r'page=(\d+)', url)
             if m:
                 next_page = int(m.group(1)) + 1
@@ -113,24 +103,17 @@ def _github_api_get_paginated(endpoint: str, timeout: int = 15, total_timeout: i
 
 
 def _http_get_json(url: str, timeout: int = 10, fallback=None):
-    """Fetch JSON from any URL via urllib (no auth, wall-clock timeout)."""
-    req = urllib.request.Request(url)
-    req.add_header("Accept", "application/json")
-
-    def _do_request():
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return json.loads(resp.read().decode())
-
-    pool = concurrent.futures.ThreadPoolExecutor(max_workers=1)
-    future = pool.submit(_do_request)
+    """Fetch JSON from any URL via curl subprocess (no auth, wall-clock timeout)."""
     try:
-        return future.result(timeout=timeout)
-    except (concurrent.futures.TimeoutError, urllib.error.URLError,
-            urllib.error.HTTPError, json.JSONDecodeError,
-            TimeoutError, OSError, Exception):
+        result = subprocess.run(
+            ["curl", "-s", "-f", "-H", "Accept: application/json", url],
+            capture_output=True, text=True, timeout=timeout
+        )
+        if result.returncode != 0:
+            return fallback
+        return json.loads(result.stdout)
+    except (subprocess.TimeoutExpired, json.JSONDecodeError, Exception):
         return fallback
-    finally:
-        pool.shutdown(wait=False, cancel_futures=True)
 
 
 # Keep run_gh for the few places that use --jq or need the gh CLI specifically
