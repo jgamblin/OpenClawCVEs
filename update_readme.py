@@ -157,14 +157,21 @@ def fetch_ghsas() -> list[dict]:
     """Fetch all GHSAs from the GitHub Advisory Database for our packages."""
     all_advisories = []
     seen_ids = set()
+    deadline = time.monotonic() + 90  # 90s total wall-clock limit
 
     for pkg in PACKAGES:
         page = 1
         while True:
+            if time.monotonic() > deadline:
+                print(f"  ⚠ GHSA fetch deadline reached after fetching {len(all_advisories)} advisories")
+                break
+            t0 = time.monotonic()
             data = _github_api_get(
                 f"/advisories?affects={pkg}&per_page=100&page={page}",
                 timeout=15, fallback=[]
             )
+            elapsed = time.monotonic() - t0
+            print(f"  [{pkg}] page {page}: {len(data) if data else 0} results in {elapsed:.1f}s")
             if not data:
                 break
             for adv in data:
@@ -854,6 +861,17 @@ def render_template(template_name: str, data: dict) -> str:
 def main():
     local_only = "--local" in sys.argv
 
+    # Hard 5-minute wall-clock limit (Linux/macOS only)
+    import signal
+    def _timeout_handler(signum, frame):
+        print("\nFATAL: Script exceeded 5-minute wall-clock limit", file=sys.stderr)
+        os._exit(2)
+    if hasattr(signal, "SIGALRM"):
+        signal.signal(signal.SIGALRM, _timeout_handler)
+        signal.alarm(300)  # 5 minutes
+
+    script_start = time.monotonic()
+
     print("=" * 60)
     print("OpenClaw CVE & GHSA Tracker — README Update")
     print("=" * 60)
@@ -879,6 +897,7 @@ def main():
     print(f"✅ ADVISORIES.md updated ({len(advisories_content)} bytes)")
 
     print(f"   Last updated: {data['updated_at']}")
+    print(f"   Total script time: {time.monotonic() - script_start:.1f}s")
 
 
 if __name__ == "__main__":
