@@ -143,10 +143,13 @@ def fetch_ghsas() -> list[dict]:
     deadline = time.monotonic() + 90  # 90s total wall-clock limit
 
     for pkg in PACKAGES:
+        pkg_deadline = time.monotonic() + 30  # 30s per package
         page = 1
+        stale_pages = 0  # pages with 0 new unique IDs
         while True:
-            if time.monotonic() > deadline:
-                print(f"  ⚠ GHSA fetch deadline reached after fetching {len(all_advisories)} advisories")
+            now = time.monotonic()
+            if now > deadline or now > pkg_deadline:
+                print(f"  [{pkg}] deadline reached at page {page}")
                 break
             t0 = time.monotonic()
             data = _github_api_get(
@@ -154,14 +157,25 @@ def fetch_ghsas() -> list[dict]:
                 timeout=15, fallback=[]
             )
             elapsed = time.monotonic() - t0
-            print(f"  [{pkg}] page {page}: {len(data) if data else 0} results in {elapsed:.1f}s")
+            count = len(data) if data else 0
+            new_count = 0
+            if data:
+                for adv in data:
+                    ghsa_id = adv.get("ghsa_id", "")
+                    if ghsa_id and ghsa_id not in seen_ids:
+                        seen_ids.add(ghsa_id)
+                        all_advisories.append(adv)
+                        new_count += 1
+            print(f"  [{pkg}] page {page}: {count} results, {new_count} new in {elapsed:.1f}s")
             if not data:
                 break
-            for adv in data:
-                ghsa_id = adv.get("ghsa_id", "")
-                if ghsa_id not in seen_ids:
-                    seen_ids.add(ghsa_id)
-                    all_advisories.append(adv)
+            if new_count == 0:
+                stale_pages += 1
+                if stale_pages >= 2:
+                    print(f"  [{pkg}] no new IDs for {stale_pages} consecutive pages — skipping rest")
+                    break
+            else:
+                stale_pages = 0
             if len(data) < 100:
                 break
             page += 1
