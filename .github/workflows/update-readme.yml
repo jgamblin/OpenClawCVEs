@@ -30,9 +30,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Clean generated files
-        run: rm -rf README.md ADVISORIES.md cves.json cve-pipeline-status.json ghsa-advisories.json ghsa-advisories-full.json repo-only-ghsas.json
-        # Note: cve-records/ is intentionally kept — published CVE records are
-        # immutable, so caching them avoids redundant API calls.
+        run: rm -rf README.md ADVISORIES.md cves.json cve-pipeline-status.json ghsa-advisories.json
+        # Note: cve-records/, ghsa-advisories-full.json, and repo-only-ghsas.json
+        # are kept as cache fallbacks when APIs fail or are rate-limited.
 
       - name: Update README
         env:

@@ -16,8 +16,11 @@ Requirements:
 import base64
 import concurrent.futures
 import json
+import os
 import subprocess
 import sys
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -36,7 +39,73 @@ CVE_RECORDS_DIR = ROOT / "cve-records"
 PACKAGES = ["openclaw", "clawdbot", "moltbot"]
 CVELIST_SEARCH_TERMS = ["openclaw", "clawdbot", "moltbot", "clawhub"]
 
+# GitHub API base URL and auth
+GITHUB_API = "https://api.github.com"
+_GH_TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
 
+
+def _github_api_get(endpoint: str, timeout: int = 15, fallback=None):
+    """Call the GitHub REST API directly via urllib (no retries, strict timeout).
+
+    Returns parsed JSON on success, *fallback* on any error.
+    """
+    url = endpoint if endpoint.startswith("https://") else f"{GITHUB_API}{endpoint}"
+    req = urllib.request.Request(url)
+    req.add_header("Accept", "application/vnd.github+json")
+    req.add_header("X-GitHub-Api-Version", "2022-11-28")
+    if _GH_TOKEN:
+        req.add_header("Authorization", f"Bearer {_GH_TOKEN}")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode())
+    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
+            TimeoutError, OSError):
+        return fallback
+
+
+def _github_api_get_paginated(endpoint: str, timeout: int = 15) -> list[dict]:
+    """Fetch all pages of a paginated GitHub REST API endpoint."""
+    results = []
+    url = endpoint if endpoint.startswith("https://") else f"{GITHUB_API}{endpoint}"
+    while url:
+        req = urllib.request.Request(url)
+        req.add_header("Accept", "application/vnd.github+json")
+        req.add_header("X-GitHub-Api-Version", "2022-11-28")
+        if _GH_TOKEN:
+            req.add_header("Authorization", f"Bearer {_GH_TOKEN}")
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                data = json.loads(resp.read().decode())
+                link_header = resp.headers.get("Link", "")
+        except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
+                TimeoutError, OSError):
+            break
+        if isinstance(data, list):
+            results.extend(data)
+        else:
+            break
+        # Parse next page URL from Link header
+        url = None
+        for part in link_header.split(","):
+            if 'rel="next"' in part:
+                url = part.split("<")[1].split(">")[0].strip()
+                break
+    return results
+
+
+def _http_get_json(url: str, timeout: int = 10, fallback=None):
+    """Fetch JSON from any URL via urllib (no auth)."""
+    req = urllib.request.Request(url)
+    req.add_header("Accept", "application/json")
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as resp:
+            return json.loads(resp.read().decode())
+    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
+            TimeoutError, OSError):
+        return fallback
+
+
+# Keep run_gh for the few places that use --jq or need the gh CLI specifically
 def run_gh(args: list[str], fallback=None):
     """Run a gh CLI command and return parsed JSON."""
     try:
@@ -53,46 +122,6 @@ def run_gh(args: list[str], fallback=None):
         return fallback
 
 
-def run_gh_paginated(endpoint: str) -> list[dict]:
-    """Run a paginated gh API call and return all results as a single list.
-
-    Uses ``gh api --paginate`` which automatically follows cursor-based
-    pagination (``Link: rel="next"``).  The responses are concatenated JSON
-    arrays, which ``--paginate`` joins with ``][`` — we fix that up here.
-    """
-    try:
-        result = subprocess.run(
-            ["gh", "api", "--paginate", endpoint],
-            capture_output=True, text=True, timeout=120
-        )
-        if result.returncode != 0:
-            return []
-        raw = result.stdout.strip()
-        if not raw:
-            return []
-        # --paginate concatenates JSON arrays: [...][ ...] → fix to valid JSON
-        if "][" in raw:
-            raw = raw.replace("][", ",")
-        data = json.loads(raw)
-        return data if isinstance(data, list) else []
-    except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError):
-        return []
-
-
-def run_curl_json(url: str, fallback=None):
-    """Run curl and return parsed JSON."""
-    try:
-        result = subprocess.run(
-            ["curl", "-s", url],
-            capture_output=True, text=True, timeout=15
-        )
-        if result.returncode != 0:
-            return fallback
-        return json.loads(result.stdout)
-    except (subprocess.TimeoutExpired, json.JSONDecodeError, FileNotFoundError):
-        return fallback
-
-
 # ─── Data Fetching ───────────────────────────────────────────────────────────
 
 
@@ -104,9 +133,9 @@ def fetch_ghsas() -> list[dict]:
     for pkg in PACKAGES:
         page = 1
         while True:
-            data = run_gh(
-                [f"/advisories?affects={pkg}&per_page=100&page={page}"],
-                fallback=[]
+            data = _github_api_get(
+                f"/advisories?affects={pkg}&per_page=100&page={page}",
+                timeout=15, fallback=[]
             )
             if not data:
                 break
@@ -126,11 +155,11 @@ def fetch_repo_advisories() -> list[dict]:
     """Fetch all published security advisories directly from the openclaw/openclaw repo.
 
     This catches advisories that haven't been indexed in the global Advisory
-    Database yet (repo-only GHSAs).  Uses ``gh api --paginate`` to handle the
-    cursor-based pagination this endpoint requires.
+    Database yet (repo-only GHSAs).
     """
-    all_advisories = run_gh_paginated(
-        "/repos/openclaw/openclaw/security-advisories?per_page=100&state=published"
+    all_advisories = _github_api_get_paginated(
+        "/repos/openclaw/openclaw/security-advisories?per_page=100&state=published",
+        timeout=15
     )
     # Deduplicate by ghsa_id (pagination can occasionally return overlaps)
     seen_ids = set()
@@ -162,10 +191,9 @@ def fetch_cvelist_cves() -> list[str]:
     cve_files = {}
 
     for term in CVELIST_SEARCH_TERMS:
-        data = run_gh(
-            ["search/code", "-q",
-             f"q={term}+repo:CVEProject/cvelistV5+path:cves/&per_page=100"],
-            fallback={"items": []}
+        data = _github_api_get(
+            f"/search/code?q={term}+repo:CVEProject/cvelistV5+path:cves/&per_page=100",
+            timeout=15, fallback={"items": []}
         )
         for item in (data or {}).get("items", []):
             name = item.get("name", "")
@@ -184,53 +212,34 @@ def fetch_cve_record(cve_id: str) -> dict | None:
     prefix = num[:2] + "xxx"
     path = f"cves/{year}/{prefix}/{cve_id}.json"
 
-    data = run_gh(
-        [f"repos/CVEProject/cvelistV5/contents/{path}",
-         "--jq", ".download_url"],
-        fallback=None
+    # Try to get file contents (includes download_url)
+    content_data = _github_api_get(
+        f"/repos/CVEProject/cvelistV5/contents/{path}",
+        timeout=15, fallback=None
     )
-    if data and isinstance(data, str):
-        return run_curl_json(data.strip())
-
-    # Try raw content approach
-    content_data = run_gh(
-        [f"repos/CVEProject/cvelistV5/contents/{path}"],
-        fallback=None
-    )
-    if content_data and "content" in content_data:
-        try:
-            decoded = base64.b64decode(content_data["content"])
-            return json.loads(decoded)
-        except Exception:
-            pass
+    if content_data:
+        # Try download_url first (raw file, faster)
+        download_url = content_data.get("download_url")
+        if download_url:
+            record = _http_get_json(download_url, timeout=10)
+            if record:
+                return record
+        # Fall back to base64 content
+        if "content" in content_data:
+            try:
+                decoded = base64.b64decode(content_data["content"])
+                return json.loads(decoded)
+            except Exception:
+                pass
     return None
 
 
 def check_cve_state(cve_id: str) -> str:
     """Check CVE state via CVE Services API."""
-    data = run_curl_json(f"https://cveawg.mitre.org/api/cve-id/{cve_id}")
+    data = _http_get_json(f"https://cveawg.mitre.org/api/cve-id/{cve_id}", timeout=10)
     if data and "state" in data:
         return data["state"]
     return "UNKNOWN"
-
-
-def check_cvelist_exists(cve_id: str) -> bool:
-    """Check if a CVE record exists in cvelistV5."""
-    year = cve_id.split("-")[1]
-    num = cve_id.split("-")[2]
-    prefix = num[:2] + "xxx"
-    path = f"cves/{year}/{prefix}/{cve_id}.json"
-
-    try:
-        result = subprocess.run(
-            ["gh", "api", f"repos/CVEProject/cvelistV5/contents/{path}",
-             "-i", "--silent"],
-            capture_output=True, text=True, timeout=15
-        )
-        first_line = result.stdout.split("\n")[0] if result.stdout else ""
-        return "200" in first_line
-    except (subprocess.TimeoutExpired, FileNotFoundError):
-        return False
 
 
 # ─── Data Parsing ────────────────────────────────────────────────────────────
