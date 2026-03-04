@@ -472,11 +472,17 @@ def collect_data(local_only: bool = False) -> dict:
         print("Fetching GHSAs from GitHub Advisory Database...")
         raw_ghsas = fetch_ghsas()
         if not raw_ghsas:
-            print("ERROR: Advisory DB returned 0 results — possible API failure or rate limit.", file=sys.stderr)
-            print("       Aborting to avoid overwriting good data with empty results.", file=sys.stderr)
-            sys.exit(1)
-        with open(DATA_DIR / "ghsa-advisories-full.json", "w") as f:
-            json.dump(raw_ghsas, f, indent=2)
+            cached = DATA_DIR / "ghsa-advisories-full.json"
+            if cached.exists():
+                print("WARNING: Advisory DB returned 0 results — falling back to cached data.", file=sys.stderr)
+                with open(cached) as f:
+                    raw_ghsas = json.load(f)
+            else:
+                print("ERROR: Advisory DB returned 0 results and no cache available.", file=sys.stderr)
+                sys.exit(1)
+        else:
+            with open(DATA_DIR / "ghsa-advisories-full.json", "w") as f:
+                json.dump(raw_ghsas, f, indent=2)
 
     ghsas = [parse_ghsa_summary(a) for a in raw_ghsas]
     ghsas.sort(key=lambda x: x["published"], reverse=True)
@@ -495,29 +501,29 @@ def collect_data(local_only: bool = False) -> dict:
         print("Fetching repo-level security advisories...")
         raw_repo = fetch_repo_advisories()
         if not raw_repo:
-            print("ERROR: Repo advisory API returned 0 results — possible API failure or rate limit.", file=sys.stderr)
-            print("       Aborting to avoid overwriting good data with empty results.", file=sys.stderr)
-            sys.exit(1)
-        print(f"  Found {len(raw_repo)} repo advisories")
-        # Capture any CVE IDs assigned via repo advisories that may not be in
-        # the global advisory DB yet.
-        for adv in raw_repo:
-            cve_id = adv.get("cve_id")
-            if cve_id:
-                repo_cve_ids.add(cve_id)
-        # Keep only those NOT already in the Advisory DB (deduplicate)
-        repo_only_ghsas = []
-        for adv in raw_repo:
-            ghsa_id = adv.get("ghsa_id", "")
-            if ghsa_id and ghsa_id not in advisory_db_ids:
-                repo_only_ghsas.append(parse_repo_advisory_summary(adv))
-        severity_order = {"CRITICAL": 0, "HIGH": 1, "MODERATE": 2, "MEDIUM": 2, "LOW": 3}
-        repo_only_ghsas.sort(key=lambda x: (severity_order.get(x["severity"], 4), x["ghsa_id"]))
-        print(f"  Repo-only (not in advisory DB): {len(repo_only_ghsas)}")
-        # Persist for --local runs
-        with open(REPO_ONLY_GHSAS_FILE, "w") as f:
-            json.dump(repo_only_ghsas, f, indent=2)
-            f.write("\n")
+            print("WARNING: Repo advisory API returned 0 results — falling back to cached data.", file=sys.stderr)
+            repo_only_ghsas = load_repo_only_ghsas()
+        else:
+            print(f"  Found {len(raw_repo)} repo advisories")
+            # Capture any CVE IDs assigned via repo advisories that may not be in
+            # the global advisory DB yet.
+            for adv in raw_repo:
+                cve_id = adv.get("cve_id")
+                if cve_id:
+                    repo_cve_ids.add(cve_id)
+            # Keep only those NOT already in the Advisory DB (deduplicate)
+            repo_only_ghsas = []
+            for adv in raw_repo:
+                ghsa_id = adv.get("ghsa_id", "")
+                if ghsa_id and ghsa_id not in advisory_db_ids:
+                    repo_only_ghsas.append(parse_repo_advisory_summary(adv))
+            severity_order = {"CRITICAL": 0, "HIGH": 1, "MODERATE": 2, "MEDIUM": 2, "LOW": 3}
+            repo_only_ghsas.sort(key=lambda x: (severity_order.get(x["severity"], 4), x["ghsa_id"]))
+            print(f"  Repo-only (not in advisory DB): {len(repo_only_ghsas)}")
+            # Persist for --local runs
+            with open(REPO_ONLY_GHSAS_FILE, "w") as f:
+                json.dump(repo_only_ghsas, f, indent=2)
+                f.write("\n")
 
     # ── Split GHSAs ──
     ghsas_with_cve = [g for g in ghsas if g["cve_id"]]
