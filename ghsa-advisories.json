@@ -1,5 +1,1446 @@
 [
   {
+    "ghsa_id": "GHSA-gq83-8q7q-9hfx",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's serialize sandbox registry writes to prevent races and delete-rollback corruption",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-gq83-8q7q-9hfx",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-362"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-rv2q-f2h5-6xmg",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Node role device-identity bypass allows unauthorized node.event injection",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-rv2q-f2h5-6xmg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2ch6-x3g4-7759",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's commands.allowFrom sender authorization accepted conversation identifiers via ctx.From",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-2ch6-x3g4-7759",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-639"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-fg3m-vhrr-8gj6",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has Windows Lobster shell fallback command injection in constrained fallback path",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-fg3m-vhrr-8gj6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.1.21, <= 2026.2.17"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-534w-2vm4-89xr",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Zalo group sender allowlist bypass permits unauthorized GROUP dispatch",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-534w-2vm4-89xr",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.24"
+    ],
+    "fixed_version": "2026.2.24",
+    "cwes": [
+      "CWE-284",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-cjv3-m589-v3rx",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has Canvas route hardening for mixed-trust deployments",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-cjv3-m589-v3rx",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-79",
+      "CWE-1021"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jj82-76v6-933r",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's exec allowlist wrapper analysis did not unwrap env/shell dispatch chains",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-jj82-76v6-933r",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-78",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wpph-cjgr-7c39",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's typed sender-key matching for toolsBySender prevents identity-collision policy bypass",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-wpph-cjgr-7c39",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-792q-qw95-f446",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Signal reaction-only status events could, in limited cases, be enqueued before access checks",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-792q-qw95-f446",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-m8v2-6wwh-r4gc",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-m8v2-6wwh-r4gc",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.24"
+    ],
+    "fixed_version": "2026.2.24",
+    "cwes": [
+      "CWE-22",
+      "CWE-59"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jxrq-8fm4-9p58",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: Zip extraction symlink traversal could write outside destination",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-jxrq-8fm4-9p58",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-59"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r9q5-c7qc-p26w",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Nextcloud Talk webhook replay could trigger duplicate inbound processing",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-r9q5-c7qc-p26w",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-294"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-8mf7-vv8w-hjr2",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw's tools.exec.safeBins generic fallback allowed interpreter-style inline payload execution in allowlist mode",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-8mf7-vv8w-hjr2",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-78",
+      "CWE-693"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-gw85-xp4q-5gp9",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-gw85-xp4q-5gp9",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.22, <= 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.24"
+    ],
+    "fixed_version": "2026.2.24",
+    "cwes": [
+      "CWE-284",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-v6x2-2qvm-6gv8",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-v6x2-2qvm-6gv8",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-522"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-659f-22xc-98f2",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw hook transform path containment missed symlink-resolved escapes",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-659f-22xc-98f2",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-94"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-4gc7-qcvf-38wg",
+    "cve_id": null,
+    "severity": "high",
+    "title": "In OpenClaw, manually adding sort to tools.exec.safeBins could bypass allowlist approval via --compress-program",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-4gc7-qcvf-38wg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-78",
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-25pw-4h6w-qwvm",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a BlueBubbles group allowlist mismatch via DM pairing-store fallback",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-25pw-4h6w-qwvm",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.25"
+    ],
+    "fixed_versions": [
+      "2026.2.26"
+    ],
+    "fixed_version": "2026.2.26",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-gcj7-r3hg-m7w6",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw's voice-call Twilio replay dedupe now bound to authenticated webhook identity",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-gcj7-r3hg-m7w6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.25"
+    ],
+    "fixed_versions": [
+      "2026.2.26"
+    ],
+    "fixed_version": "2026.2.26",
+    "cwes": [
+      "CWE-294",
+      "CWE-345"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w7j5-j98m-w679",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw has multiple E2E/test Dockerfiles that run all processes as root",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-w7j5-j98m-w679",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-250"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-796m-2973-wc5q",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has exec allowlist/safeBins policy-runtime mismatch via env -S wrapper interpretation",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-796m-2973-wc5q",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-436"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-7qf6-h84j-8fq4",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw: Microsoft Teams media fetch paths bypass shared SSRF guard model",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-7qf6-h84j-8fq4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.25"
+    ],
+    "fixed_versions": [
+      "2026.2.26"
+    ],
+    "fixed_version": "2026.2.26",
+    "cwes": [
+      "CWE-367",
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-jmmg-jqc7-5qf4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-287",
+      "CWE-307",
+      "CWE-346"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2rgf-hm63-5qph",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw improperly parses X-Forwarded-For behind trusted proxies allows client IP spoofing in security decisions",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-2rgf-hm63-5qph",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.19-2"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-345",
+      "CWE-807"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-7ff8-xjh3-mgh6",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's non-default autoAllowSkills setting could bypass on-miss exec prompt",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-7ff8-xjh3-mgh6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.22-2"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-266",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xgf2-vxv2-rrmg",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's shell startup env injection bypasses system.run allowlist intent (RCE class)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-xgf2-vxv2-rrmg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-15",
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-62f6-mrcj-v8h5",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw's runtime /debug override path accepted prototype-reserved keys",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-62f6-mrcj-v8h5",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-1321"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-27cr-4p5m-74rj",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a workspace-only sandbox guard mismatch for @-prefixed absolute paths",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-27cr-4p5m-74rj",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.24"
+    ],
+    "fixed_version": "2026.2.24",
+    "cwes": [
+      "CWE-22",
+      "CWE-180"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w9cg-v44m-4qv8",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw affected by BASH_ENV / ENV startup-file injection into spawned shell commands",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-w9cg-v44m-4qv8",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-15",
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r294-2894-92j3",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has stored XSS in exported session HTML viewer via markdown/raw-HTML rendering",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-r294-2894-92j3",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-79"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xmv6-r34m-62p4",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: Sandbox media fallback tmp symlink alias bypass allows host file reads outside sandboxRoot",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-xmv6-r34m-62p4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-22",
+      "CWE-59"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g75x-8qqm-2vxp",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's `tools.exec.safeBins` PATH-hijack allowed trojan binaries to bypass allowlist checks",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-g75x-8qqm-2vxp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.1.21, < 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-426",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-vffc-f7r7-rx2w",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-vffc-f7r7-rx2w",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.19-2"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-77"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-vvgp-4c28-m3jm",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw has a Trusted-proxy Control UI pairing bypass which allows unpaired node sessions",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-vvgp-4c28-m3jm",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-807"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-v3j7-34xh-6g3w",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw Loopback CDP probe can leak Gateway token to local listener",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-v3j7-34xh-6g3w",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-290",
+      "CWE-306"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-pj5x-38rw-6fph",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw has a Command Injection via unescaped environment assignments in Windows Scheduled Task script generation",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-pj5x-38rw-6fph",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-4cqv-h74h-93j4",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a Discord `allowFrom` slug-collision authorization bypass",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-4cqv-h74h-93j4",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-287"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3cvx-236h-m9fj",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has an opt-in insecure Control UI auth over plaintext HTTP could allow privileged access",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-3cvx-236h-m9fj",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.19-2"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-285",
+      "CWE-319"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h97f-6pqj-q452",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a IPv6 multicast SSRF classifier bypass",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-h97f-6pqj-q452",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3x3x-h76w-hp98",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw exec allowlist safeBins short-option bypass could permit arbitrary file write",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-3x3x-h76w-hp98",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-pfv7-rr5m-qmv6",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has auth inconsistency on local Browser Extension Relay /extension endpoint",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-pfv7-rr5m-qmv6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-306"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3c6h-g97w-fg78",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-3c6h-g97w-fg78",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-184",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-j4xf-96qf-rx69",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has a Feishu allowFrom authorization bypass via display-name collision",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-j4xf-96qf-rx69",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-639",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-9p38-94jf-hgjj",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has macOS `system.run` allowlist bypass via quoted command substitution",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-9p38-94jf-hgjj",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-5h2c-8v84-qpvr",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw shell-env fallback trusted startup env and could execute attacker-influenced login-shell paths",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-5h2c-8v84-qpvr",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-15",
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-ff98-w8hj-qrxf",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw plugin runtime command execution is part of trusted plugin boundary",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-ff98-w8hj-qrxf",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-553v-f69r-656j",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw unpaired device identity can bypass operator pairing and self-assign operator scopes with shared auth",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-553v-f69r-656j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.22, <= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-45cg-2683-gfmq",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw browser navigation guard allowed non-network URL schemes, enabling authenticated browser-tool users to access file:// local files",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-45cg-2683-gfmq",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [
+      "2026.2.21"
+    ],
+    "fixed_version": "2026.2.21",
+    "cwes": [
+      "CWE-610"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-mqr9-vqhq-3jxw",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw Windows Scheduled Task script generation allowed local command injection via unsafe cmd argument handling",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-mqr9-vqhq-3jxw",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-116"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h9xm-j4qg-fvpg",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Experimental apply_patch may bypass workspace-only checks in opt-in sandbox mounts (off by default)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-h9xm-j4qg-fvpg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-284",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-j26j-7qc4-3mrf",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: MS Teams fileConsent/invoke missing conversation binding allowed cross-conversation pending-upload consumption",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-j26j-7qc4-3mrf",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-639",
+      "CWE-862"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2hm8-rqrm-xfjq",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's owner-only gateway tool access checks were incomplete in specific authenticated DM flows",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-2hm8-rqrm-xfjq",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-269",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-p4wh-cr8m-gm6c",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: shell-env trusted-prefix fallback allowed attacker-controlled binary execution via $SHELL",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-p4wh-cr8m-gm6c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.22, < 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.23"
+    ],
+    "fixed_version": "2026.2.23",
+    "cwes": [
+      "CWE-184",
+      "CWE-829"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2mc2-g238-722j",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw affected by iMessage remote attachment SCP hardening (strict host-key checks and remoteHost validation)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-2mc2-g238-722j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-78",
+      "CWE-295"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-5gj7-jf77-q2q2",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: safeBins static default trusted dirs allow writable-dir binary hijack (`jq`)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-5gj7-jf77-q2q2",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.23"
+    ],
+    "fixed_versions": [
+      "2026.2.24"
+    ],
+    "fixed_version": "2026.2.24",
+    "cwes": [
+      "CWE-428",
+      "CWE-829"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-77hf-7fqf-f227",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw skills-install-download: tar.bz2 extraction bypassed archive safety parity checks (local DoS)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-77hf-7fqf-f227",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-400",
+      "CWE-409"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-wpg9-4g4v-f9rc",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-269",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-474h-prjg-mmw3",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-474h-prjg-mmw3",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-269"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-v865-p3gq-hw6m",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has encoded-path auth bypass in plugin `/api/channels` route classification",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-v865-p3gq-hw6m",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-288"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-354r-7mfh-7rh2",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Discord DM reaction ingress missed dmPolicy/allowFrom checks in restricted setups",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-354r-7mfh-7rh2",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.24"
+    ],
+    "fixed_versions": [
+      "2026.2.25"
+    ],
+    "fixed_version": "2026.2.25",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r54r-wmmq-mh84",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: ZIP extraction race could write outside destination via parent symlink rebind",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-r54r-wmmq-mh84",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-59",
+      "CWE-367"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3pxq-f3cp-jmxp",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Unified root-bound write hardening for browser output and related path-boundary flows",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-3pxq-f3cp-jmxp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-59",
+      "CWE-367"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-8mvx-p2r9-r375",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's web tools strict URL guard could lose DNS pinning when env proxy is configured",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-8mvx-p2r9-r375",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-367",
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h3rm-6x7g-882f",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Node system.run approval hardening wrapper semantic drift can execute unintended local scripts",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-h3rm-6x7g-882f",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-88"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-2858-xg23-26fp",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Node camera URL payload host-binding bypass allowed gateway fetch pivots",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-2858-xg23-26fp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.13, <= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-x4vp-4235-65hg",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw has pre-auth webhook body parsing that can enable unauthenticated slow-request DoS",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-x4vp-4235-65hg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-cfvj-7rx7-fc7c",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: stageSandboxMedia destination symlink traversal can overwrite files outside sandbox workspace",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/advisories/GHSA-cfvj-7rx7-fc7c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.1"
+    ],
+    "fixed_versions": [
+      "2026.3.2"
+    ],
+    "fixed_version": "2026.3.2",
+    "cwes": [
+      "CWE-59"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-x9cf-3w63-rpq9",
     "cve_id": null,
     "severity": "high",
@@ -707,1442 +2148,6 @@
     "fixed_version": "2026.2.22",
     "cwes": [
       "CWE-770"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rx3g-mvc3-qfjf",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's avatar symlink traversal can expose out-of-workspace local files",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-rx3g-mvc3-qfjf",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-22",
-      "CWE-59"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-ww6v-v748-x7g9",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has a sandbox network isolation bypass via docker.network=container:<id>",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-ww6v-v748-x7g9",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.24"
-    ],
-    "fixed_version": "2026.2.24",
-    "cwes": [
-      "CWE-284",
-      "CWE-693"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-f7ww-2725-qvw2",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Node system.run approval bypass via parent-symlink cwd rebind",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-f7ww-2725-qvw2",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.25"
-    ],
-    "fixed_versions": [
-      "2026.2.26"
-    ],
-    "fixed_version": "2026.2.26",
-    "cwes": [
-      "CWE-59",
-      "CWE-367"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-fqcm-97m6-w7rm",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Message action attachment hydration bypasses local media root checks when sandboxRoot is unset",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-fqcm-97m6-w7rm",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.24"
-    ],
-    "fixed_version": "2026.2.24",
-    "cwes": [
-      "CWE-22",
-      "CWE-200"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-hwpq-rrpf-pgcq",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: system.run approval identity mismatch could execute a different binary than displayed",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-hwpq-rrpf-pgcq",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.24"
-    ],
-    "fixed_versions": [
-      "2026.2.25"
-    ],
-    "fixed_version": "2026.2.25",
-    "cwes": [
-      "CWE-436",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-943q-mwmv-hhvh",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Gateway /tools/invoke tool escalation + ACP permission auto-approval",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-943q-mwmv-hhvh",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-78"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-gv46-4xfq-jv58",
-    "cve_id": null,
-    "severity": "critical",
-    "title": "OpenClaw Vulnerable to Remote Code Execution via Node Invoke Approval Bypass in Gateway",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-gv46-4xfq-jv58",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-20",
-      "CWE-441",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-v892-hwpg-jwqp",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw vulnerable to path traversal (Zip Slip) in archive extraction during explicit installation commands",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-v892-hwpg-jwqp",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.1.16-2, < 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xw4p-pw82-hqr7",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw's sandbox skill mirroring path traversal vulnerability could write outside the sandbox workspace",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-xw4p-pw82-hqr7",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jmm5-fvh5-gf4p",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has non-constant-time token comparison in hooks authentication",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-jmm5-fvh5-gf4p",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.12"
-    ],
-    "fixed_versions": [
-      "2026.2.12"
-    ],
-    "fixed_version": "2026.2.12",
-    "cwes": [
-      "CWE-208"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-47q7-97xp-m272",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Config writes could persist resolved ${VAR} secrets to disk",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-47q7-97xp-m272",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.13"
-    ],
-    "fixed_versions": [
-      "2026.2.13"
-    ],
-    "fixed_version": "2026.2.13",
-    "cwes": [
-      "CWE-208"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-p25h-9q54-ffvw",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has Zip Slip path traversal in tar archive extraction",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-p25h-9q54-ffvw",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-fgvx-58p6-gjwc",
-    "cve_id": null,
-    "severity": "critical",
-    "title": "OpenClaw gateway agents.files symlink escape allowed out-of-workspace file read/write",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-fgvx-58p6-gjwc",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.25"
-    ],
-    "fixed_versions": [
-      "2026.2.25"
-    ],
-    "fixed_version": "2026.2.25",
-    "cwes": [
-      "CWE-22",
-      "CWE-59"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-hjvp-qhm6-wrh2",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw Node system.run approval context-binding weakness in approval-enabled host=node flows",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-hjvp-qhm6-wrh2",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.26"
-    ],
-    "fixed_versions": [
-      "2026.2.26"
-    ],
-    "fixed_version": "2026.2.26",
-    "cwes": [
-      "CWE-15",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-mfg5-7q5g-f37j",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw voice-call media stream validated streams after upgrade, which could allow pre-start unauthenticated sockets to increase resource pressure",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-mfg5-7q5g-f37j",
-    "packages": [
-      "npm/openclaw",
-      "npm/@openclaw/voice-call"
-    ],
-    "affected_versions": [
-      "< 2026.2.22",
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-400",
-      "CWE-770"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rxxp-482v-7mrh",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's inbound media downloads could exceed configured byte limits before rejection across multiple channels",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-rxxp-482v-7mrh",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-400",
-      "CWE-770"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jq4x-98m3-ggq6",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw Canvas Path Traversal Information Disclosure Vulnerability",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-jq4x-98m3-ggq6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-gwqp-86q6-w47g",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's exec allow-always can be bypassed via unrecognized multiplexer shell wrappers (busybox/toybox sh -c)",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-gwqp-86q6-w47g",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-184"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-6x2m-hqfw-hvpj",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Node exec approvals could be replayed across nodes",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-6x2m-hqfw-hvpj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-285",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-6j27-pc5c-m8w8",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's allow-always wrapper persistence could bypass future approvals and enable command execution",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-6j27-pc5c-m8w8",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-78",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-5ghc-98wh-gwwf",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw's Control UI Static File Handler Follows Symlinks and Allows Out-of-Root File Read",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-5ghc-98wh-gwwf",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-36h3-7c54-j27r",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has browser trace/download path symlink escape in temp output handling",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-36h3-7c54-j27r",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.25"
-    ],
-    "fixed_versions": [
-      "2026.2.25"
-    ],
-    "fixed_version": "2026.2.25",
-    "cwes": [
-      "CWE-22",
-      "CWE-59"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-c6hr-w26q-c636",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has ReDoS and regex injection via unescaped Feishu mention metadata in RegExp construction",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-c6hr-w26q-c636",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.19"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-1333"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-5f9p-f3w2-fwch",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw macOS companion app (beta): allowlist parsing mismatch for system.run shell chains",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-5f9p-f3w2-fwch",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-184",
-      "CWE-285"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-5v6x-rfc3-7qfr",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has Windows system.run approval mismatch on cmd.exe /c trailing arguments",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-5v6x-rfc3-7qfr",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-88",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-wm8r-w8pf-2v6w",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw has Signal group allowlist authorization bypass via DM pairing-store leakage",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-wm8r-w8pf-2v6w",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.26"
-    ],
-    "fixed_versions": [
-      "2026.2.26"
-    ],
-    "fixed_version": "2026.2.26",
-    "cwes": [
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-q399-23r3-hfx4",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: system.run approvals did not bind PATH-token executable identity, enabling post-approval executable rebind",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-q399-23r3-hfx4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-367",
-      "CWE-426"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-g99v-8hwm-g76g",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has web_search citation redirect SSRF via private-network-allowing policy",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-g99v-8hwm-g76g",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jr6x-2q95-fh2g",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw's authorization mismatch allowed write-scope agent runs to reach owner-only tools",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-jr6x-2q95-fh2g",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-269",
-      "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7xmq-g46g-f8pv",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Sandbox media TOCTOU could read files outside sandbox root",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-7xmq-g46g-f8pv",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-59",
-      "CWE-367"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-x82f-27x3-q89c",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw's TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-x82f-27x3-q89c",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-59",
-      "CWE-367"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
-    "cve_id": null,
-    "severity": "critical",
-    "title": "CpenClaw's ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-6f6j-wx9w-ff4j",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.2.26, < 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-78"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-8m9v-xpgf-g99m",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has an unauthorized sender bypass in its stop triggers and /models command authorization",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-8m9v-xpgf-g99m",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-p7gr-f84w-hqg5",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-p7gr-f84w-hqg5",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-269",
-      "CWE-284"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-wr6m-jg37-68xh",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has unbounded memory growth in Zalo webhook via query-string key churn (unauthenticated DoS)",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-wr6m-jg37-68xh",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-400"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-392f-ggf5-fp3c",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Unicode canonicalization drift in node metadata policy classification could broaden node allowlists",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-392f-ggf5-fp3c",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-176",
-      "CWE-436"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-vpj2-69hf-rppw",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Browser control startup could continue unauthenticated after auth bootstrap failure",
-    "published": "2026-03-02",
-    "html_url": "https://github.com/advisories/GHSA-vpj2-69hf-rppw",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.1"
-    ],
-    "fixed_versions": [
-      "2026.3.1"
-    ],
-    "fixed_version": "2026.3.1",
-    "cwes": [
-      "CWE-306"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7jx5-9fjg-hp4m",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw ACP client has permission auto-approval bypass via untrusted tool metadata",
-    "published": "2026-02-27",
-    "html_url": "https://github.com/advisories/GHSA-7jx5-9fjg-hp4m",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.22-2"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-639",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-82g8-464f-2mv7",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Skill env override host env injection via applySkillConfigEnvOverrides (defense-in-depth)",
-    "published": "2026-02-27",
-    "html_url": "https://github.com/advisories/GHSA-82g8-464f-2mv7",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-15",
-      "CWE-94",
-      "CWE-1341"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7977-c43c-xpwj",
-    "cve_id": "CVE-2026-28363",
-    "severity": "critical",
-    "title": "OpenClaw is vulnerable to validation bypass through GNU long-option abbreviations in allowlist mode",
-    "published": "2026-02-27",
-    "html_url": "https://github.com/advisories/GHSA-7977-c43c-xpwj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-184"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-cxpw-2g23-2vgw",
-    "cve_id": "CVE-2026-27576",
-    "severity": "medium",
-    "title": "OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs",
-    "published": "2026-02-20",
-    "html_url": "https://github.com/advisories/GHSA-cxpw-2g23-2vgw",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.17"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-400"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w45g-5746-x9fp",
-    "cve_id": "CVE-2026-27488",
-    "severity": "medium",
-    "title": "OpenClaw hardened cron webhook delivery against SSRF",
-    "published": "2026-02-20",
-    "html_url": "https://github.com/advisories/GHSA-w45g-5746-x9fp",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.17"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-r6h2-5gqq-v5v6",
-    "cve_id": "CVE-2026-27485",
-    "severity": "medium",
-    "title": "OpenClaw: Reject symlinks in local skill packaging script",
-    "published": "2026-02-20",
-    "html_url": "https://github.com/advisories/GHSA-r6h2-5gqq-v5v6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.18"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-61"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-wh94-p5m6-mr7j",
-    "cve_id": "CVE-2026-27484",
-    "severity": "low",
-    "title": "OpenClaw Discord moderation authorization used untrusted sender identity in tool-driven flows",
-    "published": "2026-02-20",
-    "html_url": "https://github.com/advisories/GHSA-wh94-p5m6-mr7j",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.18"
-    ],
-    "fixed_versions": [
-      "2026.2.18"
-    ],
-    "fixed_version": "2026.2.18",
-    "cwes": [
-      "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-6c9j-x93c-rw6j",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw safeBins file-existence oracle information disclosure",
-    "published": "2026-02-19",
-    "html_url": "https://github.com/advisories/GHSA-6c9j-x93c-rw6j",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.17"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-203"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-4685-c5cp-vp95",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw safeBins stdin-only bypass via sort output and recursive grep flags",
-    "published": "2026-02-19",
-    "html_url": "https://github.com/advisories/GHSA-4685-c5cp-vp95",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.17"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-78",
-      "CWE-184"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-r5fq-947m-xm57",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has a path traversal in apply_patch could write/delete files outside the workspace",
-    "published": "2026-02-19",
-    "html_url": "https://github.com/advisories/GHSA-r5fq-947m-xm57",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-fh3f-q9qw-93j9",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw replaced a deprecated sandbox hash algorithm",
-    "published": "2026-02-19",
-    "html_url": "https://github.com/advisories/GHSA-fh3f-q9qw-93j9",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-328"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-p536-vvpp-9mc8",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has a Web Fetch DoS via unbounded response parsing",
-    "published": "2026-02-19",
-    "html_url": "https://github.com/advisories/GHSA-p536-vvpp-9mc8",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-400"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-37gc-85xm-2ww6",
-    "cve_id": "CVE-2026-27009",
-    "severity": "medium",
-    "title": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-37gc-85xm-2ww6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-79"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-h7f7-89mm-pqh6",
-    "cve_id": "CVE-2026-27008",
-    "severity": "medium",
-    "title": "OpenClaw hardened the skill download target directory validation",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-h7f7-89mm-pqh6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-73"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xxvh-5hwj-42pp",
-    "cve_id": "CVE-2026-27007",
-    "severity": "medium",
-    "title": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-xxvh-5hwj-42pp",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-1254"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-6hf3-mhgc-cm65",
-    "cve_id": "CVE-2026-27004",
-    "severity": "medium",
-    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-6hf3-mhgc-cm65",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-209",
-      "CWE-346"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-chf7-jq6g-qrwv",
-    "cve_id": "CVE-2026-27003",
-    "severity": "medium",
-    "title": "OpenClaw: Telegram bot token exposure via logs",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-chf7-jq6g-qrwv",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-522"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w235-x559-36mg",
-    "cve_id": "CVE-2026-27002",
-    "severity": "high",
-    "title": "OpenClaw: Docker container escape via unvalidated bind mount config injection",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-w235-x559-36mg",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-250"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-2qj5-gwg2-xwc4",
-    "cve_id": "CVE-2026-27001",
-    "severity": "high",
-    "title": "OpenClaw: Unsanitized CWD path injection into LLM prompts",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-2qj5-gwg2-xwc4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.15"
-    ],
-    "fixed_versions": [
-      "2026.2.15"
-    ],
-    "fixed_version": "2026.2.15",
-    "cwes": [
-      "CWE-77"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-h9g4-589h-68xv",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has an authentication bypass in sandbox browser bridge server",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-h9g4-589h-68xv",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.1.29-beta.1, < 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-306"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-x22m-j5qq-j49m",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has two SSRF via sendMediaFeishu and markdown image fetching in Feishu extension",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-x22m-j5qq-j49m",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rwj8-p9vq-25gv",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has a LFI in BlueBubbles media path handling",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-rwj8-p9vq-25gv",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jfv4-h8mc-jcp8",
-    "cve_id": "CVE-2026-27486",
-    "severity": "medium",
-    "title": "OpenClaw: Process Safety - Unvalidated PID Kill via SIGKILL in Process Cleanup",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-jfv4-h8mc-jcp8",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-283"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7rcp-mxpq-72pj",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw Chutes manual OAuth state validation bypass can cause credential substitution",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-7rcp-mxpq-72pj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-352"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-4564-pvr2-qq4h",
-    "cve_id": "CVE-2026-27487",
-    "severity": "high",
-    "title": "OpenClaw: Prevent shell injection in macOS keychain credential write",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-4564-pvr2-qq4h",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-78"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-gq9c-wg68-gwj2",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has a path traversal in browser trace/download output paths may allow arbitrary file writes",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-gq9c-wg68-gwj2",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.13"
-    ],
-    "fixed_versions": [
-      "2026.2.13"
-    ],
-    "fixed_version": "2026.2.13",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xwjm-j929-xq7c",
-    "cve_id": "CVE-2026-26972",
-    "severity": "medium",
-    "title": "OpenClaw has a Path Traversal in Browser Download Functionality",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-xwjm-j929-xq7c",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.1.12, <= 2026.2.12"
-    ],
-    "fixed_versions": [
-      "2026.2.13"
-    ],
-    "fixed_version": "2026.2.13",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-v6c6-vqqg-w888",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw affected by potential code execution via unsafe hook module path handling in Gateway",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-v6c6-vqqg-w888",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.1.5, < 2026.2.14"
-    ],
-    "fixed_versions": [
-      "2026.2.14"
-    ],
-    "fixed_version": "2026.2.14",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-5xfq-5mr7-426q",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw's unsanitized session ID enables path traversal in transcript file operations",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-5xfq-5mr7-426q",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.12"
-    ],
-    "fixed_versions": [
-      "2026.2.12"
-    ],
-    "fixed_version": "2026.2.12",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w5c7-9qqw-6645",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw inter-session prompts could be treated as direct user instructions",
-    "published": "2026-02-18",
-    "html_url": "https://github.com/advisories/GHSA-w5c7-9qqw-6645",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.13"
-    ],
-    "fixed_versions": [
-      "2026.2.13"
-    ],
-    "fixed_version": "2026.2.13",
-    "cwes": [
-      "CWE-345"
     ]
   },
   {
