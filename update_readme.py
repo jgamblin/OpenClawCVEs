@@ -619,13 +619,15 @@ def collect_data(local_only: bool = False) -> dict:
     cves_reserved_count = 0
 
     # Batch-fetch CVE states in parallel (skip for --local)
-    cve_states = {}
-    if not local_only:
-        print(f"Checking CVE states for {len(all_cve_ids)} IDs (parallel)...")
+    # CVEs already found in cvelistV5 are definitively PUBLISHED — skip MITRE check
+    cve_states = {cve_id: "PUBLISHED" for cve_id in cvelist_cve_ids}
+    unknown_cve_ids = [cid for cid in all_cve_ids if cid not in cvelist_cve_ids]
+    if not local_only and unknown_cve_ids:
+        print(f"Checking CVE states for {len(unknown_cve_ids)} non-published IDs (parallel)...")
         with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
             future_to_id = {
                 executor.submit(check_cve_state, cve_id): cve_id
-                for cve_id in all_cve_ids
+                for cve_id in unknown_cve_ids
             }
             for future in concurrent.futures.as_completed(future_to_id):
                 cid = future_to_id[future]
