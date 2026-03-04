@@ -17,8 +17,10 @@ import base64
 import concurrent.futures
 import json
 import os
+import re
 import subprocess
 import sys
+import time
 import urllib.error
 import urllib.request
 from datetime import datetime, timezone
@@ -45,9 +47,11 @@ _GH_TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN") or ""
 
 
 def _github_api_get(endpoint: str, timeout: int = 15, fallback=None):
-    """Call the GitHub REST API directly via urllib (no retries, strict timeout).
+    """Call the GitHub REST API directly via urllib (no retries, strict wall-clock timeout).
 
     Returns parsed JSON on success, *fallback* on any error.
+    The timeout is a hard wall-clock limit enforced via a thread, not just a
+    socket idle timeout.
     """
     url = endpoint if endpoint.startswith("https://") else f"{GITHUB_API}{endpoint}"
     req = urllib.request.Request(url)
@@ -55,54 +59,74 @@ def _github_api_get(endpoint: str, timeout: int = 15, fallback=None):
     req.add_header("X-GitHub-Api-Version", "2022-11-28")
     if _GH_TOKEN:
         req.add_header("Authorization", f"Bearer {_GH_TOKEN}")
-    try:
+
+    def _do_request():
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode())
-    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
-            TimeoutError, OSError):
-        return fallback
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(_do_request)
+        try:
+            return future.result(timeout=timeout)
+        except (concurrent.futures.TimeoutError, urllib.error.URLError,
+                urllib.error.HTTPError, json.JSONDecodeError,
+                TimeoutError, OSError, Exception):
+            return fallback
 
 
-def _github_api_get_paginated(endpoint: str, timeout: int = 15) -> list[dict]:
-    """Fetch all pages of a paginated GitHub REST API endpoint."""
+def _github_api_get_paginated(endpoint: str, timeout: int = 15, total_timeout: int = 60) -> list[dict]:
+    """Fetch all pages of a paginated GitHub REST API endpoint.
+
+    Each page has a wall-clock timeout of *timeout* seconds.
+    The entire pagination loop is capped at *total_timeout* seconds.
+    """
+    deadline = time.monotonic() + total_timeout
     results = []
     url = endpoint if endpoint.startswith("https://") else f"{GITHUB_API}{endpoint}"
     while url:
-        req = urllib.request.Request(url)
-        req.add_header("Accept", "application/vnd.github+json")
-        req.add_header("X-GitHub-Api-Version", "2022-11-28")
-        if _GH_TOKEN:
-            req.add_header("Authorization", f"Bearer {_GH_TOKEN}")
-        try:
-            with urllib.request.urlopen(req, timeout=timeout) as resp:
-                data = json.loads(resp.read().decode())
-                link_header = resp.headers.get("Link", "")
-        except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
-                TimeoutError, OSError):
+        remaining = deadline - time.monotonic()
+        if remaining <= 0:
             break
-        if isinstance(data, list):
-            results.extend(data)
+        page_timeout = min(timeout, remaining)
+        data = _github_api_get(url, timeout=int(page_timeout), fallback=None)
+        if data is None or not isinstance(data, list):
+            break
+        results.extend(data)
+        # Check for next page — need to re-request to get Link header
+        # Since _github_api_get doesn't return headers, check if we got a full page
+        if len(data) < 100:
+            break
+        # Build next page URL
+        if "?" in url:
+            # Increment page parameter
+            m = re.search(r'page=(\d+)', url)
+            if m:
+                next_page = int(m.group(1)) + 1
+                url = re.sub(r'page=\d+', f'page={next_page}', url)
+            else:
+                url += "&page=2"
         else:
-            break
-        # Parse next page URL from Link header
-        url = None
-        for part in link_header.split(","):
-            if 'rel="next"' in part:
-                url = part.split("<")[1].split(">")[0].strip()
-                break
+            url += "?page=2"
     return results
 
 
 def _http_get_json(url: str, timeout: int = 10, fallback=None):
-    """Fetch JSON from any URL via urllib (no auth)."""
+    """Fetch JSON from any URL via urllib (no auth, wall-clock timeout)."""
     req = urllib.request.Request(url)
     req.add_header("Accept", "application/json")
-    try:
+
+    def _do_request():
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return json.loads(resp.read().decode())
-    except (urllib.error.URLError, urllib.error.HTTPError, json.JSONDecodeError,
-            TimeoutError, OSError):
-        return fallback
+
+    with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+        future = pool.submit(_do_request)
+        try:
+            return future.result(timeout=timeout)
+        except (concurrent.futures.TimeoutError, urllib.error.URLError,
+                urllib.error.HTTPError, json.JSONDecodeError,
+                TimeoutError, OSError, Exception):
+            return fallback
 
 
 # Keep run_gh for the few places that use --jq or need the gh CLI specifically
