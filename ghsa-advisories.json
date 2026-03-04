@@ -2149,5 +2149,300 @@
       "CWE-22",
       "CWE-284"
     ]
+  },
+  {
+    "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-mj5r-hh7j-4gxf",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-284",
+      "CWE-290"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-rq6g-px6m-c248",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-rq6g-px6m-c248",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-284",
+      "CWE-639"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3fqr-4cg8-h96q",
+    "cve_id": "CVE-2026-26317",
+    "severity": "high",
+    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-3fqr-4cg8-h96q",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-352"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-q447-rj3r-2cgh",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-q447-rj3r-2cgh",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.13",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.13"
+    ],
+    "fixed_version": "2026.2.13",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h89v-j3x9-8wqj",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw affected by denial of service through unguarded archive extraction allowing high expansion/resource abuse (ZIP/TAR)",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-h89v-j3x9-8wqj",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-w2cg-vxx6-5xjg",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: denial of service through large base64 media files allocating large buffers before limit checks",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-w2cg-vxx6-5xjg",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g34w-4xqq-h79m",
+    "cve_id": "CVE-2026-26328",
+    "severity": "medium",
+    "title": "OpenClaw iMessage group allowlist authorization inherited DM pairing-store identities",
+    "published": "2026-02-18",
+    "html_url": "https://github.com/advisories/GHSA-g34w-4xqq-h79m",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "< 2026.2.14"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-284",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-chm2-m3w2-wcxm",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch",
+    "published": "2026-02-17",
+    "html_url": "https://github.com/advisories/GHSA-chm2-m3w2-wcxm",
+    "packages": [
+      "npm/openclaw",
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.2.14",
+      "<= 2026.1.24-3"
+    ],
+    "fixed_versions": [
+      "2026.2.14"
+    ],
+    "fixed_version": "2026.2.14",
+    "cwes": [
+      "CWE-290",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-mr32-vwc2-5j6h",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's Browser Relay /cdp websocket is missing auth which could allow cross-tab cookie access",
+    "published": "2026-02-17",
+    "html_url": "https://github.com/advisories/GHSA-mr32-vwc2-5j6h",
+    "packages": [
+      "npm/openclaw",
+      "npm/moltbot"
+    ],
+    "affected_versions": [
+      ">= 2026.1.20, < 2026.2.1",
+      "<= 0.1.0"
+    ],
+    "fixed_versions": [
+      "2026.2.1"
+    ],
+    "fixed_version": "2026.2.1",
+    "cwes": [
+      "CWE-306"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-q284-4pvr-m585",
+    "cve_id": "CVE-2026-25157",
+    "severity": "high",
+    "title": "OpenClaw/Clawdbot has OS Command Injection via Project Root Path in sshNodeCommand",
+    "published": "2026-02-02",
+    "html_url": "https://github.com/advisories/GHSA-q284-4pvr-m585",
+    "packages": [
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.1.29"
+    ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq",
+    "cve_id": "CVE-2026-25253",
+    "severity": "high",
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "published": "2026-02-02",
+    "html_url": "https://github.com/advisories/GHSA-g8p2-7wf7-98mq",
+    "packages": [
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "<= 2026.1.28"
+    ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
+    "cwes": [
+      "CWE-668"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v",
+    "cve_id": "CVE-2026-24763",
+    "severity": "high",
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "published": "2026-02-02",
+    "html_url": "https://github.com/advisories/GHSA-mc68-q9jw-2h3v",
+    "packages": [
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "<= 2026.1.24"
+    ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r2c6-8jc8-g32w",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "published": "2026-02-02",
+    "html_url": "https://github.com/advisories/GHSA-r2c6-8jc8-g32w",
+    "packages": [
+      "npm/clawdbot"
+    ],
+    "affected_versions": [
+      "< 2026.1.29"
+    ],
+    "fixed_versions": [
+      "2026.1.29"
+    ],
+    "fixed_version": "2026.1.29",
+    "cwes": [
+      "CWE-669"
+    ]
   }
 ]
