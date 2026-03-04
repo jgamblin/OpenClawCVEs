@@ -883,3 +883,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Force-exit to avoid blocking on ThreadPoolExecutor atexit handler
+    # (zombie threads from timed-out API calls would otherwise hang the process)
+    os._exit(0)
