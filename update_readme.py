@@ -14,6 +14,7 @@ Requirements:
 """
 
 import base64
+import concurrent.futures
 import json
 import subprocess
 import sys
@@ -550,26 +551,30 @@ def collect_data(local_only: bool = False) -> dict:
             if cve_id not in found_cve_ids:
                 found_cve_ids.append(cve_id)
 
-        print(f"Checking {len(found_cve_ids)} CVE IDs against cvelistV5...")
+        print(f"Fetching {len(found_cve_ids)} CVE records from cvelistV5 (parallel)...")
         CVE_RECORDS_DIR.mkdir(exist_ok=True)
 
-        for cve_id in sorted(found_cve_ids):
-            exists = check_cvelist_exists(cve_id)
-            if exists:
-                cvelist_cve_ids.add(cve_id)
-                # Try to load cached record first
-                cached = CVE_RECORDS_DIR / f"{cve_id}.json"
-                if cached.exists():
-                    with open(cached) as fh:
-                        record = json.load(fh)
-                else:
-                    print(f"  Fetching {cve_id} from cvelistV5...")
-                    record = fetch_cve_record(cve_id)
-                    if record:
-                        with open(cached, "w") as fh:
-                            json.dump(record, fh, indent=2)
+        def _fetch_or_load_cve(cve_id: str):
+            """Fetch a single CVE record, using local cache when available."""
+            cached = CVE_RECORDS_DIR / f"{cve_id}.json"
+            if cached.exists():
+                with open(cached) as fh:
+                    return cve_id, json.load(fh)
+            record = fetch_cve_record(cve_id)
+            if record:
+                with open(cached, "w") as fh:
+                    json.dump(record, fh, indent=2)
+            return cve_id, record
 
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+            futures = {
+                executor.submit(_fetch_or_load_cve, cve_id): cve_id
+                for cve_id in sorted(found_cve_ids)
+            }
+            for future in concurrent.futures.as_completed(futures):
+                cve_id, record = future.result()
                 if record:
+                    cvelist_cve_ids.add(cve_id)
                     published_cves.append(parse_cve_record(record))
 
     published_cves.sort(key=lambda x: x.get("cvss") or 0, reverse=True)
@@ -607,13 +612,26 @@ def collect_data(local_only: bool = False) -> dict:
     cves_published_count = 0
     cves_reserved_count = 0
 
+    # Batch-fetch CVE states in parallel (skip for --local)
+    cve_states = {}
+    if not local_only:
+        print(f"Checking CVE states for {len(all_cve_ids)} IDs (parallel)...")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
+            future_to_id = {
+                executor.submit(check_cve_state, cve_id): cve_id
+                for cve_id in all_cve_ids
+            }
+            for future in concurrent.futures.as_completed(future_to_id):
+                cid = future_to_id[future]
+                cve_states[cid] = future.result()
+
     for cve_id in sorted(all_cve_ids):
         in_cvelist = cve_id in cvelist_cve_ids
 
         if local_only:
             state = "PUBLISHED" if in_cvelist else "RESERVED"
         else:
-            state = check_cve_state(cve_id)
+            state = cve_states.get(cve_id, "UNKNOWN")
 
         ghsa_pub = ""
         cna = ""
