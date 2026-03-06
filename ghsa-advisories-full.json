@@ -8703,7 +8703,7 @@
   },
   {
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28480",
     "url": "https://api.github.com/advisories/GHSA-mj5r-hh7j-4gxf",
     "html_url": "https://github.com/advisories/GHSA-mj5r-hh7j-4gxf",
     "summary": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
@@ -8716,6 +8716,10 @@
       {
         "value": "GHSA-mj5r-hh7j-4gxf",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28480",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8726,7 +8730,7 @@
       "https://github.com/advisories/GHSA-mj5r-hh7j-4gxf"
     ],
     "published_at": "2026-02-18T00:54:32Z",
-    "updated_at": "2026-02-18T00:55:50Z",
+    "updated_at": "2026-03-05T21:54:23Z",
     "github_reviewed_at": "2026-02-18T00:54:32Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8803,7 +8807,7 @@
   },
   {
     "ghsa_id": "GHSA-rq6g-px6m-c248",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28469",
     "url": "https://api.github.com/advisories/GHSA-rq6g-px6m-c248",
     "html_url": "https://github.com/advisories/GHSA-rq6g-px6m-c248",
     "summary": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
@@ -8816,6 +8820,10 @@
       {
         "value": "GHSA-rq6g-px6m-c248",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28469",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8825,7 +8833,7 @@
       "https://github.com/advisories/GHSA-rq6g-px6m-c248"
     ],
     "published_at": "2026-02-18T00:54:14Z",
-    "updated_at": "2026-02-18T00:55:51Z",
+    "updated_at": "2026-03-05T21:50:22Z",
     "github_reviewed_at": "2026-02-18T00:54:14Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -9006,7 +9014,7 @@
   },
   {
     "ghsa_id": "GHSA-q447-rj3r-2cgh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28478",
     "url": "https://api.github.com/advisories/GHSA-q447-rj3r-2cgh",
     "html_url": "https://github.com/advisories/GHSA-q447-rj3r-2cgh",
     "summary": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
@@ -9019,6 +9027,10 @@
       {
         "value": "GHSA-q447-rj3r-2cgh",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28478",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -9026,7 +9038,7 @@
       "https://github.com/advisories/GHSA-q447-rj3r-2cgh"
     ],
     "published_at": "2026-02-18T00:53:07Z",
-    "updated_at": "2026-02-18T00:53:08Z",
+    "updated_at": "2026-03-05T21:53:41Z",
     "github_reviewed_at": "2026-02-18T00:53:07Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -9099,7 +9111,7 @@
   },
   {
     "ghsa_id": "GHSA-h89v-j3x9-8wqj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28452",
     "url": "https://api.github.com/advisories/GHSA-h89v-j3x9-8wqj",
     "html_url": "https://github.com/advisories/GHSA-h89v-j3x9-8wqj",
     "summary": "OpenClaw affected by denial of service through unguarded archive extraction allowing high expansion/resource abuse (ZIP/TAR)",
@@ -9112,6 +9124,10 @@
       {
         "value": "GHSA-h89v-j3x9-8wqj",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28452",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -9122,7 +9138,7 @@
       "https://github.com/advisories/GHSA-h89v-j3x9-8wqj"
     ],
     "published_at": "2026-02-18T00:52:54Z",
-    "updated_at": "2026-02-18T00:52:54Z",
+    "updated_at": "2026-03-05T21:45:07Z",
     "github_reviewed_at": "2026-02-18T00:52:54Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -9195,7 +9211,7 @@
   },
   {
     "ghsa_id": "GHSA-w2cg-vxx6-5xjg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-29612",
     "url": "https://api.github.com/advisories/GHSA-w2cg-vxx6-5xjg",
     "html_url": "https://github.com/advisories/GHSA-w2cg-vxx6-5xjg",
     "summary": "OpenClaw: denial of service through large base64 media files allocating large buffers before limit checks",
@@ -9208,6 +9224,10 @@
       {
         "value": "GHSA-w2cg-vxx6-5xjg",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-29612",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -9217,7 +9237,7 @@
       "https://github.com/advisories/GHSA-w2cg-vxx6-5xjg"
     ],
     "published_at": "2026-02-18T00:52:36Z",
-    "updated_at": "2026-02-18T00:52:37Z",
+    "updated_at": "2026-03-05T22:00:57Z",
     "github_reviewed_at": "2026-02-18T00:52:36Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -9892,7 +9912,7 @@
   },
   {
     "ghsa_id": "GHSA-mr32-vwc2-5j6h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28458",
     "url": "https://api.github.com/advisories/GHSA-mr32-vwc2-5j6h",
     "html_url": "https://github.com/advisories/GHSA-mr32-vwc2-5j6h",
     "summary": "OpenClaw's Browser Relay /cdp websocket is missing auth which could allow cross-tab cookie access",
@@ -9905,6 +9925,10 @@
       {
         "value": "GHSA-mr32-vwc2-5j6h",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-28458",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -9914,7 +9938,7 @@
       "https://github.com/advisories/GHSA-mr32-vwc2-5j6h"
     ],
     "published_at": "2026-02-17T16:45:47Z",
-    "updated_at": "2026-02-17T16:45:47Z",
+    "updated_at": "2026-03-05T21:47:06Z",
     "github_reviewed_at": "2026-02-17T16:45:47Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

@@ -2152,7 +2152,7 @@
   },
   {
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28480",
     "severity": "medium",
     "title": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
     "published": "2026-02-18",
@@ -2176,7 +2176,7 @@
   },
   {
     "ghsa_id": "GHSA-rq6g-px6m-c248",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28469",
     "severity": "high",
     "title": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
     "published": "2026-02-18",
@@ -2223,7 +2223,7 @@
   },
   {
     "ghsa_id": "GHSA-q447-rj3r-2cgh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28478",
     "severity": "high",
     "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
     "published": "2026-02-18",
@@ -2246,7 +2246,7 @@
   },
   {
     "ghsa_id": "GHSA-h89v-j3x9-8wqj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28452",
     "severity": "medium",
     "title": "OpenClaw affected by denial of service through unguarded archive extraction allowing high expansion/resource abuse (ZIP/TAR)",
     "published": "2026-02-18",
@@ -2269,7 +2269,7 @@
   },
   {
     "ghsa_id": "GHSA-w2cg-vxx6-5xjg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-29612",
     "severity": "medium",
     "title": "OpenClaw: denial of service through large base64 media files allocating large buffers before limit checks",
     "published": "2026-02-18",
@@ -2340,7 +2340,7 @@
   },
   {
     "ghsa_id": "GHSA-mr32-vwc2-5j6h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28458",
     "severity": "high",
     "title": "OpenClaw's Browser Relay /cdp websocket is missing auth which could allow cross-tab cookie access",
     "published": "2026-02-17",
