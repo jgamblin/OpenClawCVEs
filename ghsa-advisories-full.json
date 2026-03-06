@@ -8727,12 +8727,14 @@
       "https://github.com/openclaw/openclaw/commit/9e147f00b48e63e7be6964e0e2a97f2980854128",
       "https://github.com/openclaw/openclaw/commit/e3b432e481a96b8fd41b91273818e514074e05c3",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-28480",
+      "https://www.vulncheck.com/advisories/openclaw-identity-spoofing-via-mutable-username-in-telegram-allowlist-authorization",
       "https://github.com/advisories/GHSA-mj5r-hh7j-4gxf"
     ],
     "published_at": "2026-02-18T00:54:32Z",
-    "updated_at": "2026-03-05T21:54:23Z",
+    "updated_at": "2026-03-06T01:03:35Z",
     "github_reviewed_at": "2026-02-18T00:54:32Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-05T22:16:22Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8760,8 +8762,8 @@
         "score": 5.9
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.9
       }
     },
     "cwes": [
@@ -8830,12 +8832,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-rq6g-px6m-c248",
       "https://github.com/openclaw/openclaw/commit/61d59a802869177d9cef52204767cd83357ab79e",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-28469",
+      "https://www.vulncheck.com/advisories/openclaw-cross-account-policy-context-misrouting-via-shared-webhook-path-ambiguity",
       "https://github.com/advisories/GHSA-rq6g-px6m-c248"
     ],
     "published_at": "2026-02-18T00:54:14Z",
-    "updated_at": "2026-03-05T21:50:22Z",
+    "updated_at": "2026-03-06T01:03:20Z",
     "github_reviewed_at": "2026-02-18T00:54:14Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-05T22:16:20Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8859,8 +8863,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:L/VI:H/VA:N/SC:L/SI:L/SA:N",
@@ -8904,8 +8908,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
     }
   },
   {
@@ -9009,7 +9013,7 @@
     },
     "epss": {
       "percentage": 0.00016,
-      "percentile": 0.03464
+      "percentile": 0.03505
     }
   },
   {
@@ -9135,12 +9139,14 @@
       "https://github.com/openclaw/openclaw/commit/5f4b29145c236d124524c2c9af0f8acd048fbdea",
       "https://github.com/openclaw/openclaw/commit/d3ee5deb87ee2ad0ab83c92c365611165423cb71",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-28452",
+      "https://www.vulncheck.com/advisories/openclaw-denial-of-service-via-unguarded-archive-extraction-in-extractarchive",
       "https://github.com/advisories/GHSA-h89v-j3x9-8wqj"
     ],
     "published_at": "2026-02-18T00:52:54Z",
-    "updated_at": "2026-03-05T21:45:07Z",
+    "updated_at": "2026-03-06T00:58:54Z",
     "github_reviewed_at": "2026-02-18T00:52:54Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-05T22:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -9168,14 +9174,18 @@
         "score": 6.5
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.7
       }
     },
     "cwes": [
       {
         "cwe_id": "CWE-400",
         "name": "Uncontrolled Resource Consumption"
+      },
+      {
+        "cwe_id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
       }
     ],
     "credits": [
@@ -9234,12 +9244,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-w2cg-vxx6-5xjg",
       "https://github.com/openclaw/openclaw/commit/31791233d60495725fa012745dde8d6ee69e9595",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.14",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-29612",
+      "https://www.vulncheck.com/advisories/openclaw-denial-of-service-via-large-base-media-file-decoding",
       "https://github.com/advisories/GHSA-w2cg-vxx6-5xjg"
     ],
     "published_at": "2026-02-18T00:52:36Z",
-    "updated_at": "2026-03-05T22:00:57Z",
+    "updated_at": "2026-03-06T01:03:13Z",
     "github_reviewed_at": "2026-02-18T00:52:36Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-05T22:16:24Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -9267,14 +9279,18 @@
         "score": 5.5
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+        "score": 6.8
       }
     },
     "cwes": [
       {
         "cwe_id": "CWE-400",
         "name": "Uncontrolled Resource Consumption"
+      },
+      {
+        "cwe_id": "CWE-770",
+        "name": "Allocation of Resources Without Limits or Throttling"
       }
     ],
     "credits": [
@@ -9748,8 +9764,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.00049,
-      "percentile": 0.15258
+      "percentage": 0.00053,
+      "percentile": 0.16475
     }
   },
   {
@@ -9935,12 +9951,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-mr32-vwc2-5j6h",
       "https://github.com/openclaw/openclaw/commit/a1e89afcc19efd641c02b24d66d689f181ae2b5c",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.2.1",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-28458",
+      "https://www.vulncheck.com/advisories/openclaw-missing-authentication-in-browser-relay-cdp-websocket-endpoint",
       "https://github.com/advisories/GHSA-mr32-vwc2-5j6h"
     ],
     "published_at": "2026-02-17T16:45:47Z",
-    "updated_at": "2026-03-05T21:47:06Z",
+    "updated_at": "2026-03-06T01:02:29Z",
     "github_reviewed_at": "2026-02-17T16:45:47Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-05T22:16:18Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -9964,8 +9982,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 7.5
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
@@ -10053,8 +10071,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "score": 7.5
     }
   }
 ]
