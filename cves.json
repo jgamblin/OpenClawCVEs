@@ -40,14 +40,6 @@
     "ghsa_id": "GHSA-4rj2-gpmh-qq5x"
   },
   {
-    "cve_id": "CVE-2026-28470",
-    "severity": "CRITICAL",
-    "cvss": 9.2,
-    "title": "OpenClaw < 2026.2.2 - Exec Allowlist Bypass via Command Substitution in Double Quotes",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-3hcm-ggvf-rch5"
-  },
-  {
     "cve_id": "CVE-2026-28472",
     "severity": "CRITICAL",
     "cvss": 9.2,
@@ -56,12 +48,12 @@
     "ghsa_id": "GHSA-rv39-79c4-7459"
   },
   {
-    "cve_id": "CVE-2026-25253",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
-    "date_published": "2026-02-01",
-    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+    "cve_id": "CVE-2026-28470",
+    "severity": "CRITICAL",
+    "cvss": 9.2,
+    "title": "OpenClaw < 2026.2.2 - Exec Allowlist Bypass via Command Substitution in Double Quotes",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-3hcm-ggvf-rch5"
   },
   {
     "cve_id": "CVE-2026-24763",
@@ -70,6 +62,14 @@
     "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
     "date_published": "2026-02-02",
     "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
+    "cve_id": "CVE-2026-25253",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "date_published": "2026-02-01",
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
     "cve_id": "CVE-2026-28462",
@@ -200,12 +200,12 @@
     "ghsa_id": "GHSA-fhvm-j76f-qmjv"
   },
   {
-    "cve_id": "CVE-2026-28465",
+    "cve_id": "CVE-2026-28464",
     "severity": "HIGH",
     "cvss": 8.2,
-    "title": "OpenClaw voice-call < 2026.2.3 - Webhook Verification Bypass via Forwarded Headers",
+    "title": "OpenClaw < 2026.2.12 - Timing Attack in Hooks Token Authentication",
     "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-3m3q-x3gj-f79x"
+    "ghsa_id": "GHSA-jmm5-fvh5-gf4p"
   },
   {
     "cve_id": "CVE-2026-28469",
@@ -216,20 +216,12 @@
     "ghsa_id": "GHSA-rq6g-px6m-c248"
   },
   {
-    "cve_id": "CVE-2026-28464",
+    "cve_id": "CVE-2026-28465",
     "severity": "HIGH",
     "cvss": 8.2,
-    "title": "OpenClaw < 2026.2.12 - Timing Attack in Hooks Token Authentication",
+    "title": "OpenClaw voice-call < 2026.2.3 - Webhook Verification Bypass via Forwarded Headers",
     "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-jmm5-fvh5-gf4p"
-  },
-  {
-    "cve_id": "CVE-2026-29611",
-    "severity": "HIGH",
-    "cvss": 8.2,
-    "title": "OpenClaw < 2026.2.14 - Local File Inclusion via mediaPath Parameter in BlueBubbles Media Handling",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-rwj8-p9vq-25gv"
+    "ghsa_id": "GHSA-3m3q-x3gj-f79x"
   },
   {
     "cve_id": "CVE-2026-29613",
@@ -238,6 +230,14 @@
     "title": "OpenClaw < 2026.2.12 - Webhook Authentication Bypass via Loopback remoteAddress Trust",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-xc7w-v5x6-cc87"
+  },
+  {
+    "cve_id": "CVE-2026-29611",
+    "severity": "HIGH",
+    "cvss": 8.2,
+    "title": "OpenClaw < 2026.2.14 - Local File Inclusion via mediaPath Parameter in BlueBubbles Media Handling",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-rwj8-p9vq-25gv"
   },
   {
     "cve_id": "CVE-2026-25157",
@@ -280,12 +280,12 @@
     "ghsa_id": "GHSA-4564-pvr2-qq4h"
   },
   {
-    "cve_id": "CVE-2026-26321",
+    "cve_id": "CVE-2026-26316",
     "severity": "HIGH",
     "cvss": 7.5,
-    "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
+    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
     "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-8jpq-5h99-ff5r"
+    "ghsa_id": "GHSA-pchc-86f6-8758"
   },
   {
     "cve_id": "CVE-2026-25474",
@@ -296,20 +296,12 @@
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
   },
   {
-    "cve_id": "CVE-2026-26319",
+    "cve_id": "CVE-2026-26321",
     "severity": "HIGH",
     "cvss": 7.5,
-    "title": "OpenClaw has Missing Webhook Authentication in Telnyx Provider Allowing Unauthenticated Requests",
+    "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
     "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-4hg8-92x6-h2f3"
-  },
-  {
-    "cve_id": "CVE-2026-26316",
-    "severity": "HIGH",
-    "cvss": 7.5,
-    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pchc-86f6-8758"
+    "ghsa_id": "GHSA-8jpq-5h99-ff5r"
   },
   {
     "cve_id": "CVE-2026-26324",
@@ -318,6 +310,14 @@
     "title": "OpenClaw has a SSRF guard bypass via full-form IPv4-mapped IPv6 (loopback / metadata reachable)",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-jrvc-8ff5-2f9f"
+  },
+  {
+    "cve_id": "CVE-2026-26319",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has Missing Webhook Authentication in Telnyx Provider Allowing Unauthenticated Requests",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-4hg8-92x6-h2f3"
   },
   {
     "cve_id": "CVE-2026-28485",
@@ -368,20 +368,20 @@
     "ghsa_id": "GHSA-7q2j-c4q5-rm27"
   },
   {
-    "cve_id": "CVE-2026-26327",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pv58-549p-qh99"
-  },
-  {
     "cve_id": "CVE-2026-26329",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw has a path traversal in browser upload allows local file read",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-cv7m-c9jx-vg7q"
+  },
+  {
+    "cve_id": "CVE-2026-26327",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw allows unauthenticated discovery TXT records to steer routing and TLS pinning",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pv58-549p-qh99"
   },
   {
     "cve_id": "CVE-2026-28459",
@@ -400,12 +400,12 @@
     "ghsa_id": "GHSA-qrq5-wjgg-rvqw"
   },
   {
-    "cve_id": "CVE-2026-27003",
+    "cve_id": "CVE-2026-27488",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw: Telegram bot token exposure via logs",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-chf7-jq6g-qrwv"
+    "title": "OpenClaw hardened cron webhook delivery against SSRF",
+    "date_published": "2026-02-21",
+    "ghsa_id": "GHSA-w45g-5746-x9fp"
   },
   {
     "cve_id": "CVE-2026-27004",
@@ -416,12 +416,12 @@
     "ghsa_id": "GHSA-6hf3-mhgc-cm65"
   },
   {
-    "cve_id": "CVE-2026-27488",
+    "cve_id": "CVE-2026-27003",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw hardened cron webhook delivery against SSRF",
-    "date_published": "2026-02-21",
-    "ghsa_id": "GHSA-w45g-5746-x9fp"
+    "title": "OpenClaw: Telegram bot token exposure via logs",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-chf7-jq6g-qrwv"
   },
   {
     "cve_id": "CVE-2026-28394",
@@ -432,20 +432,20 @@
     "ghsa_id": "GHSA-p536-vvpp-9mc8"
   },
   {
-    "cve_id": "CVE-2026-28480",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
-  },
-  {
     "cve_id": "CVE-2026-28467",
     "severity": "MEDIUM",
     "cvss": 6.9,
     "title": "OpenClaw < 2026.2.2 - SSRF via Attachment Media URL Hydration",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-wfp2-v9c7-fh79"
+  },
+  {
+    "cve_id": "CVE-2026-28480",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
   },
   {
     "cve_id": "CVE-2026-27008",
@@ -512,20 +512,20 @@
     "ghsa_id": "GHSA-33rq-m5x2-fvgf"
   },
   {
-    "cve_id": "CVE-2026-28395",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw 2026.1.14-1 < 2026.2.12 - Unintended Public Binding of Chrome Extension Relay via Wildcard cdpUrl",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-qw99-grcx-4pvm"
-  },
-  {
     "cve_id": "CVE-2026-28451",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw < 2026.2.14 - SSRF via Feishu Extension Media Fetching",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-x22m-j5qq-j49m"
+  },
+  {
+    "cve_id": "CVE-2026-28395",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw 2026.1.14-1 < 2026.2.12 - Unintended Public Binding of Chrome Extension Relay via Wildcard cdpUrl",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-qw99-grcx-4pvm"
   },
   {
     "cve_id": "CVE-2026-28475",
