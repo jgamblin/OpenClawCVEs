@@ -7,6 +7,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6f6j-wx9w-ff4j"
   },
   {
+    "ghsa_id": "GHSA-6mgf-v5j7-45cr",
+    "severity": "HIGH",
+    "title": "fetch-guard forwards custom authorization headers across cross-origin redirects",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6mgf-v5j7-45cr"
+  },
+  {
     "ghsa_id": "GHSA-gp3q-wpq4-5c5h",
     "severity": "HIGH",
     "title": "LINE group allowlist scope mismatch with DM pairing-store entries",
@@ -70,11 +77,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r65x-2hqr-j5hf"
   },
   {
-    "ghsa_id": "GHSA-2fgq-7j6h-9rm4",
-    "severity": "MEDIUM",
-    "title": "system.run shell-wrapper env injection via SHELLOPTS/PS4 can bypass allowlist intent (RCE)",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2fgq-7j6h-9rm4"
+    "ghsa_id": "GHSA-rchv-x836-w7xp",
+    "severity": "HIGH",
+    "title": "Dashboard leaked gateway auth material via browser URL/query and localStorage",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rchv-x836-w7xp"
   },
   {
     "ghsa_id": "GHSA-36h3-7c54-j27r",
@@ -91,6 +98,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-392f-ggf5-fp3c"
   },
   {
+    "ghsa_id": "GHSA-3h2q-j2v4-6w5r",
+    "severity": "MEDIUM",
+    "title": "system.run allowlist approval parsing missed PowerShell encoded-command wrappers",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3h2q-j2v4-6w5r"
+  },
+  {
     "ghsa_id": "GHSA-48wf-g7cp-gr3m",
     "severity": "MEDIUM",
     "title": "allowlist exec-guard bypass via env -S",
@@ -98,18 +112,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-48wf-g7cp-gr3m"
   },
   {
-    "ghsa_id": "GHSA-5847-rm3g-23mw",
-    "severity": "MEDIUM",
-    "title": "Hook auth rate limiter bypass via IPv4-mapped IPv6 client key variants",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5847-rm3g-23mw"
-  },
-  {
     "ghsa_id": "GHSA-6j27-pc5c-m8w8",
     "severity": "MEDIUM",
     "title": "allow-always wrapper persistence could bypass future approvals and enable command execution",
     "published": "2026-02-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6j27-pc5c-m8w8"
+  },
+  {
+    "ghsa_id": "GHSA-6rmx-gvvg-vh6j",
+    "severity": "MEDIUM",
+    "title": "hooks count non-POST requests toward auth lockout",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6rmx-gvvg-vh6j"
   },
   {
     "ghsa_id": "GHSA-6x2m-hqfw-hvpj",
@@ -154,6 +168,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8m9v-xpgf-g99m"
   },
   {
+    "ghsa_id": "GHSA-9q2p-vc84-2rwm",
+    "severity": "MEDIUM",
+    "title": "system.run allow-always persistence included shell-commented payload tails",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q2p-vc84-2rwm"
+  },
+  {
+    "ghsa_id": "GHSA-9q36-67vc-rrwg",
+    "severity": "MEDIUM",
+    "title": "Sandboxed /acp spawn requests could initialize host ACP sessions",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q36-67vc-rrwg"
+  },
+  {
     "ghsa_id": "GHSA-f7ww-2725-qvw2",
     "severity": "MEDIUM",
     "title": "Node system.run approval bypass via parent-symlink cwd rebind",
@@ -189,6 +217,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gwqp-86q6-w47g"
   },
   {
+    "ghsa_id": "GHSA-hfpr-jhpq-x4rm",
+    "severity": "MEDIUM",
+    "title": "`operator.write` chat.send could reach admin-only config writes",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hfpr-jhpq-x4rm"
+  },
+  {
     "ghsa_id": "GHSA-hjvp-qhm6-wrh2",
     "severity": "MEDIUM",
     "title": "Node system.run approval context-binding weakness in approval-enabled host=node flows",
@@ -196,11 +231,32 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hjvp-qhm6-wrh2"
   },
   {
+    "ghsa_id": "GHSA-j425-whc4-4jgc",
+    "severity": "MEDIUM",
+    "title": "`system.run` env override filtering allowed dangerous helper-command pivots",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j425-whc4-4jgc"
+  },
+  {
+    "ghsa_id": "GHSA-pjvx-rx66-r3fg",
+    "severity": "MEDIUM",
+    "title": "Cross-account sender authorization expansion in `/allowlist ... --store` account scoping",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pjvx-rx66-r3fg"
+  },
+  {
     "ghsa_id": "GHSA-qj22-xqjr-v83v",
     "severity": "MEDIUM",
     "title": "Telegram message_reaction authorization bypass allows unauthorized system-event injection",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj22-xqjr-v83v"
+  },
+  {
+    "ghsa_id": "GHSA-r6qf-8968-wj9q",
+    "severity": "MEDIUM",
+    "title": "system.run wrapper-depth boundary could skip shell approval gating",
+    "published": "2026-03-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r6qf-8968-wj9q"
   },
   {
     "ghsa_id": "GHSA-rx3g-mvc3-qfjf",
