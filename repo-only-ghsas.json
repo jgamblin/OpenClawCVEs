@@ -7,11 +7,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6f6j-wx9w-ff4j"
   },
   {
-    "ghsa_id": "GHSA-6mgf-v5j7-45cr",
+    "ghsa_id": "GHSA-9f72-qcpw-2hxc",
     "severity": "HIGH",
-    "title": "fetch-guard forwards custom authorization headers across cross-origin redirects",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6mgf-v5j7-45cr"
+    "title": "Native prompt image auto-load did not honor tools.fs.workspaceOnly in sandboxed runs",
+    "published": "2026-02-25",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9f72-qcpw-2hxc"
   },
   {
     "ghsa_id": "GHSA-gp3q-wpq4-5c5h",
@@ -49,6 +49,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgrq-9f93-wpp5"
   },
   {
+    "ghsa_id": "GHSA-mwxv-35wr-4vvj",
+    "severity": "HIGH",
+    "title": "Gateway plugin auth bypass via encoded dot-segment traversal in protected /api/channels paths",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mwxv-35wr-4vvj"
+  },
+  {
     "ghsa_id": "GHSA-p7gr-f84w-hqg5",
     "severity": "HIGH",
     "title": "Sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns",
@@ -77,11 +84,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r65x-2hqr-j5hf"
   },
   {
-    "ghsa_id": "GHSA-rchv-x836-w7xp",
-    "severity": "HIGH",
-    "title": "Dashboard leaked gateway auth material via browser URL/query and localStorage",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rchv-x836-w7xp"
+    "ghsa_id": "GHSA-2ww6-868g-2c56",
+    "severity": "MEDIUM",
+    "title": "HTML injection via unvalidated image MIME type in data-URL interpolation",
+    "published": "2026-02-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2ww6-868g-2c56"
+  },
+  {
+    "ghsa_id": "GHSA-33hm-cq8r-wc49",
+    "severity": "MEDIUM",
+    "title": "Temporary path handling could write outside OpenClaw temp boundary",
+    "published": "2026-02-25",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-33hm-cq8r-wc49"
   },
   {
     "ghsa_id": "GHSA-36h3-7c54-j27r",
@@ -98,13 +112,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-392f-ggf5-fp3c"
   },
   {
-    "ghsa_id": "GHSA-3h2q-j2v4-6w5r",
-    "severity": "MEDIUM",
-    "title": "system.run allowlist approval parsing missed PowerShell encoded-command wrappers",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3h2q-j2v4-6w5r"
-  },
-  {
     "ghsa_id": "GHSA-48wf-g7cp-gr3m",
     "severity": "MEDIUM",
     "title": "allowlist exec-guard bypass via env -S",
@@ -117,13 +124,6 @@
     "title": "allow-always wrapper persistence could bypass future approvals and enable command execution",
     "published": "2026-02-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6j27-pc5c-m8w8"
-  },
-  {
-    "ghsa_id": "GHSA-6rmx-gvvg-vh6j",
-    "severity": "MEDIUM",
-    "title": "hooks count non-POST requests toward auth lockout",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6rmx-gvvg-vh6j"
   },
   {
     "ghsa_id": "GHSA-6x2m-hqfw-hvpj",
@@ -168,20 +168,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8m9v-xpgf-g99m"
   },
   {
-    "ghsa_id": "GHSA-9q2p-vc84-2rwm",
-    "severity": "MEDIUM",
-    "title": "system.run allow-always persistence included shell-commented payload tails",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q2p-vc84-2rwm"
-  },
-  {
-    "ghsa_id": "GHSA-9q36-67vc-rrwg",
-    "severity": "MEDIUM",
-    "title": "Sandboxed /acp spawn requests could initialize host ACP sessions",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q36-67vc-rrwg"
-  },
-  {
     "ghsa_id": "GHSA-f7ww-2725-qvw2",
     "severity": "MEDIUM",
     "title": "Node system.run approval bypass via parent-symlink cwd rebind",
@@ -217,11 +203,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gwqp-86q6-w47g"
   },
   {
-    "ghsa_id": "GHSA-hfpr-jhpq-x4rm",
+    "ghsa_id": "GHSA-h656-5vcf-cm23",
     "severity": "MEDIUM",
-    "title": "`operator.write` chat.send could reach admin-only config writes",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hfpr-jhpq-x4rm"
+    "title": "Telegram: Unauthorized Senders Trigger Media Download and Disk Write Before Access Check",
+    "published": "2026-02-25",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h656-5vcf-cm23"
   },
   {
     "ghsa_id": "GHSA-hjvp-qhm6-wrh2",
@@ -231,32 +217,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hjvp-qhm6-wrh2"
   },
   {
-    "ghsa_id": "GHSA-j425-whc4-4jgc",
-    "severity": "MEDIUM",
-    "title": "`system.run` env override filtering allowed dangerous helper-command pivots",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j425-whc4-4jgc"
-  },
-  {
-    "ghsa_id": "GHSA-pjvx-rx66-r3fg",
-    "severity": "MEDIUM",
-    "title": "Cross-account sender authorization expansion in `/allowlist ... --store` account scoping",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pjvx-rx66-r3fg"
-  },
-  {
     "ghsa_id": "GHSA-qj22-xqjr-v83v",
     "severity": "MEDIUM",
     "title": "Telegram message_reaction authorization bypass allows unauthorized system-event injection",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj22-xqjr-v83v"
-  },
-  {
-    "ghsa_id": "GHSA-r6qf-8968-wj9q",
-    "severity": "MEDIUM",
-    "title": "system.run wrapper-depth boundary could skip shell approval gating",
-    "published": "2026-03-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r6qf-8968-wj9q"
   },
   {
     "ghsa_id": "GHSA-rx3g-mvc3-qfjf",
@@ -273,11 +238,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8cg-4474-49v8"
   },
   {
+    "ghsa_id": "GHSA-vmqr-rc7x-3446",
+    "severity": "MEDIUM",
+    "title": "Non-default safeBins sort configuration can bypass intended allowlist approval constraints",
+    "published": "2026-02-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vmqr-rc7x-3446"
+  },
+  {
     "ghsa_id": "GHSA-vpj2-69hf-rppw",
     "severity": "MEDIUM",
     "title": "Browser control startup could continue unauthenticated after auth bootstrap failure",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw"
+  },
+  {
+    "ghsa_id": "GHSA-vqx8-9xxw-f2m7",
+    "severity": "MEDIUM",
+    "title": "voice-call Twilio webhook replay could bypass manager dedupe because normalized event IDs were randomized per parse",
+    "published": "2026-02-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vqx8-9xxw-f2m7"
   },
   {
     "ghsa_id": "GHSA-wr6m-jg37-68xh",
