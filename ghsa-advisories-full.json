@@ -4643,7 +4643,7 @@
   },
   {
     "ghsa_id": "GHSA-vffc-f7r7-rx2w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32063",
     "url": "https://api.github.com/advisories/GHSA-vffc-f7r7-rx2w",
     "html_url": "https://github.com/advisories/GHSA-vffc-f7r7-rx2w",
     "summary": "OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux)",
@@ -4656,6 +4656,10 @@
       {
         "value": "GHSA-vffc-f7r7-rx2w",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32063",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4664,7 +4668,7 @@
       "https://github.com/advisories/GHSA-vffc-f7r7-rx2w"
     ],
     "published_at": "2026-03-03T21:52:54Z",
-    "updated_at": "2026-03-03T21:52:56Z",
+    "updated_at": "2026-03-11T14:51:26Z",
     "github_reviewed_at": "2026-03-03T21:52:54Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5444,7 +5448,7 @@
   },
   {
     "ghsa_id": "GHSA-3c6h-g97w-fg78",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32059",
     "url": "https://api.github.com/advisories/GHSA-3c6h-g97w-fg78",
     "html_url": "https://github.com/advisories/GHSA-3c6h-g97w-fg78",
     "summary": "OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode",
@@ -5457,6 +5461,10 @@
       {
         "value": "GHSA-3c6h-g97w-fg78",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32059",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5465,7 +5473,7 @@
       "https://github.com/advisories/GHSA-3c6h-g97w-fg78"
     ],
     "published_at": "2026-03-03T21:41:59Z",
-    "updated_at": "2026-03-03T21:42:00Z",
+    "updated_at": "2026-03-11T14:50:06Z",
     "github_reviewed_at": "2026-03-03T21:41:59Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7798,7 +7806,7 @@
   },
   {
     "ghsa_id": "GHSA-56pc-6hvp-4gv4",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32061",
     "url": "https://api.github.com/advisories/GHSA-56pc-6hvp-4gv4",
     "html_url": "https://github.com/advisories/GHSA-56pc-6hvp-4gv4",
     "summary": "OpenClaw vulnerable to arbitrary file read via $include directive",
@@ -7811,6 +7819,10 @@
       {
         "value": "GHSA-56pc-6hvp-4gv4",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32061",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7819,7 +7831,7 @@
       "https://github.com/advisories/GHSA-56pc-6hvp-4gv4"
     ],
     "published_at": "2026-03-03T19:57:23Z",
-    "updated_at": "2026-03-03T19:57:28Z",
+    "updated_at": "2026-03-11T14:50:46Z",
     "github_reviewed_at": "2026-03-03T19:57:23Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

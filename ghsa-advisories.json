@@ -1144,7 +1144,7 @@
   },
   {
     "ghsa_id": "GHSA-vffc-f7r7-rx2w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32063",
     "severity": "high",
     "title": "OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux)",
     "published": "2026-03-03",
@@ -1335,7 +1335,7 @@
   },
   {
     "ghsa_id": "GHSA-3c6h-g97w-fg78",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32059",
     "severity": "high",
     "title": "OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode",
     "published": "2026-03-03",
@@ -1916,7 +1916,7 @@
   },
   {
     "ghsa_id": "GHSA-56pc-6hvp-4gv4",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32061",
     "severity": "medium",
     "title": "OpenClaw vulnerable to arbitrary file read via $include directive",
     "published": "2026-03-03",

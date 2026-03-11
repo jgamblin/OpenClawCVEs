@@ -3,14 +3,17 @@
 > Complete listing of all 158 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-03-11 12:20 UTC</sub>
+<sub>Last updated: 2026-03-11 18:24 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (11)
+## GHSAs with CVE IDs (14)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
+| [GHSA-vffc-f7r7-rx2w](https://github.com/advisories/GHSA-vffc-f7r7-rx2w) | CVE-2026-32063 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux) | npm/openclaw | 2026.2.21 | 2026-03-03 |
+| [GHSA-3c6h-g97w-fg78](https://github.com/advisories/GHSA-3c6h-g97w-fg78) | CVE-2026-32059 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode | npm/openclaw | 2026.2.23 | 2026-03-03 |
+| [GHSA-56pc-6hvp-4gv4](https://github.com/advisories/GHSA-56pc-6hvp-4gv4) | CVE-2026-32061 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw vulnerable to arbitrary file read via $include directive | npm/openclaw | 2026.2.17 | 2026-03-03 |
 | [GHSA-mj5r-hh7j-4gxf](https://github.com/advisories/GHSA-mj5r-hh7j-4gxf) | CVE-2026-28480 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram allowlist authorization accepted mutable usernames | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-rq6g-px6m-c248](https://github.com/advisories/GHSA-rq6g-px6m-c248) | CVE-2026-28469 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-3fqr-4cg8-h96q](https://github.com/advisories/GHSA-3fqr-4cg8-h96q) | CVE-2026-26317 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
@@ -25,7 +28,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (102)
+## GHSAs Without CVE — Potential Future CVEs (99)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
@@ -42,9 +45,7 @@
 | [GHSA-w9cg-v44m-4qv8](https://github.com/advisories/GHSA-w9cg-v44m-4qv8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by BASH_ENV / ENV startup-file injection into spawned shell commands | CWE-15, CWE-78 | 2026.2.21 | 2026-03-03 |
 | [GHSA-xmv6-r34m-62p4](https://github.com/advisories/GHSA-xmv6-r34m-62p4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Sandbox media fallback tmp symlink alias bypass allows host file reads outside sandboxRoot | CWE-22, CWE-59 | 2026.2.25 | 2026-03-03 |
 | [GHSA-g75x-8qqm-2vxp](https://github.com/advisories/GHSA-g75x-8qqm-2vxp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's `tools.exec.safeBins` PATH-hijack allowed trojan binaries to bypass allowlist checks | CWE-426, CWE-863 | 2026.2.19 | 2026-03-03 |
-| [GHSA-vffc-f7r7-rx2w](https://github.com/advisories/GHSA-vffc-f7r7-rx2w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux) | CWE-77 | 2026.2.21 | 2026-03-03 |
 | [GHSA-pj5x-38rw-6fph](https://github.com/advisories/GHSA-pj5x-38rw-6fph) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a Command Injection via unescaped environment assignments in Windows Scheduled Task script generation | CWE-78 | 2026.2.19 | 2026-03-03 |
-| [GHSA-3c6h-g97w-fg78](https://github.com/advisories/GHSA-3c6h-g97w-fg78) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode | CWE-184, CWE-863 | 2026.2.23 | 2026-03-03 |
 | [GHSA-mqr9-vqhq-3jxw](https://github.com/advisories/GHSA-mqr9-vqhq-3jxw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Windows Scheduled Task script generation allowed local command injection via unsafe cmd argument handling | CWE-116 | 2026.2.19 | 2026-03-03 |
 | [GHSA-p4wh-cr8m-gm6c](https://github.com/advisories/GHSA-p4wh-cr8m-gm6c) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: shell-env trusted-prefix fallback allowed attacker-controlled binary execution via $SHELL | CWE-184, CWE-829 | 2026.2.23 | 2026-03-03 |
 | [GHSA-5gj7-jf77-q2q2](https://github.com/advisories/GHSA-5gj7-jf77-q2q2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: safeBins static default trusted dirs allow writable-dir binary hijack (`jq`) | CWE-428, CWE-829 | 2026.2.24 | 2026-03-03 |
@@ -100,7 +101,6 @@
 | [GHSA-h3rm-6x7g-882f](https://github.com/advisories/GHSA-h3rm-6x7g-882f) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's Node system.run approval hardening wrapper semantic drift can execute unintended local scripts | CWE-88 | 2026.3.2 | 2026-03-03 |
 | [GHSA-2858-xg23-26fp](https://github.com/advisories/GHSA-2858-xg23-26fp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Node camera URL payload host-binding bypass allowed gateway fetch pivots | CWE-918 | 2026.3.2 | 2026-03-03 |
 | [GHSA-x4vp-4235-65hg](https://github.com/advisories/GHSA-x4vp-4235-65hg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has pre-auth webhook body parsing that can enable unauthenticated slow-request DoS | CWE-400 | 2026.3.2 | 2026-03-03 |
-| [GHSA-56pc-6hvp-4gv4](https://github.com/advisories/GHSA-56pc-6hvp-4gv4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw vulnerable to arbitrary file read via $include directive | CWE-22 | 2026.2.17 | 2026-03-03 |
 | [GHSA-9868-vxmx-w862](https://github.com/advisories/GHSA-9868-vxmx-w862) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's system.run allowlist bypass via shell line-continuation command substitution | CWE-78, CWE-863 | 2026.2.22 | 2026-03-03 |
 | [GHSA-f8mp-vj46-cq8v](https://github.com/advisories/GHSA-f8mp-vj46-cq8v) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's shell env fallback trusts unvalidated SHELL path from host environment | CWE-78, CWE-426 | 2026.2.22 | 2026-03-03 |
 | [GHSA-qhrr-grqp-6x2g](https://github.com/advisories/GHSA-qhrr-grqp-6x2g) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's tools.exec.safeBins trusted PATH directories allowed binary shadowing in allowlist mode | CWE-426 | 2026.2.22 | 2026-03-03 |
@@ -204,6 +204,9 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-28478 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-28480 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-29612 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
+| CVE-2026-32059 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
+| CVE-2026-32061 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
+| CVE-2026-32063 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
 
 ---
 
