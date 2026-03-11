@@ -119,13 +119,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-48wf-g7cp-gr3m"
   },
   {
-    "ghsa_id": "GHSA-6j27-pc5c-m8w8",
-    "severity": "MEDIUM",
-    "title": "allow-always wrapper persistence could bypass future approvals and enable command execution",
-    "published": "2026-02-23",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6j27-pc5c-m8w8"
-  },
-  {
     "ghsa_id": "GHSA-6x2m-hqfw-hvpj",
     "severity": "MEDIUM",
     "title": "Node exec approvals could be replayed across nodes",
@@ -145,6 +138,13 @@
     "title": "Sandbox media TOCTOU could read files outside sandbox root",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xmq-g46g-f8pv"
+  },
+  {
+    "ghsa_id": "GHSA-8g75-q649-6pv6",
+    "severity": "MEDIUM",
+    "title": "system.run approvals did not bind mutable script operands across approval and execution",
+    "published": "2026-03-10",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8g75-q649-6pv6"
   },
   {
     "ghsa_id": "GHSA-8j2w-6fmm-m587",
@@ -187,6 +187,13 @@
     "title": "Message action attachment hydration bypasses local media root checks when sandboxRoot is unset",
     "published": "2026-02-25",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fqcm-97m6-w7rm"
+  },
+  {
+    "ghsa_id": "GHSA-g7cr-9h7q-4qxq",
+    "severity": "MEDIUM",
+    "title": "MS Teams sender allowlist bypass when route allowlist is configured and sender allowlist is empty",
+    "published": "2026-03-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g7cr-9h7q-4qxq"
   },
   {
     "ghsa_id": "GHSA-g99v-8hwm-g76g",
@@ -236,6 +243,13 @@
     "title": "Slack system events bypass sender authorization in member and message subtype handlers",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8cg-4474-49v8"
+  },
+  {
+    "ghsa_id": "GHSA-vhwf-4x96-vqx2",
+    "severity": "MEDIUM",
+    "title": "skills-install-download can be redirected outside the tools root by rebinding the validated base path",
+    "published": "2026-03-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vhwf-4x96-vqx2"
   },
   {
     "ghsa_id": "GHSA-vmqr-rc7x-3446",
