@@ -5470,12 +5470,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6h-g97w-fg78",
       "https://github.com/openclaw/openclaw/commit/3b8e33037ae2e12af7beb56fcf0346f1f8cbde6f",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32059",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-sort-long-option-abbreviation-in-toolsexecsafebins",
       "https://github.com/advisories/GHSA-3c6h-g97w-fg78"
     ],
     "published_at": "2026-03-03T21:41:59Z",
-    "updated_at": "2026-03-11T14:50:06Z",
+    "updated_at": "2026-03-11T20:38:42Z",
     "github_reviewed_at": "2026-03-03T21:41:59Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-11T14:16:27Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5494,8 +5496,8 @@
         "score": 8.8
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.7
       }
     },
     "cwes": [
@@ -7828,12 +7830,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-56pc-6hvp-4gv4",
       "https://github.com/openclaw/openclaw/commit/d1c00dbb7c64a39e205464dae7f2a068420e91c1",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32061",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-include-directive-path-traversal",
       "https://github.com/advisories/GHSA-56pc-6hvp-4gv4"
     ],
     "published_at": "2026-03-03T19:57:23Z",
-    "updated_at": "2026-03-11T14:50:46Z",
+    "updated_at": "2026-03-11T20:38:38Z",
     "github_reviewed_at": "2026-03-03T19:57:23Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-11T14:16:28Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -7848,8 +7852,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+        "score": 4.4
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
@@ -7889,8 +7893,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:N/A:N",
+      "score": 4.4
     }
   },
   {
