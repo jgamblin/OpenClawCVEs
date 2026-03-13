@@ -1,5 +1,26 @@
 [
   {
+    "ghsa_id": "GHSA-5wcw-8jjv-m286",
+    "cve_id": "CVE-2026-32302",
+    "severity": "high",
+    "title": "OpenClaw: Untrusted web origins can obtain authenticated operator.admin access in trusted-proxy mode",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/advisories/GHSA-5wcw-8jjv-m286",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.11"
+    ],
+    "fixed_versions": [
+      "2026.3.11"
+    ],
+    "fixed_version": "2026.3.11",
+    "cwes": [
+      "CWE-346"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-8j2w-6fmm-m587",
     "cve_id": null,
     "severity": "medium",
@@ -2123,27 +2144,6 @@
       "2026.2.19"
     ],
     "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-22"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-56pc-6hvp-4gv4",
-    "cve_id": "CVE-2026-32061",
-    "severity": "medium",
-    "title": "OpenClaw vulnerable to arbitrary file read via $include directive",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-56pc-6hvp-4gv4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.17"
-    ],
-    "fixed_versions": [
-      "2026.2.17"
-    ],
-    "fixed_version": "2026.2.17",
     "cwes": [
       "CWE-22"
     ]

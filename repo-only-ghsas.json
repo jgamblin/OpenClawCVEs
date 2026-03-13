@@ -14,13 +14,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff"
   },
   {
-    "ghsa_id": "GHSA-5wcw-8jjv-m286",
-    "severity": "HIGH",
-    "title": "Browser-originated WebSocket connections could bypass origin validation in trusted-proxy mode",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5wcw-8jjv-m286"
-  },
-  {
     "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
     "severity": "HIGH",
     "title": "ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
