@@ -1,12 +1,5 @@
 [
   {
-    "ghsa_id": "GHSA-4jpw-hj22-2xmc",
-    "severity": "CRITICAL",
-    "title": "Pairing-scoped device tokens could mint `operator.admin` and reach node RCE",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc"
-  },
-  {
     "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
     "severity": "CRITICAL",
     "title": "WebSocket shared-auth connections could self-declare elevated scopes",
@@ -21,11 +14,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2rqg-gjgv-84jm"
   },
   {
-    "ghsa_id": "GHSA-4w7m-58cg-cmff",
+    "ghsa_id": "GHSA-474h-prjg-mmw3",
     "severity": "HIGH",
-    "title": "Leaf subagents could steer sibling sessions across sandbox boundaries",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff"
+    "title": "Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3"
   },
   {
     "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
@@ -33,6 +26,13 @@
     "title": "ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6f6j-wx9w-ff4j"
+  },
+  {
+    "ghsa_id": "GHSA-8mvx-p2r9-r375",
+    "severity": "HIGH",
+    "title": "web tools strict URL guard could lose DNS pinning when env proxy is configured",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8mvx-p2r9-r375"
   },
   {
     "ghsa_id": "GHSA-99qw-6mr3-36qr",
@@ -63,13 +63,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jr6x-2q95-fh2g"
   },
   {
-    "ghsa_id": "GHSA-mj4p-rc52-m843",
-    "severity": "HIGH",
-    "title": "Sandbox staged writes could escape the verified parent directory before commit",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mj4p-rc52-m843"
-  },
-  {
     "ghsa_id": "GHSA-mwxv-35wr-4vvj",
     "severity": "HIGH",
     "title": "Gateway plugin auth bypass via encoded dot-segment traversal in protected /api/channels paths",
@@ -91,13 +84,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q399-23r3-hfx4"
   },
   {
-    "ghsa_id": "GHSA-qc36-x95h-7j53",
-    "severity": "HIGH",
-    "title": "Unrecognized script runners could bypass `system.run` approval integrity",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53"
-  },
-  {
     "ghsa_id": "GHSA-r65x-2hqr-j5hf",
     "severity": "HIGH",
     "title": "Node reconnect metadata spoofing could bypass platform-based node command policy",
@@ -110,13 +96,6 @@
     "title": "Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
     "published": "2026-03-13",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8"
-  },
-  {
-    "ghsa_id": "GHSA-rw39-5899-8mxp",
-    "severity": "HIGH",
-    "title": "Node-host approvals could show misleading shell payloads instead of the executed argv",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rw39-5899-8mxp"
   },
   {
     "ghsa_id": "GHSA-vmhq-cqm9-6p7q",
@@ -133,18 +112,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wcxr-59v9-rxr8"
   },
   {
-    "ghsa_id": "GHSA-xf99-j42q-5w5p",
-    "severity": "HIGH",
-    "title": "Unbound interpreter and runtime commands could bypass node-host approval integrity",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xf99-j42q-5w5p"
-  },
-  {
-    "ghsa_id": "GHSA-xw77-45gv-p728",
-    "severity": "HIGH",
-    "title": "Plugin subagent routes could bypass gateway authorization with synthetic admin scopes",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xw77-45gv-p728"
+    "ghsa_id": "GHSA-2858-xg23-26fp",
+    "severity": "MEDIUM",
+    "title": "Node camera URL payload host-binding bypass allowed gateway fetch pivots",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2858-xg23-26fp"
   },
   {
     "ghsa_id": "GHSA-33hm-cq8r-wc49",
@@ -152,6 +124,13 @@
     "title": "Temporary path handling could write outside OpenClaw temp boundary",
     "published": "2026-02-25",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-33hm-cq8r-wc49"
+  },
+  {
+    "ghsa_id": "GHSA-354r-7mfh-7rh2",
+    "severity": "MEDIUM",
+    "title": "Discord DM reaction ingress missed dmPolicy/allowFrom checks in restricted setups",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-354r-7mfh-7rh2"
   },
   {
     "ghsa_id": "GHSA-36h3-7c54-j27r",
@@ -166,6 +145,13 @@
     "title": "Unicode canonicalization drift in node metadata policy classification could broaden node allowlists",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-392f-ggf5-fp3c"
+  },
+  {
+    "ghsa_id": "GHSA-3pxq-f3cp-jmxp",
+    "severity": "MEDIUM",
+    "title": "Unified root-bound write hardening for browser output and related path-boundary flows",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pxq-f3cp-jmxp"
   },
   {
     "ghsa_id": "GHSA-5m9r-p9g7-679c",
@@ -196,13 +182,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xmq-g46g-f8pv"
   },
   {
-    "ghsa_id": "GHSA-8jhh-jcqg-mj5p",
-    "severity": "MEDIUM",
-    "title": "Channel commands could bypass account-scoped `configWrites` restrictions",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8jhh-jcqg-mj5p"
-  },
-  {
     "ghsa_id": "GHSA-8m9v-xpgf-g99m",
     "severity": "MEDIUM",
     "title": "Unauthorized sender bypass in stop triggers and /models command authorization",
@@ -215,6 +194,13 @@
     "title": "Discord guild reaction ingress could bypass users and roles allowlists",
     "published": "2026-03-12",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9vvh-2768-c8vp"
+  },
+  {
+    "ghsa_id": "GHSA-cfvj-7rx7-fc7c",
+    "severity": "MEDIUM",
+    "title": "stageSandboxMedia destination symlink traversal can overwrite files outside sandbox workspace",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cfvj-7rx7-fc7c"
   },
   {
     "ghsa_id": "GHSA-f5mf-3r52-r83w",
@@ -259,18 +245,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g99v-8hwm-g76g"
   },
   {
+    "ghsa_id": "GHSA-h3rm-6x7g-882f",
+    "severity": "MEDIUM",
+    "title": "Node system.run approval hardening wrapper semantic drift can execute unintended local scripts",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h3rm-6x7g-882f"
+  },
+  {
     "ghsa_id": "GHSA-hjvp-qhm6-wrh2",
     "severity": "MEDIUM",
     "title": "Node system.run approval context-binding weakness in approval-enabled host=node flows",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hjvp-qhm6-wrh2"
-  },
-  {
-    "ghsa_id": "GHSA-jf6w-m8jw-jfxc",
-    "severity": "MEDIUM",
-    "title": "Write-scoped callers could reach admin-only session reset logic through `agent`",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jf6w-m8jw-jfxc"
   },
   {
     "ghsa_id": "GHSA-jv6r-27ww-4gw4",
@@ -301,6 +287,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qj22-xqjr-v83v"
   },
   {
+    "ghsa_id": "GHSA-r54r-wmmq-mh84",
+    "severity": "MEDIUM",
+    "title": "ZIP extraction race could write outside destination via parent symlink rebind",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r54r-wmmq-mh84"
+  },
+  {
+    "ghsa_id": "GHSA-v865-p3gq-hw6m",
+    "severity": "MEDIUM",
+    "title": "Encoded-path auth bypass in plugin `/api/channels` route classification",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v865-p3gq-hw6m"
+  },
+  {
     "ghsa_id": "GHSA-vpj2-69hf-rppw",
     "severity": "MEDIUM",
     "title": "Browser control startup could continue unauthenticated after auth bootstrap failure",
@@ -315,6 +315,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wr6m-jg37-68xh"
   },
   {
+    "ghsa_id": "GHSA-x4vp-4235-65hg",
+    "severity": "MEDIUM",
+    "title": "Pre-auth webhook body parsing can enable unauthenticated slow-request DoS",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x4vp-4235-65hg"
+  },
+  {
     "ghsa_id": "GHSA-x82f-27x3-q89c",
     "severity": "MEDIUM",
     "title": "TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries",
@@ -322,25 +329,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x82f-27x3-q89c"
   },
   {
-    "ghsa_id": "GHSA-xvx8-77m6-gwg6",
-    "severity": "MEDIUM",
-    "title": "Sandbox `writeFile` commit could race outside the validated path",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xvx8-77m6-gwg6"
-  },
-  {
     "ghsa_id": "GHSA-6g25-pc82-vfwp",
     "severity": "LOW",
     "title": "macOS beta onboarding exposed PKCE verifier via OAuth state",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6g25-pc82-vfwp"
-  },
-  {
-    "ghsa_id": "GHSA-qvr7-g57c-mrc7",
-    "severity": "LOW",
-    "title": "Unavailable local auth SecretRefs could fall through to remote credentials in local mode",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qvr7-g57c-mrc7"
   },
   {
     "ghsa_id": "GHSA-rm2p-j3r7-4x4j",
