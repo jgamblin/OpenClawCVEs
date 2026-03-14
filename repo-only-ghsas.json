@@ -1,19 +1,5 @@
 [
   {
-    "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
-    "severity": "CRITICAL",
-    "title": "WebSocket shared-auth connections could self-declare elevated scopes",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rqpp-rjj8-7wv8"
-  },
-  {
-    "ghsa_id": "GHSA-2rqg-gjgv-84jm",
-    "severity": "HIGH",
-    "title": "Gateway `agent` calls could override the workspace boundary",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2rqg-gjgv-84jm"
-  },
-  {
     "ghsa_id": "GHSA-474h-prjg-mmw3",
     "severity": "HIGH",
     "title": "Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
@@ -33,20 +19,6 @@
     "title": "web tools strict URL guard could lose DNS pinning when env proxy is configured",
     "published": "2026-03-03",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8mvx-p2r9-r375"
-  },
-  {
-    "ghsa_id": "GHSA-99qw-6mr3-36qr",
-    "severity": "HIGH",
-    "title": "Workspace plugin auto-discovery allowed code execution from cloned repositories",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-99qw-6mr3-36qr"
-  },
-  {
-    "ghsa_id": "GHSA-g353-mgv3-8pcj",
-    "severity": "HIGH",
-    "title": "Feishu webhook mode accepted forged events when only `verificationToken` was configured",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g353-mgv3-8pcj"
   },
   {
     "ghsa_id": "GHSA-hwpq-rrpf-pgcq",
@@ -91,27 +63,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r65x-2hqr-j5hf"
   },
   {
-    "ghsa_id": "GHSA-r7vr-gr74-94p8",
-    "severity": "HIGH",
-    "title": "Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8"
-  },
-  {
-    "ghsa_id": "GHSA-vmhq-cqm9-6p7q",
-    "severity": "HIGH",
-    "title": "`browser.request` let `operator.write` persist admin-only browser profile changes",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vmhq-cqm9-6p7q"
-  },
-  {
-    "ghsa_id": "GHSA-wcxr-59v9-rxr8",
-    "severity": "HIGH",
-    "title": "`session_status` let sandboxed subagents access parent or sibling session state",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wcxr-59v9-rxr8"
-  },
-  {
     "ghsa_id": "GHSA-2858-xg23-26fp",
     "severity": "MEDIUM",
     "title": "Node camera URL payload host-binding bypass allowed gateway fetch pivots",
@@ -154,11 +105,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pxq-f3cp-jmxp"
   },
   {
-    "ghsa_id": "GHSA-5m9r-p9g7-679c",
+    "ghsa_id": "GHSA-553v-f69r-656j",
     "severity": "MEDIUM",
-    "title": "Zalo webhook rate limiting could be bypassed before secret validation",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5m9r-p9g7-679c"
+    "title": "Unpaired device identity can bypass operator pairing and self-assign operator scopes with shared auth",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-553v-f69r-656j"
+  },
+  {
+    "ghsa_id": "GHSA-5gj7-jf77-q2q2",
+    "severity": "MEDIUM",
+    "title": "safeBins static default trusted dirs allow writable-dir binary hijack (`jq`)",
+    "published": "2026-02-25",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5gj7-jf77-q2q2"
   },
   {
     "ghsa_id": "GHSA-6rcp-vxwf-3mfp",
@@ -168,11 +126,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6rcp-vxwf-3mfp"
   },
   {
-    "ghsa_id": "GHSA-7h7g-x2px-94hj",
+    "ghsa_id": "GHSA-77hf-7fqf-f227",
     "severity": "MEDIUM",
-    "title": "Pairing setup codes exposed long-lived shared gateway credentials instead of short-lived bootstrap tokens",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7h7g-x2px-94hj"
+    "title": "skills-install-download: tar.bz2 extraction bypassed archive safety parity checks (local DoS)",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-77hf-7fqf-f227"
   },
   {
     "ghsa_id": "GHSA-7xmq-g46g-f8pv",
@@ -189,13 +147,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8m9v-xpgf-g99m"
   },
   {
-    "ghsa_id": "GHSA-9vvh-2768-c8vp",
-    "severity": "MEDIUM",
-    "title": "Discord guild reaction ingress could bypass users and roles allowlists",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9vvh-2768-c8vp"
-  },
-  {
     "ghsa_id": "GHSA-cfvj-7rx7-fc7c",
     "severity": "MEDIUM",
     "title": "stageSandboxMedia destination symlink traversal can overwrite files outside sandbox workspace",
@@ -203,25 +154,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cfvj-7rx7-fc7c"
   },
   {
-    "ghsa_id": "GHSA-f5mf-3r52-r83w",
-    "severity": "MEDIUM",
-    "title": "Zalouser allowlist authorization matched mutable group names by default",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w"
-  },
-  {
     "ghsa_id": "GHSA-f7ww-2725-qvw2",
     "severity": "MEDIUM",
     "title": "Node system.run approval bypass via parent-symlink cwd rebind",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f7ww-2725-qvw2"
-  },
-  {
-    "ghsa_id": "GHSA-f8r2-vg7x-gh8m",
-    "severity": "MEDIUM",
-    "title": "Exec approval allowlist patterns overmatched on POSIX paths",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m"
   },
   {
     "ghsa_id": "GHSA-fgvx-58p6-gjwc",
@@ -259,18 +196,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hjvp-qhm6-wrh2"
   },
   {
+    "ghsa_id": "GHSA-j26j-7qc4-3mrf",
+    "severity": "MEDIUM",
+    "title": "MS Teams fileConsent/invoke missing conversation binding allowed cross-conversation pending-upload consumption",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j26j-7qc4-3mrf"
+  },
+  {
     "ghsa_id": "GHSA-jv6r-27ww-4gw4",
     "severity": "MEDIUM",
     "title": "DM pairing-store identities could satisfy group allowlist authorization",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jv6r-27ww-4gw4"
-  },
-  {
-    "ghsa_id": "GHSA-m69h-jm2f-2pv8",
-    "severity": "MEDIUM",
-    "title": "Feishu reaction events could bypass group authorization and mention gating",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m69h-jm2f-2pv8"
   },
   {
     "ghsa_id": "GHSA-mwcg-wfq3-4gjc",
@@ -306,6 +243,13 @@
     "title": "Browser control startup could continue unauthenticated after auth bootstrap failure",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw"
+  },
+  {
+    "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
+    "severity": "MEDIUM",
+    "title": "Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
+    "published": "2026-03-03",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpg9-4g4v-f9rc"
   },
   {
     "ghsa_id": "GHSA-wr6m-jg37-68xh",
