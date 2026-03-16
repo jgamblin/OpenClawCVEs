@@ -2134,12 +2134,13 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-5wcw-8jjv-m286",
       "https://github.com/openclaw/openclaw/commit/ebed3bbde1a72a1aaa9b87b63b91e7c04a50036b",
       "https://github.com/openclaw/openclaw/releases/tag/v2026.3.11",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32302",
       "https://github.com/advisories/GHSA-5wcw-8jjv-m286"
     ],
     "published_at": "2026-03-12T20:32:59Z",
-    "updated_at": "2026-03-12T20:32:59Z",
+    "updated_at": "2026-03-16T17:07:29Z",
     "github_reviewed_at": "2026-03-12T20:32:59Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-13T19:54:41Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
