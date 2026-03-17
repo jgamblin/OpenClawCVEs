@@ -1,5 +1,111 @@
 [
   {
+    "ghsa_id": "GHSA-vr7j-g7jv-h5mp",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw session transcript files were created without forced user-only permissions",
+    "published": "2026-03-16",
+    "html_url": "https://github.com/advisories/GHSA-vr7j-g7jv-h5mp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.15"
+    ],
+    "fixed_versions": [
+      "2026.2.17"
+    ],
+    "fixed_version": "2026.2.17",
+    "cwes": [
+      "CWE-276",
+      "CWE-732"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g2f6-pwvx-r275",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpneClaw accepts unsanitized iMessage attachment paths which allowed SCP remote-path command injection",
+    "published": "2026-03-16",
+    "html_url": "https://github.com/advisories/GHSA-g2f6-pwvx-r275",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.12"
+    ],
+    "fixed_versions": [
+      "2026.3.13"
+    ],
+    "fixed_version": "2026.3.13",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jq3f-vjww-8rq7",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw Telegram webhook request bodies were read before secret validation, enabling unauthenticated resource exhaustion",
+    "published": "2026-03-16",
+    "html_url": "https://github.com/advisories/GHSA-jq3f-vjww-8rq7",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.12"
+    ],
+    "fixed_versions": [
+      "2026.3.13"
+    ],
+    "fixed_version": "2026.3.13",
+    "cwes": [
+      "CWE-400"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-63f5-hhc7-cx6p",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw bootstrap setup codes could be replayed to escalate pending pairing scopes before approval",
+    "published": "2026-03-16",
+    "html_url": "https://github.com/advisories/GHSA-63f5-hhc7-cx6p",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.12"
+    ],
+    "fixed_versions": [
+      "2026.3.13"
+    ],
+    "fixed_version": "2026.3.13",
+    "cwes": [
+      "CWE-269"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-xwcj-hwhf-h378",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw Telegram media fetch errors exposed bot tokens in logged file URLs",
+    "published": "2026-03-16",
+    "html_url": "https://github.com/advisories/GHSA-xwcj-hwhf-h378",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.12"
+    ],
+    "fixed_versions": [
+      "2026.3.13"
+    ],
+    "fixed_version": "2026.3.13",
+    "cwes": [
+      "CWE-532"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-5m9r-p9g7-679c",
     "cve_id": null,
     "severity": "medium",
@@ -2036,113 +2142,6 @@
     "fixed_version": "2026.2.25",
     "cwes": [
       "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-3x3x-h76w-hp98",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw exec allowlist safeBins short-option bypass could permit arbitrary file write",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-3x3x-h76w-hp98",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.19"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-184"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-pfv7-rr5m-qmv6",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has auth inconsistency on local Browser Extension Relay /extension endpoint",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-pfv7-rr5m-qmv6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.19"
-    ],
-    "fixed_versions": [
-      "2026.2.19"
-    ],
-    "fixed_version": "2026.2.19",
-    "cwes": [
-      "CWE-306"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-3c6h-g97w-fg78",
-    "cve_id": "CVE-2026-32059",
-    "severity": "high",
-    "title": "OpenClaw's tools.exec.safeBins sort long-option abbreviation bypass can skip exec approval in allowlist mode",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-3c6h-g97w-fg78",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-184",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-j4xf-96qf-rx69",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has a Feishu allowFrom authorization bypass via display-name collision",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-j4xf-96qf-rx69",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-639",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-9p38-94jf-hgjj",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has macOS `system.run` allowlist bypass via quoted command substitution",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-9p38-94jf-hgjj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-78"
     ]
   },
   {

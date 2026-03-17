@@ -7,13 +7,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3"
   },
   {
-    "ghsa_id": "GHSA-63f5-hhc7-cx6p",
-    "severity": "HIGH",
-    "title": "Bootstrap setup codes could be replayed to escalate pending pairing scopes before approval",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p"
-  },
-  {
     "ghsa_id": "GHSA-6f6j-wx9w-ff4j",
     "severity": "HIGH",
     "title": "ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
@@ -33,13 +26,6 @@
     "title": "system.run approval identity mismatch could execute a different binary than displayed",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hwpq-rrpf-pgcq"
-  },
-  {
-    "ghsa_id": "GHSA-jq3f-vjww-8rq7",
-    "severity": "HIGH",
-    "title": "Telegram webhook request bodies were read before secret validation, enabling unauthenticated resource exhaustion",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jq3f-vjww-8rq7"
   },
   {
     "ghsa_id": "GHSA-jr6x-2q95-fh2g",
@@ -161,13 +147,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fgvx-58p6-gjwc"
   },
   {
-    "ghsa_id": "GHSA-g2f6-pwvx-r275",
-    "severity": "MEDIUM",
-    "title": "Unsanitized iMessage attachment paths allowed SCP remote-path command injection",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g2f6-pwvx-r275"
-  },
-  {
     "ghsa_id": "GHSA-g99v-8hwm-g76g",
     "severity": "MEDIUM",
     "title": "web_search citation redirect SSRF via private-network-allowing policy",
@@ -238,13 +217,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw"
   },
   {
-    "ghsa_id": "GHSA-vr7j-g7jv-h5mp",
-    "severity": "MEDIUM",
-    "title": "Session transcript files were created without forced user-only permissions",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-g7jv-h5mp"
-  },
-  {
     "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
     "severity": "MEDIUM",
     "title": "Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
@@ -271,13 +243,6 @@
     "title": "TOCTOU symlink race in writeFileWithinRoot could create or truncate files outside root boundaries",
     "published": "2026-03-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x82f-27x3-q89c"
-  },
-  {
-    "ghsa_id": "GHSA-xwcj-hwhf-h378",
-    "severity": "MEDIUM",
-    "title": "Telegram media fetch errors exposed bot tokens in logged file URLs",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xwcj-hwhf-h378"
   },
   {
     "ghsa_id": "GHSA-6g25-pc82-vfwp",
