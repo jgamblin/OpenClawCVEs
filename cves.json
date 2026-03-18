@@ -1,13 +1,5 @@
 [
   {
-    "cve_id": "CVE-2026-28363",
-    "severity": "CRITICAL",
-    "cvss": 9.9,
-    "title": "In OpenClaw before 2026.2.23, tools.exec.safeBins validation for sort could be\u2026",
-    "date_published": "2026-02-27",
-    "ghsa_id": "GHSA-3c6h-g97w-fg78"
-  },
-  {
     "cve_id": "CVE-2026-28466",
     "severity": "CRITICAL",
     "cvss": 9.4,
@@ -22,6 +14,14 @@
     "title": "OpenClaw Nextcloud Talk < 2026.2.6 - Allowlist Bypass via actor.name Display Name Spoofing",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-r5h9-vjqc-hq3r"
+  },
+  {
+    "cve_id": "CVE-2026-28391",
+    "severity": "CRITICAL",
+    "cvss": 9.2,
+    "title": "OpenClaw < 2026.2.2 - Command Injection via cmd.exe Parsing Bypass in Allowlist Enforcement",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-qj77-c3c8-9c3q"
   },
   {
     "cve_id": "CVE-2026-28446",
@@ -64,28 +64,12 @@
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
-    "cve_id": "CVE-2026-22171",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw < 2026.2.19 - Path Traversal in Feishu Media Temporary File Naming",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-vj3g-5px3-gr46"
-  },
-  {
     "cve_id": "CVE-2026-28462",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.2.13 - Path Traversal in Trace and Download Output Paths",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-gq9c-wg68-gwj2"
-  },
-  {
-    "cve_id": "CVE-2026-28479",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.15 - Cache Poisoning via Deprecated SHA-1 Hash in Sandbox Configuration",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-fh3f-q9qw-93j9"
   },
   {
     "cve_id": "CVE-2026-28478",
@@ -104,12 +88,12 @@
     "ghsa_id": "GHSA-j27p-hq53-9wgc"
   },
   {
-    "cve_id": "CVE-2026-32060",
+    "cve_id": "CVE-2026-28479",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.14 - Path Traversal in apply_patch via Crafted Paths",
-    "date_published": "2026-03-11",
-    "ghsa_id": "GHSA-r5fq-947m-xm57"
+    "title": "OpenClaw < 2026.2.15 - Cache Poisoning via Deprecated SHA-1 Hash in Sandbox Configuration",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-fh3f-q9qw-93j9"
   },
   {
     "cve_id": "CVE-2026-32059",
@@ -120,6 +104,14 @@
     "ghsa_id": "GHSA-3c6h-g97w-fg78"
   },
   {
+    "cve_id": "CVE-2026-32060",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.2.14 - Path Traversal in apply_patch via Crafted Paths",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-r5fq-947m-xm57"
+  },
+  {
     "cve_id": "CVE-2026-32062",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -128,20 +120,20 @@
     "ghsa_id": "GHSA-mfg5-7q5g-f37j"
   },
   {
-    "cve_id": "CVE-2026-26323",
-    "severity": "HIGH",
-    "cvss": 8.6,
-    "title": "OpenClaw has a command injection in maintainer clawtributors updater",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-m7x8-2w3w-pr42"
-  },
-  {
     "cve_id": "CVE-2026-27001",
     "severity": "HIGH",
     "cvss": 8.6,
     "title": "OpenClaw: Unsanitized CWD path injection into LLM prompts",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-2qj5-gwg2-xwc4"
+  },
+  {
+    "cve_id": "CVE-2026-26323",
+    "severity": "HIGH",
+    "cvss": 8.6,
+    "title": "OpenClaw has a command injection in maintainer clawtributors updater",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-m7x8-2w3w-pr42"
   },
   {
     "cve_id": "CVE-2026-28456",
@@ -176,14 +168,6 @@
     "ghsa_id": "GHSA-g55j-c2v4-pjcg"
   },
   {
-    "cve_id": "CVE-2026-28482",
-    "severity": "HIGH",
-    "cvss": 8.4,
-    "title": "OpenClaw < 2026.2.12 - Path Traversal via Unsanitized sessionId and sessionFile Parameters",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-5xfq-5mr7-426q"
-  },
-  {
     "cve_id": "CVE-2026-28393",
     "severity": "HIGH",
     "cvss": 8.3,
@@ -214,6 +198,14 @@
     "title": "OpenClaw < 2026.2.14 - Privilege Escalation in Slack Slash Command Handler via Direct Messages",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-v773-r54f-q32w"
+  },
+  {
+    "cve_id": "CVE-2026-28454",
+    "severity": "HIGH",
+    "cvss": 8.2,
+    "title": "OpenClaw < 2026.2.2 - Authorization Bypass via Unauthenticated Telegram Webhook",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-fhvm-j76f-qmjv"
   },
   {
     "cve_id": "CVE-2026-28464",
@@ -312,12 +304,12 @@
     "ghsa_id": "GHSA-mp5h-m6qj-6292"
   },
   {
-    "cve_id": "CVE-2026-26316",
+    "cve_id": "CVE-2026-26321",
     "severity": "HIGH",
     "cvss": 7.5,
-    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
+    "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
     "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-pchc-86f6-8758"
+    "ghsa_id": "GHSA-8jpq-5h99-ff5r"
   },
   {
     "cve_id": "CVE-2026-26319",
@@ -328,12 +320,12 @@
     "ghsa_id": "GHSA-4hg8-92x6-h2f3"
   },
   {
-    "cve_id": "CVE-2026-26321",
+    "cve_id": "CVE-2026-26316",
     "severity": "HIGH",
     "cvss": 7.5,
-    "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
+    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
     "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-8jpq-5h99-ff5r"
+    "ghsa_id": "GHSA-pchc-86f6-8758"
   },
   {
     "cve_id": "CVE-2026-26324",
@@ -350,6 +342,14 @@
     "title": "OpenClaw 2026.1.5 < 2026.2.12 - Missing Authentication in Browser Control HTTP Endpoints",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-qpjj-47vm-64pj"
+  },
+  {
+    "cve_id": "CVE-2026-22179",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw < 2026.2.22 - Allowlist Bypass via Command Substitution in system.run",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-9p38-94jf-hgjj"
   },
   {
     "cve_id": "CVE-2026-28458",
@@ -376,20 +376,28 @@
     "ghsa_id": "GHSA-mqpw-46fh-299h"
   },
   {
+    "cve_id": "CVE-2026-22169",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.22 - Allowlist Bypass via sort Configuration in safeBins",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-vmqr-rc7x-3446"
+  },
+  {
+    "cve_id": "CVE-2026-22168",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.21 - Command Injection via cmd.exe /c Trailing Arguments in system.run",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-5v6x-rfc3-7qfr"
+  },
+  {
     "cve_id": "CVE-2026-22175",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw < 2026.2.23 - Exec Approval Bypass via Unrecognized Multiplexer Shell Wrappers",
     "date_published": "2026-03-18",
     "ghsa_id": "GHSA-gwqp-86q6-w47g"
-  },
-  {
-    "cve_id": "CVE-2026-26317",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-3fqr-4cg8-h96q"
   },
   {
     "cve_id": "CVE-2026-26320",
@@ -408,36 +416,20 @@
     "ghsa_id": "GHSA-pv58-549p-qh99"
   },
   {
+    "cve_id": "CVE-2026-26317",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-3fqr-4cg8-h96q"
+  },
+  {
     "cve_id": "CVE-2026-26329",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw has a path traversal in browser upload allows local file read",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-cv7m-c9jx-vg7q"
-  },
-  {
-    "cve_id": "CVE-2026-28459",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.2.12 - Arbitrary File Write via Untrusted sessionFile Path",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-64qx-vpxx-mvqf"
-  },
-  {
-    "cve_id": "CVE-2026-22169",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.2.22 - Allowlist Bypass via sort Configuration in safeBins",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-vmqr-rc7x-3446"
-  },
-  {
-    "cve_id": "CVE-2026-22168",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.2.21 - Command Injection via cmd.exe /c Trailing Arguments in system.run",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-5v6x-rfc3-7qfr"
   },
   {
     "cve_id": "CVE-2026-27522",
@@ -448,12 +440,36 @@
     "ghsa_id": "GHSA-fqcm-97m6-w7rm"
   },
   {
+    "cve_id": "CVE-2026-28459",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.12 - Arbitrary File Write via Untrusted sessionFile Path",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-64qx-vpxx-mvqf"
+  },
+  {
     "cve_id": "CVE-2026-28447",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw 2026.1.29-beta.1 < 2026.2.1 - Path Traversal in Plugin Installation via Package Name",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-qrq5-wjgg-rvqw"
+  },
+  {
+    "cve_id": "CVE-2026-22177",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.2.21 - Environment Variable Injection via Config env.vars",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-8fmp-37rc-p5g7"
+  },
+  {
+    "cve_id": "CVE-2026-22178",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.2.19 - ReDoS and Regex Injection via Unescaped Feishu Mention Metadata",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-c6hr-w26q-c636"
   },
   {
     "cve_id": "CVE-2026-27003",
@@ -464,12 +480,12 @@
     "ghsa_id": "GHSA-chf7-jq6g-qrwv"
   },
   {
-    "cve_id": "CVE-2026-27004",
+    "cve_id": "CVE-2026-27523",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
+    "title": "OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-m8v2-6wwh-r4gc"
   },
   {
     "cve_id": "CVE-2026-27488",
@@ -480,12 +496,12 @@
     "ghsa_id": "GHSA-w45g-5746-x9fp"
   },
   {
-    "cve_id": "CVE-2026-27523",
+    "cve_id": "CVE-2026-27004",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-m8v2-6wwh-r4gc"
+    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
   },
   {
     "cve_id": "CVE-2026-28394",
@@ -494,14 +510,6 @@
     "title": "OpenClaw < 2026.2.15 - Denial of Service via Unbounded Response Parsing in web_fetch Tool",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-p536-vvpp-9mc8"
-  },
-  {
-    "cve_id": "CVE-2026-28467",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.2.2 - SSRF via Attachment Media URL Hydration",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-wfp2-v9c7-fh79"
   },
   {
     "cve_id": "CVE-2026-28480",
@@ -520,20 +528,12 @@
     "ghsa_id": "GHSA-vffc-f7r7-rx2w"
   },
   {
-    "cve_id": "CVE-2026-22177",
+    "cve_id": "CVE-2026-27545",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw < 2026.2.21 - Environment Variable Injection via Config env.vars",
+    "title": "OpenClaw < 2026.2.26 - Approval Bypass via Parent Symlink Current Working Directory Rebind",
     "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-8fmp-37rc-p5g7"
-  },
-  {
-    "cve_id": "CVE-2026-22178",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.2.19 - ReDoS and Regex Injection via Unescaped Feishu Mention Metadata",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-c6hr-w26q-c636"
+    "ghsa_id": "GHSA-f7ww-2725-qvw2"
   },
   {
     "cve_id": "CVE-2026-27008",
@@ -608,6 +608,14 @@
     "ghsa_id": "GHSA-jwf4-8wf4-jf2m"
   },
   {
+    "cve_id": "CVE-2026-28395",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw 2026.1.14-1 < 2026.2.12 - Unintended Public Binding of Chrome Extension Relay via Wildcard cdpUrl",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-qw99-grcx-4pvm"
+  },
+  {
     "cve_id": "CVE-2026-28448",
     "severity": "MEDIUM",
     "cvss": 6.3,
@@ -656,14 +664,6 @@
     "ghsa_id": "GHSA-c37p-4qqg-3p76"
   },
   {
-    "cve_id": "CVE-2026-22181",
-    "severity": "MEDIUM",
-    "cvss": 6.1,
-    "title": "OpenClaw < 2026.3.2 - DNS Pinning Bypass via Environment Proxy Configuration in web_fetch",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-8mvx-p2r9-r375"
-  },
-  {
     "cve_id": "CVE-2026-22174",
     "severity": "MEDIUM",
     "cvss": 5.9,
@@ -688,20 +688,20 @@
     "ghsa_id": "GHSA-7vwx-582j-j332"
   },
   {
-    "cve_id": "CVE-2026-27009",
-    "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-37gc-85xm-2ww6"
-  },
-  {
     "cve_id": "CVE-2026-22217",
     "severity": "MEDIUM",
     "cvss": 5.8,
     "title": "OpenClaw 2026.2.22 < 2026.2.23 - Arbitrary Binary Execution via $SHELL Environment Variable Trusted Prefix Fallback",
     "date_published": "2026-03-18",
     "ghsa_id": "GHSA-p4wh-cr8m-gm6c"
+  },
+  {
+    "cve_id": "CVE-2026-27009",
+    "severity": "MEDIUM",
+    "cvss": 5.8,
+    "title": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-37gc-85xm-2ww6"
   },
   {
     "cve_id": "CVE-2026-28457",
@@ -720,28 +720,20 @@
     "ghsa_id": "GHSA-8mh7-phf8-xgfm"
   },
   {
-    "cve_id": "CVE-2026-27007",
-    "severity": "MEDIUM",
-    "cvss": 4.8,
-    "title": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-xxvh-5hwj-42pp"
-  },
-  {
-    "cve_id": "CVE-2026-27576",
-    "severity": "MEDIUM",
-    "cvss": 4.8,
-    "title": "OpenClaw: ACP prompt-size checks missing in local stdio bridge could reduce responsiveness with very large inputs",
-    "date_published": "2026-02-21",
-    "ghsa_id": "GHSA-cxpw-2g23-2vgw"
-  },
-  {
     "cve_id": "CVE-2026-22180",
     "severity": "MEDIUM",
     "cvss": 4.8,
     "title": "OpenClaw < 2026.3.2 - Path Confinement Bypass in Browser Output and File Write Operations",
     "date_published": "2026-03-18",
     "ghsa_id": "GHSA-3pxq-f3cp-jmxp"
+  },
+  {
+    "cve_id": "CVE-2026-27007",
+    "severity": "MEDIUM",
+    "cvss": 4.8,
+    "title": "OpenClaw's sandbox config hash sorted primitive arrays and suppressed needed container recreation",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-xxvh-5hwj-42pp"
   },
   {
     "cve_id": "CVE-2026-27485",
