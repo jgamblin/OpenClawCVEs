@@ -4405,7 +4405,7 @@
   },
   {
     "ghsa_id": "GHSA-jwf4-8wf4-jf2m",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22170",
     "url": "https://api.github.com/advisories/GHSA-jwf4-8wf4-jf2m",
     "html_url": "https://github.com/advisories/GHSA-jwf4-8wf4-jf2m",
     "summary": "OpenClaw: BlueBubbles (optional plugin) pairing/allowlist mismatch when allowFrom is empty",
@@ -4418,6 +4418,10 @@
       {
         "value": "GHSA-jwf4-8wf4-jf2m",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-22170",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4429,7 +4433,7 @@
       "https://github.com/advisories/GHSA-jwf4-8wf4-jf2m"
     ],
     "published_at": "2026-03-04T19:44:50Z",
-    "updated_at": "2026-03-04T19:44:51Z",
+    "updated_at": "2026-03-18T01:25:24Z",
     "github_reviewed_at": "2026-03-04T19:44:50Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6112,7 +6116,7 @@
   },
   {
     "ghsa_id": "GHSA-m8v2-6wwh-r4gc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27523",
     "url": "https://api.github.com/advisories/GHSA-m8v2-6wwh-r4gc",
     "html_url": "https://github.com/advisories/GHSA-m8v2-6wwh-r4gc",
     "summary": "OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths",
@@ -6125,6 +6129,10 @@
       {
         "value": "GHSA-m8v2-6wwh-r4gc",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27523",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6133,7 +6141,7 @@
       "https://github.com/advisories/GHSA-m8v2-6wwh-r4gc"
     ],
     "published_at": "2026-03-03T23:10:01Z",
-    "updated_at": "2026-03-03T23:10:03Z",
+    "updated_at": "2026-03-18T01:33:30Z",
     "github_reviewed_at": "2026-03-03T23:10:01Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7577,7 +7585,7 @@
   },
   {
     "ghsa_id": "GHSA-62f6-mrcj-v8h5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27524",
     "url": "https://api.github.com/advisories/GHSA-62f6-mrcj-v8h5",
     "html_url": "https://github.com/advisories/GHSA-62f6-mrcj-v8h5",
     "summary": "OpenClaw's runtime /debug override path accepted prototype-reserved keys",
@@ -7590,6 +7598,10 @@
       {
         "value": "GHSA-62f6-mrcj-v8h5",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27524",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7598,7 +7610,7 @@
       "https://github.com/advisories/GHSA-62f6-mrcj-v8h5"
     ],
     "published_at": "2026-03-03T22:12:20Z",
-    "updated_at": "2026-03-03T22:12:22Z",
+    "updated_at": "2026-03-18T01:33:53Z",
     "github_reviewed_at": "2026-03-03T22:12:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8283,7 +8295,7 @@
   },
   {
     "ghsa_id": "GHSA-v3j7-34xh-6g3w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22174",
     "url": "https://api.github.com/advisories/GHSA-v3j7-34xh-6g3w",
     "html_url": "https://github.com/advisories/GHSA-v3j7-34xh-6g3w",
     "summary": "OpenClaw Loopback CDP probe can leak Gateway token to local listener",
@@ -8296,6 +8308,10 @@
       {
         "value": "GHSA-v3j7-34xh-6g3w",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-22174",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8304,7 +8320,7 @@
       "https://github.com/advisories/GHSA-v3j7-34xh-6g3w"
     ],
     "published_at": "2026-03-03T21:50:34Z",
-    "updated_at": "2026-03-03T21:50:36Z",
+    "updated_at": "2026-03-18T01:29:45Z",
     "github_reviewed_at": "2026-03-03T21:50:34Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

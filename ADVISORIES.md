@@ -3,16 +3,20 @@
 > Complete listing of all 151 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-03-18 00:41 UTC</sub>
+<sub>Last updated: 2026-03-18 06:31 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (13)
+## GHSAs with CVE IDs (17)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
 | [GHSA-5wcw-8jjv-m286](https://github.com/advisories/GHSA-5wcw-8jjv-m286) | CVE-2026-32302 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Untrusted web origins can obtain authenticated operator.admin access in trusted-proxy mode | npm/openclaw | 2026.3.11 | 2026-03-12 |
+| [GHSA-jwf4-8wf4-jf2m](https://github.com/advisories/GHSA-jwf4-8wf4-jf2m) | CVE-2026-22170 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: BlueBubbles (optional plugin) pairing/allowlist mismatch when allowFrom is empty | npm/openclaw | 2026.2.22 | 2026-03-04 |
+| [GHSA-m8v2-6wwh-r4gc](https://github.com/advisories/GHSA-m8v2-6wwh-r4gc) | CVE-2026-27523 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths | npm/openclaw | 2026.2.24 | 2026-03-03 |
+| [GHSA-62f6-mrcj-v8h5](https://github.com/advisories/GHSA-62f6-mrcj-v8h5) | CVE-2026-27524 | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw's runtime /debug override path accepted prototype-reserved keys | npm/openclaw | 2026.2.21 | 2026-03-03 |
 | [GHSA-vffc-f7r7-rx2w](https://github.com/advisories/GHSA-vffc-f7r7-rx2w) | CVE-2026-32063 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Improperly Neutralizes Line Breaks in systemd Unit Generation Enables Local Command Execution (Linux) | npm/openclaw | 2026.2.21 | 2026-03-03 |
+| [GHSA-v3j7-34xh-6g3w](https://github.com/advisories/GHSA-v3j7-34xh-6g3w) | CVE-2026-22174 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Loopback CDP probe can leak Gateway token to local listener | npm/openclaw | 2026.2.22 | 2026-03-03 |
 | [GHSA-mj5r-hh7j-4gxf](https://github.com/advisories/GHSA-mj5r-hh7j-4gxf) | CVE-2026-28480 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram allowlist authorization accepted mutable usernames | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-rq6g-px6m-c248](https://github.com/advisories/GHSA-rq6g-px6m-c248) | CVE-2026-28469 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-3fqr-4cg8-h96q](https://github.com/advisories/GHSA-3fqr-4cg8-h96q) | CVE-2026-26317 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
@@ -27,7 +31,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (100)
+## GHSAs Without CVE — Potential Future CVEs (96)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
@@ -37,7 +41,6 @@
 | [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-02 |
 | [GHSA-2ch6-x3g4-7759](https://github.com/advisories/GHSA-2ch6-x3g4-7759) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's commands.allowFrom sender authorization accepted conversation identifiers via ctx.From | CWE-639 | 2026.2.23 | 2026-03-03 |
 | [GHSA-jj82-76v6-933r](https://github.com/advisories/GHSA-jj82-76v6-933r) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's exec allowlist wrapper analysis did not unwrap env/shell dispatch chains | CWE-78, CWE-863 | 2026.2.22 | 2026-03-03 |
-| [GHSA-m8v2-6wwh-r4gc](https://github.com/advisories/GHSA-m8v2-6wwh-r4gc) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths | CWE-22, CWE-59 | 2026.2.24 | 2026-03-03 |
 | [GHSA-jxrq-8fm4-9p58](https://github.com/advisories/GHSA-jxrq-8fm4-9p58) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Zip extraction symlink traversal could write outside destination | CWE-59 | 2026.2.22 | 2026-03-03 |
 | [GHSA-659f-22xc-98f2](https://github.com/advisories/GHSA-659f-22xc-98f2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw hook transform path containment missed symlink-resolved escapes | CWE-94 | 2026.2.22 | 2026-03-03 |
 | [GHSA-4gc7-qcvf-38wg](https://github.com/advisories/GHSA-4gc7-qcvf-38wg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | In OpenClaw, manually adding sort to tools.exec.safeBins could bypass allowlist approval via --compress-program | CWE-78, CWE-184 | 2026.2.22 | 2026-03-03 |
@@ -85,11 +88,9 @@
 | [GHSA-2rgf-hm63-5qph](https://github.com/advisories/GHSA-2rgf-hm63-5qph) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw improperly parses X-Forwarded-For behind trusted proxies allows client IP spoofing in security decisions | CWE-345, CWE-807 | 2026.2.21 | 2026-03-03 |
 | [GHSA-27cr-4p5m-74rj](https://github.com/advisories/GHSA-27cr-4p5m-74rj) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a workspace-only sandbox guard mismatch for @-prefixed absolute paths | CWE-22, CWE-180 | 2026.2.24 | 2026-03-03 |
 | [GHSA-r294-2894-92j3](https://github.com/advisories/GHSA-r294-2894-92j3) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has stored XSS in exported session HTML viewer via markdown/raw-HTML rendering | CWE-79 | 2026.2.23 | 2026-03-03 |
-| [GHSA-v3j7-34xh-6g3w](https://github.com/advisories/GHSA-v3j7-34xh-6g3w) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Loopback CDP probe can leak Gateway token to local listener | CWE-290, CWE-306 | 2026.2.22 | 2026-03-03 |
 | [GHSA-4cqv-h74h-93j4](https://github.com/advisories/GHSA-4cqv-h74h-93j4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a Discord `allowFrom` slug-collision authorization bypass | CWE-287 | 2026.2.22 | 2026-03-03 |
 | [GHSA-3cvx-236h-m9fj](https://github.com/advisories/GHSA-3cvx-236h-m9fj) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has an opt-in insecure Control UI auth over plaintext HTTP could allow privileged access | CWE-285, CWE-319 | 2026.2.21 | 2026-03-03 |
 | [GHSA-h97f-6pqj-q452](https://github.com/advisories/GHSA-h97f-6pqj-q452) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has a IPv6 multicast SSRF classifier bypass | CWE-918 | 2026.2.25 | 2026-03-03 |
-| [GHSA-jwf4-8wf4-jf2m](https://github.com/advisories/GHSA-jwf4-8wf4-jf2m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: BlueBubbles (optional plugin) pairing/allowlist mismatch when allowFrom is empty | CWE-863 | 2026.2.22 | 2026-03-04 |
 | [GHSA-jjgj-cpp9-cvpv](https://github.com/advisories/GHSA-jjgj-cpp9-cvpv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Vulnerable to Local File Exfiltration via MCP Tool Result MEDIA: Directive Injection | CWE-22, CWE-200 | 2026.2.21 | 2026-03-04 |
 | [GHSA-q6qf-4p5j-r25g](https://github.com/advisories/GHSA-q6qf-4p5j-r25g) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's image tool bypasses tools.fs.workspaceOnly on sandbox mount paths and exfiltrates out-of-workspace images | CWE-200, CWE-284 | 2026.2.23 | 2026-03-04 |
 | [GHSA-4rqq-w8v4-7p47](https://github.com/advisories/GHSA-4rqq-w8v4-7p47) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw has incomplete IPv4 special-use SSRF blocking in web fetch guard | CWE-918 | 2026.2.22 | 2026-03-04 |
@@ -127,7 +128,6 @@
 | [GHSA-v6x2-2qvm-6gv8](https://github.com/advisories/GHSA-v6x2-2qvm-6gv8) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback | CWE-522 | 2026.2.22 | 2026-03-03 |
 | [GHSA-gcj7-r3hg-m7w6](https://github.com/advisories/GHSA-gcj7-r3hg-m7w6) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw's voice-call Twilio replay dedupe now bound to authenticated webhook identity | CWE-294, CWE-345 | 2026.2.26 | 2026-03-03 |
 | [GHSA-7qf6-h84j-8fq4](https://github.com/advisories/GHSA-7qf6-h84j-8fq4) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw: Microsoft Teams media fetch paths bypass shared SSRF guard model | CWE-367, CWE-918 | 2026.2.26 | 2026-03-03 |
-| [GHSA-62f6-mrcj-v8h5](https://github.com/advisories/GHSA-62f6-mrcj-v8h5) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw's runtime /debug override path accepted prototype-reserved keys | CWE-1321 | 2026.2.21 | 2026-03-03 |
 | [GHSA-vvgp-4c28-m3jm](https://github.com/advisories/GHSA-vvgp-4c28-m3jm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw has a Trusted-proxy Control UI pairing bypass which allows unpaired node sessions | CWE-807 | 2026.2.25 | 2026-03-03 |
 | [GHSA-vjp8-wprm-2jw9](https://github.com/advisories/GHSA-vjp8-wprm-2jw9) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw has cross-account DM pairing authorization bypass via unscoped pairing store access | CWE-863 | 2026.2.26 | 2026-03-04 |
 | [GHSA-qvr7-g57c-mrc7](https://github.com/advisories/GHSA-qvr7-g57c-mrc7) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw: Unavailable local auth SecretRefs could fall through to remote credentials in local mode | CWE-636 | 2026.3.11 | 2026-03-13 |
@@ -186,11 +186,15 @@ These advisories are visible on the [repo security page](https://github.com/open
 
 | CVE ID | State | In cvelistV5 | GHSA Published | CNA |
 |--------|-------|:------------:|----------------|-----|
+| CVE-2026-22170 | ✅ **PUBLISHED** | ✅ | 2026-03-04 | VulnCheck |
+| CVE-2026-22174 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
 | CVE-2026-24763 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
 | CVE-2026-25157 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | GitHub_M |
 | CVE-2026-25253 | ✅ **PUBLISHED** | ✅ | 2026-02-02 | mitre |
 | CVE-2026-26317 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
 | CVE-2026-26328 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | GitHub_M |
+| CVE-2026-27523 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
+| CVE-2026-27524 | ✅ **PUBLISHED** | ✅ | 2026-03-03 | VulnCheck |
 | CVE-2026-28452 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-28458 | ✅ **PUBLISHED** | ✅ | 2026-02-17 | VulnCheck |
 | CVE-2026-28469 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |

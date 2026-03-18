@@ -1073,7 +1073,7 @@
   },
   {
     "ghsa_id": "GHSA-jwf4-8wf4-jf2m",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22170",
     "severity": "medium",
     "title": "OpenClaw: BlueBubbles (optional plugin) pairing/allowlist mismatch when allowFrom is empty",
     "published": "2026-03-04",
@@ -1499,7 +1499,7 @@
   },
   {
     "ghsa_id": "GHSA-m8v2-6wwh-r4gc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27523",
     "severity": "high",
     "title": "OpenClaw's sandbox bind validation could bypass allowed-root and blocked-path checks via symlink-parent missing-leaf paths",
     "published": "2026-03-03",
@@ -1867,7 +1867,7 @@
   },
   {
     "ghsa_id": "GHSA-62f6-mrcj-v8h5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27524",
     "severity": "low",
     "title": "OpenClaw's runtime /debug override path accepted prototype-reserved keys",
     "published": "2026-03-03",
@@ -2039,7 +2039,7 @@
   },
   {
     "ghsa_id": "GHSA-v3j7-34xh-6g3w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22174",
     "severity": "medium",
     "title": "OpenClaw Loopback CDP probe can leak Gateway token to local listener",
     "published": "2026-03-03",
