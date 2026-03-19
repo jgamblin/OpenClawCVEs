@@ -217,6 +217,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vpj2-69hf-rppw"
   },
   {
+    "ghsa_id": "GHSA-vvgp-4c28-m3jm",
+    "severity": "MEDIUM",
+    "title": "Trusted-proxy Control UI pairing bypass allowed unpaired node sessions",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vvgp-4c28-m3jm"
+  },
+  {
     "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
     "severity": "MEDIUM",
     "title": "Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
@@ -250,6 +257,13 @@
     "title": "macOS beta onboarding exposed PKCE verifier via OAuth state",
     "published": "2026-02-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6g25-pc82-vfwp"
+  },
+  {
+    "ghsa_id": "GHSA-h97f-6pqj-q452",
+    "severity": "LOW",
+    "title": "IPv6 multicast SSRF classifier bypass",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h97f-6pqj-q452"
   },
   {
     "ghsa_id": "GHSA-rm2p-j3r7-4x4j",
