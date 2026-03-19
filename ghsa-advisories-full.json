@@ -2629,8 +2629,8 @@
       "score": 8.1
     },
     "epss": {
-      "percentage": 0.00015,
-      "percentile": 0.02713
+      "percentage": 0.00016,
+      "percentile": 0.0331
     }
   },
   {
@@ -4430,12 +4430,14 @@
       "https://github.com/openclaw/openclaw/commit/4540790cb62412676f7b61cfc6e47443f84a251e",
       "https://github.com/openclaw/openclaw/commit/51c0893673de8e5cea64e64351dbfa4680ba0dec",
       "https://github.com/openclaw/openclaw/commit/9632b9bcf032c5f2280c3103961fde912ab1f920",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-22170",
+      "https://www.vulncheck.com/advisories/openclaw-bluebubbles-access-control-bypass-via-empty-allowfrom-configuration",
       "https://github.com/advisories/GHSA-jwf4-8wf4-jf2m"
     ],
     "published_at": "2026-03-04T19:44:50Z",
-    "updated_at": "2026-03-18T01:25:24Z",
+    "updated_at": "2026-03-18T21:52:52Z",
     "github_reviewed_at": "2026-03-04T19:44:50Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-18T02:16:21Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -4493,6 +4495,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00038,
+      "percentile": 0.11111
     }
   },
   {
@@ -6138,12 +6144,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-m8v2-6wwh-r4gc",
       "https://github.com/openclaw/openclaw/commit/b5787e4abba0dcc6baf09051099f6773c1679ec1",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27523",
+      "https://www.vulncheck.com/advisories/openclaw-sandbox-bind-validation-bypass-via-symlink-parent-missing-leaf-paths",
       "https://github.com/advisories/GHSA-m8v2-6wwh-r4gc"
     ],
     "published_at": "2026-03-03T23:10:01Z",
-    "updated_at": "2026-03-18T01:33:30Z",
+    "updated_at": "2026-03-18T21:52:36Z",
     "github_reviewed_at": "2026-03-03T23:10:01Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-18T02:16:23Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6205,6 +6213,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0001,
+      "percentile": 0.00965
     }
   },
   {
@@ -7607,12 +7619,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-62f6-mrcj-v8h5",
       "https://github.com/openclaw/openclaw/commit/fbb79d4013000552d6a2c23b9613d8b3cb92f6b6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27524",
+      "https://www.vulncheck.com/advisories/openclaw-prototype-pollution-via-debug-override-path",
       "https://github.com/advisories/GHSA-62f6-mrcj-v8h5"
     ],
     "published_at": "2026-03-03T22:12:20Z",
-    "updated_at": "2026-03-18T01:33:53Z",
+    "updated_at": "2026-03-18T21:51:57Z",
     "github_reviewed_at": "2026-03-03T22:12:20Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-18T02:16:23Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -7670,6 +7684,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00034,
+      "percentile": 0.09654
     }
   },
   {
@@ -8317,12 +8335,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-v3j7-34xh-6g3w",
       "https://github.com/openclaw/openclaw/commit/afa22acc4a09fdf32be8a167ae216bee85c30dad",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-22174",
+      "https://www.vulncheck.com/advisories/openclaw-gateway-token-disclosure-via-chrome-cdp-probe",
       "https://github.com/advisories/GHSA-v3j7-34xh-6g3w"
     ],
     "published_at": "2026-03-03T21:50:34Z",
-    "updated_at": "2026-03-18T01:29:45Z",
+    "updated_at": "2026-03-18T21:52:17Z",
     "github_reviewed_at": "2026-03-03T21:50:34Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-18T02:16:21Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8384,6 +8404,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:H/I:L/A:N",
       "score": 5.7
+    },
+    "epss": {
+      "percentage": 0.00016,
+      "percentile": 0.03389
     }
   },
   {
@@ -8838,8 +8862,8 @@
       "score": 5.9
     },
     "epss": {
-      "percentage": 0.00037,
-      "percentile": 0.107
+      "percentage": 0.00039,
+      "percentile": 0.11426
     }
   },
   {
@@ -9152,8 +9176,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.001,
-      "percentile": 0.27589
+      "percentage": 0.00125,
+      "percentile": 0.31556
     }
   },
   {
