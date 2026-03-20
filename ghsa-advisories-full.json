@@ -1,5 +1,192 @@
 [
   {
+    "ghsa_id": "GHSA-x49q-fhhm-r9jf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-x49q-fhhm-r9jf",
+    "html_url": "https://github.com/advisories/GHSA-x49q-fhhm-r9jf",
+    "summary": "Duplicate Advisory: OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-rqpp-rjj8-7wv8. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw versions prior to 2026.3.12 contain an authorization bypass vulnerability in the WebSocket connect path that allows shared-token or password-authenticated connections to self-declare elevated scopes without server-side binding. Attackers can exploit this logic flaw to present unauthorized scopes such as operator.admin and perform admin-only gateway operations.",
+    "type": "reviewed",
+    "severity": "critical",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-x49q-fhhm-r9jf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rqpp-rjj8-7wv8",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-22172",
+      "https://www.vulncheck.com/advisories/openclaw-scope-elevation-in-websocket-shared-auth-connections",
+      "https://github.com/advisories/GHSA-x49q-fhhm-r9jf"
+    ],
+    "published_at": "2026-03-20T15:31:14Z",
+    "updated_at": "2026-03-20T17:24:52Z",
+    "github_reviewed_at": "2026-03-20T17:24:51Z",
+    "nvd_published_at": "2026-03-20T15:16:15Z",
+    "withdrawn_at": "2026-03-20T17:24:51Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.12",
+        "first_patched_version": "2026.3.12",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 10.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:H/SI:H/SA:H/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 9.4
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+      "score": 10.0
+    }
+  },
+  {
+    "ghsa_id": "GHSA-jqpf-vj28-9v7r",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-jqpf-vj28-9v7r",
+    "html_url": "https://github.com/advisories/GHSA-jqpf-vj28-9v7r",
+    "summary": "Duplicate Advisory: Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-gw85-xp4q-5gp9. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions 2026.2.22 and 2026.2.23 contain an authorization bypass vulnerability in the synology-chat channel plugin where dmPolicy set to allowlist with empty allowedUserIds fails open. Attackers with Synology sender access can bypass authorization checks and trigger unauthorized agent dispatch and downstream tool actions.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-jqpf-vj28-9v7r",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-gw85-xp4q-5gp9",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31998",
+      "https://github.com/openclaw/openclaw/commit/0ee30361b8f6ef3f110f3a7b001da6dd3df96bb5",
+      "https://github.com/openclaw/openclaw/commit/7655c0cb3a47d0647cbbf5284e177f90b4b82ddb",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-synology-chat-plugin-via-empty-alloweduserids",
+      "https://github.com/advisories/GHSA-jqpf-vj28-9v7r"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:55:55Z",
+    "github_reviewed_at": "2026-03-20T13:55:52Z",
+    "nvd_published_at": "2026-03-19T02:16:05Z",
+    "withdrawn_at": "2026-03-20T13:55:52Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": ">= 2026.2.22, <= 2026.2.23",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:L",
+        "score": 7.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:L",
+      "score": 7.0
+    }
+  },
+  {
+    "ghsa_id": "GHSA-x742-88jj-7hv9",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-x742-88jj-7hv9",
+    "html_url": "https://github.com/advisories/GHSA-x742-88jj-7hv9",
+    "summary": "Duplicate Advisory: allowlist exec-guard bypass via env -S",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-48wf-g7cp-gr3m. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.2.23 contain an allowlist bypass vulnerability in system.run guardrails that allows authenticated operators to execute unintended commands. When /usr/bin/env is allowlisted, attackers can use env -S to bypass policy analysis and execute shell wrapper payloads at runtime.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-x742-88jj-7hv9",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-48wf-g7cp-gr3m",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31992",
+      "https://github.com/openclaw/openclaw/commit/3f923e831364d83d0f23499ee49961de334cf58b",
+      "https://github.com/openclaw/openclaw/commit/a1c4bf07c6baad3ef87a0e710fe9aef127b1f606",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-exec-guard-bypass-via-env-s",
+      "https://github.com/advisories/GHSA-x742-88jj-7hv9"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:40:19Z",
+    "github_reviewed_at": "2026-03-20T13:40:16Z",
+    "nvd_published_at": "2026-03-19T02:16:04Z",
+    "withdrawn_at": "2026-03-20T13:40:16Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.23",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "score": 7.1
+    }
+  },
+  {
     "ghsa_id": "GHSA-5rp4-cwgh-gvwq",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-5rp4-cwgh-gvwq",
@@ -59,6 +246,69 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
       "score": 6.3
+    }
+  },
+  {
+    "ghsa_id": "GHSA-r849-826x-wgqm",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-r849-826x-wgqm",
+    "html_url": "https://github.com/advisories/GHSA-r849-826x-wgqm",
+    "summary": "Duplicate Advisory: Signal group allowlist authorization bypass via DM pairing-store leakage",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-wm8r-w8pf-2v6w. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.2.26 contain an authorization bypass vulnerability where Signal group allowlist policy incorrectly accepts sender identities from DM pairing-store approvals. Attackers can exploit this boundary weakness by obtaining DM pairing approval to bypass group allowlist checks and gain unauthorized group access.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-r849-826x-wgqm",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-wm8r-w8pf-2v6w",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31991",
+      "https://github.com/openclaw/openclaw/commit/64de4b6d6ae81e269ceb4ca16f53cda99ced967a",
+      "https://github.com/openclaw/openclaw/commit/8bdda7a651c21e98faccdbbd73081e79cffe8be0",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-dm-pairing-store-leakage-in-signal-group-allowlist",
+      "https://github.com/advisories/GHSA-r849-826x-wgqm"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:40:04Z",
+    "github_reviewed_at": "2026-03-20T13:40:02Z",
+    "nvd_published_at": "2026-03-19T02:16:03Z",
+    "withdrawn_at": "2026-03-20T13:40:02Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.26",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
+        "score": 3.7
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:A/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 2.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:L/I:L/A:N",
+      "score": 3.7
     }
   },
   {
@@ -183,6 +433,67 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
       "score": 3.6
+    }
+  },
+  {
+    "ghsa_id": "GHSA-h36m-2vh5-x699",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-h36m-2vh5-x699",
+    "html_url": "https://github.com/advisories/GHSA-h36m-2vh5-x699",
+    "summary": "Duplicate Advisory: ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-6f6j-wx9w-ff4j. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions 2026.2.26 prior to 2026.3.1 on Windows contain a current working directory injection vulnerability in wrapper resolution for .cmd/.bat files that allows attackers to influence execution behavior through cwd manipulation. Remote attackers can exploit improper shell execution fallback mechanisms to achieve command execution integrity loss by controlling the current working directory during wrapper resolution.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-h36m-2vh5-x699",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-6f6j-wx9w-ff4j",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31999",
+      "https://www.vulncheck.com/advisories/openclaw-current-working-directory-injection-via-windows-wrapper-resolution-fallback",
+      "https://github.com/advisories/GHSA-h36m-2vh5-x699"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T14:20:29Z",
+    "github_reviewed_at": "2026-03-20T14:20:28Z",
+    "nvd_published_at": "2026-03-19T02:16:05Z",
+    "withdrawn_at": "2026-03-20T14:20:28Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": ">= 2026.2.26, < 2026.3.1",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+        "score": 6.3
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 5.8
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "score": 6.3
     }
   },
   {
@@ -373,6 +684,68 @@
     }
   },
   {
+    "ghsa_id": "GHSA-82gw-wqw6-r2cf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-82gw-wqw6-r2cf",
+    "html_url": "https://github.com/advisories/GHSA-82gw-wqw6-r2cf",
+    "summary": "Duplicate Advisory: Command Injection via unescaped environment assignments in Windows Scheduled Task script generation",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-pj5x-38rw-6fph. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.2.19 contain a command injection vulnerability in Windows Scheduled Task script generation where environment variables are written to gateway.cmd using unquoted set KEY=VALUE assignments, allowing shell metacharacters to break out of assignment context. Attackers can inject arbitrary commands through environment variable values containing metacharacters like &, |, ^, %, or ! to achieve command execution when the scheduled task script is generated and executed.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-82gw-wqw6-r2cf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-pj5x-38rw-6fph",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-22176",
+      "https://github.com/openclaw/openclaw/commit/dafe52e8cf1a041d898cfb304a485fa05e5f58fb",
+      "https://www.vulncheck.com/advisories/openclaw-command-injection-via-unescaped-environment-variables-in-windows-scheduled-task",
+      "https://github.com/advisories/GHSA-82gw-wqw6-r2cf"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:24:32Z",
+    "github_reviewed_at": "2026-03-20T13:24:31Z",
+    "nvd_published_at": "2026-03-19T02:16:01Z",
+    "withdrawn_at": "2026-03-20T13:24:31Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.17",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.9
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "score": 6.1
+    }
+  },
+  {
     "ghsa_id": "GHSA-q86m-697p-h7fh",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-q86m-697p-h7fh",
@@ -493,6 +866,67 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L",
       "score": 4.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-44c9-4rg5-qjgq",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-44c9-4rg5-qjgq",
+    "html_url": "https://github.com/advisories/GHSA-44c9-4rg5-qjgq",
+    "summary": "Duplicate Advisory: web_search citation redirect SSRF via private-network-allowing policy",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-g99v-8hwm-g76g. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.3.1 contain a server-side request forgery vulnerability in web_search citation redirect resolution that uses a private-network-allowing SSRF policy. An attacker who can influence citation redirect targets can trigger internal-network requests from the OpenClaw host to loopback, private, or internal destinations.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-44c9-4rg5-qjgq",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-g99v-8hwm-g76g",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31989",
+      "https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-web-search-citation-redirect",
+      "https://github.com/advisories/GHSA-44c9-4rg5-qjgq"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:39:39Z",
+    "github_reviewed_at": "2026-03-20T13:39:38Z",
+    "nvd_published_at": "2026-03-19T02:16:03Z",
+    "withdrawn_at": "2026-03-20T13:39:38Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.1",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+        "score": 7.4
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:L/SI:L/SA:L/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 5.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L",
+      "score": 7.4
     }
   },
   {
@@ -617,6 +1051,68 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:H/A:L",
       "score": 5.9
+    }
+  },
+  {
+    "ghsa_id": "GHSA-3846-mfvc-xwpf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-3846-mfvc-xwpf",
+    "html_url": "https://github.com/advisories/GHSA-3846-mfvc-xwpf",
+    "summary": "Duplicate Advisory: Exec allowlist wrapper analysis did not unwrap env/shell dispatch chains",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-jj82-76v6-933r. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.2.22 contain an allowlist bypass vulnerability in system.run exec analysis that fails to unwrap env and shell-dispatch wrapper chains. Attackers can route execution through wrapper binaries like env bash to smuggle payloads that satisfy allowlist entries while executing non-allowlisted commands.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-3846-mfvc-xwpf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-jj82-76v6-933r",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27566",
+      "https://github.com/openclaw/openclaw/commit/2b63592be57782c8946e521bc81286933f0f99c7",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-wrapper-binary-unwrapping-in-system-run",
+      "https://github.com/advisories/GHSA-3846-mfvc-xwpf"
+    ],
+    "published_at": "2026-03-19T03:30:57Z",
+    "updated_at": "2026-03-20T13:26:48Z",
+    "github_reviewed_at": "2026-03-20T13:26:45Z",
+    "nvd_published_at": "2026-03-19T02:16:01Z",
+    "withdrawn_at": "2026-03-20T13:26:45Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.22",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-78",
+        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+      "score": 7.1
     }
   },
   {
@@ -7762,761 +8258,6 @@
           "repos_url": "https://api.github.com/users/TerminalsandCoffee/repos",
           "events_url": "https://api.github.com/users/TerminalsandCoffee/events{/privacy}",
           "received_events_url": "https://api.github.com/users/TerminalsandCoffee/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-796m-2973-wc5q",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-796m-2973-wc5q",
-    "html_url": "https://github.com/advisories/GHSA-796m-2973-wc5q",
-    "summary": "OpenClaw has exec allowlist/safeBins policy-runtime mismatch via env -S wrapper interpretation",
-    "description": "### Summary\n`tools.exec` allowlist/safe-bins evaluation could diverge from runtime execution for wrapper commands using GNU `env -S/--split-string` semantics. This allowed policy checks to treat a command as a benign safe-bin invocation while runtime executed a different payload.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Vulnerable versions: `<= 2026.2.22-2` (latest currently published npm version)\n- Patched version (released): `2026.2.23`\n\n### Impact\nAn attacker able to influence tool command text (for example via untrusted prompt/content injection reaching an exec-capable flow) could bypass allowlist/safe-bins intent and execute unexpected commands.\n\n### Technical Details\nRoot cause was policy/runtime interpretation mismatch for dispatch wrappers:\n- analysis resolved an effective executable from wrapper-unwrapped argv,\n- execution could still run original wrapper argv semantics,\n- safe-bin short-flag handling also allowed unknown short options in clusters.\n\n### Remediation\nThe fix hardens exec approvals to fail closed and enforce analysis/runtime parity:\n- introduce wrapper execution planning with semantic-wrapper blocking,\n- carry planned `effectiveArgv` + `policyBlocked` metadata through resolution,\n- evaluate allowlist/safe-bins against planned argv,\n- enforce canonical rebuilt shell command from planned argv for allowlist auto-paths,\n- use planned argv for node-host/mac exec-host invocation paths,\n- reject unknown short safe-bin flags,\n- add regression tests for semantic `env` wrappers and parity fixtures.\n\n### Fix Commit(s)\n- `a1c4bf07c6baad3ef87a0e710fe9aef127b1f606`\n\n### Release Process Note\n`patched_versions` is pre-set to the released version (`2026.2.23`). Patched in `2026.2.23` and published.\n\nOpenClaw thanks @jiseoung for reporting.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-796m-2973-wc5q",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-796m-2973-wc5q",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-796m-2973-wc5q",
-      "https://github.com/openclaw/openclaw/commit/a1c4bf07c6baad3ef87a0e710fe9aef127b1f606",
-      "https://github.com/advisories/GHSA-796m-2973-wc5q"
-    ],
-    "published_at": "2026-03-03T22:23:45Z",
-    "updated_at": "2026-03-03T22:23:47Z",
-    "github_reviewed_at": "2026-03-03T22:23:45Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.2.23",
-        "first_patched_version": "2026.2.23",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.7
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-436",
-        "name": "Interpretation Conflict"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "jiseoung",
-          "id": 106800290,
-          "node_id": "U_kgDOBl2kog",
-          "avatar_url": "https://avatars.githubusercontent.com/u/106800290?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/jiseoung",
-          "html_url": "https://github.com/jiseoung",
-          "followers_url": "https://api.github.com/users/jiseoung/followers",
-          "following_url": "https://api.github.com/users/jiseoung/following{/other_user}",
-          "gists_url": "https://api.github.com/users/jiseoung/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/jiseoung/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/jiseoung/subscriptions",
-          "organizations_url": "https://api.github.com/users/jiseoung/orgs",
-          "repos_url": "https://api.github.com/users/jiseoung/repos",
-          "events_url": "https://api.github.com/users/jiseoung/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/jiseoung/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-7qf6-h84j-8fq4",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-7qf6-h84j-8fq4",
-    "html_url": "https://github.com/advisories/GHSA-7qf6-h84j-8fq4",
-    "summary": "OpenClaw: Microsoft Teams media fetch paths bypass shared SSRF guard model",
-    "description": "## Impact\nMicrosoft Teams media handling used mixed fetch paths for Graph metadata/content and attachment auth-retry flows. Some paths bypassed the shared SSRF guard model and created inconsistent host/DNS enforcement across redirect/fetch hops.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Latest published vulnerable version: `2026.2.25`\n- Affected range: `<= 2026.2.25`\n- Planned patched version for next release: `2026.2.26`\n\n## Technical Details\nThe Microsoft Teams attachment/media code previously relied on plugin-local fetch behavior in parts of the flow, instead of uniformly using shared guarded fetch logic with pinned DNS + policy checks. This could allow policy drift and SSRF boundary inconsistency between channel/plugin paths.\n\nThe fix unifies this path by:\n- routing Microsoft Teams Graph message/hosted-content/attachment fetches through shared SSRF-guarded fetch paths,\n- routing auth-scope fallback attachment downloads through the same guarded policy model,\n- centralizing hostname-suffix allowlist policy helpers in `plugin-sdk` so channel/plugins use the same allowlist normalization and policy construction behavior.\n\n## Fix Commit(s)\n- `57334cd7d85174d5f951de01114fd5801b063564`\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "low",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-7qf6-h84j-8fq4",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-7qf6-h84j-8fq4",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-7qf6-h84j-8fq4",
-      "https://github.com/openclaw/openclaw/commit/57334cd7d85174d5f951de01114fd5801b063564",
-      "https://github.com/advisories/GHSA-7qf6-h84j-8fq4"
-    ],
-    "published_at": "2026-03-03T22:21:59Z",
-    "updated_at": "2026-03-03T22:21:59Z",
-    "github_reviewed_at": "2026-03-03T22:21:59Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.25",
-        "first_patched_version": "2026.2.26",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:L/SI:N/SA:N",
-        "score": 2.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-367",
-        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
-      },
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
-    "cve_id": "CVE-2026-32025",
-    "url": "https://api.github.com/advisories/GHSA-jmmg-jqc7-5qf4",
-    "html_url": "https://github.com/advisories/GHSA-jmmg-jqc7-5qf4",
-    "summary": "OpenClaw's browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
-    "description": "This issue is a browser-origin WebSocket auth chain on local loopback deployments using password auth. It is serious, but conditional: an attacker must get the user to open a malicious page and then successfully guess the gateway password.\n\n## Context and Preconditions\n\nOpenClaw\u2019s web/gateway surface is designed for local use and trusted-operator workflows. In affected versions, a browser-origin client could combine three behaviors:\n\n- Origin checks not enforced for some non-Control-UI WebSocket client IDs.\n- Loopback auth attempts exempt from password-failure throttling.\n- Silent local pairing path available to browser-origin non-Control-UI clients.\n\nSuccessful exploitation requires all of the following:\n\n- Gateway reachable on loopback (default).\n- Password auth mode in use.\n- Victim opens attacker-controlled web content.\n- Password is guessable within feasible brute-force/dictionary attempts.\n\n## Practical Impact\n\nIf the password is guessed, an attacker can establish an authenticated operator WebSocket session and invoke control-plane methods available to that role. This is not an unauthenticated internet-exposed RCE class issue by itself; it is a local browser-origin auth-hardening gap with meaningful impact under the conditions above.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `<=2026.2.24` (latest published npm version as of February 26, 2026)\n- Patched versions : `>=2026.2.25`\n\n## Fix Commit(s)\n\n- `c736f11a16d6bc27ea62a0fe40fffae4cb071fdb`\n\n## Fix Details\n\n- Enforce browser-origin checks for direct browser WebSocket clients beyond Control UI/Webchat (trusted-proxy forwarded flows remain supported).\n- Apply browser-origin auth failure throttling with loopback exemption disabled.\n- Block silent auto-pairing for non-Control-UI browser-origin clients.\n\n## Release Process Note\n\n`patched_versions` is pre-set to the planned next npm release (`2026.2.25`) so once that release is published, the advisory is published.\n\nOpenClaw thanks @luz-oasis for reporting.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-jmmg-jqc7-5qf4",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-jmmg-jqc7-5qf4",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-32025",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-jmmg-jqc7-5qf4",
-      "https://github.com/openclaw/openclaw/commit/c736f11a16d6bc27ea62a0fe40fffae4cb071fdb",
-      "https://github.com/advisories/GHSA-jmmg-jqc7-5qf4"
-    ],
-    "published_at": "2026-03-03T22:18:09Z",
-    "updated_at": "2026-03-19T22:25:31Z",
-    "github_reviewed_at": "2026-03-03T22:18:09Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.24",
-        "first_patched_version": "2026.2.25",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.7
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-287",
-        "name": "Improper Authentication"
-      },
-      {
-        "cwe_id": "CWE-307",
-        "name": "Improper Restriction of Excessive Authentication Attempts"
-      },
-      {
-        "cwe_id": "CWE-346",
-        "name": "Origin Validation Error"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "luz-oasis",
-          "id": 177534059,
-          "node_id": "U_kgDOCpT0aw",
-          "avatar_url": "https://avatars.githubusercontent.com/u/177534059?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/luz-oasis",
-          "html_url": "https://github.com/luz-oasis",
-          "followers_url": "https://api.github.com/users/luz-oasis/followers",
-          "following_url": "https://api.github.com/users/luz-oasis/following{/other_user}",
-          "gists_url": "https://api.github.com/users/luz-oasis/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/luz-oasis/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/luz-oasis/subscriptions",
-          "organizations_url": "https://api.github.com/users/luz-oasis/orgs",
-          "repos_url": "https://api.github.com/users/luz-oasis/repos",
-          "events_url": "https://api.github.com/users/luz-oasis/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/luz-oasis/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-2rgf-hm63-5qph",
-    "cve_id": "CVE-2026-32029",
-    "url": "https://api.github.com/advisories/GHSA-2rgf-hm63-5qph",
-    "html_url": "https://github.com/advisories/GHSA-2rgf-hm63-5qph",
-    "summary": "OpenClaw improperly parses X-Forwarded-For behind trusted proxies allows client IP spoofing in security decisions",
-    "description": "### Summary\n\nOpenClaw used left-most `X-Forwarded-For` values when requests came from configured trusted proxies. In proxy chains that append/preserve header values, this could let attacker-controlled header content influence security decisions tied to client IP.\n\n### Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected: `<= 2026.2.19-2`\n- Patched: `2026.2.21` (planned next release)\n\n### Impact\n\nPossible client-IP spoofing in security-sensitive paths (for example auth rate-limit identity and local/private classification) for deployments behind trusted proxies with non-recommended forwarding behavior.\n\n### Scope Note\n\nOpenClaw docs recommend reverse proxies overwrite (not append/preserve) inbound forwarding headers. This condition reduces severity.\n\n### Fix Commit(s)\n\n- `07039dc089e51589a213ec0d16f8d6f2cd871fa1`\n- `8877bfd11ec7760b115b2d0d7500a45da2749747`\n\n### Release Process Note\n\n`patched_versions` is pre-set to the planned next release (`2026.2.21`). After npm release is out, publish this advisory.\n\nOpenClaw thanks @AnthonyDiSanti for reporting.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-2rgf-hm63-5qph",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-2rgf-hm63-5qph",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-32029",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-2rgf-hm63-5qph",
-      "https://github.com/openclaw/openclaw/commit/07039dc089e51589a213ec0d16f8d6f2cd871fa1",
-      "https://github.com/openclaw/openclaw/commit/8877bfd11ec7760b115b2d0d7500a45da2749747",
-      "https://github.com/advisories/GHSA-2rgf-hm63-5qph"
-    ],
-    "published_at": "2026-03-03T22:17:12Z",
-    "updated_at": "2026-03-19T22:26:46Z",
-    "github_reviewed_at": "2026-03-03T22:17:12Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.19-2",
-        "first_patched_version": "2026.2.21",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 6.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-345",
-        "name": "Insufficient Verification of Data Authenticity"
-      },
-      {
-        "cwe_id": "CWE-807",
-        "name": "Reliance on Untrusted Inputs in a Security Decision"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "AnthonyDiSanti",
-          "id": 911470,
-          "node_id": "MDQ6VXNlcjkxMTQ3MA==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/911470?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/AnthonyDiSanti",
-          "html_url": "https://github.com/AnthonyDiSanti",
-          "followers_url": "https://api.github.com/users/AnthonyDiSanti/followers",
-          "following_url": "https://api.github.com/users/AnthonyDiSanti/following{/other_user}",
-          "gists_url": "https://api.github.com/users/AnthonyDiSanti/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/AnthonyDiSanti/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/AnthonyDiSanti/subscriptions",
-          "organizations_url": "https://api.github.com/users/AnthonyDiSanti/orgs",
-          "repos_url": "https://api.github.com/users/AnthonyDiSanti/repos",
-          "events_url": "https://api.github.com/users/AnthonyDiSanti/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/AnthonyDiSanti/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "finder"
-      },
-      {
-        "user": {
-          "login": "vincentkoc",
-          "id": 25068,
-          "node_id": "MDQ6VXNlcjI1MDY4",
-          "avatar_url": "https://avatars.githubusercontent.com/u/25068?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/vincentkoc",
-          "html_url": "https://github.com/vincentkoc",
-          "followers_url": "https://api.github.com/users/vincentkoc/followers",
-          "following_url": "https://api.github.com/users/vincentkoc/following{/other_user}",
-          "gists_url": "https://api.github.com/users/vincentkoc/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/vincentkoc/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/vincentkoc/subscriptions",
-          "organizations_url": "https://api.github.com/users/vincentkoc/orgs",
-          "repos_url": "https://api.github.com/users/vincentkoc/repos",
-          "events_url": "https://api.github.com/users/vincentkoc/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/vincentkoc/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "remediation_developer"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-7ff8-xjh3-mgh6",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-7ff8-xjh3-mgh6",
-    "html_url": "https://github.com/advisories/GHSA-7ff8-xjh3-mgh6",
-    "summary": "OpenClaw's non-default autoAllowSkills setting could bypass on-miss exec prompt",
-    "description": "### Summary\nIn `openclaw` versions up to and including `2026.2.22-2`, a non-default exec-approval configuration could allow a skill-name collision to bypass an `ask=on-miss` prompt.\n\nWhen `autoAllowSkills=true`, a path-scoped executable such as `./skill-bin` could resolve to basename `skill-bin`, satisfy the `skills` allowlist segment, and run without prompting for approval.\n\n### Affected Packages / Versions\n- Package: `npm openclaw`\n- Affected versions: `<= 2026.2.22-2`\n- Patched versions: `>= 2026.2.23` (released)\n\n### Configuration Scope (Not Default)\nThis behavior requires non-default settings and does not affect default installs.\n\nRequired conditions:\n- `autoAllowSkills=true` (default is `false`)\n- `system.run` with `security=allowlist`\n- `ask=on-miss`\n\n### Technical Details\nThe allowlist evaluator accepted `skills` satisfaction by bin-name match, so `./skill-bin` could match `skillBins.has(\"skill-bin\")` after resolution.\n\nThe fix hardens skill auto-allow matching by requiring:\n- a pathless invocation token (no `/` or `\\\\`), and\n- a trusted resolved executable path for that skill bin on the machine where skills run.\n\nThis preserves normal `skill-bin ...` behavior while preventing `./<skill-bin>` and absolute-path basename collisions from auto-satisfying `skills`.\n\n### Impact\nIn affected non-default configurations, approval prompts could be skipped for commands that should have required operator confirmation.\n\n### Fix Commit(s)\n- `ffd63b7a2c4c6d5aeb4710ef951d5794ad7ad77b` (`fix(security): trust resolved skill-bin paths in allowlist auto-allow`)\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-7ff8-xjh3-mgh6",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-7ff8-xjh3-mgh6",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-7ff8-xjh3-mgh6",
-      "https://github.com/openclaw/openclaw/commit/ffd63b7a2c4c6d5aeb4710ef951d5794ad7ad77b",
-      "https://github.com/advisories/GHSA-7ff8-xjh3-mgh6"
-    ],
-    "published_at": "2026-03-03T22:13:53Z",
-    "updated_at": "2026-03-03T22:13:54Z",
-    "github_reviewed_at": "2026-03-03T22:13:53Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.22-2",
-        "first_patched_version": "2026.2.23",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-        "score": 7.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-266",
-        "name": "Incorrect Privilege Assignment"
-      },
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-xgf2-vxv2-rrmg",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-xgf2-vxv2-rrmg",
-    "html_url": "https://github.com/advisories/GHSA-xgf2-vxv2-rrmg",
-    "summary": "OpenClaw's shell startup env injection bypasses system.run allowlist intent (RCE class)",
-    "description": "### Summary\n`system.run` environment sanitization allowed shell-startup env overrides (`HOME`, `ZDOTDIR`) that can execute attacker-controlled startup files before allowlist-evaluated command bodies.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected: `<= 2026.2.21-2` (latest published vulnerable version)\n- Planned patched version: `>= 2026.2.22`\n\n### Technical Details\nIn affected versions:\n- Env sanitization blocked many dangerous keys, but not startup-sensitive override keys (`HOME`, `ZDOTDIR`) in host exec env paths.\n- Shell-wrapper analysis for allowlist mode models command bodies, but not shell startup side effects.\n- Runtime execution used sanitized env, so attacker-provided startup-key overrides could run hidden startup payloads first.\n\nObserved exploit vectors:\n- `HOME` + `bash -lc` + malicious `.bash_profile`\n- `ZDOTDIR` + `zsh -c` + malicious `.zshenv`\n\n### Fix Commit(s)\n- `c2c7114ed39a547ab6276e1e933029b9530ee906`\n\n### Release Process Note\n`patched_versions` is pre-set to the planned next release (`>= 2026.2.22`). After the npm release is published, this advisory can be published directly.\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-xgf2-vxv2-rrmg",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-xgf2-vxv2-rrmg",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xgf2-vxv2-rrmg",
-      "https://github.com/openclaw/openclaw/commit/c2c7114ed39a547ab6276e1e933029b9530ee906",
-      "https://github.com/advisories/GHSA-xgf2-vxv2-rrmg"
-    ],
-    "published_at": "2026-03-03T22:12:51Z",
-    "updated_at": "2026-03-03T22:12:53Z",
-    "github_reviewed_at": "2026-03-03T22:12:51Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.2.22",
-        "first_patched_version": "2026.2.22",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-        "score": 7.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-15",
-        "name": "External Control of System or Configuration Setting"
-      },
-      {
-        "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-62f6-mrcj-v8h5",
-    "cve_id": "CVE-2026-27524",
-    "url": "https://api.github.com/advisories/GHSA-62f6-mrcj-v8h5",
-    "html_url": "https://github.com/advisories/GHSA-62f6-mrcj-v8h5",
-    "summary": "OpenClaw's runtime /debug override path accepted prototype-reserved keys",
-    "description": "### Summary\nOpenClaw accepted prototype-reserved keys in runtime `/debug set` override object values (`__proto__`, `constructor`, `prototype`).\n\n### Impact\n`/debug` is disabled by default, and exploitation requires an already authorized `/debug set` caller. No unauthenticated vector was identified.\n\nThis issue affects runtime in-memory overrides only (non-persistent and cleared on restart/reset). Given the required prior authorization boundary, this is treated as defense-in-depth hardening for command flag evaluation.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Latest published vulnerable version confirmed: `2026.2.19-2`\n- Vulnerable range: `<= 2026.2.19-2`\n- Patched in planned next release: `2026.2.21`\n\n### Technical Details\n- Runtime override merges now block reserved prototype keys during deep merge.\n- Runtime override writes now sanitize nested object values to remove reserved prototype keys before storing overrides.\n- Restricted command gates (`bash`, `config`, `debug`) now require own-property boolean flags, preventing inherited prototype values from enabling commands.\n\n### Fix Commit(s)\n- `fbb79d4013000552d6a2c23b9613d8b3cb92f6b6`\n\n### Release Process Note\n`patched_versions` is pre-set to `2026.2.21` so after the npm release is live, this advisory can be published immediately.\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "low",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-62f6-mrcj-v8h5",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-62f6-mrcj-v8h5",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-27524",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-62f6-mrcj-v8h5",
-      "https://github.com/openclaw/openclaw/commit/fbb79d4013000552d6a2c23b9613d8b3cb92f6b6",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-27524",
-      "https://www.vulncheck.com/advisories/openclaw-prototype-pollution-via-debug-override-path",
-      "https://github.com/advisories/GHSA-62f6-mrcj-v8h5"
-    ],
-    "published_at": "2026-03-03T22:12:20Z",
-    "updated_at": "2026-03-18T21:51:57Z",
-    "github_reviewed_at": "2026-03-03T22:12:20Z",
-    "nvd_published_at": "2026-03-18T02:16:23Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.2.21",
-        "first_patched_version": "2026.2.21",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 2.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-1321",
-        "name": "Improperly Controlled Modification of Object Prototype Attributes ('Prototype Pollution')"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    },
-    "epss": {
-      "percentage": 0.00032,
-      "percentile": 0.09051
-    }
-  },
-  {
-    "ghsa_id": "GHSA-27cr-4p5m-74rj",
-    "cve_id": "CVE-2026-32033",
-    "url": "https://api.github.com/advisories/GHSA-27cr-4p5m-74rj",
-    "html_url": "https://github.com/advisories/GHSA-27cr-4p5m-74rj",
-    "summary": "OpenClaw has a workspace-only sandbox guard mismatch for @-prefixed absolute paths",
-    "description": "A workspace-only file-system guard mismatch allowed `@`-prefixed absolute paths to bypass boundary validation in some tool path checks.\n\n### Impact\nWhen `tools.fs.workspaceOnly=true`, certain `@`-prefixed absolute paths (for example `@/etc/passwd`) could be validated before canonicalization while runtime path handling normalized the prefix differently. In affected code paths this could permit reads outside the intended workspace boundary.\n\nPer `SECURITY.md`, OpenClaw is primarily a personal-assistant runtime with trusted-user assumptions, and this path is gated behind non-default sandbox/tooling configuration. That reduces practical exposure, but the bypass is still a security bug and is fixed.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Latest published at triage time: `2026.2.23`\n- Affected versions: `<= 2026.2.23`\n- Patched versions: `>= 2026.2.24`\n\n### Fix Commit(s)\n- `9ef0fc2ff8fa7b145d1e746d6eb030b1bf692260`\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-27cr-4p5m-74rj",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-27cr-4p5m-74rj",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-32033",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-27cr-4p5m-74rj",
-      "https://github.com/openclaw/openclaw/commit/9ef0fc2ff8fa7b145d1e746d6eb030b1bf692260",
-      "https://github.com/advisories/GHSA-27cr-4p5m-74rj"
-    ],
-    "published_at": "2026-03-03T22:11:54Z",
-    "updated_at": "2026-03-19T22:28:04Z",
-    "github_reviewed_at": "2026-03-03T22:11:54Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.23",
-        "first_patched_version": "2026.2.24",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.7
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-22",
-        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
-      },
-      {
-        "cwe_id": "CWE-180",
-        "name": "Incorrect Behavior Order: Validate Before Canonicalize"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false

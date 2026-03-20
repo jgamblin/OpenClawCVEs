@@ -28,6 +28,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hwpq-rrpf-pgcq"
   },
   {
+    "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
+    "severity": "HIGH",
+    "title": "Browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jmmg-jqc7-5qf4"
+  },
+  {
     "ghsa_id": "GHSA-jr6x-2q95-fh2g",
     "severity": "HIGH",
     "title": "Authorization mismatch allowed write-scope agent runs to reach owner-only tools",
@@ -110,6 +117,13 @@
     "title": "skills-install-download: tar.bz2 extraction bypassed archive safety parity checks (local DoS)",
     "published": "2026-03-03",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-77hf-7fqf-f227"
+  },
+  {
+    "ghsa_id": "GHSA-7qf6-h84j-8fq4",
+    "severity": "MEDIUM",
+    "title": "Microsoft Teams media fetch SSRF hardening: unified guarded fetch across Graph and attachment paths",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7qf6-h84j-8fq4"
   },
   {
     "ghsa_id": "GHSA-7xmq-g46g-f8pv",

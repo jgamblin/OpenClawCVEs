@@ -1,5 +1,64 @@
 [
   {
+    "ghsa_id": "GHSA-x49q-fhhm-r9jf",
+    "cve_id": null,
+    "severity": "critical",
+    "title": "Duplicate Advisory: OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
+    "published": "2026-03-20",
+    "html_url": "https://github.com/advisories/GHSA-x49q-fhhm-r9jf",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.12"
+    ],
+    "fixed_versions": [
+      "2026.3.12"
+    ],
+    "fixed_version": "2026.3.12",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jqpf-vj28-9v7r",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-jqpf-vj28-9v7r",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.22, <= 2026.2.23"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-x742-88jj-7hv9",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: allowlist exec-guard bypass via env -S",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-x742-88jj-7hv9",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.23"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-5rp4-cwgh-gvwq",
     "cve_id": null,
     "severity": "medium",
@@ -18,6 +77,25 @@
     "fixed_version": "2026.3.12",
     "cwes": [
       "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r849-826x-wgqm",
+    "cve_id": null,
+    "severity": "low",
+    "title": "Duplicate Advisory: Signal group allowlist authorization bypass via DM pairing-store leakage",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-r849-826x-wgqm",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.26"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-863"
     ]
   },
   {
@@ -51,6 +129,25 @@
     ],
     "affected_versions": [
       "<= 2026.2.17"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-h36m-2vh5-x699",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: ACPX Windows wrapper shell fallback allowed cwd injection in specific paths",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-h36m-2vh5-x699",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.2.26, < 2026.3.1"
     ],
     "fixed_versions": [],
     "fixed_version": "",
@@ -118,6 +215,25 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-82gw-wqw6-r2cf",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: Command Injection via unescaped environment assignments in Windows Scheduled Task script generation",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-82gw-wqw6-r2cf",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-q86m-697p-h7fh",
     "cve_id": null,
     "severity": "medium",
@@ -156,6 +272,25 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-44c9-4rg5-qjgq",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: web_search citation redirect SSRF via private-network-allowing policy",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-44c9-4rg5-qjgq",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.3.1"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-8px5-2gfr-7ph6",
     "cve_id": null,
     "severity": "medium",
@@ -181,6 +316,25 @@
     "title": "Duplicate Advisory: OpenClaw's system.run allowlist bypass via shell line-continuation command substitution",
     "published": "2026-03-19",
     "html_url": "https://github.com/advisories/GHSA-xrgv-34cc-q765",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.22"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3846-mfvc-xwpf",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Exec allowlist wrapper analysis did not unwrap env/shell dispatch chains",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-3846-mfvc-xwpf",
     "packages": [
       "npm/openclaw"
     ],
@@ -1944,181 +2098,6 @@
     "fixed_version": "2026.2.21",
     "cwes": [
       "CWE-250"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-796m-2973-wc5q",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has exec allowlist/safeBins policy-runtime mismatch via env -S wrapper interpretation",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-796m-2973-wc5q",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-436"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7qf6-h84j-8fq4",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw: Microsoft Teams media fetch paths bypass shared SSRF guard model",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-7qf6-h84j-8fq4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.25"
-    ],
-    "fixed_versions": [
-      "2026.2.26"
-    ],
-    "fixed_version": "2026.2.26",
-    "cwes": [
-      "CWE-367",
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
-    "cve_id": "CVE-2026-32025",
-    "severity": "medium",
-    "title": "OpenClaw's browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-jmmg-jqc7-5qf4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.24"
-    ],
-    "fixed_versions": [
-      "2026.2.25"
-    ],
-    "fixed_version": "2026.2.25",
-    "cwes": [
-      "CWE-287",
-      "CWE-307",
-      "CWE-346"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-2rgf-hm63-5qph",
-    "cve_id": "CVE-2026-32029",
-    "severity": "medium",
-    "title": "OpenClaw improperly parses X-Forwarded-For behind trusted proxies allows client IP spoofing in security decisions",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-2rgf-hm63-5qph",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.19-2"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-345",
-      "CWE-807"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7ff8-xjh3-mgh6",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw's non-default autoAllowSkills setting could bypass on-miss exec prompt",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-7ff8-xjh3-mgh6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.22-2"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-266",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xgf2-vxv2-rrmg",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw's shell startup env injection bypasses system.run allowlist intent (RCE class)",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-xgf2-vxv2-rrmg",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.22"
-    ],
-    "fixed_versions": [
-      "2026.2.22"
-    ],
-    "fixed_version": "2026.2.22",
-    "cwes": [
-      "CWE-15",
-      "CWE-78"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-62f6-mrcj-v8h5",
-    "cve_id": "CVE-2026-27524",
-    "severity": "low",
-    "title": "OpenClaw's runtime /debug override path accepted prototype-reserved keys",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-62f6-mrcj-v8h5",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-1321"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-27cr-4p5m-74rj",
-    "cve_id": "CVE-2026-32033",
-    "severity": "medium",
-    "title": "OpenClaw has a workspace-only sandbox guard mismatch for @-prefixed absolute paths",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-27cr-4p5m-74rj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.24"
-    ],
-    "fixed_version": "2026.2.24",
-    "cwes": [
-      "CWE-22",
-      "CWE-180"
     ]
   },
   {
