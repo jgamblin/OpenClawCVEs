@@ -40,6 +40,25 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-ggm6-h3mx-cmmp",
+    "cve_id": null,
+    "severity": "low",
+    "title": "Duplicate Advisory: safeBins stdin-only bypass via sort output and recursive grep flags",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-ggm6-h3mx-cmmp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.17"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-g87j-gm7p-6vw2",
     "cve_id": null,
     "severity": "medium",
@@ -78,6 +97,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-5gqg-mqh5-2v39",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw Windows Scheduled Task script generation allowed local command injection via unsafe cmd argument handling",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-5gqg-mqh5-2v39",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.19"
+    ],
+    "fixed_versions": [
+      "2026.2.19"
+    ],
+    "fixed_version": "2026.2.19",
+    "cwes": [
+      "CWE-78"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-q86m-697p-h7fh",
     "cve_id": null,
     "severity": "medium",
@@ -113,6 +153,25 @@
     "fixed_version": "",
     "cwes": [
       "CWE-294"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-8px5-2gfr-7ph6",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw has Windows Lobster shell fallback command injection in constrained fallback path",
+    "published": "2026-03-19",
+    "html_url": "https://github.com/advisories/GHSA-8px5-2gfr-7ph6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.1.21, <= 2026.2.17"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-78"
     ]
   },
   {
@@ -795,7 +854,7 @@
   },
   {
     "ghsa_id": "GHSA-8j2w-6fmm-m587",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32031",
     "severity": "medium",
     "title": "OpenClaw: /api/channels gateway-auth boundary bypass via path canonicalization mismatch",
     "published": "2026-03-12",
@@ -1313,7 +1372,7 @@
   },
   {
     "ghsa_id": "GHSA-q6qf-4p5j-r25g",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32002",
     "severity": "medium",
     "title": "OpenClaw's image tool bypasses tools.fs.workspaceOnly on sandbox mount paths and exfiltrates out-of-workspace images",
     "published": "2026-03-04",
@@ -1335,7 +1394,7 @@
   },
   {
     "ghsa_id": "GHSA-4rqq-w8v4-7p47",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32019",
     "severity": "medium",
     "title": "OpenClaw has incomplete IPv4 special-use SSRF blocking in web fetch guard",
     "published": "2026-03-04",
@@ -1440,7 +1499,7 @@
   },
   {
     "ghsa_id": "GHSA-x2ff-j5c2-ggpr",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32005",
     "severity": "high",
     "title": "OpenClaw: Slack interactive callbacks could skip configured sender checks in some shared-workspace flows",
     "published": "2026-03-04",
@@ -1461,7 +1520,7 @@
   },
   {
     "ghsa_id": "GHSA-gq83-8q7q-9hfx",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32018",
     "severity": "medium",
     "title": "OpenClaw's serialize sandbox registry writes to prevent races and delete-rollback corruption",
     "published": "2026-03-03",
@@ -1482,7 +1541,7 @@
   },
   {
     "ghsa_id": "GHSA-rv2q-f2h5-6xmg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32001",
     "severity": "medium",
     "title": "OpenClaw's Node role device-identity bypass allows unauthorized node.event injection",
     "published": "2026-03-03",
@@ -1524,7 +1583,7 @@
   },
   {
     "ghsa_id": "GHSA-fg3m-vhrr-8gj6",
-    "cve_id": null,
+    "cve_id": "CVE-2026-31995",
     "severity": "medium",
     "title": "OpenClaw has Windows Lobster shell fallback command injection in constrained fallback path",
     "published": "2026-03-03",
@@ -1611,7 +1670,7 @@
   },
   {
     "ghsa_id": "GHSA-wpph-cjgr-7c39",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32039",
     "severity": "medium",
     "title": "OpenClaw's typed sender-key matching for toolsBySender prevents identity-collision policy bypass",
     "published": "2026-03-03",
@@ -1696,7 +1755,7 @@
   },
   {
     "ghsa_id": "GHSA-r9q5-c7qc-p26w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-28449",
     "severity": "medium",
     "title": "OpenClaw's Nextcloud Talk webhook replay could trigger duplicate inbound processing",
     "published": "2026-03-03",
@@ -1803,7 +1862,7 @@
   },
   {
     "ghsa_id": "GHSA-4gc7-qcvf-38wg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32010",
     "severity": "high",
     "title": "In OpenClaw, manually adding sort to tools.exec.safeBins could bypass allowlist approval via --compress-program",
     "published": "2026-03-03",
@@ -1825,7 +1884,7 @@
   },
   {
     "ghsa_id": "GHSA-25pw-4h6w-qwvm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32006",
     "severity": "medium",
     "title": "OpenClaw has a BlueBubbles group allowlist mismatch via DM pairing-store fallback",
     "published": "2026-03-03",
@@ -1932,7 +1991,7 @@
   },
   {
     "ghsa_id": "GHSA-jmmg-jqc7-5qf4",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32025",
     "severity": "medium",
     "title": "OpenClaw's browser-origin WebSocket auth hardening gap could enable loopback password brute-force chains",
     "published": "2026-03-03",
@@ -1955,7 +2014,7 @@
   },
   {
     "ghsa_id": "GHSA-2rgf-hm63-5qph",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32029",
     "severity": "medium",
     "title": "OpenClaw improperly parses X-Forwarded-For behind trusted proxies allows client IP spoofing in security decisions",
     "published": "2026-03-03",
@@ -2042,7 +2101,7 @@
   },
   {
     "ghsa_id": "GHSA-27cr-4p5m-74rj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32033",
     "severity": "medium",
     "title": "OpenClaw has a workspace-only sandbox guard mismatch for @-prefixed absolute paths",
     "published": "2026-03-03",
@@ -2060,71 +2119,6 @@
     "cwes": [
       "CWE-22",
       "CWE-180"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w9cg-v44m-4qv8",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw affected by BASH_ENV / ENV startup-file injection into spawned shell commands",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-w9cg-v44m-4qv8",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-15",
-      "CWE-78"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-r294-2894-92j3",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw has stored XSS in exported session HTML viewer via markdown/raw-HTML rendering",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-r294-2894-92j3",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.23"
-    ],
-    "fixed_versions": [
-      "2026.2.23"
-    ],
-    "fixed_version": "2026.2.23",
-    "cwes": [
-      "CWE-79"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xmv6-r34m-62p4",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Sandbox media fallback tmp symlink alias bypass allows host file reads outside sandboxRoot",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-xmv6-r34m-62p4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.24"
-    ],
-    "fixed_versions": [
-      "2026.2.25"
-    ],
-    "fixed_version": "2026.2.25",
-    "cwes": [
-      "CWE-22",
-      "CWE-59"
     ]
   },
   {

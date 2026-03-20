@@ -252,6 +252,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x82f-27x3-q89c"
   },
   {
+    "ghsa_id": "GHSA-xmv6-r34m-62p4",
+    "severity": "MEDIUM",
+    "title": "Sandbox media fallback tmp symlink alias bypass allows host file reads outside sandboxRoot",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xmv6-r34m-62p4"
+  },
+  {
     "ghsa_id": "GHSA-6g25-pc82-vfwp",
     "severity": "LOW",
     "title": "macOS beta onboarding exposed PKCE verifier via OAuth state",
