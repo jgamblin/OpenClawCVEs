@@ -1867,7 +1867,7 @@
   },
   {
     "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22172",
     "url": "https://api.github.com/advisories/GHSA-rqpp-rjj8-7wv8",
     "html_url": "https://github.com/advisories/GHSA-rqpp-rjj8-7wv8",
     "summary": "OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
@@ -1880,6 +1880,10 @@
       {
         "value": "GHSA-rqpp-rjj8-7wv8",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-22172",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -1890,7 +1894,7 @@
       "https://github.com/advisories/GHSA-rqpp-rjj8-7wv8"
     ],
     "published_at": "2026-03-13T20:55:24Z",
-    "updated_at": "2026-03-13T20:55:25Z",
+    "updated_at": "2026-03-20T21:04:19Z",
     "github_reviewed_at": "2026-03-13T20:55:24Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5970,12 +5974,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-q6qf-4p5j-r25g",
       "https://github.com/openclaw/openclaw/commit/dd9d9c1c609dcb4579f9e57bd7b5c879d0146b53",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32002",
+      "https://www.vulncheck.com/advisories/openclaw-sandbox-boundary-bypass-via-image-tool-workspaceonly-bypass",
       "https://github.com/advisories/GHSA-q6qf-4p5j-r25g"
     ],
     "published_at": "2026-03-04T19:13:48Z",
-    "updated_at": "2026-03-19T22:16:56Z",
+    "updated_at": "2026-03-20T21:14:05Z",
     "github_reviewed_at": "2026-03-04T19:13:48Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-19T22:16:32Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5994,8 +6000,8 @@
         "score": 5.3
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.0
       }
     },
     "cwes": [
@@ -6471,12 +6477,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-x2ff-j5c2-ggpr",
       "https://github.com/openclaw/openclaw/commit/ce8c67c314b93f570f53c2a9abc124e1e3a54715",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32005",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-interactive-callbacks-via-sender-check-skip",
       "https://github.com/advisories/GHSA-x2ff-j5c2-ggpr"
     ],
     "published_at": "2026-03-04T18:55:19Z",
-    "updated_at": "2026-03-19T22:18:18Z",
+    "updated_at": "2026-03-20T21:13:55Z",
     "github_reviewed_at": "2026-03-04T18:55:19Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-19T22:16:32Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6491,8 +6499,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 6.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -6532,8 +6540,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 6.8
     }
   },
   {
@@ -6649,12 +6657,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-rv2q-f2h5-6xmg",
       "https://github.com/openclaw/openclaw/commit/ddcb2d79b17bf2a42c5037d8aeff1537a12b931e",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32001",
+      "https://www.vulncheck.com/advisories/openclaw-node-role-device-identity-bypass-via-websocket-authentication",
       "https://github.com/advisories/GHSA-rv2q-f2h5-6xmg"
     ],
     "published_at": "2026-03-03T23:32:12Z",
-    "updated_at": "2026-03-19T22:16:36Z",
+    "updated_at": "2026-03-20T21:13:45Z",
     "github_reviewed_at": "2026-03-03T23:32:12Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-19T22:16:32Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6673,8 +6683,8 @@
         "score": 5.4
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 5.3
       }
     },
     "cwes": [
@@ -7075,7 +7085,7 @@
   },
   {
     "ghsa_id": "GHSA-jj82-76v6-933r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27566",
     "url": "https://api.github.com/advisories/GHSA-jj82-76v6-933r",
     "html_url": "https://github.com/advisories/GHSA-jj82-76v6-933r",
     "summary": "OpenClaw's exec allowlist wrapper analysis did not unwrap env/shell dispatch chains",
@@ -7088,15 +7098,21 @@
       {
         "value": "GHSA-jj82-76v6-933r",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27566",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-jj82-76v6-933r",
       "https://github.com/openclaw/openclaw/commit/2b63592be57782c8946e521bc81286933f0f99c7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-27566",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-wrapper-binary-unwrapping-in-system-run",
       "https://github.com/advisories/GHSA-jj82-76v6-933r"
     ],
     "published_at": "2026-03-03T23:13:51Z",
-    "updated_at": "2026-03-03T23:13:54Z",
+    "updated_at": "2026-03-20T21:36:00Z",
     "github_reviewed_at": "2026-03-03T23:13:51Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7160,6 +7176,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00056,
+      "percentile": 0.17254
     }
   },
   {
@@ -7706,7 +7726,7 @@
   },
   {
     "ghsa_id": "GHSA-gw85-xp4q-5gp9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-31998",
     "url": "https://api.github.com/advisories/GHSA-gw85-xp4q-5gp9",
     "html_url": "https://github.com/advisories/GHSA-gw85-xp4q-5gp9",
     "summary": "OpenClaw's Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
@@ -7719,16 +7739,22 @@
       {
         "value": "GHSA-gw85-xp4q-5gp9",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-31998",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-gw85-xp4q-5gp9",
       "https://github.com/openclaw/openclaw/commit/0ee30361b8f6ef3f110f3a7b001da6dd3df96bb5",
       "https://github.com/openclaw/openclaw/commit/7655c0cb3a47d0647cbbf5284e177f90b4b82ddb",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-31998",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-synology-chat-plugin-via-empty-alloweduserids",
       "https://github.com/advisories/GHSA-gw85-xp4q-5gp9"
     ],
     "published_at": "2026-03-03T23:03:49Z",
-    "updated_at": "2026-03-03T23:03:51Z",
+    "updated_at": "2026-03-20T21:36:35Z",
     "github_reviewed_at": "2026-03-03T23:03:49Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7792,6 +7818,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00038,
+      "percentile": 0.1106
     }
   },
   {

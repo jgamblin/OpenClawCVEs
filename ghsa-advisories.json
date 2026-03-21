@@ -537,7 +537,7 @@
   },
   {
     "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-22172",
     "severity": "critical",
     "title": "OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
     "published": "2026-03-13",
@@ -1802,7 +1802,7 @@
   },
   {
     "ghsa_id": "GHSA-jj82-76v6-933r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27566",
     "severity": "high",
     "title": "OpenClaw's exec allowlist wrapper analysis did not unwrap env/shell dispatch chains",
     "published": "2026-03-03",
@@ -1952,7 +1952,7 @@
   },
   {
     "ghsa_id": "GHSA-gw85-xp4q-5gp9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-31998",
     "severity": "medium",
     "title": "OpenClaw's Synology Chat dmPolicy=allowlist failed open on empty allowedUserIds, allowing unauthorized agent dispatch",
     "published": "2026-03-03",
