@@ -1,5 +1,45 @@
 [
   {
+    "ghsa_id": "GHSA-8mr2-f9wf-hcfq",
+    "cve_id": null,
+    "severity": "low",
+    "title": "Duplicate Advisory: OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback",
+    "published": "2026-03-21",
+    "html_url": "https://github.com/advisories/GHSA-8mr2-f9wf-hcfq",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.2.21-2"
+    ],
+    "fixed_versions": [
+      "2026.2.22"
+    ],
+    "fixed_version": "2026.2.22",
+    "cwes": [
+      "CWE-522"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-qwmf-95r9-gx9x",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: OpenClaw's gateway tokenless Tailscale auth applied to HTTP routes",
+    "published": "2026-03-21",
+    "html_url": "https://github.com/advisories/GHSA-qwmf-95r9-gx9x",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.2.21"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-290"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-x49q-fhhm-r9jf",
     "cve_id": null,
     "severity": "critical",
@@ -1974,7 +2014,7 @@
   },
   {
     "ghsa_id": "GHSA-v6x2-2qvm-6gv8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32897",
     "severity": "low",
     "title": "OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback",
     "published": "2026-03-03",
@@ -2055,49 +2095,6 @@
     "fixed_version": "2026.2.26",
     "cwes": [
       "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-gcj7-r3hg-m7w6",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw's voice-call Twilio replay dedupe now bound to authenticated webhook identity",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-gcj7-r3hg-m7w6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.2.25"
-    ],
-    "fixed_versions": [
-      "2026.2.26"
-    ],
-    "fixed_version": "2026.2.26",
-    "cwes": [
-      "CWE-294",
-      "CWE-345"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w7j5-j98m-w679",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw has multiple E2E/test Dockerfiles that run all processes as root",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/advisories/GHSA-w7j5-j98m-w679",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.2.21"
-    ],
-    "fixed_versions": [
-      "2026.2.21"
-    ],
-    "fixed_version": "2026.2.21",
-    "cwes": [
-      "CWE-250"
     ]
   },
   {

@@ -1,5 +1,129 @@
 [
   {
+    "ghsa_id": "GHSA-8mr2-f9wf-hcfq",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-8mr2-f9wf-hcfq",
+    "html_url": "https://github.com/advisories/GHSA-8mr2-f9wf-hcfq",
+    "summary": "Duplicate Advisory: OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-v6x2-2qvm-6gv8. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw versions prior to 2026.2.22 reuse gateway.auth.token as a fallback hash secret for owner-ID prompt obfuscation when commands.ownerDisplay is set to hash and commands.ownerDisplaySecret is unset, creating dual-use of authentication secrets across security domains. Attackers with access to system prompts sent to third-party model providers can derive the gateway authentication token from the hash outputs, compromising gateway authentication security.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-8mr2-f9wf-hcfq",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-v6x2-2qvm-6gv8",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32897",
+      "https://github.com/openclaw/openclaw/commit/c99e7696e6893083b256f0a6c88fb060f3a76fb7",
+      "https://www.vulncheck.com/advisories/openclaw-authentication-token-reuse-in-owner-id-prompt-hashing-fallback",
+      "https://github.com/advisories/GHSA-8mr2-f9wf-hcfq"
+    ],
+    "published_at": "2026-03-21T03:31:15Z",
+    "updated_at": "2026-03-24T17:54:55Z",
+    "github_reviewed_at": "2026-03-24T17:54:52Z",
+    "nvd_published_at": "2026-03-21T01:17:10Z",
+    "withdrawn_at": "2026-03-24T17:54:52Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.2.21-2",
+        "first_patched_version": "2026.2.22",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+        "score": 3.7
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 2.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "score": 3.7
+    }
+  },
+  {
+    "ghsa_id": "GHSA-qwmf-95r9-gx9x",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-qwmf-95r9-gx9x",
+    "html_url": "https://github.com/advisories/GHSA-qwmf-95r9-gx9x",
+    "summary": "Duplicate Advisory: OpenClaw's gateway tokenless Tailscale auth applied to HTTP routes",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-hff7-ccv5-52f8. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw versions prior to 2026.2.21 incorrectly apply tokenless Tailscale header authentication to HTTP gateway routes, allowing bypass of token and password requirements. Attackers on trusted networks can exploit this misconfiguration to access HTTP gateway routes without proper authentication credentials.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-qwmf-95r9-gx9x",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-hff7-ccv5-52f8",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32045",
+      "https://github.com/openclaw/openclaw/commit/356d61aacfa5b0f1d5830716ec59d70682a3e7b8",
+      "https://www.vulncheck.com/advisories/openclaw-authentication-bypass-in-http-gateway-routes-via-tokenless-tailscale-auth",
+      "https://github.com/advisories/GHSA-qwmf-95r9-gx9x"
+    ],
+    "published_at": "2026-03-21T03:31:13Z",
+    "updated_at": "2026-03-24T18:05:56Z",
+    "github_reviewed_at": "2026-03-24T18:05:53Z",
+    "nvd_published_at": "2026-03-21T01:17:07Z",
+    "withdrawn_at": "2026-03-24T18:05:53Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.2.21",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 5.9
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.2
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-290",
+        "name": "Authentication Bypass by Spoofing"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "score": 5.9
+    }
+  },
+  {
     "ghsa_id": "GHSA-x49q-fhhm-r9jf",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-x49q-fhhm-r9jf",
@@ -7870,7 +7994,7 @@
   },
   {
     "ghsa_id": "GHSA-v6x2-2qvm-6gv8",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32897",
     "url": "https://api.github.com/advisories/GHSA-v6x2-2qvm-6gv8",
     "html_url": "https://github.com/advisories/GHSA-v6x2-2qvm-6gv8",
     "summary": "OpenClaw reuses the gateway auth token in the owner ID prompt hashing fallback",
@@ -7883,15 +8007,21 @@
       {
         "value": "GHSA-v6x2-2qvm-6gv8",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32897",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-v6x2-2qvm-6gv8",
       "https://github.com/openclaw/openclaw/commit/c99e7696e6893083b256f0a6c88fb060f3a76fb7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32897",
+      "https://www.vulncheck.com/advisories/openclaw-authentication-token-reuse-in-owner-id-prompt-hashing-fallback",
       "https://github.com/advisories/GHSA-v6x2-2qvm-6gv8"
     ],
     "published_at": "2026-03-03T23:01:30Z",
-    "updated_at": "2026-03-03T23:01:32Z",
+    "updated_at": "2026-03-24T17:55:05Z",
     "github_reviewed_at": "2026-03-03T23:01:30Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7926,6 +8056,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0005,
+      "percentile": 0.15465
     }
   },
   {
@@ -8176,180 +8310,6 @@
     "epss": {
       "percentage": 0.00036,
       "percentile": 0.10648
-    }
-  },
-  {
-    "ghsa_id": "GHSA-gcj7-r3hg-m7w6",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-gcj7-r3hg-m7w6",
-    "html_url": "https://github.com/advisories/GHSA-gcj7-r3hg-m7w6",
-    "summary": "OpenClaw's voice-call Twilio replay dedupe now bound to authenticated webhook identity",
-    "description": "### Summary\nThe voice-call Twilio webhook path accepted replay/dedupe identity from unsigned request metadata (`i-twilio-idempotency-token`), enabling replayed signed requests to bypass replay detection and manager dedupe by mutating only that header.\n\n### Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.2.25` (latest published npm version at triage time)\n- Fixed on `main`: commit `1aadf26f9acc399affabd859937a09468a9c5cb4`\n- Planned patched npm version: `2026.2.26`\n\n### Impact\nDeployments using the optional `voice-call` Twilio webhook path could accept replayed webhook events as fresh events when an attacker had one valid signed request and changed only the unsigned idempotency header.\n\n### Technical Details\nThe fix removes unsigned-header trust from Twilio replay/dedupe identity and binds replay/manager dedupe to authenticated request material. It also threads a verified request identity through provider parsing so dedupe uses verification-derived identity rather than mutable headers.\n\n### Fix Commit(s)\n- `1aadf26f9acc399affabd859937a09468a9c5cb4`\n\n### Release Process Note\n`patched_versions` is pre-set to the planned next release (`2026.2.26`). After the npm release is published, this advisory can be published without additional version-field edits.\n\nOpenClaw thanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "low",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-gcj7-r3hg-m7w6",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-gcj7-r3hg-m7w6",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-gcj7-r3hg-m7w6",
-      "https://github.com/openclaw/openclaw/commit/1aadf26f9acc399affabd859937a09468a9c5cb4",
-      "https://github.com/advisories/GHSA-gcj7-r3hg-m7w6"
-    ],
-    "published_at": "2026-03-03T22:25:37Z",
-    "updated_at": "2026-03-03T22:25:38Z",
-    "github_reviewed_at": "2026-03-03T22:25:37Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.2.25",
-        "first_patched_version": "2026.2.26",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
-        "score": 3.7
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-294",
-        "name": "Authentication Bypass by Capture-replay"
-      },
-      {
-        "cwe_id": "CWE-345",
-        "name": "Insufficient Verification of Data Authenticity"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L",
-      "score": 3.7
-    }
-  },
-  {
-    "ghsa_id": "GHSA-w7j5-j98m-w679",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-w7j5-j98m-w679",
-    "html_url": "https://github.com/advisories/GHSA-w7j5-j98m-w679",
-    "summary": "OpenClaw has multiple E2E/test Dockerfiles that run all processes as root",
-    "description": "Three Dockerfiles in scripts/docker/ and scripts/e2e/ lack a USER directive, meaning all processes run as uid 0 (root). If any process is compromised, the attacker has root inside the container, making container breakout significantly easier.\n**Partial fix (2026-02-08):** Commit 28e1a65e added USER sandbox to Dockerfile.sandbox and Dockerfile.sandbox-browser. The E2E/test Dockerfiles listed below remain unpatched.\n\n**Affected components:**\n- scripts/e2e/Dockerfile\n- scripts/e2e/Dockerfile.qr-import\n- scripts/docker/install-sh-e2e/Dockerfile\n- scripts/docker/install-sh-nonroot/Dockerfile (runs as app but with NOPASSWD sudo \u2014 see related advisory)\n\n**Technical Reproduction:**\n1. Open each Dockerfile listed above and search for a USER directive \u2014 none found.\n2. Run any of these containers: docker run --rm -it <image> id\n3. Observe: returns uid=0(root).\n\n**Demonstrated Impact:**\n- Root inside the container enables kernel exploit attempts, volume mount abuse, and privileged syscall access.\n- Test images share the same base (node:22-bookworm) as production, creating risk of accidental deployment of root-running images.\n\n**Environment:** Base images node:22-bookworm and node:22-bookworm-slim default to root. Dockerfile.sandbox and Dockerfile.sandbox-browser were remediated in commit 28e1a65e; only the E2E/test images listed above remain affected.\n\n**Remediation:** Add a USER directive before CMD/ENTRYPOINT in each remaining Dockerfile:\n  RUN useradd --create-home --shell /bin/bash appuser\n  USER appuser",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-w7j5-j98m-w679",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-w7j5-j98m-w679",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-w7j5-j98m-w679",
-      "https://github.com/openclaw/openclaw/commit/28e1a65ebc580f07533966f5693f4df0a18d7085",
-      "https://github.com/advisories/GHSA-w7j5-j98m-w679"
-    ],
-    "published_at": "2026-03-03T22:25:13Z",
-    "updated_at": "2026-03-03T22:25:14Z",
-    "github_reviewed_at": "2026-03-03T22:25:13Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.2.21",
-        "first_patched_version": "2026.2.21",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:H/SI:H/SA:H",
-        "score": 8.4
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-250",
-        "name": "Execution with Unnecessary Privileges"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "TerminalsandCoffee",
-          "id": 26743149,
-          "node_id": "MDQ6VXNlcjI2NzQzMTQ5",
-          "avatar_url": "https://avatars.githubusercontent.com/u/26743149?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/TerminalsandCoffee",
-          "html_url": "https://github.com/TerminalsandCoffee",
-          "followers_url": "https://api.github.com/users/TerminalsandCoffee/followers",
-          "following_url": "https://api.github.com/users/TerminalsandCoffee/following{/other_user}",
-          "gists_url": "https://api.github.com/users/TerminalsandCoffee/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/TerminalsandCoffee/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/TerminalsandCoffee/subscriptions",
-          "organizations_url": "https://api.github.com/users/TerminalsandCoffee/orgs",
-          "repos_url": "https://api.github.com/users/TerminalsandCoffee/repos",
-          "events_url": "https://api.github.com/users/TerminalsandCoffee/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/TerminalsandCoffee/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
     }
   },
   {
