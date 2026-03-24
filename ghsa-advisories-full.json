@@ -4655,7 +4655,7 @@
   },
   {
     "ghsa_id": "GHSA-9q36-67vc-rrwg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27646",
     "url": "https://api.github.com/advisories/GHSA-9q36-67vc-rrwg",
     "html_url": "https://github.com/advisories/GHSA-9q36-67vc-rrwg",
     "summary": "OpenClaw: Sandboxed /acp spawn requests could initialize host ACP sessions",
@@ -4668,6 +4668,10 @@
       {
         "value": "GHSA-9q36-67vc-rrwg",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27646",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4677,7 +4681,7 @@
       "https://github.com/advisories/GHSA-9q36-67vc-rrwg"
     ],
     "published_at": "2026-03-09T19:54:54Z",
-    "updated_at": "2026-03-09T19:54:54Z",
+    "updated_at": "2026-03-23T21:49:25Z",
     "github_reviewed_at": "2026-03-09T19:54:54Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4921,7 +4925,7 @@
   },
   {
     "ghsa_id": "GHSA-r6qf-8968-wj9q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27183",
     "url": "https://api.github.com/advisories/GHSA-r6qf-8968-wj9q",
     "html_url": "https://github.com/advisories/GHSA-r6qf-8968-wj9q",
     "summary": "OpenClaw: system.run wrapper-depth boundary could skip shell approval gating",
@@ -4934,6 +4938,10 @@
       {
         "value": "GHSA-r6qf-8968-wj9q",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-27183",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4943,7 +4951,7 @@
       "https://github.com/advisories/GHSA-r6qf-8968-wj9q"
     ],
     "published_at": "2026-03-09T19:54:25Z",
-    "updated_at": "2026-03-09T19:54:28Z",
+    "updated_at": "2026-03-23T21:49:09Z",
     "github_reviewed_at": "2026-03-09T19:54:25Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5011,7 +5019,7 @@
   },
   {
     "ghsa_id": "GHSA-6mgf-v5j7-45cr",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32913",
     "url": "https://api.github.com/advisories/GHSA-6mgf-v5j7-45cr",
     "html_url": "https://github.com/advisories/GHSA-6mgf-v5j7-45cr",
     "summary": "OpenClaw: fetch-guard forwards custom authorization headers across cross-origin redirects",
@@ -5024,6 +5032,10 @@
       {
         "value": "GHSA-6mgf-v5j7-45cr",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32913",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5033,7 +5045,7 @@
       "https://github.com/advisories/GHSA-6mgf-v5j7-45cr"
     ],
     "published_at": "2026-03-09T19:54:20Z",
-    "updated_at": "2026-03-09T19:54:23Z",
+    "updated_at": "2026-03-23T21:54:50Z",
     "github_reviewed_at": "2026-03-09T19:54:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7853,7 +7865,7 @@
     },
     "epss": {
       "percentage": 0.00047,
-      "percentile": 0.1452
+      "percentile": 0.14448
     }
   },
   {
@@ -8659,8 +8671,8 @@
       "score": 7.1
     },
     "epss": {
-      "percentage": 0.00016,
-      "percentile": 0.03667
+      "percentage": 0.00018,
+      "percentile": 0.04281
     }
   },
   {
@@ -9087,8 +9099,8 @@
       "score": 6.5
     },
     "epss": {
-      "percentage": 0.0001,
-      "percentile": 0.01074
+      "percentage": 0.00011,
+      "percentile": 0.01399
     }
   },
   {

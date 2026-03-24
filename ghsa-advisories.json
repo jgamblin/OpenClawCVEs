@@ -1221,7 +1221,7 @@
   },
   {
     "ghsa_id": "GHSA-9q36-67vc-rrwg",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27646",
     "severity": "medium",
     "title": "OpenClaw: Sandboxed /acp spawn requests could initialize host ACP sessions",
     "published": "2026-03-09",
@@ -1286,7 +1286,7 @@
   },
   {
     "ghsa_id": "GHSA-r6qf-8968-wj9q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-27183",
     "severity": "medium",
     "title": "OpenClaw: system.run wrapper-depth boundary could skip shell approval gating",
     "published": "2026-03-09",
@@ -1308,7 +1308,7 @@
   },
   {
     "ghsa_id": "GHSA-6mgf-v5j7-45cr",
-    "cve_id": null,
+    "cve_id": "CVE-2026-32913",
     "severity": "high",
     "title": "OpenClaw: fetch-guard forwards custom authorization headers across cross-origin redirects",
     "published": "2026-03-09",
