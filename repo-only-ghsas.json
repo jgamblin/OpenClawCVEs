@@ -56,6 +56,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-74wf-h43j-vvmj"
   },
   {
+    "ghsa_id": "GHSA-7xr2-q9vf-x4r5",
+    "severity": "HIGH",
+    "title": "Incomplete Fix for CVE-2026-32013: Symlink Traversal via IDENTITY.md appendFile in agents.create/update",
+    "published": "2026-03-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7xr2-q9vf-x4r5"
+  },
+  {
     "ghsa_id": "GHSA-8mvx-p2r9-r375",
     "severity": "HIGH",
     "title": "web tools strict URL guard could lose DNS pinning when env proxy is configured",
@@ -89,13 +96,6 @@
     "title": "Google Chat app-url webhook auth accepted non-deployment add-on principals.",
     "published": "2026-03-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mp66-rf4f-mhh8"
-  },
-  {
-    "ghsa_id": "GHSA-mwxv-35wr-4vvj",
-    "severity": "HIGH",
-    "title": "Gateway plugin auth bypass via encoded dot-segment traversal in protected /api/channels paths",
-    "published": "2026-02-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mwxv-35wr-4vvj"
   },
   {
     "ghsa_id": "GHSA-p7gr-f84w-hqg5",
@@ -376,6 +376,13 @@
     "title": "Nextcloud Talk room allowlist matched colliding room names instead of stable room tokens.",
     "published": "2026-03-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xhq5-45pm-2gjr"
+  },
+  {
+    "ghsa_id": "GHSA-25pw-4h6w-qwvm",
+    "severity": "LOW",
+    "title": "BlueBubbles group allowlist mismatch via DM pairing-store fallback",
+    "published": "2026-02-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-25pw-4h6w-qwvm"
   },
   {
     "ghsa_id": "GHSA-gcj7-r3hg-m7w6",
