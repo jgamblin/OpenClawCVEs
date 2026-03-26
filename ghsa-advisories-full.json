@@ -5032,12 +5032,14 @@
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-8j2w-6fmm-m587",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32031",
+      "https://www.vulncheck.com/advisories/openclaw-authentication-bypass-via-path-canonicalization-mismatch-in-api-channels-gateway",
       "https://github.com/advisories/GHSA-8j2w-6fmm-m587"
     ],
     "published_at": "2026-03-12T14:22:04Z",
-    "updated_at": "2026-03-19T22:27:23Z",
+    "updated_at": "2026-03-25T18:47:40Z",
     "github_reviewed_at": "2026-03-12T14:22:04Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-03-19T22:16:38Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5056,8 +5058,8 @@
         "score": 4.8
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.3
       }
     },
     "cwes": [
