@@ -14,13 +14,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fqw4-mph7-2vr8"
   },
   {
-    "ghsa_id": "GHSA-474h-prjg-mmw3",
-    "severity": "HIGH",
-    "title": "Sandboxed sessions_spawn(runtime=\"acp\") bypassed sandbox inheritance and allowed host ACP initialization",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-474h-prjg-mmw3"
-  },
-  {
     "ghsa_id": "GHSA-6mgf-v5j7-45cr",
     "severity": "HIGH",
     "title": "fetch-guard forwards custom authorization headers across cross-origin redirects",
@@ -28,11 +21,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6mgf-v5j7-45cr"
   },
   {
-    "ghsa_id": "GHSA-8mvx-p2r9-r375",
+    "ghsa_id": "GHSA-94pw-c6m8-p9p9",
     "severity": "HIGH",
-    "title": "web tools strict URL guard could lose DNS pinning when env proxy is configured",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8mvx-p2r9-r375"
+    "title": "Gateway operator.write Can Reach Admin-Class Channel Allowlist Persistence via chat.send",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-94pw-c6m8-p9p9"
   },
   {
     "ghsa_id": "GHSA-9p93-7j67-5pc2",
@@ -47,6 +40,20 @@
     "title": "Gateway Plugin Subagent Fallback `deleteSession` Uses Synthetic `operator.admin`",
     "published": "2026-03-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h4jx-hjr3-fhgc"
+  },
+  {
+    "ghsa_id": "GHSA-hr5v-j9h9-xjhg",
+    "severity": "HIGH",
+    "title": "Sandbox Media Root Bypass via Unnormalized `mediaUrl` / `fileUrl` Parameter Keys (CWE-22)",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hr5v-j9h9-xjhg"
+  },
+  {
+    "ghsa_id": "GHSA-m3mh-3mpg-37hw",
+    "severity": "HIGH",
+    "title": "openclaw Arbitrary Malicious Code Execution Vulnerability",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m3mh-3mpg-37hw"
   },
   {
     "ghsa_id": "GHSA-q2qc-744p-66r2",
@@ -77,11 +84,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rhfg-j8jq-7v2h"
   },
   {
-    "ghsa_id": "GHSA-2858-xg23-26fp",
+    "ghsa_id": "GHSA-xp9r-prpg-373r",
+    "severity": "HIGH",
+    "title": "`browser.request` still allows `POST /reset-profile` through the `operator.write` surface",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xp9r-prpg-373r"
+  },
+  {
+    "ghsa_id": "GHSA-3298-56p6-rpw2",
     "severity": "MEDIUM",
-    "title": "Node camera URL payload host-binding bypass allowed gateway fetch pivots",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2858-xg23-26fp"
+    "title": "Incomplete Fix for CVE-2026-27486: Unvalidated SIGKILL in `!stop` Chat Command via `shell-utils.ts`",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3298-56p6-rpw2"
+  },
+  {
+    "ghsa_id": "GHSA-39mp-545q-w789",
+    "severity": "MEDIUM",
+    "title": "Non-owner command-authorized sender can change the owner-only `/send` session delivery policy",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-39mp-545q-w789"
   },
   {
     "ghsa_id": "GHSA-3h2q-j2v4-6w5r",
@@ -96,13 +117,6 @@
     "title": "Feishu webhook reads and parses unauthenticated request bodies before signature validation",
     "published": "2026-03-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3h52-cx59-c456"
-  },
-  {
-    "ghsa_id": "GHSA-3pxq-f3cp-jmxp",
-    "severity": "MEDIUM",
-    "title": "Unified root-bound write hardening for browser output and related path-boundary flows",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pxq-f3cp-jmxp"
   },
   {
     "ghsa_id": "GHSA-4hmj-39m8-jwc7",
@@ -124,6 +138,13 @@
     "title": "Gateway HTTP Session History Route Bypasses Operator Read Scope",
     "published": "2026-03-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5jvj-hxmh-6h6j"
+  },
+  {
+    "ghsa_id": "GHSA-68f8-9mhj-h2mp",
+    "severity": "MEDIUM",
+    "title": "Gateway HTTP /v1/models Route Bypasses Operator Read Scope",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-68f8-9mhj-h2mp"
   },
   {
     "ghsa_id": "GHSA-6rmx-gvvg-vh6j",
@@ -168,25 +189,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9wqx-g2cw-vc7r"
   },
   {
-    "ghsa_id": "GHSA-cfvj-7rx7-fc7c",
-    "severity": "MEDIUM",
-    "title": "stageSandboxMedia destination symlink traversal can overwrite files outside sandbox workspace",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cfvj-7rx7-fc7c"
-  },
-  {
     "ghsa_id": "GHSA-g7cr-9h7q-4qxq",
     "severity": "MEDIUM",
     "title": "MS Teams sender allowlist bypass when route allowlist is configured and sender allowlist is empty",
     "published": "2026-03-11",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g7cr-9h7q-4qxq"
-  },
-  {
-    "ghsa_id": "GHSA-h3rm-6x7g-882f",
-    "severity": "MEDIUM",
-    "title": "Node system.run approval hardening wrapper semantic drift can execute unintended local scripts",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h3rm-6x7g-882f"
   },
   {
     "ghsa_id": "GHSA-hfpr-jhpq-x4rm",
@@ -231,13 +238,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pjvx-rx66-r3fg"
   },
   {
-    "ghsa_id": "GHSA-r54r-wmmq-mh84",
-    "severity": "MEDIUM",
-    "title": "ZIP extraction race could write outside destination via parent symlink rebind",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r54r-wmmq-mh84"
-  },
-  {
     "ghsa_id": "GHSA-r6qf-8968-wj9q",
     "severity": "MEDIUM",
     "title": "system.run wrapper-depth boundary could skip shell approval gating",
@@ -250,13 +250,6 @@
     "title": "MS Teams Feedback Invoke Bypasses Sender Allowlists and Records Unauthorized Session Feedback",
     "published": "2026-03-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rf6h-5gpw-qrgq"
-  },
-  {
-    "ghsa_id": "GHSA-v865-p3gq-hw6m",
-    "severity": "MEDIUM",
-    "title": "Encoded-path auth bypass in plugin `/api/channels` route classification",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v865-p3gq-hw6m"
   },
   {
     "ghsa_id": "GHSA-vcx4-4qxg-mfp4",
@@ -273,18 +266,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vhwf-4x96-vqx2"
   },
   {
+    "ghsa_id": "GHSA-vqvg-86cc-cg83",
+    "severity": "MEDIUM",
+    "title": "Mutating internal `/allowlist` chat commands missed `operator.admin` scope enforcement",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vqvg-86cc-cg83"
+  },
+  {
+    "ghsa_id": "GHSA-w6m8-cqvj-pg5v",
+    "severity": "MEDIUM",
+    "title": "Incomplete Fix for CVE-2026-32011: Feishu Webhook Pre-Auth Body Parsing DoS (Slow-Body / Slowloris Variant)",
+    "published": "2026-03-27",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w6m8-cqvj-pg5v"
+  },
+  {
     "ghsa_id": "GHSA-wpg9-4g4v-f9rc",
     "severity": "MEDIUM",
     "title": "Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels",
     "published": "2026-03-03",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpg9-4g4v-f9rc"
-  },
-  {
-    "ghsa_id": "GHSA-x4vp-4235-65hg",
-    "severity": "MEDIUM",
-    "title": "Pre-auth webhook body parsing can enable unauthenticated slow-request DoS",
-    "published": "2026-03-03",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x4vp-4235-65hg"
   },
   {
     "ghsa_id": "GHSA-xq8g-hgh6-87hv",
