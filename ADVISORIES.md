@@ -1,19 +1,17 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 155 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 153 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-03-27 18:25 UTC</sub>
+<sub>Last updated: 2026-03-28 00:40 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (14)
+## GHSAs with CVE IDs (13)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
 | [GHSA-rqpp-rjj8-7wv8](https://github.com/advisories/GHSA-rqpp-rjj8-7wv8) | CVE-2026-22172 | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes | npm/openclaw | 2026.3.12 | 2026-03-13 |
-| [GHSA-5wcw-8jjv-m286](https://github.com/advisories/GHSA-5wcw-8jjv-m286) | CVE-2026-32302 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Untrusted web origins can obtain authenticated operator.admin access in trusted-proxy mode | npm/openclaw | 2026.3.11 | 2026-03-12 |
-| [GHSA-8j2w-6fmm-m587](https://github.com/advisories/GHSA-8j2w-6fmm-m587) | CVE-2026-32031 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: /api/channels gateway-auth boundary bypass via path canonicalization mismatch | npm/openclaw | 2026.2.26 | 2026-03-12 |
 | [GHSA-mj5r-hh7j-4gxf](https://github.com/advisories/GHSA-mj5r-hh7j-4gxf) | CVE-2026-28480 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram allowlist authorization accepted mutable usernames | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-rq6g-px6m-c248](https://github.com/advisories/GHSA-rq6g-px6m-c248) | CVE-2026-28469 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-3fqr-4cg8-h96q](https://github.com/advisories/GHSA-3fqr-4cg8-h96q) | CVE-2026-26317 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
@@ -28,17 +26,15 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (99)
+## GHSAs Without CVE — Potential Future CVEs (101)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
-| [GHSA-4jpw-hj22-2xmc](https://github.com/advisories/GHSA-4jpw-hj22-2xmc) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: Pairing-scoped device tokens could mint `operator.admin` and reach node RCE | CWE-269 | 2026.3.11 | 2026-03-13 |
-| [GHSA-xw77-45gv-p728](https://github.com/advisories/GHSA-xw77-45gv-p728) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: Plugin subagent routes could bypass gateway authorization with synthetic admin scopes | CWE-269, CWE-285 | 2026.3.11 | 2026-03-13 |
 | [GHSA-x49q-fhhm-r9jf](https://github.com/advisories/GHSA-x49q-fhhm-r9jf) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Duplicate Advisory: OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes | CWE-862 | 2026.3.12 | 2026-03-20 |
 | [GHSA-hf68-49fm-59cq](https://github.com/advisories/GHSA-hf68-49fm-59cq) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw Gateway: RCE and Privilege Escalation from operator.pairing to operator.admin via device.pair.approve | CWE-269 | 2026.3.22 | 2026-03-26 |
+| [GHSA-fqw4-mph7-2vr8](https://github.com/advisories/GHSA-fqw4-mph7-2vr8) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: Silent privilege escalation via gateway shared-auth reconnect | CWE-863 | — | 2026-03-27 |
+| [GHSA-9hjh-fr4f-gxc4](https://github.com/advisories/GHSA-9hjh-fr4f-gxc4) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: Gateway Backend Reconnect lets Non-Admin Operator Scopes Self-Claim operator.admin | CWE-269, CWE-863 | — | 2026-03-27 |
 | [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-02 |
-| [GHSA-qcc4-p59m-p54m](https://github.com/advisories/GHSA-qcc4-p59m-p54m) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Sandbox dangling-symlink alias handling could bypass workspace-only write boundary | CWE-59, CWE-367 | 2026.2.26 | 2026-03-12 |
-| [GHSA-mgrq-9f93-wpp5](https://github.com/advisories/GHSA-mgrq-9f93-wpp5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: workspace path guard bypass on non-existent out-of-root symlink leaf | CWE-22, CWE-59 | 2026.2.26 | 2026-03-12 |
 | [GHSA-g353-mgv3-8pcj](https://github.com/advisories/GHSA-g353-mgv3-8pcj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Feishu webhook mode accepted forged events when only `verificationToken` was configured | CWE-347 | 2026.3.12 | 2026-03-13 |
 | [GHSA-2rqg-gjgv-84jm](https://github.com/advisories/GHSA-2rqg-gjgv-84jm) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway `agent` calls could override the workspace boundary | CWE-668 | 2026.3.11 | 2026-03-13 |
 | [GHSA-wcxr-59v9-rxr8](https://github.com/advisories/GHSA-wcxr-59v9-rxr8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | `OpenClaw: session_status` let sandboxed subagents access parent or sibling session state | CWE-863 | 2026.3.11 | 2026-03-13 |
@@ -48,8 +44,6 @@
 | [GHSA-mj4p-rc52-m843](https://github.com/advisories/GHSA-mj4p-rc52-m843) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Sandbox staged writes could escape the verified parent directory before commit | CWE-59, CWE-367 | 2026.3.11 | 2026-03-13 |
 | [GHSA-qc36-x95h-7j53](https://github.com/advisories/GHSA-qc36-x95h-7j53) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Unrecognized script runners could bypass `system.run` approval integrity | CWE-863 | 2026.3.11 | 2026-03-13 |
 | [GHSA-rw39-5899-8mxp](https://github.com/advisories/GHSA-rw39-5899-8mxp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Node-host approvals could show misleading shell payloads instead of the executed argv | CWE-436, CWE-863 | 2026.3.11 | 2026-03-13 |
-| [GHSA-xf99-j42q-5w5p](https://github.com/advisories/GHSA-xf99-j42q-5w5p) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Unbound interpreter and runtime commands could bypass node-host approval integrity | CWE-367 | 2026.3.11 | 2026-03-13 |
-| [GHSA-4w7m-58cg-cmff](https://github.com/advisories/GHSA-4w7m-58cg-cmff) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Leaf subagents could steer sibling sessions across sandbox boundaries | CWE-269 | 2026.3.11 | 2026-03-13 |
 | [GHSA-g2f6-pwvx-r275](https://github.com/advisories/GHSA-g2f6-pwvx-r275) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpneClaw accepts unsanitized iMessage attachment paths which allowed SCP remote-path command injection | CWE-78 | 2026.3.13 | 2026-03-16 |
 | [GHSA-jq3f-vjww-8rq7](https://github.com/advisories/GHSA-jq3f-vjww-8rq7) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Telegram webhook request bodies were read before secret validation, enabling unauthenticated resource exhaustion | CWE-400 | 2026.3.13 | 2026-03-16 |
 | [GHSA-63f5-hhc7-cx6p](https://github.com/advisories/GHSA-63f5-hhc7-cx6p) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw bootstrap setup codes could be replayed to escalate pending pairing scopes before approval | CWE-269 | 2026.3.13 | 2026-03-16 |
@@ -62,6 +56,7 @@
 | [GHSA-9f79-7pw8-3fj8](https://github.com/advisories/GHSA-9f79-7pw8-3fj8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: workspace path guard bypass on non-existent out-of-root symlink leaf | CWE-22 | — | 2026-03-21 |
 | [GHSA-qwmf-95r9-gx9x](https://github.com/advisories/GHSA-qwmf-95r9-gx9x) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw's gateway tokenless Tailscale auth applied to HTTP routes | CWE-290 | — | 2026-03-21 |
 | [GHSA-xq3g-m3j8-2vmm](https://github.com/advisories/GHSA-xq3g-m3j8-2vmm) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw's inbound media downloads could exceed configured byte limits before rejection across multiple channels | CWE-770 | — | 2026-03-21 |
+| [GHSA-wr92-6w3g-2hwc](https://github.com/advisories/GHSA-wr92-6w3g-2hwc) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw's sandboxed sessions_spawn now enforces sandbox inheritance for cross-agent spawns | CWE-732 | — | 2026-03-21 |
 | [GHSA-7xr2-q9vf-x4r5](https://github.com/advisories/GHSA-7xr2-q9vf-x4r5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Symlink Traversal via IDENTITY.md appendFile in agents.create/update (Incomplete Fix for CVE-2026-32013) | CWE-61 | — | 2026-03-26 |
 | [GHSA-74wf-h43j-vvmj](https://github.com/advisories/GHSA-74wf-h43j-vvmj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's Conflicting Tool Identity Hints Bypass Dangerous-Tool Prompting | CWE-807, CWE-863 | 2026.3.22 | 2026-03-26 |
 | [GHSA-mp66-rf4f-mhh8](https://github.com/advisories/GHSA-mp66-rf4f-mhh8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Google Chat app-url webhook auth accepted non-deployment add-on principals | CWE-863 | 2026.3.22 | 2026-03-26 |
@@ -75,7 +70,8 @@
 | [GHSA-wv46-v6xc-2qhf](https://github.com/advisories/GHSA-wv46-v6xc-2qhf) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Synology Chat reply delivery could be rebound through username-based user resolution. | CWE-639, CWE-706 | 2026.3.22 | 2026-03-26 |
 | [GHSA-wq58-2pvg-5h4f](https://github.com/advisories/GHSA-wq58-2pvg-5h4f) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway agent /reset exposes admin session reset to operator.write callers | CWE-862 | 2026.3.23 | 2026-03-26 |
 | [GHSA-cg6c-q2hx-69h7](https://github.com/advisories/GHSA-cg6c-q2hx-69h7) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Plivo V2 verified replay identity drifts on query-only variants | CWE-294 | 2026.3.23 | 2026-03-26 |
-| [GHSA-v8cg-4474-49v8](https://github.com/advisories/GHSA-v8cg-4474-49v8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Slack system events bypass sender authorization in member and message subtype handlers | CWE-863 | 2026.2.26 | 2026-03-12 |
+| [GHSA-qm2m-28pf-hgjw](https://github.com/advisories/GHSA-qm2m-28pf-hgjw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway Plugin HTTP Auth Grants Unrestricted operator.admin Runtime Scope to All Callers | CWE-266, CWE-863 | — | 2026-03-27 |
+| [GHSA-9p93-7j67-5pc2](https://github.com/advisories/GHSA-9p93-7j67-5pc2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway HTTP /sessions/:sessionKey/kill Reaches Admin Kill Path Without Caller Scope Binding | CWE-226, CWE-863 | — | 2026-03-27 |
 | [GHSA-5m9r-p9g7-679c](https://github.com/advisories/GHSA-5m9r-p9g7-679c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation | CWE-307 | 2026.3.12 | 2026-03-13 |
 | [GHSA-f8r2-vg7x-gh8m](https://github.com/advisories/GHSA-f8r2-vg7x-gh8m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths | CWE-178, CWE-625 | 2026.3.11 | 2026-03-13 |
 | [GHSA-m69h-jm2f-2pv8](https://github.com/advisories/GHSA-m69h-jm2f-2pv8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Feishu reaction events could bypass group authorization and mention gating | CWE-285, CWE-863 | 2026.3.12 | 2026-03-13 |
@@ -84,7 +80,6 @@
 | [GHSA-9vvh-2768-c8vp](https://github.com/advisories/GHSA-9vvh-2768-c8vp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Discord guild reaction ingress could bypass users and roles allowlists | CWE-284, CWE-863 | 2026.3.11 | 2026-03-13 |
 | [GHSA-jf6w-m8jw-jfxc](https://github.com/advisories/GHSA-jf6w-m8jw-jfxc) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Write-scoped callers could reach admin-only session reset logic through `agent` | CWE-863 | 2026.3.11 | 2026-03-13 |
 | [GHSA-8jhh-jcqg-mj5p](https://github.com/advisories/GHSA-8jhh-jcqg-mj5p) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Channel commands could bypass account-scoped `configWrites` restrictions | CWE-639, CWE-862 | 2026.3.11 | 2026-03-13 |
-| [GHSA-xvx8-77m6-gwg6](https://github.com/advisories/GHSA-xvx8-77m6-gwg6) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Sandbox `writeFile` commit could race outside the validated path | CWE-367 | 2026.3.11 | 2026-03-13 |
 | [GHSA-vr7j-g7jv-h5mp](https://github.com/advisories/GHSA-vr7j-g7jv-h5mp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw session transcript files were created without forced user-only permissions | CWE-276, CWE-732 | 2026.2.17 | 2026-03-16 |
 | [GHSA-xwcj-hwhf-h378](https://github.com/advisories/GHSA-xwcj-hwhf-h378) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram media fetch errors exposed bot tokens in logged file URLs | CWE-532 | 2026.3.13 | 2026-03-16 |
 | [GHSA-5rp4-cwgh-gvwq](https://github.com/advisories/GHSA-5rp4-cwgh-gvwq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes | CWE-78 | 2026.3.12 | 2026-03-19 |
@@ -104,6 +99,7 @@
 | [GHSA-g839-vp47-wgh8](https://github.com/advisories/GHSA-g839-vp47-wgh8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw's Slack reaction/pin sender-policy consistency issue in non-message ingress | CWE-863 | — | 2026-03-21 |
 | [GHSA-mxmg-3p7m-2ghr](https://github.com/advisories/GHSA-mxmg-3p7m-2ghr) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: system.run approval identity mismatch could execute a different binary than displayed | CWE-436 | — | 2026-03-21 |
 | [GHSA-xh9j-mpc9-2m9p](https://github.com/advisories/GHSA-xh9j-mpc9-2m9p) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw has a Trusted-proxy Control UI pairing bypass which allows unpaired node sessions | CWE-807 | — | 2026-03-21 |
+| [GHSA-ffr4-mrhv-vfr2](https://github.com/advisories/GHSA-ffr4-mrhv-vfr2) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw has browser trace/download path symlink escape in temp output handling | CWE-59 | — | 2026-03-21 |
 | [GHSA-3r78-rqg8-95gg](https://github.com/advisories/GHSA-3r78-rqg8-95gg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw's voice-call Twilio webhook replay could bypass manager dedupe because normalized event IDs were randomized per parse | CWE-294 | — | 2026-03-21 |
 | [GHSA-xgwg-m42c-8q62](https://github.com/advisories/GHSA-xgwg-m42c-8q62) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Slack system events bypass sender authorization in member and message subtype handlers | CWE-863 | — | 2026-03-21 |
 | [GHSA-q94v-v6m9-jhq9](https://github.com/advisories/GHSA-q94v-v6m9-jhq9) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw has an improper sandbox configuration vulnerability | CWE-1188 | — | 2026-03-21 |
@@ -123,6 +119,10 @@
 | [GHSA-rvqr-hrcc-j9vv](https://github.com/advisories/GHSA-rvqr-hrcc-j9vv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Bonjour/DNS-SD TXT metadata steers CLI routing after failed service resolution | CWE-345, CWE-642 | 2026.3.22 | 2026-03-26 |
 | [GHSA-h3x4-hc5v-v2gm](https://github.com/advisories/GHSA-h3x4-hc5v-v2gm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Windows media loaders accepted remote-host file URLs before local path validation | CWE-40 | 2026.3.22 | 2026-03-26 |
 | [GHSA-6mqc-jqh6-x8fc](https://github.com/advisories/GHSA-6mqc-jqh6-x8fc) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Gateway Canvas local-direct requests bypass Canvas HTTP and WebSocket authentication | CWE-287 | 2026.3.23 | 2026-03-26 |
+| [GHSA-vcx4-4qxg-mfp4](https://github.com/advisories/GHSA-vcx4-4qxg-mfp4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Telegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret | CWE-307, CWE-521 | — | 2026-03-27 |
+| [GHSA-mw7w-g3mg-xqm7](https://github.com/advisories/GHSA-mw7w-g3mg-xqm7) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: BlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events | CWE-288, CWE-863 | — | 2026-03-27 |
+| [GHSA-9wqx-g2cw-vc7r](https://github.com/advisories/GHSA-9wqx-g2cw-vc7r) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Matrix Verification Notices Bypass Matrix DM Policy and Reply to Unpaired DM Peers | CWE-288, CWE-863 | — | 2026-03-27 |
+| [GHSA-xq8g-hgh6-87hv](https://github.com/advisories/GHSA-xq8g-hgh6-87hv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: BlueBubbles Webhook Missing Rate Limiting Enables Brute-Force Password Guessing | CWE-307, CWE-521 | — | 2026-03-27 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026.2.14 | 2026-02-17 |
 | [GHSA-qvr7-g57c-mrc7](https://github.com/advisories/GHSA-qvr7-g57c-mrc7) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw: Unavailable local auth SecretRefs could fall through to remote credentials in local mode | CWE-636 | 2026.3.11 | 2026-03-13 |
 | [GHSA-r849-826x-wgqm](https://github.com/advisories/GHSA-r849-826x-wgqm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: Signal group allowlist authorization bypass via DM pairing-store leakage | CWE-863 | — | 2026-03-19 |
@@ -134,25 +134,26 @@
 
 ---
 
-## Repo-Only Advisories (42)
+## Repo-Only Advisories (40)
 
 These advisories are visible on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but are not indexed in the GitHub Advisory Database (no npm package mapping). They cannot be fetched via the Advisory Database API.
 
 | GHSA | Severity | Title | Published |
 |------|----------|-------|-----------|
-| [GHSA-9hjh-fr4f-gxc4](https://github.com/openclaw/openclaw/security/advisories/GHSA-9hjh-fr4f-gxc4) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Gateway Backend Reconnect lets Non-Admin Operator Scopes Self-Claim operator.admin | 2026-03-26 |
-| [GHSA-fqw4-mph7-2vr8](https://github.com/openclaw/openclaw/security/advisories/GHSA-fqw4-mph7-2vr8) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Gateway local shared-auth reconnect silently widens paired device scope from operator.read to operator.admin and reach node RCE | 2026-03-26 |
+| [GHSA-4jpw-hj22-2xmc](https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Pairing-scoped device tokens could mint `operator.admin` and reach node RCE | 2026-03-12 |
+| [GHSA-4w7m-58cg-cmff](https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Leaf subagents could steer sibling sessions across sandbox boundaries | 2026-03-12 |
+| [GHSA-5wcw-8jjv-m286](https://github.com/openclaw/openclaw/security/advisories/GHSA-5wcw-8jjv-m286) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Browser-originated WebSocket connections could bypass origin validation in trusted-proxy mode | 2026-03-12 |
 | [GHSA-6mgf-v5j7-45cr](https://github.com/openclaw/openclaw/security/advisories/GHSA-6mgf-v5j7-45cr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | fetch-guard forwards custom authorization headers across cross-origin redirects | 2026-03-08 |
 | [GHSA-94pw-c6m8-p9p9](https://github.com/openclaw/openclaw/security/advisories/GHSA-94pw-c6m8-p9p9) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway operator.write Can Reach Admin-Class Channel Allowlist Persistence via chat.send | 2026-03-27 |
-| [GHSA-9p93-7j67-5pc2](https://github.com/openclaw/openclaw/security/advisories/GHSA-9p93-7j67-5pc2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway HTTP /sessions/:sessionKey/kill Reaches Admin Kill Path Without Caller Scope Binding | 2026-03-26 |
 | [GHSA-h4jx-hjr3-fhgc](https://github.com/openclaw/openclaw/security/advisories/GHSA-h4jx-hjr3-fhgc) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway Plugin Subagent Fallback `deleteSession` Uses Synthetic `operator.admin` | 2026-03-26 |
 | [GHSA-hr5v-j9h9-xjhg](https://github.com/openclaw/openclaw/security/advisories/GHSA-hr5v-j9h9-xjhg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Sandbox Media Root Bypass via Unnormalized `mediaUrl` / `fileUrl` Parameter Keys (CWE-22) | 2026-03-27 |
 | [GHSA-m3mh-3mpg-37hw](https://github.com/openclaw/openclaw/security/advisories/GHSA-m3mh-3mpg-37hw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | openclaw Arbitrary Malicious Code Execution Vulnerability | 2026-03-27 |
 | [GHSA-q2qc-744p-66r2](https://github.com/openclaw/openclaw/security/advisories/GHSA-q2qc-744p-66r2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | `session_status` sessionId resolution bypasses sandboxed session-tree visibility | 2026-03-26 |
-| [GHSA-qm2m-28pf-hgjw](https://github.com/openclaw/openclaw/security/advisories/GHSA-qm2m-28pf-hgjw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway Plugin HTTP auth: "gateway" Mints operator.admin Runtime Scope | 2026-03-26 |
 | [GHSA-rchv-x836-w7xp](https://github.com/openclaw/openclaw/security/advisories/GHSA-rchv-x836-w7xp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Dashboard leaked gateway auth material via browser URL/query and localStorage | 2026-03-08 |
 | [GHSA-rhfg-j8jq-7v2h](https://github.com/openclaw/openclaw/security/advisories/GHSA-rhfg-j8jq-7v2h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | SSRF via Unguarded Configured Base URLs in Multiple Channel Extensions (Incomplete Fix for CVE-2026-28476) | 2026-03-26 |
+| [GHSA-xf99-j42q-5w5p](https://github.com/openclaw/openclaw/security/advisories/GHSA-xf99-j42q-5w5p) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Unbound interpreter and runtime commands could bypass node-host approval integrity | 2026-03-12 |
 | [GHSA-xp9r-prpg-373r](https://github.com/openclaw/openclaw/security/advisories/GHSA-xp9r-prpg-373r) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | `browser.request` still allows `POST /reset-profile` through the `operator.write` surface | 2026-03-27 |
+| [GHSA-xw77-45gv-p728](https://github.com/openclaw/openclaw/security/advisories/GHSA-xw77-45gv-p728) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Plugin subagent routes could bypass gateway authorization with synthetic admin scopes | 2026-03-12 |
 | [GHSA-3298-56p6-rpw2](https://github.com/openclaw/openclaw/security/advisories/GHSA-3298-56p6-rpw2) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Incomplete Fix for CVE-2026-27486: Unvalidated SIGKILL in `!stop` Chat Command via `shell-utils.ts` | 2026-03-27 |
 | [GHSA-39mp-545q-w789](https://github.com/openclaw/openclaw/security/advisories/GHSA-39mp-545q-w789) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Non-owner command-authorized sender can change the owner-only `/send` session delivery policy | 2026-03-27 |
 | [GHSA-3h2q-j2v4-6w5r](https://github.com/openclaw/openclaw/security/advisories/GHSA-3h2q-j2v4-6w5r) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | system.run allowlist approval parsing missed PowerShell encoded-command wrappers | 2026-03-08 |
@@ -166,22 +167,19 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-8g75-q649-6pv6](https://github.com/openclaw/openclaw/security/advisories/GHSA-8g75-q649-6pv6) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | system.run approvals did not bind mutable script operands across approval and execution | 2026-03-10 |
 | [GHSA-9q2p-vc84-2rwm](https://github.com/openclaw/openclaw/security/advisories/GHSA-9q2p-vc84-2rwm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | system.run allow-always persistence included shell-commented payload tails | 2026-03-08 |
 | [GHSA-9q36-67vc-rrwg](https://github.com/openclaw/openclaw/security/advisories/GHSA-9q36-67vc-rrwg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Sandboxed /acp spawn requests could initialize host ACP sessions | 2026-03-08 |
-| [GHSA-9wqx-g2cw-vc7r](https://github.com/openclaw/openclaw/security/advisories/GHSA-9wqx-g2cw-vc7r) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Matrix Verification Notices Bypass Matrix DM Policy and Reply to Unpaired DM Peers | 2026-03-26 |
 | [GHSA-g7cr-9h7q-4qxq](https://github.com/openclaw/openclaw/security/advisories/GHSA-g7cr-9h7q-4qxq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | MS Teams sender allowlist bypass when route allowlist is configured and sender allowlist is empty | 2026-03-11 |
 | [GHSA-hfpr-jhpq-x4rm](https://github.com/openclaw/openclaw/security/advisories/GHSA-hfpr-jhpq-x4rm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | `operator.write` chat.send could reach admin-only config writes | 2026-03-08 |
 | [GHSA-j425-whc4-4jgc](https://github.com/openclaw/openclaw/security/advisories/GHSA-j425-whc4-4jgc) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | `system.run` env override filtering allowed dangerous helper-command pivots | 2026-03-08 |
 | [GHSA-j4c9-w69r-cw33](https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c9-w69r-cw33) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Telegram DM-Scoped Inline Button Callbacks Bypass DM Pairing and Mutate Session State | 2026-03-26 |
 | [GHSA-mf5g-6r6f-ghhm](https://github.com/openclaw/openclaw/security/advisories/GHSA-mf5g-6r6f-ghhm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Synology Chat Webhook Pre-Auth Rate-Limit Bypass Enables Brute-Force Guessing of Weak Webhook Token | 2026-03-26 |
-| [GHSA-mw7w-g3mg-xqm7](https://github.com/openclaw/openclaw/security/advisories/GHSA-mw7w-g3mg-xqm7) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | BlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events | 2026-03-26 |
 | [GHSA-pjvx-rx66-r3fg](https://github.com/openclaw/openclaw/security/advisories/GHSA-pjvx-rx66-r3fg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Cross-account sender authorization expansion in `/allowlist ... --store` account scoping | 2026-03-08 |
 | [GHSA-r6qf-8968-wj9q](https://github.com/openclaw/openclaw/security/advisories/GHSA-r6qf-8968-wj9q) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | system.run wrapper-depth boundary could skip shell approval gating | 2026-03-08 |
 | [GHSA-rf6h-5gpw-qrgq](https://github.com/openclaw/openclaw/security/advisories/GHSA-rf6h-5gpw-qrgq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | MS Teams Feedback Invoke Bypasses Sender Allowlists and Records Unauthorized Session Feedback | 2026-03-26 |
-| [GHSA-vcx4-4qxg-mfp4](https://github.com/openclaw/openclaw/security/advisories/GHSA-vcx4-4qxg-mfp4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Telegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret | 2026-03-26 |
 | [GHSA-vhwf-4x96-vqx2](https://github.com/openclaw/openclaw/security/advisories/GHSA-vhwf-4x96-vqx2) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | skills-install-download can be redirected outside the tools root by rebinding the validated base path | 2026-03-11 |
 | [GHSA-vqvg-86cc-cg83](https://github.com/openclaw/openclaw/security/advisories/GHSA-vqvg-86cc-cg83) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Mutating internal `/allowlist` chat commands missed `operator.admin` scope enforcement | 2026-03-27 |
 | [GHSA-w6m8-cqvj-pg5v](https://github.com/openclaw/openclaw/security/advisories/GHSA-w6m8-cqvj-pg5v) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Incomplete Fix for CVE-2026-32011: Feishu Webhook Pre-Auth Body Parsing DoS (Slow-Body / Slowloris Variant) | 2026-03-27 |
 | [GHSA-wpg9-4g4v-f9rc](https://github.com/openclaw/openclaw/security/advisories/GHSA-wpg9-4g4v-f9rc) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Discord voice transcript owner-flag omission could expose owner-only tools in mixed-trust channels | 2026-03-03 |
-| [GHSA-xq8g-hgh6-87hv](https://github.com/openclaw/openclaw/security/advisories/GHSA-xq8g-hgh6-87hv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | BlueBubbles Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Password | 2026-03-26 |
+| [GHSA-xvx8-77m6-gwg6](https://github.com/openclaw/openclaw/security/advisories/GHSA-xvx8-77m6-gwg6) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Sandbox `writeFile` commit could race outside the validated path | 2026-03-12 |
 
 ---
 
@@ -202,8 +200,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-28478 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-28480 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-29612 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
-| CVE-2026-32031 | ✅ **PUBLISHED** | ✅ | 2026-03-12 | VulnCheck |
-| CVE-2026-32302 | ✅ **PUBLISHED** | ✅ | 2026-03-12 | GitHub_M |
+| CVE-2026-32302 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
 
 ---
 

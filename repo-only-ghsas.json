@@ -1,17 +1,24 @@
 [
   {
-    "ghsa_id": "GHSA-9hjh-fr4f-gxc4",
+    "ghsa_id": "GHSA-4jpw-hj22-2xmc",
     "severity": "CRITICAL",
-    "title": "Gateway Backend Reconnect lets Non-Admin Operator Scopes Self-Claim operator.admin",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9hjh-fr4f-gxc4"
+    "title": "Pairing-scoped device tokens could mint `operator.admin` and reach node RCE",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc"
   },
   {
-    "ghsa_id": "GHSA-fqw4-mph7-2vr8",
-    "severity": "CRITICAL",
-    "title": "Gateway local shared-auth reconnect silently widens paired device scope from operator.read to operator.admin and reach node RCE",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fqw4-mph7-2vr8"
+    "ghsa_id": "GHSA-4w7m-58cg-cmff",
+    "severity": "HIGH",
+    "title": "Leaf subagents could steer sibling sessions across sandbox boundaries",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4w7m-58cg-cmff"
+  },
+  {
+    "ghsa_id": "GHSA-5wcw-8jjv-m286",
+    "severity": "HIGH",
+    "title": "Browser-originated WebSocket connections could bypass origin validation in trusted-proxy mode",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5wcw-8jjv-m286"
   },
   {
     "ghsa_id": "GHSA-6mgf-v5j7-45cr",
@@ -26,13 +33,6 @@
     "title": "Gateway operator.write Can Reach Admin-Class Channel Allowlist Persistence via chat.send",
     "published": "2026-03-27",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-94pw-c6m8-p9p9"
-  },
-  {
-    "ghsa_id": "GHSA-9p93-7j67-5pc2",
-    "severity": "HIGH",
-    "title": "Gateway HTTP /sessions/:sessionKey/kill Reaches Admin Kill Path Without Caller Scope Binding",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9p93-7j67-5pc2"
   },
   {
     "ghsa_id": "GHSA-h4jx-hjr3-fhgc",
@@ -63,13 +63,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q2qc-744p-66r2"
   },
   {
-    "ghsa_id": "GHSA-qm2m-28pf-hgjw",
-    "severity": "HIGH",
-    "title": "Gateway Plugin HTTP auth: \"gateway\" Mints operator.admin Runtime Scope",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qm2m-28pf-hgjw"
-  },
-  {
     "ghsa_id": "GHSA-rchv-x836-w7xp",
     "severity": "HIGH",
     "title": "Dashboard leaked gateway auth material via browser URL/query and localStorage",
@@ -84,11 +77,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rhfg-j8jq-7v2h"
   },
   {
+    "ghsa_id": "GHSA-xf99-j42q-5w5p",
+    "severity": "HIGH",
+    "title": "Unbound interpreter and runtime commands could bypass node-host approval integrity",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xf99-j42q-5w5p"
+  },
+  {
     "ghsa_id": "GHSA-xp9r-prpg-373r",
     "severity": "HIGH",
     "title": "`browser.request` still allows `POST /reset-profile` through the `operator.write` surface",
     "published": "2026-03-27",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xp9r-prpg-373r"
+  },
+  {
+    "ghsa_id": "GHSA-xw77-45gv-p728",
+    "severity": "HIGH",
+    "title": "Plugin subagent routes could bypass gateway authorization with synthetic admin scopes",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xw77-45gv-p728"
   },
   {
     "ghsa_id": "GHSA-3298-56p6-rpw2",
@@ -182,13 +189,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q36-67vc-rrwg"
   },
   {
-    "ghsa_id": "GHSA-9wqx-g2cw-vc7r",
-    "severity": "MEDIUM",
-    "title": "Matrix Verification Notices Bypass Matrix DM Policy and Reply to Unpaired DM Peers",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9wqx-g2cw-vc7r"
-  },
-  {
     "ghsa_id": "GHSA-g7cr-9h7q-4qxq",
     "severity": "MEDIUM",
     "title": "MS Teams sender allowlist bypass when route allowlist is configured and sender allowlist is empty",
@@ -224,13 +224,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mf5g-6r6f-ghhm"
   },
   {
-    "ghsa_id": "GHSA-mw7w-g3mg-xqm7",
-    "severity": "MEDIUM",
-    "title": "BlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mw7w-g3mg-xqm7"
-  },
-  {
     "ghsa_id": "GHSA-pjvx-rx66-r3fg",
     "severity": "MEDIUM",
     "title": "Cross-account sender authorization expansion in `/allowlist ... --store` account scoping",
@@ -250,13 +243,6 @@
     "title": "MS Teams Feedback Invoke Bypasses Sender Allowlists and Records Unauthorized Session Feedback",
     "published": "2026-03-26",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rf6h-5gpw-qrgq"
-  },
-  {
-    "ghsa_id": "GHSA-vcx4-4qxg-mfp4",
-    "severity": "MEDIUM",
-    "title": "Telegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vcx4-4qxg-mfp4"
   },
   {
     "ghsa_id": "GHSA-vhwf-4x96-vqx2",
@@ -287,10 +273,10 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wpg9-4g4v-f9rc"
   },
   {
-    "ghsa_id": "GHSA-xq8g-hgh6-87hv",
+    "ghsa_id": "GHSA-xvx8-77m6-gwg6",
     "severity": "MEDIUM",
-    "title": "BlueBubbles Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Password",
-    "published": "2026-03-26",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xq8g-hgh6-87hv"
+    "title": "Sandbox `writeFile` commit could race outside the validated path",
+    "published": "2026-03-12",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xvx8-77m6-gwg6"
   }
 ]
