@@ -1,16 +1,17 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 155 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 156 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-03-30 12:27 UTC</sub>
+<sub>Last updated: 2026-03-30 18:26 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (13)
+## GHSAs with CVE IDs (14)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
+| [GHSA-hggm-x7r9-mm7v](https://github.com/advisories/GHSA-hggm-x7r9-mm7v) | CVE-2026-32846 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw is vulnerable to Path Traversal through path validation bypass | npm/openclaw | 2026.03.28 | 2026-03-26 |
 | [GHSA-rqpp-rjj8-7wv8](https://github.com/advisories/GHSA-rqpp-rjj8-7wv8) | CVE-2026-22172 | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes | npm/openclaw | 2026.3.12 | 2026-03-13 |
 | [GHSA-mj5r-hh7j-4gxf](https://github.com/advisories/GHSA-mj5r-hh7j-4gxf) | CVE-2026-28480 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram allowlist authorization accepted mutable usernames | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
 | [GHSA-rq6g-px6m-c248](https://github.com/advisories/GHSA-rq6g-px6m-c248) | CVE-2026-28469 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | npm/openclaw, npm/clawdbot | 2026.2.14 | 2026-02-18 |
@@ -26,7 +27,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (101)
+## GHSAs Without CVE — Potential Future CVEs (100)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
@@ -72,7 +73,6 @@
 | [GHSA-rhfg-j8jq-7v2h](https://github.com/advisories/GHSA-rhfg-j8jq-7v2h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: SSRF via Unguarded Configured Base URLs in Multiple Channel Extensions (Incomplete Fix for CVE-2026-28476) | CWE-918 | 2026.3.28 | 2026-03-29 |
 | [GHSA-q2qc-744p-66r2](https://github.com/advisories/GHSA-q2qc-744p-66r2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: `session_status` sessionId resolution bypasses sandboxed session-tree visibility | CWE-639, CWE-863 | 2026.3.28 | 2026-03-29 |
 | [GHSA-5m9r-p9g7-679c](https://github.com/advisories/GHSA-5m9r-p9g7-679c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation | CWE-307 | 2026.3.12 | 2026-03-13 |
-| [GHSA-f8r2-vg7x-gh8m](https://github.com/advisories/GHSA-f8r2-vg7x-gh8m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths | CWE-178, CWE-625 | 2026.3.11 | 2026-03-13 |
 | [GHSA-vr7j-g7jv-h5mp](https://github.com/advisories/GHSA-vr7j-g7jv-h5mp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw session transcript files were created without forced user-only permissions | CWE-276, CWE-732 | 2026.2.17 | 2026-03-16 |
 | [GHSA-xwcj-hwhf-h378](https://github.com/advisories/GHSA-xwcj-hwhf-h378) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Telegram media fetch errors exposed bot tokens in logged file URLs | CWE-532 | 2026.3.13 | 2026-03-16 |
 | [GHSA-5rp4-cwgh-gvwq](https://github.com/advisories/GHSA-5rp4-cwgh-gvwq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes | CWE-78 | 2026.3.12 | 2026-03-19 |
@@ -134,7 +134,7 @@
 
 ---
 
-## Repo-Only Advisories (42)
+## Repo-Only Advisories (43)
 
 These advisories are visible on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but are not indexed in the GitHub Advisory Database (no npm package mapping). They cannot be fetched via the Advisory Database API.
 
@@ -173,6 +173,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-9528-x887-j2fp](https://github.com/openclaw/openclaw/security/advisories/GHSA-9528-x887-j2fp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Nextcloud Talk webhook missing rate limiting on shared secret authentication | 2026-03-29 |
 | [GHSA-9vvh-2768-c8vp](https://github.com/openclaw/openclaw/security/advisories/GHSA-9vvh-2768-c8vp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Discord guild reaction ingress could bypass users and roles allowlists | 2026-03-12 |
 | [GHSA-f5mf-3r52-r83w](https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Zalouser allowlist authorization matched mutable group names by default | 2026-03-13 |
+| [GHSA-f8r2-vg7x-gh8m](https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Exec approval allowlist patterns overmatched on POSIX paths | 2026-03-13 |
 | [GHSA-jp4j-q5fc-58gv](https://github.com/openclaw/openclaw/security/advisories/GHSA-jp4j-q5fc-58gv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Discord component interaction ingress skips guild/channel policy enforcement | 2026-03-29 |
 | [GHSA-m69h-jm2f-2pv8](https://github.com/openclaw/openclaw/security/advisories/GHSA-m69h-jm2f-2pv8) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Feishu reaction events could bypass group authorization and mention gating | 2026-03-13 |
 | [GHSA-m866-6qv5-p2fg](https://github.com/openclaw/openclaw/security/advisories/GHSA-m866-6qv5-p2fg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw host-env blocklist missing `GIT_TEMPLATE_DIR` and `AWS_CONFIG_FILE` allows code execution via env override | 2026-03-29 |
@@ -203,6 +204,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-28480 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-29612 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-32302 | ✅ **PUBLISHED** | ✅ |  | GitHub_M |
+| CVE-2026-32846 | ✅ **PUBLISHED** | ✅ | 2026-03-26 | VulnCheck |
 
 ---
 

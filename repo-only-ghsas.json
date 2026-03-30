@@ -231,6 +231,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w"
   },
   {
+    "ghsa_id": "GHSA-f8r2-vg7x-gh8m",
+    "severity": "MEDIUM",
+    "title": "Exec approval allowlist patterns overmatched on POSIX paths",
+    "published": "2026-03-13",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m"
+  },
+  {
     "ghsa_id": "GHSA-jp4j-q5fc-58gv",
     "severity": "MEDIUM",
     "title": "Discord component interaction ingress skips guild/channel policy enforcement",

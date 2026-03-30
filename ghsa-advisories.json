@@ -994,6 +994,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-hggm-x7r9-mm7v",
+    "cve_id": "CVE-2026-32846",
+    "severity": "high",
+    "title": "OpenClaw is vulnerable to Path Traversal through path validation bypass",
+    "published": "2026-03-26",
+    "html_url": "https://github.com/advisories/GHSA-hggm-x7r9-mm7v",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.3.23"
+    ],
+    "fixed_versions": [
+      "2026.03.28"
+    ],
+    "fixed_version": "2026.03.28",
+    "cwes": [
+      "CWE-22"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-vh4c-j2xv-9pv9",
     "cve_id": null,
     "severity": "medium",
@@ -2014,28 +2035,6 @@
     "fixed_version": "2026.3.12",
     "cwes": [
       "CWE-285"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-f8r2-vg7x-gh8m",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/advisories/GHSA-f8r2-vg7x-gh8m",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.3.8"
-    ],
-    "fixed_versions": [
-      "2026.3.11"
-    ],
-    "fixed_version": "2026.3.11",
-    "cwes": [
-      "CWE-178",
-      "CWE-625"
     ]
   },
   {

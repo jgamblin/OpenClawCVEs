@@ -4085,6 +4085,77 @@
     }
   },
   {
+    "ghsa_id": "GHSA-hggm-x7r9-mm7v",
+    "cve_id": "CVE-2026-32846",
+    "url": "https://api.github.com/advisories/GHSA-hggm-x7r9-mm7v",
+    "html_url": "https://github.com/advisories/GHSA-hggm-x7r9-mm7v",
+    "summary": "OpenClaw is vulnerable to Path Traversal through path validation bypass",
+    "description": "OpenClaw through 2026.3.23 (fixed in commit 4797bbc) contains a path traversal vulnerability in media parsing that allows attackers to read arbitrary files by bypassing path validation in the isLikelyLocalPath() and isValidMedia() functions. Attackers can exploit incomplete validation and the allowBareFilename bypass to reference files outside the intended application sandbox, resulting in disclosure of sensitive information including system files, environment files, and SSH keys.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-hggm-x7r9-mm7v",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-32846",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-f6pf-4gjx-c94r",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-32846",
+      "https://github.com/openclaw/openclaw/pull/54642",
+      "https://github.com/openclaw/openclaw/commit/4797bbc5b96e2cca5532e43b58915c051746fe37",
+      "https://www.vulncheck.com/advisories/openclaw-media-parsing-path-traversal-to-arbitrary-file-read",
+      "https://github.com/advisories/GHSA-hggm-x7r9-mm7v"
+    ],
+    "published_at": "2026-03-26T18:31:41Z",
+    "updated_at": "2026-03-30T13:29:48Z",
+    "github_reviewed_at": "2026-03-30T13:29:48Z",
+    "nvd_published_at": "2026-03-26T17:16:37Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.3.23",
+        "first_patched_version": "2026.03.28",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 8.7
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    },
+    "epss": {
+      "percentage": 0.00064,
+      "percentile": 0.19912
+    }
+  },
+  {
     "ghsa_id": "GHSA-vh4c-j2xv-9pv9",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-vh4c-j2xv-9pv9",
@@ -7617,95 +7688,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-f8r2-vg7x-gh8m",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-f8r2-vg7x-gh8m",
-    "html_url": "https://github.com/advisories/GHSA-f8r2-vg7x-gh8m",
-    "summary": "OpenClaw: Exec approval allowlist patterns overmatched on POSIX paths",
-    "description": "### Summary\n\n`matchesExecAllowlistPattern` normalized patterns and targets with lowercasing and compiled glob matching too broadly on POSIX. In addition, the `?` wildcard could match `/`, which allowed matches to cross path segments.\n\n### Impact\n\nThese matching rules could overmatch allowlist entries and permit commands or executable paths that an operator did not intend to approve.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.8`\n\n### Patch\n\nFixed in `openclaw` `2026.3.11` and included in later releases such as `2026.3.12`. Exec allowlist matching now respects the intended path semantics, and regression tests cover the POSIX case-folding and slash-crossing cases.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-f8r2-vg7x-gh8m",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-f8r2-vg7x-gh8m",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.11",
-      "https://github.com/advisories/GHSA-f8r2-vg7x-gh8m"
-    ],
-    "published_at": "2026-03-13T20:55:03Z",
-    "updated_at": "2026-03-13T20:55:05Z",
-    "github_reviewed_at": "2026-03-13T20:55:03Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.8",
-        "first_patched_version": "2026.3.11",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-178",
-        "name": "Improper Handling of Case Sensitivity"
-      },
-      {
-        "cwe_id": "CWE-625",
-        "name": "Permissive Regular Expression"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
     }
   },
   {
