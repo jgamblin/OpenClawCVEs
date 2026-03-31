@@ -16,12 +16,12 @@
     "ghsa_id": "GHSA-gv46-4xfq-jv58"
   },
   {
-    "cve_id": "CVE-2026-32978",
+    "cve_id": "CVE-2026-32922",
     "severity": "CRITICAL",
     "cvss": 9.4,
-    "title": "OpenClaw < 2026.3.11 - Approval Bypass via Unrecognized Script Runners",
+    "title": "OpenClaw < 2026.3.11 - Privilege Escalation via Unvalidated Scope in device.token.rotate",
     "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-qc36-x95h-7j53"
+    "ghsa_id": "GHSA-4jpw-hj22-2xmc"
   },
   {
     "cve_id": "CVE-2026-28474",
@@ -32,14 +32,6 @@
     "ghsa_id": "GHSA-r5h9-vjqc-hq3r"
   },
   {
-    "cve_id": "CVE-2026-32987",
-    "severity": "CRITICAL",
-    "cvss": 9.3,
-    "title": "OpenClaw < 2026.3.13 - Bootstrap Setup Code Replay via Device Pairing",
-    "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-63f5-hhc7-cx6p"
-  },
-  {
     "cve_id": "CVE-2026-32915",
     "severity": "CRITICAL",
     "cvss": 9.3,
@@ -48,28 +40,12 @@
     "ghsa_id": "GHSA-4w7m-58cg-cmff"
   },
   {
-    "cve_id": "CVE-2026-28446",
+    "cve_id": "CVE-2026-32987",
     "severity": "CRITICAL",
-    "cvss": 9.2,
-    "title": "OpenClaw < 2026.2.1 - Inbound Allowlist Policy Bypass in voice-call Extension via Empty Caller ID and Suffix Matching",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-4rj2-gpmh-qq5x"
-  },
-  {
-    "cve_id": "CVE-2026-32918",
-    "severity": "CRITICAL",
-    "cvss": 9.2,
-    "title": "OpenClaw < 2026.3.11 - Session Sandbox Escape via session_status Tool",
+    "cvss": 9.3,
+    "title": "OpenClaw < 2026.3.13 - Bootstrap Setup Code Replay via Device Pairing",
     "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-wcxr-59v9-rxr8"
-  },
-  {
-    "cve_id": "CVE-2026-22171",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw < 2026.2.19 - Path Traversal in Feishu Media Temporary File Naming",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-vj3g-5px3-gr46"
+    "ghsa_id": "GHSA-63f5-hhc7-cx6p"
   },
   {
     "cve_id": "CVE-2026-24763",
@@ -96,6 +72,14 @@
     "ghsa_id": "GHSA-g353-mgv3-8pcj"
   },
   {
+    "cve_id": "CVE-2026-28462",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.2.13 - Path Traversal in Trace and Download Output Paths",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-gq9c-wg68-gwj2"
+  },
+  {
     "cve_id": "CVE-2026-28478",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -104,12 +88,12 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
-    "cve_id": "CVE-2026-28461",
+    "cve_id": "CVE-2026-29609",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.3.1 - Unbounded Memory Growth in Zalo Webhook via Query String Key Churn",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-wr6m-jg37-68xh"
+    "title": "OpenClaw < 2026.2.14 - Denial of Service via Unbounded URL-backed Media Fetch",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-j27p-hq53-9wgc"
   },
   {
     "cve_id": "CVE-2026-32011",
@@ -128,12 +112,28 @@
     "ghsa_id": "GHSA-fgvx-58p6-gjwc"
   },
   {
-    "cve_id": "CVE-2026-32042",
+    "cve_id": "CVE-2026-32051",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.25 - Privilege Escalation via Unpaired Device Identity in Shared Gateway Authentication",
+    "title": "OpenClaw < 2026.3.1 - Authorization Bypass in Agent Runs via Owner-Only Tool Access",
     "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-553v-f69r-656j"
+    "ghsa_id": "GHSA-jr6x-2q95-fh2g"
+  },
+  {
+    "cve_id": "CVE-2026-32059",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw 2026.2.22-2 < 2026.2.23 - Allowlist Bypass via sort Long-Option Abbreviation in tools.exec.safeBins",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-3c6h-g97w-fg78"
+  },
+  {
+    "cve_id": "CVE-2026-32062",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw 2026.2.21-2 < 2026.2.22 - Unauthenticated WebSocket Resource Exhaustion via Media Stream",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-mfg5-7q5g-f37j"
   },
   {
     "cve_id": "CVE-2026-32846",
@@ -144,36 +144,20 @@
     "ghsa_id": "GHSA-f6pf-4gjx-c94r"
   },
   {
-    "cve_id": "CVE-2026-32060",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.14 - Path Traversal in apply_patch via Crafted Paths",
-    "date_published": "2026-03-11",
-    "ghsa_id": "GHSA-r5fq-947m-xm57"
-  },
-  {
-    "cve_id": "CVE-2026-32914",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.3.12 - Insufficient Access Control in /config and /debug Endpoints",
-    "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-r7vr-gr74-94p8"
-  },
-  {
-    "cve_id": "CVE-2026-32051",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.3.1 - Authorization Bypass in Agent Runs via Owner-Only Tool Access",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-jr6x-2q95-fh2g"
-  },
-  {
     "cve_id": "CVE-2026-32980",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.3.13 - Resource Exhaustion via Unauthenticated Telegram Webhook Request",
     "date_published": "2026-03-29",
     "ghsa_id": "GHSA-jq3f-vjww-8rq7"
+  },
+  {
+    "cve_id": "CVE-2026-33573",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.3.11 - Workspace Boundary Bypass via Agent RPC Parameters",
+    "date_published": "2026-03-29",
+    "ghsa_id": "GHSA-2rqg-gjgv-84jm"
   },
   {
     "cve_id": "CVE-2026-32982",
@@ -184,20 +168,12 @@
     "ghsa_id": "GHSA-xwcj-hwhf-h378"
   },
   {
-    "cve_id": "CVE-2026-26323",
+    "cve_id": "CVE-2026-27001",
     "severity": "HIGH",
     "cvss": 8.6,
-    "title": "OpenClaw has a command injection in maintainer clawtributors updater",
+    "title": "OpenClaw: Unsanitized CWD path injection into LLM prompts",
     "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-m7x8-2w3w-pr42"
-  },
-  {
-    "cve_id": "CVE-2026-28456",
-    "severity": "HIGH",
-    "cvss": 8.6,
-    "title": "OpenClaw 2026.1.5 < 2026.2.14 - Arbitrary Code Execution via Unsafe Hook Module Path Handling",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-v6c6-vqqg-w888"
+    "ghsa_id": "GHSA-2qj5-gwg2-xwc4"
   },
   {
     "cve_id": "CVE-2026-32014",
@@ -216,12 +192,20 @@
     "ghsa_id": "GHSA-99qw-6mr3-36qr"
   },
   {
-    "cve_id": "CVE-2026-28468",
+    "cve_id": "CVE-2026-34503",
+    "severity": "HIGH",
+    "cvss": 8.6,
+    "title": "OpenClaw < 2026.3.28 - Incomplete WebSocket Session Termination on Device Removal and Token Revocation",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-2pr2-hcv6-7gwv"
+  },
+  {
+    "cve_id": "CVE-2026-32064",
     "severity": "HIGH",
     "cvss": 8.5,
-    "title": "OpenClaw 2026.1.29-beta.1 < 2026.2.14 - Authentication Bypass in Sandbox Browser Bridge Server",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-h9g4-589h-68xv"
+    "title": "OpenClaw < 2026.2.21 - Missing VNC Authentication in Sandbox Browser noVNC Observer",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-25gx-x37c-7pph"
   },
   {
     "cve_id": "CVE-2026-28453",
@@ -230,22 +214,6 @@
     "title": "OpenClaw < 2026.2.14 - Zip Slip Path Traversal in TAR Archive Extraction",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-p25h-9q54-ffvw"
-  },
-  {
-    "cve_id": "CVE-2026-28393",
-    "severity": "HIGH",
-    "cvss": 8.3,
-    "title": "OpenClaw 2.0.0-beta3 < 2026.2.14 - Arbitrary JavaScript Module Loading via Hook Transform Path Traversal",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-7xhj-55q9-pc3m"
-  },
-  {
-    "cve_id": "CVE-2026-31998",
-    "severity": "HIGH",
-    "cvss": 8.3,
-    "title": "OpenClaw 2026.2.22 < 2026.2.24 - Authorization Bypass in Synology Chat Plugin via Empty allowedUserIds",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-gw85-xp4q-5gp9"
   },
   {
     "cve_id": "CVE-2026-32004",
@@ -264,28 +232,20 @@
     "ghsa_id": "GHSA-mwxv-35wr-4vvj"
   },
   {
-    "cve_id": "CVE-2026-28392",
+    "cve_id": "CVE-2026-28469",
     "severity": "HIGH",
     "cvss": 8.2,
-    "title": "OpenClaw < 2026.2.14 - Privilege Escalation in Slack Slash Command Handler via Direct Messages",
+    "title": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
     "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-v773-r54f-q32w"
+    "ghsa_id": "GHSA-rq6g-px6m-c248"
   },
   {
-    "cve_id": "CVE-2026-28454",
+    "cve_id": "CVE-2026-29613",
     "severity": "HIGH",
     "cvss": 8.2,
-    "title": "OpenClaw < 2026.2.2 - Authorization Bypass via Unauthenticated Telegram Webhook",
+    "title": "OpenClaw < 2026.2.12 - Webhook Authentication Bypass via Loopback remoteAddress Trust",
     "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-fhvm-j76f-qmjv"
-  },
-  {
-    "cve_id": "CVE-2026-28464",
-    "severity": "HIGH",
-    "cvss": 8.2,
-    "title": "OpenClaw < 2026.2.12 - Timing Attack in Hooks Token Authentication",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-jmm5-fvh5-gf4p"
+    "ghsa_id": "GHSA-xc7w-v5x6-cc87"
   },
   {
     "cve_id": "CVE-2026-29611",
@@ -294,14 +254,6 @@
     "title": "OpenClaw < 2026.2.14 - Local File Inclusion via mediaPath Parameter in BlueBubbles Media Handling",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-rwj8-p9vq-25gv"
-  },
-  {
-    "cve_id": "CVE-2026-28469",
-    "severity": "HIGH",
-    "cvss": 8.2,
-    "title": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-rq6g-px6m-c248"
   },
   {
     "cve_id": "CVE-2026-32045",
@@ -344,14 +296,6 @@
     "ghsa_id": "GHSA-p7gr-f84w-hqg5"
   },
   {
-    "cve_id": "CVE-2026-32056",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw < 2026.2.22 - Remote Code Execution via Shell Startup Environment Variable Injection in system.run",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-xgf2-vxv2-rrmg"
-  },
-  {
     "cve_id": "CVE-2026-26322",
     "severity": "HIGH",
     "cvss": 7.6,
@@ -360,28 +304,12 @@
     "ghsa_id": "GHSA-g6q9-8fvw-f7rf"
   },
   {
-    "cve_id": "CVE-2026-32005",
+    "cve_id": "CVE-2026-32007",
     "severity": "HIGH",
     "cvss": 7.6,
-    "title": "OpenClaw < 2026.2.25 - Authorization Bypass in Interactive Callbacks via Sender Check Skip",
+    "title": "OpenClaw < 2026.2.23 - Sandbox Bypass in apply_patch Tool via Workspace-Only Check Bypass",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-x2ff-j5c2-ggpr"
-  },
-  {
-    "cve_id": "CVE-2026-26319",
-    "severity": "HIGH",
-    "cvss": 7.5,
-    "title": "OpenClaw has Missing Webhook Authentication in Telnyx Provider Allowing Unauthenticated Requests",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-4hg8-92x6-h2f3"
-  },
-  {
-    "cve_id": "CVE-2026-25474",
-    "severity": "HIGH",
-    "cvss": 7.5,
-    "title": "OpenClaw has a Telegram webhook request forgery (missing `channels.telegram.webhookSecret`) \u2192 auth bypass",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-mp5h-m6qj-6292"
+    "ghsa_id": "GHSA-h9xm-j4qg-fvpg"
   },
   {
     "cve_id": "CVE-2026-26321",
@@ -390,6 +318,14 @@
     "title": "OpenClaw has a local file disclosure via sendMediaFeishu in Feishu extension",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-8jpq-5h99-ff5r"
+  },
+  {
+    "cve_id": "CVE-2026-26316",
+    "severity": "HIGH",
+    "cvss": 7.5,
+    "title": "OpenClaw has BlueBubbles webhook auth bypass via loopback proxy trust",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-pchc-86f6-8758"
   },
   {
     "cve_id": "CVE-2026-28485",
@@ -424,44 +360,28 @@
     "ghsa_id": "GHSA-mr32-vwc2-5j6h"
   },
   {
-    "cve_id": "CVE-2026-32015",
+    "cve_id": "CVE-2026-32016",
     "severity": "HIGH",
     "cvss": 7.3,
-    "title": "OpenClaw 2026.1.21 < 2026.2.19 - PATH Hijacking Bypass in tools.exec.safeBins Allowlist Validation",
+    "title": "OpenClaw < 2026.2.22 - Path Traversal via Basename-Only Allowlist Matching on macOS",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-g75x-8qqm-2vxp"
+    "ghsa_id": "GHSA-7f4q-9rqh-x36p"
   },
   {
-    "cve_id": "CVE-2026-32032",
-    "severity": "HIGH",
-    "cvss": 7.3,
-    "title": "OpenClaw < 2026.2.22 - Arbitrary Shell Execution via Unvalidated SHELL Environment Variable",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-f8mp-vj46-cq8v"
-  },
-  {
-    "cve_id": "CVE-2026-32971",
-    "severity": "HIGH",
-    "cvss": 7.3,
-    "title": "OpenClaw < 2026.3.11 - Node-Host Approval UI Mismatch Allows Execution of Unintended Commands",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-rw39-5899-8mxp"
-  },
-  {
-    "cve_id": "CVE-2026-26325",
+    "cve_id": "CVE-2026-28473",
     "severity": "HIGH",
     "cvss": 7.2,
-    "title": "OpenClaw Node host system.run rawCommand/command mismatch can bypass allowlist/approvals",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-h3f9-mjwj-w476"
+    "title": "OpenClaw < 2026.2.2 - Authorization Bypass via /approve Chat Command",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-mqpw-46fh-299h"
   },
   {
-    "cve_id": "CVE-2026-22175",
+    "cve_id": "CVE-2026-26320",
     "severity": "HIGH",
     "cvss": 7.1,
-    "title": "OpenClaw < 2026.2.23 - Exec Approval Bypass via Unrecognized Multiplexer Shell Wrappers",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-gwqp-86q6-w47g"
+    "title": "OpenClaw macOS deep link confirmation truncation can conceal executed agent message",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-7q2j-c4q5-rm27"
   },
   {
     "cve_id": "CVE-2026-26317",
@@ -470,6 +390,14 @@
     "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-3fqr-4cg8-h96q"
+  },
+  {
+    "cve_id": "CVE-2026-26329",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw has a path traversal in browser upload allows local file read",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-cv7m-c9jx-vg7q"
   },
   {
     "cve_id": "CVE-2026-27522",
@@ -488,6 +416,14 @@
     "ghsa_id": "GHSA-jj82-76v6-933r"
   },
   {
+    "cve_id": "CVE-2026-28459",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.12 - Arbitrary File Write via Untrusted sessionFile Path",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-64qx-vpxx-mvqf"
+  },
+  {
     "cve_id": "CVE-2026-29607",
     "severity": "HIGH",
     "cvss": 7.1,
@@ -496,12 +432,20 @@
     "ghsa_id": "GHSA-6j27-pc5c-m8w8"
   },
   {
-    "cve_id": "CVE-2026-28447",
+    "cve_id": "CVE-2026-32027",
     "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw 2026.1.29-beta.1 < 2026.2.1 - Path Traversal in Plugin Installation via Package Name",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-qrq5-wjgg-rvqw"
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.26 - Improper Authorization via DM Pairing Store Identity Inheritance in Group Allowlist",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-jv6r-27ww-4gw4"
+  },
+  {
+    "cve_id": "CVE-2026-32976",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.3.11 - Account-Scoped configWrites Policy Bypass via Channel Commands",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-8jhh-jcqg-mj5p"
   },
   {
     "cve_id": "CVE-2026-32009",
@@ -520,20 +464,12 @@
     "ghsa_id": "GHSA-pj5x-38rw-6fph"
   },
   {
-    "cve_id": "CVE-2026-27004",
+    "cve_id": "CVE-2026-27488",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
-  },
-  {
-    "cve_id": "CVE-2026-31994",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.2.19 - Local Command Injection via Unsafe cmd Argument Handling in Windows Scheduled Task Script Generation",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-mqr9-vqhq-3jxw"
+    "title": "OpenClaw hardened cron webhook delivery against SSRF",
+    "date_published": "2026-02-21",
+    "ghsa_id": "GHSA-w45g-5746-x9fp"
   },
   {
     "cve_id": "CVE-2026-28480",
@@ -544,12 +480,20 @@
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
   },
   {
-    "cve_id": "CVE-2026-32053",
+    "cve_id": "CVE-2026-31994",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw < 2026.2.23 - Twilio Webhook Replay Bypass via Randomized Event ID Normalization",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-vqx8-9xxw-f2m7"
+    "title": "OpenClaw < 2026.2.19 - Local Command Injection via Unsafe cmd Argument Handling in Windows Scheduled Task Script Generation",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-mqr9-vqhq-3jxw"
+  },
+  {
+    "cve_id": "CVE-2026-31990",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.2 - Symlink Traversal in stageSandboxMedia Destination",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-cfvj-7rx7-fc7c"
   },
   {
     "cve_id": "CVE-2026-32919",
@@ -560,12 +504,20 @@
     "ghsa_id": "GHSA-jf6w-m8jw-jfxc"
   },
   {
-    "cve_id": "CVE-2026-34505",
+    "cve_id": "CVE-2026-32063",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.12 - Webhook Rate Limiting Bypass via Pre-Authentication Secret Validation",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-5m9r-p9g7-679c"
+    "title": "OpenClaw 2026.2.19-2 < 2026.2.21 - Command Injection via Newline in systemd Unit Generation",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-vffc-f7r7-rx2w"
+  },
+  {
+    "cve_id": "CVE-2026-32975",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.12 - Weak Authorization via Mutable Group Names in Zalouser Allowlist",
+    "date_published": "2026-03-29",
+    "ghsa_id": "GHSA-f5mf-3r52-r83w"
   },
   {
     "cve_id": "CVE-2026-29612",
@@ -600,6 +552,14 @@
     "ghsa_id": "GHSA-77hf-7fqf-f227"
   },
   {
+    "cve_id": "CVE-2026-32061",
+    "severity": "MEDIUM",
+    "cvss": 6.7,
+    "title": "OpenClaw < 2026.2.17 - Arbitrary File Read via $include Directive Path Traversal",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-56pc-6hvp-4gv4"
+  },
+  {
     "cve_id": "CVE-2026-26328",
     "severity": "MEDIUM",
     "cvss": 6.5,
@@ -616,28 +576,20 @@
     "ghsa_id": "GHSA-qw99-grcx-4pvm"
   },
   {
-    "cve_id": "CVE-2026-28451",
+    "cve_id": "CVE-2026-28449",
     "severity": "MEDIUM",
     "cvss": 6.3,
-    "title": "OpenClaw < 2026.2.14 - SSRF via Feishu Extension Media Fetching",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-x22m-j5qq-j49m"
-  },
-  {
-    "cve_id": "CVE-2026-28448",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw 2026.1.29 < 2026.2.1 - Authorization Bypass in Twitch Plugin allowFrom Access Control",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-33rq-m5x2-fvgf"
-  },
-  {
-    "cve_id": "CVE-2026-32029",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.2.21 - Client IP Spoofing via X-Forwarded-For Header Parsing",
+    "title": "OpenClaw < 2026.2.25 - Webhook Replay Attack via Missing Durable Replay Suppression",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-2rgf-hm63-5qph"
+    "ghsa_id": "GHSA-r9q5-c7qc-p26w"
+  },
+  {
+    "cve_id": "CVE-2026-29606",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.2.14 - Webhook Signature Verification Bypass via ngrok Loopback Compatibility",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-c37p-4qqg-3p76"
   },
   {
     "cve_id": "CVE-2026-32031",
@@ -656,44 +608,44 @@
     "ghsa_id": "GHSA-5mx2-2mgw-x8rm"
   },
   {
-    "cve_id": "CVE-2026-32050",
+    "cve_id": "CVE-2026-34508",
     "severity": "MEDIUM",
     "cvss": 6.3,
-    "title": "OpenClaw < 2026.2.25 - Unauthorized Reaction Status Event Enqueue via Access Check Bypass",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-792q-qw95-f446"
+    "title": "OpenClaw < 2026.3.12 - Webhook Rate Limiting Bypass via Pre-Authentication Secret Validation",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-5m9r-p9g7-679c"
   },
   {
-    "cve_id": "CVE-2026-32034",
+    "cve_id": "CVE-2026-22181",
     "severity": "MEDIUM",
     "cvss": 6.1,
-    "title": "OpenClaw < 2026.2.21 - Insecure Control UI Authentication over Plaintext HTTP",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-3cvx-236h-m9fj"
+    "title": "OpenClaw < 2026.3.2 - DNS Pinning Bypass via Environment Proxy Configuration in web_fetch",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-8mvx-p2r9-r375"
   },
   {
-    "cve_id": "CVE-2026-32039",
+    "cve_id": "CVE-2026-32002",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw < 2026.2.22 - Sender Authorization Bypass via Identity Collision in toolsBySender",
+    "title": "OpenClaw < 2026.2.23 - Sandbox Boundary Bypass via Image Tool workspaceOnly Bypass",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-wpph-cjgr-7c39"
+    "ghsa_id": "GHSA-q6qf-4p5j-r25g"
   },
   {
-    "cve_id": "CVE-2026-32057",
+    "cve_id": "CVE-2026-32033",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw < 2026.2.25 - Authentication Bypass via Control UI client.id Parameter",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-vvgp-4c28-m3jm"
+    "title": "OpenClaw < 2026.2.24 - Path Traversal via @-prefixed Absolute Paths in Workspace Boundary Validation",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-27cr-4p5m-74rj"
   },
   {
-    "cve_id": "CVE-2026-32043",
+    "cve_id": "CVE-2026-28477",
     "severity": "MEDIUM",
     "cvss": 5.9,
-    "title": "OpenClaw < 2026.2.25 - Time-of-Check-Time-of-Use via Mutable Symlink in system.run cwd Parameter",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-mwcg-wfq3-4gjc"
+    "title": "OpenClaw < 2026.2.14 - OAuth State Validation Bypass in Manual Chutes Login Flow",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-7rcp-mxpq-72pj"
   },
   {
     "cve_id": "CVE-2026-22217",
@@ -712,20 +664,12 @@
     "ghsa_id": "GHSA-r54r-wmmq-mh84"
   },
   {
-    "cve_id": "CVE-2026-32010",
+    "cve_id": "CVE-2026-31999",
     "severity": "MEDIUM",
     "cvss": 5.8,
-    "title": "OpenClaw < 2026.2.22 - Allowlist Bypass via sort --compress-program Parameter",
+    "title": "OpenClaw 2026.2.26 < 2026.3.1 - Current Working Directory Injection via Windows Wrapper Resolution Fallback",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-4gc7-qcvf-38wg"
-  },
-  {
-    "cve_id": "CVE-2026-32035",
-    "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw < 2026.3.2 - Missing Owner Flag Validation in Discord Voice Transcript Handler",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-wpg9-4g4v-f9rc"
+    "ghsa_id": "GHSA-6f6j-wx9w-ff4j"
   },
   {
     "cve_id": "CVE-2026-32052",
@@ -736,12 +680,20 @@
     "ghsa_id": "GHSA-6rcp-vxwf-3mfp"
   },
   {
-    "cve_id": "CVE-2026-32988",
+    "cve_id": "CVE-2026-32065",
     "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw < 2026.3.11 - Sandbox Boundary Bypass via Unvalidated Temporary File Creation",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-mj4p-rc52-m843"
+    "cvss": 5.7,
+    "title": "OpenClaw < 2026.2.25 - Approval Identity Mismatch in system.run Command Execution",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-hwpq-rrpf-pgcq"
+  },
+  {
+    "cve_id": "CVE-2026-31993",
+    "severity": "MEDIUM",
+    "cvss": 5.6,
+    "title": "OpenClaw < 2026.2.22 - Allowlist Parsing Mismatch in system.run Shell Chains",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-5f9p-f3w2-fwch"
   },
   {
     "cve_id": "CVE-2026-29608",
@@ -752,36 +704,52 @@
     "ghsa_id": "GHSA-h3rm-6x7g-882f"
   },
   {
-    "cve_id": "CVE-2026-26326",
+    "cve_id": "CVE-2026-32001",
     "severity": "MEDIUM",
     "cvss": 5.3,
-    "title": "OpenClaw skills.status could leak secrets to operator.read clients",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-8mh7-phf8-xgfm"
-  },
-  {
-    "cve_id": "CVE-2026-31989",
-    "severity": "MEDIUM",
-    "cvss": 5.3,
-    "title": "OpenClaw < 2026.3.1 - Server-Side Request Forgery via web_search Citation Redirect",
+    "title": "OpenClaw < 2026.2.22 - Node Role Device-Identity Bypass via WebSocket Authentication",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-g99v-8hwm-g76g"
+    "ghsa_id": "GHSA-rv2q-f2h5-6xmg"
   },
   {
-    "cve_id": "CVE-2026-32898",
+    "cve_id": "CVE-2026-32895",
     "severity": "MEDIUM",
     "cvss": 5.3,
-    "title": "OpenClaw < 2026.2.23 - ACP Permission Auto-Approval Bypass via Untrusted Tool Metadata",
+    "title": "OpenClaw < 2026.2.26 - Sender Authorization Bypass in Slack System Event Handlers",
     "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-7jx5-9fjg-hp4m"
+    "ghsa_id": "GHSA-v8cg-4474-49v8"
   },
   {
-    "cve_id": "CVE-2026-32921",
+    "cve_id": "CVE-2026-32899",
     "severity": "MEDIUM",
     "cvss": 5.3,
-    "title": "OpenClaw < 2026.3.8 - Script Content Modification via Mutable Operand Binding in system.run",
+    "title": "OpenClaw < 2026.2.25 - Sender Policy Bypass in Slack Reaction and Pin Event Handlers",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-rm2p-j3r7-4x4j"
+  },
+  {
+    "cve_id": "CVE-2026-32923",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw < 2026.3.11 - Authorization Bypass in Discord Guild Reaction Allowlist Enforcement",
+    "date_published": "2026-03-29",
+    "ghsa_id": "GHSA-9vvh-2768-c8vp"
+  },
+  {
+    "cve_id": "CVE-2026-33578",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw < 2026.3.28 - Sender Policy Allowlist Bypass via Policy Downgrade in Google Chat and Zalouser Extensions",
     "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-8g75-q649-6pv6"
+    "ghsa_id": "GHSA-63mg-xp9j-jfcm"
+  },
+  {
+    "cve_id": "CVE-2026-22180",
+    "severity": "MEDIUM",
+    "cvss": 4.8,
+    "title": "OpenClaw < 2026.3.2 - Path Confinement Bypass in Browser Output and File Write Operations",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-3pxq-f3cp-jmxp"
   },
   {
     "cve_id": "CVE-2026-27576",
@@ -792,20 +760,20 @@
     "ghsa_id": "GHSA-cxpw-2g23-2vgw"
   },
   {
-    "cve_id": "CVE-2026-32046",
-    "severity": "MEDIUM",
-    "cvss": 4.8,
-    "title": "OpenClaw < 2026.2.21 - OS-level Sandbox Bypass via --no-sandbox Flag",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-43x4-g22p-3hrq"
-  },
-  {
     "cve_id": "CVE-2026-32020",
     "severity": "MEDIUM",
     "cvss": 4.8,
     "title": "OpenClaw < 2026.2.22 - Arbitrary File Read via Symlink Following in Static File Handler",
     "date_published": "2026-03-19",
     "ghsa_id": "GHSA-5ghc-98wh-gwwf"
+  },
+  {
+    "cve_id": "CVE-2026-32046",
+    "severity": "MEDIUM",
+    "cvss": 4.8,
+    "title": "OpenClaw < 2026.2.21 - OS-level Sandbox Bypass via --no-sandbox Flag",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-43x4-g22p-3hrq"
   },
   {
     "cve_id": "CVE-2026-27485",
@@ -816,28 +784,12 @@
     "ghsa_id": "GHSA-r6h2-5gqq-v5v6"
   },
   {
-    "cve_id": "CVE-2026-31997",
-    "severity": "MEDIUM",
-    "cvss": 4.4,
-    "title": "OpenClaw < 2026.3.1 - Executable Rebind via Unbound PATH-token in system.run Approvals",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-q399-23r3-hfx4"
-  },
-  {
     "cve_id": "CVE-2026-24764",
     "severity": "LOW",
     "cvss": 3.7,
     "title": "OpenClaw has Remote Code Execution via System Prompt Injection in Slack Channel Descriptions",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-782p-5fr5-7fj8"
-  },
-  {
-    "cve_id": "CVE-2026-32006",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.2.26 - Authorization Bypass via DM Pairing-Store Fallback in Group Allowlist",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-25pw-4h6w-qwvm"
   },
   {
     "cve_id": "CVE-2026-32019",
@@ -848,20 +800,28 @@
     "ghsa_id": "GHSA-4rqq-w8v4-7p47"
   },
   {
-    "cve_id": "CVE-2026-32037",
+    "cve_id": "CVE-2026-34506",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.2.22 - Redirect Chain Bypass of Media Host Allowlist in MSTeams Attachment Handling",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-w76h-8m22-hpgh"
+    "title": "OpenClaw < 2026.3.8 - Sender Allowlist Bypass in Microsoft Teams Plugin via Route Allowlist Configuration",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-g7cr-9h7q-4qxq"
   },
   {
-    "cve_id": "CVE-2026-31991",
+    "cve_id": "CVE-2026-34509",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.3.8 - Sender Allowlist Bypass in Microsoft Teams Plugin via Route Allowlist Configuration",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-g7cr-9h7q-4qxq"
+  },
+  {
+    "cve_id": "CVE-2026-31996",
     "severity": "LOW",
     "cvss": 2,
-    "title": "OpenClaw < 2026.2.26 - Authorization Bypass via DM Pairing-Store Leakage in Signal Group Allowlist",
+    "title": "OpenClaw < 2026.2.19 - safeBins stdin-only bypass via sort output and recursive grep flags",
     "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-wm8r-w8pf-2v6w"
+    "ghsa_id": "GHSA-4685-c5cp-vp95"
   },
   {
     "cve_id": "CVE-2026-32067",
@@ -870,5 +830,21 @@
     "title": "OpenClaw < 2026.2.26 - Cross-Account Authorization Bypass in DM Pairing Store",
     "date_published": "2026-03-21",
     "ghsa_id": "GHSA-vjp8-wprm-2jw9"
+  },
+  {
+    "cve_id": "CVE-2026-32970",
+    "severity": "LOW",
+    "cvss": 2,
+    "title": "OpenClaw < 2026.3.11 - Credential Fallback Logic Bypass via Unavailable Local Auth SecretRefs",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-qvr7-g57c-mrc7"
+  },
+  {
+    "cve_id": "CVE-2026-30741",
+    "severity": "",
+    "cvss": null,
+    "title": "A remote code execution (RCE) vulnerability in OpenClaw Agent Platform v2026.2.6",
+    "date_published": "2026-03-11",
+    "ghsa_id": ""
   }
 ]
