@@ -1,5 +1,742 @@
 [
   {
+    "ghsa_id": "GHSA-39mp-545q-w789",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-39mp-545q-w789",
+    "html_url": "https://github.com/advisories/GHSA-39mp-545q-w789",
+    "summary": "OpenClaw: Non-owner command-authorized sender can change the owner-only `/send` session delivery policy",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n**Title**  \nNon-owner command-authorized sender can change the owner-only `/send` session delivery policy\n\n**CWE**  \nCWE-285 Improper Authorization\n\n**CVSS v3.1**  \nCVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L  \nBase score: **5.4 (Medium)**\n\n**Severity Assessment**  \nMedium. This is a real owner-only authorization bypass, but the demonstrated impact is limited to persistent mutation of the current session\u2019s delivery policy rather than direct code execution, sandbox escape, or cross-host compromise.\n\n**Impact**  \nA non-owner sender who is allowed to run commands can invoke `/send on|off|inherit` and persistently change the current session\u2019s `sendPolicy`, even though OpenClaw documents `/send` as owner-only.\n\nThat lets a lower-trust participant:\n- disable reply delivery for the current session (`/send off`), suppressing future replies in that chat;\n- re-enable reply delivery (`/send on`) after the owner intentionally disabled it;\n- remove the session override (`/send inherit`).\n\n**Affected Component**  \nVerified against the latest published GitHub release tag `v2026.3.23` (`ccfeecb6887cd97937e33a71877ad512741e82b2`), published `2026-03-23T23:15:50Z`.\n\nExact vulnerable path on the shipped tag:\n- `src/auto-reply/reply/commands-session.ts:212-239`\n  - `handleSendPolicyCommand(...)` checks only `params.command.isAuthorizedSender`.\n  - when true, it mutates `params.sessionEntry.sendPolicy` and persists the session entry.\n\nAuthorization behavior that makes this reachable:\n- `src/auto-reply/command-auth.ts:401-407`\n  - `senderIsOwner` is computed separately from general command authorization.\n- `src/auto-reply/command-auth.ts:420-429`\n  - command authorization can succeed even when `senderIsOwner === false`.\n- `src/auto-reply/command-auth.owner-default.test.ts:10-47`\n  - existing coverage confirms a sender can be command-authorized while not treated as owner.\n\nDocumented owner-only contract:\n- `docs/tools/slash-commands.md:112`\n  - `/send on|off|inherit` is documented as owner-only.\n- `docs/concepts/session-tool.md:156`\n  - `sendPolicy` is documented as settable via `sessions.patch` or owner-only `/send on|off|inherit`.\n\nRelated privilege model:\n- `src/gateway/method-scopes.ts:131-133`\n  - `sessions.patch` is admin-scoped, which reinforces that session-delivery-policy mutation is treated as privileged state.\n\nVersion history:\n- The vulnerable handler exists in release history going back at least to commit `ea018a68ccb92dbc735bc1df9880d5c95c63ca35` (`refactor(auto-reply): split reply pipeline`).\n- Earliest released affected tag found: `v2026.1.14-1`\n- Latest released affected tag verified: `v2026.3.23`\n\n**Technical Reproduction**  \n1. Check out the shipped release tag `v2026.3.23`.\n2. Configure a channel where:\n   - a non-owner sender is allowed to run commands, for example through `commands.allowFrom`;\n   - the owner identity is distinct, for example via `commands.ownerAllowFrom`.\n3. Start or reuse a session with a live `sessionEntry` and `sessionStore`.\n4. Send `/send off` as the non-owner but command-authorized sender.\n5. Confirm the resolved command context has:\n   - `isAuthorizedSender === true`\n   - `senderIsOwner === false`\n6. Observe that the handler still accepts the command, mutates `sessionEntry.sendPolicy`, and persists the session entry.\n\n**Demonstrated Impact**  \nThe vulnerable handler performs a real persistent session-state change:\n- `src/auto-reply/reply/commands-session.ts:232-238`\n  - `/send inherit` deletes `sessionEntry.sendPolicy`\n  - other modes assign `sessionEntry.sendPolicy = sendPolicyCommand.mode`\n  - the handler then calls `persistSessionEntry(params)`\n\nThe mutation is not gated by owner status, only by general command authorization.\n\nThat changes subsequent delivery behavior for the current session, which matches the documented meaning of `sendPolicy`.\n\n**Environment**  \n- Product: OpenClaw\n- Verified shipped tag: `v2026.3.23`\n- Shipped tag commit: `ccfeecb6887cd97937e33a71877ad512741e82b2`\n- Published GitHub release time: `2026-03-23T23:15:50Z`\n- Verification date: `2026-03-24`\n\n**Duplicate Check**  \nUpon inspection there is no preexisting GHSA for `/send`.\n\nThis is distinct from:\n- `GHSA-r7vr-gr74-94p8`\n  - that advisory covered owner-only authorization bypasses for `/config` and `/debug`, not `/send`.\n\nThis is the same authorization class, but a different privileged command surface that still lacks the owner check.\n\n**In Scope Check**  \nThis report is in scope under `SECURITY.md` because:\n- it does **not** rely on adversarial operators sharing one gateway host or config;\n- it does **not** rely on trusted local state tampering;\n- `SECURITY.md:151-152` explicitly says non-owner sender status matters for owner-only tools and commands;\n- `/send` is explicitly documented as owner-only, so this is a direct owner-only authorization bypass, not a complaint about normal shared-agent steering.\n\nThis is therefore a concrete authorization flaw against a documented product boundary.\n\n**Remediation Advice**  \n1. Change `/send` to require owner status, not just command authorization.\n2. Reuse the same owner-only rejection pattern already used by privileged command surfaces such as `/config`, `/debug`, and owner-only `/plugins` writes.\n3. Add regression coverage for the exact case where:\n   - a non-owner sender is command-authorized;\n   - `/send` must still be rejected unless `senderIsOwner === true`.\n4. Verify that the owner can still use `/send on|off|inherit` normally.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-39mp-545q-w789",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-39mp-545q-w789",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-39mp-545q-w789",
+      "https://github.com/advisories/GHSA-39mp-545q-w789"
+    ],
+    "published_at": "2026-03-30T19:06:22Z",
+    "updated_at": "2026-03-30T19:06:23Z",
+    "github_reviewed_at": "2026-03-30T19:06:22Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+        "score": 5.4
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-285",
+        "name": "Improper Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdjackey",
+          "id": 6791132,
+          "node_id": "MDQ6VXNlcjY3OTExMzI=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdjackey",
+          "html_url": "https://github.com/tdjackey",
+          "followers_url": "https://api.github.com/users/tdjackey/followers",
+          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
+          "repos_url": "https://api.github.com/users/tdjackey/repos",
+          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
+      "score": 5.4
+    }
+  },
+  {
+    "ghsa_id": "GHSA-xp9r-prpg-373r",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-xp9r-prpg-373r",
+    "html_url": "https://github.com/advisories/GHSA-xp9r-prpg-373r",
+    "summary": "OpenClaw: `browser.request` still allows `POST /reset-profile` through the `operator.write` surface",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n# Title\n\n`browser.request` still allows `POST /reset-profile` through the `operator.write` surface in OpenClaw `v2026.3.22` after `GHSA-vmhq-cqm9-6p7q`\n\n## Severity Assessment\n\nHigh\n\nCWE:\n\n- `CWE-863: Incorrect Authorization`\n\nProposed CVSS v3.1:\n\n- `8.1` (`CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H`)\n\nAn authenticated caller who only has access to the scoped Gateway method `browser.request` on the `operator.write` surface can still reach a destructive persistent-profile management route.\n\nLikely related advisory family:\n\n- `GHSA-vmhq-cqm9-6p7q`\n\nThis should be treated as a later-version residual or incomplete fix. The earlier fix blocked `POST /profiles/create` and profile deletion, but the latest released `v2026.3.22` code still omits `POST /reset-profile` from the same mutation gate.\n\n## Impact\n\nA caller with `operator.write` access to `browser.request` can still trigger persistent profile reset via `POST /reset-profile`.\n\nThis crosses the intended privilege boundary for browser profile management because the release already attempts to block adjacent persistent profile mutations on this same surface.\n\nIn practice, the allowed route reaches destructive behavior that can:\n\n- stop the running browser for that profile\n- close the Playwright browser connection for that profile\n- move the profile's local `userDataDir` to Trash when it exists\n\nThis is a real integrity and availability impact on persistent browser state, not a route-classification mismatch with no side effects.\n\n## Affected Component\n\nProduct:\n\n- `openclaw`\n\nTested latest released version:\n\n- release tag: `v2026.3.22`\n- release tag target commit (peeled tag): `e7d11f6c33e223a0dd8a21cfe01076bd76cef87a`\n\nPublished artifact for that release:\n\n- package: `openclaw-2026.3.22.tgz`\n- package build-info commit: `4dcc39c25c6cc63fedfd004f52d173716576fcf0`\n- package build-info timestamp: `2026-03-23T10:56:05.946Z`\n\nExact vulnerable paths on the shipped tag:\n\n- `src/gateway/method-scopes.ts:114`\n  - `browser.request` is placed on the `operator.write` surface\n- `src/gateway/server-methods/browser.ts:155-165`\n  - requests are only denied when `isPersistentBrowserProfileMutation(method, path)` returns true\n- `src/browser/request-policy.ts:19-25`\n  - the mutation classifier recognizes `POST /profiles/create` and `DELETE /profiles/:name`, but not `POST /reset-profile`\n- `src/browser/routes/basic.ts:161-170`\n  - the browser server exposes `POST /reset-profile`\n- `src/browser/server-context.reset.ts:37-63`\n  - `resetProfile()` stops the browser, closes the connection, and moves the local profile directory to Trash when present\n- `src/node-host/invoke-browser.ts:240-243`\n  - the same route-classification helper is reused in the browser proxy path when profile restrictions are active\n\nRelevant regression coverage gap on the shipped tag:\n\n- `src/gateway/server-methods/browser.profile-from-body.test.ts:104-140`\n  - tests only block `POST /profiles/create` and `DELETE /profiles/:name`\n  - there is no equivalent deny case for `POST /reset-profile`\n\nPublished artifact evidence for the exact released package:\n\n- `openclaw-2026.3.22.tgz::package/dist/build-info.json`\n- `openclaw-2026.3.22.tgz::package/dist/gateway-cli-Cxz4pSoJ.js:11469-11525`\n- `openclaw-2026.3.22.tgz::package/dist/gateway-cli-Cxz4pSoJ.js:11484-11485`\n- `openclaw-2026.3.22.tgz::package/dist/request-policy-nIRryZwZ.js:9-12`\n- `openclaw-2026.3.22.tgz::package/dist/routes-CdaHRCET.js:6874-6889`\n\nImportant release note:\n\n- the published package build-info commit differs from the release tag target commit\n- for this issue, the relevant authorization and route behavior was cross-checked in both the shipped tag source and the published package bundle, and it matches semantically on the vulnerable path\n\n## Technical Reproduction\n\nA direct control/exploit pair can be reproduced against the latest released version.\n\nPreconditions:\n\n- use `openclaw@2026.3.22`\n- authenticate as a caller that has access to the scoped Gateway method `browser.request`\n- keep that caller on `operator.write`, not `operator.admin`\n- ensure the target local browser profile exists\n\nReproduction steps:\n\n1. Call `browser.request` with:\n   - `method: \"POST\"`\n   - `path: \"/profiles/create\"`\n   - `body: { \"name\": \"poc-profile\" }`\n2. Observe the control case is rejected with:\n   - `browser.request cannot create or delete persistent browser profiles`\n3. Call `browser.request` again with:\n   - `method: \"POST\"`\n   - `path: \"/reset-profile\"`\n   - `body: { \"profile\": \"poc-profile\", \"name\": \"poc-profile\" }`\n4. Observe that the exploit case is not rejected by the same handler.\n5. Observe that the request is forwarded to the browser route/dispatcher, rather than being denied by the mutation classifier.\n6. Observe that the reset route succeeds and applies profile reset behavior.\n\nWhy this happens in the released code:\n\n- the release tries to gate persistent profile mutation using `isPersistentBrowserProfileMutation(...)`\n- that helper does not classify `POST /reset-profile` as a protected mutation\n- the exposed browser server route still maps `/reset-profile` to `profileCtx.resetProfile()`\n- `resetProfile()` performs state-changing behavior on the selected local profile\n\n## Demonstrated Impact\n\nThe shipped release shows the following behavior difference:\n\nControl case:\n\n- `POST /profiles/create`\n- rejected before the request is dispatched to the browser control path\n\nExploit case:\n\n- `POST /reset-profile`\n- not classified as a blocked mutation\n- remains reachable through the `browser.request` surface\n- reaches `resetProfile()`, which performs destructive profile-management operations\n\nThe reached route has concrete side effects:\n\n- stops the running browser if active\n- closes the Playwright browser connection\n- moves the profile's local `userDataDir` to Trash if it exists\n\nThis is therefore a concrete authorization and policy gap on a real destructive profile-management route. It is not a complaint about the existence of `browser.request` by itself.\n\n## Environment\n\nEnvironment used for validation:\n\n- product: `openclaw`\n- latest released version: `2026.3.22`\n- release tag: `v2026.3.22`\n- release tag target commit (peeled tag): `e7d11f6c33e223a0dd8a21cfe01076bd76cef87a`\n- published package: `openclaw-2026.3.22.tgz`\n- published package build-info commit: `4dcc39c25c6cc63fedfd004f52d173716576fcf0`\n\nExplicit trust-model statement:\n\n- this report does **not** rely on adversarial or mutually untrusted operators sharing one gateway host or config\n\nScope check:\n\n- this is **not** a complaint about the existence of the explicit `browser.request` surface by itself\n- this is **not** a prompt-injection-only report\n- this is **not** a multi-tenant shared-gateway claim\n- this is **not** an attack on the unscoped HTTP compatibility endpoints\n- this is a concrete missed route inside an intended privilege gate on a real scoped Gateway method\n- the control case proves the policy is intended to exist on this surface, and the exploit case proves `POST /reset-profile` remains outside that gate in the shipped release\n\n## Remediation Advice\n\nRecommended fix:\n\n1. Extend the persistent-profile mutation classifier to include `POST /reset-profile`.\n2. Reuse the same centralized route classification everywhere the release currently relies on `isPersistentBrowserProfileMutation(...)`, including:\n   - `src/gateway/server-methods/browser.ts`\n   - `src/node-host/invoke-browser.ts`\n3. Add regression coverage with both:\n   - a deny control for `POST /reset-profile` on the lower-privilege `browser.request` surface\n   - an allow control for non-mutating browser profile reads\n4. Review nearby profile-management routes for any other state-changing endpoints that are still omitted from the mutation classifier.\n5. Treat `GHSA-vmhq-cqm9-6p7q` as the prior family and close the remaining residual route in the same policy surface.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-xp9r-prpg-373r",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-xp9r-prpg-373r",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xp9r-prpg-373r",
+      "https://github.com/advisories/GHSA-xp9r-prpg-373r"
+    ],
+    "published_at": "2026-03-30T19:05:11Z",
+    "updated_at": "2026-03-30T19:05:11Z",
+    "github_reviewed_at": "2026-03-30T19:05:11Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdjackey",
+          "id": 6791132,
+          "node_id": "MDQ6VXNlcjY3OTExMzI=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdjackey",
+          "html_url": "https://github.com/tdjackey",
+          "followers_url": "https://api.github.com/users/tdjackey/followers",
+          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
+          "repos_url": "https://api.github.com/users/tdjackey/repos",
+          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:H",
+      "score": 8.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vqvg-86cc-cg83",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-vqvg-86cc-cg83",
+    "html_url": "https://github.com/advisories/GHSA-vqvg-86cc-cg83",
+    "summary": "OpenClaw: Mutating internal `/allowlist` chat commands missed `operator.admin` scope enforcement",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n**Title**  \nMutating internal `/allowlist` chat commands missed `operator.admin` scope enforcement\n\n**CWE**  \nCWE-862 Missing Authorization\n\n**CVSS v3.1**  \nCVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N  \nBase score: **6.5 (Medium)**\n\n**Severity Assessment**  \nMedium. This is a real authorization flaw in OpenClaw\u2019s internal control plane. The issue does not require host access, trusted local state tampering, or multi-tenant assumptions, but exploitation does require an already authenticated internal Gateway caller with `operator.write`.\n\n**Impact**  \nAn authenticated internal Gateway caller limited to `operator.write` can perform state-changing `/allowlist` actions without `operator.admin`, even though comparable mutating internal chat commands already require `operator.admin`. The reachable effects are persistent changes to config-backed `allowFrom` entries and pairing-store-backed allowlist entries.\n\nThis is not a semantic-modeling complaint and not a generic \u201ctrusted operator can do things\u201d claim. It is a missing authorization check inside OpenClaw\u2019s own internal scope model, where peer mutating command surfaces already distinguish `operator.write` from `operator.admin`.\n\n**Affected Component**  \nVerified against the latest published GitHub release tag `v2026.3.23` (`ccfeecb6887cd97937e33a71877ad512741e82b2`), published `2026-03-23T23:15:50Z`.\n\nExact vulnerable path on the shipped tag:\n- `src/auto-reply/reply/commands-allowlist.ts:251-254`\n  - `/allowlist` authorization uses only `rejectUnauthorizedCommand(...)`.\n- `src/auto-reply/reply/commands-allowlist.ts:386-524`\n  - mutating config and pairing-store writes happen here, but there is no `requireGatewayClientScopeForInternalChannel(..., operator.admin, ...)`.\n\nReachability and scope model:\n- `src/gateway/method-scopes.ts:94-109`\n  - `chat.send` is a write-scoped method.\n- `src/gateway/server.chat.gateway-server-chat.test.ts:539-559`\n  - existing runtime coverage proves `chat.send` routes slash commands without an agent run.\n- `src/auto-reply/command-auth.ts:574-577`\n  - internal callers become `senderIsOwner` only when `GatewayClientScopes` includes `operator.admin`.\n\nComparable internal mutating command paths already enforce `operator.admin`:\n- `src/auto-reply/reply/commands-config.ts:64-73`\n- `src/auto-reply/reply/commands-mcp.ts:89-96`\n- `src/auto-reply/reply/commands-plugins.ts:387-394`\n- `src/auto-reply/reply/commands-acp.ts:98-106`\n\nVersion history:\n- Introduced by commit `555b2578a8cc6e1b93f717496935ead97bfbed8b` (`feat: add /allowlist command`)\n- Earliest released affected tag found: `v2026.1.20`\n- Latest released affected tag verified: `v2026.3.23`\n\n**Technical Reproduction**  \n1. Check out the shipped release tag `v2026.3.23`.\n2. Use an internal command context with:\n   - `Provider = \"webchat\"`\n   - `Surface = \"webchat\"`\n   - `GatewayClientScopes = [\"operator.write\"]`\n   - `params.command.channel = \"webchat\"`\n3. Route a slash command through `chat.send`.\n4. Execute either of these mutating commands:\n   - `/allowlist add dm channel=telegram 789`\n   - `/allowlist add dm --store channel=telegram 789`\n5. Confirm the command context is authorized but not owner-equivalent:\n   - `isAuthorizedSender === true`\n   - `senderIsOwner === false`\n6. Observe that the commands still succeed and perform persistent writes.\n\n**Demonstrated Impact**  \nThe vulnerable handler performs real state mutation for a low-scope internal caller:\n- Config-backed mutation path:\n  - `src/auto-reply/reply/commands-allowlist.ts:398-503`\n  - reads the config snapshot, applies the edit, validates, and writes the updated config to disk.\n- Store-backed mutation path:\n  - `src/auto-reply/reply/commands-allowlist.ts:479-485`\n  - `src/auto-reply/reply/commands-allowlist.ts:513-518`\n  - updates the pairing-store allowlist without any admin-scope gate.\n\nThe result is successful persistence, not just a misleading success message.\n\n**Environment**  \n- Product: OpenClaw\n- Verified shipped tag: `v2026.3.23`\n- Shipped tag commit: `ccfeecb6887cd97937e33a71877ad512741e82b2`\n- Published GitHub release time: `2026-03-23T23:15:50Z`\n- Verification date: `2026-03-24`\n\n**Duplicate Check**  \nThis is not a duplicate of:\n- `GHSA-pjvx-rx66-r3fg`\n  - that advisory covered cross-account scoping in `/allowlist ... --store`, not missing internal `operator.admin` enforcement.\n- `GHSA-hfpr-jhpq-x4rm`\n  - that advisory covered `/config` writes through `chat.send`, not `/allowlist`.\n- `GHSA-3w6x-gv34-mqpf`\n  - same authorization class, but different command path (`/acp`, not `/allowlist`).\n\n**In Scope Check**  \nThis report is in scope under `SECURITY.md` because:\n- it does **not** rely on adversarial operators sharing one gateway host or config;\n- it does **not** target the HTTP compatibility endpoints that `SECURITY.md` explicitly treats as full operator-access surfaces;\n- it demonstrates a real authorization mismatch inside OpenClaw\u2019s own internal control-plane scope model (`operator.write` vs `operator.admin`);\n- peer mutating internal chat commands already enforce `operator.admin`, so this is not a request for a new boundary but a missing check on an existing one.\n\nThis is therefore a concrete authorization bug, not a trusted-operator hardening suggestion.\n\n**Remediation Advice**  \n1. Add `requireGatewayClientScopeForInternalChannel(..., allowedScopes: [\"operator.admin\"], ...)` to the mutating internal `/allowlist` paths.\n2. Add regression coverage for both mutation modes:\n   - internal `operator.write` must be rejected;\n   - internal `operator.admin` must be allowed.\n3. Cover both config-backed and store-backed writes.\n4. Audit other mutating internal chat-command paths for the same missing-scope pattern.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-vqvg-86cc-cg83",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-vqvg-86cc-cg83",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-vqvg-86cc-cg83",
+      "https://github.com/advisories/GHSA-vqvg-86cc-cg83"
+    ],
+    "published_at": "2026-03-30T18:59:16Z",
+    "updated_at": "2026-03-30T18:59:17Z",
+    "github_reviewed_at": "2026-03-30T18:59:16Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "tdjackey",
+          "id": 6791132,
+          "node_id": "MDQ6VXNlcjY3OTExMzI=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/tdjackey",
+          "html_url": "https://github.com/tdjackey",
+          "followers_url": "https://api.github.com/users/tdjackey/followers",
+          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
+          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
+          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
+          "repos_url": "https://api.github.com/users/tdjackey/repos",
+          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-94pw-c6m8-p9p9",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-94pw-c6m8-p9p9",
+    "html_url": "https://github.com/advisories/GHSA-94pw-c6m8-p9p9",
+    "summary": "OpenClaw: Gateway operator.write Can Reach Admin-Class Channel Allowlist Persistence via chat.send",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n## Summary\n\nThe shared `/allowlist` command persists channel authorization config through `writeConfigFile(...)` but does not re-validate gateway client scopes for internal gateway callers. Because `chat.send` is intentionally reachable to `operator.write` callers and still creates a generic command-authorized internal context, an authenticated write-scoped gateway client can indirectly mutate channel `allowFrom` and `groupAllowFrom` policy that direct `config.patch` correctly reserves to `operator.admin`.\n\nThis is not just a generic code smell. The current code already shows the intended boundary by adding sink-side internal admin checks to shared `/config` and `/plugins` writes, but `/allowlist` was left behind.\n\n## Details\n\nThe gateway's documented scope split is clear:\n\n- `chat.send` is a write-scoped action.\n- direct config mutation is an admin-scoped action.\n\nThe vulnerable path is:\n\n1. A gateway client authenticates with `operator.write`.\n2. The client calls `chat.send`, which is intentionally allowed for that scope.\n3. `chat.send` builds an internal message context with `CommandAuthorized: true` and carries `GatewayClientScopes` into the reply pipeline.\n4. `resolveCommandAuthorization(...)` converts that internal message into `isAuthorizedSender=true` in the common case where no stricter `commands.allowFrom` override is configured.\n5. `/allowlist add|remove` accepts that generic command authorization and proceeds into its config-backed edit path.\n6. The handler clones the parsed config, calls `plugin.allowlist.applyConfigEdit(...)`, validates the result, and persists it with `writeConfigFile(validated.config)`.\n7. No sink-side check requires `operator.admin` before the persistent write occurs.\n\nThat creates a direct control-plane mismatch:\n\n- `config.patch` rejects the same caller with `missing scope: operator.admin`.\n- `/allowlist add dm ...` or `/allowlist add group ...` reached through `chat.send` can still rewrite channel authorization state.\n\n## Impact\n\n- A gateway client intentionally limited to `operator.write` can persist first-party channel authorization policy.\n- The caller can widen DM or group allowlists for channels using the shared `/allowlist` plumbing.\n- This weakens the repo's documented control-plane privilege split between ordinary write actions and admin-only persistent authorization mutation.\n\n## Remediation\n\n### 1) Add the Missing Sink-Side Internal Admin Check to `/allowlist`\n\nMirror the existing hardened pattern from `/config` and `/plugins`.\n\nBefore any config-backed `/allowlist add|remove` write, require:\n\n- `operator.admin` for internal gateway channels\n\nThis should happen before `plugin.allowlist.applyConfigEdit(...)` and before `writeConfigFile(...)`.\n\n### 2) Keep Pairing-Store and Config-Write Policy Checks, but Do Not Treat Them as Scope Enforcement\n\n`configWrites` policy and pairing-store behavior are useful secondary controls, but they do not replace the missing privilege check between `operator.write` and `operator.admin`.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-94pw-c6m8-p9p9",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-94pw-c6m8-p9p9",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-94pw-c6m8-p9p9",
+      "https://github.com/advisories/GHSA-94pw-c6m8-p9p9"
+    ],
+    "published_at": "2026-03-30T18:52:38Z",
+    "updated_at": "2026-03-30T18:52:41Z",
+    "github_reviewed_at": "2026-03-30T18:52:38Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.3.23",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-269",
+        "name": "Improper Privilege Management"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "zpbrent",
+          "id": 834641,
+          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zpbrent",
+          "html_url": "https://github.com/zpbrent",
+          "followers_url": "https://api.github.com/users/zpbrent/followers",
+          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
+          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
+          "repos_url": "https://api.github.com/users/zpbrent/repos",
+          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-m3mh-3mpg-37hw",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-m3mh-3mpg-37hw",
+    "html_url": "https://github.com/advisories/GHSA-m3mh-3mpg-37hw",
+    "summary": "OpenClaw has an Arbitrary Malicious Code Execution Vulnerability",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n### Summary\nDuring the installation phase of OpenClaw local plugins/hooks, the Git executable can be hijacked by a project-level .npmrc file, leading to arbitrary code execution during installation.\n\n### Details\nPlease note that the source code locations mentioned below are based on version openclaw-2026.3.13-1, but the issue has been confirmed to still exist in the current latest version, 2026.3.23.\n\nWhen installing a local plugin directory, local plugin archive, local hook pack directory, or local hook pack archive, OpenClaw first copies the source directory to a temporary `stageDir`, then executes the following in that directory:\n\n```\nnpm install --omit=dev --silent --ignore-scripts\n```\n\nSee `src/infra/install-package-dir.ts:176-199`.\n\nSince this process does not strip the project root `.npmrc`, and npm reads the project-level `.npmrc` during local project installation, an attacker could use a `.npmrc` file in a malicious plugin or hook directory to override npm\u2019s `git` executable path. By leveraging a Git dependency, the attacker could trigger npm to call this malicious program, thereby executing arbitrary local code during the installation phase.\n\n**Affected Paths**\n\n- Plugin CLI entry point: `src/cli/plugins-cli.ts:199-255`\n- Hook CLI entry point: `src/cli/hooks-cli.ts:573-676`\n- Plugin local directory / archive installation: `src/plugins/install.ts:379-405`, `src/plugins/install.ts:541-565`\n- Hook local directory / archive installation: `src/hooks/install.ts:380-403`, `src/hooks/install.ts:443-470`\n- Actual execution of `npm install --ignore-scripts`: `src/infra/install-package-dir.ts:176-199`\n\n**Vulnerability Trigger Flow**\n\n1. The user executes one of the following commands:\n\n   - `openclaw plugins install <path-or-spec>`\n   - `openclaw hooks install <path-or-spec>`\n2. If the argument is a local directory or local archive, OpenClaw navigates to the local installation path.\n3. OpenClaw copies the source directory to a temporary `stageDir`. See `src/infra/install-package-dir.ts:176-177`.\n4. If `dependencies` are present in `package.json`, OpenClaw executes the following in `stageDir`:\n\n```\nnpm install --omit=dev --silent --ignore-scripts\n```\n\nSee `src/infra/install-package-dir.ts:188-199`.\n\n5. npm reads the project-level `.npmrc` file in this directory.  Official documentation: [`.npmrc`](https://docs.npmjs.com/cli/v11/configuring-npm/npmrc/)\n6. If `.npmrc` is set to `git=<path to malicious program>` and there is a git dependency in the dependency tree, npm will invoke that `git` program when resolving the dependency.  Official documentation: [`npm config git`](https://docs.npmjs.com/cli/v11/using-npm/config/)  Git dependency documentation: [`package.json`](https://docs.npmjs.com/cli/v11/configuring-npm/package-json/)\n7. Consequently, an attacker can execute arbitrary local programs during the plugin/hook installation phase without waiting for the plugin or hook to be loaded later.\n\n**Triggering Commands**\n\n- Plugin installation command:\n\n```\nopenclaw plugins install <path-or-spec>\n```\n\n- Hook installation command:\n\n```\nopenclaw hooks install <path-or-spec>\n```\n\nWhen `<path-or-spec>` is a local directory or local archive, it will be resolved to the path used by the `npm install --omit=dev --silent --ignore-scripts` command mentioned above.\n\n### PoC\n\n\n\nCurrently, `testpoc/` is a minimal PoC directory used to verify that \u201cwhen installing local packages, OpenClaw enters the `npm install --ignore-scripts` path.\u201d It is divided into two core sections:\n\ntestpoc/pkg/\nPurpose: Simulates the local package directory installed by `openclaw plugins install ...` or `openclaw hooks install ...`\ntestpoc/repo/\nPurpose: Simulates a Git dependency repository within the npm dependency tree\nDirectory Structure\n\ntestpoc/\n\u251c\u2500 pkg/\n\u2502  \u251c\u2500 .npmrc\n\u2502  \u251c\u2500 package.json\n\u2502  \u2514\u2500 sample-hook/\n\u2502     \u251c\u2500 HOOK.md\n\u2502     \u2514\u2500 handler.js\n\u2514\u2500 repo/\n   \u251c\u2500 package.json\n   \u2514\u2500 .git/...\nFunction of Each Component\n\ntestpoc/pkg/.npmrc\n\nCurrent content:\ngit=calc.exe\nFunction: Overrides npm\u2019s Git executable configuration.\nMeaning: When npm encounters a git dependency during installation, it will not call the system git but will attempt to call the program specified here.\nThis is the core trigger point of this PoC. See testpoc/pkg/.npmrc:1\ntestpoc/pkg/package.json\n\nCurrently, this is a \u201cmixed-use\u201d manifest that includes both plugin and hook fields:\n{\n  \u201cname\u201d: \u201cprobe-host\u201d,\n  \u201cversion\u201d: \u201c1.0.0\u201d,\n  \u201cprivate\u201d: true,\n  \u201copenclaw\u201d: {\n    \u201cextensions\u201d: [\u201c./dist/index.js\u201d],\n    \u201chooks\u201d: [\u201c./sample-hook\u201d]\n  },\n  \u201cdependencies\u201d: {\n    \u201cprobe-git-dep\u201d: \u201cgit+file:///D:/AI Agent Source/OpenClaw/openclaw-2026.3.13-1/.testpoc/repo\u201d\n  }\n}\nIts functionality is divided into three layers:\nopenclaw.extensions: Allows it to be validated as a plugin package\nopenclaw.hooks: Enables it to be validated as a hook package\nThe Git URL in dependencies: Forces npm to enter the Git dependency resolution path during installation\nSee testpoc/pkg/package.json:1\ntestpoc/pkg/sample-hook/HOOK.md\n\nPurpose: To meet the minimum metadata requirements for a hook package.\nThis is the key file that allows `openclaw hooks install pkg` to pass the pre-check. See testpoc/pkg/sample-hook/HOOK.md:1\ntestpoc/pkg/sample-hook/handler.js\n\nCurrent content:\nexport default async function handler() {\n  return { ok: true };\n}\nPurpose: Meets the requirement that the hook directory must contain a handler entry file.\nIt is not a usage point in itself; its sole purpose is to allow OpenClaw to proceed to the dependency installation phase. See testpoc/pkg/sample-hook/handler.js:1\ntestpoc/repo/package.json\n\nCurrent content:\n{\u201cname\u201d:\u201cprobe-git-dep\u201d,\u2018version\u2019:\u201c1.0.0\u201d}\nPurpose: Serves as the minimum repository content corresponding to a Git dependency.\nThe focus is not on the repository code itself, but on the fact that \u201cit is a Git repository,\u201d allowing npm to perform Git-related operations on it. See testpoc/repo/package.json:1\ntestpoc/repo/.git/\n\nPurpose: Makes testpoc/repo/ a real Git repository rather than a regular directory.\nWhen npm resolves git+file://... When installing dependencies, this is treated as the Git source.\nHow the current PoC works\n\nIf installing via hooks:\n\nopenclaw hooks install testpoc/pkg\nThe trigger chain is:\n\nOpenClaw identifies testpoc/pkg as the local hook package path\nThrough pre-validation in openclaw.hooks, HOOK.md, and handler.js\nProceeds to src/infra/install-package-dir.ts:188-199\nExecutes:\nnpm install --omit=dev --silent --ignore-scripts\nnpm reads testpoc/pkg/.npmrc\nnpm processes the git dependency in package.json\nnpm attempts to call the git=calc.exe specified in .npmrc\n\n### Impact\nIt is best described as an installation-time local command execution / unsafe package-install configuration issue.\n\nMore precisely:\n\nOpenClaw installs local plugin and hook packs by running npm install --omit=dev --silent --ignore-scripts inside the staged package directory, see src/infra/install-package-dir.ts:188-199.\nIf that local package directory contains an attacker-controlled .npmrc, npm will still read it.\nIf .npmrc overrides npm\u2019s git executable and the package has a git dependency, npm can invoke the attacker-chosen program during install.\n\nWho is impacted\n\nUsers who run:\n\nopenclaw plugins install <local path/archive>\nopenclaw hooks install <local path/archive>\n\nAnd who install a malicious or untrusted local package that includes:\n\na controlled .npmrc\na git dependency\na runnable attacker-controlled git target on that platform\n\nThis should be treated as a security issue, not just \u201cmalicious plugin behavior,\u201d because the code execution happens during OpenClaw\u2019s install workflow, before the plugin or hook is ever loaded as trusted runtime code.\n\nThe important distinction is:\n\nA normal \u201ctrusted plugin\u201d case is: the operator installs a plugin, enables it, and later that plugin runs with plugin privileges.\nThis issue is different: OpenClaw\u2019s installer executes npm install --omit=dev --silent --ignore-scripts inside an attacker-controlled package directory, and npm still honors attacker-controlled project config from .npmrc.\n\nThat means an untrusted local plugin or hook package can influence the package manager itself and reach arbitrary program execution at install time, via npm\u2019s git setting and a git dependency, even though --ignore-scripts is present.\n\nWhy this matters from a security perspective:\n\nIt is install-time execution, not post-install trusted execution.\n\nThe execution is triggered by OpenClaw\u2019s installer in src/infra/install-package-dir.ts:188-199.\n\nThis occurs before the package is accepted as a trusted loaded plugin/hook in the usual sense.\n\nIt defeats an expected safety boundary.\n\nThe code explicitly uses --ignore-scripts, which strongly suggests an intent to make installation safer.\n\nBut the installer still allows attacker-controlled package-manager configuration from .npmrc to affect execution.\n\nSo the current mitigation is incomplete in a security-relevant way.\n\nThe dangerous input is part of a supported user flow.\n\nOpenClaw explicitly supports installing plugins and hook packs from local directories and archives:\n\nsrc/cli/plugins-cli.ts:199-255\nsrc/cli/hooks-cli.ts:573-676\n\nThat makes \u201cdownload a package/archive, then install it\u201d a realistic operator action, not an artificial lab setup.\n\nThe issue is broader than plugin trust.\n\nThe problem is not \u201cplugins can do bad things once trusted.\u201d\n\nThe problem is \u201cthe installer consumes attacker-controlled package-manager config before trust is established.\u201d\n\nThat is much closer to an unsafe install / supply-chain execution flaw than to ordinary trusted-plugin behavior.\n\nHooks are affected too.\n\nThe same installer path is used for hook packs, not only plugins.\n\nSo this is a shared install-surface issue, not an isolated plugin-runtime concern.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-m3mh-3mpg-37hw",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-m3mh-3mpg-37hw",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-m3mh-3mpg-37hw",
+      "https://github.com/advisories/GHSA-m3mh-3mpg-37hw"
+    ],
+    "published_at": "2026-03-30T18:52:09Z",
+    "updated_at": "2026-03-30T18:52:10Z",
+    "github_reviewed_at": "2026-03-30T18:52:09Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2025.3.23",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+        "score": 8.6
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-426",
+        "name": "Untrusted Search Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "ChangeYourWay",
+          "id": 167730365,
+          "node_id": "U_kgDOCf9cvQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/167730365?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/ChangeYourWay",
+          "html_url": "https://github.com/ChangeYourWay",
+          "followers_url": "https://api.github.com/users/ChangeYourWay/followers",
+          "following_url": "https://api.github.com/users/ChangeYourWay/following{/other_user}",
+          "gists_url": "https://api.github.com/users/ChangeYourWay/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/ChangeYourWay/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/ChangeYourWay/subscriptions",
+          "organizations_url": "https://api.github.com/users/ChangeYourWay/orgs",
+          "repos_url": "https://api.github.com/users/ChangeYourWay/repos",
+          "events_url": "https://api.github.com/users/ChangeYourWay/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/ChangeYourWay/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:C/C:H/I:H/A:H",
+      "score": 8.6
+    }
+  },
+  {
+    "ghsa_id": "GHSA-68f8-9mhj-h2mp",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-68f8-9mhj-h2mp",
+    "html_url": "https://github.com/advisories/GHSA-68f8-9mhj-h2mp",
+    "summary": "OpenClaw has a Gateway HTTP /v1/models Route Bypasses Operator Read Scope",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n## Summary\n\nThe OpenAI-compatible HTTP endpoint `/v1/models` accepts bearer auth but does not enforce operator method scopes.\n\nIn contrast, the WebSocket RPC path enforces `operator.read` for `models.list`.\n\nA caller connected with `operator.approvals` (no read scope) is rejected for `models.list` (`missing scope: operator.read`) but can still enumerate model metadata through HTTP `/v1/models`.\n\nConfirmed on current `main` at commit `06de515b6c42816b62ec752e1c221cab67b38501`.\n\n## Details\n\nThe WS control-plane path enforces role/scope checks centrally before dispatching methods. For non-admin operators, this includes required method scopes such as `operator.read` for `models.list`.\n\nThe HTTP compatibility path for `/v1/models` performs bearer authorization and then returns model metadata; it does not apply an equivalent scope check.\n\nAs reproduced, a caller with only `operator.approvals` can:\n\n1. connect successfully,\n2. fail `models.list` over WS with `missing scope: operator.read`,\n3. fetch `/v1/models` over HTTP with status 200 and model data.\n\nThis is a cross-surface authorization inconsistency where the stricter WS policy can be bypassed via HTTP.\n\n## Impact\n\n- Callers lacking `operator.read` can still enumerate gateway model metadata through HTTP compatibility routes.\n- Breaks scope model consistency between WS RPC and HTTP surfaces.\n- Weakens least-privilege expectations for operators granted non-read scopes.\n\n## Patch Suggestion\n\n### 1) Enforce read scope on `/v1/models` routes\n\nApply a scope gate equivalent to `models.list` before serving `/v1/models` or `/v1/models/:id`.\n\n### 2) Reuse centralized scope-authorization helper for HTTP compatibility endpoints\n\nUse the same operator scope logic used by WS dispatch (`authorizeOperatorScopesForMethod(...)`) to prevent policy drift.\n\n### 3) Add regression tests\n\nKeep this PoC and add explicit negative/positive controls:\n\n- `operator.approvals` without read is rejected on HTTP `/v1/models`.\n- `operator.read` is accepted on both WS `models.list` and HTTP `/v1/models`.\n\n## Credit\n\nReported by @zpbrent.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-68f8-9mhj-h2mp",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-68f8-9mhj-h2mp",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-68f8-9mhj-h2mp",
+      "https://github.com/advisories/GHSA-68f8-9mhj-h2mp"
+    ],
+    "published_at": "2026-03-30T18:41:15Z",
+    "updated_at": "2026-03-30T18:41:15Z",
+    "github_reviewed_at": "2026-03-30T18:41:15Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.3.23",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "zpbrent",
+          "id": 834641,
+          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
+          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zpbrent",
+          "html_url": "https://github.com/zpbrent",
+          "followers_url": "https://api.github.com/users/zpbrent/followers",
+          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
+          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
+          "repos_url": "https://api.github.com/users/zpbrent/repos",
+          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-w6m8-cqvj-pg5v",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-w6m8-cqvj-pg5v",
+    "html_url": "https://github.com/advisories/GHSA-w6m8-cqvj-pg5v",
+    "summary": "OpenClaw has incomplete Fix for CVE-2026-32011: Feishu Webhook Pre-Auth Body Parsing DoS (Slow-Body / Slowloris Variant)",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n# Advisory Details\n\n**Title**: Incomplete Fix for CVE-2026-32011: Feishu Webhook Pre-Auth Body Parsing DoS (Slow-Body / Slowloris Variant)\n\n**Description**:\n\n### Summary\n\nThe patch for CVE-2026-32011 tightened pre-auth body parsing limits (from 1MB/30s to 64KB/5s) across several webhook handlers. However, the **Feishu extension's webhook handler** was not included in the patch and still accepts request bodies with the old permissive limits (1MB body, 30-second timeout) **before** verifying the webhook signature. An unauthenticated attacker can exhaust server connection resources by sending concurrent slow HTTP POST requests to the Feishu webhook endpoint.\n\n### Details\n\nIn `extensions/feishu/src/monitor.ts`, the webhook HTTP handler uses `installRequestBodyLimitGuard` with permissive limits at lines 276-278:\n\n```typescript\nconst FEISHU_WEBHOOK_MAX_BODY_BYTES = 1024 * 1024;    // 1MB (line 26)\nconst FEISHU_WEBHOOK_BODY_TIMEOUT_MS = 30_000;         // 30s (line 27)\n\n// ... in monitorWebhook(), line 276-278:\nconst guard = installRequestBodyLimitGuard(req, res, {\n  maxBytes: FEISHU_WEBHOOK_MAX_BODY_BYTES,    // 1MB\n  timeoutMs: FEISHU_WEBHOOK_BODY_TIMEOUT_MS,  // 30s\n  responseFormat: \"text\",\n});\n```\n\nThe body guard is installed at line 276 **before** the request reaches the Lark SDK's `adaptDefault` webhook handler (line 284), which performs signature verification. This means:\n\n1. Any unauthenticated HTTP POST is accepted\n2. The server waits up to 30 seconds for the body to arrive\n3. Each connection can buffer up to 1MB\n4. Authentication only happens after the body is fully read\n\nThe patched handlers (Mattermost, MSTeams, Google Chat, etc.) now use tight pre-auth limits:\n```typescript\nconst PREAUTH_MAX_BODY_BYTES = 64 * 1024;     // 64KB\nconst PREAUTH_BODY_TIMEOUT_MS = 5_000;         // 5s\n```\n\nThe Feishu extension was missed because it resides in `extensions/feishu/` (a plugin workspace) rather than in the core `src/` directory.\n\n**Attack chain:**\n```\n[Attacker sends slow HTTP POST to /feishu/events]\n  \u2192 Rate limit check: passes (under 120 req/min)\n  \u2192 Content-Type check: application/json, passes\n  \u2192 installRequestBodyLimitGuard(1MB, 30s): installed\n  \u2192 Body trickles at 1 byte/sec for 30 seconds\n  \u2192 \u00d7 50 concurrent connections = connection exhaustion\n  \u2192 Legitimate Feishu webhook deliveries blocked\n```\n\n### PoC\n\n**Prerequisites:** Docker installed.\n\n**Step 1:** Create a minimal test server reproducing the vulnerable body parsing:\n\n```bash\ncat > /tmp/feishu_webhook_server.js << 'EOF'\nconst http = require(\"http\");\nconst VULN_TIMEOUT = 30_000;   // Vulnerable: 30s (same as Feishu handler)\nconst PATCH_TIMEOUT = 5_000;   // Patched: 5s (what it should be)\n\nfunction bodyGuard(req, res, timeoutMs) {\n  let done = false;\n  const timer = setTimeout(() => {\n    if (!done) { done = true; res.statusCode = 408; res.end(\"Request body timeout\"); req.destroy(); }\n  }, timeoutMs);\n  req.on(\"end\", () => { done = true; clearTimeout(timer); });\n  req.on(\"close\", () => { done = true; clearTimeout(timer); });\n}\n\nhttp.createServer((req, res) => {\n  if (req.url === \"/healthz\") { res.end(\"OK\"); return; }\n  if (req.method !== \"POST\") { res.writeHead(405); res.end(); return; }\n  const timeout = req.url === \"/feishu/events\" ? VULN_TIMEOUT : PATCH_TIMEOUT;\n  console.log(`[${req.url}] +conn`);\n  bodyGuard(req, res, timeout);\n  res.on(\"finish\", () => console.log(`[${req.url}] -conn`));\n}).listen(3000, () => console.log(\"Listening on :3000\"));\nEOF\nnode /tmp/feishu_webhook_server.js &\nsleep 1\n```\n\n**Step 2:** Verify the vulnerability \u2014 slow body holds connection for the full timeout:\n\n```bash\n# Vulnerable endpoint: connection stays open for ~10 seconds (max 30s)\ntime (echo -n '{\"t\":\"'; sleep 10; echo '\"}') | \\\n  curl -s -o /dev/null -w \"status: %{http_code}\\n\" \\\n  -X POST http://localhost:3000/feishu/events \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Content-Length: 65536\" \\\n  --data-binary @- --max-time 35\n\n# Patched endpoint: connection terminated after ~5s\ntime (echo -n '{\"t\":\"'; sleep 10; echo '\"}') | \\\n  curl -s -o /dev/null -w \"status: %{http_code}\\n\" \\\n  -X POST http://localhost:3000/patched/events \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Content-Length: 65536\" \\\n  --data-binary @- --max-time 35\n```\n\n**Step 3:** Batch exploit \u2014 10 concurrent slow connections:\n\n```bash\nfor i in $(seq 1 10); do\n  (echo -n 'A'; sleep 15) | \\\n    curl -s -o /dev/null -X POST http://localhost:3000/feishu/events \\\n    -H \"Content-Type: application/json\" \\\n    -H \"Content-Length: 65536\" \\\n    --data-binary @- --max-time 35 &\ndone\nwait\n```\n\n### Log of Evidence\n\n**Exploit result (vulnerable /feishu/events):**\n```\n=== Feishu Webhook Pre-Auth Slow-Body DoS ===\nTarget: localhost:3000/feishu/events\nConcurrent connections: 10\n\n  [conn-0] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-1] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-2] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-3] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-4] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-5] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-6] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-7] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-8] held open for 15.0s (15B sent) [SUCCESS]\n  [conn-9] held open for 15.0s (15B sent) [SUCCESS]\n\n=== Results ===\nConnections held open (SUCCESS): 10/10\n[SUCCESS] Pre-auth slow-body DoS confirmed!\n```\n\n**Control result (patched /patched/events with 5s timeout):**\n```\n=== CONTROL: Patched Webhook Body Limits (64KB/5s) ===\nTarget: localhost:3000/patched/events\n\n  [conn-0] RESET after 8.0s (8B)\n  [conn-1] RESET after 8.0s (8B)\n  ...\n  [conn-9] RESET after 8.0s (8B)\n\nAvg connection hold time: 8.0s (5s timeout + stagger delay)\n```\n\n**Server-side Docker logs confirming the discrepancy:**\n```\n[feishu-vulnerable] +conn (active: 1)\n[feishu-vulnerable] +conn (active: 10)  \u2190 No disconnections during 15s attack\n[patched-control] +conn (active: 20)\n[patched-control] -conn after 5.0s (active: 19)  \u2190 ALL terminated at 5s\n[patched-control] -conn after 5.0s (active: 10)\n```\n\n### Impact\n\nAn unauthenticated attacker can cause a **Denial of Service** against any OpenClaw instance running the Feishu channel in webhook mode. The Feishu webhook endpoint must be publicly accessible for Feishu to deliver webhooks, so the attacker can directly target it.\n\nWith ~50 concurrent slow HTTP connections (each trickling 1 byte/second), the attacker can:\n- Exhaust the server's connection handling capacity for 30 seconds per wave\n- Block legitimate Feishu webhook deliveries (messages not reaching the bot)\n- Consume up to 50MB of memory (50 \u00d7 1MB buffer) per attack wave\n\nThe attack is trivial \u2014 it only requires sending slow HTTP POST requests. No valid Feishu webhook signature or any other credentials are needed.\n\n### Affected products\n- **Ecosystem**: npm\n- **Package name**: openclaw\n- **Affected versions**: <= 2026.2.22\n- **Patched versions**: None\n\n### Severity\n- **Severity**: Medium\n- **Vector string**: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L\n\n### Weaknesses\n- **CWE**: CWE-400: Uncontrolled Resource Consumption\n\n### Occurrences\n\n| Permalink | Description |\n| :--- | :--- |\n| [https://github.com/openclaw/openclaw/blob/main/extensions/feishu/src/monitor.ts#L26-L27](https://github.com/openclaw/openclaw/blob/main/extensions/feishu/src/monitor.ts#L26-L27) | Permissive body limit constants: `FEISHU_WEBHOOK_MAX_BODY_BYTES = 1024 * 1024` (1MB) and `FEISHU_WEBHOOK_BODY_TIMEOUT_MS = 30_000` (30s) \u2014 should be 64KB/5s to match the CVE-2026-32011 patch. |\n| [https://github.com/openclaw/openclaw/blob/main/extensions/feishu/src/monitor.ts#L276-L280](https://github.com/openclaw/openclaw/blob/main/extensions/feishu/src/monitor.ts#L276-L280) | `installRequestBodyLimitGuard` call in `monitorWebhook()` using the permissive constants \u2014 this guard runs before authentication (the Lark SDK handler at line 284). |",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-w6m8-cqvj-pg5v",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-w6m8-cqvj-pg5v",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-w6m8-cqvj-pg5v",
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-x4vp-4235-65hg",
+      "https://github.com/advisories/GHSA-w6m8-cqvj-pg5v"
+    ],
+    "published_at": "2026-03-30T18:32:03Z",
+    "updated_at": "2026-03-30T18:32:04Z",
+    "github_reviewed_at": "2026-03-30T18:32:03Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 5.3
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-400",
+        "name": "Uncontrolled Resource Consumption"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "score": 5.3
+    }
+  },
+  {
+    "ghsa_id": "GHSA-hr5v-j9h9-xjhg",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-hr5v-j9h9-xjhg",
+    "html_url": "https://github.com/advisories/GHSA-hr5v-j9h9-xjhg",
+    "summary": "OpenClaw has Sandbox Media Root Bypass via Unnormalized `mediaUrl` / `fileUrl` Parameter Keys (CWE-22)",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n### Advisory Details\n**Title**: Sandbox Media Root Bypass via Unnormalized `mediaUrl` / `fileUrl` Parameter Keys (CWE-22)\n\n**Description**:\n### Summary\nA path traversal vulnerability in the agent sandbox enforcement allows a sandboxed agent to read arbitrary files from other agents' workspaces by using the `mediaUrl` or `fileUrl` parameter key in message tool calls. The `normalizeSandboxMediaParams` function only checks `[\"media\", \"path\", \"filePath\"]` keys, while `mediaUrl` and `fileUrl` escape normalization entirely. Combined with `handlePluginAction` dropping `mediaLocalRoots` from the dispatch context, this enables a full sandbox escape where any agent can read files outside its designated sandbox root.\n\n### Details\nThe vulnerability exists in two files within the messaging pipeline:\n\n**1. Incomplete parameter key coverage in `normalizeSandboxMediaParams`:**\n\nIn `src/infra/outbound/message-action-params.ts`, the function iterates over a hardcoded allowlist of parameter keys to validate:\n\n```typescript\n// Line 212\nconst mediaKeys: Array<\"media\" | \"path\" | \"filePath\"> = [\"media\", \"path\", \"filePath\"];\n```\n\nThe `mediaUrl` and `fileUrl` parameter keys are not included in this array. These keys are actively used by multiple channel extensions (Discord, Telegram, Slack, Matrix, Twitch) for media attachment handling, but they completely bypass the sandbox path validation performed by `resolveSandboxedMediaSource`.\n\n**2. Dropped `mediaLocalRoots` in `handlePluginAction`:**\n\nIn `src/infra/outbound/message-action-runner.ts`, the `handlePluginAction` function dispatches actions to channel plugins but omits `mediaLocalRoots` from the context:\n\n```typescript\n// Lines 684-697\nconst handled = await dispatchChannelMessageAction({\n    channel,\n    action,\n    cfg,\n    params,\n    accountId: accountId ?? undefined,\n    requesterSenderId: input.requesterSenderId ?? undefined,\n    sessionKey: input.sessionKey,\n    sessionId: input.sessionId,\n    agentId,\n    gateway,\n    toolContext: input.toolContext,\n    dryRun,\n    // mediaLocalRoots is MISSING here\n});\n```\n\nDespite `ChannelMessageActionContext` defining `mediaLocalRoots?: readonly string[]` (in `src/channels/plugins/types.core.ts` line 478), plugins receive `undefined` and fall back to `getDefaultMediaLocalRoots()`, which permits reads of the entire `~/.openclaw/` directory tree \u2014 including all agents' workspaces.\n\n**Attack chain:**\n1. A sandboxed agent (Agent-A at `~/.openclaw/workspace/agent-a/`) calls the message tool with `{ mediaUrl: \"~/.openclaw/workspace/agent-b/secret.txt\" }`\n2. `normalizeSandboxMediaParams` skips the `mediaUrl` key (not in allowlist)\n3. `handlePluginAction` dispatches without `mediaLocalRoots`\n4. Plugin calls `loadWebMedia` with default roots, which allows `~/.openclaw/workspace/**`\n5. Agent-B's secret file content is read and sent as a channel attachment\n\n### PoC\n\n**Prerequisites:**\n- Docker installed\n- OpenClaw Docker image built (`openclaw-gateway:latest`)\n\n**Steps:**\n\n1. Start the vulnerable gateway container:\n\n```bash\ncd llm-enhance/cve-finding/Path_Traversal/CVE-2026-27522-Media_Root_Bypass-variant-exp/\ndocker compose up -d\nsleep 5\n```\n\n2. Run the exploit:\n\n```bash\npython3 poc_exploit.py\n```\n\n3. The exploit writes a secret file to `~/.openclaw/workspace/agent-b/secret_key.txt` inside the container, then invokes `normalizeSandboxMediaParams` with Agent-A's sandbox policy and `{ mediaUrl: <agent-b-secret-path> }`. The `mediaUrl` key bypasses normalization, and `loadWebMedia` reads the file successfully.\n\n4. Run the control experiment to confirm sandbox works for checked keys:\n\n```bash\npython3 control-sandbox_enforced.py\n```\n\n### Log of Evidence\n\n**Exploit output:**\n```\n=== CVE-2026-27522 Variant: Sandbox Media Root Bypass ===\n\n[*] Container 'openclaw-media-bypass-test' is running\n[*] Running exploit script with Bun...\n\n[VULNERABLE] mediaUrl bypassed normalizeSandboxMediaParams!\n  Agent-A sandboxRoot: /root/.openclaw/workspace/agent-a\n  mediaUrl targets Agent-B: /root/.openclaw/workspace/agent-b/secret_key.txt\n  args after normalization: {\"mediaUrl\":\"/root/.openclaw/workspace/agent-b/secret_key.txt\"}\n[EXPLOITED] Agent-B secret file content: AGENT-B-SECRET-API-KEY-sk-12345abcdef\n\n=== EXPLOIT SUCCESSFUL ===\nAgent-A read Agent-B's secret file via mediaUrl, bypassing sandbox.\n\n[+] RESULT: VULNERABLE \u2014 mediaUrl bypasses sandbox enforcement\n```\n\n**Control experiment output:**\n```\n=== Control Experiment: Sandbox Enforcement for 'media' Key ===\n\n[*] Container 'openclaw-media-bypass-test' is running\n[*] Running control script with Bun...\n\n[SAFE] normalizeSandboxMediaParams blocked 'media' key as expected!\n  Error: Path escapes sandbox root (/tmp/sandbox-ZKvGQX): /tmp/victim-2cuAOO/secret.txt\n\n=== CONTROL EXPERIMENT PASSED ===\nThe 'media' parameter IS correctly checked by sandbox enforcement.\nOnly unchecked keys (mediaUrl, fileUrl) bypass the sandbox.\n\n[+] CONTROL PASSED: 'media' key is correctly enforced by sandbox\n```\n\n### Impact\nThis is a **sandbox escape** vulnerability. An attacker who can influence an agent's tool calls (via prompt injection, multi-agent interaction, or malicious plugin instruction) can read arbitrary files from other agents' workspaces. This includes:\n- API keys and secrets stored in other agents' sandboxes\n- Session data and conversation logs\n- Configuration files with sensitive credentials\n- Any file within the `~/.openclaw/` directory tree\n\nThis completely defeats the purpose of the multi-agent sandbox isolation feature, which is documented as a security boundary in the project's Docker and sandboxing documentation.\n\n### Affected products\n- **Ecosystem**: npm\n- **Package name**: openclaw\n- **Affected versions**: <= 2026.3.14 (current latest)\n- **Patched versions**: <None>\n\n### Severity\n- **Severity**: High\n- **Vector string**: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N\n\n### Weaknesses\n- **CWE**: CWE-22: Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')\n\n### Occurrences\n\n| Permalink | Description |\n| :--- | :--- |\n| [https://github.com/moltbot/moltbot/blob/main/src/infra/outbound/message-action-params.ts#L206-L227](https://github.com/moltbot/moltbot/blob/main/src/infra/outbound/message-action-params.ts#L206-L227) | The `normalizeSandboxMediaParams` function with incomplete `mediaKeys` allowlist \u2014 `mediaUrl` and `fileUrl` are not checked. |\n| [https://github.com/moltbot/moltbot/blob/main/src/infra/outbound/message-action-runner.ts#L684-L697](https://github.com/moltbot/moltbot/blob/main/src/infra/outbound/message-action-runner.ts#L684-L697) | The `handlePluginAction` dispatch call that omits `mediaLocalRoots` from the context passed to `dispatchChannelMessageAction`. |\n| [https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/types.core.ts#L478](https://github.com/moltbot/moltbot/blob/main/src/channels/plugins/types.core.ts#L478) | The `ChannelMessageActionContext` type that defines `mediaLocalRoots` but never receives it from `handlePluginAction`. |",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-hr5v-j9h9-xjhg",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-hr5v-j9h9-xjhg",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-hr5v-j9h9-xjhg",
+      "https://github.com/advisories/GHSA-hr5v-j9h9-xjhg"
+    ],
+    "published_at": "2026-03-30T18:31:02Z",
+    "updated_at": "2026-03-30T18:31:02Z",
+    "github_reviewed_at": "2026-03-30T18:31:02Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "score": 7.7
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-22",
+        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "YLChen-007",
+          "id": 30854794,
+          "node_id": "MDQ6VXNlcjMwODU0Nzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/30854794?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/YLChen-007",
+          "html_url": "https://github.com/YLChen-007",
+          "followers_url": "https://api.github.com/users/YLChen-007/followers",
+          "following_url": "https://api.github.com/users/YLChen-007/following{/other_user}",
+          "gists_url": "https://api.github.com/users/YLChen-007/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/YLChen-007/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/YLChen-007/subscriptions",
+          "organizations_url": "https://api.github.com/users/YLChen-007/orgs",
+          "repos_url": "https://api.github.com/users/YLChen-007/repos",
+          "events_url": "https://api.github.com/users/YLChen-007/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/YLChen-007/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "score": 7.7
+    }
+  },
+  {
+    "ghsa_id": "GHSA-3298-56p6-rpw2",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-3298-56p6-rpw2",
+    "html_url": "https://github.com/advisories/GHSA-3298-56p6-rpw2",
+    "summary": "OpenClaw has incomplete Fix for CVE-2026-27486: Unvalidated SIGKILL in `!stop` Chat Command via `shell-utils.ts`",
+    "description": "> Fixed in OpenClaw 2026.3.24, the current shipping release.\n\n### Advisory Details\n**Title**: Incomplete Fix for CVE-2026-27486: Unvalidated SIGKILL in `!stop` Chat Command via `shell-utils.ts`\n\n**Description**:\n### Summary\nThe `!stop` (and `/bash stop`) chat command kills background bash processes using `SIGKILL` directly, without first sending `SIGTERM` to allow graceful shutdown. This is because `bash-command.ts` imports `killProcessTree()` from `src/agents/shell-utils.ts`, which still contains the pre-CVE-2026-27486 aggressive kill logic, rather than from the patched `src/process/kill-tree.ts`.\n\n### Details\nCVE-2026-27486 fixed unsafe process termination by introducing a graceful shutdown sequence in `src/process/kill-tree.ts` \u2014 sending `SIGTERM` first, waiting a configurable grace period (default 3 seconds), then escalating to `SIGKILL` only if the process is still alive.\n\nHowever, an identical copy of the **unpatched** `killProcessTree` function remains in `src/agents/shell-utils.ts` (lines 170\u2013192). This function sends `SIGKILL` immediately with no `SIGTERM`:\n\n```typescript\n// src/agents/shell-utils.ts:170-192\nexport function killProcessTree(pid: number): void {\n  // ... Windows handling ...\n  try {\n    process.kill(-pid, \"SIGKILL\"); // Immediate hard kill, no SIGTERM\n  } catch {\n    try {\n      process.kill(pid, \"SIGKILL\");\n    } catch {\n      // process already dead\n    }\n  }\n}\n```\n\nThe `!stop` chat command handler in `src/auto-reply/reply/bash-command.ts` imports and calls this vulnerable version at line 302:\n\n```typescript\n// src/auto-reply/reply/bash-command.ts:5\nimport { killProcessTree } from \"../../agents/shell-utils.js\";\n\n// src/auto-reply/reply/bash-command.ts:300-304\nconst pid = running.pid ?? running.child?.pid;\nif (pid) {\n  killProcessTree(pid);  // Calls the UNPATCHED version\n}\nmarkExited(running, null, \"SIGKILL\", \"failed\");\n```\n\nCompare this to the patched version in `src/process/kill-tree.ts`:\n\n```typescript\n// src/process/kill-tree.ts:46-78\nfunction killProcessTreeUnix(pid: number, graceMs: number): void {\n  // Step 1: Try graceful SIGTERM to process group\n  try {\n    process.kill(-pid, \"SIGTERM\");\n  } catch { /* ... */ }\n\n  // Step 2: Wait grace period, then SIGKILL if still alive\n  setTimeout(() => {\n    if (isProcessAlive(-pid)) {\n      try { process.kill(-pid, \"SIGKILL\"); } catch { /* ... */ }\n    }\n  }, graceMs).unref();\n}\n```\n\n### PoC\n\nThis PoC demonstrates the difference between the vulnerable and patched code paths inside a running OpenClaw Gateway container.\n\n**Setup:**\n```bash\n# Build and start the gateway container\ncd CVE-2026-27486-variant-exp/\ndocker compose up -d\nsleep 5\n```\n\n**Exploit (vulnerable `killProcessTree` from `shell-utils.ts`):**\n\nThe following script is injected into the container and executed. It starts a bash process that traps `SIGTERM` for graceful shutdown, then kills it using the same code path as `!stop`:\n\n```javascript\n// exploit_sigkill.cjs \u2014 replicates src/agents/shell-utils.ts:183-190\nconst { spawn } = require('child_process');\nconst fs = require('fs');\n\ntry { fs.unlinkSync('/tmp/graceful_shutdown.txt'); } catch {}\n\nconst child = spawn('/bin/bash', ['-c',\n  'trap \\'echo GRACEFUL_SHUTDOWN > /tmp/graceful_shutdown.txt; exit 0\\' SIGTERM; while true; do sleep 1; done'\n], { detached: true, stdio: 'ignore' });\nchild.unref();\n\nsetTimeout(() => {\n  // VULNERABLE: same as shell-utils.ts \u2014 SIGKILL only\n  try { process.kill(-child.pid, 'SIGKILL'); } catch {\n    try { process.kill(child.pid, 'SIGKILL'); } catch {}\n  }\n  setTimeout(() => {\n    if (fs.existsSync('/tmp/graceful_shutdown.txt')) {\n      console.log('[BLOCKED] SIGTERM was received.');\n      process.exit(1);\n    } else {\n      console.log('[EXPLOITED] SIGKILL sent directly \u2014 SIGTERM never delivered.');\n      process.exit(0);\n    }\n  }, 2000);\n}, 1000);\n```\n\n**Run:**\n```bash\npython3 poc_exploit.py\n```\n\n### Log of Evidence\n\n**Exploit output (SIGKILL only, no graceful shutdown):**\n```\n[*] Running exploit (vulnerable killProcessTree from shell-utils.ts)...\n[*] Victim PID: 78\n[*] Calling vulnerable killProcessTree (SIGKILL only, no SIGTERM)...\n[EXPLOITED] SIGKILL sent directly \u2014 SIGTERM never delivered.\n[EXPLOITED] Graceful shutdown handler was NEVER invoked.\n\n[SUCCESS] CVE-2026-27486 variant confirmed:\n  killProcessTree() in shell-utils.ts sends immediate SIGKILL,\n  bypassing the graceful shutdown fix in process/kill-tree.ts.\n```\n\n**Control output (SIGTERM first, graceful shutdown works):**\n```\n[*] Running control (patched killProcessTree from process/kill-tree.ts)...\n[*] Victim PID: 93\n[*] Calling patched killProcessTree (SIGTERM first, then SIGKILL after grace)...\n[NORMAL] SIGTERM received \u2014 graceful shutdown completed. Flag: GRACEFUL_SHUTDOWN\n\n[NORMAL] Control confirmed: patched killProcessTree sends SIGTERM first,\n         allowing graceful shutdown before escalating to SIGKILL.\n```\n\n### Impact\nWhen `!stop` is used, background processes are killed instantly via `SIGKILL` with no chance to perform cleanup. This can result in:\n\n- **Data corruption**: processes writing to files or databases are interrupted mid-write\n- **Resource leaks**: temporary files, lock files, and network connections are not properly released\n- **Security-sensitive cleanup skipped**: operations like erasing in-memory secrets or completing audit logs are bypassed\n\nThis is the same class of impact that CVE-2026-27486 was filed for \u2014 the fix simply missed the `shell-utils.ts` copy of the function.\n\n### Affected products\n- **Ecosystem**: npm\n- **Package name**: openclaw\n- **Affected versions**: <= 2026.3.14\n- **Patched versions**: <None>\n\n### Severity\n- **Severity**: Medium\n- **Vector string**: CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H\n\n### Weaknesses\n- **CWE**: CWE-404: Improper Resource Shutdown or Release\n\n### Occurrences\n\n| Permalink | Description |\n| :--- | :--- |\n| [https://github.com/moltbot/moltbot/blob/f2849c2417/src/agents/shell-utils.ts#L170-L192](https://github.com/moltbot/moltbot/blob/f2849c2417/src/agents/shell-utils.ts#L170-L192) | The vulnerable `killProcessTree` function that sends immediate `SIGKILL` without `SIGTERM`. |\n| [https://github.com/moltbot/moltbot/blob/f2849c2417/src/auto-reply/reply/bash-command.ts#L5](https://github.com/moltbot/moltbot/blob/f2849c2417/src/auto-reply/reply/bash-command.ts#L5) | Import statement pulling the vulnerable `killProcessTree` from `shell-utils.ts` instead of the patched `kill-tree.ts`. |\n| [https://github.com/moltbot/moltbot/blob/f2849c2417/src/auto-reply/reply/bash-command.ts#L300-L304](https://github.com/moltbot/moltbot/blob/f2849c2417/src/auto-reply/reply/bash-command.ts#L300-L304) | The `!stop` handler calling the vulnerable `killProcessTree(pid)`. |\n| [https://github.com/moltbot/moltbot/blob/f2849c2417/src/process/kill-tree.ts#L46-L78](https://github.com/moltbot/moltbot/blob/f2849c2417/src/process/kill-tree.ts#L46-L78) | The **patched** `killProcessTreeUnix` with graceful `SIGTERM` \u2192 grace period \u2192 `SIGKILL` sequence (for reference). |",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-3298-56p6-rpw2",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-3298-56p6-rpw2",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-3298-56p6-rpw2",
+      "https://github.com/advisories/GHSA-jfv4-h8mc-jcp8",
+      "https://github.com/advisories/GHSA-3298-56p6-rpw2"
+    ],
+    "published_at": "2026-03-30T18:30:01Z",
+    "updated_at": "2026-03-30T18:30:02Z",
+    "github_reviewed_at": "2026-03-30T18:30:01Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.3.24",
+        "first_patched_version": "2026.3.24",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+        "score": 6.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-404",
+        "name": "Improper Resource Shutdown or Release"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "YLChen-007",
+          "id": 30854794,
+          "node_id": "MDQ6VXNlcjMwODU0Nzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/30854794?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/YLChen-007",
+          "html_url": "https://github.com/YLChen-007",
+          "followers_url": "https://api.github.com/users/YLChen-007/followers",
+          "following_url": "https://api.github.com/users/YLChen-007/following{/other_user}",
+          "gists_url": "https://api.github.com/users/YLChen-007/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/YLChen-007/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/YLChen-007/subscriptions",
+          "organizations_url": "https://api.github.com/users/YLChen-007/orgs",
+          "repos_url": "https://api.github.com/users/YLChen-007/repos",
+          "events_url": "https://api.github.com/users/YLChen-007/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/YLChen-007/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:H",
+      "score": 6.1
+    }
+  },
+  {
     "ghsa_id": "GHSA-4hmj-39m8-jwc7",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-4hmj-39m8-jwc7",
@@ -6906,791 +7643,6 @@
     }
   },
   {
-    "ghsa_id": "GHSA-63f5-hhc7-cx6p",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-63f5-hhc7-cx6p",
-    "html_url": "https://github.com/advisories/GHSA-63f5-hhc7-cx6p",
-    "summary": "OpenClaw bootstrap setup codes could be replayed to escalate pending pairing scopes before approval",
-    "description": "### Summary\n`openclaw` versions `<= 2026.3.12` allowed bootstrap setup codes to be replayed before approval, which could widen the scopes on a pending device pairing request.\n\n### Affected Packages / Versions\n- Package: `openclaw` (`npm`)\n- Affected versions: `<= 2026.3.12`\n- Fixed version: `2026.3.13`\n\n### Details\nThe vulnerable path was bootstrap token verification in `src/infra/device-bootstrap.ts`. In affected releases, a valid bootstrap setup code could be verified more than once before the pairing request was approved. That allowed a second verification attempt to mutate a pending device pairing and request broader scopes, including escalation from a lower operator scope to `operator.admin`, before an approver finalized the pairing.\n\nThis issue is in scope under OpenClaw's trust model because bootstrap setup codes are an authentication primitive for device pairing and the replay changed the privileges granted to the pending device.\n\n### Fix\n`openclaw@2026.3.13` makes bootstrap setup codes single-use. Current code consumes the bootstrap token record on the first successful verification, so replay attempts fail before pending scopes can be widened.\n\nRegression coverage exists in `src/infra/device-pairing.test.ts` (`rejects bootstrap token replay before pending scope escalation can be approved`).\n\n### Fix Commit(s)\n- `1803d16d5cec970c54b0e1ac46b31b1cbade335c`\n\nThanks @tdjackey for reporting.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-63f5-hhc7-cx6p",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-63f5-hhc7-cx6p",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p",
-      "https://github.com/openclaw/openclaw/commit/1803d16d5cec970c54b0e1ac46b31b1cbade335c",
-      "https://github.com/advisories/GHSA-63f5-hhc7-cx6p"
-    ],
-    "published_at": "2026-03-16T20:40:23Z",
-    "updated_at": "2026-03-16T20:40:26Z",
-    "github_reviewed_at": "2026-03-16T20:40:23Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.12",
-        "first_patched_version": "2026.3.13",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 8.6
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-269",
-        "name": "Improper Privilege Management"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-xwcj-hwhf-h378",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-xwcj-hwhf-h378",
-    "html_url": "https://github.com/advisories/GHSA-xwcj-hwhf-h378",
-    "summary": "OpenClaw Telegram media fetch errors exposed bot tokens in logged file URLs",
-    "description": "### Summary\n`openclaw` versions `<= 2026.3.12` could include raw Telegram bot tokens in media fetch error strings when inbound Telegram media downloads failed.\n\n### Affected Packages / Versions\n- Package: `openclaw` (`npm`)\n- Affected versions: `<= 2026.3.12`\n- Fixed version: `2026.3.13`\n\n### Details\nThe vulnerable path was `fetchRemoteMedia()` in `src/media/fetch.ts`. In affected releases, fetch and HTTP error paths embedded the original Telegram file URL into `MediaFetchError` messages. For Telegram media, those URLs can include `/file/bot<TOKEN>/...`, so the resulting error strings could leak bot tokens into logs, console output, or any downstream error surface that rendered the exception text.\n\nThis issue is in scope under OpenClaw's trust model because the leaked secret is an OpenClaw-operated integration credential, not a user-supplied third-party secret.\n\n### Fix\n`openclaw@2026.3.13` redacts sensitive media URLs before constructing fetch error messages. Current code routes the source URL and follow-on error paths through `redactMediaUrl()` / `redactSensitiveText()`, so Telegram bot tokens are no longer emitted in those error strings.\n\nRegression coverage exists in `src/media/fetch.test.ts` (`redacts Telegram bot tokens from fetch failure messages` and `redacts Telegram bot tokens from HTTP error messages`).\n\n### Fix Commit(s)\n- `7a53eb7ea8295b08be137e231c9a98c1a79b5cd5`\n\nThanks @space08 for reporting.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-xwcj-hwhf-h378",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-xwcj-hwhf-h378",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xwcj-hwhf-h378",
-      "https://github.com/openclaw/openclaw/commit/7a53eb7ea8295b08be137e231c9a98c1a79b5cd5",
-      "https://github.com/advisories/GHSA-xwcj-hwhf-h378"
-    ],
-    "published_at": "2026-03-16T20:40:13Z",
-    "updated_at": "2026-03-16T20:40:14Z",
-    "github_reviewed_at": "2026-03-16T20:40:13Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.12",
-        "first_patched_version": "2026.3.13",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-532",
-        "name": "Insertion of Sensitive Information into Log File"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "space08",
-          "id": 21030542,
-          "node_id": "MDQ6VXNlcjIxMDMwNTQy",
-          "avatar_url": "https://avatars.githubusercontent.com/u/21030542?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/space08",
-          "html_url": "https://github.com/space08",
-          "followers_url": "https://api.github.com/users/space08/followers",
-          "following_url": "https://api.github.com/users/space08/following{/other_user}",
-          "gists_url": "https://api.github.com/users/space08/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/space08/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/space08/subscriptions",
-          "organizations_url": "https://api.github.com/users/space08/orgs",
-          "repos_url": "https://api.github.com/users/space08/repos",
-          "events_url": "https://api.github.com/users/space08/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/space08/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-5m9r-p9g7-679c",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-5m9r-p9g7-679c",
-    "html_url": "https://github.com/advisories/GHSA-5m9r-p9g7-679c",
-    "summary": "OpenClaw: Zalo webhook rate limiting could be bypassed before secret validation",
-    "description": "### Summary\n\nThe Zalo webhook handler applied request rate limiting only after webhook authentication succeeded. Requests with an invalid secret returned `401` but did not count against the rate limiter, allowing repeated secret guesses without triggering `429`.\n\n### Impact\n\nThis made brute-force guessing materially easier for weak but policy-compliant webhook secrets. Once the secret was guessed, an attacker could submit forged Zalo webhook traffic.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Rate limiting now applies before successful authentication is required, closing the pre-auth brute-force gap. Users should update to `2026.3.12` or later and prefer strong webhook secrets.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-5m9r-p9g7-679c",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-5m9r-p9g7-679c",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-5m9r-p9g7-679c",
-      "https://github.com/openclaw/openclaw/pull/44173",
-      "https://github.com/openclaw/openclaw/commit/f96ba87f033a14183fa0ede912df3a592eef55ff",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.12",
-      "https://github.com/advisories/GHSA-5m9r-p9g7-679c"
-    ],
-    "published_at": "2026-03-13T20:55:38Z",
-    "updated_at": "2026-03-13T20:55:40Z",
-    "github_reviewed_at": "2026-03-13T20:55:38Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.11",
-        "first_patched_version": "2026.3.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-307",
-        "name": "Improper Restriction of Excessive Authentication Attempts"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-g353-mgv3-8pcj",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-g353-mgv3-8pcj",
-    "html_url": "https://github.com/advisories/GHSA-g353-mgv3-8pcj",
-    "summary": "OpenClaw: Feishu webhook mode accepted forged events when only `verificationToken` was configured",
-    "description": "### Summary\n\nFeishu webhook mode allowed deployments that configured only `verificationToken` without `encryptKey`. In that state, forged inbound events could be accepted because the weaker configuration did not provide the required cryptographic verification boundary.\n\n### Impact\n\nAn unauthenticated network attacker who could reach the webhook endpoint could inject forged Feishu events, impersonate senders, and potentially trigger downstream tool execution subject to the local agent policy.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Feishu webhook mode now fails closed unless `encryptKey` is configured, and the webhook transport rejects missing or invalid signatures before dispatch. Update to `2026.3.12` or later and configure `encryptKey` for webhook deployments.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-g353-mgv3-8pcj",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-g353-mgv3-8pcj",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-g353-mgv3-8pcj",
-      "https://github.com/openclaw/openclaw/pull/44087",
-      "https://github.com/openclaw/openclaw/commit/7844bc89a1612800810617c823eb0c76ef945804",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.12",
-      "https://github.com/advisories/GHSA-g353-mgv3-8pcj"
-    ],
-    "published_at": "2026-03-13T20:55:34Z",
-    "updated_at": "2026-03-13T20:55:35Z",
-    "github_reviewed_at": "2026-03-13T20:55:34Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.11",
-        "first_patched_version": "2026.3.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-        "score": 8.6
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-347",
-        "name": "Improper Verification of Cryptographic Signature"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "lintsinghua",
-          "id": 129816813,
-          "node_id": "U_kgDOB7zY7Q",
-          "avatar_url": "https://avatars.githubusercontent.com/u/129816813?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/lintsinghua",
-          "html_url": "https://github.com/lintsinghua",
-          "followers_url": "https://api.github.com/users/lintsinghua/followers",
-          "following_url": "https://api.github.com/users/lintsinghua/following{/other_user}",
-          "gists_url": "https://api.github.com/users/lintsinghua/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/lintsinghua/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/lintsinghua/subscriptions",
-          "organizations_url": "https://api.github.com/users/lintsinghua/orgs",
-          "repos_url": "https://api.github.com/users/lintsinghua/repos",
-          "events_url": "https://api.github.com/users/lintsinghua/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/lintsinghua/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:H/A:L",
-      "score": 8.6
-    }
-  },
-  {
-    "ghsa_id": "GHSA-2rqg-gjgv-84jm",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-2rqg-gjgv-84jm",
-    "html_url": "https://github.com/advisories/GHSA-2rqg-gjgv-84jm",
-    "summary": "OpenClaw: Gateway `agent` calls could override the workspace boundary",
-    "description": "### Summary\n\nThe public gateway `agent` RPC allowed an authenticated operator with `operator.write` to supply attacker-controlled `spawnedBy` and `workspaceDir` values. That let the caller re-root the agent run outside its configured workspace boundary.\n\n### Impact\n\nA non-owner operator could escape the intended workspace boundary and run normal file and exec tools from an arbitrary process-accessible directory.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.8`\n\n### Patch\n\nFixed in `openclaw` `2026.3.11` and included in later releases such as `2026.3.12`. The gateway now enforces the configured workspace boundary for agent runs regardless of caller-supplied overrides.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-2rqg-gjgv-84jm",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-2rqg-gjgv-84jm",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-2rqg-gjgv-84jm",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.11",
-      "https://github.com/advisories/GHSA-2rqg-gjgv-84jm"
-    ],
-    "published_at": "2026-03-13T20:55:30Z",
-    "updated_at": "2026-03-13T20:55:30Z",
-    "github_reviewed_at": "2026-03-13T20:55:30Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.8",
-        "first_patched_version": "2026.3.11",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-        "score": 8.8
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-668",
-        "name": "Exposure of Resource to Wrong Sphere"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "score": 8.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
-    "cve_id": "CVE-2026-22172",
-    "url": "https://api.github.com/advisories/GHSA-rqpp-rjj8-7wv8",
-    "html_url": "https://github.com/advisories/GHSA-rqpp-rjj8-7wv8",
-    "summary": "OpenClaw: WebSocket shared-auth connections could self-declare elevated scopes",
-    "description": "### Summary\n\nA logic flaw in the OpenClaw gateway WebSocket connect path allowed certain device-less shared-token or password-authenticated backend connections to keep client-declared scopes without server-side binding. A shared-authenticated client could present elevated scopes such as `operator.admin` even though those scopes were not tied to a device identity or an explicitly trusted Control UI path.\n\n### Impact\n\nThis crossed the intended authorization boundary and could let a shared-secret-authenticated backend client perform admin-only gateway operations.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. The gateway now clears unbound scopes for non-Control-UI shared-auth connections, and regression tests cover the device-less shared-auth path.",
-    "type": "reviewed",
-    "severity": "critical",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-rqpp-rjj8-7wv8",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-rqpp-rjj8-7wv8",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-22172",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rqpp-rjj8-7wv8",
-      "https://github.com/openclaw/openclaw/pull/44306",
-      "https://github.com/openclaw/openclaw/commit/5e389d5e7c9233ec91026ab2fea299ebaf3249f6",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.12",
-      "https://github.com/advisories/GHSA-rqpp-rjj8-7wv8"
-    ],
-    "published_at": "2026-03-13T20:55:24Z",
-    "updated_at": "2026-03-20T21:04:19Z",
-    "github_reviewed_at": "2026-03-13T20:55:24Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.11",
-        "first_patched_version": "2026.3.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-        "score": 10.0
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-269",
-        "name": "Improper Privilege Management"
-      },
-      {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "LUOYEcode",
-          "id": 93875149,
-          "node_id": "U_kgDOBZhrzQ",
-          "avatar_url": "https://avatars.githubusercontent.com/u/93875149?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/LUOYEcode",
-          "html_url": "https://github.com/LUOYEcode",
-          "followers_url": "https://api.github.com/users/LUOYEcode/followers",
-          "following_url": "https://api.github.com/users/LUOYEcode/following{/other_user}",
-          "gists_url": "https://api.github.com/users/LUOYEcode/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/LUOYEcode/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/LUOYEcode/subscriptions",
-          "organizations_url": "https://api.github.com/users/LUOYEcode/orgs",
-          "repos_url": "https://api.github.com/users/LUOYEcode/repos",
-          "events_url": "https://api.github.com/users/LUOYEcode/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/LUOYEcode/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
-      "score": 10.0
-    },
-    "epss": {
-      "percentage": 0.00015,
-      "percentile": 0.03318
-    }
-  },
-  {
-    "ghsa_id": "GHSA-wcxr-59v9-rxr8",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-wcxr-59v9-rxr8",
-    "html_url": "https://github.com/advisories/GHSA-wcxr-59v9-rxr8",
-    "summary": "`OpenClaw: session_status` let sandboxed subagents access parent or sibling session state",
-    "description": "### Summary\n\nThe built-in `session_status` tool did not enforce the intended session-visibility boundary. A sandboxed subagent could supply another session's `sessionKey` and inspect or modify state outside its own sandbox scope.\n\n### Impact\n\nThis allowed a sandboxed child session to read parent or sibling session data and, in affected releases, update the target session's persisted model override.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.8`\n\n### Patch\n\nFixed in `openclaw` `2026.3.11` and included in later releases such as `2026.3.12`. Session visibility checks now enforce the sandbox boundary before reading or mutating session state.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-wcxr-59v9-rxr8",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-wcxr-59v9-rxr8",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-wcxr-59v9-rxr8",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.11",
-      "https://github.com/advisories/GHSA-wcxr-59v9-rxr8"
-    ],
-    "published_at": "2026-03-13T20:55:19Z",
-    "updated_at": "2026-03-13T20:55:20Z",
-    "github_reviewed_at": "2026-03-13T20:55:19Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.8",
-        "first_patched_version": "2026.3.11",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-        "score": 8.4
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
-      "score": 8.4
-    }
-  },
-  {
-    "ghsa_id": "GHSA-99qw-6mr3-36qr",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-99qw-6mr3-36qr",
-    "html_url": "https://github.com/advisories/GHSA-99qw-6mr3-36qr",
-    "summary": "OpenClaw: Workspace plugin auto-discovery allowed code execution from cloned repositories",
-    "description": "### Summary\n\nOpenClaw automatically discovered and loaded plugins from `.openclaw/extensions/` inside the current workspace without an explicit trust or install step. A malicious repository could include a crafted workspace plugin that executed as soon as a user ran OpenClaw from that cloned directory.\n\n### Impact\n\nOpening or running OpenClaw in an untrusted repository could lead to arbitrary code execution under the user's account.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Workspace plugin loading now requires explicit trusted state before execution. Users should update to `2026.3.12` or later and avoid running OpenClaw inside untrusted repositories on older releases.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-99qw-6mr3-36qr",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-99qw-6mr3-36qr",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-99qw-6mr3-36qr",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.12",
-      "https://github.com/advisories/GHSA-99qw-6mr3-36qr"
-    ],
-    "published_at": "2026-03-13T20:55:13Z",
-    "updated_at": "2026-03-13T20:55:15Z",
-    "github_reviewed_at": "2026-03-13T20:55:13Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.11",
-        "first_patched_version": "2026.3.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 8.5
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-829",
-        "name": "Inclusion of Functionality from Untrusted Control Sphere"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "lintsinghua",
-          "id": 129816813,
-          "node_id": "U_kgDOB7zY7Q",
-          "avatar_url": "https://avatars.githubusercontent.com/u/129816813?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/lintsinghua",
-          "html_url": "https://github.com/lintsinghua",
-          "followers_url": "https://api.github.com/users/lintsinghua/followers",
-          "following_url": "https://api.github.com/users/lintsinghua/following{/other_user}",
-          "gists_url": "https://api.github.com/users/lintsinghua/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/lintsinghua/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/lintsinghua/subscriptions",
-          "organizations_url": "https://api.github.com/users/lintsinghua/orgs",
-          "repos_url": "https://api.github.com/users/lintsinghua/repos",
-          "events_url": "https://api.github.com/users/lintsinghua/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/lintsinghua/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-r7vr-gr74-94p8",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-r7vr-gr74-94p8",
-    "html_url": "https://github.com/advisories/GHSA-r7vr-gr74-94p8",
-    "summary": "OpenClaw: Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
-    "description": "### Summary\n\nOpenClaw documented `/config` and `/debug` as owner-only commands, but the command handlers checked only whether the sender was command-authorized. A lower-trust sender who was intentionally allowed to run commands could still reach privileged configuration and debugging surfaces.\n\n### Impact\n\nThis allowed a non-owner sender to read or change privileged configuration that should have remained restricted to owners.\n\n### Affected versions\n\n`openclaw` `<= 2026.3.11`\n\n### Patch\n\nFixed in `openclaw` `2026.3.12`. Owner checks are now enforced for privileged command surfaces, and regression tests cover `/config` and `/debug` access control.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-r7vr-gr74-94p8",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-r7vr-gr74-94p8",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8",
-      "https://github.com/openclaw/openclaw/pull/44305",
-      "https://github.com/openclaw/openclaw/commit/08aa57a3de37d337b226ae861f573779f112ff2e",
-      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.12",
-      "https://github.com/advisories/GHSA-r7vr-gr74-94p8"
-    ],
-    "published_at": "2026-03-13T20:55:09Z",
-    "updated_at": "2026-03-13T20:55:11Z",
-    "github_reviewed_at": "2026-03-13T20:55:09Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.11",
-        "first_patched_version": "2026.3.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-        "score": 8.8
-      },
-      "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-285",
-        "name": "Improper Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "score": 8.8
-    }
-  },
-  {
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
     "cve_id": "CVE-2026-28480",
     "url": "https://api.github.com/advisories/GHSA-mj5r-hh7j-4gxf",
@@ -8221,7 +8173,7 @@
     },
     "epss": {
       "percentage": 0.00158,
-      "percentile": 0.36535
+      "percentile": 0.36499
     }
   },
   {
@@ -9084,8 +9036,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.00055,
-      "percentile": 0.16982
+      "percentage": 0.00073,
+      "percentile": 0.2199
     }
   }
 ]
