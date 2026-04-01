@@ -1,289 +1,373 @@
 [
   {
-    "ghsa_id": "GHSA-4jpw-hj22-2xmc",
+    "ghsa_id": "GHSA-9p3r-hh9g-5cmg",
     "severity": "CRITICAL",
-    "title": "Pairing-scoped device tokens could mint `operator.admin` and reach node RCE",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4jpw-hj22-2xmc"
+    "title": "Sandbox escape via TOCTOU race in remote FS bridge readFile",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9p3r-hh9g-5cmg"
   },
   {
-    "ghsa_id": "GHSA-8rh7-6779-cjqq",
-    "severity": "CRITICAL",
-    "title": "CWD `.env` environment variable injection bypasses host-env policy and allows config takeover",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8rh7-6779-cjqq"
-  },
-  {
-    "ghsa_id": "GHSA-hc5h-pmr3-3497",
-    "severity": "CRITICAL",
-    "title": "/pair approve command path omitted caller scope subsetting and reopened device pairing escalation",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hc5h-pmr3-3497"
-  },
-  {
-    "ghsa_id": "GHSA-j7p2-qcwm-94v4",
-    "severity": "CRITICAL",
-    "title": "Incomplete host env sanitization blocklist allows supply-chain redirection via package-manager env overrides",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j7p2-qcwm-94v4"
-  },
-  {
-    "ghsa_id": "GHSA-rqpp-rjj8-7wv8",
-    "severity": "CRITICAL",
-    "title": "WebSocket shared-auth connections could self-declare elevated scopes",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rqpp-rjj8-7wv8"
-  },
-  {
-    "ghsa_id": "GHSA-2pr2-hcv6-7gwv",
+    "ghsa_id": "GHSA-3qpv-xf3v-mm45",
     "severity": "HIGH",
-    "title": "Device removal and token revocation do not terminate active WebSocket sessions",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2pr2-hcv6-7gwv"
+    "title": "Workspace `.env` can override the bundled hooks root and load attacker hook code",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3qpv-xf3v-mm45"
   },
   {
-    "ghsa_id": "GHSA-2x4x-cc5g-qmmg",
+    "ghsa_id": "GHSA-7ggg-pvrf-458v",
     "severity": "HIGH",
-    "title": "node.pair.approve missing callerScopes validation allows low-privilege operator to approve malicious nodes",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2x4x-cc5g-qmmg"
+    "title": "`PIP_INDEX_URL` and `UV_INDEX_URL` bypass host exec env sanitization and redirect Python package-index traffic",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7ggg-pvrf-458v"
   },
   {
-    "ghsa_id": "GHSA-3cw3-5vxw-g2h3",
+    "ghsa_id": "GHSA-cwf8-44x6-32c2",
     "severity": "HIGH",
-    "title": "CLI Remote Onboarding Persists Unauthenticated Discovery Endpoint and Exfiltrates Gateway Credentials",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3cw3-5vxw-g2h3"
+    "title": "OpenShell Mirror Sync: Sandbox Escape via Unrestricted File Sync + Symlink Traversal",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwf8-44x6-32c2"
   },
   {
-    "ghsa_id": "GHSA-5r8f-96gm-5j6g",
+    "ghsa_id": "GHSA-f6pf-4gjx-c94r",
     "severity": "HIGH",
-    "title": "Gateway `operator.write` can reach admin-only session reset via `chat.send` `/reset`",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5r8f-96gm-5j6g"
+    "title": "OpenClaw <= 2026.3.23 Media Parsing Path Traversal to Arbitrary File Read",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f6pf-4gjx-c94r"
   },
   {
-    "ghsa_id": "GHSA-5wcw-8jjv-m286",
+    "ghsa_id": "GHSA-fv94-qvg8-xqpw",
     "severity": "HIGH",
-    "title": "Browser-originated WebSocket connections could bypass origin validation in trusted-proxy mode",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5wcw-8jjv-m286"
+    "title": "SSH sandbox tar upload follows symlinks, enabling arbitrary file write on remote host",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fv94-qvg8-xqpw"
   },
   {
-    "ghsa_id": "GHSA-63f5-hhc7-cx6p",
+    "ghsa_id": "GHSA-g374-mggx-p6xc",
     "severity": "HIGH",
-    "title": "Bootstrap setup codes could be replayed to escalate pending pairing scopes before approval",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-63f5-hhc7-cx6p"
+    "title": "Incomplete scope-clearing fix allows operator.admin escalation via trusted-proxy auth mode",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g374-mggx-p6xc"
   },
   {
-    "ghsa_id": "GHSA-6pfc-6m7w-m8fx",
+    "ghsa_id": "GHSA-g5cg-8x5w-7jpm",
     "severity": "HIGH",
-    "title": "Gateway exec allowlist allow-always bypass via unregistered /usr/bin/script wrapper",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6pfc-6m7w-m8fx"
+    "title": "Heartbeat context inheritance bypasses sandbox via senderIsOwner escalation",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g5cg-8x5w-7jpm"
   },
   {
-    "ghsa_id": "GHSA-6xg4-82hv-cp6f",
+    "ghsa_id": "GHSA-gjm7-hw8f-73rq",
     "severity": "HIGH",
-    "title": "Gateway chat.send ACP-only provenance guard could be bypassed by client identity spoofing",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6xg4-82hv-cp6f"
+    "title": "Paired node escalates to gateway RCE via unrestricted node.event agent dispatch",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gjm7-hw8f-73rq"
   },
   {
-    "ghsa_id": "GHSA-8689-gm9g-jgr6",
+    "ghsa_id": "GHSA-qcj9-wwgw-6gm8",
     "severity": "HIGH",
-    "title": "Voice-call Plivo V3 webhook replay key uses unsorted URL, allowing replay via query-parameter reordering",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8689-gm9g-jgr6"
+    "title": "Workspace `.env` can override the bundled plugin trust root",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qcj9-wwgw-6gm8"
   },
   {
-    "ghsa_id": "GHSA-98hh-7ghg-x6rq",
+    "ghsa_id": "GHSA-v3qc-wrwx-j3pw",
     "severity": "HIGH",
-    "title": "Discord text `/approve` bypasses `channels.discord.execApprovals.approvers` and allows non-approvers to resolve pending exec approvals",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-98hh-7ghg-x6rq"
+    "title": "Agentic Consent Bypass: LLM Agent Can Silently Disable Exec Approval via `config.patch`",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v3qc-wrwx-j3pw"
   },
   {
-    "ghsa_id": "GHSA-99qw-6mr3-36qr",
+    "ghsa_id": "GHSA-vfw7-6rhc-6xxg",
     "severity": "HIGH",
-    "title": "Workspace plugin auto-discovery allowed code execution from cloned repositories",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-99qw-6mr3-36qr"
+    "title": "Incomplete Fix for CVE-2026-4039: CLI Backend Environment Variable Injection via Workspace Config",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vfw7-6rhc-6xxg"
   },
   {
-    "ghsa_id": "GHSA-f44p-c7w9-7xr7",
+    "ghsa_id": "GHSA-xj9w-5r6q-x6v4",
     "severity": "HIGH",
-    "title": "OpenClaw Gateway WebSocket denial of service via unbounded pre-auth upgrades",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f44p-c7w9-7xr7"
+    "title": "Device-Paired Node Skips Node Scope Gate \u2192 Host RCE.md",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xj9w-5r6q-x6v4"
   },
   {
-    "ghsa_id": "GHSA-g353-mgv3-8pcj",
-    "severity": "HIGH",
-    "title": "Feishu webhook mode accepted forged events when only `verificationToken` was configured",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g353-mgv3-8pcj"
-  },
-  {
-    "ghsa_id": "GHSA-jccr-rrw2-vc8h",
-    "severity": "HIGH",
-    "title": "OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jccr-rrw2-vc8h"
-  },
-  {
-    "ghsa_id": "GHSA-p4x4-2r7f-wjxg",
-    "severity": "HIGH",
-    "title": "Gateway exec allow-always over-trusts positional carrier executables",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p4x4-2r7f-wjxg"
-  },
-  {
-    "ghsa_id": "GHSA-qc36-x95h-7j53",
-    "severity": "HIGH",
-    "title": "Unrecognized script runners could bypass `system.run` approval integrity",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qc36-x95h-7j53"
-  },
-  {
-    "ghsa_id": "GHSA-qxgf-hmcj-3xw3",
-    "severity": "HIGH",
-    "title": "SSRF via unguarded image download in fal provider",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qxgf-hmcj-3xw3"
-  },
-  {
-    "ghsa_id": "GHSA-r7vr-gr74-94p8",
-    "severity": "HIGH",
-    "title": "Command-authorized non-owners could reach owner-only `/config` and `/debug` surfaces",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r7vr-gr74-94p8"
-  },
-  {
-    "ghsa_id": "GHSA-v8wv-jg3q-qwpq",
-    "severity": "HIGH",
-    "title": "message tool media parameter bypasses tool policy filesystem isolation",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8wv-jg3q-qwpq"
-  },
-  {
-    "ghsa_id": "GHSA-vmhq-cqm9-6p7q",
-    "severity": "HIGH",
-    "title": "`browser.request` let `operator.write` persist admin-only browser profile changes",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vmhq-cqm9-6p7q"
-  },
-  {
-    "ghsa_id": "GHSA-5h2w-qmfp-ggp6",
+    "ghsa_id": "GHSA-2w79-r9g8-wmcr",
     "severity": "MEDIUM",
-    "title": "Gateway `operator.write` can reach admin-only persisted `verboseLevel` via `chat.send` `/verbose`",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5h2w-qmfp-ggp6"
+    "title": "Incomplete fix for CVE-2026-32062: voice-call still parses large WebSocket frames before start validation",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2w79-r9g8-wmcr"
   },
   {
-    "ghsa_id": "GHSA-5m9r-p9g7-679c",
+    "ghsa_id": "GHSA-57gh-m6rq-54cf",
     "severity": "MEDIUM",
-    "title": "Zalo webhook rate limiting could be bypassed before secret validation",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5m9r-p9g7-679c"
+    "title": "Media Local Roots Self-Whitelisting in <code>appendLocalMediaParentRoots</code> Allows Model-Initiated Arbitrary Host File Read and Credential Exfiltration",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-57gh-m6rq-54cf"
   },
   {
-    "ghsa_id": "GHSA-63mg-xp9j-jfcm",
+    "ghsa_id": "GHSA-58q2-7r52-jq62",
     "severity": "MEDIUM",
-    "title": "Google Chat and Zalouser group sender allowlist bypass via policy downgrade",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-63mg-xp9j-jfcm"
+    "title": "Path traversal via inbound channel attachment path in ACP dispatch allows arbitrary file read",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-58q2-7r52-jq62"
   },
   {
-    "ghsa_id": "GHSA-7h7g-x2px-94hj",
+    "ghsa_id": "GHSA-68v4-hmwv-f43h",
     "severity": "MEDIUM",
-    "title": "Pairing setup codes exposed long-lived shared gateway credentials instead of short-lived bootstrap tokens",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7h7g-x2px-94hj"
+    "title": "Media download follows cross-origin redirects with Authorization headers intact",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-68v4-hmwv-f43h"
   },
   {
-    "ghsa_id": "GHSA-9528-x887-j2fp",
+    "ghsa_id": "GHSA-877v-w3f5-3pcq",
     "severity": "MEDIUM",
-    "title": "Nextcloud Talk webhook missing rate limiting on shared secret authentication",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9528-x887-j2fp"
+    "title": "Feishu thread history and quoted messages bypass sender allowlist",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-877v-w3f5-3pcq"
   },
   {
-    "ghsa_id": "GHSA-9vvh-2768-c8vp",
+    "ghsa_id": "GHSA-9f4w-67g7-mqwv",
     "severity": "MEDIUM",
-    "title": "Discord guild reaction ingress could bypass users and roles allowlists",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9vvh-2768-c8vp"
+    "title": "Remote onboarding preserves attacker-discovered endpoint after trust decline, routing gateway credentials to it",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9f4w-67g7-mqwv"
   },
   {
-    "ghsa_id": "GHSA-f5mf-3r52-r83w",
+    "ghsa_id": "GHSA-9gp8-hjxr-6f34",
     "severity": "MEDIUM",
-    "title": "Zalouser allowlist authorization matched mutable group names by default",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f5mf-3r52-r83w"
+    "title": "Host exec environment overrides miss proxy, TLS, Docker, and Git TLS controls",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9gp8-hjxr-6f34"
   },
   {
-    "ghsa_id": "GHSA-f8r2-vg7x-gh8m",
+    "ghsa_id": "GHSA-9q7v-8mr7-g23p",
     "severity": "MEDIUM",
-    "title": "Exec approval allowlist patterns overmatched on POSIX paths",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f8r2-vg7x-gh8m"
+    "title": "SSRF via Unguarded `fetch()` in Marketplace Plugin Download and Ollama Model Discovery",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9q7v-8mr7-g23p"
   },
   {
-    "ghsa_id": "GHSA-jp4j-q5fc-58gv",
+    "ghsa_id": "GHSA-cg7q-fg22-4g98",
     "severity": "MEDIUM",
-    "title": "Discord component interaction ingress skips guild/channel policy enforcement",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jp4j-q5fc-58gv"
+    "title": "Host exec environment sanitization misses package, registry, Docker, compiler, and TLS override variables",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cg7q-fg22-4g98"
   },
   {
-    "ghsa_id": "GHSA-m69h-jm2f-2pv8",
+    "ghsa_id": "GHSA-chfm-xgc4-47rj",
     "severity": "MEDIUM",
-    "title": "Feishu reaction events could bypass group authorization and mention gating",
-    "published": "2026-03-13",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m69h-jm2f-2pv8"
+    "title": "MSTeams thread history bypasses sender allowlist via Graph API",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-chfm-xgc4-47rj"
   },
   {
-    "ghsa_id": "GHSA-m866-6qv5-p2fg",
+    "ghsa_id": "GHSA-cqgw-44wg-44rf",
     "severity": "MEDIUM",
-    "title": "OpenClaw host-env blocklist missing `GIT_TEMPLATE_DIR` and `AWS_CONFIG_FILE` allows code execution via env override",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m866-6qv5-p2fg"
+    "title": "Discord voice manager bypasses channel-level member access allowlist",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cqgw-44wg-44rf"
   },
   {
-    "ghsa_id": "GHSA-qf48-qfv4-jjm9",
+    "ghsa_id": "GHSA-g8xp-qx39-9jq9",
     "severity": "MEDIUM",
-    "title": "Feishu extension resolveUploadInput bypasses file-system sandbox and allows arbitrary file reads via upload_image",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qf48-qfv4-jjm9"
+    "title": "Incomplete `host-env-security-policy.json` allows untrusted model to substitute compiler binaries (`CC`, `CXX`, `CARGO_BUILD_RUSTC`, `CMAKE_C_COMPILER`) via env overrides on approved host exec requests",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g8xp-qx39-9jq9"
   },
   {
-    "ghsa_id": "GHSA-v2v2-f783-358j",
+    "ghsa_id": "GHSA-h2v7-xc88-xx8c",
     "severity": "MEDIUM",
-    "title": "Zalo channel downloads media before sender authorization",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v2v2-f783-358j"
+    "title": "`/phone arm`/`/phone disarm` Bypasses `operator.admin` Scope Check for External Channels",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h2v7-xc88-xx8c"
   },
   {
-    "ghsa_id": "GHSA-xvx8-77m6-gwg6",
+    "ghsa_id": "GHSA-hhff-fj5f-qg48",
     "severity": "MEDIUM",
-    "title": "Sandbox `writeFile` commit could race outside the validated path",
-    "published": "2026-03-12",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xvx8-77m6-gwg6"
+    "title": "Discord audio preflight transcription before member authorization",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hhff-fj5f-qg48"
   },
   {
-    "ghsa_id": "GHSA-xwcj-hwhf-h378",
+    "ghsa_id": "GHSA-jjw7-3vjf-fg5j",
     "severity": "MEDIUM",
-    "title": "Telegram media fetch errors exposed bot tokens in logged file URLs",
-    "published": "2026-03-14",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xwcj-hwhf-h378"
+    "title": "OpenClaw Nostr privateKey config redaction bypass leaks plaintext signing key via config.get",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jjw7-3vjf-fg5j"
   },
   {
-    "ghsa_id": "GHSA-g86v-f9qv-rh6m",
+    "ghsa_id": "GHSA-m6fx-m8hc-572m",
+    "severity": "MEDIUM",
+    "title": "Telegram audio preflight transcription enables resource consumption by unauthorized senders",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m6fx-m8hc-572m"
+  },
+  {
+    "ghsa_id": "GHSA-mhgq-xpfq-6r66",
+    "severity": "MEDIUM",
+    "title": "Unauthenticated plugin-auth HTTP routes receive operator runtime scopes",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhgq-xpfq-6r66"
+  },
+  {
+    "ghsa_id": "GHSA-mhr7-2xmv-4c4q",
+    "severity": "MEDIUM",
+    "title": "HTTP operator endpoints lack browser-origin validation in trusted-proxy mode",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhr7-2xmv-4c4q"
+  },
+  {
+    "ghsa_id": "GHSA-p464-m8x6-vhv8",
+    "severity": "MEDIUM",
+    "title": "MS Teams webhook parses body before JWT validation, enabling unauthenticated resource exhaustion",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p464-m8x6-vhv8"
+  },
+  {
+    "ghsa_id": "GHSA-q9w8-cf67-r238",
+    "severity": "MEDIUM",
+    "title": "macOS Wide-Area Discovery Accepts Arbitrary Tailnet Peer as DNS Authority and Exfiltrates Operator Credentials",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q9w8-cf67-r238"
+  },
+  {
+    "ghsa_id": "GHSA-rg8m-3943-vm6q",
+    "severity": "MEDIUM",
+    "title": "Matrix thread root and reply context bypass sender allowlist",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rg8m-3943-vm6q"
+  },
+  {
+    "ghsa_id": "GHSA-rm5c-4rmf-vvhw",
+    "severity": "MEDIUM",
+    "title": "Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rm5c-4rmf-vvhw"
+  },
+  {
+    "ghsa_id": "GHSA-vjx8-8p7h-82gr",
+    "severity": "MEDIUM",
+    "title": "Marketplace Plugin Download Follows Redirects Without SSRF Protection",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vjx8-8p7h-82gr"
+  },
+  {
+    "ghsa_id": "GHSA-w85g-3h6x-4xh2",
+    "severity": "MEDIUM",
+    "title": "Image pixel-limit guard can fail open on sips and allow decompression-bomb DoS",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w85g-3h6x-4xh2"
+  },
+  {
+    "ghsa_id": "GHSA-x2m8-53h4-6hch",
+    "severity": "MEDIUM",
+    "title": "Discord voice ingress authorization can be bypassed via channel, name, and stale-role validation gaps",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x2m8-53h4-6hch"
+  },
+  {
+    "ghsa_id": "GHSA-37v6-fxx8-xjmx",
     "severity": "LOW",
-    "title": "OpenClaw SSRF guard misses four IPv6 special-use ranges",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g86v-f9qv-rh6m"
+    "title": "Telnyx Webhook Replay Detection Bypass via Base64 Signature Re-encoding",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-37v6-fxx8-xjmx"
+  },
+  {
+    "ghsa_id": "GHSA-3pm9-5j7m-59vc",
+    "severity": "LOW",
+    "title": "Tlon Startup Migration Rehydrates Empty-Array Revocations From File Config",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pm9-5j7m-59vc"
+  },
+  {
+    "ghsa_id": "GHSA-3xv9-89fm-7h4r",
+    "severity": "LOW",
+    "title": "diffs viewer misclassifies proxied remote requests as loopback when `allowRemoteViewer` is disabled",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3xv9-89fm-7h4r"
+  },
+  {
+    "ghsa_id": "GHSA-4g5x-2jfc-xm98",
+    "severity": "LOW",
+    "title": "Tlon media downloads can bypass core safety limits and exhaust disk",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4g5x-2jfc-xm98"
+  },
+  {
+    "ghsa_id": "GHSA-6336-qqw9-v6x6",
+    "severity": "LOW",
+    "title": "Discord Component Interaction Misclassifies Group DM as Direct Message",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6336-qqw9-v6x6"
+  },
+  {
+    "ghsa_id": "GHSA-6p8r-6m93-557f",
+    "severity": "LOW",
+    "title": "Fake DeviceToken Bypasses Shared Auth Rate Limiting",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6p8r-6m93-557f"
+  },
+  {
+    "ghsa_id": "GHSA-89r3-6x4j-v7wf",
+    "severity": "LOW",
+    "title": "Voice-call Plivo replay mutates in-process callback origin before replay rejection",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-89r3-6x4j-v7wf"
+  },
+  {
+    "ghsa_id": "GHSA-cwq8-6f96-g3q4",
+    "severity": "LOW",
+    "title": "Security Scan Failure Does Not Block Plugin Installation (Fail-Open)",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwq8-6f96-g3q4"
+  },
+  {
+    "ghsa_id": "GHSA-f693-58pc-2gfr",
+    "severity": "LOW",
+    "title": "Telegram legacy allowFrom migration fans default-account trust into all named accounts",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f693-58pc-2gfr"
+  },
+  {
+    "ghsa_id": "GHSA-hhq4-97c2-p447",
+    "severity": "LOW",
+    "title": "Zalo webhook replay cache cross-target messageId scope bypass",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hhq4-97c2-p447"
+  },
+  {
+    "ghsa_id": "GHSA-hr8g-2q7x-3f4w",
+    "severity": "LOW",
+    "title": "OpenClaw Gateway Control Interface Information Disclosure Vulnerability",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hr8g-2q7x-3f4w"
+  },
+  {
+    "ghsa_id": "GHSA-j9pv-rrcj-6pfx",
+    "severity": "LOW",
+    "title": "SSH-based sandbox backends pass unsanitized process.env to child processes",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j9pv-rrcj-6pfx"
+  },
+  {
+    "ghsa_id": "GHSA-qcc3-jqwp-5vh2",
+    "severity": "LOW",
+    "title": "LINE webhook handler lacks shared pre-auth concurrency budget before signature verification",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qcc3-jqwp-5vh2"
+  },
+  {
+    "ghsa_id": "GHSA-rfqg-qgf8-xr9x",
+    "severity": "LOW",
+    "title": "Gateway `device.token.rotate` does not terminate active WebSocket sessions after credential rotation",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rfqg-qgf8-xr9x"
+  },
+  {
+    "ghsa_id": "GHSA-rvvf-6vh3-9j43",
+    "severity": "LOW",
+    "title": "Discord Slash Commands Bypass Group DM Channel Allowlist",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rvvf-6vh3-9j43"
   }
 ]
