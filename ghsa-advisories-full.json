@@ -109,7 +109,7 @@
       "https://github.com/advisories/GHSA-p4x4-2r7f-wjxg"
     ],
     "published_at": "2026-04-01T00:02:20Z",
-    "updated_at": "2026-04-01T00:02:20Z",
+    "updated_at": "2026-04-01T03:29:06Z",
     "github_reviewed_at": "2026-04-01T00:02:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -140,7 +140,32 @@
         "name": "Incorrect Authorization"
       }
     ],
-    "credits": [],
+    "credits": [
+      {
+        "user": {
+          "login": "nexrin",
+          "id": 268879349,
+          "node_id": "U_kgDOEAbF9Q",
+          "avatar_url": "https://avatars.githubusercontent.com/u/268879349?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nexrin",
+          "html_url": "https://github.com/nexrin",
+          "followers_url": "https://api.github.com/users/nexrin/followers",
+          "following_url": "https://api.github.com/users/nexrin/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nexrin/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nexrin/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nexrin/subscriptions",
+          "organizations_url": "https://api.github.com/users/nexrin/orgs",
+          "repos_url": "https://api.github.com/users/nexrin/repos",
+          "events_url": "https://api.github.com/users/nexrin/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nexrin/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "score": 7.3

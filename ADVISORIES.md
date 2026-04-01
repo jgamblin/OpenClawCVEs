@@ -3,7 +3,7 @@
 > Complete listing of all 166 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-04-01 00:48 UTC</sub>
+<sub>Last updated: 2026-04-01 06:42 UTC</sub>
 
 ---
 
@@ -141,13 +141,13 @@ These advisories are visible on the [repo security page](https://github.com/open
 | GHSA | Severity | Title | Published |
 |------|----------|-------|-----------|
 | [GHSA-9p3r-hh9g-5cmg](https://github.com/openclaw/openclaw/security/advisories/GHSA-9p3r-hh9g-5cmg) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Sandbox escape via TOCTOU race in remote FS bridge readFile | 2026-03-31 |
+| [GHSA-g5cg-8x5w-7jpm](https://github.com/openclaw/openclaw/security/advisories/GHSA-g5cg-8x5w-7jpm) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | Heartbeat context inheritance bypasses sandbox via senderIsOwner escalation | 2026-03-31 |
 | [GHSA-3qpv-xf3v-mm45](https://github.com/openclaw/openclaw/security/advisories/GHSA-3qpv-xf3v-mm45) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Workspace `.env` can override the bundled hooks root and load attacker hook code | 2026-03-31 |
 | [GHSA-7ggg-pvrf-458v](https://github.com/openclaw/openclaw/security/advisories/GHSA-7ggg-pvrf-458v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | `PIP_INDEX_URL` and `UV_INDEX_URL` bypass host exec env sanitization and redirect Python package-index traffic | 2026-03-31 |
 | [GHSA-cwf8-44x6-32c2](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwf8-44x6-32c2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenShell Mirror Sync: Sandbox Escape via Unrestricted File Sync + Symlink Traversal | 2026-03-31 |
 | [GHSA-f6pf-4gjx-c94r](https://github.com/openclaw/openclaw/security/advisories/GHSA-f6pf-4gjx-c94r) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw <= 2026.3.23 Media Parsing Path Traversal to Arbitrary File Read | 2026-03-31 |
 | [GHSA-fv94-qvg8-xqpw](https://github.com/openclaw/openclaw/security/advisories/GHSA-fv94-qvg8-xqpw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | SSH sandbox tar upload follows symlinks, enabling arbitrary file write on remote host | 2026-03-31 |
 | [GHSA-g374-mggx-p6xc](https://github.com/openclaw/openclaw/security/advisories/GHSA-g374-mggx-p6xc) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Incomplete scope-clearing fix allows operator.admin escalation via trusted-proxy auth mode | 2026-03-31 |
-| [GHSA-g5cg-8x5w-7jpm](https://github.com/openclaw/openclaw/security/advisories/GHSA-g5cg-8x5w-7jpm) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Heartbeat context inheritance bypasses sandbox via senderIsOwner escalation | 2026-03-31 |
 | [GHSA-gjm7-hw8f-73rq](https://github.com/openclaw/openclaw/security/advisories/GHSA-gjm7-hw8f-73rq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Paired node escalates to gateway RCE via unrestricted node.event agent dispatch | 2026-03-31 |
 | [GHSA-qcj9-wwgw-6gm8](https://github.com/openclaw/openclaw/security/advisories/GHSA-qcj9-wwgw-6gm8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Workspace `.env` can override the bundled plugin trust root | 2026-03-31 |
 | [GHSA-v3qc-wrwx-j3pw](https://github.com/openclaw/openclaw/security/advisories/GHSA-v3qc-wrwx-j3pw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Agentic Consent Bypass: LLM Agent Can Silently Disable Exec Approval via `config.patch` | 2026-03-31 |
