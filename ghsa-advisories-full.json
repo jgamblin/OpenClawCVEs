@@ -346,6 +346,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
+    },
+    "epss": {
+      "percentage": 8e-05,
+      "percentile": 0.00782
     }
   },
   {
@@ -527,6 +531,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
+    },
+    "epss": {
+      "percentage": 0.0001,
+      "percentile": 0.01051
     }
   },
   {
@@ -1395,6 +1403,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.2
+    },
+    "epss": {
+      "percentage": 0.00038,
+      "percentile": 0.11217
     }
   },
   {
@@ -1749,6 +1761,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
       "score": 7.5
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.0727
     }
   },
   {
@@ -1933,6 +1949,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
+    },
+    "epss": {
+      "percentage": 0.00036,
+      "percentile": 0.10425
     }
   },
   {
@@ -8712,7 +8732,7 @@
     },
     "epss": {
       "percentage": 0.00158,
-      "percentile": 0.36499
+      "percentile": 0.36504
     }
   },
   {
