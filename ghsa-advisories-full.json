@@ -1,5 +1,90 @@
 [
   {
+    "ghsa_id": "GHSA-9jpj-g8vv-j5mf",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-9jpj-g8vv-j5mf",
+    "html_url": "https://github.com/advisories/GHSA-9jpj-g8vv-j5mf",
+    "summary": "OpenClaw: Gemini OAuth exposed the PKCE verifier through the OAuth state parameter",
+    "description": "## Summary\n\nBefore OpenClaw 2026.4.2, the Gemini OAuth flow reused the PKCE verifier as the OAuth `state` value. Because the provider reflected `state` back in the redirect URL, the verifier could be exposed alongside the authorization code.\n\n## Impact\n\nAnyone who could capture the redirect URL could learn both the authorization code and the PKCE verifier, defeating PKCE's interception protection for that flow and enabling token redemption.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `<= 2026.4.1`\n- Patched versions: `>= 2026.4.2`\n- Latest published npm version: `2026.4.1`\n\n## Fix Commit(s)\n\n- `a26f4d0f3ef0757db6c6c40277cc06a5de76c52f` \u2014 separate OAuth state from the PKCE verifier\n\nOpenClaw thanks @BG0ECV for reporting.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-9jpj-g8vv-j5mf",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-9jpj-g8vv-j5mf",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-9jpj-g8vv-j5mf",
+      "https://github.com/openclaw/openclaw/commit/a26f4d0f3ef0757db6c6c40277cc06a5de76c52f",
+      "https://github.com/advisories/GHSA-9jpj-g8vv-j5mf"
+    ],
+    "published_at": "2026-04-04T06:26:55Z",
+    "updated_at": "2026-04-04T06:26:56Z",
+    "github_reviewed_at": "2026-04-04T06:26:55Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.4.1",
+        "first_patched_version": "2026.4.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:A/VC:H/VI:N/VA:N/SC:H/SI:H/SA:N",
+        "score": 7.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-345",
+        "name": "Insufficient Verification of Data Authenticity"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "BG0ECV",
+          "id": 128112125,
+          "node_id": "U_kgDOB6LV_Q",
+          "avatar_url": "https://avatars.githubusercontent.com/u/128112125?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/BG0ECV",
+          "html_url": "https://github.com/BG0ECV",
+          "followers_url": "https://api.github.com/users/BG0ECV/followers",
+          "following_url": "https://api.github.com/users/BG0ECV/following{/other_user}",
+          "gists_url": "https://api.github.com/users/BG0ECV/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/BG0ECV/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/BG0ECV/subscriptions",
+          "organizations_url": "https://api.github.com/users/BG0ECV/orgs",
+          "repos_url": "https://api.github.com/users/BG0ECV/repos",
+          "events_url": "https://api.github.com/users/BG0ECV/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/BG0ECV/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-x2m8-53h4-6hch",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-x2m8-53h4-6hch",
@@ -8518,94 +8603,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:N",
       "score": 8.4
-    }
-  },
-  {
-    "ghsa_id": "GHSA-vcx4-4qxg-mfp4",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-vcx4-4qxg-mfp4",
-    "html_url": "https://github.com/advisories/GHSA-vcx4-4qxg-mfp4",
-    "summary": "OpenClaw: Telegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret",
-    "description": "## Summary\n\nTelegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Affected versions: `<= 2026.3.24`\n- First patched version: `2026.3.25`\n- Latest published npm version at verification time: `2026.3.24`\n\n## Details\n\nTelegram webhook auth previously rejected bad secrets but did not throttle repeated guesses, allowing brute-force attempts against weak webhook secrets. Commit `c2c136ae9517ddd0789d742a0fdf4c10e8c729a7` adds repeated-guess throttling before auth failure responses.\n\nVerified vulnerable on tag `v2026.3.24` and fixed on `main` by commit `c2c136ae9517ddd0789d742a0fdf4c10e8c729a7`.\n\n## Fix Commit(s)\n\n- `c2c136ae9517ddd0789d742a0fdf4c10e8c729a7`\n\n## Release Process Note\n\n`2026.3.25` is the next planned OpenClaw release version in `package.json`. This advisory is being published ahead of that npm release so the draft is no longer blocked; once `2026.3.25` is published, the structured patched-version metadata will match the released artifact.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-vcx4-4qxg-mfp4",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-vcx4-4qxg-mfp4",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-vcx4-4qxg-mfp4",
-      "https://github.com/advisories/GHSA-vcx4-4qxg-mfp4"
-    ],
-    "published_at": "2026-03-27T22:37:35Z",
-    "updated_at": "2026-03-27T22:37:36Z",
-    "github_reviewed_at": "2026-03-27T22:37:35Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.24",
-        "first_patched_version": null,
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 6.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-307",
-        "name": "Improper Restriction of Excessive Authentication Attempts"
-      },
-      {
-        "cwe_id": "CWE-521",
-        "name": "Weak Password Requirements"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
     }
   },
   {

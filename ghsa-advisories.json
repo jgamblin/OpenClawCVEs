@@ -1,5 +1,26 @@
 [
   {
+    "ghsa_id": "GHSA-9jpj-g8vv-j5mf",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw: Gemini OAuth exposed the PKCE verifier through the OAuth state parameter",
+    "published": "2026-04-04",
+    "html_url": "https://github.com/advisories/GHSA-9jpj-g8vv-j5mf",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.1"
+    ],
+    "fixed_versions": [
+      "2026.4.2"
+    ],
+    "fixed_version": "2026.4.2",
+    "cwes": [
+      "CWE-345"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-x2m8-53h4-6hch",
     "cve_id": null,
     "severity": "low",
@@ -2095,26 +2116,6 @@
     "fixed_version": "",
     "cwes": [
       "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-vcx4-4qxg-mfp4",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Telegram Webhook Missing Guess Rate Limiting Enables Brute-Force Guessing of Weak Webhook Secret",
-    "published": "2026-03-27",
-    "html_url": "https://github.com/advisories/GHSA-vcx4-4qxg-mfp4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.3.24"
-    ],
-    "fixed_versions": [],
-    "fixed_version": "",
-    "cwes": [
-      "CWE-307",
-      "CWE-521"
     ]
   },
   {

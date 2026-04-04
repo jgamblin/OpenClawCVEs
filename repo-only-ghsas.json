@@ -70,13 +70,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-98ch-45wp-ch47"
   },
   {
-    "ghsa_id": "GHSA-9jpj-g8vv-j5mf",
-    "severity": "MEDIUM",
-    "title": "Gemini OAuth exposed the PKCE verifier through the OAuth state parameter",
-    "published": "2026-04-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9jpj-g8vv-j5mf"
-  },
-  {
     "ghsa_id": "GHSA-fvx6-pj3r-5q4q",
     "severity": "MEDIUM",
     "title": "Complex interpreter pipelines could skip exec script preflight validation",
