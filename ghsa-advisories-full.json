@@ -2006,6 +2006,92 @@
     }
   },
   {
+    "ghsa_id": "GHSA-rm5c-4rmf-vvhw",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-rm5c-4rmf-vvhw",
+    "html_url": "https://github.com/advisories/GHSA-rm5c-4rmf-vvhw",
+    "summary": "OpenClaw: Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses",
+    "description": "## Summary\nSandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses\n\n## Current Maintainer Triage\n- Status: narrow\n- Normalized severity: medium\n- Assessment: Released workspace-only apply_patch remove and mkdir operations were still check-then-act, but the draft overstates scope by bundling broader edit paths; keep it open but narrow it to the actual sandbox-workspace mutation boundary.\n\n## Affected Packages / Versions\n- Package: `openclaw` (npm)\n- Latest published npm version: `2026.3.31`\n- Vulnerable version range: `<=2026.3.28`\n- Patched versions: `>= 2026.3.31`\n- First stable tag containing the fix: `v2026.3.31`\n\n## Fix Commit(s)\n- `32a4a47d602e0618f87b3e59f94d8c142767f860` \u2014 2026-03-30T16:49:49+01:00\n\nOpenClaw thanks @AntAISecurityLab for reporting.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-rm5c-4rmf-vvhw",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-rm5c-4rmf-vvhw",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rm5c-4rmf-vvhw",
+      "https://github.com/openclaw/openclaw/commit/32a4a47d602e0618f87b3e59f94d8c142767f860",
+      "https://github.com/openclaw/openclaw/releases/tag/v2026.3.31",
+      "https://github.com/advisories/GHSA-rm5c-4rmf-vvhw"
+    ],
+    "published_at": "2026-04-03T03:01:57Z",
+    "updated_at": "2026-04-03T20:16:02Z",
+    "github_reviewed_at": "2026-04-03T03:01:57Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.3.28",
+        "first_patched_version": "2026.3.31",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:P/PR:L/UI:N/VC:N/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 5.8
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "AntAISecurityLab",
+          "id": 271417607,
+          "node_id": "U_kgDOEC2BBw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/271417607?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/AntAISecurityLab",
+          "html_url": "https://github.com/AntAISecurityLab",
+          "followers_url": "https://api.github.com/users/AntAISecurityLab/followers",
+          "following_url": "https://api.github.com/users/AntAISecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/AntAISecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/AntAISecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/AntAISecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/AntAISecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/AntAISecurityLab/repos",
+          "events_url": "https://api.github.com/users/AntAISecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/AntAISecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-w85g-3h6x-4xh2",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-w85g-3h6x-4xh2",
@@ -8489,95 +8575,6 @@
       {
         "cwe_id": "CWE-521",
         "name": "Weak Password Requirements"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-mw7w-g3mg-xqm7",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-mw7w-g3mg-xqm7",
-    "html_url": "https://github.com/advisories/GHSA-mw7w-g3mg-xqm7",
-    "summary": "OpenClaw: BlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events",
-    "description": "## Summary\n\nBlueBubbles Group Reactions Bypass requireMention and Still Enqueue Agent-Visible System Events\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Affected versions: `<= 2026.3.24`\n- First patched version: `2026.3.25`\n- Latest published npm version at verification time: `2026.3.24`\n\n## Details\n\nBlueBubbles group reaction events previously bypassed `requireMention` and still enqueued agent-visible system events in groups that were supposed to stay mention-gated. Commit `f8c98630785288cc1f1d0893503ef3b653a3cede` applies the reaction path to the same mention gate as normal group messages.\n\nVerified vulnerable on tag `v2026.3.24` and fixed on `main` by commit `f8c98630785288cc1f1d0893503ef3b653a3cede`.\n\n## Fix Commit(s)\n\n- `f8c98630785288cc1f1d0893503ef3b653a3cede`",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-mw7w-g3mg-xqm7",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-mw7w-g3mg-xqm7",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mw7w-g3mg-xqm7",
-      "https://github.com/openclaw/openclaw/commit/f8c98630785288cc1f1d0893503ef3b653a3cede",
-      "https://github.com/advisories/GHSA-mw7w-g3mg-xqm7"
-    ],
-    "published_at": "2026-03-27T22:32:06Z",
-    "updated_at": "2026-03-27T22:32:06Z",
-    "github_reviewed_at": "2026-03-27T22:32:06Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.24",
-        "first_patched_version": null,
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-288",
-        "name": "Authentication Bypass Using an Alternate Path or Channel"
-      },
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
       }
     ],
     "credits": [

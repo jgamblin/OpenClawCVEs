@@ -105,13 +105,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qm77-8qjp-4vcm"
   },
   {
-    "ghsa_id": "GHSA-rm5c-4rmf-vvhw",
-    "severity": "MEDIUM",
-    "title": "Sandbox file operations use check-then-act, bypassing fd-based TOCTOU defenses",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rm5c-4rmf-vvhw"
-  },
-  {
     "ghsa_id": "GHSA-rxmx-g7hr-8mx4",
     "severity": "MEDIUM",
     "title": "Zalo replay dedupe keys could suppress messages across chats or senders",
