@@ -1,19 +1,19 @@
 [
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-28478",
@@ -30,14 +30,6 @@
     "title": "OpenClaw < 2026.3.28 - Insufficient Scope Validation in node.pair.approve",
     "date_published": "2026-03-31",
     "ghsa_id": "GHSA-2x4x-cc5g-qmmg"
-  },
-  {
-    "cve_id": "CVE-2026-33579",
-    "severity": "HIGH",
-    "cvss": 8.6,
-    "title": "OpenClaw: /pair approve command path omitted caller scope subsetting and reopened device pairing escalation",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-hc5h-pmr3-3497"
   },
   {
     "cve_id": "CVE-2026-34503",
@@ -96,14 +88,6 @@
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
   },
   {
-    "cve_id": "CVE-2026-33576",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.28 - Unauthorized Media Download via Zalo Channel",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-v2v2-f783-358j"
-  },
-  {
     "cve_id": "CVE-2026-34504",
     "severity": "MEDIUM",
     "cvss": 6.9,
@@ -142,6 +126,14 @@
     "title": "OpenClaw's Nextcloud Talk webhook missing rate limiting on shared secret authentication",
     "date_published": "2026-03-31",
     "ghsa_id": "GHSA-9528-x887-j2fp"
+  },
+  {
+    "cve_id": "CVE-2026-34511",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.2 - PKCE Verifier Exposure via OAuth State Parameter",
+    "date_published": "2026-04-03",
+    "ghsa_id": "GHSA-9jpj-g8vv-j5mf"
   },
   {
     "cve_id": "CVE-2026-33578",
