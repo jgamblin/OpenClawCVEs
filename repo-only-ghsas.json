@@ -21,6 +21,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9p93-7j67-5pc2"
   },
   {
+    "ghsa_id": "GHSA-h4jx-hjr3-fhgc",
+    "severity": "HIGH",
+    "title": "Gateway Plugin Subagent Fallback `deleteSession` Uses Synthetic `operator.admin`",
+    "published": "2026-03-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h4jx-hjr3-fhgc"
+  },
+  {
     "ghsa_id": "GHSA-m34q-h93w-vg5x",
     "severity": "HIGH",
     "title": "OpenShell mirror mode could delete arbitrary remote directories when roots were mis-scoped",
@@ -63,18 +70,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5hff-46vh-rxmw"
   },
   {
+    "ghsa_id": "GHSA-5jvj-hxmh-6h6j",
+    "severity": "MEDIUM",
+    "title": "Gateway HTTP Session History Route Bypasses Operator Read Scope",
+    "published": "2026-03-26",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5jvj-hxmh-6h6j"
+  },
+  {
     "ghsa_id": "GHSA-98ch-45wp-ch47",
     "severity": "MEDIUM",
     "title": "Windows-compatible env override keys could bypass system.run approval binding",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-98ch-45wp-ch47"
-  },
-  {
-    "ghsa_id": "GHSA-fvx6-pj3r-5q4q",
-    "severity": "MEDIUM",
-    "title": "Complex interpreter pipelines could skip exec script preflight validation",
-    "published": "2026-04-02",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvx6-pj3r-5q4q"
   },
   {
     "ghsa_id": "GHSA-h2v7-xc88-xx8c",
