@@ -3,7 +3,7 @@
 > Complete listing of all 138 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-04-08 06:40 UTC</sub>
+<sub>Last updated: 2026-04-08 12:28 UTC</sub>
 
 ---
 
@@ -45,7 +45,7 @@
 | [GHSA-6pfc-6m7w-m8fx](https://github.com/advisories/GHSA-6pfc-6m7w-m8fx) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw has a gateway exec allowlist allow-always bypass via unregistered /usr/bin/script wrapper | CWE-385 | 2026.3.28 | 2026-03-31 |
 | [GHSA-6xg4-82hv-cp6f](https://github.com/advisories/GHSA-6xg4-82hv-cp6f) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway chat.send ACP-only provenance guard could be bypassed by client identity spoofing | CWE-290, CWE-807 | 2026.3.28 | 2026-03-31 |
 | [GHSA-5h2w-qmfp-ggp6](https://github.com/advisories/GHSA-5h2w-qmfp-ggp6) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Gateway `operator.write` can reach admin-only persisted `verboseLevel` via `chat.send` `/verbose` | CWE-284, CWE-863 | 2026.3.28 | 2026-03-31 |
-| [GHSA-jccr-rrw2-vc8h](https://github.com/advisories/GHSA-jccr-rrw2-vc8h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure | CWE-200 | 2026.3.28 | 2026-03-31 |
+| [GHSA-jccr-rrw2-vc8h](https://github.com/advisories/GHSA-jccr-rrw2-vc8h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure | CWE-185, CWE-200 | 2026.3.28 | 2026-03-31 |
 | [GHSA-98hh-7ghg-x6rq](https://github.com/advisories/GHSA-98hh-7ghg-x6rq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Discord text `/approve` bypasses `channels.discord.execApprovals.approvers` and allows non-approvers to resolve pending exec approvals | CWE-863 | 2026.3.28 | 2026-03-31 |
 | [GHSA-3cw3-5vxw-g2h3](https://github.com/advisories/GHSA-3cw3-5vxw-g2h3) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: CLI Remote Onboarding Persists Unauthenticated Discovery Endpoint and Exfiltrates Gateway Credentials | CWE-287, CWE-862 | 2026.3.28 | 2026-03-31 |
 | [GHSA-p4x4-2r7f-wjxg](https://github.com/advisories/GHSA-p4x4-2r7f-wjxg) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw gateway exec allow-always over-trusts positional carrier executables | CWE-863 | 2026.3.28 | 2026-04-01 |

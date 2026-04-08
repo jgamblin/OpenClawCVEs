@@ -8235,7 +8235,7 @@
     "url": "https://api.github.com/advisories/GHSA-jccr-rrw2-vc8h",
     "html_url": "https://github.com/advisories/GHSA-jccr-rrw2-vc8h",
     "summary": "OpenClaw safeBins jq `$ENV` filter bypass allows environment variable disclosure",
-    "description": "## Summary\n\nThe jq safe-bin policy blocked explicit `env` usage but still allowed jq programs that accessed environment data through `$ENV`.\n\n## Impact\n\nAn operator-approved safe-bin jq command could disclose environment variables that the safe-bin policy was supposed to keep out of scope.\n\n## Affected Component\n\n`src/infra/exec-safe-bin-semantics.ts`\n\n## Fixed Versions\n\n- Affected: `<= 2026.3.24`\n- Patched: `>= 2026.3.28`\n- Latest stable `2026.3.28` contains the fix.\n\n## Fix\n\nFixed by commit `78e2f3d66d` (`Exec: tighten jq safe-bin env checks`).\n\nOpenClaw thanks @nicky-cc  of Tencent zhuque Lab [https://github.com/Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard) for reporting.",
+    "description": "## Summary\n\nThe jq safe-bin policy blocked explicit `env` usage but still allowed jq programs that accessed environment data through `$ENV`.\n\n## Impact\n\nAn operator-approved safe-bin jq command could disclose environment variables that the safe-bin policy was supposed to keep out of scope.\n\n## Affected Component\n\n`src/infra/exec-safe-bin-semantics.ts`\n\n## Fixed Versions\n\n- Affected: `<= 2026.3.24`\n- Patched: `>= 2026.3.28`\n- Latest stable `2026.3.28` contains the fix.\n\n## Fix\n\nFixed by commit `78e2f3d66d` (`Exec: tighten jq safe-bin env checks`).\n\nThanks @nicky-cc  of Tencent zhuque Lab ([https://github.com/Tencent/AI-Infra-Guard](https://github.com/Tencent/AI-Infra-Guard)) for reporting.",
     "type": "reviewed",
     "severity": "high",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-jccr-rrw2-vc8h",
@@ -8252,7 +8252,7 @@
       "https://github.com/advisories/GHSA-jccr-rrw2-vc8h"
     ],
     "published_at": "2026-03-31T23:56:13Z",
-    "updated_at": "2026-03-31T23:56:15Z",
+    "updated_at": "2026-04-08T11:58:00Z",
     "github_reviewed_at": "2026-03-31T23:56:13Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8278,6 +8278,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-185",
+        "name": "Incorrect Regular Expression"
+      },
       {
         "cwe_id": "CWE-200",
         "name": "Exposure of Sensitive Information to an Unauthorized Actor"
