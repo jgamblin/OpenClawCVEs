@@ -839,7 +839,7 @@
       "https://github.com/advisories/GHSA-4p4f-fc8q-84m3"
     ],
     "published_at": "2026-04-07T18:15:03Z",
-    "updated_at": "2026-04-07T18:15:05Z",
+    "updated_at": "2026-04-09T04:10:37Z",
     "github_reviewed_at": "2026-04-07T18:15:03Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -894,6 +894,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
       }
     ],
     "cvss": {
@@ -1095,7 +1119,7 @@
       "https://github.com/advisories/GHSA-fqrj-m88p-qf3v"
     ],
     "published_at": "2026-04-07T18:14:50Z",
-    "updated_at": "2026-04-07T18:14:52Z",
+    "updated_at": "2026-04-09T04:11:55Z",
     "github_reviewed_at": "2026-04-07T18:14:50Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -1150,6 +1174,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
       }
     ],
     "cvss": {
@@ -2225,8 +2273,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00048,
-      "percentile": 0.15003
+      "percentage": 0.00054,
+      "percentile": 0.16976
     }
   },
   {
@@ -2496,7 +2544,7 @@
       "https://github.com/advisories/GHSA-6336-qqw9-v6x6"
     ],
     "published_at": "2026-04-03T03:26:51Z",
-    "updated_at": "2026-04-06T23:06:24Z",
+    "updated_at": "2026-04-09T04:13:04Z",
     "github_reviewed_at": "2026-04-03T03:26:51Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -2551,6 +2599,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
       }
     ],
     "cvss": {
@@ -3210,7 +3282,7 @@
       "https://github.com/advisories/GHSA-h5hg-h7rr-gpf3"
     ],
     "published_at": "2026-04-03T03:18:10Z",
-    "updated_at": "2026-04-06T19:42:23Z",
+    "updated_at": "2026-04-09T04:14:45Z",
     "github_reviewed_at": "2026-04-03T03:18:10Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -3265,6 +3337,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
       }
     ],
     "cvss": {
@@ -6632,7 +6728,7 @@
       "https://github.com/advisories/GHSA-jjw7-3vjf-fg5j"
     ],
     "published_at": "2026-04-02T20:58:08Z",
-    "updated_at": "2026-04-06T23:06:49Z",
+    "updated_at": "2026-04-09T04:11:01Z",
     "github_reviewed_at": "2026-04-02T20:58:08Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6687,6 +6783,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
       }
     ],
     "cvss": {
