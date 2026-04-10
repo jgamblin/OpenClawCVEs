@@ -35,13 +35,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-98hh-7ghg-x6rq"
   },
   {
-    "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
-    "severity": "HIGH",
-    "title": "GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
-    "published": "2026-04-08",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cm8v-2vh9-cxf3"
-  },
-  {
     "ghsa_id": "GHSA-qxgf-hmcj-3xw3",
     "severity": "HIGH",
     "title": "SSRF via unguarded image download in fal provider",
@@ -89,5 +82,12 @@
     "title": "Zalo channel downloads media before sender authorization",
     "published": "2026-03-29",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v2v2-f783-358j"
+  },
+  {
+    "ghsa_id": "GHSA-89r3-6x4j-v7wf",
+    "severity": "LOW",
+    "title": "Voice-call Plivo replay mutates in-process callback origin before replay rejection",
+    "published": "2026-03-31",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-89r3-6x4j-v7wf"
   }
 ]

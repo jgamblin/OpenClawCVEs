@@ -1,5 +1,27 @@
 [
   {
+    "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw: GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
+    "published": "2026-04-09",
+    "html_url": "https://github.com/advisories/GHSA-cm8v-2vh9-cxf3",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.8"
+    ],
+    "fixed_versions": [
+      "2026.4.8"
+    ],
+    "fixed_version": "2026.4.8",
+    "cwes": [
+      "CWE-78",
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-ccx3-fw7q-rr2r",
     "cve_id": null,
     "severity": "medium",
@@ -2080,27 +2102,6 @@
     "fixed_version": "2026.3.31",
     "cwes": [
       "CWE-807"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-89r3-6x4j-v7wf",
-    "cve_id": null,
-    "severity": "low",
-    "title": "OpenClaw: Voice-call Plivo replay mutates in-process callback origin before replay rejection",
-    "published": "2026-04-02",
-    "html_url": "https://github.com/advisories/GHSA-89r3-6x4j-v7wf",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.3.28"
-    ],
-    "fixed_versions": [
-      "2026.3.31"
-    ],
-    "fixed_version": "2026.3.31",
-    "cwes": [
-      "CWE-294"
     ]
   },
   {
