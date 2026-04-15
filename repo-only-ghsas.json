@@ -7,13 +7,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g5cg-8x5w-7jpm"
   },
   {
-    "ghsa_id": "GHSA-2pr2-hcv6-7gwv",
-    "severity": "HIGH",
-    "title": "Device removal and token revocation do not terminate active WebSocket sessions",
-    "published": "2026-03-29",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2pr2-hcv6-7gwv"
-  },
-  {
     "ghsa_id": "GHSA-2x4x-cc5g-qmmg",
     "severity": "HIGH",
     "title": "node.pair.approve missing callerScopes validation allows low-privilege operator to approve malicious nodes",
@@ -159,6 +152,13 @@
     "title": "Security Scan Failure Does Not Block Plugin Installation (Fail-Open)",
     "published": "2026-03-31",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwq8-6f96-g3q4"
+  },
+  {
+    "ghsa_id": "GHSA-gj9q-8w99-mp8j",
+    "severity": "LOW",
+    "title": "TOCTOU read in exec script preflight",
+    "published": "2026-04-15",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gj9q-8w99-mp8j"
   },
   {
     "ghsa_id": "GHSA-hhq4-97c2-p447",
