@@ -1,5 +1,26 @@
 [
   {
+    "ghsa_id": "GHSA-gj9q-8w99-mp8j",
+    "cve_id": null,
+    "severity": "low",
+    "title": "OpenClaw: TOCTOU read in exec script preflight",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/advisories/GHSA-gj9q-8w99-mp8j",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.10"
+    ],
+    "fixed_versions": [
+      "2026.4.10"
+    ],
+    "fixed_version": "2026.4.10",
+    "cwes": [
+      "CWE-367"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-52vj-fvrv-7q82",
     "cve_id": "CVE-2026-6011",
     "severity": "low",
@@ -2079,27 +2100,6 @@
     "fixed_version": "2026.3.31",
     "cwes": [
       "CWE-15"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rf75-g96h-j3rm",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw's complex interpreter pipelines could skip exec script preflight validation",
-    "published": "2026-04-02",
-    "html_url": "https://github.com/advisories/GHSA-rf75-g96h-j3rm",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.2"
-    ],
-    "fixed_versions": [
-      "2026.4.2"
-    ],
-    "fixed_version": "2026.4.2",
-    "cwes": [
-      "CWE-184"
     ]
   },
   {

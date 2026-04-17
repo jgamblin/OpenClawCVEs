@@ -1,5 +1,91 @@
 [
   {
+    "ghsa_id": "GHSA-gj9q-8w99-mp8j",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-gj9q-8w99-mp8j",
+    "html_url": "https://github.com/advisories/GHSA-gj9q-8w99-mp8j",
+    "summary": "OpenClaw: TOCTOU read in exec script preflight",
+    "description": "## Summary\n\nOpenClaw's exec script preflight validator previously validated and then read a script by mutable pathname. A local race could swap the path between validation and read, causing preflight analysis to inspect a different file identity than the one that passed the workspace boundary check.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe impact is limited. This was not arbitrary full-file disclosure through the preflight error path. The validator only surfaced derived preflight content, such as a matched token, a line number, or the first non-empty JavaScript line in one branch. Exploitation also required the ability to mutate the relevant workspace path during the preflight window.\n\nStill, this was a real TOCTOU boundary bug in code that is supposed to reason about workspace-local script files before execution. A file identity that passed the initial boundary validation could differ from the identity that was later read for preflight analysis.\n\n## Technical Details\n\nThe vulnerable flow performed separate path validation and file reads in `validateScriptFileForShellBleed`. Because the read was path-based, an attacker with write access to the workspace path could race replacement of the target after validation but before preflight read.\n\n## Fix\n\nPR #62333 replaced the check-then-read flow with a pinned safe-open/read path using the shared `readFileWithinRoot` helper. The fixed path performs boundary verification around the opened file identity and avoids relying on a mutable pathname for the final preflight read. Regression tests cover both pre-open and post-open swap windows.\n\n## Fix Commit(s)\n\n- `b024fae9e5df43e9b69b2daebb72be3469d52e91` (`fix(exec): replace TOCTOU check-then-read with atomic pinned-fd open in script preflight [AI]`)\n- PR: #62333\n\n## Release Process Note\n\nThe fix first shipped in `v2026.4.10`. Users should upgrade to `openclaw` `2026.4.10` or newer; the latest npm release already includes the fix.\n\n## Credits\n\nThanks to @kikayli for reporting this issue.",
+    "type": "reviewed",
+    "severity": "low",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-gj9q-8w99-mp8j",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-gj9q-8w99-mp8j",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-gj9q-8w99-mp8j",
+      "https://github.com/openclaw/openclaw/pull/62333",
+      "https://github.com/openclaw/openclaw/commit/b024fae9e5df43e9b69b2daebb72be3469d52e91",
+      "https://github.com/advisories/GHSA-gj9q-8w99-mp8j"
+    ],
+    "published_at": "2026-04-16T21:19:21Z",
+    "updated_at": "2026-04-16T21:19:23Z",
+    "github_reviewed_at": "2026-04-16T21:19:21Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.10",
+        "first_patched_version": "2026.4.10",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 2.1
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "kikayli",
+          "id": 205863854,
+          "node_id": "U_kgDODEU7rg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/205863854?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/kikayli",
+          "html_url": "https://github.com/kikayli",
+          "followers_url": "https://api.github.com/users/kikayli/followers",
+          "following_url": "https://api.github.com/users/kikayli/following{/other_user}",
+          "gists_url": "https://api.github.com/users/kikayli/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/kikayli/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/kikayli/subscriptions",
+          "organizations_url": "https://api.github.com/users/kikayli/orgs",
+          "repos_url": "https://api.github.com/users/kikayli/repos",
+          "events_url": "https://api.github.com/users/kikayli/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/kikayli/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
     "ghsa_id": "GHSA-52vj-fvrv-7q82",
     "cve_id": "CVE-2026-6011",
     "url": "https://api.github.com/advisories/GHSA-52vj-fvrv-7q82",
@@ -69,8 +155,8 @@
       "score": 5.6
     },
     "epss": {
-      "percentage": 0.00045,
-      "percentile": 0.13929
+      "percentage": 0.00059,
+      "percentile": 0.18515
     }
   },
   {
@@ -5190,8 +5276,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00054,
-      "percentile": 0.16976
+      "percentage": 0.00057,
+      "percentile": 0.17748
     }
   },
   {
@@ -8745,68 +8831,6 @@
     "cvss": {
       "vector_string": null,
       "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-rf75-g96h-j3rm",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-rf75-g96h-j3rm",
-    "html_url": "https://github.com/advisories/GHSA-rf75-g96h-j3rm",
-    "summary": "Duplicate Advisory: OpenClaw's complex interpreter pipelines could skip exec script preflight validation",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-fvx6-pj3r-5q4q. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw versions prior to commit 8aceaf5 contain a preflight validation bypass vulnerability in shell-bleed protection that allows attackers to execute blocked script content by using piped or complex command forms that the parser fails to recognize. Attackers can craft commands such as piped execution, command substitution, or subshell invocation to bypass the validateScriptFileForShellBleed() validation checks and execute arbitrary script content that would otherwise be blocked.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-rf75-g96h-j3rm",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvx6-pj3r-5q4q",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-34425",
-      "https://github.com/openclaw/openclaw/commit/8aceaf5d0f0ec552b75a792f7f0a3bfa5b091513",
-      "https://www.vulncheck.com/advisories/openclaw-shell-bleed-protection-preflight-validation-bypass",
-      "https://github.com/advisories/GHSA-rf75-g96h-j3rm"
-    ],
-    "published_at": "2026-04-02T21:32:52Z",
-    "updated_at": "2026-04-06T22:53:37Z",
-    "github_reviewed_at": "2026-04-06T22:53:36Z",
-    "nvd_published_at": "2026-04-02T19:21:31Z",
-    "withdrawn_at": "2026-04-06T22:53:36Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.2",
-        "first_patched_version": "2026.4.2",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
-        "score": 5.4
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 5.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-184",
-        "name": "Incomplete List of Disallowed Inputs"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
-      "score": 5.4
     }
   },
   {
