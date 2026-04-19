@@ -849,7 +849,7 @@
       "https://github.com/advisories/GHSA-2cq5-mf3v-mx44"
     ],
     "published_at": "2026-04-17T22:16:04Z",
-    "updated_at": "2026-04-17T22:16:07Z",
+    "updated_at": "2026-04-19T15:30:37Z",
     "github_reviewed_at": "2026-04-17T22:16:04Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -880,7 +880,32 @@
         "name": "Incorrect Authorization"
       }
     ],
-    "credits": [],
+    "credits": [
+      {
+        "user": {
+          "login": "decsecre583",
+          "id": 186786330,
+          "node_id": "U_kgDOCyIiGg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/186786330?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/decsecre583",
+          "html_url": "https://github.com/decsecre583",
+          "followers_url": "https://api.github.com/users/decsecre583/followers",
+          "following_url": "https://api.github.com/users/decsecre583/following{/other_user}",
+          "gists_url": "https://api.github.com/users/decsecre583/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/decsecre583/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/decsecre583/subscriptions",
+          "organizations_url": "https://api.github.com/users/decsecre583/orgs",
+          "repos_url": "https://api.github.com/users/decsecre583/repos",
+          "events_url": "https://api.github.com/users/decsecre583/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/decsecre583/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
     "cvss": {
       "vector_string": null,
       "score": null
