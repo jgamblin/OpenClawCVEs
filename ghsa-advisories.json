@@ -1742,7 +1742,7 @@
   },
   {
     "ghsa_id": "GHSA-83f3-hh45-vfw9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-40045",
     "severity": "medium",
     "title": "OpenClaw: Android accepted cleartext remote gateway endpoints and sent stored credentials over ws://",
     "published": "2026-04-07",
@@ -1890,7 +1890,7 @@
   },
   {
     "ghsa_id": "GHSA-2qrv-rc5x-2g2h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41295",
     "severity": "medium",
     "title": "OpenClaw: Untrusted workspace channel shadows could execute during built-in channel setup",
     "published": "2026-04-07",
@@ -1911,7 +1911,7 @@
   },
   {
     "ghsa_id": "GHSA-5hff-46vh-rxmw",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41298",
     "severity": "medium",
     "title": "OpenClaw: Read-scoped identity-bearing HTTP clients could kill sessions via /sessions/:sessionKey/kill",
     "published": "2026-04-07",
@@ -2035,7 +2035,7 @@
   },
   {
     "ghsa_id": "GHSA-h43v-27wg-5mf9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41301",
     "severity": "medium",
     "title": "OpenClaw: Forged Nostr DMs could create pairing state before signature verification",
     "published": "2026-04-07",
