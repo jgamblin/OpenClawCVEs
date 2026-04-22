@@ -347,7 +347,7 @@
       "https://github.com/advisories/GHSA-2gvc-4f3c-2855"
     ],
     "published_at": "2026-04-17T22:32:29Z",
-    "updated_at": "2026-04-17T22:32:29Z",
+    "updated_at": "2026-04-22T02:13:22Z",
     "github_reviewed_at": "2026-04-17T22:32:29Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -421,6 +421,30 @@
           "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
           "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
           "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      },
+      {
+        "user": {
+          "login": "qclawer",
+          "id": 274765497,
+          "node_id": "U_kgDOEGCWuQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/qclawer",
+          "html_url": "https://github.com/qclawer",
+          "followers_url": "https://api.github.com/users/qclawer/followers",
+          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
+          "organizations_url": "https://api.github.com/users/qclawer/orgs",
+          "repos_url": "https://api.github.com/users/qclawer/repos",
+          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/qclawer/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false
@@ -3122,7 +3146,7 @@
       "https://github.com/advisories/GHSA-r77c-2cmr-7p47"
     ],
     "published_at": "2026-04-17T21:50:55Z",
-    "updated_at": "2026-04-17T21:50:56Z",
+    "updated_at": "2026-04-22T02:13:18Z",
     "github_reviewed_at": "2026-04-17T21:50:55Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -3196,6 +3220,30 @@
           "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
           "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
           "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      },
+      {
+        "user": {
+          "login": "qclawer",
+          "id": 274765497,
+          "node_id": "U_kgDOEGCWuQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/qclawer",
+          "html_url": "https://github.com/qclawer",
+          "followers_url": "https://api.github.com/users/qclawer/followers",
+          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
+          "organizations_url": "https://api.github.com/users/qclawer/orgs",
+          "repos_url": "https://api.github.com/users/qclawer/repos",
+          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/qclawer/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false
@@ -4235,7 +4283,7 @@
     },
     "epss": {
       "percentage": 0.00059,
-      "percentile": 0.1847
+      "percentile": 0.18545
     }
   },
   {
@@ -7655,6 +7703,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 9e-05,
+      "percentile": 0.00844
     }
   },
   {
@@ -8306,6 +8358,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00013,
+      "percentile": 0.02238
     }
   },
   {
@@ -8395,6 +8451,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00025,
+      "percentile": 0.06964
     }
   },
   {
@@ -8420,7 +8480,7 @@
       "https://github.com/advisories/GHSA-4p4f-fc8q-84m3"
     ],
     "published_at": "2026-04-07T18:15:03Z",
-    "updated_at": "2026-04-09T04:10:37Z",
+    "updated_at": "2026-04-22T02:12:55Z",
     "github_reviewed_at": "2026-04-07T18:15:03Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8494,6 +8554,30 @@
           "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
           "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
           "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      },
+      {
+        "user": {
+          "login": "qclawer",
+          "id": 274765497,
+          "node_id": "U_kgDOEGCWuQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/qclawer",
+          "html_url": "https://github.com/qclawer",
+          "followers_url": "https://api.github.com/users/qclawer/followers",
+          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
+          "organizations_url": "https://api.github.com/users/qclawer/orgs",
+          "repos_url": "https://api.github.com/users/qclawer/repos",
+          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/qclawer/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false
@@ -8700,7 +8784,7 @@
       "https://github.com/advisories/GHSA-fqrj-m88p-qf3v"
     ],
     "published_at": "2026-04-07T18:14:50Z",
-    "updated_at": "2026-04-09T04:11:55Z",
+    "updated_at": "2026-04-22T02:12:13Z",
     "github_reviewed_at": "2026-04-07T18:14:50Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8774,6 +8858,30 @@
           "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
           "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
           "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      },
+      {
+        "user": {
+          "login": "qclawer",
+          "id": 274765497,
+          "node_id": "U_kgDOEGCWuQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/qclawer",
+          "html_url": "https://github.com/qclawer",
+          "followers_url": "https://api.github.com/users/qclawer/followers",
+          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
+          "organizations_url": "https://api.github.com/users/qclawer/orgs",
+          "repos_url": "https://api.github.com/users/qclawer/repos",
+          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/qclawer/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false
@@ -9001,6 +9109,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00018,
+      "percentile": 0.04586
     }
   },
   {
@@ -10256,8 +10368,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.00093,
-      "percentile": 0.26049
+      "percentage": 0.00094,
+      "percentile": 0.26189
     }
   },
   {
