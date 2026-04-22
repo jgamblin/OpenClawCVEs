@@ -28,13 +28,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qcj9-wwgw-6gm8"
   },
   {
-    "ghsa_id": "GHSA-2w79-r9g8-wmcr",
-    "severity": "MEDIUM",
-    "title": "Incomplete fix for CVE-2026-32062: voice-call still parses large WebSocket frames before start validation",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2w79-r9g8-wmcr"
-  },
-  {
     "ghsa_id": "GHSA-2xcp-x87w-q377",
     "severity": "MEDIUM",
     "title": "Hook mapping templates could bypass hook session-key opt-in",
@@ -63,6 +56,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9jpj-g8vv-j5mf"
   },
   {
+    "ghsa_id": "GHSA-c28g-vh7m-fm7v",
+    "severity": "MEDIUM",
+    "title": "Owner-enforced commands could accept wildcard channel senders as command owners",
+    "published": "2026-04-22",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c28g-vh7m-fm7v"
+  },
+  {
     "ghsa_id": "GHSA-cqgw-44wg-44rf",
     "severity": "MEDIUM",
     "title": "Discord voice manager bypasses channel-level member access allowlist",
@@ -82,6 +82,13 @@
     "title": "Complex interpreter pipelines could skip exec script preflight validation",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvx6-pj3r-5q4q"
+  },
+  {
+    "ghsa_id": "GHSA-gfg9-5357-hv4c",
+    "severity": "MEDIUM",
+    "title": "Webchat audio embedding could read local files without local-root containment",
+    "published": "2026-04-22",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gfg9-5357-hv4c"
   },
   {
     "ghsa_id": "GHSA-h2vw-ph2c-jvwf",
