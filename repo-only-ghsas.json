@@ -1,31 +1,31 @@
 [
   {
-    "ghsa_id": "GHSA-9p3r-hh9g-5cmg",
-    "severity": "CRITICAL",
-    "title": "Sandbox escape via TOCTOU race in remote FS bridge readFile",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9p3r-hh9g-5cmg"
+    "ghsa_id": "GHSA-5h3g-6xhh-rg6p",
+    "severity": "HIGH",
+    "title": "OpenShell FS bridge reads pin and verify the opened file before returning bytes",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5h3g-6xhh-rg6p"
   },
   {
-    "ghsa_id": "GHSA-3qpv-xf3v-mm45",
+    "ghsa_id": "GHSA-r6xh-pqhr-v4xh",
     "severity": "HIGH",
-    "title": "Workspace `.env` can override the bundled hooks root and load attacker hook code",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3qpv-xf3v-mm45"
+    "title": "MCP loopback owner context is derived from server-issued bearer tokens",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r6xh-pqhr-v4xh"
   },
   {
-    "ghsa_id": "GHSA-7ggg-pvrf-458v",
+    "ghsa_id": "GHSA-wppj-c6mr-83jj",
     "severity": "HIGH",
-    "title": "`PIP_INDEX_URL` and `UV_INDEX_URL` bypass host exec env sanitization and redirect Python package-index traffic",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7ggg-pvrf-458v"
+    "title": "OpenShell FS bridge writes stay pinned to the sandbox mount root",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wppj-c6mr-83jj"
   },
   {
-    "ghsa_id": "GHSA-qcj9-wwgw-6gm8",
-    "severity": "HIGH",
-    "title": "Workspace `.env` can override the bundled plugin trust root",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qcj9-wwgw-6gm8"
+    "ghsa_id": "GHSA-2hh7-c75g-qj2r",
+    "severity": "MEDIUM",
+    "title": "Zalo outbound photo URLs are validated through the SSRF guard",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2hh7-c75g-qj2r"
   },
   {
     "ghsa_id": "GHSA-2xcp-x87w-q377",
@@ -33,6 +33,13 @@
     "title": "Hook mapping templates could bypass hook session-key opt-in",
     "published": "2026-04-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2xcp-x87w-q377"
+  },
+  {
+    "ghsa_id": "GHSA-55cf-xx38-4p9p",
+    "severity": "MEDIUM",
+    "title": "Workspace dotenv files cannot override connector endpoint hosts",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-55cf-xx38-4p9p"
   },
   {
     "ghsa_id": "GHSA-72q8-jcmc-97wx",
@@ -126,6 +133,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mj59-h3q9-ghfh"
   },
   {
+    "ghsa_id": "GHSA-q3jj-46pq-826r",
+    "severity": "MEDIUM",
+    "title": "ACP child sessions inherit subagent security envelope constraints",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q3jj-46pq-826r"
+  },
+  {
     "ghsa_id": "GHSA-qrp5-gfw2-gxv4",
     "severity": "MEDIUM",
     "title": "Bundled MCP/LSP tools could bypass configured tool policy",
@@ -133,11 +147,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qrp5-gfw2-gxv4"
   },
   {
-    "ghsa_id": "GHSA-3pm9-5j7m-59vc",
-    "severity": "LOW",
-    "title": "Tlon Startup Migration Rehydrates Empty-Array Revocations From File Config",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pm9-5j7m-59vc"
+    "ghsa_id": "GHSA-x3h8-jrgh-p8jx",
+    "severity": "MEDIUM",
+    "title": "Exec allowlist analysis rejects shell expansion in unquoted heredocs",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x3h8-jrgh-p8jx"
   },
   {
     "ghsa_id": "GHSA-57r2-h2wj-g887",
@@ -154,6 +168,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-89r3-6x4j-v7wf"
   },
   {
+    "ghsa_id": "GHSA-93rg-2xm5-2p9v",
+    "severity": "LOW",
+    "title": "Gateway Control UI bootstrap config required Gateway auth",
+    "published": "2026-04-23",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-93rg-2xm5-2p9v"
+  },
+  {
     "ghsa_id": "GHSA-c4qg-j8jg-42q5",
     "severity": "LOW",
     "title": "QQBot direct media upload skipped URL SSRF validation",
@@ -161,25 +182,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qg-j8jg-42q5"
   },
   {
-    "ghsa_id": "GHSA-hhq4-97c2-p447",
-    "severity": "LOW",
-    "title": "Zalo webhook replay cache cross-target messageId scope bypass",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hhq4-97c2-p447"
-  },
-  {
     "ghsa_id": "GHSA-j4c5-89f5-f3pm",
     "severity": "LOW",
     "title": "Browser CDP profile creation skipped strict-mode SSRF checks",
     "published": "2026-04-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c5-89f5-f3pm"
-  },
-  {
-    "ghsa_id": "GHSA-rfqg-qgf8-xr9x",
-    "severity": "LOW",
-    "title": "Gateway `device.token.rotate` does not terminate active WebSocket sessions after credential rotation",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rfqg-qgf8-xr9x"
   },
   {
     "ghsa_id": "GHSA-v8qf-fr4g-28p2",
