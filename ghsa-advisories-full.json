@@ -7616,12 +7616,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-83f3-hh45-vfw9",
       "https://github.com/openclaw/openclaw/commit/a941a4fef9bc43b2973c92d0dcff5b8a426210c5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-40045",
+      "https://www.vulncheck.com/advisories/openclaw-cleartext-credential-transmission-via-unencrypted-websocket-gateway-endpoints",
       "https://github.com/advisories/GHSA-83f3-hh45-vfw9"
     ],
     "published_at": "2026-04-07T18:16:06Z",
-    "updated_at": "2026-04-20T23:43:23Z",
+    "updated_at": "2026-04-24T21:04:43Z",
     "github_reviewed_at": "2026-04-07T18:16:06Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-04-21T00:16:29Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -7636,8 +7638,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "score": 5.7
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:N/VA:L/SC:N/SI:N/SA:N",
@@ -7648,6 +7650,10 @@
       {
         "cwe_id": "CWE-200",
         "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      {
+        "cwe_id": "CWE-319",
+        "name": "Cleartext Transmission of Sensitive Information"
       }
     ],
     "credits": [
@@ -7701,8 +7707,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:A/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+      "score": 5.7
     },
     "epss": {
       "percentage": 9e-05,
@@ -8388,12 +8394,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-5hff-46vh-rxmw",
       "https://github.com/openclaw/openclaw/commit/54a0878517167c6e49900498cf77420dadb74beb",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-41298",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-session-termination-endpoint",
       "https://github.com/advisories/GHSA-5hff-46vh-rxmw"
     ],
     "published_at": "2026-04-07T18:15:37Z",
-    "updated_at": "2026-04-20T23:45:01Z",
+    "updated_at": "2026-04-24T21:04:43Z",
     "github_reviewed_at": "2026-04-07T18:15:37Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-04-21T00:16:30Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8408,8 +8416,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+        "score": 5.4
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:L/SC:N/SI:N/SA:N",
@@ -8420,6 +8428,10 @@
       {
         "cwe_id": "CWE-269",
         "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
       }
     ],
     "credits": [
@@ -8449,8 +8461,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
+      "score": 5.4
     },
     "epss": {
       "percentage": 0.00025,
@@ -9022,12 +9034,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-h43v-27wg-5mf9",
       "https://github.com/openclaw/openclaw/commit/4ee742174f36b5445703e3b1ef2fbd6ae6700fa4",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-41301",
+      "https://www.vulncheck.com/advisories/openclaw-forged-nostr-dm-pairing-state-creation-via-signature-verification-bypass",
       "https://github.com/advisories/GHSA-h43v-27wg-5mf9"
     ],
     "published_at": "2026-04-07T18:14:39Z",
-    "updated_at": "2026-04-21T00:00:00Z",
+    "updated_at": "2026-04-24T21:04:49Z",
     "github_reviewed_at": "2026-04-07T18:14:39Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-04-21T00:16:30Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -9042,8 +9056,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 5.3
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
@@ -9107,8 +9121,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "score": 5.3
     },
     "epss": {
       "percentage": 0.00018,

@@ -7,6 +7,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5h3g-6xhh-rg6p"
   },
   {
+    "ghsa_id": "GHSA-cwj3-vqpp-pmxr",
+    "severity": "HIGH",
+    "title": "Gateway config mutation guard allowed unsafe model-driven config writes",
+    "published": "2026-04-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr"
+  },
+  {
+    "ghsa_id": "GHSA-r39h-4c2p-3jxp",
+    "severity": "HIGH",
+    "title": "Arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
+    "published": "2026-04-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r39h-4c2p-3jxp"
+  },
+  {
     "ghsa_id": "GHSA-r6xh-pqhr-v4xh",
     "severity": "HIGH",
     "title": "MCP loopback owner context is derived from server-issued bearer tokens",
@@ -112,20 +126,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hxvm-xjvf-93f3"
   },
   {
-    "ghsa_id": "GHSA-jjw7-3vjf-fg5j",
-    "severity": "MEDIUM",
-    "title": "OpenClaw Nostr privateKey config redaction bypass leaks plaintext signing key via config.get",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jjw7-3vjf-fg5j"
-  },
-  {
-    "ghsa_id": "GHSA-mhgq-xpfq-6r66",
-    "severity": "MEDIUM",
-    "title": "Unauthenticated plugin-auth HTTP routes receive operator runtime scopes",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhgq-xpfq-6r66"
-  },
-  {
     "ghsa_id": "GHSA-mj59-h3q9-ghfh",
     "severity": "MEDIUM",
     "title": "MCP stdio server env could load dangerous startup variables from workspace config",
@@ -138,6 +138,13 @@
     "title": "ACP child sessions inherit subagent security envelope constraints",
     "published": "2026-04-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q3jj-46pq-826r"
+  },
+  {
+    "ghsa_id": "GHSA-q8ff-7ffm-m3r9",
+    "severity": "MEDIUM",
+    "title": "Webhooks SecretRef route secret remains valid after rotation/reload",
+    "published": "2026-04-24",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9"
   },
   {
     "ghsa_id": "GHSA-qrp5-gfw2-gxv4",
@@ -159,13 +166,6 @@
     "title": "Isolated cron awareness events were recorded as trusted system events",
     "published": "2026-04-21",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-57r2-h2wj-g887"
-  },
-  {
-    "ghsa_id": "GHSA-89r3-6x4j-v7wf",
-    "severity": "LOW",
-    "title": "Voice-call Plivo replay mutates in-process callback origin before replay rejection",
-    "published": "2026-03-31",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-89r3-6x4j-v7wf"
   },
   {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",

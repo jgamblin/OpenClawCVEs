@@ -3,7 +3,7 @@
 > Complete listing of all 142 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-04-24 18:21 UTC</sub>
+<sub>Last updated: 2026-04-25 00:47 UTC</sub>
 
 ---
 
@@ -141,6 +141,8 @@ These advisories are visible on the [repo security page](https://github.com/open
 | GHSA | Severity | Title | Published |
 |------|----------|-------|-----------|
 | [GHSA-5h3g-6xhh-rg6p](https://github.com/openclaw/openclaw/security/advisories/GHSA-5h3g-6xhh-rg6p) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenShell FS bridge reads pin and verify the opened file before returning bytes | 2026-04-23 |
+| [GHSA-cwj3-vqpp-pmxr](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway config mutation guard allowed unsafe model-driven config writes | 2026-04-24 |
+| [GHSA-r39h-4c2p-3jxp](https://github.com/openclaw/openclaw/security/advisories/GHSA-r39h-4c2p-3jxp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution | 2026-04-24 |
 | [GHSA-r6xh-pqhr-v4xh](https://github.com/openclaw/openclaw/security/advisories/GHSA-r6xh-pqhr-v4xh) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | MCP loopback owner context is derived from server-issued bearer tokens | 2026-04-23 |
 | [GHSA-wppj-c6mr-83jj](https://github.com/openclaw/openclaw/security/advisories/GHSA-wppj-c6mr-83jj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenShell FS bridge writes stay pinned to the sandbox mount root | 2026-04-23 |
 | [GHSA-2hh7-c75g-qj2r](https://github.com/openclaw/openclaw/security/advisories/GHSA-2hh7-c75g-qj2r) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Zalo outbound photo URLs are validated through the SSRF guard | 2026-04-23 |
@@ -156,14 +158,12 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-gfg9-5357-hv4c](https://github.com/openclaw/openclaw/security/advisories/GHSA-gfg9-5357-hv4c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Webchat audio embedding could read local files without local-root containment | 2026-04-22 |
 | [GHSA-h2vw-ph2c-jvwf](https://github.com/openclaw/openclaw/security/advisories/GHSA-h2vw-ph2c-jvwf) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Workspace dotenv MiniMax host override could redirect credentialed requests | 2026-04-21 |
 | [GHSA-hxvm-xjvf-93f3](https://github.com/openclaw/openclaw/security/advisories/GHSA-hxvm-xjvf-93f3) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Workspace dotenv could override OpenClaw runtime-control environment variables | 2026-04-21 |
-| [GHSA-jjw7-3vjf-fg5j](https://github.com/openclaw/openclaw/security/advisories/GHSA-jjw7-3vjf-fg5j) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw Nostr privateKey config redaction bypass leaks plaintext signing key via config.get | 2026-03-31 |
-| [GHSA-mhgq-xpfq-6r66](https://github.com/openclaw/openclaw/security/advisories/GHSA-mhgq-xpfq-6r66) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Unauthenticated plugin-auth HTTP routes receive operator runtime scopes | 2026-03-31 |
 | [GHSA-mj59-h3q9-ghfh](https://github.com/openclaw/openclaw/security/advisories/GHSA-mj59-h3q9-ghfh) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | MCP stdio server env could load dangerous startup variables from workspace config | 2026-04-21 |
 | [GHSA-q3jj-46pq-826r](https://github.com/openclaw/openclaw/security/advisories/GHSA-q3jj-46pq-826r) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | ACP child sessions inherit subagent security envelope constraints | 2026-04-23 |
+| [GHSA-q8ff-7ffm-m3r9](https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Webhooks SecretRef route secret remains valid after rotation/reload | 2026-04-24 |
 | [GHSA-qrp5-gfw2-gxv4](https://github.com/openclaw/openclaw/security/advisories/GHSA-qrp5-gfw2-gxv4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Bundled MCP/LSP tools could bypass configured tool policy | 2026-04-21 |
 | [GHSA-x3h8-jrgh-p8jx](https://github.com/openclaw/openclaw/security/advisories/GHSA-x3h8-jrgh-p8jx) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Exec allowlist analysis rejects shell expansion in unquoted heredocs | 2026-04-23 |
 | [GHSA-57r2-h2wj-g887](https://github.com/openclaw/openclaw/security/advisories/GHSA-57r2-h2wj-g887) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Isolated cron awareness events were recorded as trusted system events | 2026-04-21 |
-| [GHSA-89r3-6x4j-v7wf](https://github.com/openclaw/openclaw/security/advisories/GHSA-89r3-6x4j-v7wf) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Voice-call Plivo replay mutates in-process callback origin before replay rejection | 2026-03-31 |
 | [GHSA-93rg-2xm5-2p9v](https://github.com/openclaw/openclaw/security/advisories/GHSA-93rg-2xm5-2p9v) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Gateway Control UI bootstrap config required Gateway auth | 2026-04-23 |
 | [GHSA-c4qg-j8jg-42q5](https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qg-j8jg-42q5) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | QQBot direct media upload skipped URL SSRF validation | 2026-04-21 |
 | [GHSA-j4c5-89f5-f3pm](https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c5-89f5-f3pm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Browser CDP profile creation skipped strict-mode SSRF checks | 2026-04-21 |
