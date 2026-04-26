@@ -7,11 +7,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5h3g-6xhh-rg6p"
   },
   {
+    "ghsa_id": "GHSA-846p-hgpv-vphc",
+    "severity": "HIGH",
+    "title": "QQ Bot structured payloads could read arbitrary local files",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-846p-hgpv-vphc"
+  },
+  {
     "ghsa_id": "GHSA-cwj3-vqpp-pmxr",
     "severity": "HIGH",
     "title": "Gateway config mutation guard allowed unsafe model-driven config writes",
     "published": "2026-04-24",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr"
+  },
+  {
+    "ghsa_id": "GHSA-m34q-h93w-vg5x",
+    "severity": "HIGH",
+    "title": "OpenShell mirror mode could delete arbitrary remote directories when roots were mis-scoped",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m34q-h93w-vg5x"
   },
   {
     "ghsa_id": "GHSA-r39h-4c2p-3jxp",
@@ -42,11 +56,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2hh7-c75g-qj2r"
   },
   {
-    "ghsa_id": "GHSA-2xcp-x87w-q377",
+    "ghsa_id": "GHSA-2qrv-rc5x-2g2h",
     "severity": "MEDIUM",
-    "title": "Hook mapping templates could bypass hook session-key opt-in",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2xcp-x87w-q377"
+    "title": "Untrusted workspace channel shadows could execute during built-in channel setup",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2qrv-rc5x-2g2h"
+  },
+  {
+    "ghsa_id": "GHSA-4p4f-fc8q-84m3",
+    "severity": "MEDIUM",
+    "title": "iOS A2UI bridge trusted generic local-network pages for agent.request dispatch",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4p4f-fc8q-84m3"
   },
   {
     "ghsa_id": "GHSA-55cf-xx38-4p9p",
@@ -56,18 +77,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-55cf-xx38-4p9p"
   },
   {
-    "ghsa_id": "GHSA-72q8-jcmc-97wx",
+    "ghsa_id": "GHSA-5hff-46vh-rxmw",
     "severity": "MEDIUM",
-    "title": "Feishu card actions could misclassify DMs and skip dmPolicy",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-72q8-jcmc-97wx"
+    "title": "Read-scoped identity-bearing HTTP clients could kill sessions via /sessions/:sessionKey/kill",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5hff-46vh-rxmw"
   },
   {
-    "ghsa_id": "GHSA-7jm2-g593-4qrc",
+    "ghsa_id": "GHSA-98ch-45wp-ch47",
     "severity": "MEDIUM",
-    "title": "Agent gateway config mutations could change protected operator settings",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jm2-g593-4qrc"
+    "title": "Windows-compatible env override keys could bypass system.run approval binding",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-98ch-45wp-ch47"
   },
   {
     "ghsa_id": "GHSA-9jpj-g8vv-j5mf",
@@ -112,27 +133,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gfg9-5357-hv4c"
   },
   {
-    "ghsa_id": "GHSA-h2vw-ph2c-jvwf",
-    "severity": "MEDIUM",
-    "title": "Workspace dotenv MiniMax host override could redirect credentialed requests",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h2vw-ph2c-jvwf"
-  },
-  {
-    "ghsa_id": "GHSA-hxvm-xjvf-93f3",
-    "severity": "MEDIUM",
-    "title": "Workspace dotenv could override OpenClaw runtime-control environment variables",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hxvm-xjvf-93f3"
-  },
-  {
-    "ghsa_id": "GHSA-mj59-h3q9-ghfh",
-    "severity": "MEDIUM",
-    "title": "MCP stdio server env could load dangerous startup variables from workspace config",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mj59-h3q9-ghfh"
-  },
-  {
     "ghsa_id": "GHSA-q3jj-46pq-826r",
     "severity": "MEDIUM",
     "title": "ACP child sessions inherit subagent security envelope constraints",
@@ -147,13 +147,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9"
   },
   {
-    "ghsa_id": "GHSA-qrp5-gfw2-gxv4",
-    "severity": "MEDIUM",
-    "title": "Bundled MCP/LSP tools could bypass configured tool policy",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qrp5-gfw2-gxv4"
-  },
-  {
     "ghsa_id": "GHSA-x3h8-jrgh-p8jx",
     "severity": "MEDIUM",
     "title": "Exec allowlist analysis rejects shell expansion in unquoted heredocs",
@@ -161,11 +154,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x3h8-jrgh-p8jx"
   },
   {
-    "ghsa_id": "GHSA-57r2-h2wj-g887",
+    "ghsa_id": "GHSA-2f7j-rp58-mr42",
     "severity": "LOW",
-    "title": "Isolated cron awareness events were recorded as trusted system events",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-57r2-h2wj-g887"
+    "title": "Gateway hello snapshots exposed host config and state paths to non-admin clients",
+    "published": "2026-04-02",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2f7j-rp58-mr42"
   },
   {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",
@@ -173,33 +166,5 @@
     "title": "Gateway Control UI bootstrap config required Gateway auth",
     "published": "2026-04-23",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-93rg-2xm5-2p9v"
-  },
-  {
-    "ghsa_id": "GHSA-c4qg-j8jg-42q5",
-    "severity": "LOW",
-    "title": "QQBot direct media upload skipped URL SSRF validation",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qg-j8jg-42q5"
-  },
-  {
-    "ghsa_id": "GHSA-j4c5-89f5-f3pm",
-    "severity": "LOW",
-    "title": "Browser CDP profile creation skipped strict-mode SSRF checks",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j4c5-89f5-f3pm"
-  },
-  {
-    "ghsa_id": "GHSA-v8qf-fr4g-28p2",
-    "severity": "LOW",
-    "title": "Assistant media route missed scope enforcement for trusted-proxy auth",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8qf-fr4g-28p2"
-  },
-  {
-    "ghsa_id": "GHSA-xrq9-jm7v-g9h7",
-    "severity": "LOW",
-    "title": "Paired-device pairing actions were not limited to the caller device",
-    "published": "2026-04-21",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xrq9-jm7v-g9h7"
   }
 ]
