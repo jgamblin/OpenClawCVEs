@@ -4678,7 +4678,7 @@
     "url": "https://api.github.com/advisories/GHSA-vw3h-q6xq-jjm5",
     "html_url": "https://github.com/advisories/GHSA-vw3h-q6xq-jjm5",
     "summary": "OpenClaw: Voice-call realtime WebSocket accepted oversized frames",
-    "description": "## Summary\n\nVoice-call realtime WebSocket accepted oversized frames.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `>= 2026.4.9 < 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe voice-call realtime WebSocket path could accept oversized frames, creating a remote availability risk for deployments exposing that webhook path.\n\n## Technical Details\n\nThe fix rejects oversized realtime WebSocket frames before processing them.\n\n## Fix\n\nThe issue was fixed in #63890. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `afadb7dae6738819ad9c7d2597ace0516957d20e`\n- PR: #63890\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
+    "description": "## Summary\n\nVoice-call realtime WebSocket accepted oversized frames.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `>= 2026.4.9 < 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe voice-call realtime WebSocket path could accept oversized frames, creating a remote availability risk for deployments exposing that webhook path.\n\n## Technical Details\n\nThe fix rejects oversized realtime WebSocket frames before processing them.\n\n## Fix\n\nThe issue was fixed in #63890. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `afadb7dae6738819ad9c7d2597ace0516957d20e`\n- PR: #63890\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Reporters\n\nThanks to G0odUser from ADLab of VenusTech\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
     "type": "reviewed",
     "severity": "high",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-vw3h-q6xq-jjm5",
@@ -4696,7 +4696,7 @@
       "https://github.com/advisories/GHSA-vw3h-q6xq-jjm5"
     ],
     "published_at": "2026-04-17T21:48:36Z",
-    "updated_at": "2026-04-17T21:48:40Z",
+    "updated_at": "2026-04-27T16:00:11Z",
     "github_reviewed_at": "2026-04-17T21:48:36Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
