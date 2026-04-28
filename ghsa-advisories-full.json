@@ -6700,7 +6700,7 @@
   },
   {
     "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41915",
     "url": "https://api.github.com/advisories/GHSA-cm8v-2vh9-cxf3",
     "html_url": "https://github.com/advisories/GHSA-cm8v-2vh9-cxf3",
     "summary": "OpenClaw: GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
@@ -6713,6 +6713,10 @@
       {
         "value": "GHSA-cm8v-2vh9-cxf3",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41915",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6720,7 +6724,7 @@
       "https://github.com/advisories/GHSA-cm8v-2vh9-cxf3"
     ],
     "published_at": "2026-04-09T20:28:32Z",
-    "updated_at": "2026-04-09T20:28:37Z",
+    "updated_at": "2026-04-28T18:26:54Z",
     "github_reviewed_at": "2026-04-09T20:28:32Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6788,7 +6792,7 @@
   },
   {
     "ghsa_id": "GHSA-ccx3-fw7q-rr2r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42420",
     "url": "https://api.github.com/advisories/GHSA-ccx3-fw7q-rr2r",
     "html_url": "https://github.com/advisories/GHSA-ccx3-fw7q-rr2r",
     "summary": "OpenClaw: Multiple Code Paths Missing Base64 Pre-Allocation Size Checks",
@@ -6801,6 +6805,10 @@
       {
         "value": "GHSA-ccx3-fw7q-rr2r",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42420",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6808,7 +6816,7 @@
       "https://github.com/advisories/GHSA-ccx3-fw7q-rr2r"
     ],
     "published_at": "2026-04-09T17:37:20Z",
-    "updated_at": "2026-04-09T17:37:21Z",
+    "updated_at": "2026-04-28T18:27:28Z",
     "github_reviewed_at": "2026-04-09T17:37:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6896,7 +6904,7 @@
   },
   {
     "ghsa_id": "GHSA-3vvq-q2qc-7rmp",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42428",
     "url": "https://api.github.com/advisories/GHSA-3vvq-q2qc-7rmp",
     "html_url": "https://github.com/advisories/GHSA-3vvq-q2qc-7rmp",
     "summary": "OpenClaw B-M3: ClawHub package downloads are not enforced with integrity verification",
@@ -6909,6 +6917,10 @@
       {
         "value": "GHSA-3vvq-q2qc-7rmp",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42428",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6916,7 +6928,7 @@
       "https://github.com/advisories/GHSA-3vvq-q2qc-7rmp"
     ],
     "published_at": "2026-04-09T17:37:13Z",
-    "updated_at": "2026-04-09T17:37:16Z",
+    "updated_at": "2026-04-28T18:29:28Z",
     "github_reviewed_at": "2026-04-09T17:37:13Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7159,7 +7171,7 @@
   },
   {
     "ghsa_id": "GHSA-w8g9-x8gx-crmm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42430",
     "url": "https://api.github.com/advisories/GHSA-w8g9-x8gx-crmm",
     "html_url": "https://github.com/advisories/GHSA-w8g9-x8gx-crmm",
     "summary": "OpenClaw: Strict browser SSRF bypass in Playwright redirect handling leaves private targets reachable",
@@ -7172,6 +7184,10 @@
       {
         "value": "GHSA-w8g9-x8gx-crmm",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42430",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7179,7 +7195,7 @@
       "https://github.com/advisories/GHSA-w8g9-x8gx-crmm"
     ],
     "published_at": "2026-04-09T17:36:59Z",
-    "updated_at": "2026-04-09T17:37:01Z",
+    "updated_at": "2026-04-28T18:30:05Z",
     "github_reviewed_at": "2026-04-09T17:36:59Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7267,7 +7283,7 @@
   },
   {
     "ghsa_id": "GHSA-4f8g-77mw-3rxc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42429",
     "url": "https://api.github.com/advisories/GHSA-4f8g-77mw-3rxc",
     "html_url": "https://github.com/advisories/GHSA-4f8g-77mw-3rxc",
     "summary": "OpenClaw: Gateway plugin HTTP `auth: gateway` widens identity-bearing `operator.read` requests into runtime `operator.write`",
@@ -7280,6 +7296,10 @@
       {
         "value": "GHSA-4f8g-77mw-3rxc",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42429",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7287,7 +7307,7 @@
       "https://github.com/advisories/GHSA-4f8g-77mw-3rxc"
     ],
     "published_at": "2026-04-09T17:36:53Z",
-    "updated_at": "2026-04-09T17:36:56Z",
+    "updated_at": "2026-04-28T18:29:48Z",
     "github_reviewed_at": "2026-04-09T17:36:53Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7375,7 +7395,7 @@
   },
   {
     "ghsa_id": "GHSA-vr5g-mmx7-h897",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41912",
     "url": "https://api.github.com/advisories/GHSA-vr5g-mmx7-h897",
     "html_url": "https://github.com/advisories/GHSA-vr5g-mmx7-h897",
     "summary": "OpenClaw has Browser SSRF Policy Bypass via Interaction-Triggered Navigation",
@@ -7388,6 +7408,10 @@
       {
         "value": "GHSA-vr5g-mmx7-h897",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41912",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7395,7 +7419,7 @@
       "https://github.com/advisories/GHSA-vr5g-mmx7-h897"
     ],
     "published_at": "2026-04-09T17:36:48Z",
-    "updated_at": "2026-04-17T01:58:17Z",
+    "updated_at": "2026-04-28T18:25:57Z",
     "github_reviewed_at": "2026-04-09T17:36:48Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7507,7 +7531,7 @@
   },
   {
     "ghsa_id": "GHSA-67mf-f936-ppxf",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42426",
     "url": "https://api.github.com/advisories/GHSA-67mf-f936-ppxf",
     "html_url": "https://github.com/advisories/GHSA-67mf-f936-ppxf",
     "summary": "OpenClaw `node.pair.approve` placed in `operator.write` scope instead of `operator.pairing` allows unprivileged pairing approval",
@@ -7520,6 +7544,10 @@
       {
         "value": "GHSA-67mf-f936-ppxf",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42426",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7527,7 +7555,7 @@
       "https://github.com/advisories/GHSA-67mf-f936-ppxf"
     ],
     "published_at": "2026-04-09T17:36:33Z",
-    "updated_at": "2026-04-09T17:36:36Z",
+    "updated_at": "2026-04-28T18:28:53Z",
     "github_reviewed_at": "2026-04-09T17:36:33Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7591,7 +7619,7 @@
   },
   {
     "ghsa_id": "GHSA-5fc7-f62m-8983",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41911",
     "url": "https://api.github.com/advisories/GHSA-5fc7-f62m-8983",
     "html_url": "https://github.com/advisories/GHSA-5fc7-f62m-8983",
     "summary": "OpenClaw: Feishu docx upload_file/upload_image Bypasses Workspace-Only Filesystem Policy (GHSA-qf48-qfv4-jjm9 Incomplete Fix)",
@@ -7604,6 +7632,10 @@
       {
         "value": "GHSA-5fc7-f62m-8983",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41911",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7611,7 +7643,7 @@
       "https://github.com/advisories/GHSA-5fc7-f62m-8983"
     ],
     "published_at": "2026-04-09T17:36:29Z",
-    "updated_at": "2026-04-09T17:36:31Z",
+    "updated_at": "2026-04-28T18:25:36Z",
     "github_reviewed_at": "2026-04-09T17:36:29Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7650,7 +7682,7 @@
   },
   {
     "ghsa_id": "GHSA-3fv3-6p2v-gxwj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41914",
     "url": "https://api.github.com/advisories/GHSA-3fv3-6p2v-gxwj",
     "html_url": "https://github.com/advisories/GHSA-3fv3-6p2v-gxwj",
     "summary": "OpenClaw QQ Bot Extension missing SSRF Protection on All Media Fetch Paths",
@@ -7663,6 +7695,10 @@
       {
         "value": "GHSA-3fv3-6p2v-gxwj",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41914",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7670,7 +7706,7 @@
       "https://github.com/advisories/GHSA-3fv3-6p2v-gxwj"
     ],
     "published_at": "2026-04-09T17:36:20Z",
-    "updated_at": "2026-04-09T17:36:21Z",
+    "updated_at": "2026-04-28T18:26:36Z",
     "github_reviewed_at": "2026-04-09T17:36:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7734,7 +7770,7 @@
   },
   {
     "ghsa_id": "GHSA-5h3f-885m-v22w",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42421",
     "url": "https://api.github.com/advisories/GHSA-5h3f-885m-v22w",
     "html_url": "https://github.com/advisories/GHSA-5h3f-885m-v22w",
     "summary": "OpenClaw: Existing WS sessions survive shared gateway token rotation",
@@ -7747,6 +7783,10 @@
       {
         "value": "GHSA-5h3f-885m-v22w",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42421",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7754,7 +7794,7 @@
       "https://github.com/advisories/GHSA-5h3f-885m-v22w"
     ],
     "published_at": "2026-04-09T17:36:02Z",
-    "updated_at": "2026-04-09T17:36:11Z",
+    "updated_at": "2026-04-28T18:27:45Z",
     "github_reviewed_at": "2026-04-09T17:36:02Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7818,7 +7858,7 @@
   },
   {
     "ghsa_id": "GHSA-25wv-8phj-8p7r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41913",
     "url": "https://api.github.com/advisories/GHSA-25wv-8phj-8p7r",
     "html_url": "https://github.com/advisories/GHSA-25wv-8phj-8p7r",
     "summary": "OpenClaw: Concurrent async auth attempts can bypass the intended shared-secret rate-limit budget on Tailscale-capable paths",
@@ -7831,6 +7871,10 @@
       {
         "value": "GHSA-25wv-8phj-8p7r",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41913",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7838,7 +7882,7 @@
       "https://github.com/advisories/GHSA-25wv-8phj-8p7r"
     ],
     "published_at": "2026-04-09T17:35:57Z",
-    "updated_at": "2026-04-09T17:36:01Z",
+    "updated_at": "2026-04-28T18:26:16Z",
     "github_reviewed_at": "2026-04-09T17:35:57Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7902,7 +7946,7 @@
   },
   {
     "ghsa_id": "GHSA-5wj5-87vq-39xm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42432",
     "url": "https://api.github.com/advisories/GHSA-5wj5-87vq-39xm",
     "html_url": "https://github.com/advisories/GHSA-5wj5-87vq-39xm",
     "summary": "OpenClaw: Node Pairing Reconnect Command Escalation Bypasses operator.admin Scope Requirement",
@@ -7915,6 +7959,10 @@
       {
         "value": "GHSA-5wj5-87vq-39xm",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42432",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7922,7 +7970,7 @@
       "https://github.com/advisories/GHSA-5wj5-87vq-39xm"
     ],
     "published_at": "2026-04-09T17:35:53Z",
-    "updated_at": "2026-04-09T17:35:54Z",
+    "updated_at": "2026-04-28T18:30:39Z",
     "github_reviewed_at": "2026-04-09T17:35:53Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8010,7 +8058,7 @@
   },
   {
     "ghsa_id": "GHSA-vc32-h5mq-453v",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41910",
     "url": "https://api.github.com/advisories/GHSA-vc32-h5mq-453v",
     "html_url": "https://github.com/advisories/GHSA-vc32-h5mq-453v",
     "summary": "OpenClaw: /allowlist omits owner-only enforcement for cross-channel allowlist writes",
@@ -8023,6 +8071,10 @@
       {
         "value": "GHSA-vc32-h5mq-453v",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41910",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8030,7 +8082,7 @@
       "https://github.com/advisories/GHSA-vc32-h5mq-453v"
     ],
     "published_at": "2026-04-09T17:34:33Z",
-    "updated_at": "2026-04-09T17:34:35Z",
+    "updated_at": "2026-04-28T18:25:15Z",
     "github_reviewed_at": "2026-04-09T17:34:33Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8113,7 +8165,7 @@
   },
   {
     "ghsa_id": "GHSA-68x5-xx89-w9mm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41916",
     "url": "https://api.github.com/advisories/GHSA-68x5-xx89-w9mm",
     "html_url": "https://github.com/advisories/GHSA-68x5-xx89-w9mm",
     "summary": "OpenClaw: resolvedAuth closure becomes stale after config reload",
@@ -8126,6 +8178,10 @@
       {
         "value": "GHSA-68x5-xx89-w9mm",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41916",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8133,7 +8189,7 @@
       "https://github.com/advisories/GHSA-68x5-xx89-w9mm"
     ],
     "published_at": "2026-04-09T17:34:27Z",
-    "updated_at": "2026-04-09T17:34:30Z",
+    "updated_at": "2026-04-28T18:27:10Z",
     "github_reviewed_at": "2026-04-09T17:34:27Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8197,7 +8253,7 @@
   },
   {
     "ghsa_id": "GHSA-cmfr-9m2r-xwhq",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42431",
     "url": "https://api.github.com/advisories/GHSA-cmfr-9m2r-xwhq",
     "html_url": "https://github.com/advisories/GHSA-cmfr-9m2r-xwhq",
     "summary": "OpenClaw `node.invoke(browser.proxy)` bypasses `browser.request` persistent profile-mutation guard",
@@ -8210,6 +8266,10 @@
       {
         "value": "GHSA-cmfr-9m2r-xwhq",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42431",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8217,7 +8277,7 @@
       "https://github.com/advisories/GHSA-cmfr-9m2r-xwhq"
     ],
     "published_at": "2026-04-09T17:34:21Z",
-    "updated_at": "2026-04-09T17:34:24Z",
+    "updated_at": "2026-04-28T18:30:21Z",
     "github_reviewed_at": "2026-04-09T17:34:21Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8281,7 +8341,7 @@
   },
   {
     "ghsa_id": "GHSA-whf9-3hcx-gq54",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42422",
     "url": "https://api.github.com/advisories/GHSA-whf9-3hcx-gq54",
     "html_url": "https://github.com/advisories/GHSA-whf9-3hcx-gq54",
     "summary": "OpenClaw `device.token.rotate` mints tokens for unapproved roles, bypassing device role-upgrade pairing",
@@ -8294,6 +8354,10 @@
       {
         "value": "GHSA-whf9-3hcx-gq54",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42422",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8301,7 +8365,7 @@
       "https://github.com/advisories/GHSA-whf9-3hcx-gq54"
     ],
     "published_at": "2026-04-09T17:33:05Z",
-    "updated_at": "2026-04-09T17:33:05Z",
+    "updated_at": "2026-04-28T18:28:01Z",
     "github_reviewed_at": "2026-04-09T17:33:05Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8365,7 +8429,7 @@
   },
   {
     "ghsa_id": "GHSA-qqq7-4hxc-x63c",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42424",
     "url": "https://api.github.com/advisories/GHSA-qqq7-4hxc-x63c",
     "html_url": "https://github.com/advisories/GHSA-qqq7-4hxc-x63c",
     "summary": "OpenClaw: Shared reply MEDIA - paths are treated as trusted and can trigger cross-channel local file exfiltration",
@@ -8378,6 +8442,10 @@
       {
         "value": "GHSA-qqq7-4hxc-x63c",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42424",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8385,7 +8453,7 @@
       "https://github.com/advisories/GHSA-qqq7-4hxc-x63c"
     ],
     "published_at": "2026-04-09T17:32:58Z",
-    "updated_at": "2026-04-09T17:33:00Z",
+    "updated_at": "2026-04-28T18:28:36Z",
     "github_reviewed_at": "2026-04-09T17:32:58Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8449,7 +8517,7 @@
   },
   {
     "ghsa_id": "GHSA-q2gc-xjqw-qp89",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42423",
     "url": "https://api.github.com/advisories/GHSA-q2gc-xjqw-qp89",
     "html_url": "https://github.com/advisories/GHSA-q2gc-xjqw-qp89",
     "summary": "OpenClaw: strictInlineEval explicit-approval boundary bypassed by approval-timeout fallback on gateway and node exec hosts",
@@ -8462,6 +8530,10 @@
       {
         "value": "GHSA-q2gc-xjqw-qp89",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42423",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8469,7 +8541,7 @@
       "https://github.com/advisories/GHSA-q2gc-xjqw-qp89"
     ],
     "published_at": "2026-04-09T17:32:49Z",
-    "updated_at": "2026-04-09T17:32:50Z",
+    "updated_at": "2026-04-28T18:28:19Z",
     "github_reviewed_at": "2026-04-09T17:32:49Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8557,7 +8629,7 @@
   },
   {
     "ghsa_id": "GHSA-7437-7hg8-frrw",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42427",
     "url": "https://api.github.com/advisories/GHSA-7437-7hg8-frrw",
     "html_url": "https://github.com/advisories/GHSA-7437-7hg8-frrw",
     "summary": "OpenClaw: HGRCPATH, CARGO_BUILD_RUSTC_WRAPPER, RUSTC_WRAPPER, and MAKEFLAGS missing from exec env denylist \u2014 RCE via build tool env injection (GHSA-cm8v-2vh9-cxf3 class)",
@@ -8570,6 +8642,10 @@
       {
         "value": "GHSA-7437-7hg8-frrw",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42427",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -8578,7 +8654,7 @@
       "https://github.com/advisories/GHSA-7437-7hg8-frrw"
     ],
     "published_at": "2026-04-09T14:22:29Z",
-    "updated_at": "2026-04-09T14:22:33Z",
+    "updated_at": "2026-04-28T18:29:10Z",
     "github_reviewed_at": "2026-04-09T14:22:29Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -8999,7 +9075,7 @@
   },
   {
     "ghsa_id": "GHSA-jj6q-rrrf-h66h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41407",
     "url": "https://api.github.com/advisories/GHSA-jj6q-rrrf-h66h",
     "html_url": "https://github.com/advisories/GHSA-jj6q-rrrf-h66h",
     "summary": "OpenClaw: Shared-secret comparison call sites leaked length information through timing",
@@ -9012,6 +9088,10 @@
       {
         "value": "GHSA-jj6q-rrrf-h66h",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41407",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -9020,7 +9100,7 @@
       "https://github.com/advisories/GHSA-jj6q-rrrf-h66h"
     ],
     "published_at": "2026-04-07T18:16:03Z",
-    "updated_at": "2026-04-07T18:16:04Z",
+    "updated_at": "2026-04-28T18:24:40Z",
     "github_reviewed_at": "2026-04-07T18:16:03Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
