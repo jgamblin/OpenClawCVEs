@@ -144,20 +144,20 @@
     "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
-    "cve_id": "CVE-2026-41407",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.4.2 - Timing Side Channel in Shared-Secret Comparison",
-    "date_published": "2026-04-28",
-    "ghsa_id": "GHSA-jj6q-rrrf-h66h"
-  },
-  {
     "cve_id": "CVE-2026-41913",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw: Concurrent async auth attempts can bypass the intended shared-secret rate-limit budget on Tailscale-capable paths",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-25wv-8phj-8p7r"
+  },
+  {
+    "cve_id": "CVE-2026-41407",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.4.2 - Timing Side Channel in Shared-Secret Comparison",
+    "date_published": "2026-04-28",
+    "ghsa_id": "GHSA-jj6q-rrrf-h66h"
   },
   {
     "cve_id": "CVE-2026-41911",
@@ -240,14 +240,6 @@
     "ghsa_id": "GHSA-w8g9-x8gx-crmm"
   },
   {
-    "cve_id": "CVE-2026-24764",
-    "severity": "LOW",
-    "cvss": 3.7,
-    "title": "OpenClaw has Remote Code Execution via System Prompt Injection in Slack Channel Descriptions",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-782p-5fr5-7fj8"
-  },
-  {
     "cve_id": "CVE-2026-41910",
     "severity": "LOW",
     "cvss": 2.3,
@@ -256,19 +248,19 @@
     "ghsa_id": "GHSA-vc32-h5mq-453v"
   },
   {
-    "cve_id": "CVE-2026-42421",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw: Existing WS sessions survive shared gateway token rotation",
-    "date_published": "2026-04-28",
-    "ghsa_id": "GHSA-5h3f-885m-v22w"
-  },
-  {
     "cve_id": "CVE-2026-41916",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.4.8 - Stale Authentication State via Config Reload",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-68x5-xx89-w9mm"
+  },
+  {
+    "cve_id": "CVE-2026-42421",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw: Existing WS sessions survive shared gateway token rotation",
+    "date_published": "2026-04-28",
+    "ghsa_id": "GHSA-5h3f-885m-v22w"
   }
 ]
