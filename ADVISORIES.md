@@ -3,7 +3,7 @@
 > Complete listing of all 137 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-04-28 18:40 UTC</sub>
+<sub>Last updated: 2026-04-29 00:56 UTC</sub>
 
 ---
 
@@ -185,26 +185,26 @@ These advisories are visible on the [repo security page](https://github.com/open
 | CVE-2026-29612 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-40037 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
 | CVE-2026-40045 | ✅ **PUBLISHED** | ✅ | 2026-04-07 | VulnCheck |
-| CVE-2026-41407 | ✅ **PUBLISHED** | ❌ | 2026-04-07 | — |
-| CVE-2026-41910 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41911 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41912 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41913 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41914 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41915 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-41916 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42420 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42421 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42422 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42423 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42424 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42426 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42427 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42428 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42429 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42430 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42431 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
-| CVE-2026-42432 | ✅ **PUBLISHED** | ❌ | 2026-04-09 | — |
+| CVE-2026-41407 | ✅ **PUBLISHED** | ✅ | 2026-04-07 | VulnCheck |
+| CVE-2026-41910 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41911 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41912 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41913 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41914 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41915 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-41916 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42420 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42421 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42422 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42423 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42424 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42426 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42427 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42428 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42429 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42430 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42431 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
+| CVE-2026-42432 | ✅ **PUBLISHED** | ✅ | 2026-04-09 | VulnCheck |
 | CVE-2026-6011 | ✅ **PUBLISHED** | ❌ | 2026-04-10 | — |
 
 ---
