@@ -1,5 +1,48 @@
 [
   {
+    "ghsa_id": "GHSA-gfg9-5357-hv4c",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Webchat audio embedding could read local files without local-root containment",
+    "published": "2026-04-29",
+    "html_url": "https://github.com/advisories/GHSA-gfg9-5357-hv4c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.14"
+    ],
+    "fixed_versions": [
+      "2026.4.15"
+    ],
+    "fixed_version": "2026.4.15",
+    "cwes": [
+      "CWE-22",
+      "CWE-200"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-c28g-vh7m-fm7v",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
+    "published": "2026-04-29",
+    "html_url": "https://github.com/advisories/GHSA-c28g-vh7m-fm7v",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.20"
+    ],
+    "fixed_versions": [
+      "2026.4.21"
+    ],
+    "fixed_version": "2026.4.21",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-7jm2-g593-4qrc",
     "cve_id": null,
     "severity": "medium",
@@ -2060,48 +2103,6 @@
     "cwes": [
       "CWE-349",
       "CWE-440"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-fh32-73r9-rgh5",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Trailing-dot localhost CDP hosts could bypass remote loopback protections",
-    "published": "2026-04-07",
-    "html_url": "https://github.com/advisories/GHSA-fh32-73r9-rgh5",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.4.1"
-    ],
-    "fixed_versions": [
-      "2026.4.2"
-    ],
-    "fixed_version": "2026.4.2",
-    "cwes": [
-      "CWE-20"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-w6wx-jq6j-6mcj",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: pnpm dlx approvals did not bind local script operands",
-    "published": "2026-04-07",
-    "html_url": "https://github.com/advisories/GHSA-w6wx-jq6j-6mcj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.4.1"
-    ],
-    "fixed_versions": [
-      "2026.4.2"
-    ],
-    "fixed_version": "2026.4.2",
-    "cwes": [
-      "CWE-863"
     ]
   },
   {
