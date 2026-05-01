@@ -48,20 +48,20 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-42423",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: strictInlineEval explicit-approval boundary bypassed by approval-timeout fallback on gateway and node exec hosts",
-    "date_published": "2026-04-28",
-    "ghsa_id": "GHSA-q2gc-xjqw-qp89"
-  },
-  {
     "cve_id": "CVE-2026-42422",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw < 2026.4.8 - Role Bypass in device.token.rotate Function",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-whf9-3hcx-gq54"
+  },
+  {
+    "cve_id": "CVE-2026-42423",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: strictInlineEval explicit-approval boundary bypassed by approval-timeout fallback on gateway and node exec hosts",
+    "date_published": "2026-04-28",
+    "ghsa_id": "GHSA-q2gc-xjqw-qp89"
   },
   {
     "cve_id": "CVE-2026-42431",
@@ -192,20 +192,20 @@
     "ghsa_id": "GHSA-qqq7-4hxc-x63c"
   },
   {
-    "cve_id": "CVE-2026-42427",
-    "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw: HGRCPATH, CARGO_BUILD_RUSTC_WRAPPER, RUSTC_WRAPPER, and MAKEFLAGS missing from exec env denylist \u2014 RCE via build tool env injection (GHSA-cm8v-2vh9-cxf3 class)",
-    "date_published": "2026-04-28",
-    "ghsa_id": "GHSA-7437-7hg8-frrw"
-  },
-  {
     "cve_id": "CVE-2026-41915",
     "severity": "MEDIUM",
     "cvss": 5.8,
     "title": "OpenClaw: GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-cm8v-2vh9-cxf3"
+  },
+  {
+    "cve_id": "CVE-2026-42427",
+    "severity": "MEDIUM",
+    "cvss": 5.8,
+    "title": "OpenClaw: HGRCPATH, CARGO_BUILD_RUSTC_WRAPPER, RUSTC_WRAPPER, and MAKEFLAGS missing from exec env denylist \u2014 RCE via build tool env injection (GHSA-cm8v-2vh9-cxf3 class)",
+    "date_published": "2026-04-28",
+    "ghsa_id": "GHSA-7437-7hg8-frrw"
   },
   {
     "cve_id": "CVE-2026-42420",

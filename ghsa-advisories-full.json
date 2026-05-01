@@ -10426,7 +10426,7 @@
     "cvss_severities": {
       "cvss_v3": {
         "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-        "score": 7.8
+        "score": 7.7
       },
       "cvss_v4": {
         "vector_string": null,
@@ -10467,7 +10467,7 @@
     ],
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
-      "score": 7.8
+      "score": 7.7
     },
     "epss": {
       "percentage": 6e-05,
