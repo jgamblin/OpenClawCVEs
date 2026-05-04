@@ -1,5 +1,26 @@
 [
   {
+    "ghsa_id": "GHSA-qm77-8qjp-4vcm",
+    "cve_id": "CVE-2026-41358",
+    "severity": "low",
+    "title": "OpenClaw: Slack thread context could include messages from non-allowlisted senders",
+    "published": "2026-05-04",
+    "html_url": "https://github.com/advisories/GHSA-qm77-8qjp-4vcm",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.1"
+    ],
+    "fixed_versions": [
+      "2026.4.2"
+    ],
+    "fixed_version": "2026.4.2",
+    "cwes": [
+      "CWE-346"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-gfg9-5357-hv4c",
     "cve_id": null,
     "severity": "medium",
@@ -297,6 +318,27 @@
     "fixed_version": "2026.4.20",
     "cwes": [
       "CWE-639"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-7hrg-5w46-5r2x",
+    "cve_id": null,
+    "severity": "low",
+    "title": "Duplicate Advisory: OpenClaw: Slack thread context could include messages from non-allowlisted senders",
+    "published": "2026-04-24",
+    "html_url": "https://github.com/advisories/GHSA-7hrg-5w46-5r2x",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.2"
+    ],
+    "fixed_versions": [
+      "2026.4.2"
+    ],
+    "fixed_version": "2026.4.2",
+    "cwes": [
+      "CWE-346"
     ]
   },
   {
@@ -2060,49 +2102,6 @@
     "cwes": [
       "CWE-200",
       "CWE-319"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jj6q-rrrf-h66h",
-    "cve_id": "CVE-2026-41407",
-    "severity": "medium",
-    "title": "OpenClaw: Shared-secret comparison call sites leaked length information through timing",
-    "published": "2026-04-07",
-    "html_url": "https://github.com/advisories/GHSA-jj6q-rrrf-h66h",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.4.1"
-    ],
-    "fixed_versions": [
-      "2026.4.2"
-    ],
-    "fixed_version": "2026.4.2",
-    "cwes": [
-      "CWE-208"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rxmx-g7hr-8mx4",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Zalo replay dedupe keys could suppress messages across chats or senders",
-    "published": "2026-04-07",
-    "html_url": "https://github.com/advisories/GHSA-rxmx-g7hr-8mx4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.4.1"
-    ],
-    "fixed_versions": [
-      "2026.4.2"
-    ],
-    "fixed_version": "2026.4.2",
-    "cwes": [
-      "CWE-349",
-      "CWE-440"
     ]
   },
   {
