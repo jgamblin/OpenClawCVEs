@@ -4050,7 +4050,7 @@
   },
   {
     "ghsa_id": "GHSA-jhpv-5j76-m56h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42438",
     "url": "https://api.github.com/advisories/GHSA-jhpv-5j76-m56h",
     "html_url": "https://github.com/advisories/GHSA-jhpv-5j76-m56h",
     "summary": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
@@ -4063,6 +4063,10 @@
       {
         "value": "GHSA-jhpv-5j76-m56h",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42438",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4072,7 +4076,7 @@
       "https://github.com/advisories/GHSA-jhpv-5j76-m56h"
     ],
     "published_at": "2026-04-17T22:17:57Z",
-    "updated_at": "2026-04-17T22:17:58Z",
+    "updated_at": "2026-05-05T11:49:52Z",
     "github_reviewed_at": "2026-04-17T22:17:57Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4136,7 +4140,7 @@
   },
   {
     "ghsa_id": "GHSA-66r7-m7xm-v49h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43533",
     "url": "https://api.github.com/advisories/GHSA-66r7-m7xm-v49h",
     "html_url": "https://github.com/advisories/GHSA-66r7-m7xm-v49h",
     "summary": "OpenClaw: QQBot media tags could read arbitrary local files through reply text",
@@ -4149,6 +4153,10 @@
       {
         "value": "GHSA-66r7-m7xm-v49h",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43533",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4158,7 +4166,7 @@
       "https://github.com/advisories/GHSA-66r7-m7xm-v49h"
     ],
     "published_at": "2026-04-17T22:17:05Z",
-    "updated_at": "2026-04-17T22:17:08Z",
+    "updated_at": "2026-05-05T11:58:26Z",
     "github_reviewed_at": "2026-04-17T22:17:05Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4222,7 +4230,7 @@
   },
   {
     "ghsa_id": "GHSA-2cq5-mf3v-mx44",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43530",
     "url": "https://api.github.com/advisories/GHSA-2cq5-mf3v-mx44",
     "html_url": "https://github.com/advisories/GHSA-2cq5-mf3v-mx44",
     "summary": "OpenClaw: busybox and toybox applet execution weakened exec approval binding",
@@ -4235,6 +4243,10 @@
       {
         "value": "GHSA-2cq5-mf3v-mx44",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43530",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4244,7 +4256,7 @@
       "https://github.com/advisories/GHSA-2cq5-mf3v-mx44"
     ],
     "published_at": "2026-04-17T22:16:04Z",
-    "updated_at": "2026-04-19T15:30:37Z",
+    "updated_at": "2026-05-05T11:57:23Z",
     "github_reviewed_at": "2026-04-17T22:16:04Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4308,7 +4320,7 @@
   },
   {
     "ghsa_id": "GHSA-7jp6-r74r-995q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42433",
     "url": "https://api.github.com/advisories/GHSA-7jp6-r74r-995q",
     "html_url": "https://github.com/advisories/GHSA-7jp6-r74r-995q",
     "summary": "OpenClaw: Matrix profile config persistence was reachable from operator.write message tools",
@@ -4321,6 +4333,10 @@
       {
         "value": "GHSA-7jp6-r74r-995q",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42433",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4329,7 +4345,7 @@
       "https://github.com/advisories/GHSA-7jp6-r74r-995q"
     ],
     "published_at": "2026-04-17T22:15:27Z",
-    "updated_at": "2026-04-17T22:15:28Z",
+    "updated_at": "2026-05-05T11:48:03Z",
     "github_reviewed_at": "2026-04-17T22:15:27Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4397,7 +4413,7 @@
   },
   {
     "ghsa_id": "GHSA-736r-jwj6-4w23",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42434",
     "url": "https://api.github.com/advisories/GHSA-736r-jwj6-4w23",
     "html_url": "https://github.com/advisories/GHSA-736r-jwj6-4w23",
     "summary": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
@@ -4410,6 +4426,10 @@
       {
         "value": "GHSA-736r-jwj6-4w23",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42434",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4419,7 +4439,7 @@
       "https://github.com/advisories/GHSA-736r-jwj6-4w23"
     ],
     "published_at": "2026-04-17T22:14:56Z",
-    "updated_at": "2026-04-17T22:14:57Z",
+    "updated_at": "2026-05-05T11:48:25Z",
     "github_reviewed_at": "2026-04-17T22:14:56Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4755,7 +4775,7 @@
   },
   {
     "ghsa_id": "GHSA-939r-rj45-g2rj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43569",
     "url": "https://api.github.com/advisories/GHSA-939r-rj45-g2rj",
     "html_url": "https://github.com/advisories/GHSA-939r-rj45-g2rj",
     "summary": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
@@ -4768,6 +4788,10 @@
       {
         "value": "GHSA-939r-rj45-g2rj",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43569",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4777,7 +4801,7 @@
       "https://github.com/advisories/GHSA-939r-rj45-g2rj"
     ],
     "published_at": "2026-04-17T22:12:49Z",
-    "updated_at": "2026-04-17T22:12:50Z",
+    "updated_at": "2026-05-05T12:00:34Z",
     "github_reviewed_at": "2026-04-17T22:12:49Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4841,7 +4865,7 @@
   },
   {
     "ghsa_id": "GHSA-527m-976r-jf79",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43573",
     "url": "https://api.github.com/advisories/GHSA-527m-976r-jf79",
     "html_url": "https://github.com/advisories/GHSA-527m-976r-jf79",
     "summary": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
@@ -4854,6 +4878,10 @@
       {
         "value": "GHSA-527m-976r-jf79",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43573",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4863,7 +4891,7 @@
       "https://github.com/advisories/GHSA-527m-976r-jf79"
     ],
     "published_at": "2026-04-17T22:11:33Z",
-    "updated_at": "2026-04-17T22:11:34Z",
+    "updated_at": "2026-05-05T12:02:51Z",
     "github_reviewed_at": "2026-04-17T22:11:33Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4975,7 +5003,7 @@
   },
   {
     "ghsa_id": "GHSA-rj2p-j66c-mgqh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42439",
     "url": "https://api.github.com/advisories/GHSA-rj2p-j66c-mgqh",
     "html_url": "https://github.com/advisories/GHSA-rj2p-j66c-mgqh",
     "summary": "OpenClaw: Browser tabs action select and close routes bypassed SSRF policy",
@@ -4988,6 +5016,10 @@
       {
         "value": "GHSA-rj2p-j66c-mgqh",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42439",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4997,7 +5029,7 @@
       "https://github.com/advisories/GHSA-rj2p-j66c-mgqh"
     ],
     "published_at": "2026-04-17T22:01:57Z",
-    "updated_at": "2026-04-17T22:01:59Z",
+    "updated_at": "2026-05-05T11:50:14Z",
     "github_reviewed_at": "2026-04-17T22:01:57Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5240,7 +5272,7 @@
   },
   {
     "ghsa_id": "GHSA-82qx-6vj7-p8m2",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43571",
     "url": "https://api.github.com/advisories/GHSA-82qx-6vj7-p8m2",
     "html_url": "https://github.com/advisories/GHSA-82qx-6vj7-p8m2",
     "summary": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
@@ -5253,6 +5285,10 @@
       {
         "value": "GHSA-82qx-6vj7-p8m2",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43571",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5261,7 +5297,7 @@
       "https://github.com/advisories/GHSA-82qx-6vj7-p8m2"
     ],
     "published_at": "2026-04-17T21:58:46Z",
-    "updated_at": "2026-04-17T21:58:48Z",
+    "updated_at": "2026-05-05T12:02:14Z",
     "github_reviewed_at": "2026-04-17T21:58:46Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5373,7 +5409,7 @@
   },
   {
     "ghsa_id": "GHSA-jf25-7968-h2h5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43567",
     "url": "https://api.github.com/advisories/GHSA-jf25-7968-h2h5",
     "html_url": "https://github.com/advisories/GHSA-jf25-7968-h2h5",
     "summary": "OpenClaw: screen_record outPath bypassed workspace-only filesystem guard",
@@ -5386,6 +5422,10 @@
       {
         "value": "GHSA-jf25-7968-h2h5",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43567",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5395,7 +5435,7 @@
       "https://github.com/advisories/GHSA-jf25-7968-h2h5"
     ],
     "published_at": "2026-04-17T21:58:24Z",
-    "updated_at": "2026-04-17T21:58:26Z",
+    "updated_at": "2026-05-05T11:59:49Z",
     "github_reviewed_at": "2026-04-17T21:58:24Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5438,7 +5478,7 @@
   },
   {
     "ghsa_id": "GHSA-53vx-pmqw-863c",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43527",
     "url": "https://api.github.com/advisories/GHSA-53vx-pmqw-863c",
     "html_url": "https://github.com/advisories/GHSA-53vx-pmqw-863c",
     "summary": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
@@ -5451,6 +5491,10 @@
       {
         "value": "GHSA-53vx-pmqw-863c",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43527",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5464,7 +5508,7 @@
       "https://github.com/advisories/GHSA-53vx-pmqw-863c"
     ],
     "published_at": "2026-04-17T21:58:15Z",
-    "updated_at": "2026-04-17T21:58:16Z",
+    "updated_at": "2026-05-05T11:51:24Z",
     "github_reviewed_at": "2026-04-17T21:58:15Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5622,7 +5666,7 @@
   },
   {
     "ghsa_id": "GHSA-2767-2q9v-9326",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43526",
     "url": "https://api.github.com/advisories/GHSA-2767-2q9v-9326",
     "html_url": "https://github.com/advisories/GHSA-2767-2q9v-9326",
     "summary": "OpenClaw: QQBot reply media URL handling could trigger SSRF and re-upload fetched bytes",
@@ -5635,6 +5679,10 @@
       {
         "value": "GHSA-2767-2q9v-9326",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43526",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5646,7 +5694,7 @@
       "https://github.com/advisories/GHSA-2767-2q9v-9326"
     ],
     "published_at": "2026-04-17T21:57:31Z",
-    "updated_at": "2026-04-17T21:57:32Z",
+    "updated_at": "2026-05-05T11:50:43Z",
     "github_reviewed_at": "2026-04-17T21:57:31Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5710,7 +5758,7 @@
   },
   {
     "ghsa_id": "GHSA-7wv4-cc7p-jhxc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43531",
     "url": "https://api.github.com/advisories/GHSA-7wv4-cc7p-jhxc",
     "html_url": "https://github.com/advisories/GHSA-7wv4-cc7p-jhxc",
     "summary": "OpenClaw: Workspace .env could inject OpenClaw runtime-control variables",
@@ -5723,6 +5771,10 @@
       {
         "value": "GHSA-7wv4-cc7p-jhxc",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43531",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5732,7 +5784,7 @@
       "https://github.com/advisories/GHSA-7wv4-cc7p-jhxc"
     ],
     "published_at": "2026-04-17T21:56:12Z",
-    "updated_at": "2026-04-17T21:56:16Z",
+    "updated_at": "2026-05-05T11:57:43Z",
     "github_reviewed_at": "2026-04-17T21:56:12Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5820,7 +5872,7 @@
   },
   {
     "ghsa_id": "GHSA-c9h3-5p7r-mrjh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43532",
     "url": "https://api.github.com/advisories/GHSA-c9h3-5p7r-mrjh",
     "html_url": "https://github.com/advisories/GHSA-c9h3-5p7r-mrjh",
     "summary": "OpenClaw: Discord event cover images bypassed sandbox media normalization",
@@ -5833,6 +5885,10 @@
       {
         "value": "GHSA-c9h3-5p7r-mrjh",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43532",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5842,7 +5898,7 @@
       "https://github.com/advisories/GHSA-c9h3-5p7r-mrjh"
     ],
     "published_at": "2026-04-17T21:56:04Z",
-    "updated_at": "2026-04-17T21:56:06Z",
+    "updated_at": "2026-05-05T11:58:05Z",
     "github_reviewed_at": "2026-04-17T21:56:04Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5906,7 +5962,7 @@
   },
   {
     "ghsa_id": "GHSA-49cg-279w-m73x",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43574",
     "url": "https://api.github.com/advisories/GHSA-49cg-279w-m73x",
     "html_url": "https://github.com/advisories/GHSA-49cg-279w-m73x",
     "summary": "OpenClaw: Empty approver lists could grant explicit approval authorization",
@@ -5919,6 +5975,10 @@
       {
         "value": "GHSA-49cg-279w-m73x",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43574",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -5928,7 +5988,7 @@
       "https://github.com/advisories/GHSA-49cg-279w-m73x"
     ],
     "published_at": "2026-04-17T21:55:54Z",
-    "updated_at": "2026-04-17T21:55:56Z",
+    "updated_at": "2026-05-05T12:03:11Z",
     "github_reviewed_at": "2026-04-17T21:55:54Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -5992,7 +6052,7 @@
   },
   {
     "ghsa_id": "GHSA-7g8c-cfr3-vqqr",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43534",
     "url": "https://api.github.com/advisories/GHSA-7g8c-cfr3-vqqr",
     "html_url": "https://github.com/advisories/GHSA-7g8c-cfr3-vqqr",
     "summary": "OpenClaw: Agent hook events could enqueue trusted system events from unsanitized external input",
@@ -6005,6 +6065,10 @@
       {
         "value": "GHSA-7g8c-cfr3-vqqr",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43534",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6014,7 +6078,7 @@
       "https://github.com/advisories/GHSA-7g8c-cfr3-vqqr"
     ],
     "published_at": "2026-04-17T21:55:20Z",
-    "updated_at": "2026-04-17T21:55:21Z",
+    "updated_at": "2026-05-05T11:58:46Z",
     "github_reviewed_at": "2026-04-17T21:55:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6210,7 +6274,7 @@
   },
   {
     "ghsa_id": "GHSA-j6c7-3h5x-99g9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42435",
     "url": "https://api.github.com/advisories/GHSA-j6c7-3h5x-99g9",
     "html_url": "https://github.com/advisories/GHSA-j6c7-3h5x-99g9",
     "summary": "OpenClaw: Shell-wrapper detection missed env-argv assignment injection forms",
@@ -6223,6 +6287,10 @@
       {
         "value": "GHSA-j6c7-3h5x-99g9",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42435",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6232,7 +6300,7 @@
       "https://github.com/advisories/GHSA-j6c7-3h5x-99g9"
     ],
     "published_at": "2026-04-17T21:53:36Z",
-    "updated_at": "2026-04-17T21:53:40Z",
+    "updated_at": "2026-05-05T11:48:47Z",
     "github_reviewed_at": "2026-04-17T21:53:36Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6271,7 +6339,7 @@
   },
   {
     "ghsa_id": "GHSA-5gjc-grvm-m88j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43568",
     "url": "https://api.github.com/advisories/GHSA-5gjc-grvm-m88j",
     "html_url": "https://github.com/advisories/GHSA-5gjc-grvm-m88j",
     "summary": "OpenClaw: Memory dreaming config persistence was reachable from operator.write commands",
@@ -6284,6 +6352,10 @@
       {
         "value": "GHSA-5gjc-grvm-m88j",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43568",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6293,7 +6365,7 @@
       "https://github.com/advisories/GHSA-5gjc-grvm-m88j"
     ],
     "published_at": "2026-04-17T21:53:17Z",
-    "updated_at": "2026-04-17T21:53:17Z",
+    "updated_at": "2026-05-05T12:00:11Z",
     "github_reviewed_at": "2026-04-17T21:53:17Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6361,7 +6433,7 @@
   },
   {
     "ghsa_id": "GHSA-gc9r-867r-j85f",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43572",
     "url": "https://api.github.com/advisories/GHSA-gc9r-867r-j85f",
     "html_url": "https://github.com/advisories/GHSA-gc9r-867r-j85f",
     "summary": "OpenClaw: Microsoft Teams SSO invoke handler missed sender authorization checks",
@@ -6374,6 +6446,10 @@
       {
         "value": "GHSA-gc9r-867r-j85f",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43572",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6383,7 +6459,7 @@
       "https://github.com/advisories/GHSA-gc9r-867r-j85f"
     ],
     "published_at": "2026-04-17T21:51:04Z",
-    "updated_at": "2026-04-17T21:51:05Z",
+    "updated_at": "2026-05-05T12:02:34Z",
     "github_reviewed_at": "2026-04-17T21:51:04Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6763,7 +6839,7 @@
   },
   {
     "ghsa_id": "GHSA-vw3h-q6xq-jjm5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42437",
     "url": "https://api.github.com/advisories/GHSA-vw3h-q6xq-jjm5",
     "html_url": "https://github.com/advisories/GHSA-vw3h-q6xq-jjm5",
     "summary": "OpenClaw: Voice-call realtime WebSocket accepted oversized frames",
@@ -6776,6 +6852,10 @@
       {
         "value": "GHSA-vw3h-q6xq-jjm5",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42437",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6785,7 +6865,7 @@
       "https://github.com/advisories/GHSA-vw3h-q6xq-jjm5"
     ],
     "published_at": "2026-04-17T21:48:36Z",
-    "updated_at": "2026-04-27T16:00:11Z",
+    "updated_at": "2026-05-05T11:49:28Z",
     "github_reviewed_at": "2026-04-17T21:48:36Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6853,7 +6933,7 @@
   },
   {
     "ghsa_id": "GHSA-g2hm-779g-vm32",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43566",
     "url": "https://api.github.com/advisories/GHSA-g2hm-779g-vm32",
     "html_url": "https://github.com/advisories/GHSA-g2hm-779g-vm32",
     "summary": "OpenClaw: Heartbeat owner downgrade missed untrusted webhook wake events",
@@ -6866,6 +6946,10 @@
       {
         "value": "GHSA-g2hm-779g-vm32",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43566",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -6875,7 +6959,7 @@
       "https://github.com/advisories/GHSA-g2hm-779g-vm32"
     ],
     "published_at": "2026-04-17T21:48:25Z",
-    "updated_at": "2026-04-17T21:48:29Z",
+    "updated_at": "2026-05-05T11:59:29Z",
     "github_reviewed_at": "2026-04-17T21:48:25Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -6987,7 +7071,7 @@
   },
   {
     "ghsa_id": "GHSA-c4qm-58hj-j6pj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42436",
     "url": "https://api.github.com/advisories/GHSA-c4qm-58hj-j6pj",
     "html_url": "https://github.com/advisories/GHSA-c4qm-58hj-j6pj",
     "summary": "OpenClaw: Browser snapshot and screenshot routes could expose internal page content after navigation",
@@ -7000,6 +7084,10 @@
       {
         "value": "GHSA-c4qm-58hj-j6pj",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-42436",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7009,7 +7097,7 @@
       "https://github.com/advisories/GHSA-c4qm-58hj-j6pj"
     ],
     "published_at": "2026-04-17T21:47:36Z",
-    "updated_at": "2026-04-17T21:47:39Z",
+    "updated_at": "2026-05-05T11:49:08Z",
     "github_reviewed_at": "2026-04-17T21:47:36Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7121,7 +7209,7 @@
   },
   {
     "ghsa_id": "GHSA-8372-7vhw-cm6q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43528",
     "url": "https://api.github.com/advisories/GHSA-8372-7vhw-cm6q",
     "html_url": "https://github.com/advisories/GHSA-8372-7vhw-cm6q",
     "summary": "OpenClaw: config.get redaction bypass through sourceConfig and runtimeConfig aliases",
@@ -7134,6 +7222,10 @@
       {
         "value": "GHSA-8372-7vhw-cm6q",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43528",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7143,7 +7235,7 @@
       "https://github.com/advisories/GHSA-8372-7vhw-cm6q"
     ],
     "published_at": "2026-04-17T21:47:15Z",
-    "updated_at": "2026-04-17T21:47:19Z",
+    "updated_at": "2026-05-05T11:56:39Z",
     "github_reviewed_at": "2026-04-17T21:47:15Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7255,7 +7347,7 @@
   },
   {
     "ghsa_id": "GHSA-jwrq-8g5x-5fhm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43535",
     "url": "https://api.github.com/advisories/GHSA-jwrq-8g5x-5fhm",
     "html_url": "https://github.com/advisories/GHSA-jwrq-8g5x-5fhm",
     "summary": "OpenClaw: Collect-mode queue batches could reuse the last sender authorization context",
@@ -7268,6 +7360,10 @@
       {
         "value": "GHSA-jwrq-8g5x-5fhm",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43535",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7277,7 +7373,7 @@
       "https://github.com/advisories/GHSA-jwrq-8g5x-5fhm"
     ],
     "published_at": "2026-04-17T21:35:35Z",
-    "updated_at": "2026-04-17T21:35:37Z",
+    "updated_at": "2026-05-05T11:59:08Z",
     "github_reviewed_at": "2026-04-17T21:35:35Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -7499,7 +7595,7 @@
   },
   {
     "ghsa_id": "GHSA-gj9q-8w99-mp8j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43529",
     "url": "https://api.github.com/advisories/GHSA-gj9q-8w99-mp8j",
     "html_url": "https://github.com/advisories/GHSA-gj9q-8w99-mp8j",
     "summary": "OpenClaw: TOCTOU read in exec script preflight",
@@ -7512,6 +7608,10 @@
       {
         "value": "GHSA-gj9q-8w99-mp8j",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43529",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -7521,7 +7621,7 @@
       "https://github.com/advisories/GHSA-gj9q-8w99-mp8j"
     ],
     "published_at": "2026-04-16T21:19:21Z",
-    "updated_at": "2026-04-16T21:19:23Z",
+    "updated_at": "2026-05-05T11:57:02Z",
     "github_reviewed_at": "2026-04-16T21:19:21Z",
     "nvd_published_at": null,
     "withdrawn_at": null,

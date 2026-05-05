@@ -977,7 +977,7 @@
   },
   {
     "ghsa_id": "GHSA-jhpv-5j76-m56h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42438",
     "severity": "medium",
     "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
     "published": "2026-04-17",
@@ -998,7 +998,7 @@
   },
   {
     "ghsa_id": "GHSA-66r7-m7xm-v49h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43533",
     "severity": "high",
     "title": "OpenClaw: QQBot media tags could read arbitrary local files through reply text",
     "published": "2026-04-17",
@@ -1019,7 +1019,7 @@
   },
   {
     "ghsa_id": "GHSA-2cq5-mf3v-mx44",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43530",
     "severity": "high",
     "title": "OpenClaw: busybox and toybox applet execution weakened exec approval binding",
     "published": "2026-04-17",
@@ -1040,7 +1040,7 @@
   },
   {
     "ghsa_id": "GHSA-7jp6-r74r-995q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42433",
     "severity": "high",
     "title": "OpenClaw: Matrix profile config persistence was reachable from operator.write message tools",
     "published": "2026-04-17",
@@ -1062,7 +1062,7 @@
   },
   {
     "ghsa_id": "GHSA-736r-jwj6-4w23",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42434",
     "severity": "high",
     "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
     "published": "2026-04-17",
@@ -1125,7 +1125,7 @@
   },
   {
     "ghsa_id": "GHSA-939r-rj45-g2rj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43569",
     "severity": "high",
     "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
     "published": "2026-04-17",
@@ -1146,7 +1146,7 @@
   },
   {
     "ghsa_id": "GHSA-527m-976r-jf79",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43573",
     "severity": "medium",
     "title": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
     "published": "2026-04-17",
@@ -1167,7 +1167,7 @@
   },
   {
     "ghsa_id": "GHSA-rj2p-j66c-mgqh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42439",
     "severity": "medium",
     "title": "OpenClaw: Browser tabs action select and close routes bypassed SSRF policy",
     "published": "2026-04-17",
@@ -1232,7 +1232,7 @@
   },
   {
     "ghsa_id": "GHSA-82qx-6vj7-p8m2",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43571",
     "severity": "high",
     "title": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
     "published": "2026-04-17",
@@ -1253,7 +1253,7 @@
   },
   {
     "ghsa_id": "GHSA-jf25-7968-h2h5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43567",
     "severity": "medium",
     "title": "OpenClaw: screen_record outPath bypassed workspace-only filesystem guard",
     "published": "2026-04-17",
@@ -1275,7 +1275,7 @@
   },
   {
     "ghsa_id": "GHSA-53vx-pmqw-863c",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43527",
     "severity": "medium",
     "title": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
     "published": "2026-04-17",
@@ -1319,7 +1319,7 @@
   },
   {
     "ghsa_id": "GHSA-2767-2q9v-9326",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43526",
     "severity": "medium",
     "title": "OpenClaw: QQBot reply media URL handling could trigger SSRF and re-upload fetched bytes",
     "published": "2026-04-17",
@@ -1340,7 +1340,7 @@
   },
   {
     "ghsa_id": "GHSA-7wv4-cc7p-jhxc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43531",
     "severity": "medium",
     "title": "OpenClaw: Workspace .env could inject OpenClaw runtime-control variables",
     "published": "2026-04-17",
@@ -1361,7 +1361,7 @@
   },
   {
     "ghsa_id": "GHSA-c9h3-5p7r-mrjh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43532",
     "severity": "medium",
     "title": "OpenClaw: Discord event cover images bypassed sandbox media normalization",
     "published": "2026-04-17",
@@ -1382,7 +1382,7 @@
   },
   {
     "ghsa_id": "GHSA-49cg-279w-m73x",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43574",
     "severity": "medium",
     "title": "OpenClaw: Empty approver lists could grant explicit approval authorization",
     "published": "2026-04-17",
@@ -1403,7 +1403,7 @@
   },
   {
     "ghsa_id": "GHSA-7g8c-cfr3-vqqr",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43534",
     "severity": "medium",
     "title": "OpenClaw: Agent hook events could enqueue trusted system events from unsanitized external input",
     "published": "2026-04-17",
@@ -1445,7 +1445,7 @@
   },
   {
     "ghsa_id": "GHSA-j6c7-3h5x-99g9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42435",
     "severity": "medium",
     "title": "OpenClaw: Shell-wrapper detection missed env-argv assignment injection forms",
     "published": "2026-04-17",
@@ -1466,7 +1466,7 @@
   },
   {
     "ghsa_id": "GHSA-5gjc-grvm-m88j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43568",
     "severity": "medium",
     "title": "OpenClaw: Memory dreaming config persistence was reachable from operator.write commands",
     "published": "2026-04-17",
@@ -1488,7 +1488,7 @@
   },
   {
     "ghsa_id": "GHSA-gc9r-867r-j85f",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43572",
     "severity": "low",
     "title": "OpenClaw: Microsoft Teams SSO invoke handler missed sender authorization checks",
     "published": "2026-04-17",
@@ -1551,7 +1551,7 @@
   },
   {
     "ghsa_id": "GHSA-vw3h-q6xq-jjm5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42437",
     "severity": "high",
     "title": "OpenClaw: Voice-call realtime WebSocket accepted oversized frames",
     "published": "2026-04-17",
@@ -1573,7 +1573,7 @@
   },
   {
     "ghsa_id": "GHSA-g2hm-779g-vm32",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43566",
     "severity": "medium",
     "title": "OpenClaw: Heartbeat owner downgrade missed untrusted webhook wake events",
     "published": "2026-04-17",
@@ -1594,7 +1594,7 @@
   },
   {
     "ghsa_id": "GHSA-c4qm-58hj-j6pj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-42436",
     "severity": "medium",
     "title": "OpenClaw: Browser snapshot and screenshot routes could expose internal page content after navigation",
     "published": "2026-04-17",
@@ -1615,7 +1615,7 @@
   },
   {
     "ghsa_id": "GHSA-8372-7vhw-cm6q",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43528",
     "severity": "high",
     "title": "OpenClaw: config.get redaction bypass through sourceConfig and runtimeConfig aliases",
     "published": "2026-04-17",
@@ -1636,7 +1636,7 @@
   },
   {
     "ghsa_id": "GHSA-jwrq-8g5x-5fhm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43535",
     "severity": "medium",
     "title": "OpenClaw: Collect-mode queue batches could reuse the last sender authorization context",
     "published": "2026-04-17",
@@ -1678,7 +1678,7 @@
   },
   {
     "ghsa_id": "GHSA-gj9q-8w99-mp8j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43529",
     "severity": "low",
     "title": "OpenClaw: TOCTOU read in exec script preflight",
     "published": "2026-04-16",
