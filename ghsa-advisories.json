@@ -847,6 +847,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-qc5j-2mqx-x83q",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
+    "published": "2026-04-20",
+    "html_url": "https://github.com/advisories/GHSA-qc5j-2mqx-x83q",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.4.7, < 2026.4.15"
+    ],
+    "fixed_versions": [
+      "2026.4.15"
+    ],
+    "fixed_version": "2026.4.15",
+    "cwes": [
+      "CWE-73"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-f934-5rqf-xx47",
     "cve_id": null,
     "severity": "medium",
@@ -2081,28 +2102,6 @@
     "fixed_version": "",
     "cwes": [
       "CWE-807"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
-    "cve_id": "CVE-2026-41915",
-    "severity": "low",
-    "title": "OpenClaw: GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
-    "published": "2026-04-09",
-    "html_url": "https://github.com/advisories/GHSA-cm8v-2vh9-cxf3",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.8"
-    ],
-    "fixed_versions": [
-      "2026.4.8"
-    ],
-    "fixed_version": "2026.4.8",
-    "cwes": [
-      "CWE-78",
-      "CWE-184"
     ]
   },
   {

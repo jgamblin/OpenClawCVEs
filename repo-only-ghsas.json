@@ -42,6 +42,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-846p-hgpv-vphc"
   },
   {
+    "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
+    "severity": "HIGH",
+    "title": "GIT_DIR and related git plumbing env vars missing from exec env denylist (GHSA-m866-6qv5-p2fg variant)",
+    "published": "2026-04-08",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cm8v-2vh9-cxf3"
+  },
+  {
     "ghsa_id": "GHSA-cmfr-9m2r-xwhq",
     "severity": "HIGH",
     "title": "OpenClaw `node.invoke(browser.proxy)` bypasses `browser.request` persistent profile-mutation guard",
