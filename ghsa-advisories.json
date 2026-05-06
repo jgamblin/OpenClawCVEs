@@ -1,5 +1,68 @@
 [
   {
+    "ghsa_id": "GHSA-cwj3-vqpp-pmxr",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw's gateway config mutation guard allowed unsafe model-driven config writes",
+    "published": "2026-05-05",
+    "html_url": "https://github.com/advisories/GHSA-cwj3-vqpp-pmxr",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.23"
+    ],
+    "fixed_versions": [
+      "2026.4.23"
+    ],
+    "fixed_version": "2026.4.23",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-r39h-4c2p-3jxp",
+    "cve_id": null,
+    "severity": "high",
+    "title": "OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
+    "published": "2026-05-05",
+    "html_url": "https://github.com/advisories/GHSA-r39h-4c2p-3jxp",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.23"
+    ],
+    "fixed_versions": [
+      "2026.4.23"
+    ],
+    "fixed_version": "2026.4.23",
+    "cwes": [
+      "CWE-94"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-q8ff-7ffm-m3r9",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload",
+    "published": "2026-05-05",
+    "html_url": "https://github.com/advisories/GHSA-q8ff-7ffm-m3r9",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.23"
+    ],
+    "fixed_versions": [
+      "2026.4.23"
+    ],
+    "fixed_version": "2026.4.23",
+    "cwes": [
+      "CWE-613"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",
     "cve_id": null,
     "severity": "medium",
@@ -2043,65 +2106,6 @@
     "fixed_version": "",
     "cwes": [
       "CWE-290"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rc8f-r29c-chr6",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw: BlueBubbles Webhook Missing Rate Limiting Enables Brute-Force Password Guessing",
-    "published": "2026-04-10",
-    "html_url": "https://github.com/advisories/GHSA-rc8f-r29c-chr6",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.3.24"
-    ],
-    "fixed_versions": [],
-    "fixed_version": "",
-    "cwes": [
-      "CWE-307"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-j56c-wpqm-h24x",
-    "cve_id": null,
-    "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw: Plivo V2 verified replay identity drifts on query-only variants",
-    "published": "2026-04-10",
-    "html_url": "https://github.com/advisories/GHSA-j56c-wpqm-h24x",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.23"
-    ],
-    "fixed_versions": [
-      "2026.3.23"
-    ],
-    "fixed_version": "2026.3.23",
-    "cwes": [
-      "CWE-294"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-j42q-r6qx-xrfp",
-    "cve_id": null,
-    "severity": "low",
-    "title": "Duplicate Advisory: OpenClaw: Google Chat Authz Bypass via Group Policy Rebinding with Mutable Space displayName",
-    "published": "2026-04-10",
-    "html_url": "https://github.com/advisories/GHSA-j42q-r6qx-xrfp",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "<= 2026.3.24"
-    ],
-    "fixed_versions": [],
-    "fixed_version": "",
-    "cwes": [
-      "CWE-807"
     ]
   },
   {

@@ -56,13 +56,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cmfr-9m2r-xwhq"
   },
   {
-    "ghsa_id": "GHSA-cwj3-vqpp-pmxr",
-    "severity": "HIGH",
-    "title": "Gateway config mutation guard allowed unsafe model-driven config writes",
-    "published": "2026-04-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr"
-  },
-  {
     "ghsa_id": "GHSA-gfmx-pph7-g46x",
     "severity": "HIGH",
     "title": "Lower-trust background runtime output is injected into trusted `System:` events, and local async exec completion misses the intended `exec-event` downgrade",
@@ -103,13 +96,6 @@
     "title": "`fetchWithSsrFGuard` replays unsafe request bodies across cross-origin redirects",
     "published": "2026-04-08",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qx8j-g322-qj6m"
-  },
-  {
-    "ghsa_id": "GHSA-r39h-4c2p-3jxp",
-    "severity": "HIGH",
-    "title": "Arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
-    "published": "2026-04-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r39h-4c2p-3jxp"
   },
   {
     "ghsa_id": "GHSA-w9j9-w4cp-6wgr",
@@ -222,13 +208,6 @@
     "title": "Complex interpreter pipelines could skip exec script preflight validation",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvx6-pj3r-5q4q"
-  },
-  {
-    "ghsa_id": "GHSA-q8ff-7ffm-m3r9",
-    "severity": "MEDIUM",
-    "title": "Webhooks SecretRef route secret remains valid after rotation/reload",
-    "published": "2026-04-24",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9"
   },
   {
     "ghsa_id": "GHSA-rxmx-g7hr-8mx4",

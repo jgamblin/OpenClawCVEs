@@ -1,5 +1,284 @@
 [
   {
+    "ghsa_id": "GHSA-cwj3-vqpp-pmxr",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-cwj3-vqpp-pmxr",
+    "html_url": "https://github.com/advisories/GHSA-cwj3-vqpp-pmxr",
+    "summary": "OpenClaw's gateway config mutation guard allowed unsafe model-driven config writes",
+    "description": "## Summary\n\nThe agent-facing `gateway` tool protects `config.apply` and `config.patch` with a model-to-operator trust boundary. That guard used a hand-maintained denylist of protected config paths. The config schema outgrew that denylist, leaving sensitive subtrees writable through model-driven gateway config mutations.\n\n## Impact\n\nA prompt-injected or otherwise compromised model running with access to the owner-only `gateway` tool could persist unsafe config changes that crossed security boundaries. Examples included config paths affecting command execution, network/proxy/TLS behavior, credential forwarding, telemetry or hook endpoints, memory/indexing surfaces, and operator policy controls. These changes could survive restart once written to config.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` on npm\n- Affected: versions before `2026.4.23`\n- Fixed: `2026.4.23`\n- Latest stable verified fixed: `openclaw@2026.4.23`, tag `v2026.4.23`\n\n## Fix\n\nOpenClaw replaced the denylist with a fail-closed allowlist. Agent-driven `gateway config.apply` and `gateway config.patch` now permit only narrow agent-tunable prompt/model settings and mention-gating paths. Other config changes are rejected before the gateway mutation RPC is invoked.\n\n## Fix Commit(s)\n\n- `bceda6089aa7b3695cc7696b43c61ae3d01bb0ec` (`fix(gateway): fail closed on runtime config edits`)\n\n## Severity\n\nSeverity remains `high`. The vulnerable entry point is owner-only, but the model/agent is not a trusted principal under OpenClaw's security model, and the guard is the explicit model-to-operator boundary for persisted config mutation.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-cwj3-vqpp-pmxr",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-cwj3-vqpp-pmxr",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwj3-vqpp-pmxr",
+      "https://github.com/openclaw/openclaw/commit/bceda6089aa7b3695cc7696b43c61ae3d01bb0ec",
+      "https://github.com/advisories/GHSA-cwj3-vqpp-pmxr"
+    ],
+    "published_at": "2026-05-05T18:44:31Z",
+    "updated_at": "2026-05-05T18:44:35Z",
+    "github_reviewed_at": "2026-05-05T18:44:31Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.23",
+        "first_patched_version": "2026.4.23",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "zsxsoft",
+          "id": 2398785,
+          "node_id": "MDQ6VXNlcjIzOTg3ODU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2398785?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zsxsoft",
+          "html_url": "https://github.com/zsxsoft",
+          "followers_url": "https://api.github.com/users/zsxsoft/followers",
+          "following_url": "https://api.github.com/users/zsxsoft/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zsxsoft/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zsxsoft/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zsxsoft/subscriptions",
+          "organizations_url": "https://api.github.com/users/zsxsoft/orgs",
+          "repos_url": "https://api.github.com/users/zsxsoft/repos",
+          "events_url": "https://api.github.com/users/zsxsoft/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zsxsoft/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-r39h-4c2p-3jxp",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-r39h-4c2p-3jxp",
+    "html_url": "https://github.com/advisories/GHSA-r39h-4c2p-3jxp",
+    "summary": "OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
+    "description": "## Summary\n\nOpenClaw's bundled plugin setup resolver could fall back to `process.cwd()` while resolving provider setup metadata. If a user ran an OpenClaw command from an attacker-controlled repository containing `extensions/<plugin>/setup-api.js`, OpenClaw could load and execute that JavaScript during ordinary provider/model status resolution.\n\n## Impact\n\nThis is arbitrary JavaScript execution in the OpenClaw process under the current user account. A malicious repository could run code when the user executed commands such as provider/model inspection from that directory. The issue does not require gateway network exposure, but it does require user interaction: the user must run OpenClaw from a directory containing the attacker-controlled setup file.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` on npm\n- Affected: versions before `2026.4.23`\n- Fixed: `2026.4.23`\n- Latest stable verified fixed: `openclaw@2026.4.23`, tag `v2026.4.23`\n\n## Fix\n\nOpenClaw now resolves bundled setup fallbacks only from the canonical package/repository root and no longer includes `process.cwd()` as a trusted setup-api search root. A regression test verifies that a workspace-local `extensions/<plugin>/setup-api.js` is not loaded through provider setup resolution.\n\n## Fix Commit(s)\n\n- `993781e6e6eaf50f033cfc3e3bf4f47059740707` (`fix(plugins): ignore cwd setup-api fallback`)\n\n## Severity\n\nSeverity remains `high` because successful exploitation allows arbitrary code execution under the user running OpenClaw. The CVSS vector is local/user-interaction scoped rather than network-only because the victim must run OpenClaw from an attacker-controlled directory.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-r39h-4c2p-3jxp",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-r39h-4c2p-3jxp",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r39h-4c2p-3jxp",
+      "https://github.com/openclaw/openclaw/commit/993781e6e6eaf50f033cfc3e3bf4f47059740707",
+      "https://github.com/advisories/GHSA-r39h-4c2p-3jxp"
+    ],
+    "published_at": "2026-05-05T18:43:44Z",
+    "updated_at": "2026-05-05T18:43:45Z",
+    "github_reviewed_at": "2026-05-05T18:43:44Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.23",
+        "first_patched_version": "2026.4.23",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-94",
+        "name": "Improper Control of Generation of Code ('Code Injection')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "Mirr2",
+          "id": 130574746,
+          "node_id": "U_kgDOB8hpmg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/130574746?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Mirr2",
+          "html_url": "https://github.com/Mirr2",
+          "followers_url": "https://api.github.com/users/Mirr2/followers",
+          "following_url": "https://api.github.com/users/Mirr2/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Mirr2/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Mirr2/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Mirr2/subscriptions",
+          "organizations_url": "https://api.github.com/users/Mirr2/orgs",
+          "repos_url": "https://api.github.com/users/Mirr2/repos",
+          "events_url": "https://api.github.com/users/Mirr2/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Mirr2/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "score": 7.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-q8ff-7ffm-m3r9",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-q8ff-7ffm-m3r9",
+    "html_url": "https://github.com/advisories/GHSA-q8ff-7ffm-m3r9",
+    "summary": "OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload",
+    "description": "## Summary\n\nOpenClaw webhooks allowed route secrets to be backed by `SecretRef` values, but cached the resolved secret for a route. After an operator rotated the underlying secret and ran `openclaw secrets reload`, the previous resolved webhook secret could remain valid until the plugin or gateway restarted.\n\n## Impact\n\nAn attacker who already had a previously valid webhook route secret could continue authenticating webhook requests after the operator rotated the secret and reloaded secrets. This weakened credential rotation for webhook routes and could allow continued invocation of the configured webhook task flow until restart.\n\n## Affected Packages / Versions\n\n- Package: `openclaw` on npm\n- Affected: versions before `2026.4.23`\n- Fixed: `2026.4.23`\n- Latest stable verified fixed: `openclaw@2026.4.23`, tag `v2026.4.23`\n\n## Fix\n\nWebhook route authentication now resolves `SecretRef`-backed route secrets on each request. A rotated secret becomes effective after `openclaw secrets reload` without requiring a gateway or plugin restart, and the old secret is rejected.\n\n## Fix Commit(s)\n\n- `36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa` (`fix(webhooks): reload route secrets per request`)\n\n## Severity\n\nSeverity remains `medium`. The attack requires possession of a previously valid route secret, but the stale credential can continue to authorize webhook actions after rotation.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-q8ff-7ffm-m3r9",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-q8ff-7ffm-m3r9",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9",
+      "https://github.com/openclaw/openclaw/commit/36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa",
+      "https://github.com/advisories/GHSA-q8ff-7ffm-m3r9"
+    ],
+    "published_at": "2026-05-05T18:42:51Z",
+    "updated_at": "2026-05-05T18:42:55Z",
+    "github_reviewed_at": "2026-05-05T18:42:51Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.23",
+        "first_patched_version": "2026.4.23",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L",
+        "score": 6.0
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "feynman-hou",
+          "id": 58766556,
+          "node_id": "MDQ6VXNlcjU4NzY2NTU2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/58766556?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/feynman-hou",
+          "html_url": "https://github.com/feynman-hou",
+          "followers_url": "https://api.github.com/users/feynman-hou/followers",
+          "following_url": "https://api.github.com/users/feynman-hou/following{/other_user}",
+          "gists_url": "https://api.github.com/users/feynman-hou/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/feynman-hou/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/feynman-hou/subscriptions",
+          "organizations_url": "https://api.github.com/users/feynman-hou/orgs",
+          "repos_url": "https://api.github.com/users/feynman-hou/repos",
+          "events_url": "https://api.github.com/users/feynman-hou/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/feynman-hou/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L",
+      "score": 6.0
+    }
+  },
+  {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-93rg-2xm5-2p9v",
@@ -4200,6 +4479,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.07433
     }
   },
   {
@@ -4290,6 +4573,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00041,
+      "percentile": 0.12213
     }
   },
   {
@@ -4380,6 +4667,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00051,
+      "percentile": 0.15518
     }
   },
   {
@@ -4473,6 +4764,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00025,
+      "percentile": 0.06949
     }
   },
   {
@@ -4611,6 +4906,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00051,
+      "percentile": 0.15518
     }
   },
   {
@@ -4925,6 +5224,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00068,
+      "percentile": 0.2054
     }
   },
   {
@@ -5063,6 +5366,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.07433
     }
   },
   {
@@ -5153,6 +5460,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.07433
     }
   },
   {
@@ -5469,6 +5780,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0004,
+      "percentile": 0.11936
     }
   },
   {
@@ -5538,6 +5853,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00025,
+      "percentile": 0.06949
     }
   },
   {
@@ -5636,6 +5955,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00032,
+      "percentile": 0.09315
     }
   },
   {
@@ -5818,6 +6141,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0003,
+      "percentile": 0.08393
     }
   },
   {
@@ -5932,6 +6259,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00012,
+      "percentile": 0.01666
     }
   },
   {
@@ -6022,6 +6353,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00037,
+      "percentile": 0.10993
     }
   },
   {
@@ -6112,6 +6447,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.07542
     }
   },
   {
@@ -6250,6 +6589,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00015,
+      "percentile": 0.02949
     }
   },
   {
@@ -6399,6 +6742,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00096,
+      "percentile": 0.2629
     }
   },
   {
@@ -6493,6 +6840,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00025,
+      "percentile": 0.06949
     }
   },
   {
@@ -6631,6 +6982,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00028,
+      "percentile": 0.0784
     }
   },
   {
@@ -6993,6 +7348,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00091,
+      "percentile": 0.25445
     }
   },
   {
@@ -7131,6 +7490,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00103,
+      "percentile": 0.27685
     }
   },
   {
@@ -7269,6 +7632,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00027,
+      "percentile": 0.07433
     }
   },
   {
@@ -7407,6 +7774,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00055,
+      "percentile": 0.16892
     }
   },
   {
@@ -7545,6 +7916,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.00022,
+      "percentile": 0.06096
     }
   },
   {
@@ -7745,6 +8120,10 @@
     "cvss": {
       "vector_string": null,
       "score": null
+    },
+    "epss": {
+      "percentage": 0.0001,
+      "percentile": 0.01188
     }
   },
   {
@@ -8765,193 +9144,6 @@
     }
   },
   {
-    "ghsa_id": "GHSA-rc8f-r29c-chr6",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-rc8f-r29c-chr6",
-    "html_url": "https://github.com/advisories/GHSA-rc8f-r29c-chr6",
-    "summary": "Duplicate Advisory: OpenClaw: BlueBubbles Webhook Missing Rate Limiting Enables Brute-Force Password Guessing",
-    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-xq8g-hgh6-87hv. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.3.25 contains a missing rate limiting vulnerability in webhook authentication that allows attackers to brute-force weak webhook passwords without throttling. Remote attackers can repeatedly submit incorrect password guesses to the webhook endpoint to compromise authentication and gain unauthorized access.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-rc8f-r29c-chr6",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xq8g-hgh6-87hv",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-35623",
-      "https://github.com/openclaw/openclaw/commit/5e08ce36d522a1c96df2bfe88e39303ae2643d92",
-      "https://www.vulncheck.com/advisories/openclaw-brute-force-attack-via-missing-webhook-password-rate-limiting",
-      "https://github.com/advisories/GHSA-rc8f-r29c-chr6"
-    ],
-    "published_at": "2026-04-10T00:30:29Z",
-    "updated_at": "2026-04-18T00:48:50Z",
-    "github_reviewed_at": "2026-04-18T00:48:48Z",
-    "nvd_published_at": "2026-04-09T22:16:30Z",
-    "withdrawn_at": "2026-04-18T00:48:48Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.24",
-        "first_patched_version": null,
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
-        "score": 4.8
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 6.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-307",
-        "name": "Improper Restriction of Excessive Authentication Attempts"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:N",
-      "score": 4.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-j56c-wpqm-h24x",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-j56c-wpqm-h24x",
-    "html_url": "https://github.com/advisories/GHSA-j56c-wpqm-h24x",
-    "summary": "Duplicate Advisory: OpenClaw: Plivo V2 verified replay identity drifts on query-only variants",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-cg6c-q2hx-69h7. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.3.23 contains a replay identity vulnerability in Plivo V2 signature verification that allows attackers to bypass replay protection by modifying query parameters. The verification path derives replay keys from the full URL including query strings instead of the canonicalized base URL, enabling attackers to mint new verified request keys through unsigned query-only changes to signed requests.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-j56c-wpqm-h24x",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-cg6c-q2hx-69h7",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-35618",
-      "https://github.com/openclaw/openclaw/commit/630f1479c44f78484dfa21bb407cbe6f171dac87",
-      "https://github.com/openclaw/openclaw/commit/b0ce53a79cf63834660270513e26d921899b4e5b",
-      "https://www.vulncheck.com/advisories/openclaw-replay-identity-drift-via-query-only-variants-in-plivo-v2-verification",
-      "https://github.com/advisories/GHSA-j56c-wpqm-h24x"
-    ],
-    "published_at": "2026-04-10T00:30:29Z",
-    "updated_at": "2026-04-10T20:18:47Z",
-    "github_reviewed_at": "2026-04-10T20:18:47Z",
-    "nvd_published_at": "2026-04-09T22:16:30Z",
-    "withdrawn_at": "2026-04-10T20:18:47Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.3.23",
-        "first_patched_version": "2026.3.23",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
-        "score": 6.5
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 8.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-294",
-        "name": "Authentication Bypass by Capture-replay"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:H/A:N",
-      "score": 6.5
-    }
-  },
-  {
-    "ghsa_id": "GHSA-j42q-r6qx-xrfp",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-j42q-r6qx-xrfp",
-    "html_url": "https://github.com/advisories/GHSA-j42q-r6qx-xrfp",
-    "summary": "Duplicate Advisory: OpenClaw: Google Chat Authz Bypass via Group Policy Rebinding with Mutable Space displayName",
-    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of GHSA-52q4-3xjc-6778. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.3.25 contains an authorization bypass vulnerability in Google Chat group policy enforcement that relies on mutable space display names. Attackers can rebind group policies by changing or colliding space display names to gain unauthorized access to protected resources.",
-    "type": "reviewed",
-    "severity": "low",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-j42q-r6qx-xrfp",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-52q4-3xjc-6778",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-35617",
-      "https://github.com/openclaw/openclaw/commit/11ea1f67863d88b6cbcb229dd368a45e07094bff",
-      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-group-policy-rebinding-with-mutable-space-displayname",
-      "https://github.com/advisories/GHSA-j42q-r6qx-xrfp"
-    ],
-    "published_at": "2026-04-10T00:30:29Z",
-    "updated_at": "2026-04-18T00:48:10Z",
-    "github_reviewed_at": "2026-04-18T00:48:07Z",
-    "nvd_published_at": "2026-04-09T22:16:29Z",
-    "withdrawn_at": "2026-04-18T00:48:07Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "<= 2026.3.24",
-        "first_patched_version": null,
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
-        "score": 4.2
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 2.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-807",
-        "name": "Reliance on Untrusted Inputs in a Security Decision"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
-      "score": 4.2
-    }
-  },
-  {
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf",
     "cve_id": "CVE-2026-28480",
     "url": "https://api.github.com/advisories/GHSA-mj5r-hh7j-4gxf",
@@ -9591,7 +9783,7 @@
     },
     "epss": {
       "percentage": 0.00146,
-      "percentile": 0.34958
+      "percentile": 0.34499
     }
   },
   {
