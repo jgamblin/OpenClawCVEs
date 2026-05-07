@@ -742,6 +742,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-6477-wvjj-47v6",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw: Zalo replay dedupe keys could suppress messages across chats or senders",
+    "published": "2026-04-24",
+    "html_url": "https://github.com/advisories/GHSA-6477-wvjj-47v6",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.2"
+    ],
+    "fixed_versions": [
+      "2026.4.2"
+    ],
+    "fixed_version": "2026.4.2",
+    "cwes": [
+      "CWE-706"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-m958-864j-xq5w",
     "cve_id": null,
     "severity": "medium",
@@ -2091,27 +2112,6 @@
     "fixed_version": "2026.3.22",
     "cwes": [
       "CWE-789"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-2j53-2c28-g9v2",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw: Nostr inbound DMs could trigger unauthenticated crypto work before sender policy enforcement",
-    "published": "2026-04-10",
-    "html_url": "https://github.com/advisories/GHSA-2j53-2c28-g9v2",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.22"
-    ],
-    "fixed_versions": [
-      "2026.3.22"
-    ],
-    "fixed_version": "2026.3.22",
-    "cwes": [
-      "CWE-696"
     ]
   },
   {
