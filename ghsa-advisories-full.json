@@ -4428,19 +4428,23 @@
   },
   {
     "ghsa_id": "GHSA-mr34-9552-qr95",
-    "cve_id": null,
+    "cve_id": "CVE-2026-41389",
     "url": "https://api.github.com/advisories/GHSA-mr34-9552-qr95",
     "html_url": "https://github.com/advisories/GHSA-mr34-9552-qr95",
     "summary": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
     "description": "## Summary\n\nWebchat tool-result media normalization could pass local and UNC-style file paths into the host-side media embedding path without applying the configured local-root containment policy.\n\n## Impact\n\nA crafted tool-result media reference could cause the host to attempt local file reads or Windows UNC/network path access while preparing webchat media blocks. This could disclose allowed host files or trigger network credential exposure on affected Windows deployments. Severity remains medium because exploitation depends on a tool-result media path reaching the webchat embedding path, but the sink is a host-side file read before the user sees the rendered result.\n\n## Affected versions\n\n- Affected: `>= 2026.4.7, < 2026.4.15`\n- Patched: `2026.4.15`\n\n## Fix\n\nOpenClaw `2026.4.15` hardens the webchat media path and the shared media resolver. Remote-host `file://` URLs and Windows network paths are rejected before filesystem access, and audio embedding now enforces configured `localRoots` containment before `stat` or read operations.\n\nVerified in `v2026.4.15`:\n\n- `src/gateway/server-methods/chat-webchat-media.ts` uses safe file-URL parsing, rejects Windows network paths, and calls `assertLocalMediaAllowed` before probing local audio files.\n- `src/media/web-media.ts` rejects remote-host `file://` URLs, Windows network paths, and local-root bypasses on the shared media path.\n- `src/gateway/server-methods/chat-webchat-media.test.ts` covers both remote-host `file://` rejection and local-root denial before filesystem access.\n\nFix commits included in `v2026.4.15` and absent from `v2026.4.14`:\n\n- `1470de5d3e0970856d86cd99336bb8ada3fe87da` via PR #67293\n- `6e58f1f9f54bca1fea1268ec0ee4c01a2af03dde` via PR #67298\n- `52ef42302ead9e183e6c8810e0a04ee4ef8ae9fc` via PR #67303 as defense-in-depth for trusted media passthrough anchoring\n\nThanks to @Kherrisan for reporting this issue.",
     "type": "reviewed",
-    "severity": "high",
+    "severity": "medium",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-mr34-9552-qr95",
     "source_code_location": "https://github.com/openclaw/openclaw",
     "identifiers": [
       {
         "value": "GHSA-mr34-9552-qr95",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-41389",
+        "type": "CVE"
       }
     ],
     "references": [
@@ -4451,10 +4455,12 @@
       "https://github.com/openclaw/openclaw/commit/1470de5d3e0970856d86cd99336bb8ada3fe87da",
       "https://github.com/openclaw/openclaw/commit/52ef42302ead9e183e6c8810e0a04ee4ef8ae9fc",
       "https://github.com/openclaw/openclaw/commit/6e58f1f9f54bca1fea1268ec0ee4c01a2af03dde",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-41389",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-unvalidated-tool-result-media-paths",
       "https://github.com/advisories/GHSA-mr34-9552-qr95"
     ],
     "published_at": "2026-04-17T22:33:09Z",
-    "updated_at": "2026-04-17T22:33:09Z",
+    "updated_at": "2026-05-08T01:13:05Z",
     "github_reviewed_at": "2026-04-17T22:33:09Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -4471,12 +4477,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+        "score": 5.8
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
-        "score": 7.1
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:L/VI:N/VA:N/SC:L/SI:N/SA:N",
+        "score": 6.3
       }
     },
     "cwes": [
@@ -4516,8 +4522,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:N/A:N",
+      "score": 5.8
+    },
+    "epss": {
+      "percentage": 0.00038,
+      "percentile": 0.11409
     }
   },
   {
@@ -5183,12 +5193,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-2cq5-mf3v-mx44",
       "https://github.com/openclaw/openclaw/pull/65713",
       "https://github.com/openclaw/openclaw/commit/666f48d9b882a8a1415ca53f9567c72499d850c9",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43530",
+      "https://www.vulncheck.com/advisories/openclaw-weakened-exec-approval-binding-via-busybox-and-toybox-applet-execution",
       "https://github.com/advisories/GHSA-2cq5-mf3v-mx44"
     ],
     "published_at": "2026-04-17T22:16:04Z",
-    "updated_at": "2026-05-05T11:57:23Z",
+    "updated_at": "2026-05-08T01:32:56Z",
     "github_reviewed_at": "2026-04-17T22:16:04Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:19Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5203,8 +5215,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -5244,8 +5256,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
     },
     "epss": {
       "percentage": 0.00051,
@@ -5276,12 +5288,15 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jp6-r74r-995q",
       "https://github.com/openclaw/openclaw/pull/62662",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-42433",
+      "https://github.com/openclaw/openclaw/commit/fe0f686c9228fffcec6de4011da45e69a6e23e54",
+      "https://www.vulncheck.com/advisories/openclaw-unauthorized-matrix-profile-config-persistence-access-via-operator-write-message-tools",
       "https://github.com/advisories/GHSA-7jp6-r74r-995q"
     ],
     "published_at": "2026-04-17T22:15:27Z",
-    "updated_at": "2026-05-05T11:48:03Z",
+    "updated_at": "2026-05-08T01:32:26Z",
     "github_reviewed_at": "2026-04-17T22:15:27Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5296,8 +5311,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -5308,6 +5323,10 @@
       {
         "cwe_id": "CWE-266",
         "name": "Incorrect Privilege Assignment"
+      },
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
       },
       {
         "cwe_id": "CWE-863",
@@ -5341,8 +5360,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "score": 6.5
     },
     "epss": {
       "percentage": 0.00025,
@@ -5374,12 +5393,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-736r-jwj6-4w23",
       "https://github.com/openclaw/openclaw/pull/63880",
       "https://github.com/openclaw/openclaw/commit/dffad08529202edbf34e4808788e1182fe10f6a9",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-42434",
+      "https://www.vulncheck.com/advisories/openclaw-sandbox-escape-via-host-parameter-override-in-exec-routing",
       "https://github.com/advisories/GHSA-736r-jwj6-4w23"
     ],
     "published_at": "2026-04-17T22:14:56Z",
-    "updated_at": "2026-05-05T11:48:25Z",
+    "updated_at": "2026-05-08T01:32:21Z",
     "github_reviewed_at": "2026-04-17T22:14:56Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:17Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5394,8 +5415,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:H/SA:N",
@@ -5483,8 +5504,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
     },
     "epss": {
       "percentage": 0.00051,
@@ -5740,12 +5761,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-939r-rj45-g2rj",
       "https://github.com/openclaw/openclaw/pull/62368",
       "https://github.com/openclaw/openclaw/commit/2d97eae53e212ae26f3aebcd6a50ffc6877f770d",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43569",
+      "https://www.vulncheck.com/advisories/openclaw-untrusted-provider-plugin-auto-enablement-via-workspace-provider-auth",
       "https://github.com/advisories/GHSA-939r-rj45-g2rj"
     ],
     "published_at": "2026-04-17T22:12:49Z",
-    "updated_at": "2026-05-05T12:00:34Z",
+    "updated_at": "2026-05-08T01:32:53Z",
     "github_reviewed_at": "2026-04-17T22:12:49Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:20Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5760,8 +5783,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:H/SI:N/SA:N",
@@ -5801,8 +5824,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+      "score": 8.8
     },
     "epss": {
       "percentage": 0.00075,
@@ -6248,12 +6271,14 @@
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-82qx-6vj7-p8m2",
       "https://github.com/openclaw/openclaw/commit/1fede43b948df40ca8674511d4bd08d39f6c5837",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43571",
+      "https://www.vulncheck.com/advisories/openclaw-untrusted-workspace-plugin-shadow-resolution-in-channel-setup",
       "https://github.com/advisories/GHSA-82qx-6vj7-p8m2"
     ],
     "published_at": "2026-04-17T21:58:46Z",
-    "updated_at": "2026-05-05T12:02:14Z",
+    "updated_at": "2026-05-08T01:32:51Z",
     "github_reviewed_at": "2026-04-17T21:58:46Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:20Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6268,8 +6293,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -6277,6 +6302,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-829",
+        "name": "Inclusion of Functionality from Untrusted Control Sphere"
+      },
       {
         "cwe_id": "CWE-862",
         "name": "Missing Authorization"
@@ -6357,8 +6386,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
     },
     "epss": {
       "percentage": 0.0004,
@@ -6467,12 +6496,14 @@
       "https://github.com/openclaw/openclaw/commit/1dabfef28db523e7de81edeb3dd689e9171236a2",
       "https://github.com/openclaw/openclaw/commit/213c36cf51121ef6c05cfccd78037371f968f31a",
       "https://github.com/openclaw/openclaw/commit/7eecfa411df3d12e6b810e6ca5df47254fc3db3f",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43527",
+      "https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-private-network-navigation",
       "https://github.com/advisories/GHSA-53vx-pmqw-863c"
     ],
     "published_at": "2026-04-17T21:58:15Z",
-    "updated_at": "2026-05-05T11:51:24Z",
+    "updated_at": "2026-05-08T01:32:16Z",
     "github_reviewed_at": "2026-04-17T21:58:15Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:18Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6487,8 +6518,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
@@ -6532,8 +6563,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "score": 7.7
     },
     "epss": {
       "percentage": 0.00031,
@@ -6657,12 +6688,15 @@
       "https://github.com/openclaw/openclaw/pull/65788",
       "https://github.com/openclaw/openclaw/commit/08ae021d1f42905a85a550813c0d95169b171a6c",
       "https://github.com/openclaw/openclaw/commit/ddb7a8dd80b8d5dd04aafa44ce7a4354b568bb2d",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43526",
+      "https://github.com/openclaw/openclaw/commit/08ae021d1f4f02e0ca5fd8a3b9659291c1ecf95a",
+      "https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-qqbot-reply-media-url-handling",
       "https://github.com/advisories/GHSA-2767-2q9v-9326"
     ],
     "published_at": "2026-04-17T21:57:31Z",
-    "updated_at": "2026-05-05T11:50:43Z",
+    "updated_at": "2026-05-08T01:32:11Z",
     "github_reviewed_at": "2026-04-17T21:57:31Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:18Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6677,8 +6711,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+        "score": 8.2
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
@@ -6718,8 +6752,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
+      "score": 8.2
     },
     "epss": {
       "percentage": 0.00031,
@@ -6869,12 +6903,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-c9h3-5p7r-mrjh",
       "https://github.com/openclaw/openclaw/pull/64377",
       "https://github.com/openclaw/openclaw/commit/979c6f09d6fad96596feb91c905934be7e0b4f15",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43532",
+      "https://www.vulncheck.com/advisories/openclaw-sandbox-media-normalization-bypass-via-discord-event-cover-image",
       "https://github.com/advisories/GHSA-c9h3-5p7r-mrjh"
     ],
     "published_at": "2026-04-17T21:56:04Z",
-    "updated_at": "2026-05-05T11:58:05Z",
+    "updated_at": "2026-05-08T01:32:46Z",
     "github_reviewed_at": "2026-04-17T21:56:04Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:19Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6889,8 +6925,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N",
@@ -6901,6 +6937,10 @@
       {
         "cwe_id": "CWE-22",
         "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+      },
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
       }
     ],
     "credits": [
@@ -6930,8 +6970,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "score": 7.7
     },
     "epss": {
       "percentage": 0.0004,
@@ -6963,12 +7003,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-49cg-279w-m73x",
       "https://github.com/openclaw/openclaw/pull/65714",
       "https://github.com/openclaw/openclaw/commit/0a105c0900de701d2ee9f1abc96b017afbd0afdd",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43574",
+      "https://www.vulncheck.com/advisories/openclaw-improper-authorization-via-empty-approver-lists",
       "https://github.com/advisories/GHSA-49cg-279w-m73x"
     ],
     "published_at": "2026-04-17T21:55:54Z",
-    "updated_at": "2026-05-05T12:03:11Z",
+    "updated_at": "2026-05-08T01:32:41Z",
     "github_reviewed_at": "2026-04-17T21:55:54Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:21Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6983,8 +7025,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -6992,6 +7034,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-183",
+        "name": "Permissive List of Allowed Inputs"
+      },
       {
         "cwe_id": "CWE-862",
         "name": "Missing Authorization"
@@ -7024,8 +7070,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "score": 6.5
     },
     "epss": {
       "percentage": 0.00027,
@@ -7057,12 +7103,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-7g8c-cfr3-vqqr",
       "https://github.com/openclaw/openclaw/pull/64372",
       "https://github.com/openclaw/openclaw/commit/e3a845bde5b54f4f1e742d0a51ba9860f9619b29",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43534",
+      "https://www.vulncheck.com/advisories/openclaw-unsanitized-external-input-in-agent-hook-events",
       "https://github.com/advisories/GHSA-7g8c-cfr3-vqqr"
     ],
     "published_at": "2026-04-17T21:55:20Z",
-    "updated_at": "2026-05-05T11:58:46Z",
+    "updated_at": "2026-05-08T01:32:36Z",
     "github_reviewed_at": "2026-04-17T21:55:20Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:19Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -7077,8 +7125,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:U",
@@ -7089,6 +7137,10 @@
       {
         "cwe_id": "CWE-269",
         "name": "Improper Privilege Management"
+      },
+      {
+        "cwe_id": "CWE-345",
+        "name": "Insufficient Verification of Data Authenticity"
       }
     ],
     "credits": [
@@ -7166,8 +7218,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
     },
     "epss": {
       "percentage": 0.00016,
@@ -7958,12 +8010,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-g2hm-779g-vm32",
       "https://github.com/openclaw/openclaw/pull/66031",
       "https://github.com/openclaw/openclaw/commit/31281bc92f55796817a92bc43f722cba1e77ab42",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43566",
+      "https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-untrusted-webhook-wake-events",
       "https://github.com/advisories/GHSA-g2hm-779g-vm32"
     ],
     "published_at": "2026-04-17T21:48:25Z",
-    "updated_at": "2026-05-05T11:59:29Z",
+    "updated_at": "2026-05-08T01:32:32Z",
     "github_reviewed_at": "2026-04-17T21:48:25Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:20Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -7978,8 +8032,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 9.1
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -7987,6 +8041,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      },
       {
         "cwe_id": "CWE-863",
         "name": "Incorrect Authorization"
@@ -8067,8 +8125,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 9.1
     },
     "epss": {
       "percentage": 0.00112,
@@ -8100,12 +8158,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qm-58hj-j6pj",
       "https://github.com/openclaw/openclaw/pull/66040",
       "https://github.com/openclaw/openclaw/commit/b75ad800a59009fc47eaa3471410f69046150e59",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-42436",
+      "https://www.vulncheck.com/advisories/openclaw-internal-page-content-exposure-via-browser-snapshot-and-screenshot-routes",
       "https://github.com/advisories/GHSA-c4qm-58hj-j6pj"
     ],
     "published_at": "2026-04-17T21:47:36Z",
-    "updated_at": "2026-05-05T11:49:08Z",
+    "updated_at": "2026-05-08T01:32:07Z",
     "github_reviewed_at": "2026-04-17T21:47:36Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:18Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8120,8 +8180,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:N/VA:N/SC:L/SI:N/SA:N",
@@ -8129,6 +8189,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      },
       {
         "cwe_id": "CWE-918",
         "name": "Server-Side Request Forgery (SSRF)"
@@ -8209,8 +8273,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "score": 7.7
     },
     "epss": {
       "percentage": 0.00027,
@@ -8384,12 +8448,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-jwrq-8g5x-5fhm",
       "https://github.com/openclaw/openclaw/pull/66024",
       "https://github.com/openclaw/openclaw/commit/43d4be902755c970b3d15608679761877718da69",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43535",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-context-reuse-in-collect-mode-queue-batches",
       "https://github.com/advisories/GHSA-jwrq-8g5x-5fhm"
     ],
     "published_at": "2026-04-17T21:35:35Z",
-    "updated_at": "2026-05-05T11:59:08Z",
+    "updated_at": "2026-05-08T01:32:27Z",
     "github_reviewed_at": "2026-04-17T21:35:35Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:19Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -8404,8 +8470,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 6.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:N/SC:L/SI:L/SA:N",
@@ -8413,6 +8479,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-266",
+        "name": "Incorrect Privilege Assignment"
+      },
       {
         "cwe_id": "CWE-863",
         "name": "Incorrect Authorization"
@@ -8493,8 +8563,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 6.8
     },
     "epss": {
       "percentage": 0.00022,

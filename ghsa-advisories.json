@@ -1142,8 +1142,8 @@
   },
   {
     "ghsa_id": "GHSA-mr34-9552-qr95",
-    "cve_id": null,
-    "severity": "high",
+    "cve_id": "CVE-2026-41389",
+    "severity": "medium",
     "title": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
     "published": "2026-04-17",
     "html_url": "https://github.com/advisories/GHSA-mr34-9552-qr95",
@@ -1330,6 +1330,7 @@
     "fixed_version": "2026.4.10",
     "cwes": [
       "CWE-266",
+      "CWE-862",
       "CWE-863"
     ]
   },
@@ -1521,6 +1522,7 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
+      "CWE-829",
       "CWE-862"
     ]
   },
@@ -1650,7 +1652,8 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
-      "CWE-22"
+      "CWE-22",
+      "CWE-184"
     ]
   },
   {
@@ -1671,6 +1674,7 @@
     ],
     "fixed_version": "2026.4.12",
     "cwes": [
+      "CWE-183",
       "CWE-862"
     ]
   },
@@ -1692,7 +1696,8 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
-      "CWE-269"
+      "CWE-269",
+      "CWE-345"
     ]
   },
   {
@@ -1862,6 +1867,7 @@
     ],
     "fixed_version": "2026.4.14",
     "cwes": [
+      "CWE-184",
       "CWE-863"
     ]
   },
@@ -1883,6 +1889,7 @@
     ],
     "fixed_version": "2026.4.14",
     "cwes": [
+      "CWE-862",
       "CWE-918"
     ]
   },
@@ -1925,6 +1932,7 @@
     ],
     "fixed_version": "2026.4.14",
     "cwes": [
+      "CWE-266",
       "CWE-863"
     ]
   },
