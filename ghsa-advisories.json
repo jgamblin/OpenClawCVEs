@@ -63,6 +63,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-35mw-5vvr-vrxc",
+    "cve_id": "CVE-2026-43570",
+    "severity": "medium",
+    "title": "OpenClaw contains a symlink traversal vulnerability",
+    "published": "2026-05-05",
+    "html_url": "https://github.com/advisories/GHSA-35mw-5vvr-vrxc",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.3.22, < 2026.4.5"
+    ],
+    "fixed_versions": [
+      "2026.4.5"
+    ],
+    "fixed_version": "2026.4.5",
+    "cwes": [
+      "CWE-61"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",
     "cve_id": null,
     "severity": "medium",
@@ -1436,6 +1457,7 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
+      "CWE-862",
       "CWE-918"
     ]
   },
@@ -1457,6 +1479,7 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
+      "CWE-862",
       "CWE-918"
     ]
   },
@@ -2099,27 +2122,6 @@
     "fixed_version": "2026.3.22",
     "cwes": [
       "CWE-648"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-hm63-vwj4-mj2q",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw: Remote media error responses could trigger unbounded memory allocation before failure",
-    "published": "2026-04-10",
-    "html_url": "https://github.com/advisories/GHSA-hm63-vwj4-mj2q",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.3.22"
-    ],
-    "fixed_versions": [
-      "2026.3.22"
-    ],
-    "fixed_version": "2026.3.22",
-    "cwes": [
-      "CWE-789"
     ]
   },
   {

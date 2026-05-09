@@ -279,6 +279,77 @@
     }
   },
   {
+    "ghsa_id": "GHSA-35mw-5vvr-vrxc",
+    "cve_id": "CVE-2026-43570",
+    "url": "https://api.github.com/advisories/GHSA-35mw-5vvr-vrxc",
+    "html_url": "https://github.com/advisories/GHSA-35mw-5vvr-vrxc",
+    "summary": "OpenClaw contains a symlink traversal vulnerability",
+    "description": "OpenClaw versions 2026.3.22 before 2026.4.5 contain a symlink traversal vulnerability in remote marketplace repository path handling that allows attackers to escape the expected repository root. Attackers can exploit this by providing crafted symlink paths to access files outside the intended repository directory.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-35mw-5vvr-vrxc",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-43570",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-cr8r-7g2h-6wr6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43570",
+      "https://github.com/openclaw/openclaw/commit/94b0062e90467e1582b47cc971f308457c537f3a",
+      "https://github.com/openclaw/openclaw/commit/b1dd3ded3589f6fa60ab85b3930a82d538edaeae",
+      "https://www.vulncheck.com/advisories/openclaw-symlink-traversal-in-remote-marketplace-repository-path-handling",
+      "https://github.com/advisories/GHSA-35mw-5vvr-vrxc"
+    ],
+    "published_at": "2026-05-05T12:31:39Z",
+    "updated_at": "2026-05-08T20:04:47Z",
+    "github_reviewed_at": "2026-05-08T20:04:46Z",
+    "nvd_published_at": "2026-05-05T12:16:20Z",
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": ">= 2026.3.22, < 2026.4.5",
+        "first_patched_version": "2026.4.5",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-61",
+        "name": "UNIX Symbolic Link (Symlink) Following"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N",
+      "score": 6.5
+    },
+    "epss": {
+      "percentage": 0.00076,
+      "percentile": 0.22634
+    }
+  },
+  {
     "ghsa_id": "GHSA-93rg-2xm5-2p9v",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-93rg-2xm5-2p9v",
@@ -1102,7 +1173,7 @@
     },
     "epss": {
       "percentage": 0.00016,
-      "percentile": 0.03487
+      "percentile": 0.03505
     }
   },
   {
@@ -5260,8 +5331,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.00051,
-      "percentile": 0.15518
+      "percentage": 0.00054,
+      "percentile": 0.16624
     }
   },
   {
@@ -5857,12 +5928,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-527m-976r-jf79",
       "https://github.com/openclaw/openclaw/pull/64370",
       "https://github.com/openclaw/openclaw/commit/daeb74920d5ad986cb600625180037e23221e93a",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43573",
+      "https://www.vulncheck.com/advisories/openclaw-ssrf-policy-bypass-in-existing-session-browser-interaction-routes",
       "https://github.com/advisories/GHSA-527m-976r-jf79"
     ],
     "published_at": "2026-04-17T22:11:33Z",
-    "updated_at": "2026-05-05T12:02:51Z",
+    "updated_at": "2026-05-08T21:48:08Z",
     "github_reviewed_at": "2026-04-17T22:11:33Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:21Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -5877,8 +5950,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
@@ -5886,6 +5959,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      },
       {
         "cwe_id": "CWE-918",
         "name": "Server-Side Request Forgery (SSRF)"
@@ -5966,12 +6043,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
+      "score": 7.7
     },
     "epss": {
-      "percentage": 0.00027,
-      "percentile": 0.0758
+      "percentage": 0.00028,
+      "percentile": 0.08072
     }
   },
   {
@@ -5999,12 +6076,15 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-rj2p-j66c-mgqh",
       "https://github.com/openclaw/openclaw/pull/63332",
       "https://github.com/openclaw/openclaw/commit/48c03479211799ec3c1305ad69037cea25ba0e1e",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-42439",
+      "https://github.com/openclaw/openclaw/commit/48c0347921b7e9438af0312968fc360ca88023f3",
+      "https://www.vulncheck.com/advisories/openclaw-ssrf-policy-bypass-in-browser-tabs-action-routes",
       "https://github.com/advisories/GHSA-rj2p-j66c-mgqh"
     ],
     "published_at": "2026-04-17T22:01:57Z",
-    "updated_at": "2026-05-05T11:50:14Z",
+    "updated_at": "2026-05-08T19:32:59Z",
     "github_reviewed_at": "2026-04-17T22:01:57Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:18Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6019,8 +6099,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "score": 8.5
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
@@ -6028,6 +6108,10 @@
       }
     },
     "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      },
       {
         "cwe_id": "CWE-918",
         "name": "Server-Side Request Forgery (SSRF)"
@@ -6060,8 +6144,8 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "score": 8.5
     },
     "epss": {
       "percentage": 0.00028,
@@ -6390,8 +6474,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.0004,
-      "percentile": 0.11936
+      "percentage": 0.00042,
+      "percentile": 0.12819
     }
   },
   {
@@ -6464,7 +6548,7 @@
     },
     "epss": {
       "percentage": 0.00026,
-      "percentile": 0.07486
+      "percentile": 0.07502
     }
   },
   {
@@ -6785,12 +6869,14 @@
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-7wv4-cc7p-jhxc",
       "https://github.com/openclaw/openclaw/pull/62660",
       "https://github.com/openclaw/openclaw/commit/dbfcef319618158fa40b31cdac386ea34c392c0c",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-43531",
+      "https://www.vulncheck.com/advisories/openclaw-environment-variable-injection-via-workspace-env-file",
       "https://github.com/advisories/GHSA-7wv4-cc7p-jhxc"
     ],
     "published_at": "2026-04-17T21:56:12Z",
-    "updated_at": "2026-05-05T11:57:43Z",
+    "updated_at": "2026-05-08T21:48:04Z",
     "github_reviewed_at": "2026-04-17T21:56:12Z",
-    "nvd_published_at": null,
+    "nvd_published_at": "2026-05-05T12:16:19Z",
     "withdrawn_at": null,
     "vulnerabilities": [
       {
@@ -6805,8 +6891,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:P/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
@@ -6870,12 +6956,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
     },
     "epss": {
-      "percentage": 0.00012,
-      "percentile": 0.01666
+      "percentage": 0.00027,
+      "percentile": 0.07715
     }
   },
   {
@@ -7074,8 +7160,8 @@
       "score": 6.5
     },
     "epss": {
-      "percentage": 0.00027,
-      "percentile": 0.07542
+      "percentage": 0.00029,
+      "percentile": 0.08177
     }
   },
   {
@@ -7474,7 +7560,7 @@
     },
     "epss": {
       "percentage": 0.00026,
-      "percentile": 0.07486
+      "percentile": 0.07502
     }
   },
   {
@@ -7615,8 +7701,8 @@
       "score": null
     },
     "epss": {
-      "percentage": 0.00028,
-      "percentile": 0.0784
+      "percentage": 0.0003,
+      "percentile": 0.08491
     }
   },
   {
@@ -8567,8 +8653,8 @@
       "score": 6.8
     },
     "epss": {
-      "percentage": 0.00022,
-      "percentile": 0.06096
+      "percentage": 0.00023,
+      "percentile": 0.06534
     }
   },
   {
@@ -9163,69 +9249,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-hm63-vwj4-mj2q",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-hm63-vwj4-mj2q",
-    "html_url": "https://github.com/advisories/GHSA-hm63-vwj4-mj2q",
-    "summary": "Duplicate Advisory: OpenClaw: Remote media error responses could trigger unbounded memory allocation before failure",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-4qwc-c7g9-4xcw. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.3.22 contains an unbounded memory allocation vulnerability in remote media HTTP error handling that allows attackers to trigger excessive memory consumption. Attackers can send crafted HTTP error responses with large bodies to remote media endpoints, causing the application to allocate unbounded memory before failure handling occurs.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-hm63-vwj4-mj2q",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-4qwc-c7g9-4xcw",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-35633",
-      "https://github.com/openclaw/openclaw/commit/630f1479c44f78484dfa21bb407cbe6f171dac87",
-      "https://github.com/openclaw/openclaw/commit/81445a901091a5d27ef0b56fceedbe4724566438",
-      "https://www.vulncheck.com/advisories/openclaw-unbounded-memory-allocation-via-remote-media-error-responses",
-      "https://github.com/advisories/GHSA-hm63-vwj4-mj2q"
-    ],
-    "published_at": "2026-04-10T00:30:30Z",
-    "updated_at": "2026-04-10T20:19:32Z",
-    "github_reviewed_at": "2026-04-10T20:19:29Z",
-    "nvd_published_at": "2026-04-09T22:16:32Z",
-    "withdrawn_at": "2026-04-10T20:19:29Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.3.22",
-        "first_patched_version": "2026.3.22",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-        "score": 5.3
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-789",
-        "name": "Memory Allocation with Excessive Size Value"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
-      "score": 5.3
     }
   },
   {
