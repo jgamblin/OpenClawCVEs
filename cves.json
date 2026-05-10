@@ -24,20 +24,20 @@
     "ghsa_id": "GHSA-66r7-m7xm-v49h"
   },
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-28478",
@@ -104,20 +104,20 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-43569",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-939r-rj45-g2rj"
-  },
-  {
     "cve_id": "CVE-2026-43571",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-82qx-6vj7-p8m2"
+  },
+  {
+    "cve_id": "CVE-2026-43569",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-939r-rj45-g2rj"
   },
   {
     "cve_id": "CVE-2026-43535",
@@ -216,20 +216,20 @@
     "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
-    "cve_id": "CVE-2026-41389",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
-    "date_published": "2026-04-20",
-    "ghsa_id": "GHSA-mr34-9552-qr95"
-  },
-  {
     "cve_id": "CVE-2026-43527",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-53vx-pmqw-863c"
+  },
+  {
+    "cve_id": "CVE-2026-41389",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
+    "date_published": "2026-04-20",
+    "ghsa_id": "GHSA-mr34-9552-qr95"
   },
   {
     "cve_id": "CVE-2026-43572",
@@ -240,14 +240,6 @@
     "ghsa_id": "GHSA-gc9r-867r-j85f"
   },
   {
-    "cve_id": "CVE-2026-43570",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw contains a symlink traversal vulnerability",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
-  },
-  {
     "cve_id": "CVE-2026-43574",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -256,12 +248,20 @@
     "ghsa_id": "GHSA-49cg-279w-m73x"
   },
   {
-    "cve_id": "CVE-2026-42438",
+    "cve_id": "CVE-2026-43570",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw contains a symlink traversal vulnerability",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
+  },
+  {
+    "cve_id": "CVE-2026-42439",
     "severity": "MEDIUM",
     "cvss": 4.9,
-    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
+    "title": "OpenClaw < 2026.4.10 - SSRF Policy Bypass in Browser Tabs Action Routes",
     "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-jhpv-5j76-m56h"
+    "ghsa_id": "GHSA-rj2p-j66c-mgqh"
   },
   {
     "cve_id": "CVE-2026-42436",
@@ -272,20 +272,20 @@
     "ghsa_id": "GHSA-c4qm-58hj-j6pj"
   },
   {
+    "cve_id": "CVE-2026-42438",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-jhpv-5j76-m56h"
+  },
+  {
     "cve_id": "CVE-2026-43532",
     "severity": "MEDIUM",
     "cvss": 4.9,
     "title": "OpenClaw: Discord event cover images bypassed sandbox media normalization",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-c9h3-5p7r-mrjh"
-  },
-  {
-    "cve_id": "CVE-2026-42439",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.10 - SSRF Policy Bypass in Browser Tabs Action Routes",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-rj2p-j66c-mgqh"
   },
   {
     "cve_id": "CVE-2026-43573",
