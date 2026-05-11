@@ -35,11 +35,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7437-7hg8-frrw"
   },
   {
+    "ghsa_id": "GHSA-8372-7vhw-cm6q",
+    "severity": "HIGH",
+    "title": "config.get redaction bypass through sourceConfig and runtimeConfig aliases",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8372-7vhw-cm6q"
+  },
+  {
     "ghsa_id": "GHSA-846p-hgpv-vphc",
     "severity": "HIGH",
     "title": "QQ Bot structured payloads could read arbitrary local files",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-846p-hgpv-vphc"
+  },
+  {
+    "ghsa_id": "GHSA-92jp-89mq-4374",
+    "severity": "HIGH",
+    "title": "Sandbox noVNC helper route exposed interactive browser session credentials",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-92jp-89mq-4374"
   },
   {
     "ghsa_id": "GHSA-cm8v-2vh9-cxf3",
@@ -182,6 +196,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9jpj-g8vv-j5mf"
   },
   {
+    "ghsa_id": "GHSA-c4qm-58hj-j6pj",
+    "severity": "MEDIUM",
+    "title": "Browser snapshot and screenshot routes could expose internal page content after navigation",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qm-58hj-j6pj"
+  },
+  {
     "ghsa_id": "GHSA-ccx3-fw7q-rr2r",
     "severity": "MEDIUM",
     "title": "Multiple Code Paths Missing Base64 Pre-Allocation Size Checks",
@@ -210,6 +231,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvx6-pj3r-5q4q"
   },
   {
+    "ghsa_id": "GHSA-g2hm-779g-vm32",
+    "severity": "MEDIUM",
+    "title": "Heartbeat owner downgrade missed untrusted webhook wake events",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g2hm-779g-vm32"
+  },
+  {
+    "ghsa_id": "GHSA-jwrq-8g5x-5fhm",
+    "severity": "MEDIUM",
+    "title": "Collect-mode queue batches could reuse the last sender authorization context",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jwrq-8g5x-5fhm"
+  },
+  {
     "ghsa_id": "GHSA-rxmx-g7hr-8mx4",
     "severity": "MEDIUM",
     "title": "Zalo replay dedupe keys could suppress messages across chats or senders",
@@ -231,11 +266,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vr5g-mmx7-h897"
   },
   {
+    "ghsa_id": "GHSA-vw3h-q6xq-jjm5",
+    "severity": "MEDIUM",
+    "title": "Voice-call realtime WebSocket accepted oversized frames",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vw3h-q6xq-jjm5"
+  },
+  {
     "ghsa_id": "GHSA-2f7j-rp58-mr42",
     "severity": "LOW",
     "title": "Gateway hello snapshots exposed host config and state paths to non-admin clients",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2f7j-rp58-mr42"
+  },
+  {
+    "ghsa_id": "GHSA-gj9q-8w99-mp8j",
+    "severity": "LOW",
+    "title": "TOCTOU read in exec script preflight",
+    "published": "2026-04-15",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gj9q-8w99-mp8j"
   },
   {
     "ghsa_id": "GHSA-jj6q-rrrf-h66h",
