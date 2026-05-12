@@ -168,6 +168,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-82rm-qcfx-2v78",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw: Delivery queue recovery could lose group tool-policy context for media replay",
+    "published": "2026-05-06",
+    "html_url": "https://github.com/advisories/GHSA-82rm-qcfx-2v78",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      ">= 2026.4.10, < 2026.4.14"
+    ],
+    "fixed_versions": [
+      "2026.4.14"
+    ],
+    "fixed_version": "2026.4.14",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-cjg8-85gj-v9q2",
     "cve_id": null,
     "severity": "critical",
@@ -379,7 +400,7 @@
   },
   {
     "ghsa_id": "GHSA-5h3g-6xhh-rg6p",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44113",
     "severity": "medium",
     "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
     "published": "2026-05-04",
@@ -400,8 +421,8 @@
   },
   {
     "ghsa_id": "GHSA-wppj-c6mr-83jj",
-    "cve_id": null,
-    "severity": "high",
+    "cve_id": "CVE-2026-44112",
+    "severity": "medium",
     "title": "OpenClaw: OpenShell FS bridge writes stay pinned to the sandbox mount root",
     "published": "2026-05-04",
     "html_url": "https://github.com/advisories/GHSA-wppj-c6mr-83jj",
@@ -442,7 +463,7 @@
   },
   {
     "ghsa_id": "GHSA-r6xh-pqhr-v4xh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44118",
     "severity": "high",
     "title": "OpenClaw: MCP loopback owner context is derived from server-issued bearer tokens",
     "published": "2026-05-04",
@@ -458,7 +479,8 @@
     ],
     "fixed_version": "2026.4.22",
     "cwes": [
-      "CWE-284"
+      "CWE-284",
+      "CWE-290"
     ]
   },
   {
@@ -506,7 +528,7 @@
   },
   {
     "ghsa_id": "GHSA-2hh7-c75g-qj2r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44116",
     "severity": "medium",
     "title": "OpenClaw validates Zalo outbound photo URLs through the SSRF guard",
     "published": "2026-05-04",
@@ -804,8 +826,8 @@
   },
   {
     "ghsa_id": "GHSA-c4qg-j8jg-42q5",
-    "cve_id": null,
-    "severity": "low",
+    "cve_id": "CVE-2026-44117",
+    "severity": "medium",
     "title": "OpenClaw: QQBot direct media upload skipped URL SSRF validation",
     "published": "2026-04-25",
     "html_url": "https://github.com/advisories/GHSA-c4qg-j8jg-42q5",
@@ -869,8 +891,8 @@
   },
   {
     "ghsa_id": "GHSA-hxvm-xjvf-93f3",
-    "cve_id": null,
-    "severity": "medium",
+    "cve_id": "CVE-2026-44114",
+    "severity": "high",
     "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
     "published": "2026-04-25",
     "html_url": "https://github.com/advisories/GHSA-hxvm-xjvf-93f3",
@@ -1458,7 +1480,7 @@
   },
   {
     "ghsa_id": "GHSA-xh72-v6v9-mwhc",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44109",
     "severity": "critical",
     "title": "OpenClaw: Feishu webhook and card-action validation now fail closed",
     "published": "2026-04-17",
@@ -1481,7 +1503,7 @@
   },
   {
     "ghsa_id": "GHSA-2gvc-4f3c-2855",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44110",
     "severity": "high",
     "title": "OpenClaw: Matrix room control-command authorization no longer trusts DM pairing-store entries",
     "published": "2026-04-17",
@@ -1502,8 +1524,8 @@
   },
   {
     "ghsa_id": "GHSA-xmxx-7p24-h892",
-    "cve_id": null,
-    "severity": "high",
+    "cve_id": "CVE-2026-43585",
+    "severity": "critical",
     "title": "OpenClaw: Gateway HTTP endpoints re-resolve bearer auth after SecretRef rotation",
     "published": "2026-04-17",
     "html_url": "https://github.com/advisories/GHSA-xmxx-7p24-h892",
@@ -1518,12 +1540,13 @@
     ],
     "fixed_version": "2026.4.15",
     "cwes": [
-      "CWE-324"
+      "CWE-324",
+      "CWE-672"
     ]
   },
   {
     "ghsa_id": "GHSA-f7fh-qg34-x2xh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43576",
     "severity": "medium",
     "title": "OpenClaw: CDP /json/version WebSocket URL could pivot to untrusted second-hop targets",
     "published": "2026-04-17",
@@ -1539,6 +1562,7 @@
     ],
     "fixed_version": "2026.4.5",
     "cwes": [
+      "CWE-601",
       "CWE-918"
     ]
   },
@@ -1651,7 +1675,7 @@
   },
   {
     "ghsa_id": "GHSA-536q-mj95-h29h",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43580",
     "severity": "medium",
     "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
     "published": "2026-04-17",
@@ -1667,6 +1691,7 @@
     ],
     "fixed_version": "2026.4.10",
     "cwes": [
+      "CWE-862",
       "CWE-918"
     ]
   },
@@ -1868,7 +1893,7 @@
   },
   {
     "ghsa_id": "GHSA-xq94-r468-qwgj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43582",
     "severity": "medium",
     "title": "OpenClaw: Browser SSRF hostname validation could be bypassed by DNS rebinding",
     "published": "2026-04-17",
@@ -1998,7 +2023,7 @@
   },
   {
     "ghsa_id": "GHSA-vfp4-8x56-j7c5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43584",
     "severity": "high",
     "title": "OpenClaw: Exec environment denylist missed high-risk interpreter startup variables",
     "published": "2026-04-17",
@@ -2083,7 +2108,7 @@
   },
   {
     "ghsa_id": "GHSA-r77c-2cmr-7p47",
-    "cve_id": null,
+    "cve_id": "CVE-2026-43583",
     "severity": "low",
     "title": "OpenClaw: Delivery queue recovery could lose group tool-policy context for media replay",
     "published": "2026-04-17",
@@ -2100,27 +2125,6 @@
     "fixed_version": "2026.4.14",
     "cwes": [
       "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-g375-h3v6-4873",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Heartbeat owner downgrade missed local async exec completion events",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-g375-h3v6-4873",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.3.31, < 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-269"
     ]
   },
   {

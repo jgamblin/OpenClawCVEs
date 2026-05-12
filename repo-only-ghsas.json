@@ -238,6 +238,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g2hm-779g-vm32"
   },
   {
+    "ghsa_id": "GHSA-g375-h3v6-4873",
+    "severity": "MEDIUM",
+    "title": "Heartbeat owner downgrade missed local async exec completion events",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g375-h3v6-4873"
+  },
+  {
     "ghsa_id": "GHSA-jwrq-8g5x-5fhm",
     "severity": "MEDIUM",
     "title": "Collect-mode queue batches could reuse the last sender authorization context",
