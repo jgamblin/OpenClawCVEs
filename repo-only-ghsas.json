@@ -35,6 +35,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7437-7hg8-frrw"
   },
   {
+    "ghsa_id": "GHSA-7wv4-cc7p-jhxc",
+    "severity": "HIGH",
+    "title": "Workspace .env could inject OpenClaw runtime-control variables",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7wv4-cc7p-jhxc"
+  },
+  {
     "ghsa_id": "GHSA-8372-7vhw-cm6q",
     "severity": "HIGH",
     "title": "config.get redaction bypass through sourceConfig and runtimeConfig aliases",
@@ -112,6 +119,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qx8j-g322-qj6m"
   },
   {
+    "ghsa_id": "GHSA-vfp4-8x56-j7c5",
+    "severity": "HIGH",
+    "title": "Exec environment denylist missed high-risk interpreter startup variables",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vfp4-8x56-j7c5"
+  },
+  {
     "ghsa_id": "GHSA-w9j9-w4cp-6wgr",
     "severity": "HIGH",
     "title": "OpenClaw Host-Exec Environment Variable Injection",
@@ -147,6 +161,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3fv3-6p2v-gxwj"
   },
   {
+    "ghsa_id": "GHSA-49cg-279w-m73x",
+    "severity": "MEDIUM",
+    "title": "Empty approver lists could grant explicit approval authorization",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-49cg-279w-m73x"
+  },
+  {
     "ghsa_id": "GHSA-4p4f-fc8q-84m3",
     "severity": "MEDIUM",
     "title": "iOS A2UI bridge trusted generic local-network pages for agent.request dispatch",
@@ -159,6 +180,13 @@
     "title": "Feishu docx upload_file/upload_image Bypasses Workspace-Only Filesystem Policy (GHSA-qf48-qfv4-jjm9 Incomplete Fix)",
     "published": "2026-04-08",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5fc7-f62m-8983"
+  },
+  {
+    "ghsa_id": "GHSA-5gjc-grvm-m88j",
+    "severity": "MEDIUM",
+    "title": "Memory dreaming config persistence was reachable from operator.write commands",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5gjc-grvm-m88j"
   },
   {
     "ghsa_id": "GHSA-5h3f-885m-v22w",
@@ -182,6 +210,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-68x5-xx89-w9mm"
   },
   {
+    "ghsa_id": "GHSA-7g8c-cfr3-vqqr",
+    "severity": "MEDIUM",
+    "title": "Agent hook events could enqueue trusted system events from unsanitized external input",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7g8c-cfr3-vqqr"
+  },
+  {
     "ghsa_id": "GHSA-98ch-45wp-ch47",
     "severity": "MEDIUM",
     "title": "Windows-compatible env override keys could bypass system.run approval binding",
@@ -201,6 +236,13 @@
     "title": "Browser snapshot and screenshot routes could expose internal page content after navigation",
     "published": "2026-04-16",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qm-58hj-j6pj"
+  },
+  {
+    "ghsa_id": "GHSA-c9h3-5p7r-mrjh",
+    "severity": "MEDIUM",
+    "title": "Discord event cover images bypassed sandbox media normalization",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c9h3-5p7r-mrjh"
   },
   {
     "ghsa_id": "GHSA-ccx3-fw7q-rr2r",
@@ -245,11 +287,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g375-h3v6-4873"
   },
   {
+    "ghsa_id": "GHSA-j6c7-3h5x-99g9",
+    "severity": "MEDIUM",
+    "title": "Shell-wrapper detection missed env-argv assignment injection forms",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j6c7-3h5x-99g9"
+  },
+  {
     "ghsa_id": "GHSA-jwrq-8g5x-5fhm",
     "severity": "MEDIUM",
     "title": "Collect-mode queue batches could reuse the last sender authorization context",
     "published": "2026-04-16",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jwrq-8g5x-5fhm"
+  },
+  {
+    "ghsa_id": "GHSA-r77c-2cmr-7p47",
+    "severity": "MEDIUM",
+    "title": "Delivery queue recovery could lose group tool-policy context for media replay",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r77c-2cmr-7p47"
   },
   {
     "ghsa_id": "GHSA-rxmx-g7hr-8mx4",
@@ -285,6 +341,13 @@
     "title": "Gateway hello snapshots exposed host config and state paths to non-admin clients",
     "published": "2026-04-02",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2f7j-rp58-mr42"
+  },
+  {
+    "ghsa_id": "GHSA-gc9r-867r-j85f",
+    "severity": "LOW",
+    "title": "Microsoft Teams SSO invoke handler missed sender authorization checks",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gc9r-867r-j85f"
   },
   {
     "ghsa_id": "GHSA-gj9q-8w99-mp8j",
