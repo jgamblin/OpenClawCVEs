@@ -505,7 +505,7 @@
   },
   {
     "ghsa_id": "GHSA-r39h-4c2p-3jxp",
-    "cve_id": null,
+    "cve_id": "CVE-2026-45004",
     "severity": "high",
     "title": "OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
     "published": "2026-05-05",
@@ -526,7 +526,7 @@
   },
   {
     "ghsa_id": "GHSA-q8ff-7ffm-m3r9",
-    "cve_id": null,
+    "cve_id": "CVE-2026-45005",
     "severity": "medium",
     "title": "OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload",
     "published": "2026-05-05",
@@ -674,7 +674,7 @@
   },
   {
     "ghsa_id": "GHSA-55cf-xx38-4p9p",
-    "cve_id": null,
+    "cve_id": "CVE-2026-45003",
     "severity": "medium",
     "title": "OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
     "published": "2026-05-04",
@@ -696,7 +696,7 @@
   },
   {
     "ghsa_id": "GHSA-q3jj-46pq-826r",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44997",
     "severity": "medium",
     "title": "OpenClaw's ACP child sessions inherit subagent security envelope constraints",
     "published": "2026-05-04",
@@ -781,7 +781,7 @@
   },
   {
     "ghsa_id": "GHSA-c28g-vh7m-fm7v",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44991",
     "severity": "medium",
     "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
     "published": "2026-04-29",
@@ -950,7 +950,7 @@
   },
   {
     "ghsa_id": "GHSA-h2vw-ph2c-jvwf",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44992",
     "severity": "medium",
     "title": "OpenClaw: Workspace dotenv MiniMax host override could redirect credentialed requests",
     "published": "2026-04-25",
@@ -1036,7 +1036,7 @@
   },
   {
     "ghsa_id": "GHSA-mj59-h3q9-ghfh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44995",
     "severity": "medium",
     "title": "OpenClaw: MCP stdio server env could load dangerous startup variables from workspace config",
     "published": "2026-04-25",
@@ -1059,7 +1059,7 @@
   },
   {
     "ghsa_id": "GHSA-57r2-h2wj-g887",
-    "cve_id": null,
+    "cve_id": "CVE-2026-44999",
     "severity": "low",
     "title": "OpenClaw: Isolated cron awareness events were recorded as trusted system events",
     "published": "2026-04-25",
@@ -1143,7 +1143,7 @@
   },
   {
     "ghsa_id": "GHSA-2xcp-x87w-q377",
-    "cve_id": null,
+    "cve_id": "CVE-2026-45002",
     "severity": "medium",
     "title": "OpenClaw: Hook mapping templates could bypass hook session-key opt-in",
     "published": "2026-04-25",
