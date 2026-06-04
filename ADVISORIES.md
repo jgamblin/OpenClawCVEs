@@ -3,7 +3,7 @@
 > Complete listing of all 186 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-06-03 19:28 UTC</sub>
+<sub>Last updated: 2026-06-04 01:15 UTC</sub>
 
 ---
 
