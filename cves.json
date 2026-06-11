@@ -64,20 +64,20 @@
     "ghsa_id": "GHSA-2cq5-mf3v-mx44"
   },
   {
-    "cve_id": "CVE-2026-44114",
-    "severity": "HIGH",
-    "cvss": 8.5,
-    "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-hxvm-xjvf-93f3"
-  },
-  {
     "cve_id": "CVE-2026-44118",
     "severity": "HIGH",
     "cvss": 8.5,
     "title": "OpenClaw < 2026.4.22 - Owner Context Spoofing via Bearer Token Header",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-r6xh-pqhr-v4xh"
+  },
+  {
+    "cve_id": "CVE-2026-44114",
+    "severity": "HIGH",
+    "cvss": 8.5,
+    "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-hxvm-xjvf-93f3"
   },
   {
     "cve_id": "CVE-2026-45004",
@@ -224,20 +224,20 @@
     "ghsa_id": "GHSA-53vx-pmqw-863c"
   },
   {
-    "cve_id": "CVE-2026-44117",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.4.20 - Server-Side Request Forgery in QQBot Direct Media Upload",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-c4qg-j8jg-42q5"
-  },
-  {
     "cve_id": "CVE-2026-45002",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw < 2026.4.20 - Hook Session-Key Bypass via Template Mapping",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-2xcp-x87w-q377"
+  },
+  {
+    "cve_id": "CVE-2026-44117",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.4.20 - Server-Side Request Forgery in QQBot Direct Media Upload",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-c4qg-j8jg-42q5"
   },
   {
     "cve_id": "CVE-2026-44999",
@@ -304,20 +304,12 @@
     "ghsa_id": "GHSA-jhpv-5j76-m56h"
   },
   {
-    "cve_id": "CVE-2026-43576",
+    "cve_id": "CVE-2026-43582",
     "severity": "MEDIUM",
     "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
+    "title": "OpenClaw < 2026.4.10 - DNS Rebinding SSRF via Hostname Validation Bypass",
     "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
-  },
-  {
-    "cve_id": "CVE-2026-43580",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-536q-mj95-h29h"
+    "ghsa_id": "GHSA-xq94-r468-qwgj"
   },
   {
     "cve_id": "CVE-2026-43573",
@@ -328,12 +320,20 @@
     "ghsa_id": "GHSA-527m-976r-jf79"
   },
   {
-    "cve_id": "CVE-2026-43582",
+    "cve_id": "CVE-2026-43580",
     "severity": "MEDIUM",
     "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.10 - DNS Rebinding SSRF via Hostname Validation Bypass",
+    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
     "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-xq94-r468-qwgj"
+    "ghsa_id": "GHSA-536q-mj95-h29h"
+  },
+  {
+    "cve_id": "CVE-2026-43576",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
   },
   {
     "cve_id": "CVE-2026-44992",
