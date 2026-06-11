@@ -24,20 +24,20 @@
     "ghsa_id": "GHSA-66r7-m7xm-v49h"
   },
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-28478",
@@ -48,20 +48,20 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
-    "cve_id": "CVE-2026-42434",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-736r-jwj6-4w23"
-  },
-  {
     "cve_id": "CVE-2026-43530",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw: busybox and toybox applet execution weakened exec approval binding",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-2cq5-mf3v-mx44"
+  },
+  {
+    "cve_id": "CVE-2026-42434",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-736r-jwj6-4w23"
   },
   {
     "cve_id": "CVE-2026-44114",
@@ -112,20 +112,20 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-43569",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-939r-rj45-g2rj"
-  },
-  {
     "cve_id": "CVE-2026-43571",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-82qx-6vj7-p8m2"
+  },
+  {
+    "cve_id": "CVE-2026-43569",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-939r-rj45-g2rj"
   },
   {
     "cve_id": "CVE-2026-44110",
@@ -144,20 +144,20 @@
     "ghsa_id": "GHSA-mr32-vwc2-5j6h"
   },
   {
-    "cve_id": "CVE-2026-26317",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-3fqr-4cg8-h96q"
-  },
-  {
     "cve_id": "CVE-2026-42433",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw: Matrix profile config persistence was reachable from operator.write message tools",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-7jp6-r74r-995q"
+  },
+  {
+    "cve_id": "CVE-2026-26317",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-3fqr-4cg8-h96q"
   },
   {
     "cve_id": "CVE-2026-43567",
@@ -208,20 +208,20 @@
     "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
-    "cve_id": "CVE-2026-41389",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
-    "date_published": "2026-04-20",
-    "ghsa_id": "GHSA-mr34-9552-qr95"
-  },
-  {
     "cve_id": "CVE-2026-43527",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-53vx-pmqw-863c"
+  },
+  {
+    "cve_id": "CVE-2026-41389",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw: Webchat media embedding enforces local-root containment for tool-result files",
+    "date_published": "2026-04-20",
+    "ghsa_id": "GHSA-mr34-9552-qr95"
   },
   {
     "cve_id": "CVE-2026-44117",
@@ -256,20 +256,20 @@
     "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
   },
   {
-    "cve_id": "CVE-2026-44113",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
-  },
-  {
     "cve_id": "CVE-2026-44112",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw < 2026.4.22 - Symlink Swap Race Condition in OpenShell FS Bridge Writes",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-wppj-c6mr-83jj"
+  },
+  {
+    "cve_id": "CVE-2026-44113",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
   },
   {
     "cve_id": "CVE-2026-45005",
@@ -288,14 +288,6 @@
     "ghsa_id": "GHSA-mj59-h3q9-ghfh"
   },
   {
-    "cve_id": "CVE-2026-42438",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-jhpv-5j76-m56h"
-  },
-  {
     "cve_id": "CVE-2026-42439",
     "severity": "MEDIUM",
     "cvss": 4.9,
@@ -304,20 +296,12 @@
     "ghsa_id": "GHSA-rj2p-j66c-mgqh"
   },
   {
-    "cve_id": "CVE-2026-43580",
+    "cve_id": "CVE-2026-42438",
     "severity": "MEDIUM",
     "cvss": 4.9,
-    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-536q-mj95-h29h"
-  },
-  {
-    "cve_id": "CVE-2026-43582",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.10 - DNS Rebinding SSRF via Hostname Validation Bypass",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-xq94-r468-qwgj"
+    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-jhpv-5j76-m56h"
   },
   {
     "cve_id": "CVE-2026-43576",
@@ -328,12 +312,28 @@
     "ghsa_id": "GHSA-f7fh-qg34-x2xh"
   },
   {
+    "cve_id": "CVE-2026-43580",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-536q-mj95-h29h"
+  },
+  {
     "cve_id": "CVE-2026-43573",
     "severity": "MEDIUM",
     "cvss": 4.9,
     "title": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-527m-976r-jf79"
+  },
+  {
+    "cve_id": "CVE-2026-43582",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw < 2026.4.10 - DNS Rebinding SSRF via Hostname Validation Bypass",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-xq94-r468-qwgj"
   },
   {
     "cve_id": "CVE-2026-44992",
@@ -368,19 +368,19 @@
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
   },
   {
-    "cve_id": "CVE-2026-44991",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-c28g-vh7m-fm7v"
-  },
-  {
     "cve_id": "CVE-2026-44997",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-q3jj-46pq-826r"
+  },
+  {
+    "cve_id": "CVE-2026-44991",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-c28g-vh7m-fm7v"
   }
 ]
