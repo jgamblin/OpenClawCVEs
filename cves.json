@@ -40,20 +40,20 @@
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
-    "cve_id": "CVE-2026-42434",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-736r-jwj6-4w23"
-  },
-  {
     "cve_id": "CVE-2026-28478",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
+  },
+  {
+    "cve_id": "CVE-2026-42434",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-736r-jwj6-4w23"
   },
   {
     "cve_id": "CVE-2026-43530",
@@ -120,20 +120,20 @@
     "ghsa_id": "GHSA-82qx-6vj7-p8m2"
   },
   {
-    "cve_id": "CVE-2026-44110",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Matrix room control-command authorization no longer trusts DM pairing-store entries",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-2gvc-4f3c-2855"
-  },
-  {
     "cve_id": "CVE-2026-43569",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-939r-rj45-g2rj"
+  },
+  {
+    "cve_id": "CVE-2026-44110",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Matrix room control-command authorization no longer trusts DM pairing-store entries",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-2gvc-4f3c-2855"
   },
   {
     "cve_id": "CVE-2026-28458",
@@ -166,6 +166,14 @@
     "title": "OpenClaw < 2026.4.10 - Path Traversal in screen_record outPath Parameter",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-jf25-7968-h2h5"
+  },
+  {
+    "cve_id": "CVE-2026-43531",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw < 2026.4.9 - Environment Variable Injection via Workspace .env File",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-7wv4-cc7p-jhxc"
   },
   {
     "cve_id": "CVE-2026-28480",
@@ -232,20 +240,20 @@
     "ghsa_id": "GHSA-c4qg-j8jg-42q5"
   },
   {
-    "cve_id": "CVE-2026-44999",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.4.20 - Improper Trust Labeling in Isolated Cron Awareness Events",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-57r2-h2wj-g887"
-  },
-  {
     "cve_id": "CVE-2026-45002",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw < 2026.4.20 - Hook Session-Key Bypass via Template Mapping",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-2xcp-x87w-q377"
+  },
+  {
+    "cve_id": "CVE-2026-44999",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.4.20 - Improper Trust Labeling in Isolated Cron Awareness Events",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-57r2-h2wj-g887"
   },
   {
     "cve_id": "CVE-2026-43570",
@@ -296,22 +304,6 @@
     "ghsa_id": "GHSA-jhpv-5j76-m56h"
   },
   {
-    "cve_id": "CVE-2026-42439",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.10 - SSRF Policy Bypass in Browser Tabs Action Routes",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-rj2p-j66c-mgqh"
-  },
-  {
-    "cve_id": "CVE-2026-43576",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
-  },
-  {
     "cve_id": "CVE-2026-43580",
     "severity": "MEDIUM",
     "cvss": 4.9,
@@ -328,6 +320,14 @@
     "ghsa_id": "GHSA-527m-976r-jf79"
   },
   {
+    "cve_id": "CVE-2026-42439",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw < 2026.4.10 - SSRF Policy Bypass in Browser Tabs Action Routes",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-rj2p-j66c-mgqh"
+  },
+  {
     "cve_id": "CVE-2026-43582",
     "severity": "MEDIUM",
     "cvss": 4.9,
@@ -336,12 +336,12 @@
     "ghsa_id": "GHSA-xq94-r468-qwgj"
   },
   {
-    "cve_id": "CVE-2026-45003",
+    "cve_id": "CVE-2026-43576",
     "severity": "MEDIUM",
-    "cvss": 4.1,
-    "title": "OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-55cf-xx38-4p9p"
+    "cvss": 4.9,
+    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
   },
   {
     "cve_id": "CVE-2026-44992",
@@ -352,12 +352,20 @@
     "ghsa_id": "GHSA-h2vw-ph2c-jvwf"
   },
   {
-    "cve_id": "CVE-2026-41908",
+    "cve_id": "CVE-2026-45003",
+    "severity": "MEDIUM",
+    "cvss": 4.1,
+    "title": "OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-55cf-xx38-4p9p"
+  },
+  {
+    "cve_id": "CVE-2026-24764",
     "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
+    "cvss": 3.7,
+    "title": "OpenClaw has Remote Code Execution via System Prompt Injection in Slack Channel Descriptions",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-782p-5fr5-7fj8"
   },
   {
     "cve_id": "CVE-2026-41358",
@@ -366,6 +374,14 @@
     "title": "OpenClaw < 2026.4.2 - Sender Allowlist Bypass via Slack Thread Context",
     "date_published": "2026-04-23",
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
+  },
+  {
+    "cve_id": "CVE-2026-41908",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
   },
   {
     "cve_id": "CVE-2026-44991",
