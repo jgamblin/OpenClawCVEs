@@ -1,5 +1,156 @@
 [
   {
+    "ghsa_id": "GHSA-rjxq-qqhf-8hwh",
+    "cve_id": "CVE-2026-53840",
+    "url": "https://api.github.com/advisories/GHSA-rjxq-qqhf-8hwh",
+    "html_url": "https://github.com/advisories/GHSA-rjxq-qqhf-8hwh",
+    "summary": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "description": "### Summary\n\nOpenClaw supports remote MCP Streamable HTTP servers with operator-configured custom headers. In affected releases, those headers could be forwarded when the MCP endpoint responded with a cross-origin redirect.\n\nThis issue is limited to configured MCP Streamable HTTP servers that use custom headers. It does not expose unrelated OpenClaw credentials.\n\n### Affected configurations\n\nThis affects deployments where an MCP server is configured with:\n\n- `transportType: \"streamable-http\"`\n- sensitive custom headers under `mcp.servers.*.headers`\n- an MCP endpoint that is malicious, compromised, or able to redirect to another origin\n\n### Impact\n\nCustom MCP headers, such as API keys or tenant-routing headers, could be sent to the redirect target. The exposed credential scope depends on the header the operator configured for that MCP server.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.12`.\n\n### Mitigations\n\nUpgrade to `openclaw@2026.5.8` or later. Before upgrading, avoid custom MCP headers with servers you do not fully trust, and rotate any MCP-specific credentials that may have been exposed by a redirecting endpoint.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-rjxq-qqhf-8hwh",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-rjxq-qqhf-8hwh",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53840",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rjxq-qqhf-8hwh",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53840",
+      "https://www.vulncheck.com/advisories/openclaw-custom-header-leakage-via-mcp-streamable-http-cross-origin-redirects",
+      "https://github.com/advisories/GHSA-rjxq-qqhf-8hwh"
+    ],
+    "published_at": "2026-06-17T17:55:06Z",
+    "updated_at": "2026-06-17T17:55:08Z",
+    "github_reviewed_at": "2026-06-17T17:55:06Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.12",
+        "first_patched_version": "2026.5.12",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "YLChen-007",
+          "id": 30854794,
+          "node_id": "MDQ6VXNlcjMwODU0Nzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/30854794?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/YLChen-007",
+          "html_url": "https://github.com/YLChen-007",
+          "followers_url": "https://api.github.com/users/YLChen-007/followers",
+          "following_url": "https://api.github.com/users/YLChen-007/following{/other_user}",
+          "gists_url": "https://api.github.com/users/YLChen-007/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/YLChen-007/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/YLChen-007/subscriptions",
+          "organizations_url": "https://api.github.com/users/YLChen-007/orgs",
+          "repos_url": "https://api.github.com/users/YLChen-007/repos",
+          "events_url": "https://api.github.com/users/YLChen-007/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/YLChen-007/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "score": 7.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-x7cf-6gp3-q5f8",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-x7cf-6gp3-q5f8",
+    "html_url": "https://github.com/advisories/GHSA-x7cf-6gp3-q5f8",
+    "summary": "Duplicate Advisory: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "description": "## Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-rjxq-qqhf-8hwh. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.5.12 contains an information disclosure vulnerability in streamable-http MCP servers that forwards operator-configured custom headers during cross-origin redirects. Attackers controlling or compromising an MCP endpoint can redirect requests to exfiltrate sensitive headers like API keys or tenant-routing credentials to attacker-controlled origins.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-x7cf-6gp3-q5f8",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rjxq-qqhf-8hwh",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53840",
+      "https://www.vulncheck.com/advisories/openclaw-custom-header-leakage-via-mcp-streamable-http-cross-origin-redirects",
+      "https://github.com/advisories/GHSA-x7cf-6gp3-q5f8"
+    ],
+    "published_at": "2026-06-16T21:31:57Z",
+    "updated_at": "2026-06-17T17:54:48Z",
+    "github_reviewed_at": "2026-06-17T17:54:46Z",
+    "nvd_published_at": "2026-06-16T19:17:00Z",
+    "withdrawn_at": "2026-06-17T17:54:46Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.12",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
+      "score": 7.1
+    }
+  },
+  {
     "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-v8j2-5f9p-fmh4",
@@ -8420,205 +8571,6 @@
     "epss": {
       "percentage": 0.00039,
       "percentile": 0.1227
-    }
-  },
-  {
-    "ghsa_id": "GHSA-xq94-r468-qwgj",
-    "cve_id": "CVE-2026-43582",
-    "url": "https://api.github.com/advisories/GHSA-xq94-r468-qwgj",
-    "html_url": "https://github.com/advisories/GHSA-xq94-r468-qwgj",
-    "summary": "OpenClaw: Browser SSRF hostname validation could be bypassed by DNS rebinding",
-    "description": "## Summary\n\nBrowser SSRF hostname validation could be bypassed by DNS rebinding.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nBrowser navigation policy could validate a hostname/IP resolution that differed from the address Chromium ultimately used, allowing DNS rebinding style SSRF pivots.\n\n## Technical Details\n\nThe fix tightens strict browser hostname navigation so unallowlisted hostname URLs fail closed under restrictive policy.\n\n## Fix\n\nThe issue was fixed in #64367. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `121c452d666d4749744dc2089287d0227aae2ed3`\n- PR: #64367\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-xq94-r468-qwgj",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-xq94-r468-qwgj",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43582",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-xq94-r468-qwgj",
-      "https://github.com/openclaw/openclaw/pull/64367",
-      "https://github.com/openclaw/openclaw/commit/121c452d666d4749744dc2089287d0227aae2ed3",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43582",
-      "https://www.vulncheck.com/advisories/openclaw-dns-rebinding-ssrf-via-hostname-validation-bypass",
-      "https://github.com/advisories/GHSA-xq94-r468-qwgj"
-    ],
-    "published_at": "2026-04-17T21:58:01Z",
-    "updated_at": "2026-05-12T13:35:05Z",
-    "github_reviewed_at": "2026-04-17T21:58:01Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
-        "score": 6.3
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
-        "score": 4.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-350",
-        "name": "Reliance on Reverse DNS Resolution for a Security-Critical Action"
-      },
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "dhyabi2",
-          "id": 32069256,
-          "node_id": "MDQ6VXNlcjMyMDY5MjU2",
-          "avatar_url": "https://avatars.githubusercontent.com/u/32069256?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/dhyabi2",
-          "html_url": "https://github.com/dhyabi2",
-          "followers_url": "https://api.github.com/users/dhyabi2/followers",
-          "following_url": "https://api.github.com/users/dhyabi2/following{/other_user}",
-          "gists_url": "https://api.github.com/users/dhyabi2/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/dhyabi2/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/dhyabi2/subscriptions",
-          "organizations_url": "https://api.github.com/users/dhyabi2/orgs",
-          "repos_url": "https://api.github.com/users/dhyabi2/repos",
-          "events_url": "https://api.github.com/users/dhyabi2/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/dhyabi2/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "score": 6.3
-    },
-    "epss": {
-      "percentage": 0.00038,
-      "percentile": 0.11534
-    }
-  },
-  {
-    "ghsa_id": "GHSA-2767-2q9v-9326",
-    "cve_id": "CVE-2026-43526",
-    "url": "https://api.github.com/advisories/GHSA-2767-2q9v-9326",
-    "html_url": "https://github.com/advisories/GHSA-2767-2q9v-9326",
-    "summary": "OpenClaw: QQBot reply media URL handling could trigger SSRF and re-upload fetched bytes",
-    "description": "## Summary\n\nQQBot reply media URL handling could trigger SSRF and re-upload fetched bytes.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.12`\n- Patched versions: `>= 2026.4.12`\n\n## Impact\n\nQQBot reply media URLs could be treated as trusted media sources, allowing SSRF fetches whose returned bytes were then re-uploaded through the channel.\n\n## Technical Details\n\nThe fix routes QQBot remote media fetches through SSRF-guarded media fetching and explicit URL allowlist policy.\n\n## Fix\n\nThe issue was fixed in #63495 and #65788. The first stable tag containing the fix is `v2026.4.12`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `08ae021d1f4f02e0ca5fd8a3b9659291c1ecf95a`\n- `ddb7a8dd80b8d5dd04aafa44ce7a4354b568bb2d`\n- PR: #63495, #65788\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.12 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @threalwinky for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-2767-2q9v-9326",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-2767-2q9v-9326",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43526",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-2767-2q9v-9326",
-      "https://github.com/openclaw/openclaw/pull/63495",
-      "https://github.com/openclaw/openclaw/pull/65788",
-      "https://github.com/openclaw/openclaw/commit/08ae021d1f42905a85a550813c0d95169b171a6c",
-      "https://github.com/openclaw/openclaw/commit/ddb7a8dd80b8d5dd04aafa44ce7a4354b568bb2d",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43526",
-      "https://github.com/openclaw/openclaw/commit/08ae021d1f4f02e0ca5fd8a3b9659291c1ecf95a",
-      "https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-qqbot-reply-media-url-handling",
-      "https://github.com/advisories/GHSA-2767-2q9v-9326"
-    ],
-    "published_at": "2026-04-17T21:57:31Z",
-    "updated_at": "2026-05-08T01:32:11Z",
-    "github_reviewed_at": "2026-04-17T21:57:31Z",
-    "nvd_published_at": "2026-05-05T12:16:18Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.12",
-        "first_patched_version": "2026.4.12",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-        "score": 8.2
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
-        "score": 5.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "threalwinky",
-          "id": 105662081,
-          "node_id": "U_kgDOBkxGgQ",
-          "avatar_url": "https://avatars.githubusercontent.com/u/105662081?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/threalwinky",
-          "html_url": "https://github.com/threalwinky",
-          "followers_url": "https://api.github.com/users/threalwinky/followers",
-          "following_url": "https://api.github.com/users/threalwinky/following{/other_user}",
-          "gists_url": "https://api.github.com/users/threalwinky/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/threalwinky/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/threalwinky/subscriptions",
-          "organizations_url": "https://api.github.com/users/threalwinky/orgs",
-          "repos_url": "https://api.github.com/users/threalwinky/repos",
-          "events_url": "https://api.github.com/users/threalwinky/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/threalwinky/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:N",
-      "score": 8.2
-    },
-    "epss": {
-      "percentage": 0.00045,
-      "percentile": 0.14168
     }
   },
   {

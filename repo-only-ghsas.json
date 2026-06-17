@@ -70,13 +70,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qjpc-qf9m-xwmr"
   },
   {
-    "ghsa_id": "GHSA-rjxq-qqhf-8hwh",
-    "severity": "HIGH",
-    "title": "MCP Streamable HTTP redirects could forward configured custom headers to another origin",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rjxq-qqhf-8hwh"
-  },
-  {
     "ghsa_id": "GHSA-v2ww-5rh7-2h5v",
     "severity": "HIGH",
     "title": "Linux and macOS exec allowlists skipped configured argument patterns",

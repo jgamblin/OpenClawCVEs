@@ -1,5 +1,45 @@
 [
   {
+    "ghsa_id": "GHSA-rjxq-qqhf-8hwh",
+    "cve_id": "CVE-2026-53840",
+    "severity": "high",
+    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "published": "2026-06-17",
+    "html_url": "https://github.com/advisories/GHSA-rjxq-qqhf-8hwh",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.12"
+    ],
+    "fixed_versions": [
+      "2026.5.12"
+    ],
+    "fixed_version": "2026.5.12",
+    "cwes": [
+      "CWE-200"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-x7cf-6gp3-q5f8",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-x7cf-6gp3-q5f8",
+    "packages": [
+      "pip/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.12"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-522"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
     "cve_id": null,
     "severity": "medium",
@@ -2078,49 +2118,6 @@
     "cwes": [
       "CWE-918",
       "CWE-1188"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xq94-r468-qwgj",
-    "cve_id": "CVE-2026-43582",
-    "severity": "medium",
-    "title": "OpenClaw: Browser SSRF hostname validation could be bypassed by DNS rebinding",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-xq94-r468-qwgj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-350",
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-2767-2q9v-9326",
-    "cve_id": "CVE-2026-43526",
-    "severity": "medium",
-    "title": "OpenClaw: QQBot reply media URL handling could trigger SSRF and re-upload fetched bytes",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-2767-2q9v-9326",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.12"
-    ],
-    "fixed_versions": [
-      "2026.4.12"
-    ],
-    "fixed_version": "2026.4.12",
-    "cwes": [
-      "CWE-918"
     ]
   },
   {
