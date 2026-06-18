@@ -24,14 +24,6 @@
     "ghsa_id": "GHSA-66r7-m7xm-v49h"
   },
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
@@ -40,12 +32,12 @@
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
-    "cve_id": "CVE-2026-28478",
+    "cve_id": "CVE-2026-24763",
     "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-q447-rj3r-2cgh"
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-42434",
@@ -56,6 +48,14 @@
     "ghsa_id": "GHSA-736r-jwj6-4w23"
   },
   {
+    "cve_id": "CVE-2026-28478",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-q447-rj3r-2cgh"
+  },
+  {
     "cve_id": "CVE-2026-43530",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -64,20 +64,20 @@
     "ghsa_id": "GHSA-2cq5-mf3v-mx44"
   },
   {
-    "cve_id": "CVE-2026-44114",
-    "severity": "HIGH",
-    "cvss": 8.5,
-    "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-hxvm-xjvf-93f3"
-  },
-  {
     "cve_id": "CVE-2026-44118",
     "severity": "HIGH",
     "cvss": 8.5,
     "title": "OpenClaw < 2026.4.22 - Owner Context Spoofing via Bearer Token Header",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-r6xh-pqhr-v4xh"
+  },
+  {
+    "cve_id": "CVE-2026-44114",
+    "severity": "HIGH",
+    "cvss": 8.5,
+    "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-hxvm-xjvf-93f3"
   },
   {
     "cve_id": "CVE-2026-45004",
@@ -256,20 +256,20 @@
     "ghsa_id": "GHSA-wppj-c6mr-83jj"
   },
   {
-    "cve_id": "CVE-2026-44113",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
-  },
-  {
     "cve_id": "CVE-2026-53840",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+  },
+  {
+    "cve_id": "CVE-2026-44113",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
   },
   {
     "cve_id": "CVE-2026-45005",
@@ -296,20 +296,20 @@
     "ghsa_id": "GHSA-rj2p-j66c-mgqh"
   },
   {
+    "cve_id": "CVE-2026-42438",
+    "severity": "MEDIUM",
+    "cvss": 4.9,
+    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-jhpv-5j76-m56h"
+  },
+  {
     "cve_id": "CVE-2026-43573",
     "severity": "MEDIUM",
     "cvss": 4.9,
     "title": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-527m-976r-jf79"
-  },
-  {
-    "cve_id": "CVE-2026-43576",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
   },
   {
     "cve_id": "CVE-2026-43580",
@@ -320,12 +320,12 @@
     "ghsa_id": "GHSA-536q-mj95-h29h"
   },
   {
-    "cve_id": "CVE-2026-42438",
+    "cve_id": "CVE-2026-43576",
     "severity": "MEDIUM",
     "cvss": 4.9,
-    "title": "OpenClaw: Sender policy bypass in host media attachment reads allows unauthorized local file disclosure",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-jhpv-5j76-m56h"
+    "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-f7fh-qg34-x2xh"
   },
   {
     "cve_id": "CVE-2026-44992",
@@ -344,14 +344,6 @@
     "ghsa_id": "GHSA-55cf-xx38-4p9p"
   },
   {
-    "cve_id": "CVE-2026-41908",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
-  },
-  {
     "cve_id": "CVE-2026-41358",
     "severity": "LOW",
     "cvss": 2.3,
@@ -360,12 +352,12 @@
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
   },
   {
-    "cve_id": "CVE-2026-44991",
+    "cve_id": "CVE-2026-41908",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-c28g-vh7m-fm7v"
+    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
   },
   {
     "cve_id": "CVE-2026-44997",
@@ -374,5 +366,13 @@
     "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-q3jj-46pq-826r"
+  },
+  {
+    "cve_id": "CVE-2026-44991",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-c28g-vh7m-fm7v"
   }
 ]
