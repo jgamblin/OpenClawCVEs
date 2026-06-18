@@ -1,5 +1,531 @@
 [
   {
+    "ghsa_id": "GHSA-985f-72mj-8gf7",
+    "cve_id": "CVE-2026-53863",
+    "url": "https://api.github.com/advisories/GHSA-985f-72mj-8gf7",
+    "html_url": "https://github.com/advisories/GHSA-985f-72mj-8gf7",
+    "summary": "OpenClaw: Tool group policy callers could accept unvalidated group IDs",
+    "description": "### Summary\n\nTool group policy callers could accept unvalidated group IDs. In affected versions, a caller that can supply a group id to the affected policy resolver could resolve policy for an unvalidated group id.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could apply the wrong group-policy decision for a tool invocation. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.4.25`.\n\n### Mitigations\n\navoid exposing group-policy controlled tools to untrusted senders until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-985f-72mj-8gf7",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-985f-72mj-8gf7",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53863",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-985f-72mj-8gf7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53863",
+      "https://www.vulncheck.com/advisories/openclaw-unvalidated-group-id-acceptance-in-tool-group-policy",
+      "https://github.com/advisories/GHSA-985f-72mj-8gf7"
+    ],
+    "published_at": "2026-06-18T13:04:37Z",
+    "updated_at": "2026-06-18T13:04:38Z",
+    "github_reviewed_at": "2026-06-18T13:04:37Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.4.24",
+        "first_patched_version": "2026.4.25",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": null,
+        "score": 0.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-639",
+        "name": "Authorization Bypass Through User-Controlled Key"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "zsxsoft",
+          "id": 2398785,
+          "node_id": "MDQ6VXNlcjIzOTg3ODU=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/2398785?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/zsxsoft",
+          "html_url": "https://github.com/zsxsoft",
+          "followers_url": "https://api.github.com/users/zsxsoft/followers",
+          "following_url": "https://api.github.com/users/zsxsoft/following{/other_user}",
+          "gists_url": "https://api.github.com/users/zsxsoft/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/zsxsoft/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/zsxsoft/subscriptions",
+          "organizations_url": "https://api.github.com/users/zsxsoft/orgs",
+          "repos_url": "https://api.github.com/users/zsxsoft/repos",
+          "events_url": "https://api.github.com/users/zsxsoft/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/zsxsoft/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "KeenSecurityLab",
+          "id": 102663570,
+          "node_id": "U_kgDOBh6Fkg",
+          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/KeenSecurityLab",
+          "html_url": "https://github.com/KeenSecurityLab",
+          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
+          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
+          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
+          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
+          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
+          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      },
+      {
+        "user": {
+          "login": "qclawer",
+          "id": 274765497,
+          "node_id": "U_kgDOEGCWuQ",
+          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/qclawer",
+          "html_url": "https://github.com/qclawer",
+          "followers_url": "https://api.github.com/users/qclawer/followers",
+          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
+          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
+          "organizations_url": "https://api.github.com/users/qclawer/orgs",
+          "repos_url": "https://api.github.com/users/qclawer/repos",
+          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/qclawer/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "sponsor"
+      }
+    ],
+    "cvss": {
+      "vector_string": null,
+      "score": null
+    }
+  },
+  {
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v",
+    "cve_id": "CVE-2026-53842",
+    "url": "https://api.github.com/advisories/GHSA-fq9j-vw4w-fr6v",
+    "html_url": "https://github.com/advisories/GHSA-fq9j-vw4w-fr6v",
+    "summary": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "description": "### Summary\n\nWorkspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution. In affected versions, a workspace `.env` in a repository opened by a trusted operator could influence which Python runtime `gcloud` used through `CLOUDSDK_PYTHON`.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could run setup through an unintended local Python path. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.2`.\n\n### Mitigations\n\nrun Gmail setup from trusted workspaces and clear workspace env overrides until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-fq9j-vw4w-fr6v",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-fq9j-vw4w-fr6v",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53842",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-fq9j-vw4w-fr6v",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53842",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-python-runtime-execution-via-cloudsdk-python-environment-variable",
+      "https://github.com/advisories/GHSA-fq9j-vw4w-fr6v"
+    ],
+    "published_at": "2026-06-18T13:04:09Z",
+    "updated_at": "2026-06-18T13:04:10Z",
+    "github_reviewed_at": "2026-06-18T13:04:09Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.2",
+        "first_patched_version": "2026.5.2",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-426",
+        "name": "Untrusted Search Path"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "feynman-hou",
+          "id": 58766556,
+          "node_id": "MDQ6VXNlcjU4NzY2NTU2",
+          "avatar_url": "https://avatars.githubusercontent.com/u/58766556?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/feynman-hou",
+          "html_url": "https://github.com/feynman-hou",
+          "followers_url": "https://api.github.com/users/feynman-hou/followers",
+          "following_url": "https://api.github.com/users/feynman-hou/following{/other_user}",
+          "gists_url": "https://api.github.com/users/feynman-hou/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/feynman-hou/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/feynman-hou/subscriptions",
+          "organizations_url": "https://api.github.com/users/feynman-hou/orgs",
+          "repos_url": "https://api.github.com/users/feynman-hou/repos",
+          "events_url": "https://api.github.com/users/feynman-hou/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/feynman-hou/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "score": 7.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-f397-5vjw-v2c2",
+    "cve_id": "CVE-2026-53866",
+    "url": "https://api.github.com/advisories/GHSA-f397-5vjw-v2c2",
+    "html_url": "https://github.com/advisories/GHSA-f397-5vjw-v2c2",
+    "summary": "OpenClaw: Shell inline-command parsing could miss an allowlist check",
+    "description": "### Summary\n\nShell inline-command parsing could miss an allowlist check. In affected versions, a command request using shell inline-command forms could route an inline command through a parser case that did not receive the expected allowlist decision.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could run shell content without the intended approval or allowlist prompt. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.12`.\n\n### Mitigations\n\nrequire approval for shell inline-command forms until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-f397-5vjw-v2c2",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-f397-5vjw-v2c2",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53866",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-f397-5vjw-v2c2",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53866",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-in-shell-inline-command-parsing",
+      "https://github.com/advisories/GHSA-f397-5vjw-v2c2"
+    ],
+    "published_at": "2026-06-18T13:03:52Z",
+    "updated_at": "2026-06-18T13:03:53Z",
+    "github_reviewed_at": "2026-06-18T13:03:52Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.5.10-beta.1",
+        "first_patched_version": "2026.5.12",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "YLChen-007",
+          "id": 30854794,
+          "node_id": "MDQ6VXNlcjMwODU0Nzk0",
+          "avatar_url": "https://avatars.githubusercontent.com/u/30854794?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/YLChen-007",
+          "html_url": "https://github.com/YLChen-007",
+          "followers_url": "https://api.github.com/users/YLChen-007/followers",
+          "following_url": "https://api.github.com/users/YLChen-007/following{/other_user}",
+          "gists_url": "https://api.github.com/users/YLChen-007/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/YLChen-007/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/YLChen-007/subscriptions",
+          "organizations_url": "https://api.github.com/users/YLChen-007/orgs",
+          "repos_url": "https://api.github.com/users/YLChen-007/repos",
+          "events_url": "https://api.github.com/users/YLChen-007/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/YLChen-007/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 8.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-q99w-vh6v-q3v7",
+    "cve_id": "CVE-2026-53843",
+    "url": "https://api.github.com/advisories/GHSA-q99w-vh6v-q3v7",
+    "html_url": "https://github.com/advisories/GHSA-q99w-vh6v-q3v7",
+    "summary": "OpenClaw: Pairing-scoped device session could restore revoked node token authority",
+    "description": "### Summary\n\nIn affected releases, a surviving pairing-scoped session for a device could re-establish node token authority after that node token had been revoked. Revocation should require the device to lose that authority unless it is approved again through the normal pairing flow.\n\nThis issue affects token revocation and device-role containment. It does not allow unauthenticated device creation.\n\n### Affected configurations\n\nThis affects deployments where an already paired device keeps a same-device session with pairing-related scope after its node token is revoked.\n\n### Impact\n\nA device that should have lost node WebSocket authority could regain it without renewed approval. That weakens revocation as an operator control and can keep node-level access alive longer than intended.\n\nThe impact is limited to devices that already had a legitimate pairing/session foothold.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.26`.\n\n### Mitigations\n\nUpgrade to `openclaw@2026.5.26` or later. If a node token was revoked on an older version, restart the gateway and remove/re-pair the affected device to ensure no stale session remains active.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-q99w-vh6v-q3v7",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-q99w-vh6v-q3v7",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53843",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-q99w-vh6v-q3v7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53843",
+      "https://www.vulncheck.com/advisories/openclaw-node-token-revocation-bypass-via-pairing-scoped-device-session",
+      "https://github.com/advisories/GHSA-q99w-vh6v-q3v7"
+    ],
+    "published_at": "2026-06-18T13:03:24Z",
+    "updated_at": "2026-06-18T13:03:25Z",
+    "github_reviewed_at": "2026-06-18T13:03:24Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.26",
+        "first_patched_version": "2026.5.26",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "cantinagen",
+          "id": 283734772,
+          "node_id": "U_kgDOEOly9A",
+          "avatar_url": "https://avatars.githubusercontent.com/u/283734772?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/cantinagen",
+          "html_url": "https://github.com/cantinagen",
+          "followers_url": "https://api.github.com/users/cantinagen/followers",
+          "following_url": "https://api.github.com/users/cantinagen/following{/other_user}",
+          "gists_url": "https://api.github.com/users/cantinagen/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/cantinagen/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/cantinagen/subscriptions",
+          "organizations_url": "https://api.github.com/users/cantinagen/orgs",
+          "repos_url": "https://api.github.com/users/cantinagen/repos",
+          "events_url": "https://api.github.com/users/cantinagen/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/cantinagen/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "Ellahinator",
+          "id": 87584757,
+          "node_id": "MDQ6VXNlcjg3NTg0NzU3",
+          "avatar_url": "https://avatars.githubusercontent.com/u/87584757?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/Ellahinator",
+          "html_url": "https://github.com/Ellahinator",
+          "followers_url": "https://api.github.com/users/Ellahinator/followers",
+          "following_url": "https://api.github.com/users/Ellahinator/following{/other_user}",
+          "gists_url": "https://api.github.com/users/Ellahinator/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/Ellahinator/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/Ellahinator/subscriptions",
+          "organizations_url": "https://api.github.com/users/Ellahinator/orgs",
+          "repos_url": "https://api.github.com/users/Ellahinator/repos",
+          "events_url": "https://api.github.com/users/Ellahinator/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/Ellahinator/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "finder"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-ccwh-wwpp-6wg5",
+    "cve_id": "CVE-2026-53864",
+    "url": "https://api.github.com/advisories/GHSA-ccwh-wwpp-6wg5",
+    "html_url": "https://github.com/advisories/GHSA-ccwh-wwpp-6wg5",
+    "summary": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
+    "description": "### Summary\n\nHost environment sanitizer missed two Node.js control variables. In affected versions, a lower-trust env source such as a workspace `.env`, tool env override, or skill env block could pass Node.js control variables through the shared sanitizer.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could influence a later Node.js child process or coverage output path when that process is launched under the accepted environment. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.26`.\n\n### Mitigations\n\navoid inheriting workspace or tool-supplied env values from untrusted repositories until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-ccwh-wwpp-6wg5",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-ccwh-wwpp-6wg5",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53864",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-ccwh-wwpp-6wg5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53864",
+      "https://www.vulncheck.com/advisories/openclaw-insufficient-environment-variable-sanitization-in-node-js-control-variables",
+      "https://github.com/advisories/GHSA-ccwh-wwpp-6wg5"
+    ],
+    "published_at": "2026-06-18T13:02:49Z",
+    "updated_at": "2026-06-18T13:02:50Z",
+    "github_reviewed_at": "2026-06-18T13:02:49Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.5.22",
+        "first_patched_version": "2026.5.26",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "nayakchinmohan",
+          "id": 6557536,
+          "node_id": "MDQ6VXNlcjY1NTc1MzY=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6557536?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/nayakchinmohan",
+          "html_url": "https://github.com/nayakchinmohan",
+          "followers_url": "https://api.github.com/users/nayakchinmohan/followers",
+          "following_url": "https://api.github.com/users/nayakchinmohan/following{/other_user}",
+          "gists_url": "https://api.github.com/users/nayakchinmohan/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/nayakchinmohan/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/nayakchinmohan/subscriptions",
+          "organizations_url": "https://api.github.com/users/nayakchinmohan/orgs",
+          "repos_url": "https://api.github.com/users/nayakchinmohan/repos",
+          "events_url": "https://api.github.com/users/nayakchinmohan/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/nayakchinmohan/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 8.1
+    }
+  },
+  {
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh",
     "cve_id": "CVE-2026-53840",
     "url": "https://api.github.com/advisories/GHSA-rjxq-qqhf-8hwh",
@@ -87,6 +613,311 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
       "score": 7.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-8wmm-344f-mpjg",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-8wmm-344f-mpjg",
+    "html_url": "https://github.com/advisories/GHSA-8wmm-344f-mpjg",
+    "summary": "Duplicate Advisory: Tool group policy callers could accept unvalidated group IDs",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-985f-72mj-8gf7. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.4.25 contains an input validation vulnerability in tool group policy callers that accept unvalidated group IDs. Attackers who can supply a group ID to the policy resolver could trigger incorrect group-policy decisions for tool invocations, potentially bypassing intended access controls.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-8wmm-344f-mpjg",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-985f-72mj-8gf7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53863",
+      "https://www.vulncheck.com/advisories/openclaw-unvalidated-group-id-acceptance-in-tool-group-policy",
+      "https://github.com/advisories/GHSA-8wmm-344f-mpjg"
+    ],
+    "published_at": "2026-06-16T21:32:00Z",
+    "updated_at": "2026-06-18T13:04:23Z",
+    "github_reviewed_at": "2026-06-18T13:04:21Z",
+    "nvd_published_at": "2026-06-16T19:17:04Z",
+    "withdrawn_at": "2026-06-18T13:04:21Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.4.24",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-639",
+        "name": "Authorization Bypass Through User-Controlled Key"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
+      "score": 7.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-vr6h-vxqj-3pjx",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-vr6h-vxqj-3pjx",
+    "html_url": "https://github.com/advisories/GHSA-vr6h-vxqj-3pjx",
+    "summary": "Duplicate Advisory: Host environment sanitizer missed two Node.js control variables",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-ccwh-wwpp-6wg5. This link is maintained to preserve external references.\n\n## Original Description\n\nOpenClaw before 2026.5.26 contains an insufficient sanitization vulnerability in the host environment sanitizer that allows Node.js control variables to bypass validation. Attackers with access to workspace .env files, tool environment overrides, or skill environment blocks can pass malicious Node.js control variables to influence child processes or coverage output paths.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-vr6h-vxqj-3pjx",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-ccwh-wwpp-6wg5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53864",
+      "https://www.vulncheck.com/advisories/openclaw-insufficient-environment-variable-sanitization-in-node-js-control-variables",
+      "https://github.com/advisories/GHSA-vr6h-vxqj-3pjx"
+    ],
+    "published_at": "2026-06-16T21:32:00Z",
+    "updated_at": "2026-06-18T13:02:40Z",
+    "github_reviewed_at": "2026-06-18T13:02:39Z",
+    "nvd_published_at": "2026-06-16T19:17:04Z",
+    "withdrawn_at": "2026-06-18T13:02:39Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.5.22",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 8.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-v383-2wgg-v483",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-v383-2wgg-v483",
+    "html_url": "https://github.com/advisories/GHSA-v383-2wgg-v483",
+    "summary": "Duplicate Advisory: Shell inline-command parsing could miss an allowlist check",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-f397-5vjw-v2c2. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in shell inline-command parsing that allows authenticated operators to execute unapproved commands. A command request using shell inline-command forms could route through a parser case missing the expected allowlist decision, enabling shell content execution without intended approval prompts.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-v383-2wgg-v483",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-f397-5vjw-v2c2",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53866",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-in-shell-inline-command-parsing",
+      "https://github.com/advisories/GHSA-v383-2wgg-v483"
+    ],
+    "published_at": "2026-06-16T21:32:00Z",
+    "updated_at": "2026-06-18T13:03:43Z",
+    "github_reviewed_at": "2026-06-18T13:03:41Z",
+    "nvd_published_at": "2026-06-16T19:17:05Z",
+    "withdrawn_at": "2026-06-18T13:03:41Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "<= 2026.5.10-beta.1",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
+      "score": 8.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-9fr2-p65v-gqxq",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-9fr2-p65v-gqxq",
+    "html_url": "https://github.com/advisories/GHSA-9fr2-p65v-gqxq",
+    "summary": "Duplicate Advisory: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-fq9j-vw4w-fr6v. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.5.2 contains an environment variable injection vulnerability allowing workspace .env files to influence Python runtime selection through CLOUDSDK_PYTHON during Gmail setup gcloud execution. Attackers with repository access can manipulate the CLOUDSDK_PYTHON variable to execute setup through unintended local Python paths, potentially enabling arbitrary code execution.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-9fr2-p65v-gqxq",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-fq9j-vw4w-fr6v",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53842",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-python-runtime-execution-via-cloudsdk-python-environment-variable",
+      "https://github.com/advisories/GHSA-9fr2-p65v-gqxq"
+    ],
+    "published_at": "2026-06-16T21:31:57Z",
+    "updated_at": "2026-06-18T13:04:00Z",
+    "github_reviewed_at": "2026-06-18T13:03:59Z",
+    "nvd_published_at": "2026-06-16T19:17:01Z",
+    "withdrawn_at": "2026-06-18T13:03:59Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "pip",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.2",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+        "score": 7.1
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-426",
+        "name": "Untrusted Search Path"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
+      "score": 7.1
+    }
+  },
+  {
+    "ghsa_id": "GHSA-wrmq-9fc4-gwwj",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-wrmq-9fc4-gwwj",
+    "html_url": "https://github.com/advisories/GHSA-wrmq-9fc4-gwwj",
+    "summary": "Duplicate Advisory: Pairing-scoped device session could restore revoked node token authority",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-q99w-vh6v-q3v7. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.5.26 contains an authorization bypass vulnerability where a surviving pairing-scoped device session can re-establish node token authority after revocation. Attackers with a paired device can regain WebSocket node-level access without renewed approval, weakening revocation controls and maintaining unauthorized access longer than intended.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-wrmq-9fc4-gwwj",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-q99w-vh6v-q3v7",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53843",
+      "https://www.vulncheck.com/advisories/openclaw-node-token-revocation-bypass-via-pairing-scoped-device-session",
+      "https://github.com/advisories/GHSA-wrmq-9fc4-gwwj"
+    ],
+    "published_at": "2026-06-16T21:31:57Z",
+    "updated_at": "2026-06-18T13:03:04Z",
+    "github_reviewed_at": "2026-06-18T13:03:03Z",
+    "nvd_published_at": "2026-06-16T19:17:01Z",
+    "withdrawn_at": "2026-06-18T13:03:03Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.26",
+        "first_patched_version": null,
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.7
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
     }
   },
   {
@@ -7485,1092 +8316,6 @@
     "epss": {
       "percentage": 0.00065,
       "percentile": 0.20649
-    }
-  },
-  {
-    "ghsa_id": "GHSA-536q-mj95-h29h",
-    "cve_id": "CVE-2026-43580",
-    "url": "https://api.github.com/advisories/GHSA-536q-mj95-h29h",
-    "html_url": "https://github.com/advisories/GHSA-536q-mj95-h29h",
-    "summary": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
-    "description": "## Summary\n\nBrowser press/type interaction routes missed complete navigation guard coverage.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nSome browser press/type style interactions could trigger navigation without complete post-action SSRF policy enforcement.\n\n## Technical Details\n\nThe fix applies a three-phase interaction navigation guard to navigation-capable interactions, including pressKey and type submit flows.\n\n## Fix\n\nThe issue was fixed in #62023 and #63226 and #63889. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `049acf23cb03e1b92f5c71cd99c6ec5f35cc56fe`\n- `5f5b3d733bdd791cb457f838514179e1288b10b3`\n- `e0b8ddc1a55185aff1cf9e0e095014d2e4f1d894`\n- PR: #62023, #63226, #63889\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-536q-mj95-h29h",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-536q-mj95-h29h",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43580",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-536q-mj95-h29h",
-      "https://github.com/openclaw/openclaw/pull/62023",
-      "https://github.com/openclaw/openclaw/pull/63226",
-      "https://github.com/openclaw/openclaw/pull/63889",
-      "https://github.com/openclaw/openclaw/commit/049acf23cb03e1b92f5c71cd99c6ec5f35cc56fe",
-      "https://github.com/openclaw/openclaw/commit/5f5b3d733bdd791cb457f838514179e1288b10b3",
-      "https://github.com/openclaw/openclaw/commit/e0b8ddc1a55185aff1cf9e0e095014d2e4f1d894",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43580",
-      "https://www.vulncheck.com/advisories/openclaw-incomplete-navigation-guard-coverage-in-browser-interactions",
-      "https://github.com/advisories/GHSA-536q-mj95-h29h"
-    ],
-    "published_at": "2026-04-17T22:14:29Z",
-    "updated_at": "2026-05-12T13:34:57Z",
-    "github_reviewed_at": "2026-04-17T22:14:29Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-        "score": 7.7
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:N/SA:N",
-        "score": 4.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
-      },
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zsxsoft",
-          "id": 2398785,
-          "node_id": "MDQ6VXNlcjIzOTg3ODU=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/2398785?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zsxsoft",
-          "html_url": "https://github.com/zsxsoft",
-          "followers_url": "https://api.github.com/users/zsxsoft/followers",
-          "following_url": "https://api.github.com/users/zsxsoft/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zsxsoft/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zsxsoft/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zsxsoft/subscriptions",
-          "organizations_url": "https://api.github.com/users/zsxsoft/orgs",
-          "repos_url": "https://api.github.com/users/zsxsoft/repos",
-          "events_url": "https://api.github.com/users/zsxsoft/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zsxsoft/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      },
-      {
-        "user": {
-          "login": "KeenSecurityLab",
-          "id": 102663570,
-          "node_id": "U_kgDOBh6Fkg",
-          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/KeenSecurityLab",
-          "html_url": "https://github.com/KeenSecurityLab",
-          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
-          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
-          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
-          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
-          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
-          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      },
-      {
-        "user": {
-          "login": "qclawer",
-          "id": 274765497,
-          "node_id": "U_kgDOEGCWuQ",
-          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/qclawer",
-          "html_url": "https://github.com/qclawer",
-          "followers_url": "https://api.github.com/users/qclawer/followers",
-          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
-          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
-          "organizations_url": "https://api.github.com/users/qclawer/orgs",
-          "repos_url": "https://api.github.com/users/qclawer/repos",
-          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/qclawer/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "score": 7.7
-    },
-    "epss": {
-      "percentage": 0.00038,
-      "percentile": 0.1159
-    }
-  },
-  {
-    "ghsa_id": "GHSA-qmwg-qprg-3j38",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-qmwg-qprg-3j38",
-    "html_url": "https://github.com/advisories/GHSA-qmwg-qprg-3j38",
-    "summary": "OpenClaw: Browser interaction routes could pivot into local CDP and regain file reads",
-    "description": "## Summary\n\nBrowser interaction routes could pivot into local CDP and regain file reads.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.9`\n- Patched versions: `>= 2026.4.9`\n\n## Impact\n\nBrowser act/evaluate interactions could trigger navigation into the local CDP origin and then create or read disallowed `file://` pages despite direct navigation guards.\n\n## Technical Details\n\nThe fix re-checks browser URLs after interaction-driven navigations and blocks targets that violate the configured navigation policy.\n\n## Fix\n\nThe issue was fixed in #63226. The first stable tag containing the fix is `v2026.4.9`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `5f5b3d733bdd791cb457f838514179e1288b10b3`\n- PR: #63226\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.9 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @tdjackey for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-qmwg-qprg-3j38",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-qmwg-qprg-3j38",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-qmwg-qprg-3j38",
-      "https://github.com/openclaw/openclaw/pull/63226",
-      "https://github.com/openclaw/openclaw/commit/5f5b3d733bdd791cb457f838514179e1288b10b3",
-      "https://github.com/advisories/GHSA-qmwg-qprg-3j38"
-    ],
-    "published_at": "2026-04-17T22:14:20Z",
-    "updated_at": "2026-04-17T22:14:21Z",
-    "github_reviewed_at": "2026-04-17T22:14:20Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.9",
-        "first_patched_version": "2026.4.9",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:N/PR:N/UI:A/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-693",
-        "name": "Protection Mechanism Failure"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "tdjackey",
-          "id": 6791132,
-          "node_id": "MDQ6VXNlcjY3OTExMzI=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6791132?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/tdjackey",
-          "html_url": "https://github.com/tdjackey",
-          "followers_url": "https://api.github.com/users/tdjackey/followers",
-          "following_url": "https://api.github.com/users/tdjackey/following{/other_user}",
-          "gists_url": "https://api.github.com/users/tdjackey/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/tdjackey/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/tdjackey/subscriptions",
-          "organizations_url": "https://api.github.com/users/tdjackey/orgs",
-          "repos_url": "https://api.github.com/users/tdjackey/repos",
-          "events_url": "https://api.github.com/users/tdjackey/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/tdjackey/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-939r-rj45-g2rj",
-    "cve_id": "CVE-2026-43569",
-    "url": "https://api.github.com/advisories/GHSA-939r-rj45-g2rj",
-    "html_url": "https://github.com/advisories/GHSA-939r-rj45-g2rj",
-    "summary": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
-    "description": "## Summary\n\nWorkspace provider auth choices could auto-enable untrusted provider plugins.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.9`\n- Patched versions: `>= 2026.4.9`\n\n## Impact\n\nNon-interactive onboarding could select a provider auth choice shadowed by an untrusted workspace plugin, auto-enabling that plugin during auth setup.\n\n## Technical Details\n\nThe fix prefers trusted provider origins for auth choices and excludes untrusted workspace choices unless they are explicitly enabled.\n\n## Fix\n\nThe issue was fixed in #62368. The first stable tag containing the fix is `v2026.4.9`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `2d97eae53e212ae26f3aebcd6a50ffc6877f770d`\n- PR: #62368\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.9 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zpbrent for reporting this issue.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-939r-rj45-g2rj",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-939r-rj45-g2rj",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43569",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-939r-rj45-g2rj",
-      "https://github.com/openclaw/openclaw/pull/62368",
-      "https://github.com/openclaw/openclaw/commit/2d97eae53e212ae26f3aebcd6a50ffc6877f770d",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43569",
-      "https://www.vulncheck.com/advisories/openclaw-untrusted-provider-plugin-auto-enablement-via-workspace-provider-auth",
-      "https://github.com/advisories/GHSA-939r-rj45-g2rj"
-    ],
-    "published_at": "2026-04-17T22:12:49Z",
-    "updated_at": "2026-05-08T01:32:53Z",
-    "github_reviewed_at": "2026-04-17T22:12:49Z",
-    "nvd_published_at": "2026-05-05T12:16:20Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.9",
-        "first_patched_version": "2026.4.9",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-        "score": 8.8
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:N/SC:H/SI:N/SA:N",
-        "score": 8.6
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-829",
-        "name": "Inclusion of Functionality from Untrusted Control Sphere"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "score": 8.8
-    },
-    "epss": {
-      "percentage": 0.00116,
-      "percentile": 0.30011
-    }
-  },
-  {
-    "ghsa_id": "GHSA-527m-976r-jf79",
-    "cve_id": "CVE-2026-43573",
-    "url": "https://api.github.com/advisories/GHSA-527m-976r-jf79",
-    "html_url": "https://github.com/advisories/GHSA-527m-976r-jf79",
-    "summary": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
-    "description": "## Summary\n\nExisting-session browser interaction routes bypassed SSRF policy enforcement.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nExisting-session browser interaction routes could continue interacting with or navigating targets without applying the same SSRF navigation guard used by guarded browser routes.\n\n## Technical Details\n\nThe fix guards existing-session navigation and interaction routes with browser navigation policy checks.\n\n## Fix\n\nThe issue was fixed in #64370. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `daeb74920d5ad986cb600625180037e23221e93a`\n- PR: #64370\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-527m-976r-jf79",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-527m-976r-jf79",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43573",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-527m-976r-jf79",
-      "https://github.com/openclaw/openclaw/pull/64370",
-      "https://github.com/openclaw/openclaw/commit/daeb74920d5ad986cb600625180037e23221e93a",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43573",
-      "https://www.vulncheck.com/advisories/openclaw-ssrf-policy-bypass-in-existing-session-browser-interaction-routes",
-      "https://github.com/advisories/GHSA-527m-976r-jf79"
-    ],
-    "published_at": "2026-04-17T22:11:33Z",
-    "updated_at": "2026-05-08T21:48:08Z",
-    "github_reviewed_at": "2026-04-17T22:11:33Z",
-    "nvd_published_at": "2026-05-05T12:16:21Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-        "score": 7.7
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
-        "score": 6.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
-      },
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zsxsoft",
-          "id": 2398785,
-          "node_id": "MDQ6VXNlcjIzOTg3ODU=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/2398785?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zsxsoft",
-          "html_url": "https://github.com/zsxsoft",
-          "followers_url": "https://api.github.com/users/zsxsoft/followers",
-          "following_url": "https://api.github.com/users/zsxsoft/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zsxsoft/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zsxsoft/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zsxsoft/subscriptions",
-          "organizations_url": "https://api.github.com/users/zsxsoft/orgs",
-          "repos_url": "https://api.github.com/users/zsxsoft/repos",
-          "events_url": "https://api.github.com/users/zsxsoft/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zsxsoft/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      },
-      {
-        "user": {
-          "login": "KeenSecurityLab",
-          "id": 102663570,
-          "node_id": "U_kgDOBh6Fkg",
-          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/KeenSecurityLab",
-          "html_url": "https://github.com/KeenSecurityLab",
-          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
-          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
-          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
-          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
-          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
-          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      },
-      {
-        "user": {
-          "login": "qclawer",
-          "id": 274765497,
-          "node_id": "U_kgDOEGCWuQ",
-          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/qclawer",
-          "html_url": "https://github.com/qclawer",
-          "followers_url": "https://api.github.com/users/qclawer/followers",
-          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
-          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
-          "organizations_url": "https://api.github.com/users/qclawer/orgs",
-          "repos_url": "https://api.github.com/users/qclawer/repos",
-          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/qclawer/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "score": 7.7
-    },
-    "epss": {
-      "percentage": 0.00036,
-      "percentile": 0.11187
-    }
-  },
-  {
-    "ghsa_id": "GHSA-rj2p-j66c-mgqh",
-    "cve_id": "CVE-2026-42439",
-    "url": "https://api.github.com/advisories/GHSA-rj2p-j66c-mgqh",
-    "html_url": "https://github.com/advisories/GHSA-rj2p-j66c-mgqh",
-    "summary": "OpenClaw: Browser tabs action select and close routes bypassed SSRF policy",
-    "description": "## Summary\n\nBrowser tabs action select and close routes bypassed SSRF policy.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe browser `/tabs/action` select and close branches could operate on targets without enforcing configured browser SSRF policy, weakening tab-level navigation protections.\n\n## Technical Details\n\nThe fix enforces browser SSRF policy in the select and close tab-action branches.\n\n## Fix\n\nThe issue was fixed in #63332. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `48c0347921b7e9438af0312968fc360ca88023f3`\n- PR: #63332\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @tdjackey for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-rj2p-j66c-mgqh",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-rj2p-j66c-mgqh",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-42439",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rj2p-j66c-mgqh",
-      "https://github.com/openclaw/openclaw/pull/63332",
-      "https://github.com/openclaw/openclaw/commit/48c03479211799ec3c1305ad69037cea25ba0e1e",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-42439",
-      "https://github.com/openclaw/openclaw/commit/48c0347921b7e9438af0312968fc360ca88023f3",
-      "https://www.vulncheck.com/advisories/openclaw-ssrf-policy-bypass-in-browser-tabs-action-routes",
-      "https://github.com/advisories/GHSA-rj2p-j66c-mgqh"
-    ],
-    "published_at": "2026-04-17T22:01:57Z",
-    "updated_at": "2026-05-08T19:32:59Z",
-    "github_reviewed_at": "2026-04-17T22:01:57Z",
-    "nvd_published_at": "2026-05-05T12:16:18Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-        "score": 8.5
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
-      },
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "nicky-cc",
-          "id": 12016013,
-          "node_id": "MDQ6VXNlcjEyMDE2MDEz",
-          "avatar_url": "https://avatars.githubusercontent.com/u/12016013?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/nicky-cc",
-          "html_url": "https://github.com/nicky-cc",
-          "followers_url": "https://api.github.com/users/nicky-cc/followers",
-          "following_url": "https://api.github.com/users/nicky-cc/following{/other_user}",
-          "gists_url": "https://api.github.com/users/nicky-cc/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/nicky-cc/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/nicky-cc/subscriptions",
-          "organizations_url": "https://api.github.com/users/nicky-cc/orgs",
-          "repos_url": "https://api.github.com/users/nicky-cc/repos",
-          "events_url": "https://api.github.com/users/nicky-cc/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/nicky-cc/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
-      "score": 8.5
-    },
-    "epss": {
-      "percentage": 0.00036,
-      "percentile": 0.11187
-    }
-  },
-  {
-    "ghsa_id": "GHSA-f3h5-h452-vp3j",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-f3h5-h452-vp3j",
-    "html_url": "https://github.com/advisories/GHSA-f3h5-h452-vp3j",
-    "summary": "OpenClaw: Nostr profile mutation routes allowed operator.write config persistence",
-    "description": "## Summary\n\nNostr profile mutation routes allowed operator.write config persistence.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nNostr plugin HTTP profile routes could persist profile config through a path that did not require admin authority.\n\n## Technical Details\n\nThe fix requires `operator.admin` scope for Nostr profile mutation routes.\n\n## Fix\n\nThe issue was fixed in #63553. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `6517c700de9bb0ee11b41ab625ef3b63d01b6083`\n- PR: #63553\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zpbrent and @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-f3h5-h452-vp3j",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-f3h5-h452-vp3j",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-f3h5-h452-vp3j",
-      "https://github.com/openclaw/openclaw/pull/63553",
-      "https://github.com/advisories/GHSA-f3h5-h452-vp3j"
-    ],
-    "published_at": "2026-04-17T22:00:59Z",
-    "updated_at": "2026-04-17T22:01:02Z",
-    "github_reviewed_at": "2026-04-17T22:00:59Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-266",
-        "name": "Incorrect Privilege Assignment"
-      },
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zpbrent",
-          "id": 834641,
-          "node_id": "MDQ6VXNlcjgzNDY0MQ==",
-          "avatar_url": "https://avatars.githubusercontent.com/u/834641?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zpbrent",
-          "html_url": "https://github.com/zpbrent",
-          "followers_url": "https://api.github.com/users/zpbrent/followers",
-          "following_url": "https://api.github.com/users/zpbrent/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zpbrent/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zpbrent/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zpbrent/subscriptions",
-          "organizations_url": "https://api.github.com/users/zpbrent/orgs",
-          "repos_url": "https://api.github.com/users/zpbrent/repos",
-          "events_url": "https://api.github.com/users/zpbrent/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zpbrent/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-525j-hqq2-66r4",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-525j-hqq2-66r4",
-    "html_url": "https://github.com/advisories/GHSA-525j-hqq2-66r4",
-    "summary": "OpenClaw: Sandbox browser CDP relay could expose DevTools protocol on 0.0.0.0",
-    "description": "## Summary\n\nSandbox browser CDP relay could expose DevTools protocol on 0.0.0.0.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe sandbox browser CDP relay could bind too broadly, exposing Chrome DevTools Protocol access outside the intended local/sandbox source range.\n\n## Technical Details\n\nThe fix enforces CDP source-range restriction by default and avoids broad `0.0.0.0` exposure unless explicitly configured.\n\n## Fix\n\nThe issue was fixed in #61404. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `fbf11ebdb7110632f93926d0ac7b48f04cb44d77`\n- PR: #61404\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-525j-hqq2-66r4",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-525j-hqq2-66r4",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-525j-hqq2-66r4",
-      "https://github.com/openclaw/openclaw/pull/61404",
-      "https://github.com/openclaw/openclaw/commit/fbf11ebdb7110632f93926d0ac7b48f04cb44d77",
-      "https://github.com/advisories/GHSA-525j-hqq2-66r4"
-    ],
-    "published_at": "2026-04-17T21:59:55Z",
-    "updated_at": "2026-04-17T21:59:56Z",
-    "github_reviewed_at": "2026-04-17T21:59:55Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:A/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-        "score": 7.5
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-284",
-        "name": "Improper Access Control"
-      },
-      {
-        "cwe_id": "CWE-1327",
-        "name": "Binding to an Unrestricted IP Address"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "R1kko1337",
-          "id": 247912430,
-          "node_id": "U_kgDODsbX7g",
-          "avatar_url": "https://avatars.githubusercontent.com/u/247912430?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/R1kko1337",
-          "html_url": "https://github.com/R1kko1337",
-          "followers_url": "https://api.github.com/users/R1kko1337/followers",
-          "following_url": "https://api.github.com/users/R1kko1337/following{/other_user}",
-          "gists_url": "https://api.github.com/users/R1kko1337/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/R1kko1337/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/R1kko1337/subscriptions",
-          "organizations_url": "https://api.github.com/users/R1kko1337/orgs",
-          "repos_url": "https://api.github.com/users/R1kko1337/repos",
-          "events_url": "https://api.github.com/users/R1kko1337/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/R1kko1337/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-82qx-6vj7-p8m2",
-    "cve_id": "CVE-2026-43571",
-    "url": "https://api.github.com/advisories/GHSA-82qx-6vj7-p8m2",
-    "html_url": "https://github.com/advisories/GHSA-82qx-6vj7-p8m2",
-    "summary": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
-    "description": "## Summary\n\nChannel setup catalog lookups could include untrusted workspace plugin shadows.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nChannel setup could resolve a workspace plugin shadow before a bundled channel plugin, causing setup-time plugin loading without the intended trust gate.\n\n## Technical Details\n\nThe fix routes setup catalog lookups through trusted catalog paths and uses `excludeWorkspace: true` where setup should not include workspace shadows.\n\n## Fix\n\nThe issue was fixed in the advisory fix branch. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `1fede43b948df40ca8674511d4bd08d39f6c5837`\n- PR: private advisory fork\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-82qx-6vj7-p8m2",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-82qx-6vj7-p8m2",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43571",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-82qx-6vj7-p8m2",
-      "https://github.com/openclaw/openclaw/commit/1fede43b948df40ca8674511d4bd08d39f6c5837",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43571",
-      "https://www.vulncheck.com/advisories/openclaw-untrusted-workspace-plugin-shadow-resolution-in-channel-setup",
-      "https://github.com/advisories/GHSA-82qx-6vj7-p8m2"
-    ],
-    "published_at": "2026-04-17T21:58:46Z",
-    "updated_at": "2026-05-08T01:32:51Z",
-    "github_reviewed_at": "2026-04-17T21:58:46Z",
-    "nvd_published_at": "2026-05-05T12:16:20Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-        "score": 8.8
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 7.1
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-829",
-        "name": "Inclusion of Functionality from Untrusted Control Sphere"
-      },
-      {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "zsxsoft",
-          "id": 2398785,
-          "node_id": "MDQ6VXNlcjIzOTg3ODU=",
-          "avatar_url": "https://avatars.githubusercontent.com/u/2398785?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/zsxsoft",
-          "html_url": "https://github.com/zsxsoft",
-          "followers_url": "https://api.github.com/users/zsxsoft/followers",
-          "following_url": "https://api.github.com/users/zsxsoft/following{/other_user}",
-          "gists_url": "https://api.github.com/users/zsxsoft/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/zsxsoft/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/zsxsoft/subscriptions",
-          "organizations_url": "https://api.github.com/users/zsxsoft/orgs",
-          "repos_url": "https://api.github.com/users/zsxsoft/repos",
-          "events_url": "https://api.github.com/users/zsxsoft/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/zsxsoft/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      },
-      {
-        "user": {
-          "login": "KeenSecurityLab",
-          "id": 102663570,
-          "node_id": "U_kgDOBh6Fkg",
-          "avatar_url": "https://avatars.githubusercontent.com/u/102663570?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/KeenSecurityLab",
-          "html_url": "https://github.com/KeenSecurityLab",
-          "followers_url": "https://api.github.com/users/KeenSecurityLab/followers",
-          "following_url": "https://api.github.com/users/KeenSecurityLab/following{/other_user}",
-          "gists_url": "https://api.github.com/users/KeenSecurityLab/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/KeenSecurityLab/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/KeenSecurityLab/subscriptions",
-          "organizations_url": "https://api.github.com/users/KeenSecurityLab/orgs",
-          "repos_url": "https://api.github.com/users/KeenSecurityLab/repos",
-          "events_url": "https://api.github.com/users/KeenSecurityLab/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/KeenSecurityLab/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      },
-      {
-        "user": {
-          "login": "qclawer",
-          "id": 274765497,
-          "node_id": "U_kgDOEGCWuQ",
-          "avatar_url": "https://avatars.githubusercontent.com/u/274765497?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/qclawer",
-          "html_url": "https://github.com/qclawer",
-          "followers_url": "https://api.github.com/users/qclawer/followers",
-          "following_url": "https://api.github.com/users/qclawer/following{/other_user}",
-          "gists_url": "https://api.github.com/users/qclawer/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/qclawer/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/qclawer/subscriptions",
-          "organizations_url": "https://api.github.com/users/qclawer/orgs",
-          "repos_url": "https://api.github.com/users/qclawer/repos",
-          "events_url": "https://api.github.com/users/qclawer/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/qclawer/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "sponsor"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-      "score": 8.8
-    },
-    "epss": {
-      "percentage": 0.00054,
-      "percentile": 0.17561
-    }
-  },
-  {
-    "ghsa_id": "GHSA-jf25-7968-h2h5",
-    "cve_id": "CVE-2026-43567",
-    "url": "https://api.github.com/advisories/GHSA-jf25-7968-h2h5",
-    "html_url": "https://github.com/advisories/GHSA-jf25-7968-h2h5",
-    "summary": "OpenClaw: screen_record outPath bypassed workspace-only filesystem guard",
-    "description": "## Summary\n\nscreen_record outPath bypassed workspace-only filesystem guard.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.10`\n- Patched versions: `>= 2026.4.10`\n\n## Impact\n\nThe node-host screen recording tool could honor an `outPath` outside the workspace guard, allowing an authorized tool call to write outside the intended workspace boundary.\n\n## Technical Details\n\nThe fix applies the workspace-root guard to node tool `outPath` handling, including screen recording paths.\n\n## Fix\n\nThe issue was fixed in #63551. The first stable tag containing the fix is `v2026.4.10`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `635bb35b68d8faa5bfa2fda35feadd315122748a`\n- PR: #63551\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.10 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @anshumanbh for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-jf25-7968-h2h5",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-jf25-7968-h2h5",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43567",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-jf25-7968-h2h5",
-      "https://github.com/openclaw/openclaw/pull/63551",
-      "https://github.com/openclaw/openclaw/commit/635bb35b68d8faa5bfa2fda35feadd315122748a",
-      "https://github.com/advisories/GHSA-jf25-7968-h2h5"
-    ],
-    "published_at": "2026-04-17T21:58:24Z",
-    "updated_at": "2026-05-05T11:59:49Z",
-    "github_reviewed_at": "2026-04-17T21:58:24Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.10",
-        "first_patched_version": "2026.4.10",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 5.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-22",
-        "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
-      },
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    },
-    "epss": {
-      "percentage": 0.00034,
-      "percentile": 0.1044
-    }
-  },
-  {
-    "ghsa_id": "GHSA-53vx-pmqw-863c",
-    "cve_id": "CVE-2026-43527",
-    "url": "https://api.github.com/advisories/GHSA-53vx-pmqw-863c",
-    "html_url": "https://github.com/advisories/GHSA-53vx-pmqw-863c",
-    "summary": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
-    "description": "## Summary\n\nBrowser SSRF policy default allowed private-network navigation.\n\n## Affected Packages / Versions\n\n- Package: `openclaw`\n- Ecosystem: npm\n- Affected versions: `< 2026.4.14`\n- Patched versions: `>= 2026.4.14`\n\n## Impact\n\nBrowser SSRF protection could allow private-network navigation by default in paths where restrictive behavior was expected, exposing internal services or metadata endpoints through browser-driven requests.\n\n## Technical Details\n\nThe fix preserves strict SSRF configuration semantics, keeps private-network access disabled unless explicitly opted in, and updates loopback CDP readiness handling for the stricter default.\n\n## Fix\n\nThe issue was fixed in #66354 and #66386. The first stable tag containing the fix is `v2026.4.14`, and `openclaw@2026.4.14` includes the fix.\n\n## Fix Commit(s)\n\n- `024f4614a1a1831406e763adc40ef226e3d5e9ed`\n- `1dabfef28db523e7de81edeb3dd689e9171236a2`\n- `213c36cf51121ef6c05cfccd78037371f968f31a`\n- `7eecfa411df3d12e6b810e6ca5df47254fc3db3f`\n- PR: #66354, #66386\n\n## Release Process Note\n\nUsers should upgrade to `openclaw` 2026.4.14 or newer. The latest npm release, `2026.4.14`, already includes the fix.\n\n## Credits\n\nThanks to @zsxsoft, with sponsorship from @KeenSecurityLab and @qclawer for reporting this issue.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-53vx-pmqw-863c",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-53vx-pmqw-863c",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-43527",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-53vx-pmqw-863c",
-      "https://github.com/openclaw/openclaw/pull/66354",
-      "https://github.com/openclaw/openclaw/pull/66386",
-      "https://github.com/openclaw/openclaw/commit/024f4614a1a1831406e763adc40ef226e3d5e9ed",
-      "https://github.com/openclaw/openclaw/commit/1dabfef28db523e7de81edeb3dd689e9171236a2",
-      "https://github.com/openclaw/openclaw/commit/213c36cf51121ef6c05cfccd78037371f968f31a",
-      "https://github.com/openclaw/openclaw/commit/7eecfa411df3d12e6b810e6ca5df47254fc3db3f",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-43527",
-      "https://www.vulncheck.com/advisories/openclaw-server-side-request-forgery-via-private-network-navigation",
-      "https://github.com/advisories/GHSA-53vx-pmqw-863c"
-    ],
-    "published_at": "2026-04-17T21:58:15Z",
-    "updated_at": "2026-05-08T01:32:16Z",
-    "github_reviewed_at": "2026-04-17T21:58:15Z",
-    "nvd_published_at": "2026-05-05T12:16:18Z",
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.14",
-        "first_patched_version": "2026.4.14",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-        "score": 7.7
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
-        "score": 6.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
-      },
-      {
-        "cwe_id": "CWE-1188",
-        "name": "Initialization of a Resource with an Insecure Default"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "dhyabi2",
-          "id": 32069256,
-          "node_id": "MDQ6VXNlcjMyMDY5MjU2",
-          "avatar_url": "https://avatars.githubusercontent.com/u/32069256?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/dhyabi2",
-          "html_url": "https://github.com/dhyabi2",
-          "followers_url": "https://api.github.com/users/dhyabi2/followers",
-          "following_url": "https://api.github.com/users/dhyabi2/following{/other_user}",
-          "gists_url": "https://api.github.com/users/dhyabi2/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/dhyabi2/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/dhyabi2/subscriptions",
-          "organizations_url": "https://api.github.com/users/dhyabi2/orgs",
-          "repos_url": "https://api.github.com/users/dhyabi2/repos",
-          "events_url": "https://api.github.com/users/dhyabi2/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/dhyabi2/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
-      "score": 7.7
-    },
-    "epss": {
-      "percentage": 0.00039,
-      "percentile": 0.1227
     }
   },
   {

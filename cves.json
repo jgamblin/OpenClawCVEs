@@ -1,19 +1,19 @@
 [
   {
-    "cve_id": "CVE-2026-44109",
-    "severity": "CRITICAL",
-    "cvss": 9.2,
-    "title": "OpenClaw: Feishu webhook and card-action validation now fail closed",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-xh72-v6v9-mwhc"
-  },
-  {
     "cve_id": "CVE-2026-43585",
     "severity": "CRITICAL",
     "cvss": 9.2,
     "title": "OpenClaw: Gateway HTTP endpoints re-resolve bearer auth after SecretRef rotation",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-xmxx-7p24-h892"
+  },
+  {
+    "cve_id": "CVE-2026-44109",
+    "severity": "CRITICAL",
+    "cvss": 9.2,
+    "title": "OpenClaw: Feishu webhook and card-action validation now fail closed",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-xh72-v6v9-mwhc"
   },
   {
     "cve_id": "CVE-2026-43533",
@@ -64,6 +64,14 @@
     "ghsa_id": "GHSA-2cq5-mf3v-mx44"
   },
   {
+    "cve_id": "CVE-2026-53843",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Pairing-scoped device session could restore revoked node token authority",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-q99w-vh6v-q3v7"
+  },
+  {
     "cve_id": "CVE-2026-44118",
     "severity": "HIGH",
     "cvss": 8.5,
@@ -104,14 +112,6 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-43571",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-82qx-6vj7-p8m2"
-  },
-  {
     "cve_id": "CVE-2026-44110",
     "severity": "HIGH",
     "cvss": 7.7,
@@ -120,12 +120,20 @@
     "ghsa_id": "GHSA-2gvc-4f3c-2855"
   },
   {
-    "cve_id": "CVE-2026-43569",
+    "cve_id": "CVE-2026-53864",
     "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-939r-rj45-g2rj"
+    "cvss": 7.6,
+    "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
+  },
+  {
+    "cve_id": "CVE-2026-53866",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-f397-5vjw-v2c2"
   },
   {
     "cve_id": "CVE-2026-28458",
@@ -152,12 +160,12 @@
     "ghsa_id": "GHSA-7jp6-r74r-995q"
   },
   {
-    "cve_id": "CVE-2026-43567",
+    "cve_id": "CVE-2026-53842",
     "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.4.10 - Path Traversal in screen_record outPath Parameter",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-jf25-7968-h2h5"
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
   },
   {
     "cve_id": "CVE-2026-28480",
@@ -208,28 +216,12 @@
     "ghsa_id": "GHSA-mr34-9552-qr95"
   },
   {
-    "cve_id": "CVE-2026-43527",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-53vx-pmqw-863c"
-  },
-  {
     "cve_id": "CVE-2026-44117",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw < 2026.4.20 - Server-Side Request Forgery in QQBot Direct Media Upload",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-c4qg-j8jg-42q5"
-  },
-  {
-    "cve_id": "CVE-2026-44999",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.4.20 - Improper Trust Labeling in Isolated Cron Awareness Events",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-57r2-h2wj-g887"
   },
   {
     "cve_id": "CVE-2026-45002",
@@ -240,20 +232,20 @@
     "ghsa_id": "GHSA-2xcp-x87w-q377"
   },
   {
+    "cve_id": "CVE-2026-44999",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.4.20 - Improper Trust Labeling in Isolated Cron Awareness Events",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-57r2-h2wj-g887"
+  },
+  {
     "cve_id": "CVE-2026-43570",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw contains a symlink traversal vulnerability",
     "date_published": "2026-05-05",
     "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
-  },
-  {
-    "cve_id": "CVE-2026-44112",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.4.22 - Symlink Swap Race Condition in OpenShell FS Bridge Writes",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-wppj-c6mr-83jj"
   },
   {
     "cve_id": "CVE-2026-44113",
@@ -264,12 +256,28 @@
     "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
   },
   {
+    "cve_id": "CVE-2026-44112",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.22 - Symlink Swap Race Condition in OpenShell FS Bridge Writes",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-wppj-c6mr-83jj"
+  },
+  {
     "cve_id": "CVE-2026-53840",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+  },
+  {
+    "cve_id": "CVE-2026-53863",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-985f-72mj-8gf7"
   },
   {
     "cve_id": "CVE-2026-45005",
@@ -288,14 +296,6 @@
     "ghsa_id": "GHSA-mj59-h3q9-ghfh"
   },
   {
-    "cve_id": "CVE-2026-42439",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw < 2026.4.10 - SSRF Policy Bypass in Browser Tabs Action Routes",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-rj2p-j66c-mgqh"
-  },
-  {
     "cve_id": "CVE-2026-42438",
     "severity": "MEDIUM",
     "cvss": 4.9,
@@ -310,22 +310,6 @@
     "title": "OpenClaw < 2026.4.5 - Second-hop SSRF via CDP /json/version WebSocket URL",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-f7fh-qg34-x2xh"
-  },
-  {
-    "cve_id": "CVE-2026-43580",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-536q-mj95-h29h"
-  },
-  {
-    "cve_id": "CVE-2026-43573",
-    "severity": "MEDIUM",
-    "cvss": 4.9,
-    "title": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-527m-976r-jf79"
   },
   {
     "cve_id": "CVE-2026-44992",
@@ -360,19 +344,19 @@
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
   },
   {
-    "cve_id": "CVE-2026-44997",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-q3jj-46pq-826r"
-  },
-  {
     "cve_id": "CVE-2026-44991",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-c28g-vh7m-fm7v"
+  },
+  {
+    "cve_id": "CVE-2026-44997",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-q3jj-46pq-826r"
   }
 ]

@@ -1,5 +1,111 @@
 [
   {
+    "ghsa_id": "GHSA-985f-72mj-8gf7",
+    "cve_id": "CVE-2026-53863",
+    "severity": "medium",
+    "title": "OpenClaw: Tool group policy callers could accept unvalidated group IDs",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-985f-72mj-8gf7",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.24"
+    ],
+    "fixed_versions": [
+      "2026.4.25"
+    ],
+    "fixed_version": "2026.4.25",
+    "cwes": [
+      "CWE-639"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v",
+    "cve_id": "CVE-2026-53842",
+    "severity": "high",
+    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-fq9j-vw4w-fr6v",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.2"
+    ],
+    "fixed_versions": [
+      "2026.5.2"
+    ],
+    "fixed_version": "2026.5.2",
+    "cwes": [
+      "CWE-426"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-f397-5vjw-v2c2",
+    "cve_id": "CVE-2026-53866",
+    "severity": "high",
+    "title": "OpenClaw: Shell inline-command parsing could miss an allowlist check",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-f397-5vjw-v2c2",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.10-beta.1"
+    ],
+    "fixed_versions": [
+      "2026.5.12"
+    ],
+    "fixed_version": "2026.5.12",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-q99w-vh6v-q3v7",
+    "cve_id": "CVE-2026-53843",
+    "severity": "high",
+    "title": "OpenClaw: Pairing-scoped device session could restore revoked node token authority",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-q99w-vh6v-q3v7",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.26"
+    ],
+    "fixed_versions": [
+      "2026.5.26"
+    ],
+    "fixed_version": "2026.5.26",
+    "cwes": [
+      "CWE-284",
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-ccwh-wwpp-6wg5",
+    "cve_id": "CVE-2026-53864",
+    "severity": "high",
+    "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-ccwh-wwpp-6wg5",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.22"
+    ],
+    "fixed_versions": [
+      "2026.5.26"
+    ],
+    "fixed_version": "2026.5.26",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh",
     "cve_id": "CVE-2026-53840",
     "severity": "high",
@@ -18,6 +124,101 @@
     "fixed_version": "2026.5.12",
     "cwes": [
       "CWE-200"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-8wmm-344f-mpjg",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: Tool group policy callers could accept unvalidated group IDs",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-8wmm-344f-mpjg",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.4.24"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-639"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-vr6h-vxqj-3pjx",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Host environment sanitizer missed two Node.js control variables",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-vr6h-vxqj-3pjx",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.22"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-v383-2wgg-v483",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Shell inline-command parsing could miss an allowlist check",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-v383-2wgg-v483",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.10-beta.1"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-9fr2-p65v-gqxq",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-9fr2-p65v-gqxq",
+    "packages": [
+      "pip/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.2"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-426"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-wrmq-9fc4-gwwj",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: Pairing-scoped device session could restore revoked node token authority",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-wrmq-9fc4-gwwj",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.26"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-613"
     ]
   },
   {
@@ -1900,224 +2101,6 @@
     "fixed_version": "2026.4.10",
     "cwes": [
       "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-536q-mj95-h29h",
-    "cve_id": "CVE-2026-43580",
-    "severity": "medium",
-    "title": "OpenClaw: Browser press/type interaction routes missed complete navigation guard coverage",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-536q-mj95-h29h",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-862",
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-qmwg-qprg-3j38",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Browser interaction routes could pivot into local CDP and regain file reads",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-qmwg-qprg-3j38",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.9"
-    ],
-    "fixed_versions": [
-      "2026.4.9"
-    ],
-    "fixed_version": "2026.4.9",
-    "cwes": [
-      "CWE-693"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-939r-rj45-g2rj",
-    "cve_id": "CVE-2026-43569",
-    "severity": "high",
-    "title": "OpenClaw: Workspace provider auth choices could auto-enable untrusted provider plugins",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-939r-rj45-g2rj",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.9"
-    ],
-    "fixed_versions": [
-      "2026.4.9"
-    ],
-    "fixed_version": "2026.4.9",
-    "cwes": [
-      "CWE-829"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-527m-976r-jf79",
-    "cve_id": "CVE-2026-43573",
-    "severity": "medium",
-    "title": "OpenClaw: Existing-session browser interaction routes bypassed SSRF policy enforcement",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-527m-976r-jf79",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-862",
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-rj2p-j66c-mgqh",
-    "cve_id": "CVE-2026-42439",
-    "severity": "medium",
-    "title": "OpenClaw: Browser tabs action select and close routes bypassed SSRF policy",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-rj2p-j66c-mgqh",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-862",
-      "CWE-918"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-f3h5-h452-vp3j",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "OpenClaw: Nostr profile mutation routes allowed operator.write config persistence",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-f3h5-h452-vp3j",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-266",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-525j-hqq2-66r4",
-    "cve_id": null,
-    "severity": "high",
-    "title": "OpenClaw: Sandbox browser CDP relay could expose DevTools protocol on 0.0.0.0",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-525j-hqq2-66r4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-284",
-      "CWE-1327"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-82qx-6vj7-p8m2",
-    "cve_id": "CVE-2026-43571",
-    "severity": "high",
-    "title": "OpenClaw: Channel setup catalog lookups could include untrusted workspace plugin shadows",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-82qx-6vj7-p8m2",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-829",
-      "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-jf25-7968-h2h5",
-    "cve_id": "CVE-2026-43567",
-    "severity": "medium",
-    "title": "OpenClaw: screen_record outPath bypassed workspace-only filesystem guard",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-jf25-7968-h2h5",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-22",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-53vx-pmqw-863c",
-    "cve_id": "CVE-2026-43527",
-    "severity": "medium",
-    "title": "OpenClaw: Browser SSRF policy default allowed private-network navigation",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-53vx-pmqw-863c",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.14"
-    ],
-    "fixed_versions": [
-      "2026.4.14"
-    ],
-    "fixed_version": "2026.4.14",
-    "cwes": [
-      "CWE-918",
-      "CWE-1188"
     ]
   },
   {

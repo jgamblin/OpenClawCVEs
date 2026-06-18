@@ -56,13 +56,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhq8-78pj-5j79"
   },
   {
-    "ghsa_id": "GHSA-q99w-vh6v-q3v7",
-    "severity": "HIGH",
-    "title": "Pairing-scoped device session could restore revoked node token authority",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q99w-vh6v-q3v7"
-  },
-  {
     "ghsa_id": "GHSA-qjpc-qf9m-xwmr",
     "severity": "HIGH",
     "title": "Trusted-proxy Control UI WebSocket accepted client-declared scopes before pairing",
@@ -196,13 +189,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8wg3-5mcm-fjq8"
   },
   {
-    "ghsa_id": "GHSA-985f-72mj-8gf7",
-    "severity": "MEDIUM",
-    "title": "Tool group policy callers could accept unvalidated group IDs",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-985f-72mj-8gf7"
-  },
-  {
     "ghsa_id": "GHSA-9v8j-9c9g-w66c",
     "severity": "MEDIUM",
     "title": "Bootstrap token replay could widen pending pairing scopes",
@@ -231,13 +217,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qm-58hj-j6pj"
   },
   {
-    "ghsa_id": "GHSA-ccwh-wwpp-6wg5",
-    "severity": "MEDIUM",
-    "title": "Host environment sanitizer missed two Node.js control variables",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ccwh-wwpp-6wg5"
-  },
-  {
     "ghsa_id": "GHSA-cqwv-9qjx-vxw2",
     "severity": "MEDIUM",
     "title": "Skill Workshop apply flow could override pending approval",
@@ -257,20 +236,6 @@
     "title": "Exec allowlist could miss side effects from transparent command wrappers",
     "published": "2026-05-28",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6"
-  },
-  {
-    "ghsa_id": "GHSA-f397-5vjw-v2c2",
-    "severity": "MEDIUM",
-    "title": "Shell inline-command parsing could miss an allowlist check",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-f397-5vjw-v2c2"
-  },
-  {
-    "ghsa_id": "GHSA-fq9j-vw4w-fr6v",
-    "severity": "MEDIUM",
-    "title": "Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fq9j-vw4w-fr6v"
   },
   {
     "ghsa_id": "GHSA-g2hm-779g-vm32",
