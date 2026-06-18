@@ -48,14 +48,6 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
-    "cve_id": "CVE-2026-42434",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-736r-jwj6-4w23"
-  },
-  {
     "cve_id": "CVE-2026-43530",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -72,20 +64,20 @@
     "ghsa_id": "GHSA-q99w-vh6v-q3v7"
   },
   {
-    "cve_id": "CVE-2026-44118",
-    "severity": "HIGH",
-    "cvss": 8.5,
-    "title": "OpenClaw < 2026.4.22 - Owner Context Spoofing via Bearer Token Header",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-r6xh-pqhr-v4xh"
-  },
-  {
     "cve_id": "CVE-2026-44114",
     "severity": "HIGH",
     "cvss": 8.5,
     "title": "OpenClaw: Workspace dotenv could override runtime-control environment variables",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-hxvm-xjvf-93f3"
+  },
+  {
+    "cve_id": "CVE-2026-44118",
+    "severity": "HIGH",
+    "cvss": 8.5,
+    "title": "OpenClaw < 2026.4.22 - Owner Context Spoofing via Bearer Token Header",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-r6xh-pqhr-v4xh"
   },
   {
     "cve_id": "CVE-2026-45004",
@@ -150,14 +142,6 @@
     "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-3fqr-4cg8-h96q"
-  },
-  {
-    "cve_id": "CVE-2026-42433",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw: Matrix profile config persistence was reachable from operator.write message tools",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-7jp6-r74r-995q"
   },
   {
     "cve_id": "CVE-2026-53842",
@@ -248,14 +232,6 @@
     "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
   },
   {
-    "cve_id": "CVE-2026-44113",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
-  },
-  {
     "cve_id": "CVE-2026-44112",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -264,12 +240,12 @@
     "ghsa_id": "GHSA-wppj-c6mr-83jj"
   },
   {
-    "cve_id": "CVE-2026-53840",
+    "cve_id": "CVE-2026-44113",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
   },
   {
     "cve_id": "CVE-2026-53863",
@@ -278,6 +254,14 @@
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
+  },
+  {
+    "cve_id": "CVE-2026-53840",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
   },
   {
     "cve_id": "CVE-2026-45005",
@@ -294,6 +278,14 @@
     "title": "OpenClaw: MCP stdio server env could load dangerous startup variables from workspace config",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-mj59-h3q9-ghfh"
+  },
+  {
+    "cve_id": "CVE-2026-53861",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw < 2026.5.6 - Allowlist Bypass via Combined POSIX Inline Flags on macOS",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-c226-q6fx-6j6c"
   },
   {
     "cve_id": "CVE-2026-42438",
@@ -328,20 +320,20 @@
     "ghsa_id": "GHSA-55cf-xx38-4p9p"
   },
   {
-    "cve_id": "CVE-2026-41908",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
-  },
-  {
     "cve_id": "CVE-2026-41358",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.4.2 - Sender Allowlist Bypass via Slack Thread Context",
     "date_published": "2026-04-23",
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
+  },
+  {
+    "cve_id": "CVE-2026-41908",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.4.20 - Scope Enforcement Bypass in Assistant-Media Route",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-v8qf-fr4g-28p2"
   },
   {
     "cve_id": "CVE-2026-44991",

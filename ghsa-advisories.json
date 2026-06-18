@@ -1,5 +1,26 @@
 [
   {
+    "ghsa_id": "GHSA-c226-q6fx-6j6c",
+    "cve_id": "CVE-2026-53861",
+    "severity": "medium",
+    "title": "OpenClaw: macOS Swift exec allowlist missed combined POSIX inline flags",
+    "published": "2026-06-18",
+    "html_url": "https://github.com/advisories/GHSA-c226-q6fx-6j6c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.5"
+    ],
+    "fixed_versions": [
+      "2026.5.6"
+    ],
+    "fixed_version": "2026.5.6",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-985f-72mj-8gf7",
     "cve_id": "CVE-2026-53863",
     "severity": "medium",
@@ -157,6 +178,25 @@
     ],
     "affected_versions": [
       "<= 2026.5.22"
+    ],
+    "fixed_versions": [],
+    "fixed_version": "",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-g796-jqmx-wf9q",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: macOS Swift exec allowlist missed combined POSIX inline flags",
+    "published": "2026-06-16",
+    "html_url": "https://github.com/advisories/GHSA-g796-jqmx-wf9q",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "<= 2026.5.5"
     ],
     "fixed_versions": [],
     "fixed_version": "",
@@ -2055,50 +2095,6 @@
       "2026.4.12"
     ],
     "fixed_version": "2026.4.12",
-    "cwes": [
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-7jp6-r74r-995q",
-    "cve_id": "CVE-2026-42433",
-    "severity": "high",
-    "title": "OpenClaw: Matrix profile config persistence was reachable from operator.write message tools",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-7jp6-r74r-995q",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
-    "cwes": [
-      "CWE-266",
-      "CWE-862",
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-736r-jwj6-4w23",
-    "cve_id": "CVE-2026-42434",
-    "severity": "high",
-    "title": "OpenClaw: Sandboxed agents could escape exec routing via host=node override",
-    "published": "2026-04-17",
-    "html_url": "https://github.com/advisories/GHSA-736r-jwj6-4w23",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.4.5, < 2026.4.10"
-    ],
-    "fixed_versions": [
-      "2026.4.10"
-    ],
-    "fixed_version": "2026.4.10",
     "cwes": [
       "CWE-863"
     ]

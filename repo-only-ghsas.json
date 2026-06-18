@@ -196,13 +196,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9v8j-9c9g-w66c"
   },
   {
-    "ghsa_id": "GHSA-c226-q6fx-6j6c",
-    "severity": "MEDIUM",
-    "title": "macOS Swift exec allowlist missed combined POSIX inline flags",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c226-q6fx-6j6c"
-  },
-  {
     "ghsa_id": "GHSA-c29c-2q9c-pc86",
     "severity": "MEDIUM",
     "title": "Slack allowFrom could bind to mutable display names",
