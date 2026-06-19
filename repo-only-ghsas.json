@@ -1,5 +1,12 @@
 [
   {
+    "ghsa_id": "GHSA-2gvc-4f3c-2855",
+    "severity": "HIGH",
+    "title": "Matrix room control-command authorization no longer trusts DM pairing-store entries",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2gvc-4f3c-2855"
+  },
+  {
     "ghsa_id": "GHSA-2hfg-4fh4-qp7f",
     "severity": "HIGH",
     "title": "Browser act interactions could bypass private-network navigation checks",
@@ -63,11 +70,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qjpc-qf9m-xwmr"
   },
   {
-    "ghsa_id": "GHSA-v2ww-5rh7-2h5v",
+    "ghsa_id": "GHSA-xmxx-7p24-h892",
     "severity": "HIGH",
-    "title": "Linux and macOS exec allowlists skipped configured argument patterns",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v2ww-5rh7-2h5v"
+    "title": "Gateway HTTP endpoints re-resolve bearer auth after SecretRef rotation",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xmxx-7p24-h892"
   },
   {
     "ghsa_id": "GHSA-xr4f-mjxj-w6w5",
@@ -84,13 +91,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xww8-gqvh-92x9"
   },
   {
-    "ghsa_id": "GHSA-24vr-rprv-67rf",
-    "severity": "MEDIUM",
-    "title": "Workspace .env npm_execpath could influence bundled runtime dependency install",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-24vr-rprv-67rf"
-  },
-  {
     "ghsa_id": "GHSA-275c-xpvc-jgfw",
     "severity": "MEDIUM",
     "title": "Slack and Zalo webhook secrets could remain active after secrets.reload",
@@ -105,11 +105,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2j8v-hwgc-x698"
   },
   {
-    "ghsa_id": "GHSA-4hpg-mp64-x7xq",
+    "ghsa_id": "GHSA-2xcp-x87w-q377",
     "severity": "MEDIUM",
-    "title": "Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4hpg-mp64-x7xq"
+    "title": "Hook mapping templates could bypass hook session-key opt-in",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2xcp-x87w-q377"
   },
   {
     "ghsa_id": "GHSA-4m3v-q747-pc6h",
@@ -119,13 +119,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4m3v-q747-pc6h"
   },
   {
-    "ghsa_id": "GHSA-5cj2-3jr2-5h77",
-    "severity": "MEDIUM",
-    "title": "Shell positional parameters could weaken strict inline-eval checks",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5cj2-3jr2-5h77"
-  },
-  {
     "ghsa_id": "GHSA-6c4r-g249-wv3c",
     "severity": "MEDIUM",
     "title": "Sandboxed session spawn could expose the real workspace path to child prompts",
@@ -133,11 +126,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6c4r-g249-wv3c"
   },
   {
-    "ghsa_id": "GHSA-72fw-cqh5-f324",
+    "ghsa_id": "GHSA-72q8-jcmc-97wx",
     "severity": "MEDIUM",
-    "title": "memory-wiki shared search could miss session visibility checks",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-72fw-cqh5-f324"
+    "title": "Feishu card actions could misclassify DMs and skip dmPolicy",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-72q8-jcmc-97wx"
   },
   {
     "ghsa_id": "GHSA-77pv-3w4q-vrj5",
@@ -168,32 +161,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-83w9-h5wv-j9xm"
   },
   {
-    "ghsa_id": "GHSA-8c59-hr4w-qg69",
-    "severity": "MEDIUM",
-    "title": "Zalo allowFrom could bind to mutable display names",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8c59-hr4w-qg69"
-  },
-  {
-    "ghsa_id": "GHSA-8mg9-j9cf-54cj",
-    "severity": "MEDIUM",
-    "title": "Empty-scope device re-pairing could confuse caller scope containment",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8mg9-j9cf-54cj"
-  },
-  {
     "ghsa_id": "GHSA-8wg3-5mcm-fjq8",
     "severity": "MEDIUM",
     "title": "Workspace .env could override Homebrew executable selection for skill install flows",
     "published": "2026-05-28",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8wg3-5mcm-fjq8"
-  },
-  {
-    "ghsa_id": "GHSA-9v8j-9c9g-w66c",
-    "severity": "MEDIUM",
-    "title": "Bootstrap token replay could widen pending pairing scopes",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9v8j-9c9g-w66c"
   },
   {
     "ghsa_id": "GHSA-c29c-2q9c-pc86",
@@ -217,20 +189,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cqwv-9qjx-vxw2"
   },
   {
-    "ghsa_id": "GHSA-cw4q-gqg5-g38h",
-    "severity": "MEDIUM",
-    "title": "Discord allowFrom could bind to mutable display names",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cw4q-gqg5-g38h"
-  },
-  {
-    "ghsa_id": "GHSA-cwpp-5962-q4f6",
-    "severity": "MEDIUM",
-    "title": "Exec allowlist could miss side effects from transparent command wrappers",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6"
-  },
-  {
     "ghsa_id": "GHSA-g2hm-779g-vm32",
     "severity": "MEDIUM",
     "title": "Heartbeat owner downgrade missed untrusted webhook wake events",
@@ -252,18 +210,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-grc3-2j34-p6gm"
   },
   {
-    "ghsa_id": "GHSA-gxg4-2rrr-jhc7",
-    "severity": "MEDIUM",
-    "title": "Hostname checks could treat trailing-dot hosts inconsistently",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gxg4-2rrr-jhc7"
-  },
-  {
     "ghsa_id": "GHSA-hcm3-8f6r-6xwg",
     "severity": "MEDIUM",
     "title": "Browser debug/export routes could reuse already-open blocked tabs",
     "published": "2026-05-28",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hcm3-8f6r-6xwg"
+  },
+  {
+    "ghsa_id": "GHSA-hxvm-xjvf-93f3",
+    "severity": "MEDIUM",
+    "title": "Workspace dotenv could override OpenClaw runtime-control environment variables",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hxvm-xjvf-93f3"
   },
   {
     "ghsa_id": "GHSA-j472-gf56-x589",
@@ -287,11 +245,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jwrq-8g5x-5fhm"
   },
   {
-    "ghsa_id": "GHSA-mpc8-jxjh-qpgh",
+    "ghsa_id": "GHSA-mj59-h3q9-ghfh",
     "severity": "MEDIUM",
-    "title": "Focus command could miss controlScope enforcement",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mpc8-jxjh-qpgh"
+    "title": "MCP stdio server env could load dangerous startup variables from workspace config",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mj59-h3q9-ghfh"
+  },
+  {
+    "ghsa_id": "GHSA-mr34-9552-qr95",
+    "severity": "MEDIUM",
+    "title": "Webchat media embedding enforces local-root containment for tool-result files",
+    "published": "2026-04-16",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mr34-9552-qr95"
   },
   {
     "ghsa_id": "GHSA-p2fh-f5fc-44hr",
@@ -350,20 +315,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rj6p-xmxr-qj4h"
   },
   {
-    "ghsa_id": "GHSA-rwp6-7w3q-75fq",
-    "severity": "MEDIUM",
-    "title": "Config recovery could restore openclaw.json with broad file permissions",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rwp6-7w3q-75fq"
-  },
-  {
-    "ghsa_id": "GHSA-rx78-29qr-5hq8",
-    "severity": "MEDIUM",
-    "title": "Workspace-derived service PATH could influence trash command selection",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rx78-29qr-5hq8"
-  },
-  {
     "ghsa_id": "GHSA-v6r2-jh58-xx6w",
     "severity": "MEDIUM",
     "title": "Marketplace runtime extension metadata could point at unscanned payloads",
@@ -399,32 +350,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w5ww-7chg-mxcq"
   },
   {
-    "ghsa_id": "GHSA-w9hf-3pp7-pvxv",
-    "severity": "MEDIUM",
-    "title": "Exported session HTML could keep unsafe markdown links",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w9hf-3pp7-pvxv"
-  },
-  {
-    "ghsa_id": "GHSA-wc84-j36w-pw4x",
-    "severity": "MEDIUM",
-    "title": "Workspace .env STATE_DIRECTORY could influence bundled runtime dependency roots",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wc84-j36w-pw4x"
-  },
-  {
     "ghsa_id": "GHSA-wv26-j37q-2g7p",
     "severity": "MEDIUM",
     "title": "Slack plugin approvals used the exec approver gate for plugin actions",
     "published": "2026-05-28",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wv26-j37q-2g7p"
-  },
-  {
-    "ghsa_id": "GHSA-x629-46cc-7xgw",
-    "severity": "MEDIUM",
-    "title": "Active Memory write scope could mutate global config",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x629-46cc-7xgw"
   },
   {
     "ghsa_id": "GHSA-3wqp-prf6-2m72",
@@ -434,25 +364,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3wqp-prf6-2m72"
   },
   {
-    "ghsa_id": "GHSA-68xw-r643-9p5w",
+    "ghsa_id": "GHSA-57r2-h2wj-g887",
     "severity": "LOW",
-    "title": "Skill-command dispatch could skip before-tool-call hooks",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-68xw-r643-9p5w"
+    "title": "Isolated cron awareness events were recorded as trusted system events",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-57r2-h2wj-g887"
   },
   {
-    "ghsa_id": "GHSA-8j37-5w68-wj2g",
+    "ghsa_id": "GHSA-c4qg-j8jg-42q5",
     "severity": "LOW",
-    "title": "BlueBubbles sender policy could match mutable conversation identifiers",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8j37-5w68-wj2g"
-  },
-  {
-    "ghsa_id": "GHSA-fcvx-5cxc-v5p8",
-    "severity": "LOW",
-    "title": "Slack reaction events could ignore reaction notification settings",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fcvx-5cxc-v5p8"
+    "title": "QQBot direct media upload skipped URL SSRF validation",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-c4qg-j8jg-42q5"
   },
   {
     "ghsa_id": "GHSA-gc9r-867r-j85f",
@@ -460,5 +383,19 @@
     "title": "Microsoft Teams SSO invoke handler missed sender authorization checks",
     "published": "2026-04-16",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gc9r-867r-j85f"
+  },
+  {
+    "ghsa_id": "GHSA-v8qf-fr4g-28p2",
+    "severity": "LOW",
+    "title": "Assistant media route missed scope enforcement for trusted-proxy auth",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8qf-fr4g-28p2"
+  },
+  {
+    "ghsa_id": "GHSA-xrq9-jm7v-g9h7",
+    "severity": "LOW",
+    "title": "Paired-device pairing actions were not limited to the caller device",
+    "published": "2026-04-21",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xrq9-jm7v-g9h7"
   }
 ]
