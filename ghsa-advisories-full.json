@@ -842,22 +842,22 @@
     "credits": [
       {
         "user": {
-          "login": "Curly-Haired-Baboon",
+          "login": "amwhoi",
           "id": 227850795,
           "node_id": "U_kgDODZS6Kw",
           "avatar_url": "https://avatars.githubusercontent.com/u/227850795?v=4",
           "gravatar_id": "",
-          "url": "https://api.github.com/users/Curly-Haired-Baboon",
-          "html_url": "https://github.com/Curly-Haired-Baboon",
-          "followers_url": "https://api.github.com/users/Curly-Haired-Baboon/followers",
-          "following_url": "https://api.github.com/users/Curly-Haired-Baboon/following{/other_user}",
-          "gists_url": "https://api.github.com/users/Curly-Haired-Baboon/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/Curly-Haired-Baboon/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/Curly-Haired-Baboon/subscriptions",
-          "organizations_url": "https://api.github.com/users/Curly-Haired-Baboon/orgs",
-          "repos_url": "https://api.github.com/users/Curly-Haired-Baboon/repos",
-          "events_url": "https://api.github.com/users/Curly-Haired-Baboon/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/Curly-Haired-Baboon/received_events",
+          "url": "https://api.github.com/users/amwhoi",
+          "html_url": "https://github.com/amwhoi",
+          "followers_url": "https://api.github.com/users/amwhoi/followers",
+          "following_url": "https://api.github.com/users/amwhoi/following{/other_user}",
+          "gists_url": "https://api.github.com/users/amwhoi/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/amwhoi/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/amwhoi/subscriptions",
+          "organizations_url": "https://api.github.com/users/amwhoi/orgs",
+          "repos_url": "https://api.github.com/users/amwhoi/repos",
+          "events_url": "https://api.github.com/users/amwhoi/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/amwhoi/received_events",
           "type": "User",
           "user_view_type": "public",
           "site_admin": false
@@ -1673,7 +1673,7 @@
     },
     "epss": {
       "percentage": 0.00188,
-      "percentile": 0.08517
+      "percentile": 0.08483
     }
   },
   {
