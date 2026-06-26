@@ -80,20 +80,20 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-53855",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-5cj2-3jr2-5h77"
-  },
-  {
     "cve_id": "CVE-2026-53853",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
+  },
+  {
+    "cve_id": "CVE-2026-53855",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-5cj2-3jr2-5h77"
   },
   {
     "cve_id": "CVE-2026-53864",
@@ -216,12 +216,12 @@
     "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
   },
   {
-    "cve_id": "CVE-2026-44113",
+    "cve_id": "CVE-2026-44112",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
+    "title": "OpenClaw < 2026.4.22 - Symlink Swap Race Condition in OpenShell FS Bridge Writes",
     "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
+    "ghsa_id": "GHSA-wppj-c6mr-83jj"
   },
   {
     "cve_id": "CVE-2026-43570",
@@ -232,12 +232,12 @@
     "ghsa_id": "GHSA-cr8r-7g2h-6wr6"
   },
   {
-    "cve_id": "CVE-2026-44112",
+    "cve_id": "CVE-2026-44113",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw < 2026.4.22 - Symlink Swap Race Condition in OpenShell FS Bridge Writes",
+    "title": "OpenClaw: OpenShell FS bridge reads pin and verify the opened file before returning bytes",
     "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-wppj-c6mr-83jj"
+    "ghsa_id": "GHSA-5h3g-6xhh-rg6p"
   },
   {
     "cve_id": "CVE-2026-53840",
@@ -248,12 +248,12 @@
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
   },
   {
-    "cve_id": "CVE-2026-53844",
+    "cve_id": "CVE-2026-53854",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
+    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-72fw-cqh5-f324"
+    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
     "cve_id": "CVE-2026-53859",
@@ -264,12 +264,12 @@
     "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
   },
   {
-    "cve_id": "CVE-2026-53854",
+    "cve_id": "CVE-2026-53844",
     "severity": "MEDIUM",
     "cvss": 6,
-    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
+    "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
+    "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
     "cve_id": "CVE-2026-53863",
@@ -312,20 +312,20 @@
     "ghsa_id": "GHSA-c226-q6fx-6j6c"
   },
   {
-    "cve_id": "CVE-2026-45003",
-    "severity": "MEDIUM",
-    "cvss": 4.1,
-    "title": "OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-55cf-xx38-4p9p"
-  },
-  {
     "cve_id": "CVE-2026-44992",
     "severity": "MEDIUM",
     "cvss": 4.1,
     "title": "OpenClaw 2026.4.5 < 2026.4.20 - MiniMax API Host Override via Workspace dotenv",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-h2vw-ph2c-jvwf"
+  },
+  {
+    "cve_id": "CVE-2026-45003",
+    "severity": "MEDIUM",
+    "cvss": 4.1,
+    "title": "OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-55cf-xx38-4p9p"
   },
   {
     "cve_id": "CVE-2026-41358",
@@ -336,14 +336,6 @@
     "ghsa_id": "GHSA-qm77-8qjp-4vcm"
   },
   {
-    "cve_id": "CVE-2026-44997",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-q3jj-46pq-826r"
-  },
-  {
     "cve_id": "CVE-2026-44991",
     "severity": "LOW",
     "cvss": 2.3,
@@ -352,12 +344,12 @@
     "ghsa_id": "GHSA-c28g-vh7m-fm7v"
   },
   {
-    "cve_id": "CVE-2026-53845",
+    "cve_id": "CVE-2026-44997",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw: Skill-command dispatch could skip before-tool-call hooks",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-68xw-r643-9p5w"
+    "title": "OpenClaw < 2026.4.22 - Security Envelope Constraint Bypass in ACP Child Sessions",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-q3jj-46pq-826r"
   },
   {
     "cve_id": "CVE-2026-53848",
@@ -368,12 +360,12 @@
     "ghsa_id": "GHSA-cwpp-5962-q4f6"
   },
   {
-    "cve_id": "CVE-2026-53852",
+    "cve_id": "CVE-2026-53845",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
+    "title": "OpenClaw: Skill-command dispatch could skip before-tool-call hooks",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
+    "ghsa_id": "GHSA-68xw-r643-9p5w"
   },
   {
     "cve_id": "CVE-2026-53860",
@@ -382,6 +374,14 @@
     "title": "OpenClaw: BlueBubbles sender policy could match mutable conversation identifiers",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-8j37-5w68-wj2g"
+  },
+  {
+    "cve_id": "CVE-2026-53852",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
     "cve_id": "CVE-2026-53862",
