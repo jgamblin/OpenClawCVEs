@@ -1,0 +1,55 @@
+{
+  "generated_at": "2026-06-27 23:01 UTC",
+  "total": 543,
+  "project_issued": 34,
+  "third_party_issued": 509,
+  "by_assigner": [
+    {
+      "cna": "VulnCheck",
+      "count": 500,
+      "pct": 92.1
+    },
+    {
+      "cna": "GitHub_M",
+      "count": 34,
+      "pct": 6.3
+    },
+    {
+      "cna": "VulDB",
+      "count": 4,
+      "pct": 0.7
+    },
+    {
+      "cna": "zdi",
+      "count": 3,
+      "pct": 0.6
+    },
+    {
+      "cna": "mitre",
+      "count": 2,
+      "pct": 0.4
+    }
+  ],
+  "monthly_2026": [
+    {
+      "month": "2026-02",
+      "count": 35
+    },
+    {
+      "month": "2026-03",
+      "count": 198
+    },
+    {
+      "month": "2026-04",
+      "count": 174
+    },
+    {
+      "month": "2026-05",
+      "count": 75
+    },
+    {
+      "month": "2026-06",
+      "count": 61
+    }
+  ]
+}
