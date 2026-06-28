@@ -15,3 +15,6 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# cvelistV5 sparse checkout (cache for reconcile_cnas.py; large, never committed)
+.cvelistV5/

@@ -10,6 +10,7 @@ on:
     paths:
       - 'templates/**'
       - 'update_readme.py'
+      - 'reconcile_cnas.py'
 
 permissions:
   contents: write
@@ -35,6 +36,21 @@ jobs:
         # Note: cve-records/, ghsa-advisories-full.json, and repo-only-ghsas.json
         # are kept as cache fallbacks when APIs fail or are rate-limited.
 
+      - name: Cache cvelistV5 sparse checkout
+        uses: actions/cache@v4
+        with:
+          path: .cvelistV5
+          # Date-keyed so the sparse checkout is refreshed (and re-cloned) daily;
+          # reconcile_cnas.py also git-pulls an existing checkout each run.
+          key: cvelistV5-${{ github.run_id }}
+          restore-keys: |
+            cvelistV5-
+
+      - name: Reconcile CVE List V5 (all CNAs)
+        env:
+          PYTHONUNBUFFERED: '1'
+        run: python3 reconcile_cnas.py
+
       - name: Update README
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -44,14 +60,14 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git status --porcelain README.md ADVISORIES.md cves.json ghsa-advisories.json cve-pipeline-status.json repo-only-ghsas.json cve-records/ | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
+          git status --porcelain README.md ADVISORIES.md cves.json ghsa-advisories.json cve-pipeline-status.json repo-only-ghsas.json cve-records/ openclaw-cves-all.json cna-breakdown.json | grep -q . && echo "changed=true" >> $GITHUB_OUTPUT || echo "changed=false" >> $GITHUB_OUTPUT
 
       - name: Commit and push
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md ADVISORIES.md ghsa-advisories.json ghsa-advisories-full.json cves.json cve-records/ cve-pipeline-status.json repo-only-ghsas.json
+          git add README.md ADVISORIES.md ghsa-advisories.json ghsa-advisories-full.json cves.json cve-records/ cve-pipeline-status.json repo-only-ghsas.json openclaw-cves-all.json cna-breakdown.json
           git commit -m "chore: update CVE/GHSA tracker [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git pull --rebase origin main
           git push

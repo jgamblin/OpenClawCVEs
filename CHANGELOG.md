@@ -2,6 +2,38 @@
 
 All notable changes to the OpenClaw CVE & GHSA Tracker are documented here.
 
+## [2026-06-27] — Full CVE List V5 coverage & by-CNA breakdown
+
+### New Features
+
+- **Captures every OpenClaw CVE, not just project-issued ones.**
+  The tracker was GHSA-anchored — it only discovered CVEs that had an OpenClaw
+  GitHub Security Advisory, so it reported ~50 CVEs (all project-issued, GitHub as
+  CNA) and was blind to third-party assignments. A new scanner,
+  `reconcile_cnas.py`, performs a shallow, blobless, sparse clone of
+  [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) and matches every
+  record whose affected `vendor`/`product` is `openclaw` (or that references
+  `github.com/openclaw/openclaw`), excluding `REJECTED` records. This surfaces
+  **543** OpenClaw CVEs.
+
+- **By-assigner (CNA) breakdown.**
+  The dashboard now shows the split by assigning CNA. **VulnCheck dominates with
+  500 (~92%)**, followed by GitHub_M (34), VulDB (4), ZDI (3), and MITRE (2). A
+  "project-issued (GitHub) vs third-party-issued" summary makes clear that the
+  previous ~50 was project-issued only and the larger total includes external
+  researchers.
+
+- **2026 monthly publish trend** visualizing the steady VulnCheck-led disclosure
+  cadence.
+
+- **New committed data files** read by the dashboard:
+  `openclaw-cves-all.json` (reconciled per-CVE set with assigner, date, state,
+  source, and GHSA-pipeline flag) and `cna-breakdown.json` (aggregates).
+
+### Other
+
+- Fixed stale "updates hourly" copy in the README (the schedule is every 6 hours).
+
 ## [2026-02-27] — Accuracy overhaul: repo-advisory auto-sync & deduplication
 
 ### Bug Fixes

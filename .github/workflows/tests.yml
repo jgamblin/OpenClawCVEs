@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'update_readme.py'
+      - 'reconcile_cnas.py'
       - 'templates/**'
       - 'tests/**'
       - 'repo-only-ghsas.json'

@@ -498,6 +498,54 @@ def load_repo_only_ghsas() -> list[dict]:
     return []
 
 
+# ─── CNA Reconciliation (CVE List V5 full scan) ──────────────────────────────
+
+# These files are produced by reconcile_cnas.py, which scans the entire cvelistV5
+# registry for every OpenClaw CVE regardless of assigner. The dashboard reads them
+# here; it never re-scans cvelistV5 itself.
+
+CNA_BREAKDOWN_FILE = ROOT / "cna-breakdown.json"
+ALL_CVES_FILE = ROOT / "openclaw-cves-all.json"
+
+
+def load_cna_data() -> dict:
+    """Load the by-CNA breakdown produced by reconcile_cnas.py.
+
+    Returns an empty-but-renderable structure if the file is missing (e.g. the
+    reconcile step hasn't run yet), so the template can skip the section cleanly.
+    """
+    if not CNA_BREAKDOWN_FILE.exists():
+        print(f"WARNING: {CNA_BREAKDOWN_FILE.name} not found — "
+              "run reconcile_cnas.py to populate the by-CNA dashboard.", file=sys.stderr)
+        return {}
+    try:
+        with open(CNA_BREAKDOWN_FILE) as f:
+            breakdown = json.load(f)
+    except (json.JSONDecodeError, OSError) as e:
+        print(f"WARNING: could not read {CNA_BREAKDOWN_FILE.name}: {e}", file=sys.stderr)
+        return {}
+
+    # Precompute a max count so the template can draw simple proportional bars
+    # without needing a Jinja filter.
+    monthly = breakdown.get("monthly_2026", [])
+    max_month = max((m.get("count", 0) for m in monthly), default=0)
+    for m in monthly:
+        count = m.get("count", 0)
+        m["bar"] = "█" * round(count / max_month * 20) if max_month else ""
+    return breakdown
+
+
+def load_all_cves() -> list[dict]:
+    """Load the full reconciled OpenClaw CVE set produced by reconcile_cnas.py."""
+    if not ALL_CVES_FILE.exists():
+        return []
+    try:
+        with open(ALL_CVES_FILE) as f:
+            return json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return []
+
+
 # ─── Main Logic ──────────────────────────────────────────────────────────────
 
 
@@ -808,6 +856,10 @@ def collect_data(local_only: bool = False) -> dict:
 
     high_impact_pct = round((severity_critical + severity_high) / total_ghsas * 100) if total_ghsas else 0
 
+    # ── CNA breakdown (full cvelistV5 scan, produced by reconcile_cnas.py) ──
+    cna = load_cna_data()
+    all_cves = load_all_cves()
+
     return {
         "updated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         "counts": {
@@ -840,6 +892,8 @@ def collect_data(local_only: bool = False) -> dict:
         "sync_rate_pct": sync_rate_pct,
         "advisory_date_range": advisory_date_range,
         "high_impact_pct": high_impact_pct,
+        "cna": cna,
+        "all_cves": all_cves,
     }
 
 
