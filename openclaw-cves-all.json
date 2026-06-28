@@ -28,8 +28,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-18",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-22172",
@@ -52,8 +52,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-18",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-22176",
@@ -108,8 +108,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-18",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-24763",
@@ -124,8 +124,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-25157",
@@ -172,8 +172,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-26317",
@@ -228,8 +228,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-26325",
@@ -276,8 +276,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-27001",
@@ -300,8 +300,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-27004",
@@ -332,8 +332,8 @@
     "assigner": "GitHub_M",
     "date_published": "2026-02-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-27183",
@@ -468,8 +468,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-28393",
@@ -572,8 +572,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-28457",
@@ -788,16 +788,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-28486",
     "assigner": "VulnCheck",
     "date_published": "2026-03-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-29606",
@@ -812,8 +812,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-29608",
@@ -932,8 +932,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-31998",
@@ -1020,8 +1020,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32009",
@@ -1076,8 +1076,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32017",
@@ -1092,8 +1092,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32019",
@@ -1156,8 +1156,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-19",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32027",
@@ -1356,16 +1356,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-21",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32053",
     "assigner": "VulnCheck",
     "date_published": "2026-03-21",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32054",
@@ -1380,8 +1380,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-21",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32056",
@@ -1412,8 +1412,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32060",
@@ -1460,8 +1460,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-21",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32067",
@@ -1532,8 +1532,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-29",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32906",
@@ -1628,8 +1628,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-29",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-32924",
@@ -1772,8 +1772,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-29",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-33575",
@@ -1828,16 +1828,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-03-31",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-34425",
     "assigner": "VulnCheck",
     "date_published": "2026-04-02",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-34426",
@@ -1932,8 +1932,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35620",
@@ -2004,8 +2004,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-09",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35629",
@@ -2020,8 +2020,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-29",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35631",
@@ -2060,8 +2060,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-09",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35636",
@@ -2108,8 +2108,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35642",
@@ -2180,32 +2180,32 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35651",
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35652",
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35653",
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35654",
@@ -2236,8 +2236,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35658",
@@ -2252,8 +2252,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35660",
@@ -2276,16 +2276,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35663",
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35664",
@@ -2308,8 +2308,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-10",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-35667",
@@ -2420,8 +2420,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-20",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41295",
@@ -2468,8 +2468,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-20",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41301",
@@ -2492,8 +2492,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-20",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41329",
@@ -2716,8 +2716,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-23",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41357",
@@ -2748,32 +2748,32 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-23",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41361",
     "assigner": "VulnCheck",
     "date_published": "2026-04-23",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41362",
     "assigner": "VulnCheck",
     "date_published": "2026-04-27",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41363",
     "assigner": "VulnCheck",
     "date_published": "2026-04-27",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41364",
@@ -2820,8 +2820,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-27",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41370",
@@ -2852,16 +2852,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41374",
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41375",
@@ -2924,16 +2924,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41383",
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41384",
@@ -2988,8 +2988,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41391",
@@ -3060,16 +3060,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41400",
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41402",
@@ -3116,8 +3116,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41408",
@@ -3156,8 +3156,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-41912",
@@ -3212,8 +3212,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-42422",
@@ -3228,16 +3228,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-42424",
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-42426",
@@ -3268,8 +3268,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-42430",
@@ -3284,8 +3284,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-04-28",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-42432",
@@ -3348,8 +3348,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43526",
@@ -3372,8 +3372,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43529",
@@ -3396,8 +3396,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43532",
@@ -3420,16 +3420,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43535",
     "assigner": "VulnCheck",
     "date_published": "2026-05-05",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43566",
@@ -3524,8 +3524,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-06",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43578",
@@ -3548,8 +3548,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-06",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43581",
@@ -3564,8 +3564,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-06",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43583",
@@ -3580,8 +3580,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-06",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-43585",
@@ -3644,8 +3644,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-06",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-44116",
@@ -3740,8 +3740,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-45000",
@@ -3828,16 +3828,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-06-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53808",
     "assigner": "VulnCheck",
     "date_published": "2026-06-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53809",
@@ -3916,8 +3916,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-06-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53819",
@@ -3956,8 +3956,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-06-12",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53824",
@@ -4012,16 +4012,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-06-12",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53831",
     "assigner": "VulnCheck",
     "date_published": "2026-06-12",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53832",
@@ -4036,16 +4036,16 @@
     "assigner": "VulnCheck",
     "date_published": "2026-06-12",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53834",
     "assigner": "VulnCheck",
     "date_published": "2026-06-12",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-53835",
