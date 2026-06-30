@@ -56,6 +56,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65"
   },
   {
+    "ghsa_id": "GHSA-4pqj-3c56-5fqq",
+    "severity": "HIGH",
+    "title": "Workspace dotenv files could override provider credentials",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4pqj-3c56-5fqq"
+  },
+  {
     "ghsa_id": "GHSA-52xj-c9p8-78cv",
     "severity": "HIGH",
     "title": "MCP loopback could expose owner-only tools to non-owner runs",
@@ -98,6 +105,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7vrr-rp4x-4g76"
   },
   {
+    "ghsa_id": "GHSA-8f46-3xx3-8c9m",
+    "severity": "HIGH",
+    "title": "Node exec approvals could use different gateway and node environments",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8f46-3xx3-8c9m"
+  },
+  {
     "ghsa_id": "GHSA-8v95-qqcm-qp9h",
     "severity": "HIGH",
     "title": "device.pair.approve could bypass role-management checks",
@@ -110,6 +124,13 @@
     "title": "Host exec environment filtering could allow Git ext transport",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9969-8g9h-rxwm"
+  },
+  {
+    "ghsa_id": "GHSA-cf2p-f286-mphf",
+    "severity": "HIGH",
+    "title": "Identity-bearing HTTP callers could reach admin-scoped tools",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cf2p-f286-mphf"
   },
   {
     "ghsa_id": "GHSA-chr9-m4q2-76hw",
@@ -224,6 +245,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v7hx-r36p-f68m"
   },
   {
+    "ghsa_id": "GHSA-vr7j-7684-7gm5",
+    "severity": "HIGH",
+    "title": "HTTP Canvas responses could forge trusted A2UI actions",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-7684-7gm5"
+  },
+  {
     "ghsa_id": "GHSA-w8wf-3qvj-6xqf",
     "severity": "HIGH",
     "title": "Feishu permission tools could ignore per-account disablement",
@@ -243,6 +271,13 @@
     "title": "Host exec environment filtering could miss rustup startup variables",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wxh3-g47h-q3mc"
+  },
+  {
+    "ghsa_id": "GHSA-wxm8-ghhq-q688",
+    "severity": "HIGH",
+    "title": "MS Teams safeFetch could race DNS rebinding checks",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wxm8-ghhq-q688"
   },
   {
     "ghsa_id": "GHSA-x863-pqjw-hmgf",
@@ -273,18 +308,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2j8v-hwgc-x698"
   },
   {
+    "ghsa_id": "GHSA-4xwj-mcc7-x7x5",
+    "severity": "MEDIUM",
+    "title": "Remote media URLs could slow-read exhaust tool workers",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4xwj-mcc7-x7x5"
+  },
+  {
     "ghsa_id": "GHSA-5p6w-wmh3-frfr",
     "severity": "MEDIUM",
     "title": "WebSocket auth attempts could avoid non-browser rate limits",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5p6w-wmh3-frfr"
-  },
-  {
-    "ghsa_id": "GHSA-6c4r-g249-wv3c",
-    "severity": "MEDIUM",
-    "title": "Sandboxed session spawn could expose the real workspace path to child prompts",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6c4r-g249-wv3c"
   },
   {
     "ghsa_id": "GHSA-77pv-3w4q-vrj5",
@@ -392,6 +427,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589"
   },
   {
+    "ghsa_id": "GHSA-j4cx-jvq7-79vm",
+    "severity": "MEDIUM",
+    "title": "Trajectory export could skip broad credential redaction",
+    "published": "2026-06-30",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j4cx-jvq7-79vm"
+  },
+  {
     "ghsa_id": "GHSA-jvm4-4j77-39p6",
     "severity": "MEDIUM",
     "title": "QQBot streaming command could mutate config without explicit allowFrom",
@@ -467,13 +509,6 @@
     "title": "Marketplace runtime extension metadata could point at unscanned payloads",
     "published": "2026-05-28",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v6r2-jh58-xx6w"
-  },
-  {
-    "ghsa_id": "GHSA-v8cx-933x-r976",
-    "severity": "MEDIUM",
-    "title": "Fake package roots could influence memory-core artifact loading",
-    "published": "2026-05-28",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v8cx-933x-r976"
   },
   {
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3",
