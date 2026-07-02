@@ -3684,8 +3684,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-11",
     "state": "PUBLISHED",
-    "source": "cvelistV5+ghsa",
-    "in_ghsa_pipeline": true
+    "source": "cvelistV5",
+    "in_ghsa_pipeline": false
   },
   {
     "cve_id": "CVE-2026-44993",
