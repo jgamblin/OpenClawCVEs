@@ -1,5 +1,97 @@
 [
   {
+    "ghsa_id": "GHSA-9c3v-684m-579c",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-9c3v-684m-579c",
+    "html_url": "https://github.com/advisories/GHSA-9c3v-684m-579c",
+    "summary": "OpenClaw MCP SSE redirects could forward Authorization headers",
+    "description": "### Summary\n\nMCP SSE redirects could forward Authorization headers. In affected versions, a lower-trust caller or configured input path could execute or persist actions beyond the caller's intended authorization.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could execute or persist actions beyond the caller's intended authorization. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.6.5`.\n\n### Mitigations\n\nUpgrade to a patched OpenClaw release when one is listed. Before upgrading, restrict the affected feature to trusted operators or disable it when it is not needed. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-9c3v-684m-579c",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-9c3v-684m-579c",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-9c3v-684m-579c",
+      "https://github.com/advisories/GHSA-9c3v-684m-579c"
+    ],
+    "published_at": "2026-07-01T22:09:28Z",
+    "updated_at": "2026-07-01T22:09:29Z",
+    "github_reviewed_at": "2026-07-01T22:09:28Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.6.5",
+        "first_patched_version": "2026.6.5",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": null,
+        "score": 0.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-200",
+        "name": "Exposure of Sensitive Information to an Unauthorized Actor"
+      },
+      {
+        "cwe_id": "CWE-522",
+        "name": "Insufficiently Protected Credentials"
+      },
+      {
+        "cwe_id": "CWE-601",
+        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "dingliweixlm-byte",
+          "id": 269614575,
+          "node_id": "U_kgDOEBH97w",
+          "avatar_url": "https://avatars.githubusercontent.com/u/269614575?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/dingliweixlm-byte",
+          "html_url": "https://github.com/dingliweixlm-byte",
+          "followers_url": "https://api.github.com/users/dingliweixlm-byte/followers",
+          "following_url": "https://api.github.com/users/dingliweixlm-byte/following{/other_user}",
+          "gists_url": "https://api.github.com/users/dingliweixlm-byte/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/dingliweixlm-byte/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/dingliweixlm-byte/subscriptions",
+          "organizations_url": "https://api.github.com/users/dingliweixlm-byte/orgs",
+          "repos_url": "https://api.github.com/users/dingliweixlm-byte/repos",
+          "events_url": "https://api.github.com/users/dingliweixlm-byte/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/dingliweixlm-byte/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+      "score": 6.5
+    }
+  },
+  {
     "ghsa_id": "GHSA-4hpg-mp64-x7xq",
     "cve_id": "CVE-2026-53854",
     "url": "https://api.github.com/advisories/GHSA-4hpg-mp64-x7xq",
@@ -8241,105 +8333,6 @@
     "cvss": {
       "vector_string": null,
       "score": null
-    }
-  },
-  {
-    "ghsa_id": "GHSA-h2vw-ph2c-jvwf",
-    "cve_id": "CVE-2026-44992",
-    "url": "https://api.github.com/advisories/GHSA-h2vw-ph2c-jvwf",
-    "html_url": "https://github.com/advisories/GHSA-h2vw-ph2c-jvwf",
-    "summary": "OpenClaw: Workspace dotenv MiniMax host override could redirect credentialed requests",
-    "description": "## Affected Packages / Versions\n\n- Package: `openclaw` (npm)\n- Affected versions: `>= 2026.4.5, < 2026.4.20`\n- Patched version: `2026.4.20`\n\n## Impact\n\nA malicious workspace `.env` could set `MINIMAX_API_HOST` and redirect credentialed MiniMax requests to an attacker-controlled origin, exposing the MiniMax API key in the outbound `Authorization` header.\n\nThis requires running OpenClaw from an attacker-controlled workspace. Severity is medium.\n\n## Fix\n\nOpenClaw now blocks `MINIMAX_API_HOST` from workspace dotenv injection and removes env-driven URL routing from the affected MiniMax request path.\n\nFix commit:\n\n- `2f06696579a1ab0cb5bbbbb6a900414a6b2e3cd1`\n\n## Release\n\nFixed in OpenClaw `2026.4.20`.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-h2vw-ph2c-jvwf",
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-h2vw-ph2c-jvwf",
-        "type": "GHSA"
-      },
-      {
-        "value": "CVE-2026-44992",
-        "type": "CVE"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-h2vw-ph2c-jvwf",
-      "https://github.com/openclaw/openclaw/commit/2f06696579a1ab0cb5bbbbb6a900414a6b2e3cd1",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-44992",
-      "https://www.vulncheck.com/advisories/openclaw-minimax-api-host-override-via-workspace-dotenv",
-      "https://github.com/advisories/GHSA-h2vw-ph2c-jvwf"
-    ],
-    "published_at": "2026-04-25T23:50:10Z",
-    "updated_at": "2026-05-19T15:56:14Z",
-    "github_reviewed_at": "2026-04-25T23:50:10Z",
-    "nvd_published_at": null,
-    "withdrawn_at": null,
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": ">= 2026.4.5, < 2026.4.20",
-        "first_patched_version": "2026.4.20",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:P/VC:H/VI:N/VA:N/SC:H/SI:N/SA:N",
-        "score": 6.8
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-15",
-        "name": "External Control of System or Configuration Setting"
-      },
-      {
-        "cwe_id": "CWE-522",
-        "name": "Insufficiently Protected Credentials"
-      }
-    ],
-    "credits": [
-      {
-        "user": {
-          "login": "nexrin",
-          "id": 268879349,
-          "node_id": "U_kgDOEAbF9Q",
-          "avatar_url": "https://avatars.githubusercontent.com/u/268879349?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/nexrin",
-          "html_url": "https://github.com/nexrin",
-          "followers_url": "https://api.github.com/users/nexrin/followers",
-          "following_url": "https://api.github.com/users/nexrin/following{/other_user}",
-          "gists_url": "https://api.github.com/users/nexrin/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/nexrin/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/nexrin/subscriptions",
-          "organizations_url": "https://api.github.com/users/nexrin/orgs",
-          "repos_url": "https://api.github.com/users/nexrin/repos",
-          "events_url": "https://api.github.com/users/nexrin/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/nexrin/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "type": "reporter"
-      }
-    ],
-    "cvss": {
-      "vector_string": null,
-      "score": null
-    },
-    "epss": {
-      "percentage": 0.00119,
-      "percentile": 0.02046
     }
   },
   {

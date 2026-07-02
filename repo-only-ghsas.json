@@ -364,13 +364,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8wg3-5mcm-fjq8"
   },
   {
-    "ghsa_id": "GHSA-9c3v-684m-579c",
-    "severity": "MEDIUM",
-    "title": "MCP SSE redirects could forward Authorization headers",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9c3v-684m-579c"
-  },
-  {
     "ghsa_id": "GHSA-c29c-2q9c-pc86",
     "severity": "MEDIUM",
     "title": "Slack allowFrom could bind to mutable display names",

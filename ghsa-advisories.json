@@ -1,5 +1,28 @@
 [
   {
+    "ghsa_id": "GHSA-9c3v-684m-579c",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "OpenClaw MCP SSE redirects could forward Authorization headers",
+    "published": "2026-07-01",
+    "html_url": "https://github.com/advisories/GHSA-9c3v-684m-579c",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.6.5"
+    ],
+    "fixed_versions": [
+      "2026.6.5"
+    ],
+    "fixed_version": "2026.6.5",
+    "cwes": [
+      "CWE-200",
+      "CWE-522",
+      "CWE-601"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-4hpg-mp64-x7xq",
     "cve_id": "CVE-2026-53854",
     "severity": "medium",
@@ -2033,28 +2056,6 @@
     "fixed_version": "2026.4.20",
     "cwes": [
       "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-h2vw-ph2c-jvwf",
-    "cve_id": "CVE-2026-44992",
-    "severity": "medium",
-    "title": "OpenClaw: Workspace dotenv MiniMax host override could redirect credentialed requests",
-    "published": "2026-04-25",
-    "html_url": "https://github.com/advisories/GHSA-h2vw-ph2c-jvwf",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      ">= 2026.4.5, < 2026.4.20"
-    ],
-    "fixed_versions": [
-      "2026.4.20"
-    ],
-    "fixed_version": "2026.4.20",
-    "cwes": [
-      "CWE-15",
-      "CWE-522"
     ]
   },
   {
