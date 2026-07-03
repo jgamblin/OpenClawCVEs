@@ -639,7 +639,7 @@
   },
   {
     "ghsa_id": "GHSA-mgq6-vr84-7m2j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-35630",
     "severity": "high",
     "title": "OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
     "published": "2026-07-02",
@@ -1974,6 +1974,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-hx4v-668p-g2qr",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
+    "published": "2026-05-29",
+    "html_url": "https://github.com/advisories/GHSA-hx4v-668p-g2qr",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.18"
+    ],
+    "fixed_versions": [
+      "2026.5.18"
+    ],
+    "fixed_version": "2026.5.18",
+    "cwes": [
+      "CWE-862"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
     "cve_id": null,
     "severity": "medium",
@@ -2053,27 +2074,6 @@
       "2026.4.20"
     ],
     "fixed_version": "2026.4.20",
-    "cwes": [
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-p3pv-c954-9m6f",
-    "cve_id": null,
-    "severity": "low",
-    "title": "Duplicate Advisory: OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
-    "published": "2026-05-11",
-    "html_url": "https://github.com/advisories/GHSA-p3pv-c954-9m6f",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.21"
-    ],
-    "fixed_versions": [
-      "2026.4.21"
-    ],
-    "fixed_version": "2026.4.21",
     "cwes": [
       "CWE-863"
     ]

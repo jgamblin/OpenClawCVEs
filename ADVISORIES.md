@@ -3,11 +3,11 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-07-02 19:36 UTC</sub>
+<sub>Last updated: 2026-07-03 03:38 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (50)
+## GHSAs with CVE IDs (51)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
@@ -18,6 +18,7 @@
 | [GHSA-p39j-x9h5-q66m](https://github.com/advisories/GHSA-p39j-x9h5-q66m) | CVE-2026-53809 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Embedded runner policy could be confused by provider aliases | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-v8cx-933x-r976](https://github.com/advisories/GHSA-v8cx-933x-r976) | CVE-2026-53813 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Fake package roots could influence memory-core artifact loading | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-8wg3-5mcm-fjq8](https://github.com/advisories/GHSA-8wg3-5mcm-fjq8) | CVE-2026-53819 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows | npm/openclaw | 2026.5.27 | 2026-07-02 |
+| [GHSA-mgq6-vr84-7m2j](https://github.com/advisories/GHSA-mgq6-vr84-7m2j) | CVE-2026-35630 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: QQBot native approval buttons did not enforce configured approver identity | npm/openclaw | 2026.5.18 | 2026-07-02 |
 | [GHSA-6fvr-66p3-3qj4](https://github.com/advisories/GHSA-6fvr-66p3-3qj4) | CVE-2026-53814 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority | npm/openclaw | 2026.5.20 | 2026-07-02 |
 | [GHSA-chr9-m4q2-76hw](https://github.com/advisories/GHSA-chr9-m4q2-76hw) | CVE-2026-53817 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Control UI locality spoofing could mint a durable admin device token | npm/openclaw | 2026.5.22 | 2026-07-02 |
 | [GHSA-v6r2-jh58-xx6w](https://github.com/advisories/GHSA-v6r2-jh58-xx6w) | CVE-2026-53810 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's marketplace runtime extension metadata could point at unscanned payloads | npm/openclaw | 2026.5.18 | 2026-07-02 |
@@ -64,13 +65,14 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (63)
+## GHSAs Without CVE — Potential Future CVEs (62)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
 | [GHSA-w4v6-g3wm-w36c](https://github.com/advisories/GHSA-w4v6-g3wm-w36c) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: QQBot admin commands could skip DM-only and allowFrom policy | CWE-863 | 2026.4.29 | 2026-07-02 |
 | [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-02 |
 | [GHSA-xpr6-2hgm-4wwp](https://github.com/advisories/GHSA-xpr6-2hgm-4wwp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution | CWE-427 | 2026.4.23 | 2026-05-11 |
+| [GHSA-hx4v-668p-g2qr](https://github.com/advisories/GHSA-hx4v-668p-g2qr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity | CWE-862 | 2026.5.18 | 2026-05-29 |
 | [GHSA-2w22-3f6x-3hf4](https://github.com/advisories/GHSA-2w22-3f6x-3hf4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Workspace-derived service PATH could influence trash command selection | CWE-426 | — | 2026-06-16 |
 | [GHSA-vr6h-vxqj-3pjx](https://github.com/advisories/GHSA-vr6h-vxqj-3pjx) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Host environment sanitizer missed two Node.js control variables | CWE-184 | — | 2026-06-16 |
 | [GHSA-v383-2wgg-v483](https://github.com/advisories/GHSA-v383-2wgg-v483) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Shell inline-command parsing could miss an allowlist check | CWE-862 | — | 2026-06-16 |
@@ -93,7 +95,6 @@
 | [GHSA-83w9-h5wv-j9xm](https://github.com/advisories/GHSA-83w9-h5wv-j9xm) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Node pairing reconnection could confuse approval scope state | CWE-367 | 2026.5.27 | 2026-07-02 |
 | [GHSA-hw9r-h9mr-4jff](https://github.com/advisories/GHSA-hw9r-h9mr-4jff) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Scoped chat.send route inheritance could bypass admin command scope gates | CWE-862, CWE-863 | 2026.5.18 | 2026-07-02 |
 | [GHSA-mhq8-78pj-5j79](https://github.com/advisories/GHSA-mhq8-78pj-5j79) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion | CWE-78, CWE-200, CWE-284 | 2026.5.18 | 2026-07-02 |
-| [GHSA-mgq6-vr84-7m2j](https://github.com/advisories/GHSA-mgq6-vr84-7m2j) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: QQBot native approval buttons did not enforce configured approver identity | CWE-862 | 2026.5.18 | 2026-07-02 |
 | [GHSA-rggc-m335-3wvj](https://github.com/advisories/GHSA-rggc-m335-3wvj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers | CWE-269, CWE-284, CWE-287, CWE-290, CWE-863 | 2026.5.18 | 2026-07-02 |
 | [GHSA-2j8v-hwgc-x698](https://github.com/advisories/GHSA-2j8v-hwgc-x698) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Shell wrapper argv could change between approval and execution | CWE-284 | 2026.5.18 | 2026-07-02 |
 | [GHSA-xww8-gqvh-92x9](https://github.com/advisories/GHSA-xww8-gqvh-92x9) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Exec approval display truncation could hide the command being approved | CWE-284, CWE-863 | 2026.5.18 | 2026-07-02 |
@@ -123,7 +124,6 @@
 | [GHSA-p2fh-f5fc-44hr](https://github.com/advisories/GHSA-p2fh-f5fc-44hr) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: memory-wiki ingest could read local files with operator.write scope | CWE-732 | 2026.5.12 | 2026-07-02 |
 | [GHSA-qh2f-99mv-mrcf](https://github.com/advisories/GHSA-qh2f-99mv-mrcf) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Bundle MCP loopback could miss its exec denylist on session spawn | CWE-78, CWE-284 | 2026.5.12 | 2026-07-02 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026.2.14 | 2026-02-17 |
-| [GHSA-p3pv-c954-9m6f](https://github.com/advisories/GHSA-p3pv-c954-9m6f) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners | CWE-863 | 2026.4.21 | 2026-05-11 |
 | [GHSA-h9h6-pwqv-j9hv](https://github.com/advisories/GHSA-h9h6-pwqv-j9hv) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: Bootstrap token replay could widen pending pairing scopes | CWE-266 | — | 2026-06-16 |
 | [GHSA-8hj2-w4c9-fjfq](https://github.com/advisories/GHSA-8hj2-w4c9-fjfq) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: BlueBubbles sender policy could match mutable conversation identifiers | CWE-807 | — | 2026-06-16 |
 | [GHSA-hc4w-hm59-9w88](https://github.com/advisories/GHSA-hc4w-hm59-9w88) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: Empty-scope device re-pairing could confuse caller scope containment | CWE-636 | — | 2026-06-16 |
@@ -535,7 +535,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | [CVE-2026-41355](https://www.cve.org/CVERecord?id=CVE-2026-41355) | VulnCheck | 2026-04-23 | PUBLISHED | — |
 | [CVE-2026-41356](https://www.cve.org/CVERecord?id=CVE-2026-41356) | VulnCheck | 2026-04-23 | PUBLISHED | — |
 | [CVE-2026-41357](https://www.cve.org/CVERecord?id=CVE-2026-41357) | VulnCheck | 2026-04-23 | PUBLISHED | — |
-| [CVE-2026-41358](https://www.cve.org/CVERecord?id=CVE-2026-41358) | VulnCheck | 2026-04-23 | PUBLISHED | ✅ |
+| [CVE-2026-41358](https://www.cve.org/CVERecord?id=CVE-2026-41358) | VulnCheck | 2026-04-23 | PUBLISHED | — |
 | [CVE-2026-41359](https://www.cve.org/CVERecord?id=CVE-2026-41359) | VulnCheck | 2026-04-23 | PUBLISHED | — |
 | [CVE-2026-41360](https://www.cve.org/CVERecord?id=CVE-2026-41360) | VulnCheck | 2026-04-23 | PUBLISHED | — |
 | [CVE-2026-41361](https://www.cve.org/CVERecord?id=CVE-2026-41361) | VulnCheck | 2026-04-23 | PUBLISHED | — |
@@ -627,7 +627,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | [CVE-2026-43567](https://www.cve.org/CVERecord?id=CVE-2026-43567) | VulnCheck | 2026-05-05 | PUBLISHED | — |
 | [CVE-2026-43568](https://www.cve.org/CVERecord?id=CVE-2026-43568) | VulnCheck | 2026-05-05 | PUBLISHED | — |
 | [CVE-2026-43569](https://www.cve.org/CVERecord?id=CVE-2026-43569) | VulnCheck | 2026-05-05 | PUBLISHED | — |
-| [CVE-2026-43570](https://www.cve.org/CVERecord?id=CVE-2026-43570) | VulnCheck | 2026-05-05 | PUBLISHED | ✅ |
+| [CVE-2026-43570](https://www.cve.org/CVERecord?id=CVE-2026-43570) | VulnCheck | 2026-05-05 | PUBLISHED | — |
 | [CVE-2026-43571](https://www.cve.org/CVERecord?id=CVE-2026-43571) | VulnCheck | 2026-05-05 | PUBLISHED | — |
 | [CVE-2026-43572](https://www.cve.org/CVERecord?id=CVE-2026-43572) | VulnCheck | 2026-05-05 | PUBLISHED | — |
 | [CVE-2026-43573](https://www.cve.org/CVERecord?id=CVE-2026-43573) | VulnCheck | 2026-05-05 | PUBLISHED | — |
@@ -646,45 +646,45 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | [CVE-2026-44109](https://www.cve.org/CVERecord?id=CVE-2026-44109) | VulnCheck | 2026-05-06 | PUBLISHED | — |
 | [CVE-2026-44110](https://www.cve.org/CVERecord?id=CVE-2026-44110) | VulnCheck | 2026-05-06 | PUBLISHED | — |
 | [CVE-2026-44111](https://www.cve.org/CVERecord?id=CVE-2026-44111) | VulnCheck | 2026-05-06 | PUBLISHED | — |
-| [CVE-2026-44112](https://www.cve.org/CVERecord?id=CVE-2026-44112) | VulnCheck | 2026-05-06 | PUBLISHED | ✅ |
-| [CVE-2026-44113](https://www.cve.org/CVERecord?id=CVE-2026-44113) | VulnCheck | 2026-05-06 | PUBLISHED | ✅ |
+| [CVE-2026-44112](https://www.cve.org/CVERecord?id=CVE-2026-44112) | VulnCheck | 2026-05-06 | PUBLISHED | — |
+| [CVE-2026-44113](https://www.cve.org/CVERecord?id=CVE-2026-44113) | VulnCheck | 2026-05-06 | PUBLISHED | — |
 | [CVE-2026-44114](https://www.cve.org/CVERecord?id=CVE-2026-44114) | VulnCheck | 2026-05-06 | PUBLISHED | — |
 | [CVE-2026-44115](https://www.cve.org/CVERecord?id=CVE-2026-44115) | VulnCheck | 2026-05-06 | PUBLISHED | — |
-| [CVE-2026-44116](https://www.cve.org/CVERecord?id=CVE-2026-44116) | VulnCheck | 2026-05-06 | PUBLISHED | ✅ |
+| [CVE-2026-44116](https://www.cve.org/CVERecord?id=CVE-2026-44116) | VulnCheck | 2026-05-06 | PUBLISHED | — |
 | [CVE-2026-44117](https://www.cve.org/CVERecord?id=CVE-2026-44117) | VulnCheck | 2026-05-06 | PUBLISHED | — |
-| [CVE-2026-44118](https://www.cve.org/CVERecord?id=CVE-2026-44118) | VulnCheck | 2026-05-06 | PUBLISHED | ✅ |
-| [CVE-2026-44991](https://www.cve.org/CVERecord?id=CVE-2026-44991) | VulnCheck | 2026-05-11 | PUBLISHED | ✅ |
+| [CVE-2026-44118](https://www.cve.org/CVERecord?id=CVE-2026-44118) | VulnCheck | 2026-05-06 | PUBLISHED | — |
+| [CVE-2026-44991](https://www.cve.org/CVERecord?id=CVE-2026-44991) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44992](https://www.cve.org/CVERecord?id=CVE-2026-44992) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44993](https://www.cve.org/CVERecord?id=CVE-2026-44993) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44994](https://www.cve.org/CVERecord?id=CVE-2026-44994) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44995](https://www.cve.org/CVERecord?id=CVE-2026-44995) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44996](https://www.cve.org/CVERecord?id=CVE-2026-44996) | VulnCheck | 2026-05-11 | PUBLISHED | — |
-| [CVE-2026-44997](https://www.cve.org/CVERecord?id=CVE-2026-44997) | VulnCheck | 2026-05-11 | PUBLISHED | ✅ |
+| [CVE-2026-44997](https://www.cve.org/CVERecord?id=CVE-2026-44997) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44998](https://www.cve.org/CVERecord?id=CVE-2026-44998) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-44999](https://www.cve.org/CVERecord?id=CVE-2026-44999) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45000](https://www.cve.org/CVERecord?id=CVE-2026-45000) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45001](https://www.cve.org/CVERecord?id=CVE-2026-45001) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45002](https://www.cve.org/CVERecord?id=CVE-2026-45002) | VulnCheck | 2026-05-11 | PUBLISHED | — |
-| [CVE-2026-45003](https://www.cve.org/CVERecord?id=CVE-2026-45003) | VulnCheck | 2026-05-11 | PUBLISHED | ✅ |
-| [CVE-2026-45004](https://www.cve.org/CVERecord?id=CVE-2026-45004) | VulnCheck | 2026-05-11 | PUBLISHED | ✅ |
-| [CVE-2026-45005](https://www.cve.org/CVERecord?id=CVE-2026-45005) | VulnCheck | 2026-05-11 | PUBLISHED | ✅ |
+| [CVE-2026-45003](https://www.cve.org/CVERecord?id=CVE-2026-45003) | VulnCheck | 2026-05-11 | PUBLISHED | — |
+| [CVE-2026-45004](https://www.cve.org/CVERecord?id=CVE-2026-45004) | VulnCheck | 2026-05-11 | PUBLISHED | — |
+| [CVE-2026-45005](https://www.cve.org/CVERecord?id=CVE-2026-45005) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45006](https://www.cve.org/CVERecord?id=CVE-2026-45006) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45223](https://www.cve.org/CVERecord?id=CVE-2026-45223) | VulnCheck | 2026-05-11 | PUBLISHED | — |
 | [CVE-2026-45224](https://www.cve.org/CVERecord?id=CVE-2026-45224) | VulnCheck | 2026-05-11 | PUBLISHED | — |
-| [CVE-2026-53806](https://www.cve.org/CVERecord?id=CVE-2026-53806) | VulnCheck | 2026-06-11 | PUBLISHED | — |
+| [CVE-2026-53806](https://www.cve.org/CVERecord?id=CVE-2026-53806) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
 | [CVE-2026-53807](https://www.cve.org/CVERecord?id=CVE-2026-53807) | VulnCheck | 2026-06-11 | PUBLISHED | — |
 | [CVE-2026-53808](https://www.cve.org/CVERecord?id=CVE-2026-53808) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53809](https://www.cve.org/CVERecord?id=CVE-2026-53809) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53810](https://www.cve.org/CVERecord?id=CVE-2026-53810) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53811](https://www.cve.org/CVERecord?id=CVE-2026-53811) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53812](https://www.cve.org/CVERecord?id=CVE-2026-53812) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53813](https://www.cve.org/CVERecord?id=CVE-2026-53813) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53814](https://www.cve.org/CVERecord?id=CVE-2026-53814) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53815](https://www.cve.org/CVERecord?id=CVE-2026-53815) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53816](https://www.cve.org/CVERecord?id=CVE-2026-53816) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53817](https://www.cve.org/CVERecord?id=CVE-2026-53817) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53818](https://www.cve.org/CVERecord?id=CVE-2026-53818) | VulnCheck | 2026-06-11 | PUBLISHED | — |
-| [CVE-2026-53819](https://www.cve.org/CVERecord?id=CVE-2026-53819) | VulnCheck | 2026-06-11 | PUBLISHED | — |
+| [CVE-2026-53809](https://www.cve.org/CVERecord?id=CVE-2026-53809) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53810](https://www.cve.org/CVERecord?id=CVE-2026-53810) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53811](https://www.cve.org/CVERecord?id=CVE-2026-53811) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53812](https://www.cve.org/CVERecord?id=CVE-2026-53812) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53813](https://www.cve.org/CVERecord?id=CVE-2026-53813) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53814](https://www.cve.org/CVERecord?id=CVE-2026-53814) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53815](https://www.cve.org/CVERecord?id=CVE-2026-53815) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53816](https://www.cve.org/CVERecord?id=CVE-2026-53816) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53817](https://www.cve.org/CVERecord?id=CVE-2026-53817) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53818](https://www.cve.org/CVERecord?id=CVE-2026-53818) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
+| [CVE-2026-53819](https://www.cve.org/CVERecord?id=CVE-2026-53819) | VulnCheck | 2026-06-11 | PUBLISHED | ✅ |
 | [CVE-2026-53820](https://www.cve.org/CVERecord?id=CVE-2026-53820) | VulnCheck | 2026-06-12 | PUBLISHED | — |
 | [CVE-2026-53821](https://www.cve.org/CVERecord?id=CVE-2026-53821) | VulnCheck | 2026-06-12 | PUBLISHED | — |
 | [CVE-2026-53822](https://www.cve.org/CVERecord?id=CVE-2026-53822) | VulnCheck | 2026-06-12 | PUBLISHED | — |
@@ -756,6 +756,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | CVE-2026-28478 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-28480 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
 | CVE-2026-29612 | ✅ **PUBLISHED** | ✅ | 2026-02-18 | VulnCheck |
+| CVE-2026-35630 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53806 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53809 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53810 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |

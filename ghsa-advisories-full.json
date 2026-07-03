@@ -3079,7 +3079,7 @@
   },
   {
     "ghsa_id": "GHSA-mgq6-vr84-7m2j",
-    "cve_id": null,
+    "cve_id": "CVE-2026-35630",
     "url": "https://api.github.com/advisories/GHSA-mgq6-vr84-7m2j",
     "html_url": "https://github.com/advisories/GHSA-mgq6-vr84-7m2j",
     "summary": "OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
@@ -3092,14 +3092,20 @@
       {
         "value": "GHSA-mgq6-vr84-7m2j",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-35630",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgq6-vr84-7m2j",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-35630",
+      "https://www.vulncheck.com/advisories/openclaw-qqbot-missing-approver-identity-enforcement-in-native-approval-buttons",
       "https://github.com/advisories/GHSA-mgq6-vr84-7m2j"
     ],
     "published_at": "2026-07-02T16:05:20Z",
-    "updated_at": "2026-07-02T16:05:21Z",
+    "updated_at": "2026-07-02T20:50:17Z",
     "github_reviewed_at": "2026-07-02T16:05:20Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -3120,8 +3126,8 @@
         "score": 8.0
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
+        "score": 7.5
       }
     },
     "cwes": [
@@ -3159,6 +3165,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.0
+    },
+    "epss": {
+      "percentage": 0.00199,
+      "percentile": 0.09719
     }
   },
   {
@@ -8863,6 +8873,67 @@
     }
   },
   {
+    "ghsa_id": "GHSA-hx4v-668p-g2qr",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-hx4v-668p-g2qr",
+    "html_url": "https://github.com/advisories/GHSA-hx4v-668p-g2qr",
+    "summary": "Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-mgq6-vr84-7m2j. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains an authorization bypass vulnerability in QQBot native approval buttons that fails to enforce configured approver identity. Non-approver users can click approval buttons to resolve pending exec or plugin approval requests without proper authorization.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-hx4v-668p-g2qr",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgq6-vr84-7m2j",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-35630",
+      "https://www.vulncheck.com/advisories/openclaw-qqbot-missing-approver-identity-enforcement-in-native-approval-buttons",
+      "https://github.com/advisories/GHSA-hx4v-668p-g2qr"
+    ],
+    "published_at": "2026-05-29T18:31:33Z",
+    "updated_at": "2026-07-02T20:50:05Z",
+    "github_reviewed_at": "2026-07-02T20:50:04Z",
+    "nvd_published_at": "2026-05-29T16:16:26Z",
+    "withdrawn_at": "2026-07-02T20:50:04Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.18",
+        "first_patched_version": "2026.5.18",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+        "score": 8.0
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.5
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-862",
+        "name": "Missing Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
+      "score": 8.0
+    }
+  },
+  {
     "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-v8j2-5f9p-fmh4",
@@ -9108,69 +9179,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
       "score": 5.3
-    }
-  },
-  {
-    "ghsa_id": "GHSA-p3pv-c954-9m6f",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-p3pv-c954-9m6f",
-    "html_url": "https://github.com/advisories/GHSA-p3pv-c954-9m6f",
-    "summary": "Duplicate Advisory: OpenClaw: Owner-enforced commands could accept wildcard channel senders as command owners",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-c28g-vh7m-fm7v. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.21 contains an authorization bypass vulnerability in command-auth.ts that allows non-owner senders to execute owner-enforced slash commands when wildcard inbound senders are configured without explicit owner allowFrom settings. Attackers can exploit this by sending commands like /send, /config, or /debug on affected channels to bypass owner-only command authorization checks.",
-    "type": "reviewed",
-    "severity": "low",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-p3pv-c954-9m6f",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-c28g-vh7m-fm7v",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-44991",
-      "https://github.com/openclaw/openclaw/commit/2aa93d44a1b2c7058c371f261fda2b5d4de4a882",
-      "https://github.com/openclaw/openclaw/commit/995febb7b1e811ff6a1df5b18c22de94103f4c9f",
-      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-owner-enforced-commands-via-wildcard-channel-senders",
-      "https://github.com/advisories/GHSA-p3pv-c954-9m6f"
-    ],
-    "published_at": "2026-05-11T18:31:46Z",
-    "updated_at": "2026-05-18T15:30:47Z",
-    "github_reviewed_at": "2026-05-18T15:30:46Z",
-    "nvd_published_at": "2026-05-11T18:16:38Z",
-    "withdrawn_at": "2026-05-18T15:30:46Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.21",
-        "first_patched_version": "2026.4.21",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
-        "score": 4.2
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:L/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 2.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
-      "score": 4.2
     }
   },
   {
