@@ -3,7 +3,7 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-07-03 03:38 UTC</sub>
+<sub>Last updated: 2026-07-03 09:24 UTC</sub>
 
 ---
 
@@ -446,7 +446,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | [CVE-2026-35627](https://www.cve.org/CVERecord?id=CVE-2026-35627) | VulnCheck | 2026-04-09 | PUBLISHED | — |
 | [CVE-2026-35628](https://www.cve.org/CVERecord?id=CVE-2026-35628) | VulnCheck | 2026-04-09 | PUBLISHED | — |
 | [CVE-2026-35629](https://www.cve.org/CVERecord?id=CVE-2026-35629) | VulnCheck | 2026-04-09 | PUBLISHED | — |
-| [CVE-2026-35630](https://www.cve.org/CVERecord?id=CVE-2026-35630) | VulnCheck | 2026-05-29 | PUBLISHED | — |
+| [CVE-2026-35630](https://www.cve.org/CVERecord?id=CVE-2026-35630) | VulnCheck | 2026-05-29 | PUBLISHED | ✅ |
 | [CVE-2026-35631](https://www.cve.org/CVERecord?id=CVE-2026-35631) | VulnCheck | 2026-04-09 | PUBLISHED | — |
 | [CVE-2026-35632](https://www.cve.org/CVERecord?id=CVE-2026-35632) | VulnCheck | 2026-04-09 | PUBLISHED | — |
 | [CVE-2026-35633](https://www.cve.org/CVERecord?id=CVE-2026-35633) | VulnCheck | 2026-04-09 | PUBLISHED | — |

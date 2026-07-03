@@ -2020,8 +2020,8 @@
     "assigner": "VulnCheck",
     "date_published": "2026-05-29",
     "state": "PUBLISHED",
-    "source": "cvelistV5",
-    "in_ghsa_pipeline": false
+    "source": "cvelistV5+ghsa",
+    "in_ghsa_pipeline": true
   },
   {
     "cve_id": "CVE-2026-35631",
