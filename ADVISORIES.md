@@ -3,7 +3,7 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-07-04 03:32 UTC</sub>
+<sub>Last updated: 2026-07-04 08:42 UTC</sub>
 
 ---
 
@@ -175,7 +175,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-x863-pqjw-hmgf](https://github.com/openclaw/openclaw/security/advisories/GHSA-x863-pqjw-hmgf) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Browser act route could miss current-tab URL checks | 2026-06-30 |
 | [GHSA-4xwj-mcc7-x7x5](https://github.com/openclaw/openclaw/security/advisories/GHSA-4xwj-mcc7-x7x5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Remote media URLs could slow-read exhaust tool workers | 2026-06-30 |
 | [GHSA-5p6w-wmh3-frfr](https://github.com/openclaw/openclaw/security/advisories/GHSA-5p6w-wmh3-frfr) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | WebSocket auth attempts could avoid non-browser rate limits | 2026-06-30 |
-| [GHSA-7w4v-g4m6-j88v](https://github.com/openclaw/openclaw/security/advisories/GHSA-7w4v-g4m6-j88v) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | MS Teams allowFrom could bind to mutable display names | 2026-06-30 |
+| [GHSA-7w4v-g4m6-j88v](https://github.com/openclaw/openclaw/security/advisories/GHSA-7w4v-g4m6-j88v) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | [AgentGG] MS Teams allowFrom could bind to mutable display names | 2026-06-30 |
 | [GHSA-fh8v-vgcv-pwh4](https://github.com/openclaw/openclaw/security/advisories/GHSA-fh8v-vgcv-pwh4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | ClickClack allowFrom could allow non-allowlisted commands | 2026-06-30 |
 | [GHSA-fwgr-fpv9-vf5x](https://github.com/openclaw/openclaw/security/advisories/GHSA-fwgr-fpv9-vf5x) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | QQBot media upload could reach untrusted remote URLs | 2026-06-30 |
 | [GHSA-j4cx-jvq7-79vm](https://github.com/openclaw/openclaw/security/advisories/GHSA-j4cx-jvq7-79vm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Trajectory export could skip broad credential redaction | 2026-06-30 |

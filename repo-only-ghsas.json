@@ -247,7 +247,7 @@
   {
     "ghsa_id": "GHSA-7w4v-g4m6-j88v",
     "severity": "MEDIUM",
-    "title": "MS Teams allowFrom could bind to mutable display names",
+    "title": "[AgentGG] MS Teams allowFrom could bind to mutable display names",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7w4v-g4m6-j88v"
   },
