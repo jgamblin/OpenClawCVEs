@@ -24,6 +24,14 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
+    "cve_id": "CVE-2026-53819",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
+  },
+  {
     "cve_id": "CVE-2026-53814",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -38,14 +46,6 @@
     "title": "OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-chr9-m4q2-76hw"
-  },
-  {
-    "cve_id": "CVE-2026-53819",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-53843",
@@ -104,20 +104,20 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-53811",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-7hxm-f538-3xp6"
-  },
-  {
     "cve_id": "CVE-2026-53806",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
+  },
+  {
+    "cve_id": "CVE-2026-53811",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-7hxm-f538-3xp6"
   },
   {
     "cve_id": "CVE-2026-53810",
@@ -128,20 +128,20 @@
     "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
-    "cve_id": "CVE-2026-53853",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
-  },
-  {
     "cve_id": "CVE-2026-53855",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-5cj2-3jr2-5h77"
+  },
+  {
+    "cve_id": "CVE-2026-53853",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
   },
   {
     "cve_id": "CVE-2026-53866",
@@ -200,20 +200,20 @@
     "ghsa_id": "GHSA-q7q8-3mgw-q67r"
   },
   {
-    "cve_id": "CVE-2026-53842",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
-  },
-  {
     "cve_id": "CVE-2026-53846",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-24vr-rprv-67rf"
+  },
+  {
+    "cve_id": "CVE-2026-53842",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
   },
   {
     "cve_id": "CVE-2026-53858",
@@ -296,6 +296,14 @@
     "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
+    "cve_id": "CVE-2026-53859",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
+  },
+  {
     "cve_id": "CVE-2026-53854",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -310,14 +318,6 @@
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
-  },
-  {
-    "cve_id": "CVE-2026-53859",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
   },
   {
     "cve_id": "CVE-2026-53856",
@@ -368,20 +368,20 @@
     "ghsa_id": "GHSA-68xw-r643-9p5w"
   },
   {
-    "cve_id": "CVE-2026-53852",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
-  },
-  {
     "cve_id": "CVE-2026-53848",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-cwpp-5962-q4f6"
+  },
+  {
+    "cve_id": "CVE-2026-53852",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
     "cve_id": "CVE-2026-53860",
