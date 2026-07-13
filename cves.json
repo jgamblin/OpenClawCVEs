@@ -104,14 +104,6 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-53811",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-7hxm-f538-3xp6"
-  },
-  {
     "cve_id": "CVE-2026-53806",
     "severity": "HIGH",
     "cvss": 7.7,
@@ -128,6 +120,22 @@
     "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
+    "cve_id": "CVE-2026-53811",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-7hxm-f538-3xp6"
+  },
+  {
+    "cve_id": "CVE-2026-53853",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
+  },
+  {
     "cve_id": "CVE-2026-53855",
     "severity": "HIGH",
     "cvss": 7.6,
@@ -142,14 +150,6 @@
     "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
-  },
-  {
-    "cve_id": "CVE-2026-53853",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
   },
   {
     "cve_id": "CVE-2026-53866",
@@ -200,20 +200,20 @@
     "ghsa_id": "GHSA-q7q8-3mgw-q67r"
   },
   {
-    "cve_id": "CVE-2026-53842",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
-  },
-  {
     "cve_id": "CVE-2026-53846",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-24vr-rprv-67rf"
+  },
+  {
+    "cve_id": "CVE-2026-53842",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
   },
   {
     "cve_id": "CVE-2026-53858",
@@ -288,20 +288,20 @@
     "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
-    "cve_id": "CVE-2026-53854",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
-  },
-  {
     "cve_id": "CVE-2026-53840",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+  },
+  {
+    "cve_id": "CVE-2026-53854",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
     "cve_id": "CVE-2026-53859",
@@ -360,14 +360,6 @@
     "ghsa_id": "GHSA-p39j-x9h5-q66m"
   },
   {
-    "cve_id": "CVE-2026-53848",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-cwpp-5962-q4f6"
-  },
-  {
     "cve_id": "CVE-2026-53845",
     "severity": "LOW",
     "cvss": 2.3,
@@ -382,6 +374,14 @@
     "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-8mg9-j9cf-54cj"
+  },
+  {
+    "cve_id": "CVE-2026-53848",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-cwpp-5962-q4f6"
   },
   {
     "cve_id": "CVE-2026-53860",
