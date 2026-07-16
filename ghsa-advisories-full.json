@@ -2398,6 +2398,30 @@
           "site_admin": false
         },
         "type": "reporter"
+      },
+      {
+        "user": {
+          "login": "gracia-gu",
+          "id": 46605720,
+          "node_id": "MDQ6VXNlcjQ2NjA1NzIw",
+          "avatar_url": "https://avatars.githubusercontent.com/u/46605720?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/gracia-gu",
+          "html_url": "https://github.com/gracia-gu",
+          "followers_url": "https://api.github.com/users/gracia-gu/followers",
+          "following_url": "https://api.github.com/users/gracia-gu/following{/other_user}",
+          "gists_url": "https://api.github.com/users/gracia-gu/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/gracia-gu/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/gracia-gu/subscriptions",
+          "organizations_url": "https://api.github.com/users/gracia-gu/orgs",
+          "repos_url": "https://api.github.com/users/gracia-gu/repos",
+          "events_url": "https://api.github.com/users/gracia-gu/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/gracia-gu/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
       }
     ],
     "cvss": {
