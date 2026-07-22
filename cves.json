@@ -56,20 +56,20 @@
     "ghsa_id": "GHSA-525j-hqq2-66r4"
   },
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-32913",
@@ -120,20 +120,20 @@
     "ghsa_id": "GHSA-2cq5-mf3v-mx44"
   },
   {
-    "cve_id": "CVE-2026-44115",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.4.22 - Shell Expansion Bypass in Unquoted Heredocs via Exec Allowlist",
-    "date_published": "2026-05-06",
-    "ghsa_id": "GHSA-x3h8-jrgh-p8jx"
-  },
-  {
     "cve_id": "CVE-2026-43584",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.4.10 - Insufficient Environment Variable Denylist in Exec Policy",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-vfp4-8x56-j7c5"
+  },
+  {
+    "cve_id": "CVE-2026-44115",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.4.22 - Shell Expansion Bypass in Unquoted Heredocs via Exec Allowlist",
+    "date_published": "2026-05-06",
+    "ghsa_id": "GHSA-x3h8-jrgh-p8jx"
   },
   {
     "cve_id": "CVE-2026-53817",
@@ -150,14 +150,6 @@
     "title": "OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-6fvr-66p3-3qj4"
-  },
-  {
-    "cve_id": "CVE-2026-53819",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-53843",
@@ -182,6 +174,14 @@
     "title": "OpenClaw < 2026.6.6 Authentication Bypass via Git ext transport",
     "date_published": "2026-07-13",
     "ghsa_id": "GHSA-9969-8g9h-rxwm"
+  },
+  {
+    "cve_id": "CVE-2026-53819",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-32014",
@@ -376,20 +376,20 @@
     "ghsa_id": "GHSA-5cj2-3jr2-5h77"
   },
   {
-    "cve_id": "CVE-2026-53866",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-f397-5vjw-v2c2"
-  },
-  {
     "cve_id": "CVE-2026-53864",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
+  },
+  {
+    "cve_id": "CVE-2026-53866",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-f397-5vjw-v2c2"
   },
   {
     "cve_id": "CVE-2026-26316",
@@ -464,20 +464,20 @@
     "ghsa_id": "GHSA-rx78-29qr-5hq8"
   },
   {
-    "cve_id": "CVE-2026-22168",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.2.21 - Command Injection via cmd.exe /c Trailing Arguments in system.run",
-    "date_published": "2026-03-18",
-    "ghsa_id": "GHSA-5v6x-rfc3-7qfr"
-  },
-  {
     "cve_id": "CVE-2026-26317",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-3fqr-4cg8-h96q"
+  },
+  {
+    "cve_id": "CVE-2026-22168",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.2.21 - Command Injection via cmd.exe /c Trailing Arguments in system.run",
+    "date_published": "2026-03-18",
+    "ghsa_id": "GHSA-5v6x-rfc3-7qfr"
   },
   {
     "cve_id": "CVE-2026-32972",
@@ -536,6 +536,14 @@
     "ghsa_id": "GHSA-7wv4-cc7p-jhxc"
   },
   {
+    "cve_id": "CVE-2026-53842",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
+  },
+  {
     "cve_id": "CVE-2026-53846",
     "severity": "HIGH",
     "cvss": 7,
@@ -550,14 +558,6 @@
     "title": "OpenClaw: Workspace .env STATE_DIRECTORY could influence bundled runtime dependency roots",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-wc84-j36w-pw4x"
-  },
-  {
-    "cve_id": "CVE-2026-53842",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
   },
   {
     "cve_id": "CVE-2026-27003",
@@ -592,20 +592,20 @@
     "ghsa_id": "GHSA-qxgf-hmcj-3xw3"
   },
   {
-    "cve_id": "CVE-2026-35667",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.24 - Improper Process Termination via Unpatched killProcessTree in shell-utils.ts",
-    "date_published": "2026-04-10",
-    "ghsa_id": "GHSA-3298-56p6-rpw2"
-  },
-  {
     "cve_id": "CVE-2026-35637",
     "severity": "MEDIUM",
     "cvss": 6.9,
     "title": "OpenClaw < 2026.3.22 - Premature Cite Expansion Before Authorization in Channel and DM",
     "date_published": "2026-04-09",
     "ghsa_id": "GHSA-vfg3-pqpq-93m4"
+  },
+  {
+    "cve_id": "CVE-2026-35667",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.24 - Improper Process Termination via Unpatched killProcessTree in shell-utils.ts",
+    "date_published": "2026-04-10",
+    "ghsa_id": "GHSA-3298-56p6-rpw2"
   },
   {
     "cve_id": "CVE-2026-41331",
@@ -656,20 +656,20 @@
     "ghsa_id": "GHSA-mpc8-jxjh-qpgh"
   },
   {
-    "cve_id": "CVE-2026-26972",
-    "severity": "MEDIUM",
-    "cvss": 6.7,
-    "title": "OpenClaw has a Path Traversal in Browser Download Functionality",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-xwjm-j929-xq7c"
-  },
-  {
     "cve_id": "CVE-2026-28452",
     "severity": "MEDIUM",
     "cvss": 6.7,
     "title": "OpenClaw affected by denial of service through unguarded archive extraction allowing high expansion/resource abuse (ZIP/TAR)",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-h89v-j3x9-8wqj"
+  },
+  {
+    "cve_id": "CVE-2026-26972",
+    "severity": "MEDIUM",
+    "cvss": 6.7,
+    "title": "OpenClaw has a Path Traversal in Browser Download Functionality",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-xwjm-j929-xq7c"
   },
   {
     "cve_id": "CVE-2026-26328",
@@ -768,14 +768,6 @@
     "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
-    "cve_id": "CVE-2026-53830",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.4.22 - Webhook Secret Revocation Bypass via secrets.reload",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-275c-xpvc-jgfw"
-  },
-  {
     "cve_id": "CVE-2026-53840",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -798,6 +790,14 @@
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
+  },
+  {
+    "cve_id": "CVE-2026-53830",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.22 - Webhook Secret Revocation Bypass via secrets.reload",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-275c-xpvc-jgfw"
   },
   {
     "cve_id": "CVE-2026-62214",
@@ -832,20 +832,20 @@
     "ghsa_id": "GHSA-qqq7-4hxc-x63c"
   },
   {
-    "cve_id": "CVE-2026-27670",
-    "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw < 2026.3.2 - Arbitrary File Write via ZIP Extraction Parent Symlink Race Condition",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-r54r-wmmq-mh84"
-  },
-  {
     "cve_id": "CVE-2026-27009",
     "severity": "MEDIUM",
     "cvss": 5.8,
     "title": "OpenClaw affected by Stored XSS in Control UI via unsanitized assistant name/avatar in inline script injection",
     "date_published": "2026-02-19",
     "ghsa_id": "GHSA-37gc-85xm-2ww6"
+  },
+  {
+    "cve_id": "CVE-2026-27670",
+    "severity": "MEDIUM",
+    "cvss": 5.8,
+    "title": "OpenClaw < 2026.3.2 - Arbitrary File Write via ZIP Extraction Parent Symlink Race Condition",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-r54r-wmmq-mh84"
   },
   {
     "cve_id": "CVE-2026-32052",
@@ -1016,12 +1016,12 @@
     "ghsa_id": "GHSA-4rqq-w8v4-7p47"
   },
   {
-    "cve_id": "CVE-2026-41362",
+    "cve_id": "CVE-2026-41347",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw 2026.2.19 < 2026.3.31 - Webhook Replay Dedupe Cache Event Suppression via Shared Authentication",
-    "date_published": "2026-04-27",
-    "ghsa_id": "GHSA-fqrj-m88p-qf3v"
+    "title": "OpenClaw < 2026.3.31 - Cross-Site Request Forgery via Missing Browser-Origin Validation in HTTP Operator Endpoints",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-mhr7-2xmv-4c4q"
   },
   {
     "cve_id": "CVE-2026-41348",
@@ -1032,12 +1032,12 @@
     "ghsa_id": "GHSA-rvvf-6vh3-9j43"
   },
   {
-    "cve_id": "CVE-2026-41347",
+    "cve_id": "CVE-2026-41362",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.3.31 - Cross-Site Request Forgery via Missing Browser-Origin Validation in HTTP Operator Endpoints",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-mhr7-2xmv-4c4q"
+    "title": "OpenClaw 2026.2.19 < 2026.3.31 - Webhook Replay Dedupe Cache Event Suppression via Shared Authentication",
+    "date_published": "2026-04-27",
+    "ghsa_id": "GHSA-fqrj-m88p-qf3v"
   },
   {
     "cve_id": "CVE-2026-41910",
