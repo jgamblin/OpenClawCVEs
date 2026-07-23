@@ -96,6 +96,14 @@
     "ghsa_id": "GHSA-67mf-f936-ppxf"
   },
   {
+    "cve_id": "CVE-2026-43530",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw 2026.2.23 < 2026.4.12 - Weakened Exec Approval Binding via busybox and toybox Applet Execution",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-2cq5-mf3v-mx44"
+  },
+  {
     "cve_id": "CVE-2026-42435",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -110,30 +118,6 @@
     "title": "OpenClaw < 2026.4.10 - Insufficient Environment Variable Denylist in Exec Policy",
     "date_published": "2026-05-06",
     "ghsa_id": "GHSA-vfp4-8x56-j7c5"
-  },
-  {
-    "cve_id": "CVE-2026-43530",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw 2026.2.23 < 2026.4.12 - Weakened Exec Approval Binding via busybox and toybox Applet Execution",
-    "date_published": "2026-05-05",
-    "ghsa_id": "GHSA-2cq5-mf3v-mx44"
-  },
-  {
-    "cve_id": "CVE-2026-53819",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
-  },
-  {
-    "cve_id": "CVE-2026-53822",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.5.18 - Command Argument Modification via Shell Wrapper Between Approval and Execution",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-2j8v-hwgc-x698"
   },
   {
     "cve_id": "CVE-2026-53817",
@@ -152,20 +136,28 @@
     "ghsa_id": "GHSA-6fvr-66p3-3qj4"
   },
   {
+    "cve_id": "CVE-2026-53819",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
+  },
+  {
+    "cve_id": "CVE-2026-53822",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.5.18 - Command Argument Modification via Shell Wrapper Between Approval and Execution",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-2j8v-hwgc-x698"
+  },
+  {
     "cve_id": "CVE-2026-53843",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw: Pairing-scoped device session could restore revoked node token authority",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-q99w-vh6v-q3v7"
-  },
-  {
-    "cve_id": "CVE-2026-62199",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.6.6 Authentication Bypass via Environment Filtering",
-    "date_published": "2026-07-13",
-    "ghsa_id": "GHSA-hjr6-g723-hmfm"
   },
   {
     "cve_id": "CVE-2026-62195",
@@ -176,20 +168,20 @@
     "ghsa_id": "GHSA-52xj-c9p8-78cv"
   },
   {
+    "cve_id": "CVE-2026-62199",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.6.6 Authentication Bypass via Environment Filtering",
+    "date_published": "2026-07-13",
+    "ghsa_id": "GHSA-hjr6-g723-hmfm"
+  },
+  {
     "cve_id": "CVE-2026-28456",
     "severity": "HIGH",
     "cvss": 8.6,
     "title": "OpenClaw 2026.1.5 < 2026.2.14 - Arbitrary Code Execution via Unsafe Hook Module Path Handling",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-v6c6-vqqg-w888"
-  },
-  {
-    "cve_id": "CVE-2026-32014",
-    "severity": "HIGH",
-    "cvss": 8.6,
-    "title": "OpenClaw < 2026.2.26 - Node Reconnect Metadata Spoofing via Unsigned Platform Fields",
-    "date_published": "2026-03-19",
-    "ghsa_id": "GHSA-r65x-2hqr-j5hf"
   },
   {
     "cve_id": "CVE-2026-33577",
@@ -206,6 +198,14 @@
     "title": "OpenClaw < 2026.3.28 - Privilege Escalation via Missing Caller Scope Validation in Device Pair Approval",
     "date_published": "2026-03-31",
     "ghsa_id": "GHSA-hc5h-pmr3-3497"
+  },
+  {
+    "cve_id": "CVE-2026-32014",
+    "severity": "HIGH",
+    "cvss": 8.6,
+    "title": "OpenClaw < 2026.2.26 - Node Reconnect Metadata Spoofing via Unsigned Platform Fields",
+    "date_published": "2026-03-19",
+    "ghsa_id": "GHSA-r65x-2hqr-j5hf"
   },
   {
     "cve_id": "CVE-2026-53816",
@@ -272,14 +272,6 @@
     "ghsa_id": "GHSA-v773-r54f-q32w"
   },
   {
-    "cve_id": "CVE-2026-28465",
-    "severity": "HIGH",
-    "cvss": 8.2,
-    "title": "OpenClaw voice-call < 2026.2.3 - Webhook Verification Bypass via Forwarded Headers",
-    "date_published": "2026-03-05",
-    "ghsa_id": "GHSA-3m3q-x3gj-f79x"
-  },
-  {
     "cve_id": "CVE-2026-28464",
     "severity": "HIGH",
     "cvss": 8.2,
@@ -294,6 +286,14 @@
     "title": "OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-rq6g-px6m-c248"
+  },
+  {
+    "cve_id": "CVE-2026-28465",
+    "severity": "HIGH",
+    "cvss": 8.2,
+    "title": "OpenClaw voice-call < 2026.2.3 - Webhook Verification Bypass via Forwarded Headers",
+    "date_published": "2026-03-05",
+    "ghsa_id": "GHSA-3m3q-x3gj-f79x"
   },
   {
     "cve_id": "CVE-2026-32045",
@@ -512,20 +512,20 @@
     "ghsa_id": "GHSA-cg7q-fg22-4g98"
   },
   {
-    "cve_id": "CVE-2026-41379",
-    "severity": "HIGH",
-    "cvss": 7.1,
-    "title": "OpenClaw < 2026.3.28 - Privilege Escalation via chat.send to Admin-Class Talk Voice Config",
-    "date_published": "2026-04-28",
-    "ghsa_id": "GHSA-3q42-xmxv-9vfr"
-  },
-  {
     "cve_id": "CVE-2026-41385",
     "severity": "HIGH",
     "cvss": 7.1,
     "title": "OpenClaw < 2026.3.31 - Nostr Private Key Exposure via config.get Redaction Bypass",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-jjw7-3vjf-fg5j"
+  },
+  {
+    "cve_id": "CVE-2026-41379",
+    "severity": "HIGH",
+    "cvss": 7.1,
+    "title": "OpenClaw < 2026.3.28 - Privilege Escalation via chat.send to Admin-Class Talk Voice Config",
+    "date_published": "2026-04-28",
+    "ghsa_id": "GHSA-3q42-xmxv-9vfr"
   },
   {
     "cve_id": "CVE-2026-53815",
@@ -560,20 +560,20 @@
     "ghsa_id": "GHSA-7wv4-cc7p-jhxc"
   },
   {
-    "cve_id": "CVE-2026-53846",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-24vr-rprv-67rf"
-  },
-  {
     "cve_id": "CVE-2026-53842",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
+  },
+  {
+    "cve_id": "CVE-2026-53846",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-24vr-rprv-67rf"
   },
   {
     "cve_id": "CVE-2026-53858",
@@ -632,14 +632,6 @@
     "ghsa_id": "GHSA-f5mf-3r52-r83w"
   },
   {
-    "cve_id": "CVE-2026-34504",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.28 - Server-Side Request Forgery via Unguarded Image Download in fal Provider",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-qxgf-hmcj-3xw3"
-  },
-  {
     "cve_id": "CVE-2026-35626",
     "severity": "MEDIUM",
     "cvss": 6.9,
@@ -648,12 +640,12 @@
     "ghsa_id": "GHSA-rm59-992w-x2mv"
   },
   {
-    "cve_id": "CVE-2026-41300",
+    "cve_id": "CVE-2026-34504",
     "severity": "MEDIUM",
     "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.31 - Attacker-Discovered Endpoint Preservation in Remote Onboarding",
-    "date_published": "2026-04-20",
-    "ghsa_id": "GHSA-9f4w-67g7-mqwv"
+    "title": "OpenClaw < 2026.3.28 - Server-Side Request Forgery via Unguarded Image Download in fal Provider",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-qxgf-hmcj-3xw3"
   },
   {
     "cve_id": "CVE-2026-41374",
@@ -662,6 +654,14 @@
     "title": "OpenClaw < 2026.3.31 - Resource Consumption via Discord Audio Preflight Before Member Authorization",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-hhff-fj5f-qg48"
+  },
+  {
+    "cve_id": "CVE-2026-41300",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.31 - Attacker-Discovered Endpoint Preservation in Remote Onboarding",
+    "date_published": "2026-04-20",
+    "ghsa_id": "GHSA-9f4w-67g7-mqwv"
   },
   {
     "cve_id": "CVE-2026-41400",
@@ -752,20 +752,20 @@
     "ghsa_id": "GHSA-3xv9-89fm-7h4r"
   },
   {
-    "cve_id": "CVE-2026-45002",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.4.20 - Hook Session-Key Bypass via Template Mapping",
-    "date_published": "2026-05-11",
-    "ghsa_id": "GHSA-2xcp-x87w-q377"
-  },
-  {
     "cve_id": "CVE-2026-44999",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw < 2026.4.20 - Improper Trust Labeling in Isolated Cron Awareness Events",
     "date_published": "2026-05-11",
     "ghsa_id": "GHSA-57r2-h2wj-g887"
+  },
+  {
+    "cve_id": "CVE-2026-45002",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.4.20 - Hook Session-Key Bypass via Template Mapping",
+    "date_published": "2026-05-11",
+    "ghsa_id": "GHSA-2xcp-x87w-q377"
   },
   {
     "cve_id": "CVE-2026-53851",
@@ -816,14 +816,6 @@
     "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
-    "cve_id": "CVE-2026-53854",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
-  },
-  {
     "cve_id": "CVE-2026-53859",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -838,6 +830,14 @@
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
+  },
+  {
+    "cve_id": "CVE-2026-53854",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: Internal/webchat command auth could inherit ownerAllowFrom wildcard state",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
     "cve_id": "CVE-2026-41393",
@@ -920,14 +920,6 @@
     "ghsa_id": "GHSA-rwp6-7w3q-75fq"
   },
   {
-    "cve_id": "CVE-2026-41355",
-    "severity": "MEDIUM",
-    "cvss": 5.4,
-    "title": "OpenShell < 2026.3.28 - Arbitrary Code Execution via Mirror Mode Sandbox File Conversion",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-42mx-vp8m-j7qh"
-  },
-  {
     "cve_id": "CVE-2026-41360",
     "severity": "MEDIUM",
     "cvss": 5.4,
@@ -936,12 +928,12 @@
     "ghsa_id": "GHSA-w6wx-jq6j-6mcj"
   },
   {
-    "cve_id": "CVE-2026-32923",
+    "cve_id": "CVE-2026-41355",
     "severity": "MEDIUM",
-    "cvss": 5.3,
-    "title": "OpenClaw < 2026.3.11 - Authorization Bypass in Discord Guild Reaction Allowlist Enforcement",
-    "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-9vvh-2768-c8vp"
+    "cvss": 5.4,
+    "title": "OpenShell < 2026.3.28 - Arbitrary Code Execution via Mirror Mode Sandbox File Conversion",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-42mx-vp8m-j7qh"
   },
   {
     "cve_id": "CVE-2026-32899",
@@ -952,6 +944,14 @@
     "ghsa_id": "GHSA-rm2p-j3r7-4x4j"
   },
   {
+    "cve_id": "CVE-2026-32923",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw < 2026.3.11 - Authorization Bypass in Discord Guild Reaction Allowlist Enforcement",
+    "date_published": "2026-03-29",
+    "ghsa_id": "GHSA-9vvh-2768-c8vp"
+  },
+  {
     "cve_id": "CVE-2026-35629",
     "severity": "MEDIUM",
     "cvss": 5.3,
@@ -960,20 +960,20 @@
     "ghsa_id": "GHSA-rhfg-j8jq-7v2h"
   },
   {
-    "cve_id": "CVE-2026-41339",
-    "severity": "MEDIUM",
-    "cvss": 5.3,
-    "title": "OpenClaw < 2026.4.2 - Information Disclosure via Gateway Connect Snapshot",
-    "date_published": "2026-04-23",
-    "ghsa_id": "GHSA-2f7j-rp58-mr42"
-  },
-  {
     "cve_id": "CVE-2026-42420",
     "severity": "MEDIUM",
     "cvss": 5.3,
     "title": "OpenClaw < 2026.4.8 - Improper Base64 Decoding Size Validation",
     "date_published": "2026-04-28",
     "ghsa_id": "GHSA-ccx3-fw7q-rr2r"
+  },
+  {
+    "cve_id": "CVE-2026-41339",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "OpenClaw < 2026.4.2 - Information Disclosure via Gateway Connect Snapshot",
+    "date_published": "2026-04-23",
+    "ghsa_id": "GHSA-2f7j-rp58-mr42"
   },
   {
     "cve_id": "CVE-2026-53847",
@@ -1072,20 +1072,20 @@
     "ghsa_id": "GHSA-fqrj-m88p-qf3v"
   },
   {
-    "cve_id": "CVE-2026-53848",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-cwpp-5962-q4f6"
-  },
-  {
     "cve_id": "CVE-2026-53845",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw: Skill-command dispatch could skip before-tool-call hooks",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-68xw-r643-9p5w"
+  },
+  {
+    "cve_id": "CVE-2026-53848",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-cwpp-5962-q4f6"
   },
   {
     "cve_id": "CVE-2026-53852",
@@ -1096,20 +1096,20 @@
     "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
-    "cve_id": "CVE-2026-53862",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
-  },
-  {
     "cve_id": "CVE-2026-53860",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw: BlueBubbles sender policy could match mutable conversation identifiers",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-8j37-5w68-wj2g"
+  },
+  {
+    "cve_id": "CVE-2026-53862",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
   },
   {
     "cve_id": "CVE-2026-41398",
