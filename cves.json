@@ -24,12 +24,12 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
-    "cve_id": "CVE-2026-53817",
+    "cve_id": "CVE-2026-53819",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing",
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-chr9-m4q2-76hw"
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-53814",
@@ -40,12 +40,12 @@
     "ghsa_id": "GHSA-6fvr-66p3-3qj4"
   },
   {
-    "cve_id": "CVE-2026-53819",
+    "cve_id": "CVE-2026-53817",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "title": "OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
+    "ghsa_id": "GHSA-chr9-m4q2-76hw"
   },
   {
     "cve_id": "CVE-2026-53843",
@@ -104,6 +104,14 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
+    "cve_id": "CVE-2026-53806",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
+  },
+  {
     "cve_id": "CVE-2026-53811",
     "severity": "HIGH",
     "cvss": 7.7,
@@ -120,22 +128,6 @@
     "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
-    "cve_id": "CVE-2026-53806",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
-  },
-  {
-    "cve_id": "CVE-2026-53853",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
-  },
-  {
     "cve_id": "CVE-2026-53855",
     "severity": "HIGH",
     "cvss": 7.6,
@@ -150,6 +142,14 @@
     "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
+  },
+  {
+    "cve_id": "CVE-2026-53853",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
   },
   {
     "cve_id": "CVE-2026-53866",
@@ -280,20 +280,20 @@
     "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
   },
   {
-    "cve_id": "CVE-2026-53840",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
-  },
-  {
     "cve_id": "CVE-2026-53844",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-72fw-cqh5-f324"
+  },
+  {
+    "cve_id": "CVE-2026-53840",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
   },
   {
     "cve_id": "CVE-2026-53854",
@@ -304,20 +304,20 @@
     "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
-    "cve_id": "CVE-2026-53859",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
-  },
-  {
     "cve_id": "CVE-2026-53863",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
+  },
+  {
+    "cve_id": "CVE-2026-53859",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
   },
   {
     "cve_id": "CVE-2026-53856",
