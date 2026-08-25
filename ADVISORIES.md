@@ -3,11 +3,11 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-08-24 18:45 UTC</sub>
+<sub>Last updated: 2026-08-25 01:25 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (51)
+## GHSAs with CVE IDs (52)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
@@ -15,6 +15,7 @@
 | [GHSA-3c6j-hq33-3jv4](https://github.com/advisories/GHSA-3c6j-hq33-3jv4) | CVE-2026-53816 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Paired nodes could forge exec lifecycle events without system.run provenance | npm/openclaw | 2026.5.18 | 2026-07-02 |
 | [GHSA-vxx3-6hc9-7cc3](https://github.com/advisories/GHSA-vxx3-6hc9-7cc3) | CVE-2026-53806 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Combined POSIX shell options could confuse exec revalidation | npm/openclaw | 2026.5.12 | 2026-07-02 |
 | [GHSA-rj6p-xmxr-qj4h](https://github.com/advisories/GHSA-rj6p-xmxr-qj4h) | CVE-2026-53818 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: MCP loopback could skip owner-only tool policy for non-owner callers | npm/openclaw | 2026.4.24 | 2026-07-02 |
+| [GHSA-275c-xpvc-jgfw](https://github.com/advisories/GHSA-275c-xpvc-jgfw) | CVE-2026-53830 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload | npm/openclaw | 2026.4.22 | 2026-07-02 |
 | [GHSA-p39j-x9h5-q66m](https://github.com/advisories/GHSA-p39j-x9h5-q66m) | CVE-2026-53809 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Embedded runner policy could be confused by provider aliases | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-v8cx-933x-r976](https://github.com/advisories/GHSA-v8cx-933x-r976) | CVE-2026-53813 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Fake package roots could influence memory-core artifact loading | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-8wg3-5mcm-fjq8](https://github.com/advisories/GHSA-8wg3-5mcm-fjq8) | CVE-2026-53819 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows | npm/openclaw | 2026.5.27 | 2026-07-02 |
@@ -65,7 +66,7 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (62)
+## GHSAs Without CVE — Potential Future CVEs (61)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
@@ -100,7 +101,7 @@
 | [GHSA-xww8-gqvh-92x9](https://github.com/advisories/GHSA-xww8-gqvh-92x9) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Exec approval display truncation could hide the command being approved | CWE-284, CWE-863 | 2026.5.18 | 2026-07-02 |
 | [GHSA-v8j2-5f9p-fmh4](https://github.com/advisories/GHSA-v8j2-5f9p-fmh4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload | CWE-672 | 2026.4.23 | 2026-05-11 |
 | [GHSA-5jgm-f9wr-9qm7](https://github.com/advisories/GHSA-5jgm-f9wr-9qm7) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Workspace dotenv files cannot override connector endpoint hosts | CWE-441 | 2026.4.22 | 2026-05-11 |
-| [GHSA-9j32-3m66-mc4m](https://github.com/advisories/GHSA-9j32-3m66-mc4m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Hook mapping templates could bypass hook session-key opt-in | CWE-863 | 2026.4.20 | 2026-05-11 |
+| [GHSA-p68j-q8j9-jwf5](https://github.com/advisories/GHSA-p68j-q8j9-jwf5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload | CWE-613 | 2026.4.22 | 2026-06-13 |
 | [GHSA-8wmm-344f-mpjg](https://github.com/advisories/GHSA-8wmm-344f-mpjg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: Tool group policy callers could accept unvalidated group IDs | CWE-639 | — | 2026-06-16 |
 | [GHSA-g796-jqmx-wf9q](https://github.com/advisories/GHSA-g796-jqmx-wf9q) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: macOS Swift exec allowlist missed combined POSIX inline flags | CWE-184 | — | 2026-06-16 |
 | [GHSA-vqx6-6j84-2794](https://github.com/advisories/GHSA-vqx6-6j84-2794) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: Hostname checks could treat trailing-dot hosts inconsistently | CWE-918 | — | 2026-06-16 |
@@ -113,7 +114,6 @@
 | [GHSA-6jm4-83g2-35gv](https://github.com/advisories/GHSA-6jm4-83g2-35gv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: memory-wiki shared search could miss session visibility checks | CWE-862 | — | 2026-06-16 |
 | [GHSA-9c3v-684m-579c](https://github.com/advisories/GHSA-9c3v-684m-579c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw MCP SSE redirects could forward Authorization headers | CWE-200, CWE-522, CWE-601 | 2026.6.5 | 2026-07-01 |
 | [GHSA-4m3v-q747-pc6h](https://github.com/advisories/GHSA-4m3v-q747-pc6h) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Mattermost slash token revocation could lag until monitor refresh | CWE-613 | 2026.4.24 | 2026-07-02 |
-| [GHSA-275c-xpvc-jgfw](https://github.com/advisories/GHSA-275c-xpvc-jgfw) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload | CWE-613 | 2026.4.22 | 2026-07-02 |
 | [GHSA-6c4r-g249-wv3c](https://github.com/advisories/GHSA-6c4r-g249-wv3c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Sandboxed session spawn could expose the real workspace path to child prompts | CWE-668 | 2026.4.26 | 2026-07-02 |
 | [GHSA-77pv-3w4q-vrj5](https://github.com/advisories/GHSA-77pv-3w4q-vrj5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks | CWE-863 | 2026.4.27 | 2026-07-02 |
 | [GHSA-hcm3-8f6r-6xwg](https://github.com/advisories/GHSA-hcm3-8f6r-6xwg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Browser debug/export routes could reuse already-open blocked tabs | CWE-862 | 2026.4.29 | 2026-07-02 |
@@ -769,6 +769,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | CVE-2026-53817 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53818 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53819 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
+| CVE-2026-53830 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53840 | ✅ **PUBLISHED** | ✅ | 2026-06-17 | VulnCheck |
 | CVE-2026-53841 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |
 | CVE-2026-53842 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |

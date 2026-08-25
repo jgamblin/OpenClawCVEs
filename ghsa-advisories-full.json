@@ -981,7 +981,7 @@
   },
   {
     "ghsa_id": "GHSA-275c-xpvc-jgfw",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53830",
     "url": "https://api.github.com/advisories/GHSA-275c-xpvc-jgfw",
     "html_url": "https://github.com/advisories/GHSA-275c-xpvc-jgfw",
     "summary": "OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload",
@@ -994,14 +994,20 @@
       {
         "value": "GHSA-275c-xpvc-jgfw",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53830",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-275c-xpvc-jgfw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53830",
+      "https://www.vulncheck.com/advisories/openclaw-webhook-secret-revocation-bypass-via-secrets-reload",
       "https://github.com/advisories/GHSA-275c-xpvc-jgfw"
     ],
     "published_at": "2026-07-02T17:11:03Z",
-    "updated_at": "2026-07-02T17:11:04Z",
+    "updated_at": "2026-08-24T21:06:12Z",
     "github_reviewed_at": "2026-07-02T17:11:03Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -1018,12 +1024,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
-        "score": 6.3
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.0
       }
     },
     "cwes": [
@@ -1059,8 +1065,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    },
+    "epss": {
+      "percentage": 0.00207,
+      "percentile": 0.10681
     }
   },
   {
@@ -8897,6 +8907,67 @@
     }
   },
   {
+    "ghsa_id": "GHSA-p68j-q8j9-jwf5",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-p68j-q8j9-jwf5",
+    "html_url": "https://github.com/advisories/GHSA-p68j-q8j9-jwf5",
+    "summary": "Duplicate Advisory: OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-275c-xpvc-jgfw. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.22 contains a webhook secret revocation bypass vulnerability allowing callers with old Slack and Zalo webhook secrets to remain active after secrets.reload. Attackers can exploit the stale-secret window to deliver webhook events after operator-expected secret revocation, potentially accepting previous credentials.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-p68j-q8j9-jwf5",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-275c-xpvc-jgfw",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53830",
+      "https://www.vulncheck.com/advisories/openclaw-webhook-secret-revocation-bypass-via-secrets-reload",
+      "https://github.com/advisories/GHSA-p68j-q8j9-jwf5"
+    ],
+    "published_at": "2026-06-13T00:34:32Z",
+    "updated_at": "2026-08-24T21:06:00Z",
+    "github_reviewed_at": "2026-08-24T21:05:58Z",
+    "nvd_published_at": "2026-06-12T22:16:54Z",
+    "withdrawn_at": "2026-08-24T21:05:58Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.22",
+        "first_patched_version": "2026.4.22",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+        "score": 6.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-613",
+        "name": "Insufficient Session Expiration"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
+      "score": 6.5
+    }
+  },
+  {
     "ghsa_id": "GHSA-hx4v-668p-g2qr",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-hx4v-668p-g2qr",
@@ -9141,68 +9212,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
       "score": 5.0
-    }
-  },
-  {
-    "ghsa_id": "GHSA-9j32-3m66-mc4m",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-9j32-3m66-mc4m",
-    "html_url": "https://github.com/advisories/GHSA-9j32-3m66-mc4m",
-    "summary": "Duplicate Advisory: OpenClaw: Hook mapping templates could bypass hook session-key opt-in",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-2xcp-x87w-q377. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.20 contains a hook session-key bypass vulnerability that allows attackers to circumvent the hooks.allowRequestSessionKey opt-in restriction. Attackers can render externally influenced session keys through templated hook mappings to bypass webhook routing isolation controls.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-9j32-3m66-mc4m",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-2xcp-x87w-q377",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-45002",
-      "https://github.com/openclaw/openclaw/commit/5275d008ed33203dba3f98e969ad683a65c416c3",
-      "https://www.vulncheck.com/advisories/openclaw-hook-session-key-bypass-via-template-mapping",
-      "https://github.com/advisories/GHSA-9j32-3m66-mc4m"
-    ],
-    "published_at": "2026-05-11T18:31:47Z",
-    "updated_at": "2026-05-18T15:29:29Z",
-    "github_reviewed_at": "2026-05-18T15:29:27Z",
-    "nvd_published_at": "2026-05-11T18:16:40Z",
-    "withdrawn_at": "2026-05-18T15:29:27Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.20",
-        "first_patched_version": "2026.4.20",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
-        "score": 5.3
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 6.3
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
-      "score": 5.3
     }
   },
   {
