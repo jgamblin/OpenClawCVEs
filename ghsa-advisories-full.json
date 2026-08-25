@@ -133,7 +133,7 @@
   },
   {
     "ghsa_id": "GHSA-j472-gf56-x589",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53836",
     "url": "https://api.github.com/advisories/GHSA-j472-gf56-x589",
     "html_url": "https://github.com/advisories/GHSA-j472-gf56-x589",
     "summary": "OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks",
@@ -146,14 +146,20 @@
       {
         "value": "GHSA-j472-gf56-x589",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53836",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53836",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-powershell-encoded-command-aliases",
       "https://github.com/advisories/GHSA-j472-gf56-x589"
     ],
     "published_at": "2026-07-02T17:22:52Z",
-    "updated_at": "2026-07-02T17:22:54Z",
+    "updated_at": "2026-08-25T16:39:33Z",
     "github_reviewed_at": "2026-07-02T17:22:52Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -170,8 +176,8 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
       },
       "cvss_v4": {
         "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
@@ -211,8 +217,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    },
+    "epss": {
+      "percentage": 0.00451,
+      "percentile": 0.37261
     }
   },
   {
@@ -2657,27 +2667,33 @@
   },
   {
     "ghsa_id": "GHSA-83w9-h5wv-j9xm",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53838",
     "url": "https://api.github.com/advisories/GHSA-83w9-h5wv-j9xm",
     "html_url": "https://github.com/advisories/GHSA-83w9-h5wv-j9xm",
     "summary": "OpenClaw: Node pairing reconnection could confuse approval scope state",
     "description": "### Summary\n\nNode pairing reconnection could confuse approval scope state. In affected versions, a paired or reconnecting node session could mutate pairing state in a way that changed the approval scope decision.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could restore or present broader node authority than the operator intended. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.5.27`.\n\n### Mitigations\n\nrevoke unexpected node pairings and re-pair only trusted nodes until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
     "type": "reviewed",
-    "severity": "high",
+    "severity": "medium",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-83w9-h5wv-j9xm",
     "source_code_location": "https://github.com/openclaw/openclaw",
     "identifiers": [
       {
         "value": "GHSA-83w9-h5wv-j9xm",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53838",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-83w9-h5wv-j9xm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53838",
+      "https://www.vulncheck.com/advisories/openclaw-node-pairing-state-mutation-via-reconnection",
       "https://github.com/advisories/GHSA-83w9-h5wv-j9xm"
     ],
     "published_at": "2026-07-02T16:23:41Z",
-    "updated_at": "2026-07-02T16:23:41Z",
+    "updated_at": "2026-08-25T16:39:58Z",
     "github_reviewed_at": "2026-07-02T16:23:41Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -2694,12 +2710,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 7.6
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.0
       }
     },
     "cwes": [
@@ -2735,8 +2751,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    },
+    "epss": {
+      "percentage": 0.0023,
+      "percentile": 0.1384
     }
   },
   {
@@ -2997,7 +3017,7 @@
   },
   {
     "ghsa_id": "GHSA-mhq8-78pj-5j79",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53831",
     "url": "https://api.github.com/advisories/GHSA-mhq8-78pj-5j79",
     "html_url": "https://github.com/advisories/GHSA-mhq8-78pj-5j79",
     "summary": "OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
@@ -3010,14 +3030,20 @@
       {
         "value": "GHSA-mhq8-78pj-5j79",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53831",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhq8-78pj-5j79",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53831",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-shell-expansion-in-system-run-safe-bin-allowlist",
       "https://github.com/advisories/GHSA-mhq8-78pj-5j79"
     ],
     "published_at": "2026-07-02T16:05:38Z",
-    "updated_at": "2026-07-02T16:05:39Z",
+    "updated_at": "2026-08-25T16:38:52Z",
     "github_reviewed_at": "2026-07-02T16:05:38Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -3038,8 +3064,8 @@
         "score": 7.1
       },
       "cvss_v4": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N",
+        "score": 7.6
       }
     },
     "cwes": [
@@ -3054,6 +3080,10 @@
       {
         "cwe_id": "CWE-284",
         "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
       }
     ],
     "credits": [
@@ -3109,6 +3139,10 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
       "score": 7.1
+    },
+    "epss": {
+      "percentage": 0.00198,
+      "percentile": 0.09815
     }
   },
   {
@@ -8907,6 +8941,189 @@
     }
   },
   {
+    "ghsa_id": "GHSA-c85p-9pvr-f7f5",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-c85p-9pvr-f7f5",
+    "html_url": "https://github.com/advisories/GHSA-c85p-9pvr-f7f5",
+    "summary": "Duplicate Advisory: OpenClaw: Node pairing reconnection could confuse approval scope state",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-83w9-h5wv-j9xm. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.27 contains a state mutation vulnerability in node pairing reconnection that allows paired nodes to confuse approval scope decisions. Attackers can exploit reconnection logic to restore or present broader node authority than intended, potentially bypassing approval restrictions.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-c85p-9pvr-f7f5",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-83w9-h5wv-j9xm",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53838",
+      "https://www.vulncheck.com/advisories/openclaw-node-pairing-state-mutation-via-reconnection",
+      "https://github.com/advisories/GHSA-c85p-9pvr-f7f5"
+    ],
+    "published_at": "2026-06-13T00:34:33Z",
+    "updated_at": "2026-08-25T16:39:53Z",
+    "github_reviewed_at": "2026-08-25T16:39:49Z",
+    "nvd_published_at": "2026-06-12T22:16:55Z",
+    "withdrawn_at": "2026-08-25T16:39:49Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.27",
+        "first_patched_version": "2026.5.27",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 9.8
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.0
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "score": 9.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-ffhm-8fwq-7q27",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-ffhm-8fwq-7q27",
+    "html_url": "https://github.com/advisories/GHSA-ffhm-8fwq-7q27",
+    "summary": "Duplicate Advisory: OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-j472-gf56-x589. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution allowlist checks by using unrecognized encoded-command alias forms to execute arbitrary PowerShell content.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-ffhm-8fwq-7q27",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53836",
+      "https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-powershell-encoded-command-aliases",
+      "https://github.com/advisories/GHSA-ffhm-8fwq-7q27"
+    ],
+    "published_at": "2026-06-13T00:34:32Z",
+    "updated_at": "2026-08-25T16:39:18Z",
+    "github_reviewed_at": "2026-08-25T16:39:17Z",
+    "nvd_published_at": "2026-06-12T22:16:55Z",
+    "withdrawn_at": "2026-08-25T16:39:17Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.12",
+        "first_patched_version": "2026.5.12",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.7
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-184",
+        "name": "Incomplete List of Disallowed Inputs"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
+      "score": 8.8
+    }
+  },
+  {
+    "ghsa_id": "GHSA-gwcq-453v-2frr",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-gwcq-453v-2frr",
+    "html_url": "https://github.com/advisories/GHSA-gwcq-453v-2frr",
+    "summary": "Duplicate Advisory: OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-mhq8-78pj-5j79. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains a policy enforcement vulnerability in system.run safe-bin allowlist validation that allows shell expansion to modify command interpretation on POSIX nodes. Authenticated operators can exploit shell metacharacters in approved commands to read unintended node-local files and expose sensitive configuration data.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-gwcq-453v-2frr",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhq8-78pj-5j79",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53831",
+      "https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-shell-expansion-in-system-run-safe-bin-allowlist",
+      "https://github.com/advisories/GHSA-gwcq-453v-2frr"
+    ],
+    "published_at": "2026-06-13T00:34:32Z",
+    "updated_at": "2026-08-25T16:38:42Z",
+    "github_reviewed_at": "2026-08-25T16:38:39Z",
+    "nvd_published_at": "2026-06-12T22:16:54Z",
+    "withdrawn_at": "2026-08-25T16:38:39Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.18",
+        "first_patched_version": "2026.5.18",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+        "score": 8.3
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.6
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-367",
+        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
+      "score": 8.3
+    }
+  },
+  {
     "ghsa_id": "GHSA-p68j-q8j9-jwf5",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-p68j-q8j9-jwf5",
@@ -9026,192 +9243,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.0
-    }
-  },
-  {
-    "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-v8j2-5f9p-fmh4",
-    "html_url": "https://github.com/advisories/GHSA-v8j2-5f9p-fmh4",
-    "summary": "Duplicate Advisory: OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-q8ff-7ffm-m3r9. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.23 caches resolved webhook route secrets backed by SecretRef values, allowing stale secrets to remain valid after rotation and reload. Attackers with previously valid webhook route secrets can continue authenticating requests and invoking configured webhook task flows until gateway or plugin restart.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-v8j2-5f9p-fmh4",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-q8ff-7ffm-m3r9",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-45005",
-      "https://github.com/openclaw/openclaw/commit/36c4a372a0ad5dca8bfc0d93f7aab9c2f2de66fa",
-      "https://www.vulncheck.com/advisories/openclaw-webhook-route-secret-cache-not-invalidated-after-rotation",
-      "https://github.com/advisories/GHSA-v8j2-5f9p-fmh4"
-    ],
-    "published_at": "2026-05-11T18:31:47Z",
-    "updated_at": "2026-05-18T15:31:01Z",
-    "github_reviewed_at": "2026-05-18T15:31:00Z",
-    "nvd_published_at": "2026-05-11T18:16:40Z",
-    "withdrawn_at": "2026-05-18T15:31:00Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.23",
-        "first_patched_version": "2026.4.23",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L",
-        "score": 6.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:H/UI:N/VC:L/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 5.9
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-672",
-        "name": "Operation on a Resource after Expiration or Release"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:H/A:L",
-      "score": 6.0
-    }
-  },
-  {
-    "ghsa_id": "GHSA-xpr6-2hgm-4wwp",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-xpr6-2hgm-4wwp",
-    "html_url": "https://github.com/advisories/GHSA-xpr6-2hgm-4wwp",
-    "summary": "Duplicate Advisory: OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-r39h-4c2p-3jxp. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.23 contains an arbitrary code execution vulnerability in the bundled plugin setup resolver that loads setup-api.js from process.cwd() during provider setup metadata resolution. Attackers can execute arbitrary JavaScript under the current user account by placing a malicious extensions/<plugin>/setup-api.js file in a repository and convincing a user to run OpenClaw commands from that directory.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-xpr6-2hgm-4wwp",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-r39h-4c2p-3jxp",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-45004",
-      "https://github.com/openclaw/openclaw/commit/993781e6e6eaf50f033cfc3e3bf4f47059740707",
-      "https://www.vulncheck.com/advisories/openclaw-arbitrary-code-execution-via-setup-api-js-in-current-working-directory",
-      "https://github.com/advisories/GHSA-xpr6-2hgm-4wwp"
-    ],
-    "published_at": "2026-05-11T18:31:47Z",
-    "updated_at": "2026-05-18T15:31:19Z",
-    "github_reviewed_at": "2026-05-18T15:31:18Z",
-    "nvd_published_at": "2026-05-11T18:16:40Z",
-    "withdrawn_at": "2026-05-18T15:31:18Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.23",
-        "first_patched_version": "2026.4.23",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-        "score": 7.8
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 8.4
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-427",
-        "name": "Uncontrolled Search Path Element"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
-      "score": 7.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-5jgm-f9wr-9qm7",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-5jgm-f9wr-9qm7",
-    "html_url": "https://github.com/advisories/GHSA-5jgm-f9wr-9qm7",
-    "summary": "Duplicate Advisory: OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-55cf-xx38-4p9p. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.22 allows workspace dotenv files to override connector endpoint hosts for Matrix, Mattermost, IRC, and Synology connectors. Attackers with workspace access can redirect runtime traffic to malicious endpoints by setting endpoint variables in dotenv files.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-5jgm-f9wr-9qm7",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-55cf-xx38-4p9p",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-45003",
-      "https://github.com/openclaw/openclaw/commit/0623079e98abf7202591f1b04a89755eb7ec9272",
-      "https://www.vulncheck.com/advisories/openclaw-connector-endpoint-host-override-via-workspace-dotenv-files",
-      "https://github.com/advisories/GHSA-5jgm-f9wr-9qm7"
-    ],
-    "published_at": "2026-05-11T18:31:47Z",
-    "updated_at": "2026-05-18T15:29:03Z",
-    "github_reviewed_at": "2026-05-18T15:29:02Z",
-    "nvd_published_at": "2026-05-11T18:16:40Z",
-    "withdrawn_at": "2026-05-18T15:29:02Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.22",
-        "first_patched_version": "2026.4.22",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
-        "score": 5.0
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:L/UI:P/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 4.1
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-441",
-        "name": "Unintended Proxy or Intermediary ('Confused Deputy')"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:N/A:N",
-      "score": 5.0
     }
   },
   {

@@ -3,14 +3,15 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-08-25 12:53 UTC</sub>
+<sub>Last updated: 2026-08-25 18:43 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (52)
+## GHSAs with CVE IDs (55)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
+| [GHSA-j472-gf56-x589](https://github.com/advisories/GHSA-j472-gf56-x589) | CVE-2026-53836 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks | npm/openclaw | 2026.5.12 | 2026-07-02 |
 | [GHSA-7hxm-f538-3xp6](https://github.com/advisories/GHSA-7hxm-f538-3xp6) | CVE-2026-53811 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Matrix allowFrom could bind to mutable display names | npm/openclaw | 2026.5.7 | 2026-07-02 |
 | [GHSA-3c6j-hq33-3jv4](https://github.com/advisories/GHSA-3c6j-hq33-3jv4) | CVE-2026-53816 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Paired nodes could forge exec lifecycle events without system.run provenance | npm/openclaw | 2026.5.18 | 2026-07-02 |
 | [GHSA-vxx3-6hc9-7cc3](https://github.com/advisories/GHSA-vxx3-6hc9-7cc3) | CVE-2026-53806 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Combined POSIX shell options could confuse exec revalidation | npm/openclaw | 2026.5.12 | 2026-07-02 |
@@ -19,6 +20,8 @@
 | [GHSA-p39j-x9h5-q66m](https://github.com/advisories/GHSA-p39j-x9h5-q66m) | CVE-2026-53809 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Embedded runner policy could be confused by provider aliases | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-v8cx-933x-r976](https://github.com/advisories/GHSA-v8cx-933x-r976) | CVE-2026-53813 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Fake package roots could influence memory-core artifact loading | npm/openclaw | 2026.4.25 | 2026-07-02 |
 | [GHSA-8wg3-5mcm-fjq8](https://github.com/advisories/GHSA-8wg3-5mcm-fjq8) | CVE-2026-53819 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows | npm/openclaw | 2026.5.27 | 2026-07-02 |
+| [GHSA-83w9-h5wv-j9xm](https://github.com/advisories/GHSA-83w9-h5wv-j9xm) | CVE-2026-53838 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Node pairing reconnection could confuse approval scope state | npm/openclaw | 2026.5.27 | 2026-07-02 |
+| [GHSA-mhq8-78pj-5j79](https://github.com/advisories/GHSA-mhq8-78pj-5j79) | CVE-2026-53831 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion | npm/openclaw | 2026.5.18 | 2026-07-02 |
 | [GHSA-mgq6-vr84-7m2j](https://github.com/advisories/GHSA-mgq6-vr84-7m2j) | CVE-2026-35630 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: QQBot native approval buttons did not enforce configured approver identity | npm/openclaw | 2026.5.18 | 2026-07-02 |
 | [GHSA-6fvr-66p3-3qj4](https://github.com/advisories/GHSA-6fvr-66p3-3qj4) | CVE-2026-53814 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority | npm/openclaw | 2026.5.20 | 2026-07-02 |
 | [GHSA-chr9-m4q2-76hw](https://github.com/advisories/GHSA-chr9-m4q2-76hw) | CVE-2026-53817 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Control UI locality spoofing could mint a durable admin device token | npm/openclaw | 2026.5.22 | 2026-07-02 |
@@ -66,14 +69,15 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (61)
+## GHSAs Without CVE — Potential Future CVEs (58)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
 | [GHSA-w4v6-g3wm-w36c](https://github.com/advisories/GHSA-w4v6-g3wm-w36c) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: QQBot admin commands could skip DM-only and allowFrom policy | CWE-863 | 2026.4.29 | 2026-07-02 |
 | [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-02 |
-| [GHSA-xpr6-2hgm-4wwp](https://github.com/advisories/GHSA-xpr6-2hgm-4wwp) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution | CWE-427 | 2026.4.23 | 2026-05-11 |
 | [GHSA-hx4v-668p-g2qr](https://github.com/advisories/GHSA-hx4v-668p-g2qr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity | CWE-862 | 2026.5.18 | 2026-05-29 |
+| [GHSA-ffhm-8fwq-7q27](https://github.com/advisories/GHSA-ffhm-8fwq-7q27) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks | CWE-184 | 2026.5.12 | 2026-06-13 |
+| [GHSA-gwcq-453v-2frr](https://github.com/advisories/GHSA-gwcq-453v-2frr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion | CWE-367 | 2026.5.18 | 2026-06-13 |
 | [GHSA-2w22-3f6x-3hf4](https://github.com/advisories/GHSA-2w22-3f6x-3hf4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Workspace-derived service PATH could influence trash command selection | CWE-426 | — | 2026-06-16 |
 | [GHSA-vr6h-vxqj-3pjx](https://github.com/advisories/GHSA-vr6h-vxqj-3pjx) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Host environment sanitizer missed two Node.js control variables | CWE-184 | — | 2026-06-16 |
 | [GHSA-v383-2wgg-v483](https://github.com/advisories/GHSA-v383-2wgg-v483) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Shell inline-command parsing could miss an allowlist check | CWE-862 | — | 2026-06-16 |
@@ -86,21 +90,17 @@
 | [GHSA-9fr2-p65v-gqxq](https://github.com/advisories/GHSA-9fr2-p65v-gqxq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution | CWE-426 | — | 2026-06-16 |
 | [GHSA-wrmq-9fc4-gwwj](https://github.com/advisories/GHSA-wrmq-9fc4-gwwj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Pairing-scoped device session could restore revoked node token authority | CWE-613 | — | 2026-06-16 |
 | [GHSA-p73f-w79w-jqr5](https://github.com/advisories/GHSA-p73f-w79w-jqr5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Native command authorization could skip owner-command enforcement | CWE-863 | 2026.5.6 | 2026-07-02 |
-| [GHSA-j472-gf56-x589](https://github.com/advisories/GHSA-j472-gf56-x589) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks | CWE-184 | 2026.5.12 | 2026-07-02 |
 | [GHSA-77q5-rr5v-x43q](https://github.com/advisories/GHSA-77q5-rr5v-x43q) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Trusted retry endpoint checks could match hostname prefixes | CWE-20, CWE-345, CWE-1023 | 2026.5.7 | 2026-07-02 |
 | [GHSA-w5ww-7chg-mxcq](https://github.com/advisories/GHSA-w5ww-7chg-mxcq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Telegram interactive callbacks could skip commands.allowFrom | CWE-863 | 2026.5.6 | 2026-07-02 |
 | [GHSA-xr4f-mjxj-w6w5](https://github.com/advisories/GHSA-xr4f-mjxj-w6w5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Non-owner chat senders could issue device-pairing bootstrap codes | CWE-863 | 2026.5.4 | 2026-07-02 |
 | [GHSA-qjpc-qf9m-xwmr](https://github.com/advisories/GHSA-qjpc-qf9m-xwmr) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Trusted-proxy Control UI WebSocket accepted client-declared scopes before pairing | CWE-862, CWE-863 | 2026.5.18 | 2026-07-02 |
 | [GHSA-c29c-2q9c-pc86](https://github.com/advisories/GHSA-c29c-2q9c-pc86) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Slack allowFrom could bind to mutable display names | CWE-290 | 2026.5.3 | 2026-07-02 |
 | [GHSA-jvm4-4j77-39p6](https://github.com/advisories/GHSA-jvm4-4j77-39p6) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: QQBot streaming command could mutate config without explicit allowFrom | CWE-863 | 2026.4.29 | 2026-07-02 |
-| [GHSA-83w9-h5wv-j9xm](https://github.com/advisories/GHSA-83w9-h5wv-j9xm) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Node pairing reconnection could confuse approval scope state | CWE-367 | 2026.5.27 | 2026-07-02 |
 | [GHSA-hw9r-h9mr-4jff](https://github.com/advisories/GHSA-hw9r-h9mr-4jff) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Scoped chat.send route inheritance could bypass admin command scope gates | CWE-862, CWE-863 | 2026.5.18 | 2026-07-02 |
-| [GHSA-mhq8-78pj-5j79](https://github.com/advisories/GHSA-mhq8-78pj-5j79) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion | CWE-78, CWE-200, CWE-284 | 2026.5.18 | 2026-07-02 |
 | [GHSA-rggc-m335-3wvj](https://github.com/advisories/GHSA-rggc-m335-3wvj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers | CWE-269, CWE-284, CWE-287, CWE-290, CWE-863 | 2026.5.18 | 2026-07-02 |
 | [GHSA-2j8v-hwgc-x698](https://github.com/advisories/GHSA-2j8v-hwgc-x698) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Shell wrapper argv could change between approval and execution | CWE-284 | 2026.5.18 | 2026-07-02 |
 | [GHSA-xww8-gqvh-92x9](https://github.com/advisories/GHSA-xww8-gqvh-92x9) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Exec approval display truncation could hide the command being approved | CWE-284, CWE-863 | 2026.5.18 | 2026-07-02 |
-| [GHSA-v8j2-5f9p-fmh4](https://github.com/advisories/GHSA-v8j2-5f9p-fmh4) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload | CWE-672 | 2026.4.23 | 2026-05-11 |
-| [GHSA-5jgm-f9wr-9qm7](https://github.com/advisories/GHSA-5jgm-f9wr-9qm7) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Workspace dotenv files cannot override connector endpoint hosts | CWE-441 | 2026.4.22 | 2026-05-11 |
+| [GHSA-c85p-9pvr-f7f5](https://github.com/advisories/GHSA-c85p-9pvr-f7f5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Node pairing reconnection could confuse approval scope state | CWE-367 | 2026.5.27 | 2026-06-13 |
 | [GHSA-p68j-q8j9-jwf5](https://github.com/advisories/GHSA-p68j-q8j9-jwf5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload | CWE-613 | 2026.4.22 | 2026-06-13 |
 | [GHSA-8wmm-344f-mpjg](https://github.com/advisories/GHSA-8wmm-344f-mpjg) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: Tool group policy callers could accept unvalidated group IDs | CWE-639 | — | 2026-06-16 |
 | [GHSA-g796-jqmx-wf9q](https://github.com/advisories/GHSA-g796-jqmx-wf9q) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: macOS Swift exec allowlist missed combined POSIX inline flags | CWE-184 | — | 2026-06-16 |
@@ -770,6 +770,9 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | CVE-2026-53818 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53819 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53830 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
+| CVE-2026-53831 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
+| CVE-2026-53836 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
+| CVE-2026-53838 | ✅ **PUBLISHED** | ✅ | 2026-07-02 | VulnCheck |
 | CVE-2026-53840 | ✅ **PUBLISHED** | ✅ | 2026-06-17 | VulnCheck |
 | CVE-2026-53841 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |
 | CVE-2026-53842 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |

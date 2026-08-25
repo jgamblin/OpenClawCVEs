@@ -22,7 +22,7 @@
   },
   {
     "ghsa_id": "GHSA-j472-gf56-x589",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53836",
     "severity": "high",
     "title": "OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks",
     "published": "2026-07-02",
@@ -531,8 +531,8 @@
   },
   {
     "ghsa_id": "GHSA-83w9-h5wv-j9xm",
-    "cve_id": null,
-    "severity": "high",
+    "cve_id": "CVE-2026-53838",
+    "severity": "medium",
     "title": "OpenClaw: Node pairing reconnection could confuse approval scope state",
     "published": "2026-07-02",
     "html_url": "https://github.com/advisories/GHSA-83w9-h5wv-j9xm",
@@ -616,7 +616,7 @@
   },
   {
     "ghsa_id": "GHSA-mhq8-78pj-5j79",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53831",
     "severity": "high",
     "title": "OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
     "published": "2026-07-02",
@@ -634,7 +634,8 @@
     "cwes": [
       "CWE-78",
       "CWE-200",
-      "CWE-284"
+      "CWE-284",
+      "CWE-367"
     ]
   },
   {
@@ -1974,6 +1975,69 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-c85p-9pvr-f7f5",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw: Node pairing reconnection could confuse approval scope state",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-c85p-9pvr-f7f5",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.27"
+    ],
+    "fixed_versions": [
+      "2026.5.27"
+    ],
+    "fixed_version": "2026.5.27",
+    "cwes": [
+      "CWE-367"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-ffhm-8fwq-7q27",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-ffhm-8fwq-7q27",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.12"
+    ],
+    "fixed_versions": [
+      "2026.5.12"
+    ],
+    "fixed_version": "2026.5.12",
+    "cwes": [
+      "CWE-184"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-gwcq-453v-2frr",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-gwcq-453v-2frr",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.18"
+    ],
+    "fixed_versions": [
+      "2026.5.18"
+    ],
+    "fixed_version": "2026.5.18",
+    "cwes": [
+      "CWE-367"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-p68j-q8j9-jwf5",
     "cve_id": null,
     "severity": "medium",
@@ -2013,69 +2077,6 @@
     "fixed_version": "2026.5.18",
     "cwes": [
       "CWE-862"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-v8j2-5f9p-fmh4",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw's Webhooks SecretRef route secret remains valid after rotation/reload",
-    "published": "2026-05-11",
-    "html_url": "https://github.com/advisories/GHSA-v8j2-5f9p-fmh4",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.23"
-    ],
-    "fixed_versions": [
-      "2026.4.23"
-    ],
-    "fixed_version": "2026.4.23",
-    "cwes": [
-      "CWE-672"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-xpr6-2hgm-4wwp",
-    "cve_id": null,
-    "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw vulnerable to arbitrary code execution via attacker-controlled setup-api.js loaded from cwd during env-key resolution",
-    "published": "2026-05-11",
-    "html_url": "https://github.com/advisories/GHSA-xpr6-2hgm-4wwp",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.23"
-    ],
-    "fixed_versions": [
-      "2026.4.23"
-    ],
-    "fixed_version": "2026.4.23",
-    "cwes": [
-      "CWE-427"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-5jgm-f9wr-9qm7",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw: Workspace dotenv files cannot override connector endpoint hosts",
-    "published": "2026-05-11",
-    "html_url": "https://github.com/advisories/GHSA-5jgm-f9wr-9qm7",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.22"
-    ],
-    "fixed_versions": [
-      "2026.4.22"
-    ],
-    "fixed_version": "2026.4.22",
-    "cwes": [
-      "CWE-441"
     ]
   },
   {
