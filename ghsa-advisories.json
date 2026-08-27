@@ -510,7 +510,7 @@
   },
   {
     "ghsa_id": "GHSA-jvm4-4j77-39p6",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53833",
     "severity": "high",
     "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
     "published": "2026-07-02",
@@ -2059,24 +2059,24 @@
     ]
   },
   {
-    "ghsa_id": "GHSA-hx4v-668p-g2qr",
+    "ghsa_id": "GHSA-r27j-fxmq-rg2q",
     "cve_id": null,
     "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
-    "published": "2026-05-29",
-    "html_url": "https://github.com/advisories/GHSA-hx4v-668p-g2qr",
+    "title": "Duplicate Advisory: OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-r27j-fxmq-rg2q",
     "packages": [
       "npm/openclaw"
     ],
     "affected_versions": [
-      "< 2026.5.18"
+      "< 2026.4.29"
     ],
     "fixed_versions": [
-      "2026.5.18"
+      "2026.4.29"
     ],
-    "fixed_version": "2026.5.18",
+    "fixed_version": "2026.4.29",
     "cwes": [
-      "CWE-862"
+      "CWE-290"
     ]
   },
   {

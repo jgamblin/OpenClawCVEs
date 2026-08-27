@@ -2583,7 +2583,7 @@
   },
   {
     "ghsa_id": "GHSA-jvm4-4j77-39p6",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53833",
     "url": "https://api.github.com/advisories/GHSA-jvm4-4j77-39p6",
     "html_url": "https://github.com/advisories/GHSA-jvm4-4j77-39p6",
     "summary": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
@@ -2596,14 +2596,20 @@
       {
         "value": "GHSA-jvm4-4j77-39p6",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53833",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-jvm4-4j77-39p6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53833",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-qqbot-streaming-command",
       "https://github.com/advisories/GHSA-jvm4-4j77-39p6"
     ],
     "published_at": "2026-07-02T16:34:39Z",
-    "updated_at": "2026-07-02T16:34:40Z",
+    "updated_at": "2026-08-27T21:57:05Z",
     "github_reviewed_at": "2026-07-02T16:34:39Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -2620,12 +2626,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
-        "score": 8.7
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.4
       }
     },
     "cwes": [
@@ -2661,8 +2667,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 7.7
+    },
+    "epss": {
+      "percentage": 0.00179,
+      "percentile": 0.07395
     }
   },
   {
@@ -9185,64 +9195,64 @@
     }
   },
   {
-    "ghsa_id": "GHSA-hx4v-668p-g2qr",
+    "ghsa_id": "GHSA-r27j-fxmq-rg2q",
     "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-hx4v-668p-g2qr",
-    "html_url": "https://github.com/advisories/GHSA-hx4v-668p-g2qr",
-    "summary": "Duplicate Advisory: OpenClaw: QQBot native approval buttons did not enforce configured approver identity",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-mgq6-vr84-7m2j. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains an authorization bypass vulnerability in QQBot native approval buttons that fails to enforce configured approver identity. Non-approver users can click approval buttons to resolve pending exec or plugin approval requests without proper authorization.",
+    "url": "https://api.github.com/advisories/GHSA-r27j-fxmq-rg2q",
+    "html_url": "https://github.com/advisories/GHSA-r27j-fxmq-rg2q",
+    "summary": "Duplicate Advisory: OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-jvm4-4j77-39p6. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.29 contains an authorization bypass vulnerability in the QQBot streaming command that allows authenticated senders to mutate configuration without explicit allowFrom restrictions. Attackers can modify QQBot streaming configuration outside intended admin policy by reaching the affected command without non-wildcard allowlist entry requirements.",
     "type": "reviewed",
     "severity": "high",
     "repository_advisory_url": null,
-    "source_code_location": "",
+    "source_code_location": "https://github.com/openclaw/openclaw",
     "identifiers": [
       {
-        "value": "GHSA-hx4v-668p-g2qr",
+        "value": "GHSA-r27j-fxmq-rg2q",
         "type": "GHSA"
       }
     ],
     "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mgq6-vr84-7m2j",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-35630",
-      "https://www.vulncheck.com/advisories/openclaw-qqbot-missing-approver-identity-enforcement-in-native-approval-buttons",
-      "https://github.com/advisories/GHSA-hx4v-668p-g2qr"
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-jvm4-4j77-39p6",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53833",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-qqbot-streaming-command",
+      "https://github.com/advisories/GHSA-r27j-fxmq-rg2q"
     ],
-    "published_at": "2026-05-29T18:31:33Z",
-    "updated_at": "2026-07-02T20:50:05Z",
-    "github_reviewed_at": "2026-07-02T20:50:04Z",
-    "nvd_published_at": "2026-05-29T16:16:26Z",
-    "withdrawn_at": "2026-07-02T20:50:04Z",
+    "published_at": "2026-06-13T00:34:32Z",
+    "updated_at": "2026-08-27T21:56:56Z",
+    "github_reviewed_at": "2026-08-27T21:56:16Z",
+    "nvd_published_at": "2026-06-12T22:16:54Z",
+    "withdrawn_at": "2026-08-27T21:56:16Z",
     "vulnerabilities": [
       {
         "package": {
           "ecosystem": "npm",
           "name": "openclaw"
         },
-        "vulnerable_version_range": "< 2026.5.18",
-        "first_patched_version": "2026.5.18",
+        "vulnerable_version_range": "< 2026.4.29",
+        "first_patched_version": "2026.4.29",
         "vulnerable_functions": []
       }
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-        "score": 8.0
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 7.5
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 7.4
       }
     },
     "cwes": [
       {
-        "cwe_id": "CWE-862",
-        "name": "Missing Authorization"
+        "cwe_id": "CWE-290",
+        "name": "Authentication Bypass by Spoofing"
       }
     ],
     "credits": [],
     "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
-      "score": 8.0
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 7.7
     }
   },
   {
