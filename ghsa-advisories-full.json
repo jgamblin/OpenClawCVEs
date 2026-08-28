@@ -1631,27 +1631,33 @@
   },
   {
     "ghsa_id": "GHSA-77pv-3w4q-vrj5",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53834",
     "url": "https://api.github.com/advisories/GHSA-77pv-3w4q-vrj5",
     "html_url": "https://github.com/advisories/GHSA-77pv-3w4q-vrj5",
     "summary": "OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
     "description": "### Summary\n\nQQBot pre-dispatch slash commands could skip allowFrom checks. In affected versions, a QQBot sender able to invoke slash commands could dispatch the command before applying the configured allowFrom policy.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could trigger command handling from a sender that policy should have blocked. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.4.27`.\n\n### Mitigations\n\nrestrict QQBot slash command exposure until patched. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
     "type": "reviewed",
-    "severity": "medium",
+    "severity": "high",
     "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-77pv-3w4q-vrj5",
     "source_code_location": "https://github.com/openclaw/openclaw",
     "identifiers": [
       {
         "value": "GHSA-77pv-3w4q-vrj5",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53834",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-77pv-3w4q-vrj5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53834",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-qqbot-pre-dispatch-slash-commands",
       "https://github.com/advisories/GHSA-77pv-3w4q-vrj5"
     ],
     "published_at": "2026-07-02T16:56:24Z",
-    "updated_at": "2026-07-02T16:56:25Z",
+    "updated_at": "2026-08-28T15:55:28Z",
     "github_reviewed_at": "2026-07-02T16:56:24Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -1668,12 +1674,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "score": 7.5
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N",
-        "score": 6.9
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 8.2
       }
     },
     "cwes": [
@@ -1757,8 +1763,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "score": 7.5
+    },
+    "epss": {
+      "percentage": 0.00199,
+      "percentile": 0.09947
     }
   },
   {
@@ -2099,7 +2109,7 @@
   },
   {
     "ghsa_id": "GHSA-gp79-m99v-gjmh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53837",
     "url": "https://api.github.com/advisories/GHSA-gp79-m99v-gjmh",
     "html_url": "https://github.com/advisories/GHSA-gp79-m99v-gjmh",
     "summary": "OpenClaw: Mattermost handlers could fall open when channel type was missing",
@@ -2112,14 +2122,20 @@
       {
         "value": "GHSA-gp79-m99v-gjmh",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53837",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-gp79-m99v-gjmh",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53837",
+      "https://www.vulncheck.com/advisories/openclaw-missing-channel-type-validation-in-mattermost-event-handlers",
       "https://github.com/advisories/GHSA-gp79-m99v-gjmh"
     ],
     "published_at": "2026-07-02T16:45:14Z",
-    "updated_at": "2026-07-02T16:45:15Z",
+    "updated_at": "2026-08-28T15:53:32Z",
     "github_reviewed_at": "2026-07-02T16:45:14Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -2136,11 +2152,11 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "score": 3.7
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:L/SA:N",
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
         "score": 6.3
       }
     },
@@ -2225,8 +2241,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "score": 3.7
+    },
+    "epss": {
+      "percentage": 0.00189,
+      "percentile": 0.08507
     }
   },
   {
@@ -3483,7 +3503,7 @@
   },
   {
     "ghsa_id": "GHSA-rggc-m335-3wvj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53832",
     "url": "https://api.github.com/advisories/GHSA-rggc-m335-3wvj",
     "html_url": "https://github.com/advisories/GHSA-rggc-m335-3wvj",
     "summary": "OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
@@ -3496,14 +3516,20 @@
       {
         "value": "GHSA-rggc-m335-3wvj",
         "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-53832",
+        "type": "CVE"
       }
     ],
     "references": [
       "https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53832",
+      "https://www.vulncheck.com/advisories/openclaw-identity-header-forgery-via-trusted-proxy-configuration",
       "https://github.com/advisories/GHSA-rggc-m335-3wvj"
     ],
     "published_at": "2026-07-02T16:03:10Z",
-    "updated_at": "2026-07-02T16:03:11Z",
+    "updated_at": "2026-08-28T15:55:53Z",
     "github_reviewed_at": "2026-07-02T16:03:10Z",
     "nvd_published_at": null,
     "withdrawn_at": null,
@@ -3520,12 +3546,12 @@
     ],
     "cvss_severities": {
       "cvss_v3": {
-        "vector_string": null,
-        "score": 0.0
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 7.7
       },
       "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N",
-        "score": 7.7
+        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N",
+        "score": 7.4
       }
     },
     "cwes": [
@@ -3601,8 +3627,12 @@
       }
     ],
     "cvss": {
-      "vector_string": null,
-      "score": null
+      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+      "score": 7.7
+    },
+    "epss": {
+      "percentage": 0.00102,
+      "percentile": 0.01143
     }
   },
   {
@@ -9012,6 +9042,67 @@
     }
   },
   {
+    "ghsa_id": "GHSA-chqm-wxm2-w73w",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-chqm-wxm2-w73w",
+    "html_url": "https://github.com/advisories/GHSA-chqm-wxm2-w73w",
+    "summary": "Duplicate Advisory: OpenClaw: Mattermost handlers could fall open when channel type was missing",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-gp79-m99v-gjmh. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.6 contains an improper access control vulnerability in Mattermost event handlers that fails to validate channel type metadata. Attackers can bypass intended DM policy decisions by sending crafted Mattermost events missing channel type information to process restricted content.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-chqm-wxm2-w73w",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-gp79-m99v-gjmh",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53837",
+      "https://www.vulncheck.com/advisories/openclaw-missing-channel-type-validation-in-mattermost-event-handlers",
+      "https://github.com/advisories/GHSA-chqm-wxm2-w73w"
+    ],
+    "published_at": "2026-06-13T00:34:33Z",
+    "updated_at": "2026-08-28T15:53:22Z",
+    "github_reviewed_at": "2026-08-28T15:53:21Z",
+    "nvd_published_at": "2026-06-12T22:16:55Z",
+    "withdrawn_at": "2026-08-28T15:53:21Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.5.6",
+        "first_patched_version": "2026.5.6",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+        "score": 3.7
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N",
+        "score": 6.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-636",
+        "name": "Not Failing Securely ('Failing Open')"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "score": 3.7
+    }
+  },
+  {
     "ghsa_id": "GHSA-ffhm-8fwq-7q27",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-ffhm-8fwq-7q27",
@@ -9073,33 +9164,94 @@
     }
   },
   {
-    "ghsa_id": "GHSA-gwcq-453v-2frr",
+    "ghsa_id": "GHSA-35c7-4r45-9gv3",
     "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-gwcq-453v-2frr",
-    "html_url": "https://github.com/advisories/GHSA-gwcq-453v-2frr",
-    "summary": "Duplicate Advisory: OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-mhq8-78pj-5j79. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains a policy enforcement vulnerability in system.run safe-bin allowlist validation that allows shell expansion to modify command interpretation on POSIX nodes. Authenticated operators can exploit shell metacharacters in approved commands to read unintended node-local files and expose sensitive configuration data.",
+    "url": "https://api.github.com/advisories/GHSA-35c7-4r45-9gv3",
+    "html_url": "https://github.com/advisories/GHSA-35c7-4r45-9gv3",
+    "summary": "Duplicate Advisory: OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-77pv-3w4q-vrj5. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.27 contains an authorization bypass vulnerability in QQBot pre-dispatch slash commands that allows authenticated senders to skip allowFrom policy checks. Attackers can invoke slash commands before configured access control policies are applied, potentially triggering command handling from blocked senders depending on operator configuration.",
     "type": "reviewed",
     "severity": "high",
     "repository_advisory_url": null,
-    "source_code_location": "",
+    "source_code_location": "https://github.com/openclaw/openclaw",
     "identifiers": [
       {
-        "value": "GHSA-gwcq-453v-2frr",
+        "value": "GHSA-35c7-4r45-9gv3",
         "type": "GHSA"
       }
     ],
     "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhq8-78pj-5j79",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-53831",
-      "https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-shell-expansion-in-system-run-safe-bin-allowlist",
-      "https://github.com/advisories/GHSA-gwcq-453v-2frr"
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-77pv-3w4q-vrj5",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53834",
+      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-qqbot-pre-dispatch-slash-commands",
+      "https://github.com/advisories/GHSA-35c7-4r45-9gv3"
     ],
     "published_at": "2026-06-13T00:34:32Z",
-    "updated_at": "2026-08-25T16:38:42Z",
-    "github_reviewed_at": "2026-08-25T16:38:39Z",
+    "updated_at": "2026-08-28T15:55:18Z",
+    "github_reviewed_at": "2026-08-28T15:55:16Z",
+    "nvd_published_at": "2026-06-12T22:16:55Z",
+    "withdrawn_at": "2026-08-28T15:55:16Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.4.27",
+        "first_patched_version": "2026.4.27",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+        "score": 7.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 8.2
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-863",
+        "name": "Incorrect Authorization"
+      }
+    ],
+    "credits": [],
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "score": 7.5
+    }
+  },
+  {
+    "ghsa_id": "GHSA-3qg8-hq7j-jj33",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-3qg8-hq7j-jj33",
+    "html_url": "https://github.com/advisories/GHSA-3qg8-hq7j-jj33",
+    "summary": "Duplicate Advisory: OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
+    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-rggc-m335-3wvj. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains an identity header validation vulnerability allowing local same-host callers to forge trusted-proxy identity headers. Attackers with access to the proxy-facing Gateway port can supply forged identity headers to assume operator identity and potentially escalate privileges.",
+    "type": "reviewed",
+    "severity": "high",
+    "repository_advisory_url": null,
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-3qg8-hq7j-jj33",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-53832",
+      "https://www.vulncheck.com/advisories/openclaw-identity-header-forgery-via-trusted-proxy-configuration",
+      "https://github.com/advisories/GHSA-3qg8-hq7j-jj33"
+    ],
+    "published_at": "2026-06-13T00:34:32Z",
+    "updated_at": "2026-08-28T15:55:43Z",
+    "github_reviewed_at": "2026-08-28T15:55:42Z",
     "nvd_published_at": "2026-06-12T22:16:54Z",
-    "withdrawn_at": "2026-08-25T16:38:39Z",
+    "withdrawn_at": "2026-08-28T15:55:42Z",
     "vulnerabilities": [
       {
         "package": {
@@ -9108,128 +9260,6 @@
         },
         "vulnerable_version_range": "< 2026.5.18",
         "first_patched_version": "2026.5.18",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-        "score": 8.3
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 7.6
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-367",
-        "name": "Time-of-check Time-of-use (TOCTOU) Race Condition"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
-      "score": 8.3
-    }
-  },
-  {
-    "ghsa_id": "GHSA-p68j-q8j9-jwf5",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-p68j-q8j9-jwf5",
-    "html_url": "https://github.com/advisories/GHSA-p68j-q8j9-jwf5",
-    "summary": "Duplicate Advisory: OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-275c-xpvc-jgfw. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.22 contains a webhook secret revocation bypass vulnerability allowing callers with old Slack and Zalo webhook secrets to remain active after secrets.reload. Attackers can exploit the stale-secret window to deliver webhook events after operator-expected secret revocation, potentially accepting previous credentials.",
-    "type": "reviewed",
-    "severity": "medium",
-    "repository_advisory_url": null,
-    "source_code_location": "",
-    "identifiers": [
-      {
-        "value": "GHSA-p68j-q8j9-jwf5",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-275c-xpvc-jgfw",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-53830",
-      "https://www.vulncheck.com/advisories/openclaw-webhook-secret-revocation-bypass-via-secrets-reload",
-      "https://github.com/advisories/GHSA-p68j-q8j9-jwf5"
-    ],
-    "published_at": "2026-06-13T00:34:32Z",
-    "updated_at": "2026-08-24T21:06:00Z",
-    "github_reviewed_at": "2026-08-24T21:05:58Z",
-    "nvd_published_at": "2026-06-12T22:16:54Z",
-    "withdrawn_at": "2026-08-24T21:05:58Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.22",
-        "first_patched_version": "2026.4.22",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
-        "score": 6.5
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 6.0
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-613",
-        "name": "Insufficient Session Expiration"
-      }
-    ],
-    "credits": [],
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
-      "score": 6.5
-    }
-  },
-  {
-    "ghsa_id": "GHSA-r27j-fxmq-rg2q",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-r27j-fxmq-rg2q",
-    "html_url": "https://github.com/advisories/GHSA-r27j-fxmq-rg2q",
-    "summary": "Duplicate Advisory: OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-jvm4-4j77-39p6. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.29 contains an authorization bypass vulnerability in the QQBot streaming command that allows authenticated senders to mutate configuration without explicit allowFrom restrictions. Attackers can modify QQBot streaming configuration outside intended admin policy by reaching the affected command without non-wildcard allowlist entry requirements.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-r27j-fxmq-rg2q",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-jvm4-4j77-39p6",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-53833",
-      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-qqbot-streaming-command",
-      "https://github.com/advisories/GHSA-r27j-fxmq-rg2q"
-    ],
-    "published_at": "2026-06-13T00:34:32Z",
-    "updated_at": "2026-08-27T21:56:56Z",
-    "github_reviewed_at": "2026-08-27T21:56:16Z",
-    "nvd_published_at": "2026-06-12T22:16:54Z",
-    "withdrawn_at": "2026-08-27T21:56:16Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.29",
-        "first_patched_version": "2026.4.29",
         "vulnerable_functions": []
       }
     ],

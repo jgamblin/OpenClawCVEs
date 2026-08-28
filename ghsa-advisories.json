@@ -320,8 +320,8 @@
   },
   {
     "ghsa_id": "GHSA-77pv-3w4q-vrj5",
-    "cve_id": null,
-    "severity": "medium",
+    "cve_id": "CVE-2026-53834",
+    "severity": "high",
     "title": "OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
     "published": "2026-07-02",
     "html_url": "https://github.com/advisories/GHSA-77pv-3w4q-vrj5",
@@ -425,7 +425,7 @@
   },
   {
     "ghsa_id": "GHSA-gp79-m99v-gjmh",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53837",
     "severity": "medium",
     "title": "OpenClaw: Mattermost handlers could fall open when channel type was missing",
     "published": "2026-07-02",
@@ -708,7 +708,7 @@
   },
   {
     "ghsa_id": "GHSA-rggc-m335-3wvj",
-    "cve_id": null,
+    "cve_id": "CVE-2026-53832",
     "severity": "high",
     "title": "OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
     "published": "2026-07-02",
@@ -1996,6 +1996,27 @@
     ]
   },
   {
+    "ghsa_id": "GHSA-chqm-wxm2-w73w",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: OpenClaw: Mattermost handlers could fall open when channel type was missing",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-chqm-wxm2-w73w",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.5.6"
+    ],
+    "fixed_versions": [
+      "2026.5.6"
+    ],
+    "fixed_version": "2026.5.6",
+    "cwes": [
+      "CWE-636"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-ffhm-8fwq-7q27",
     "cve_id": null,
     "severity": "high",
@@ -2017,12 +2038,33 @@
     ]
   },
   {
-    "ghsa_id": "GHSA-gwcq-453v-2frr",
+    "ghsa_id": "GHSA-35c7-4r45-9gv3",
     "cve_id": null,
     "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
+    "title": "Duplicate Advisory: OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
     "published": "2026-06-13",
-    "html_url": "https://github.com/advisories/GHSA-gwcq-453v-2frr",
+    "html_url": "https://github.com/advisories/GHSA-35c7-4r45-9gv3",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.4.27"
+    ],
+    "fixed_versions": [
+      "2026.4.27"
+    ],
+    "fixed_version": "2026.4.27",
+    "cwes": [
+      "CWE-863"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-3qg8-hq7j-jj33",
+    "cve_id": null,
+    "severity": "high",
+    "title": "Duplicate Advisory: OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
+    "published": "2026-06-13",
+    "html_url": "https://github.com/advisories/GHSA-3qg8-hq7j-jj33",
     "packages": [
       "npm/openclaw"
     ],
@@ -2033,48 +2075,6 @@
       "2026.5.18"
     ],
     "fixed_version": "2026.5.18",
-    "cwes": [
-      "CWE-367"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-p68j-q8j9-jwf5",
-    "cve_id": null,
-    "severity": "medium",
-    "title": "Duplicate Advisory: OpenClaw: Slack and Zalo webhook secrets could remain active after secrets.reload",
-    "published": "2026-06-13",
-    "html_url": "https://github.com/advisories/GHSA-p68j-q8j9-jwf5",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.22"
-    ],
-    "fixed_versions": [
-      "2026.4.22"
-    ],
-    "fixed_version": "2026.4.22",
-    "cwes": [
-      "CWE-613"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-r27j-fxmq-rg2q",
-    "cve_id": null,
-    "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
-    "published": "2026-06-13",
-    "html_url": "https://github.com/advisories/GHSA-r27j-fxmq-rg2q",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.29"
-    ],
-    "fixed_versions": [
-      "2026.4.29"
-    ],
-    "fixed_version": "2026.4.29",
     "cwes": [
       "CWE-290"
     ]
