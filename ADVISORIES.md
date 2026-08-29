@@ -3,7 +3,7 @@
 > Complete listing of all 157 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-08-28 21:56 UTC</sub>
+<sub>Last updated: 2026-08-29 06:24 UTC</sub>
 
 ---
 
@@ -697,12 +697,12 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | [CVE-2026-53829](https://www.cve.org/CVERecord?id=CVE-2026-53829) | VulnCheck | 2026-06-12 | PUBLISHED | — |
 | [CVE-2026-53830](https://www.cve.org/CVERecord?id=CVE-2026-53830) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
 | [CVE-2026-53831](https://www.cve.org/CVERecord?id=CVE-2026-53831) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
-| [CVE-2026-53832](https://www.cve.org/CVERecord?id=CVE-2026-53832) | VulnCheck | 2026-06-12 | PUBLISHED | — |
+| [CVE-2026-53832](https://www.cve.org/CVERecord?id=CVE-2026-53832) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
 | [CVE-2026-53833](https://www.cve.org/CVERecord?id=CVE-2026-53833) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
-| [CVE-2026-53834](https://www.cve.org/CVERecord?id=CVE-2026-53834) | VulnCheck | 2026-06-12 | PUBLISHED | — |
+| [CVE-2026-53834](https://www.cve.org/CVERecord?id=CVE-2026-53834) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
 | [CVE-2026-53835](https://www.cve.org/CVERecord?id=CVE-2026-53835) | VulnCheck | 2026-06-12 | PUBLISHED | — |
 | [CVE-2026-53836](https://www.cve.org/CVERecord?id=CVE-2026-53836) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
-| [CVE-2026-53837](https://www.cve.org/CVERecord?id=CVE-2026-53837) | VulnCheck | 2026-06-12 | PUBLISHED | — |
+| [CVE-2026-53837](https://www.cve.org/CVERecord?id=CVE-2026-53837) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
 | [CVE-2026-53838](https://www.cve.org/CVERecord?id=CVE-2026-53838) | VulnCheck | 2026-06-12 | PUBLISHED | ✅ |
 | [CVE-2026-53839](https://www.cve.org/CVERecord?id=CVE-2026-53839) | VulnCheck | 2026-06-12 | PUBLISHED | — |
 | [CVE-2026-53840](https://www.cve.org/CVERecord?id=CVE-2026-53840) | VulnCheck | 2026-06-16 | PUBLISHED | ✅ |
