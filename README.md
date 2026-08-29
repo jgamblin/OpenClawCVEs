@@ -17,7 +17,7 @@
 An automated tracker that continuously monitors [OpenClaw](https://github.com/openclaw/openclaw) security advisories across the GitHub Advisory Database, repo-level security advisories, and a full scan of the [CVE V5 (cvelistV5)](https://github.com/CVEProject/cvelistV5) registry covering **every CVE affecting OpenClaw regardless of which CNA assigned it**. On each run it pulls the latest data, reconciles GHSA → CVE publication state, breaks the totals down by assigning CNA, and regenerates this dashboard so you always have an up-to-date picture of the project's vulnerability landscape.
 
 <p align="center">
-  <sub>Last updated: 2026-08-29 06:24 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates every 6h</sub>
+  <sub>Last updated: 2026-08-29 16:28 UTC · <a href="LICENSE">MIT License</a> · <a href="ADVISORIES.md">Full Advisory List</a> · <a href="SECURITY.md">Security Policy</a> · Data: <a href="https://github.com/CVEProject/cvelistV5">cvelistV5</a> + <a href="https://github.com/github/advisory-database">Advisory DB</a> · Updates every 6h</sub>
 </p>
 
 ---
@@ -95,17 +95,17 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 
 | CVE ID | Severity | CVSS | Title | CWE | Published |
 |--------|----------|------|-------|-----|-----------|
-| [CVE-2026-24763](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.8 | OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable | CWE-78 | 2026-02-02 |
 | [CVE-2026-25253](https://github.com/openclaw/openclaw/security/advisories/GHSA-g8p2-7wf7-98mq) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.8 | OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026-02-01 |
+| [CVE-2026-24763](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.8 | OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable | CWE-78 | 2026-02-02 |
 | [CVE-2026-28478](https://github.com/openclaw/openclaw/security/advisories/GHSA-q447-rj3r-2cgh) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw affected by denial of service via unbounded webhook request body buffering | CWE-770 | 2026-03-05 |
 | [CVE-2026-53814](https://github.com/openclaw/openclaw/security/advisories/GHSA-6fvr-66p3-3qj4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority | CWE-266 | 2026-06-11 |
 | [CVE-2026-53819](https://github.com/openclaw/openclaw/security/advisories/GHSA-8wg3-5mcm-fjq8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows | CWE-426 | 2026-06-11 |
 | [CVE-2026-53817](https://github.com/openclaw/openclaw/security/advisories/GHSA-chr9-m4q2-76hw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing | CWE-290 | 2026-06-11 |
-| [CVE-2026-53836](https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases | CWE-184 | 2026-06-12 |
 | [CVE-2026-53843](https://github.com/openclaw/openclaw/security/advisories/GHSA-q99w-vh6v-q3v7) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw: Pairing-scoped device session could restore revoked node token authority | CWE-613 | 2026-06-16 |
+| [CVE-2026-53836](https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.7 | OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases | CWE-184 | 2026-06-12 |
 | [CVE-2026-53816](https://github.com/openclaw/openclaw/security/advisories/GHSA-3c6j-hq33-3jv4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw < 2026.5.18 - Exec Lifecycle Event Forgery via Paired Node | CWE-862 | 2026-06-11 |
-| [CVE-2026-53849](https://github.com/openclaw/openclaw/security/advisories/GHSA-cw4q-gqg5-g38h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw: Discord allowFrom could bind to mutable display names | CWE-290 | 2026-06-16 |
 | [CVE-2026-53857](https://github.com/openclaw/openclaw/security/advisories/GHSA-8c59-hr4w-qg69) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw < 2026.5.3 - Mutable Display Name Binding in Zalo allowFrom Policy | CWE-290 | 2026-06-16 |
+| [CVE-2026-53849](https://github.com/openclaw/openclaw/security/advisories/GHSA-cw4q-gqg5-g38h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.6 | OpenClaw: Discord allowFrom could bind to mutable display names | CWE-290 | 2026-06-16 |
 | [CVE-2026-28469](https://github.com/openclaw/openclaw/security/advisories/GHSA-rq6g-px6m-c248) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.2 | OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting | CWE-639 | 2026-03-05 |
 | [CVE-2026-53834](https://github.com/openclaw/openclaw/security/advisories/GHSA-77pv-3w4q-vrj5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8.2 | OpenClaw < 2026.4.27 - Authorization Bypass in QQBot Pre-dispatch Slash Commands | CWE-863 | 2026-06-12 |
 | [CVE-2026-35630](https://github.com/openclaw/openclaw/security/advisories/GHSA-mgq6-vr84-7m2j) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 8 | OpenClaw: QQBot native approval buttons did not enforce configured approver identity | CWE-862 | 2026-05-29 |
@@ -114,13 +114,13 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 | [CVE-2026-53811](https://github.com/openclaw/openclaw/security/advisories/GHSA-7hxm-f538-3xp6) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.7 | OpenClaw: Matrix allowFrom could bind to mutable display names | CWE-290 | 2026-06-11 |
 | [CVE-2026-53810](https://github.com/openclaw/openclaw/security/advisories/GHSA-v6r2-jh58-xx6w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.7 | OpenClaw's marketplace runtime extension metadata could point at unscanned payloads | CWE-829 | 2026-06-11 |
 | [CVE-2026-53831](https://github.com/openclaw/openclaw/security/advisories/GHSA-mhq8-78pj-5j79) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion | CWE-367 | 2026-06-12 |
-| [CVE-2026-53853](https://github.com/openclaw/openclaw/security/advisories/GHSA-v2ww-5rh7-2h5v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns | CWE-693, CWE-863 | 2026-06-16 |
 | [CVE-2026-53855](https://github.com/openclaw/openclaw/security/advisories/GHSA-5cj2-3jr2-5h77) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks | CWE-184, CWE-863 | 2026-06-16 |
+| [CVE-2026-53853](https://github.com/openclaw/openclaw/security/advisories/GHSA-v2ww-5rh7-2h5v) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns | CWE-693, CWE-863 | 2026-06-16 |
 | [CVE-2026-53864](https://github.com/openclaw/openclaw/security/advisories/GHSA-ccwh-wwpp-6wg5) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw: Host environment sanitizer missed two Node.js control variables | CWE-184 | 2026-06-16 |
 | [CVE-2026-53866](https://github.com/openclaw/openclaw/security/advisories/GHSA-f397-5vjw-v2c2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.6 | OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing | CWE-862 | 2026-06-16 |
 | [CVE-2026-28458](https://github.com/openclaw/openclaw/security/advisories/GHSA-mr32-vwc2-5j6h) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.4 | OpenClaw's Browser Relay /cdp websocket is missing auth which could allow cross-tab cookie access | CWE-306 | 2026-03-05 |
-| [CVE-2026-53832](https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.4 | OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration | CWE-290 | 2026-06-12 |
 | [CVE-2026-53833](https://github.com/openclaw/openclaw/security/advisories/GHSA-jvm4-4j77-39p6) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.4 | OpenClaw: QQBot streaming command could mutate config without explicit allowFrom | CWE-290 | 2026-06-12 |
+| [CVE-2026-53832](https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.4 | OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration | CWE-290 | 2026-06-12 |
 | [CVE-2026-53813](https://github.com/openclaw/openclaw/security/advisories/GHSA-v8cx-933x-r976) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.3 | OpenClaw: Fake package roots could influence memory-core artifact loading | CWE-427 | 2026-06-11 |
 | [CVE-2026-53865](https://github.com/openclaw/openclaw/security/advisories/GHSA-rx78-29qr-5hq8) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.2 | OpenClaw: Workspace-derived service PATH could influence trash command selection | CWE-426 | 2026-06-16 |
 | [CVE-2026-26317](https://github.com/openclaw/openclaw/security/advisories/GHSA-3fqr-4cg8-h96q) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | 7.1 | OpenClaw affected by cross-site request forgery (CSRF) through loopback browser mutation endpoints | CWE-352 | 2026-02-19 |
@@ -146,35 +146,19 @@ These CVEs have full records in the [CVEProject/cvelistV5](https://github.com/CV
 | [CVE-2026-53856](https://github.com/openclaw/openclaw/security/advisories/GHSA-rwp6-7w3q-75fq) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 5.7 | OpenClaw: Config recovery could restore openclaw.json with broad file permissions | CWE-732 | 2026-06-16 |
 | [CVE-2026-53847](https://github.com/openclaw/openclaw/security/advisories/GHSA-x629-46cc-7xgw) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 5.3 | OpenClaw < 2026.5.6 - Privilege Escalation via Active Memory Write Scope | CWE-266 | 2026-06-16 |
 | [CVE-2026-53861](https://github.com/openclaw/openclaw/security/advisories/GHSA-c226-q6fx-6j6c) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 5.3 | OpenClaw < 2026.5.6 - Allowlist Bypass via Combined POSIX Inline Flags on macOS | CWE-184 | 2026-06-16 |
+| [CVE-2026-19007]() | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 5.3 | mf-yang openclaw-cn reply-elevated.ts isApprovedElevatedSender privileges management | CWE-269, CWE-266 | 2026-08-06 |
+| [CVE-2026-19008]() | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 5.3 | mf-yang openclaw-cn apply_patch Tool sandbox-paths.ts assertNoSymlinkEscape link following | CWE-59 | 2026-08-06 |
 | [CVE-2026-53812](https://github.com/openclaw/openclaw/security/advisories/GHSA-2hfg-4fh4-qp7f) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 4.9 | OpenClaw's browser act interactions could bypass private-network navigation checks | CWE-918 | 2026-06-11 |
 | [CVE-2026-53809](https://github.com/openclaw/openclaw/security/advisories/GHSA-p39j-x9h5-q66m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | 4.8 | OpenClaw < 2026.4.25 - Provider Alias Confusion in Embedded Runner Policy | CWE-863 | 2026-06-11 |
 | [CVE-2026-53845](https://github.com/openclaw/openclaw/security/advisories/GHSA-68xw-r643-9p5w) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw: Skill-command dispatch could skip before-tool-call hooks | CWE-693 | 2026-06-16 |
-| [CVE-2026-53848](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers | CWE-184 | 2026-06-16 |
 | [CVE-2026-53852](https://github.com/openclaw/openclaw/security/advisories/GHSA-8mg9-j9cf-54cj) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing | CWE-636 | 2026-06-16 |
+| [CVE-2026-53848](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers | CWE-184 | 2026-06-16 |
 | [CVE-2026-53862](https://github.com/openclaw/openclaw/security/advisories/GHSA-9v8j-9c9g-w66c) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening | CWE-266, CWE-345 | 2026-06-16 |
 | [CVE-2026-53860](https://github.com/openclaw/openclaw/security/advisories/GHSA-8j37-5w68-wj2g) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.3 | OpenClaw: BlueBubbles sender policy could match mutable conversation identifiers | CWE-807, CWE-863 | 2026-06-16 |
 | [CVE-2026-53841](https://github.com/openclaw/openclaw/security/advisories/GHSA-w9hf-3pp7-pvxv) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | 2.1 | OpenClaw: Exported session HTML could keep unsafe markdown links | CWE-83 | 2026-06-16 |
 
 <details>
 <summary><strong>📖 Detailed CVE Analysis (click to expand)</strong></summary>
-
-### CVE-2026-24763 — OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 8.8 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H` |
-| **CWE** | CWE-78 (CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')) |
-| **Affected** | < 2026.1.29 |
-| **Vendor/Product** | clawdbot / clawdbot |
-| **Advisory** | [GHSA-mc68-q9jw-2h3v](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) |
-
-OpenClaw (formerly  Clawdbot) is a personal AI assistant you run on your own devices. Prior to 2026.1.29, a command injection vulnerability existed in OpenClaw’s Docker sandbox execution mechanism due to unsafe handling of the PATH environment variable when constructing shell commands. An authenticated user able to control environment variables could influence command execution within the container context. This vulnerability is fixed in 2026.1.29.
-
-> **Naming note:** Uses old name `clawdbot/clawdbot` as vendor/product.
-**References:**
-- [https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75](https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75)
-- [https://github.com/openclaw/openclaw/releases/tag/v2026.1.29](https://github.com/openclaw/openclaw/releases/tag/v2026.1.29)
----
 
 ### CVE-2026-25253 — OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl
 
@@ -194,6 +178,24 @@ OpenClaw (aka clawdbot or Moltbot) before 2026.1.29 obtains a gatewayUrl value f
 - [blog](https://openclaw.ai/blog)
 - [one-click-rce-moltbot](https://ethiack.com/news/blog/one-click-rce-moltbot)
 - [2016913750557651228](https://x.com/0xacb/status/2016913750557651228)
+---
+
+### CVE-2026-24763 — OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 8.8 (HIGH) — `CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H` |
+| **CWE** | CWE-78 (CWE-78: Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')) |
+| **Affected** | < 2026.1.29 |
+| **Vendor/Product** | clawdbot / clawdbot |
+| **Advisory** | [GHSA-mc68-q9jw-2h3v](https://github.com/openclaw/openclaw/security/advisories/GHSA-mc68-q9jw-2h3v) |
+
+OpenClaw (formerly  Clawdbot) is a personal AI assistant you run on your own devices. Prior to 2026.1.29, a command injection vulnerability existed in OpenClaw’s Docker sandbox execution mechanism due to unsafe handling of the PATH environment variable when constructing shell commands. An authenticated user able to control environment variables could influence command execution within the container context. This vulnerability is fixed in 2026.1.29.
+
+> **Naming note:** Uses old name `clawdbot/clawdbot` as vendor/product.
+**References:**
+- [https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75](https://github.com/openclaw/openclaw/commit/771f23d36b95ec2204cc9a0054045f5d8439ea75)
+- [https://github.com/openclaw/openclaw/releases/tag/v2026.1.29](https://github.com/openclaw/openclaw/releases/tag/v2026.1.29)
 ---
 
 ### CVE-2026-28478 — OpenClaw affected by denial of service via unbounded webhook request body buffering
@@ -261,22 +263,6 @@ OpenClaw before 2026.5.22 contains a locality validation vulnerability in Contro
 - [openclaw-control-ui-locality-spoofing-in-device-pairing](https://www.vulncheck.com/advisories/openclaw-control-ui-locality-spoofing-in-device-pairing)
 ---
 
-### CVE-2026-53836 — OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 8.7 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N` |
-| **CWE** | CWE-184 (Incomplete List of Disallowed Inputs) |
-| **Affected** | < 2026.5.12 |
-| **Vendor/Product** | OpenClaw / OpenClaw |
-| **Advisory** | [GHSA-j472-gf56-x589](https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589) |
-
-OpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution allowlist checks by using unrecognized encoded-command alias forms to execute arbitrary PowerShell content.
-
-**References:**
-- [VulnCheck Advisory: OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases](https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-powershell-encoded-command-aliases)
----
-
 ### CVE-2026-53843 — OpenClaw: Pairing-scoped device session could restore revoked node token authority
 
 | Field | Detail |
@@ -291,6 +277,22 @@ OpenClaw before 2026.5.26 contains an authorization bypass vulnerability where a
 
 **References:**
 - [VulnCheck Advisory: OpenClaw < 2026.5.26 - Node Token Revocation Bypass via Pairing-Scoped Device Session](https://www.vulncheck.com/advisories/openclaw-node-token-revocation-bypass-via-pairing-scoped-device-session)
+---
+
+### CVE-2026-53836 — OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 8.7 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N` |
+| **CWE** | CWE-184 (Incomplete List of Disallowed Inputs) |
+| **Affected** | < 2026.5.12 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-j472-gf56-x589](https://github.com/openclaw/openclaw/security/advisories/GHSA-j472-gf56-x589) |
+
+OpenClaw before 2026.5.12 contains an allowlist bypass vulnerability in PowerShell encoded-command handling that allows attackers to execute encoded commands using abbreviated flag aliases not recognized by the allowlist parser. Remote authenticated operators can bypass execution allowlist checks by using unrecognized encoded-command alias forms to execute arbitrary PowerShell content.
+
+**References:**
+- [VulnCheck Advisory: OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases](https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-powershell-encoded-command-aliases)
 ---
 
 ### CVE-2026-53816 — OpenClaw < 2026.5.18 - Exec Lifecycle Event Forgery via Paired Node
@@ -309,22 +311,6 @@ OpenClaw before 2026.5.18 contains an insufficient provenance validation vulnera
 - [openclaw-exec-lifecycle-event-forgery-via-paired-node](https://www.vulncheck.com/advisories/openclaw-exec-lifecycle-event-forgery-via-paired-node)
 ---
 
-### CVE-2026-53849 — OpenClaw: Discord allowFrom could bind to mutable display names
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 8.6 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N` |
-| **CWE** | CWE-290 (Authentication Bypass by Spoofing) |
-| **Affected** | < 2026.5.7 |
-| **Vendor/Product** | OpenClaw / OpenClaw |
-| **Advisory** | [GHSA-cw4q-gqg5-g38h](https://github.com/openclaw/openclaw/security/advisories/GHSA-cw4q-gqg5-g38h) |
-
-OpenClaw before 2026.5.7 contains a privilege escalation vulnerability where the allowFrom feature improperly validates Discord account identity using mutable display names instead of immutable user IDs. Attackers with Discord accounts can change their display name to match a policy entry and gain unauthorized agent access intended for another Discord identity.
-
-**References:**
-- [VulnCheck Advisory: OpenClaw < 2026.5.7 - Privilege Escalation via Mutable Discord Display Names in allowFrom](https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-mutable-discord-display-names-in-allowfrom)
----
-
 ### CVE-2026-53857 — OpenClaw < 2026.5.3 - Mutable Display Name Binding in Zalo allowFrom Policy
 
 | Field | Detail |
@@ -339,6 +325,22 @@ OpenClaw before 2026.5.3 contains a policy enforcement vulnerability where Zalo 
 
 **References:**
 - [VulnCheck Advisory: OpenClaw < 2026.5.3 - Mutable Display Name Binding in Zalo allowFrom Policy](https://www.vulncheck.com/advisories/openclaw-mutable-display-name-binding-in-zalo-allowfrom-policy)
+---
+
+### CVE-2026-53849 — OpenClaw: Discord allowFrom could bind to mutable display names
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 8.6 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N` |
+| **CWE** | CWE-290 (Authentication Bypass by Spoofing) |
+| **Affected** | < 2026.5.7 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-cw4q-gqg5-g38h](https://github.com/openclaw/openclaw/security/advisories/GHSA-cw4q-gqg5-g38h) |
+
+OpenClaw before 2026.5.7 contains a privilege escalation vulnerability where the allowFrom feature improperly validates Discord account identity using mutable display names instead of immutable user IDs. Attackers with Discord accounts can change their display name to match a policy entry and gain unauthorized agent access intended for another Discord identity.
+
+**References:**
+- [VulnCheck Advisory: OpenClaw < 2026.5.7 - Privilege Escalation via Mutable Discord Display Names in allowFrom](https://www.vulncheck.com/advisories/openclaw-privilege-escalation-via-mutable-discord-display-names-in-allowfrom)
 ---
 
 ### CVE-2026-28469 — OpenClaw Google Chat shared-path webhook target ambiguity allowed cross-account policy-context misrouting
@@ -468,22 +470,6 @@ OpenClaw before 2026.5.18 contains a policy enforcement vulnerability in system.
 - [VulnCheck Advisory: OpenClaw < 2026.5.18 - Arbitrary File Read via Shell Expansion in system.run Safe-bin Allowlist](https://www.vulncheck.com/advisories/openclaw-arbitrary-file-read-via-shell-expansion-in-system-run-safe-bin-allowlist)
 ---
 
-### CVE-2026-53853 — OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 7.6 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N` |
-| **CWE** | CWE-693 (Protection Mechanism Failure), CWE-863 (Incorrect Authorization) |
-| **Affected** | < 2026.5.12 |
-| **Vendor/Product** | OpenClaw / OpenClaw |
-| **Advisory** | [GHSA-v2ww-5rh7-2h5v](https://github.com/openclaw/openclaw/security/advisories/GHSA-v2ww-5rh7-2h5v) |
-
-OpenClaw before 2026.5.12 contains an argument pattern validation bypass in the exec allowlist that allows attackers to execute disallowed arguments for allowlisted executables on Linux and macOS systems. Attackers can bypass configured argPattern restrictions by directly invoking allowlisted executables with unrestricted arguments, potentially enabling unauthorized file access, network access, or command execution.
-
-**References:**
-- [VulnCheck Advisory: OpenClaw < 2026.5.12 - Argument Pattern Bypass in Exec Allowlist via Linux and macOS](https://www.vulncheck.com/advisories/openclaw-argument-pattern-bypass-in-exec-allowlist-via-linux-and-macos)
----
-
 ### CVE-2026-53855 — OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks
 
 | Field | Detail |
@@ -498,6 +484,22 @@ OpenClaw before 2026.4.2 contains an inline-eval bypass vulnerability allowing a
 
 **References:**
 - [VulnCheck Advisory: OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks](https://www.vulncheck.com/advisories/openclaw-shell-positional-parameters-bypass-in-inline-eval-checks)
+---
+
+### CVE-2026-53853 — OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 7.6 (HIGH) — `CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:L/SC:N/SI:N/SA:N` |
+| **CWE** | CWE-693 (Protection Mechanism Failure), CWE-863 (Incorrect Authorization) |
+| **Affected** | < 2026.5.12 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-v2ww-5rh7-2h5v](https://github.com/openclaw/openclaw/security/advisories/GHSA-v2ww-5rh7-2h5v) |
+
+OpenClaw before 2026.5.12 contains an argument pattern validation bypass in the exec allowlist that allows attackers to execute disallowed arguments for allowlisted executables on Linux and macOS systems. Attackers can bypass configured argPattern restrictions by directly invoking allowlisted executables with unrestricted arguments, potentially enabling unauthorized file access, network access, or command execution.
+
+**References:**
+- [VulnCheck Advisory: OpenClaw < 2026.5.12 - Argument Pattern Bypass in Exec Allowlist via Linux and macOS](https://www.vulncheck.com/advisories/openclaw-argument-pattern-bypass-in-exec-allowlist-via-linux-and-macos)
 ---
 
 ### CVE-2026-53864 — OpenClaw: Host environment sanitizer missed two Node.js control variables
@@ -549,22 +551,6 @@ OpenClaw version 2026.1.20 prior to 2026.2.1 contains a vulnerability in the Bro
 - [VulnCheck Advisory: OpenClaw 2026.1.20 < 2026.2.1 - Missing Authentication in Browser Relay /cdp WebSocket Endpoint](https://www.vulncheck.com/advisories/openclaw-missing-authentication-in-browser-relay-cdp-websocket-endpoint)
 ---
 
-### CVE-2026-53832 — OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 7.4 (HIGH) — `CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N` |
-| **CWE** | CWE-290 (Authentication Bypass by Spoofing) |
-| **Affected** | < 2026.5.18 |
-| **Vendor/Product** | OpenClaw / OpenClaw |
-| **Advisory** | [GHSA-rggc-m335-3wvj](https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj) |
-
-OpenClaw before 2026.5.18 contains an identity header validation vulnerability allowing local same-host callers to forge trusted-proxy identity headers. Attackers with access to the proxy-facing Gateway port can supply forged identity headers to assume operator identity and potentially escalate privileges.
-
-**References:**
-- [VulnCheck Advisory: OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration](https://www.vulncheck.com/advisories/openclaw-identity-header-forgery-via-trusted-proxy-configuration)
----
-
 ### CVE-2026-53833 — OpenClaw: QQBot streaming command could mutate config without explicit allowFrom
 
 | Field | Detail |
@@ -579,6 +565,22 @@ OpenClaw before 2026.4.29 contains an authorization bypass vulnerability in the 
 
 **References:**
 - [VulnCheck Advisory: OpenClaw < 2026.4.29 - Authorization Bypass via QQBot Streaming Command](https://www.vulncheck.com/advisories/openclaw-authorization-bypass-via-qqbot-streaming-command)
+---
+
+### CVE-2026-53832 — OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 7.4 (HIGH) — `CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N` |
+| **CWE** | CWE-290 (Authentication Bypass by Spoofing) |
+| **Affected** | < 2026.5.18 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-rggc-m335-3wvj](https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj) |
+
+OpenClaw before 2026.5.18 contains an identity header validation vulnerability allowing local same-host callers to forge trusted-proxy identity headers. Attackers with access to the proxy-facing Gateway port can supply forged identity headers to assume operator identity and potentially escalate privileges.
+
+**References:**
+- [VulnCheck Advisory: OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration](https://www.vulncheck.com/advisories/openclaw-identity-header-forgery-via-trusted-proxy-configuration)
 ---
 
 ### CVE-2026-53813 — OpenClaw: Fake package roots could influence memory-core artifact loading
@@ -990,6 +992,50 @@ OpenClaw before 2026.5.6 contains an allowlist bypass vulnerability in the macOS
 - [VulnCheck Advisory: OpenClaw < 2026.5.6 - Allowlist Bypass via Combined POSIX Inline Flags on macOS](https://www.vulncheck.com/advisories/openclaw-allowlist-bypass-via-combined-posix-inline-flags-on-macos)
 ---
 
+### CVE-2026-19007 — mf-yang openclaw-cn reply-elevated.ts isApprovedElevatedSender privileges management
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 5.3 (MEDIUM) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P` |
+| **CWE** | CWE-269 (Improper Privilege Management), CWE-266 (Incorrect Privilege Assignment) |
+| **Affected** | < 0.2.1 |
+| **Vendor/Product** | mf-yang / openclaw-cn |
+| **Advisory** | []() |
+
+A vulnerability was determined in mf-yang openclaw-cn up to 0.2.1. This vulnerability affects the function isApprovedElevatedSender of the file src/auto-reply/reply/reply-elevated.ts. This manipulation causes improper privilege management. It is possible to initiate the attack remotely. The exploit has been publicly disclosed and may be utilized. The project was informed of the problem early through an issue report but has not responded yet.
+
+**References:**
+- [VDB-386390 | mf-yang openclaw-cn reply-elevated.ts isApprovedElevatedSender privileges management](https://vuldb.com/vuln/386390)
+- [VDB-386390 | CTI Indicators (IOB, IOC, TTP, IOA)](https://vuldb.com/vuln/386390/cti)
+- [CVE-2026-19007 | CVE Analysis and Report](https://vuldb.com/cve/CVE-2026-19007)
+- [Submit #862643 | mf-yang openclaw-cn 0.2.1 Improper Privilege Management (CWE-269)](https://vuldb.com/submit/862643)
+- [564](https://github.com/mf-yang/openclaw-cn/issues/564)
+- [](https://github.com/mf-yang/openclaw-cn/)
+---
+
+### CVE-2026-19008 — mf-yang openclaw-cn apply_patch Tool sandbox-paths.ts assertNoSymlinkEscape link following
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 5.3 (MEDIUM) — `CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P` |
+| **CWE** | CWE-59 (Link Following) |
+| **Affected** | < 0.2.1 |
+| **Vendor/Product** | mf-yang / openclaw-cn |
+| **Advisory** | []() |
+
+A vulnerability was identified in mf-yang openclaw-cn up to 0.2.1. This issue affects the function assertNoSymlinkEscape of the file src/agents/sandbox-paths.ts of the component apply_patch Tool. Such manipulation leads to link following. It is possible to launch the attack remotely. The exploit is publicly available and might be used. The project was informed of the problem early through an issue report but has not responded yet.
+
+**References:**
+- [VDB-386391 | mf-yang openclaw-cn apply_patch Tool sandbox-paths.ts assertNoSymlinkEscape link following](https://vuldb.com/vuln/386391)
+- [VDB-386391 | CTI Indicators (IOB, IOC, IOA)](https://vuldb.com/vuln/386391/cti)
+- [CVE-2026-19008 | CVE Analysis and Report](https://vuldb.com/cve/CVE-2026-19008)
+- [Submit #862644 | mf-yang openclaw-cn 0.2.1 Improper Link Resolution Before File Access (CWE-59)](https://vuldb.com/submit/862644)
+- [Submit #862645 | mf-yang openclaw-cn 0.2.1 Improper Link Resolution Before File Access (CWE-59) (Duplicate)](https://vuldb.com/submit/862645)
+- [565](https://github.com/mf-yang/openclaw-cn/issues/565)
+- [566](https://github.com/mf-yang/openclaw-cn/issues/566)
+- [](https://github.com/mf-yang/openclaw-cn/)
+---
+
 ### CVE-2026-53812 — OpenClaw's browser act interactions could bypass private-network navigation checks
 
 | Field | Detail |
@@ -1038,22 +1084,6 @@ OpenClaw before 2026.5.6 contains a hook bypass vulnerability where skill comman
 - [VulnCheck Advisory: OpenClaw < 2026.5.6 - Skill-Command Dispatch Hook Bypass via Before-Tool-Call Hook Skipping](https://www.vulncheck.com/advisories/openclaw-skill-command-dispatch-hook-bypass-via-before-tool-call-hook-skipping)
 ---
 
-### CVE-2026-53848 — OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers
-
-| Field | Detail |
-|-------|--------|
-| **CVSS** | 2.3 (LOW) — `CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N` |
-| **CWE** | CWE-184 (Incomplete List of Disallowed Inputs) |
-| **Affected** | < 2026.5.26 |
-| **Vendor/Product** | OpenClaw / OpenClaw |
-| **Advisory** | [GHSA-cwpp-5962-q4f6](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6) |
-
-OpenClaw before 2026.5.26 contains an exec allowlist bypass vulnerability allowing authenticated operators to execute wrapper-level side effects outside allowlisted command intent. Attackers can craft command requests that bypass allowlist validation by leveraging transparent command wrappers to perform unintended operations.
-
-**References:**
-- [VulnCheck Advisory: OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers](https://www.vulncheck.com/advisories/openclaw-exec-allowlist-bypass-via-transparent-command-wrappers)
----
-
 ### CVE-2026-53852 — OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing
 
 | Field | Detail |
@@ -1068,6 +1098,22 @@ OpenClaw before 2026.4.25 contains a scope containment bypass vulnerability in d
 
 **References:**
 - [VulnCheck Advisory: OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing](https://www.vulncheck.com/advisories/openclaw-scope-bypass-via-empty-scope-device-re-pairing)
+---
+
+### CVE-2026-53848 — OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers
+
+| Field | Detail |
+|-------|--------|
+| **CVSS** | 2.3 (LOW) — `CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:N/VI:L/VA:N/SC:N/SI:N/SA:N` |
+| **CWE** | CWE-184 (Incomplete List of Disallowed Inputs) |
+| **Affected** | < 2026.5.26 |
+| **Vendor/Product** | OpenClaw / OpenClaw |
+| **Advisory** | [GHSA-cwpp-5962-q4f6](https://github.com/openclaw/openclaw/security/advisories/GHSA-cwpp-5962-q4f6) |
+
+OpenClaw before 2026.5.26 contains an exec allowlist bypass vulnerability allowing authenticated operators to execute wrapper-level side effects outside allowlisted command intent. Attackers can craft command requests that bypass allowlist validation by leveraging transparent command wrappers to perform unintended operations.
+
+**References:**
+- [VulnCheck Advisory: OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers](https://www.vulncheck.com/advisories/openclaw-exec-allowlist-bypass-via-transparent-command-wrappers)
 ---
 
 ### CVE-2026-53862 — OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening
@@ -1419,17 +1465,17 @@ The OpenClaw project has been renamed multiple times, causing inconsistencies ac
 
 | CVE | vendor | product | packageURL | Description Names |
 |-----|--------|---------|------------|-------------------|
-| CVE-2026-24763 | `clawdbot` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
 | CVE-2026-25253 | `OpenClaw` | `OpenClaw` | `pkg:npm/clawdbot` | OpenClaw / clawdbot / Moltbot |
+| CVE-2026-24763 | `clawdbot` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
 | CVE-2026-28478 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53814 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53819 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53817 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
-| CVE-2026-53836 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53843 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
+| CVE-2026-53836 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53816 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
-| CVE-2026-53849 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53857 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
+| CVE-2026-53849 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-28469 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53834 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-35630 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
@@ -1438,13 +1484,13 @@ The OpenClaw project has been renamed multiple times, causing inconsistencies ac
 | CVE-2026-53811 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53810 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53831 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
-| CVE-2026-53853 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53855 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
+| CVE-2026-53853 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53864 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53866 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-28458 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
-| CVE-2026-53832 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53833 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw/qqbot` | OpenClaw |
+| CVE-2026-53832 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53813 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53865 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-26317 | `openclaw` | `clawdbot` | — | OpenClaw (formerly Clawdbot) |
@@ -1470,11 +1516,13 @@ The OpenClaw project has been renamed multiple times, causing inconsistencies ac
 | CVE-2026-53856 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53847 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53861 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
+| CVE-2026-19007 | `mf-yang` | `openclaw-cn` | — | OpenClaw |
+| CVE-2026-19008 | `mf-yang` | `openclaw-cn` | — | OpenClaw |
 | CVE-2026-53812 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53809 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53845 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
-| CVE-2026-53848 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53852 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
+| CVE-2026-53848 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53862 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53860 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
 | CVE-2026-53841 | `OpenClaw` | `OpenClaw` | `pkg:npm/openclaw` | OpenClaw |
