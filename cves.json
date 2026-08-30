@@ -1,19 +1,19 @@
 [
   {
-    "cve_id": "CVE-2026-25253",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
-    "date_published": "2026-02-01",
-    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
-  },
-  {
     "cve_id": "CVE-2026-24763",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
     "date_published": "2026-02-02",
     "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
+    "cve_id": "CVE-2026-25253",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
+    "date_published": "2026-02-01",
+    "ghsa_id": "GHSA-g8p2-7wf7-98mq"
   },
   {
     "cve_id": "CVE-2026-28478",
@@ -120,12 +120,12 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-53806",
+    "cve_id": "CVE-2026-53811",
     "severity": "HIGH",
     "cvss": 7.7,
-    "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
+    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
+    "ghsa_id": "GHSA-7hxm-f538-3xp6"
   },
   {
     "cve_id": "CVE-2026-53810",
@@ -136,12 +136,12 @@
     "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
-    "cve_id": "CVE-2026-53811",
+    "cve_id": "CVE-2026-53806",
     "severity": "HIGH",
     "cvss": 7.7,
-    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
+    "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-7hxm-f538-3xp6"
+    "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
   },
   {
     "cve_id": "CVE-2026-53831",
@@ -160,20 +160,20 @@
     "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
   },
   {
-    "cve_id": "CVE-2026-53864",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
-  },
-  {
     "cve_id": "CVE-2026-53855",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-5cj2-3jr2-5h77"
+  },
+  {
+    "cve_id": "CVE-2026-53864",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
   },
   {
     "cve_id": "CVE-2026-53866",
@@ -192,20 +192,20 @@
     "ghsa_id": "GHSA-mr32-vwc2-5j6h"
   },
   {
-    "cve_id": "CVE-2026-53833",
-    "severity": "HIGH",
-    "cvss": 7.4,
-    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-jvm4-4j77-39p6"
-  },
-  {
     "cve_id": "CVE-2026-53832",
     "severity": "HIGH",
     "cvss": 7.4,
     "title": "OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-rggc-m335-3wvj"
+  },
+  {
+    "cve_id": "CVE-2026-53833",
+    "severity": "HIGH",
+    "cvss": 7.4,
+    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-jvm4-4j77-39p6"
   },
   {
     "cve_id": "CVE-2026-53813",
@@ -312,20 +312,20 @@
     "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
-    "cve_id": "CVE-2026-53851",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.5.12 - Slack Reaction Event Notification Bypass",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
-  },
-  {
     "cve_id": "CVE-2026-53837",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw: Mattermost handlers could fall open when channel type was missing",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-gp79-m99v-gjmh"
+  },
+  {
+    "cve_id": "CVE-2026-53851",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.5.12 - Slack Reaction Event Notification Bypass",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
   },
   {
     "cve_id": "CVE-2026-53830",
@@ -360,6 +360,14 @@
     "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
+    "cve_id": "CVE-2026-53859",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
+  },
+  {
     "cve_id": "CVE-2026-53854",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -374,14 +382,6 @@
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
-  },
-  {
-    "cve_id": "CVE-2026-53859",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
   },
   {
     "cve_id": "CVE-2026-53856",
@@ -408,6 +408,14 @@
     "ghsa_id": ""
   },
   {
+    "cve_id": "CVE-2026-19006",
+    "severity": "MEDIUM",
+    "cvss": 5.3,
+    "title": "mf-yang openclaw-cn Ggateway Exec Approval Flow bash-tools.exec.ts authorization",
+    "date_published": "2026-08-06",
+    "ghsa_id": ""
+  },
+  {
     "cve_id": "CVE-2026-53847",
     "severity": "MEDIUM",
     "cvss": 5.3,
@@ -422,14 +430,6 @@
     "title": "OpenClaw < 2026.5.6 - Allowlist Bypass via Combined POSIX Inline Flags on macOS",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-c226-q6fx-6j6c"
-  },
-  {
-    "cve_id": "CVE-2026-19006",
-    "severity": "MEDIUM",
-    "cvss": 5.3,
-    "title": "mf-yang openclaw-cn Ggateway Exec Approval Flow bash-tools.exec.ts authorization",
-    "date_published": "2026-08-06",
-    "ghsa_id": ""
   },
   {
     "cve_id": "CVE-2026-53812",
@@ -448,12 +448,12 @@
     "ghsa_id": "GHSA-p39j-x9h5-q66m"
   },
   {
-    "cve_id": "CVE-2026-53848",
+    "cve_id": "CVE-2026-53852",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
+    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-cwpp-5962-q4f6"
+    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
     "cve_id": "CVE-2026-53845",
@@ -464,12 +464,12 @@
     "ghsa_id": "GHSA-68xw-r643-9p5w"
   },
   {
-    "cve_id": "CVE-2026-53852",
+    "cve_id": "CVE-2026-53848",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
+    "title": "OpenClaw < 2026.5.26 - Exec Allowlist Bypass via Transparent Command Wrappers",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
+    "ghsa_id": "GHSA-cwpp-5962-q4f6"
   },
   {
     "cve_id": "CVE-2026-53860",
