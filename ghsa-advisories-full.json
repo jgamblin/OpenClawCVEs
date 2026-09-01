@@ -7142,7 +7142,7 @@
     },
     "epss": {
       "percentage": 0.00275,
-      "percentile": 0.19514
+      "percentile": 0.19496
     }
   },
   {
@@ -10368,8 +10368,8 @@
       "score": 8.8
     },
     "epss": {
-      "percentage": 0.23613,
-      "percentile": 0.97624
+      "percentage": 0.23992,
+      "percentile": 0.97673
     }
   },
   {
