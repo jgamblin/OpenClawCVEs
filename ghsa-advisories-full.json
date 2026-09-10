@@ -540,7 +540,7 @@
     },
     "epss": {
       "percentage": 0.00309,
-      "percentile": 0.23045
+      "percentile": 0.23507
     }
   },
   {
@@ -2692,7 +2692,7 @@
     },
     "epss": {
       "percentage": 0.00179,
-      "percentile": 0.07395
+      "percentile": 0.0751
     }
   },
   {
@@ -3498,7 +3498,7 @@
     },
     "epss": {
       "percentage": 0.00309,
-      "percentile": 0.23045
+      "percentile": 0.23507
     }
   },
   {
@@ -6034,7 +6034,7 @@
     },
     "epss": {
       "percentage": 0.00188,
-      "percentile": 0.08494
+      "percentile": 0.08542
     }
   },
   {
@@ -6832,7 +6832,7 @@
     },
     "epss": {
       "percentage": 0.00169,
-      "percentile": 0.06499
+      "percentile": 0.06509
     }
   },
   {
@@ -9816,7 +9816,7 @@
     },
     "epss": {
       "percentage": 0.00319,
-      "percentile": 0.24086
+      "percentile": 0.24608
     }
   },
   {
