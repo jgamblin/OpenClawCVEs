@@ -1,5 +1,12 @@
 [
   {
+    "ghsa_id": "GHSA-224w-vfr9-h35c",
+    "severity": "HIGH",
+    "title": "Google Meet node commands could skip exec approvals",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-224w-vfr9-h35c"
+  },
+  {
     "ghsa_id": "GHSA-2q7j-2vhx-56g8",
     "severity": "HIGH",
     "title": "Feishu tools could ignore per-account disablement",
@@ -7,25 +14,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2q7j-2vhx-56g8"
   },
   {
-    "ghsa_id": "GHSA-2x93-h3hg-2xfp",
-    "severity": "HIGH",
-    "title": "Browser snapshot routes could miss post-navigation SSRF checks",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-2x93-h3hg-2xfp"
-  },
-  {
-    "ghsa_id": "GHSA-34mr-7r3m-gfg7",
-    "severity": "HIGH",
-    "title": "Exec allowlist glob matching could allow traversal bypasses",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-34mr-7r3m-gfg7"
-  },
-  {
     "ghsa_id": "GHSA-3fp5-v549-9v66",
     "severity": "HIGH",
     "title": "flock wrapper could bypass durable exec approval binding",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3fp5-v549-9v66"
+  },
+  {
+    "ghsa_id": "GHSA-3mq7-q27j-mq7q",
+    "severity": "HIGH",
+    "title": "Exec approvals could outlive their reviewed working directory",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3mq7-q27j-mq7q"
   },
   {
     "ghsa_id": "GHSA-3pmr-x9g8-m55r",
@@ -42,11 +42,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65"
   },
   {
-    "ghsa_id": "GHSA-4pqj-3c56-5fqq",
+    "ghsa_id": "GHSA-4r25-35qc-fr6j",
     "severity": "HIGH",
-    "title": "Workspace dotenv files could override provider credentials",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4pqj-3c56-5fqq"
+    "title": "Gateway upgrade-like requests could retain unauthenticated sockets",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4r25-35qc-fr6j"
+  },
+  {
+    "ghsa_id": "GHSA-4wvr-f35r-f8w4",
+    "severity": "HIGH",
+    "title": "message.action could trust spoofed requester provenance",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4wvr-f35r-f8w4"
   },
   {
     "ghsa_id": "GHSA-52xj-c9p8-78cv",
@@ -63,18 +70,39 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-575v-8hfq-m3mc"
   },
   {
-    "ghsa_id": "GHSA-724r-v4wf-mqc5",
+    "ghsa_id": "GHSA-58qx-6m8p-wh2j",
     "severity": "HIGH",
-    "title": "Hooks allowedAgentIds could be bypassed with blank agent IDs",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-724r-v4wf-mqc5"
+    "title": "Slack group DMs could skip sender allowlists",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-58qx-6m8p-wh2j"
   },
   {
-    "ghsa_id": "GHSA-7jx6-764p-fgg9",
+    "ghsa_id": "GHSA-5mrc-77hj-xjxv",
     "severity": "HIGH",
-    "title": "QQBot exec approvals could allow non-allowlisted senders",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jx6-764p-fgg9"
+    "title": "Workspace Cloud SDK arguments could execute code during Gmail setup",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5mrc-77hj-xjxv"
+  },
+  {
+    "ghsa_id": "GHSA-62qm-6fjj-6g23",
+    "severity": "HIGH",
+    "title": "Dreaming could widen restricted sender authority",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-62qm-6fjj-6g23"
+  },
+  {
+    "ghsa_id": "GHSA-74gc-hg2m-79p9",
+    "severity": "HIGH",
+    "title": "Reusable exec approvals could authorize changed arguments",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-74gc-hg2m-79p9"
+  },
+  {
+    "ghsa_id": "GHSA-7cp7-87pj-p32v",
+    "severity": "HIGH",
+    "title": "Skill tool dispatch could skip owner-only policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7cp7-87pj-p32v"
   },
   {
     "ghsa_id": "GHSA-7vrr-rp4x-4g76",
@@ -84,18 +112,11 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7vrr-rp4x-4g76"
   },
   {
-    "ghsa_id": "GHSA-8f46-3xx3-8c9m",
+    "ghsa_id": "GHSA-8xxh-v4vc-qvm4",
     "severity": "HIGH",
-    "title": "Node exec approvals could use different gateway and node environments",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8f46-3xx3-8c9m"
-  },
-  {
-    "ghsa_id": "GHSA-8v95-qqcm-qp9h",
-    "severity": "HIGH",
-    "title": "device.pair.approve could bypass role-management checks",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8v95-qqcm-qp9h"
+    "title": "Cron tool could accept mixed-case command payloads",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8xxh-v4vc-qvm4"
   },
   {
     "ghsa_id": "GHSA-9969-8g9h-rxwm",
@@ -105,11 +126,53 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9969-8g9h-rxwm"
   },
   {
+    "ghsa_id": "GHSA-9f86-pvv5-rxfw",
+    "severity": "HIGH",
+    "title": "Escaped newlines could confuse exec allowlist parsing",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9f86-pvv5-rxfw"
+  },
+  {
+    "ghsa_id": "GHSA-9m4p-cqp4-jppq",
+    "severity": "HIGH",
+    "title": "WhatsApp login tool could reach non-owner turns",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9m4p-cqp4-jppq"
+  },
+  {
+    "ghsa_id": "GHSA-9p6m-2872-xm7x",
+    "severity": "HIGH",
+    "title": "Codex bind could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9p6m-2872-xm7x"
+  },
+  {
+    "ghsa_id": "GHSA-9x88-f7rh-4c83",
+    "severity": "HIGH",
+    "title": "Browser node targets could bypass sandbox host control",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-9x88-f7rh-4c83"
+  },
+  {
     "ghsa_id": "GHSA-cf2p-f286-mphf",
     "severity": "HIGH",
     "title": "Identity-bearing HTTP callers could reach admin-scoped tools",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cf2p-f286-mphf"
+  },
+  {
+    "ghsa_id": "GHSA-cf95-m4jv-59rc",
+    "severity": "HIGH",
+    "title": "Synology file delivery could lose DNS pinning",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-cf95-m4jv-59rc"
+  },
+  {
+    "ghsa_id": "GHSA-crg9-c62w-j2p5",
+    "severity": "HIGH",
+    "title": "OpenShell filesystem mutations could race path validation",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-crg9-c62w-j2p5"
   },
   {
     "ghsa_id": "GHSA-f6p7-6326-vf7v",
@@ -126,6 +189,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fh38-965w-f6c3"
   },
   {
+    "ghsa_id": "GHSA-ghpx-6xwq-2w4w",
+    "severity": "HIGH",
+    "title": "Exec wrapper allowlists could trust arbitrary inner commands",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-ghpx-6xwq-2w4w"
+  },
+  {
+    "ghsa_id": "GHSA-hgv5-f2r3-6v9r",
+    "severity": "HIGH",
+    "title": "Matrix authorization could conflate case-distinct user IDs",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hgv5-f2r3-6v9r"
+  },
+  {
     "ghsa_id": "GHSA-hjr6-g723-hmfm",
     "severity": "HIGH",
     "title": "Host exec environment filtering could miss interpreter startup variables",
@@ -133,11 +210,18 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hjr6-g723-hmfm"
   },
   {
-    "ghsa_id": "GHSA-hx85-fgcw-9vrc",
+    "ghsa_id": "GHSA-hpg5-cq3m-phqp",
     "severity": "HIGH",
-    "title": "Device-pair approval could expose node system.run early",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hx85-fgcw-9vrc"
+    "title": "Agent cron tool could reach operator command jobs",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-hpg5-cq3m-phqp"
+  },
+  {
+    "ghsa_id": "GHSA-jghr-xp78-995p",
+    "severity": "HIGH",
+    "title": "Browser proxy could miss its admin scope",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jghr-xp78-995p"
   },
   {
     "ghsa_id": "GHSA-jhfx-v2j8-x3m6",
@@ -145,6 +229,13 @@
     "title": "OpenAI-compatible HTTP model overrides could miss admin authorization",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jhfx-v2j8-x3m6"
+  },
+  {
+    "ghsa_id": "GHSA-jjpc-p3xf-8g7p",
+    "severity": "HIGH",
+    "title": "iOS Control UI did not enforce saved Gateway TLS pins",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-jjpc-p3xf-8g7p"
   },
   {
     "ghsa_id": "GHSA-m38g-vpwj-mpg9",
@@ -168,6 +259,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mm9g-83wh-mhwj"
   },
   {
+    "ghsa_id": "GHSA-p3h6-v2h4-36q2",
+    "severity": "HIGH",
+    "title": "Browser CDP connections could discard DNS pinning",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p3h6-v2h4-36q2"
+  },
+  {
+    "ghsa_id": "GHSA-p5g8-m35v-7m82",
+    "severity": "HIGH",
+    "title": "Claude permission replies could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p5g8-m35v-7m82"
+  },
+  {
     "ghsa_id": "GHSA-p5xh-frrh-cmgj",
     "severity": "HIGH",
     "title": "MS Teams message actions could miss requester authorization",
@@ -175,11 +280,39 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-p5xh-frrh-cmgj"
   },
   {
-    "ghsa_id": "GHSA-rh6r-vvfc-86jq",
+    "ghsa_id": "GHSA-pjjr-5qhr-5w6r",
     "severity": "HIGH",
-    "title": "Setup-mode discovery could load untrusted workspace plugins",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rh6r-vvfc-86jq"
+    "title": "Codex computer-use install could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pjjr-5qhr-5w6r"
+  },
+  {
+    "ghsa_id": "GHSA-qgj5-6x35-9g6f",
+    "severity": "HIGH",
+    "title": "Config revision hashes could expose password verifiers",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qgj5-6x35-9g6f"
+  },
+  {
+    "ghsa_id": "GHSA-qw7m-h363-33qw",
+    "severity": "HIGH",
+    "title": "chat.send could expose owner-only infrastructure tools",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-qw7m-h363-33qw"
+  },
+  {
+    "ghsa_id": "GHSA-r88x-r7jj-f2cf",
+    "severity": "HIGH",
+    "title": "Signal reactions could bind to the wrong approval",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-r88x-r7jj-f2cf"
+  },
+  {
+    "ghsa_id": "GHSA-rrxp-5mx8-mvhh",
+    "severity": "HIGH",
+    "title": "Inbound voice calls could inherit owner tool authority",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rrxp-5mx8-mvhh"
   },
   {
     "ghsa_id": "GHSA-v7hx-r36p-f68m",
@@ -187,13 +320,6 @@
     "title": "Message mutations could skip requester authorization",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v7hx-r36p-f68m"
-  },
-  {
-    "ghsa_id": "GHSA-vr7j-7684-7gm5",
-    "severity": "HIGH",
-    "title": "HTTP Canvas responses could forge trusted A2UI actions",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vr7j-7684-7gm5"
   },
   {
     "ghsa_id": "GHSA-w8wf-3qvj-6xqf",
@@ -210,6 +336,20 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wp73-f3gg-w4vr"
   },
   {
+    "ghsa_id": "GHSA-wwcw-jfpp-gpxw",
+    "severity": "HIGH",
+    "title": "Codex native tools could ignore per-chat policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wwcw-jfpp-gpxw"
+  },
+  {
+    "ghsa_id": "GHSA-wwx7-573h-pqwc",
+    "severity": "HIGH",
+    "title": "MCP configuration changes could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wwx7-573h-pqwc"
+  },
+  {
     "ghsa_id": "GHSA-wxh3-g47h-q3mc",
     "severity": "HIGH",
     "title": "Host exec environment filtering could miss rustup startup variables",
@@ -217,18 +357,46 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wxh3-g47h-q3mc"
   },
   {
-    "ghsa_id": "GHSA-wxm8-ghhq-q688",
-    "severity": "HIGH",
-    "title": "MS Teams safeFetch could race DNS rebinding checks",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wxm8-ghhq-q688"
+    "ghsa_id": "GHSA-22v4-33m3-8p7m",
+    "severity": "MEDIUM",
+    "title": "Memory dreaming changes could omit owner checks",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-22v4-33m3-8p7m"
   },
   {
-    "ghsa_id": "GHSA-x863-pqjw-hmgf",
-    "severity": "HIGH",
-    "title": "Browser act route could miss current-tab URL checks",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-x863-pqjw-hmgf"
+    "ghsa_id": "GHSA-356g-m7rx-7pm3",
+    "severity": "MEDIUM",
+    "title": "ACP file URLs could skip out-of-cwd read approval",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-356g-m7rx-7pm3"
+  },
+  {
+    "ghsa_id": "GHSA-35wj-hm2r-ghgw",
+    "severity": "MEDIUM",
+    "title": "Discord guild reads could skip target allowlists",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-35wj-hm2r-ghgw"
+  },
+  {
+    "ghsa_id": "GHSA-39hf-qg99-f4qv",
+    "severity": "MEDIUM",
+    "title": "Google Meet attendance CSV could interpret names as formulas",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-39hf-qg99-f4qv"
+  },
+  {
+    "ghsa_id": "GHSA-4g58-43jr-6738",
+    "severity": "MEDIUM",
+    "title": "Browser wait predicates could reach blocked destinations",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4g58-43jr-6738"
+  },
+  {
+    "ghsa_id": "GHSA-4hwv-rj92-h7rp",
+    "severity": "MEDIUM",
+    "title": "Diagnostics export could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4hwv-rj92-h7rp"
   },
   {
     "ghsa_id": "GHSA-4xwj-mcc7-x7x5",
@@ -238,53 +406,193 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4xwj-mcc7-x7x5"
   },
   {
-    "ghsa_id": "GHSA-5p6w-wmh3-frfr",
+    "ghsa_id": "GHSA-5fwv-rrvp-8xvr",
     "severity": "MEDIUM",
-    "title": "WebSocket auth attempts could avoid non-browser rate limits",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5p6w-wmh3-frfr"
+    "title": "Session filename generation could regain denied tools",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5fwv-rrvp-8xvr"
   },
   {
-    "ghsa_id": "GHSA-7w4v-g4m6-j88v",
+    "ghsa_id": "GHSA-5j27-v2pw-cj9m",
     "severity": "MEDIUM",
-    "title": "[AgentGG] MS Teams allowFrom could bind to mutable display names",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7w4v-g4m6-j88v"
+    "title": "Talk Voice changes could omit admin authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5j27-v2pw-cj9m"
   },
   {
-    "ghsa_id": "GHSA-fh8v-vgcv-pwh4",
+    "ghsa_id": "GHSA-5j57-84cx-r295",
     "severity": "MEDIUM",
-    "title": "ClickClack allowFrom could allow non-allowlisted commands",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fh8v-vgcv-pwh4"
+    "title": "iOS deep-link logs could expose unattended credentials",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5j57-84cx-r295"
   },
   {
-    "ghsa_id": "GHSA-fwgr-fpv9-vf5x",
+    "ghsa_id": "GHSA-5rx7-34fw-64qg",
     "severity": "MEDIUM",
-    "title": "QQBot media upload could reach untrusted remote URLs",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fwgr-fpv9-vf5x"
+    "title": "Unicode fallback could escape workspaceOnly roots",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5rx7-34fw-64qg"
   },
   {
-    "ghsa_id": "GHSA-j4cx-jvq7-79vm",
+    "ghsa_id": "GHSA-5x6q-wg56-rxg8",
     "severity": "MEDIUM",
-    "title": "Trajectory export could skip broad credential redaction",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j4cx-jvq7-79vm"
+    "title": "Discord realtime transcripts could inherit another speaker's owner status",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5x6q-wg56-rxg8"
   },
   {
-    "ghsa_id": "GHSA-mhm4-93fw-4qr2",
+    "ghsa_id": "GHSA-66hm-hxq3-5pfh",
     "severity": "MEDIUM",
-    "title": "Skill command dispatch could skip effective tool policy",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mhm4-93fw-4qr2"
+    "title": "Embedding fallback could forward a provider key across vendors",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-66hm-hxq3-5pfh"
   },
   {
-    "ghsa_id": "GHSA-prwc-c6w5-mmgr",
+    "ghsa_id": "GHSA-72p2-79fg-pvph",
     "severity": "MEDIUM",
-    "title": "Bot Framework serviceUrl validation could leak bot tokens",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-prwc-c6w5-mmgr"
+    "title": "Trusted-host DNS checks could admit unspecified addresses",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-72p2-79fg-pvph"
+  },
+  {
+    "ghsa_id": "GHSA-7jfq-rmfm-29wp",
+    "severity": "MEDIUM",
+    "title": "File-transfer approvals could widen durable authority",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-7jfq-rmfm-29wp"
+  },
+  {
+    "ghsa_id": "GHSA-8938-r7c6-54vq",
+    "severity": "MEDIUM",
+    "title": "Microsoft Teams access-group failures could admit unlisted senders",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-8938-r7c6-54vq"
+  },
+  {
+    "ghsa_id": "GHSA-89cw-7452-cfrf",
+    "severity": "MEDIUM",
+    "title": "Trajectory export could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-89cw-7452-cfrf"
+  },
+  {
+    "ghsa_id": "GHSA-fgwg-c3wv-8f45",
+    "severity": "MEDIUM",
+    "title": "LINE group allowlist could inherit DM access",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fgwg-c3wv-8f45"
+  },
+  {
+    "ghsa_id": "GHSA-fphf-69cp-h5xw",
+    "severity": "MEDIUM",
+    "title": "Structured attachments could hide unvalidated host paths",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fphf-69cp-h5xw"
+  },
+  {
+    "ghsa_id": "GHSA-fvxr-9g24-x3hf",
+    "severity": "MEDIUM",
+    "title": "Video asset downloads could reach private destinations",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fvxr-9g24-x3hf"
+  },
+  {
+    "ghsa_id": "GHSA-fw6q-2frm-jxxr",
+    "severity": "MEDIUM",
+    "title": "Synology pre-auth limits could lock out valid webhooks",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-fw6q-2frm-jxxr"
+  },
+  {
+    "ghsa_id": "GHSA-g697-vv6h-r8hv",
+    "severity": "MEDIUM",
+    "title": "Revoked Canvas capability could remain active during disconnect",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g697-vv6h-r8hv"
+  },
+  {
+    "ghsa_id": "GHSA-g7fw-3gjp-g5hf",
+    "severity": "MEDIUM",
+    "title": "Channel read actions could skip target allowlists",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g7fw-3gjp-g5hf"
+  },
+  {
+    "ghsa_id": "GHSA-gcm4-fmcp-2f9r",
+    "severity": "MEDIUM",
+    "title": "iOS Share Extension stored Gateway credentials outside Keychain",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-gcm4-fmcp-2f9r"
+  },
+  {
+    "ghsa_id": "GHSA-h2qg-fxpv-82v6",
+    "severity": "MEDIUM",
+    "title": "Feishu tools could use disabled default accounts",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h2qg-fxpv-82v6"
+  },
+  {
+    "ghsa_id": "GHSA-h9jh-75j7-7hhx",
+    "severity": "MEDIUM",
+    "title": "Feishu unpin could miss cross-context policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-h9jh-75j7-7hhx"
+  },
+  {
+    "ghsa_id": "GHSA-j4mm-p864-vx7f",
+    "severity": "MEDIUM",
+    "title": "sessions.create could miss admin scope for keyed reconfiguration",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-j4mm-p864-vx7f"
+  },
+  {
+    "ghsa_id": "GHSA-m78m-7h3q-q938",
+    "severity": "MEDIUM",
+    "title": "Browser relay authentication could exhaust shared pending capacity",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-m78m-7h3q-q938"
+  },
+  {
+    "ghsa_id": "GHSA-mm7m-wcgh-8mfq",
+    "severity": "MEDIUM",
+    "title": "WhatsApp session resets could bypass command authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-mm7m-wcgh-8mfq"
+  },
+  {
+    "ghsa_id": "GHSA-pfrw-r5vr-89hw",
+    "severity": "MEDIUM",
+    "title": "Workspace endpoint override could expose Azure Speech credentials",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pfrw-r5vr-89hw"
+  },
+  {
+    "ghsa_id": "GHSA-q9j5-4xr6-xqqw",
+    "severity": "MEDIUM",
+    "title": "Group activation changes could omit owner authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-q9j5-4xr6-xqqw"
+  },
+  {
+    "ghsa_id": "GHSA-rgjw-6v73-php6",
+    "severity": "MEDIUM",
+    "title": "Windows allowlist execution could use workspace shadows",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rgjw-6v73-php6"
+  },
+  {
+    "ghsa_id": "GHSA-rm45-4jx5-2927",
+    "severity": "MEDIUM",
+    "title": "QQBot voice filenames could escape the staging directory",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rm45-4jx5-2927"
+  },
+  {
+    "ghsa_id": "GHSA-rx8p-qcpv-c7vr",
+    "severity": "MEDIUM",
+    "title": "Prometheus diagnostics could omit operator.read enforcement",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-rx8p-qcpv-c7vr"
   },
   {
     "ghsa_id": "GHSA-v4f6-x5g5-2g4g",
@@ -294,11 +602,25 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v4f6-x5g5-2g4g"
   },
   {
-    "ghsa_id": "GHSA-v54h-q2vx-vgg4",
+    "ghsa_id": "GHSA-v7hh-7676-rg67",
     "severity": "MEDIUM",
-    "title": "MS Teams outbound requests could leak Bot Framework tokens",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v54h-q2vx-vgg4"
+    "title": "Slack file downloads could miss conversation authorization",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-v7hh-7676-rg67"
+  },
+  {
+    "ghsa_id": "GHSA-vhpg-cq3w-v8p9",
+    "severity": "MEDIUM",
+    "title": "OpenAI-compatible transport could send provider credentials to the wrong endpoint",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-vhpg-cq3w-v8p9"
+  },
+  {
+    "ghsa_id": "GHSA-w5x7-c87m-3jpc",
+    "severity": "MEDIUM",
+    "title": "Outbound attachments could ignore requester read denials",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-w5x7-c87m-3jpc"
   },
   {
     "ghsa_id": "GHSA-wgq8-x5wm-g4rw",
@@ -306,5 +628,68 @@
     "title": "Plugin install wrappers could skip install policy",
     "published": "2026-06-30",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wgq8-x5wm-g4rw"
+  },
+  {
+    "ghsa_id": "GHSA-xvwp-wmh2-fq48",
+    "severity": "MEDIUM",
+    "title": "Discord asset uploads could skip sender media policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xvwp-wmh2-fq48"
+  },
+  {
+    "ghsa_id": "GHSA-xw48-j584-r73h",
+    "severity": "MEDIUM",
+    "title": "Twilio pre-auth limits could lock out valid webhooks",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xw48-j584-r73h"
+  },
+  {
+    "ghsa_id": "GHSA-xw9g-7xvv-gcjc",
+    "severity": "MEDIUM",
+    "title": "Active Memory global toggles could omit owner checks",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xw9g-7xvv-gcjc"
+  },
+  {
+    "ghsa_id": "GHSA-xx9p-hc9w-6p5h",
+    "severity": "MEDIUM",
+    "title": "Usage CSV export could interpret session labels as formulas",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-xx9p-hc9w-6p5h"
+  },
+  {
+    "ghsa_id": "GHSA-5m4g-88rg-69pj",
+    "severity": "LOW",
+    "title": "MCP loopback could omit sandbox tool deny policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-5m4g-88rg-69pj"
+  },
+  {
+    "ghsa_id": "GHSA-6xpv-wwr5-265h",
+    "severity": "LOW",
+    "title": "Truncated tar listings could bypass extraction limits",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-6xpv-wwr5-265h"
+  },
+  {
+    "ghsa_id": "GHSA-chr6-w4m5-57fv",
+    "severity": "LOW",
+    "title": "Memory tools could retain revoked access",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-chr6-w4m5-57fv"
+  },
+  {
+    "ghsa_id": "GHSA-g24w-m94m-59qc",
+    "severity": "LOW",
+    "title": "Webhook TaskFlow cancellation could target unrelated sessions",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-g24w-m94m-59qc"
+  },
+  {
+    "ghsa_id": "GHSA-wjfv-5qch-m5vj",
+    "severity": "LOW",
+    "title": "Active Memory recall could ignore requester policy",
+    "published": "2026-09-11",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-wjfv-5qch-m5vj"
   }
 ]
