@@ -126,6 +126,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -216,6 +217,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -312,6 +314,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -444,6 +447,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -534,6 +538,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 3,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -622,6 +627,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -744,6 +750,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
       "score": 7.2
@@ -838,6 +845,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -980,6 +988,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:L",
       "score": 6.6
@@ -1074,6 +1083,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
       "score": 6.5
@@ -1210,6 +1220,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N",
       "score": 3.1
@@ -1294,6 +1305,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -1432,6 +1444,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:C/C:N/I:L/A:N",
       "score": 3.8
@@ -1526,6 +1539,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 7.8
@@ -1620,6 +1634,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -1762,6 +1777,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
       "score": 7.5
@@ -1850,6 +1866,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
       "score": 8.3
@@ -1934,6 +1951,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:H/I:L/A:N",
       "score": 6.5
@@ -2018,6 +2036,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -2102,6 +2121,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -2240,6 +2260,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
       "score": 3.7
@@ -2356,6 +2377,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -2464,6 +2486,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 3,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -2596,6 +2619,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:N/I:H/A:N",
       "score": 5.3
@@ -2686,6 +2710,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
       "score": 7.7
@@ -2780,6 +2805,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
@@ -2868,6 +2894,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -2952,6 +2979,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -3040,6 +3068,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -3166,6 +3195,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
       "score": 7.1
@@ -3260,6 +3290,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.0
@@ -3386,6 +3417,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:L",
       "score": 8.4
@@ -3492,6 +3524,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:A/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.0
@@ -3626,6 +3659,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
       "score": 7.7
@@ -3756,6 +3790,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -3878,6 +3913,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:N/A:N",
       "score": 7.7
@@ -3941,6 +3977,7 @@
       }
     ],
     "credits": [],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -4053,6 +4090,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -4165,6 +4203,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.0
@@ -4259,6 +4298,7 @@
         "type": "finder"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -4355,6 +4395,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -4493,6 +4534,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -4635,6 +4677,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
       "score": 5.4
@@ -4704,6 +4747,7 @@
       }
     ],
     "credits": [],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -4798,6 +4842,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -4892,6 +4937,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -5034,6 +5080,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -5128,6 +5175,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -5226,6 +5274,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:L",
       "score": 7.1
@@ -5320,6 +5369,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
       "score": 4.2
@@ -5462,6 +5512,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -5556,6 +5607,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 5.5
@@ -5650,6 +5702,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 3,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -5792,6 +5845,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
       "score": 4.3
@@ -5934,6 +5988,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -6028,6 +6083,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
       "score": 6.1
@@ -6122,6 +6178,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
       "score": 5.3
@@ -6216,6 +6273,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
       "score": 4.2
@@ -6346,6 +6404,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -6444,6 +6503,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -6542,6 +6602,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
       "score": 4.3
@@ -6684,6 +6745,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
       "score": 6.6
@@ -6826,6 +6888,7 @@
         "type": "sponsor"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -6920,6 +6983,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -7014,6 +7078,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -7136,6 +7201,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -7230,6 +7296,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -7324,6 +7391,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
       "score": 7.1
@@ -7389,6 +7457,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -7450,6 +7519,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N",
       "score": 7.1
@@ -7511,6 +7581,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -7572,6 +7643,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N",
       "score": 4.2
@@ -7633,6 +7705,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:R/S:U/C:H/I:H/A:N",
       "score": 6.6
@@ -7694,6 +7767,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:N",
       "score": 4.2
@@ -7755,6 +7829,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -7816,6 +7891,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -7877,6 +7953,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
       "score": 6.5
@@ -7938,6 +8015,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:L",
       "score": 8.3
@@ -7999,6 +8077,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N",
       "score": 5.4
@@ -8060,6 +8139,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -8121,6 +8201,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 5.5
@@ -8182,6 +8263,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -8243,6 +8325,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -8304,6 +8387,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -8365,6 +8449,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
       "score": 4.3
@@ -8426,6 +8511,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
       "score": 5.3
@@ -8487,6 +8573,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N",
       "score": 8.1
@@ -8548,6 +8635,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
       "score": 5.5
@@ -8609,6 +8697,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N",
       "score": 4.3
@@ -8670,6 +8759,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L",
       "score": 5.4
@@ -8731,6 +8821,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N",
       "score": 7.1
@@ -8792,6 +8883,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -8853,6 +8945,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:N",
       "score": 7.1
@@ -8914,6 +9007,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
       "score": 6.5
@@ -8975,6 +9069,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
       "score": 6.1
@@ -9036,6 +9131,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
@@ -9097,6 +9193,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
       "score": 3.7
@@ -9158,6 +9255,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -9219,6 +9317,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
       "score": 7.5
@@ -9280,6 +9379,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
       "score": 7.7
@@ -9386,6 +9486,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:H/A:N",
       "score": 5.9
@@ -9495,6 +9596,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
       "score": 9.8
@@ -9599,6 +9701,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:L",
       "score": 7.1
@@ -9700,6 +9803,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
       "score": 7.5
@@ -9810,6 +9914,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
       "score": 6.5
@@ -9919,6 +10024,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
       "score": 5.5
@@ -10027,6 +10133,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N",
       "score": 6.5
@@ -10131,6 +10238,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 2,
     "cvss": {
       "vector_string": null,
       "score": null
@@ -10220,6 +10328,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:L/AC:H/PR:N/UI:R/S:C/C:H/I:H/A:H",
       "score": 7.7
@@ -10363,6 +10472,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -10459,6 +10569,7 @@
         "type": "reporter"
       }
     ],
+    "comments": 3,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -10525,6 +10636,7 @@
       }
     ],
     "credits": [],
+    "comments": 0,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
       "score": 8.8
@@ -10674,6 +10786,7 @@
         "type": "finder"
       }
     ],
+    "comments": 1,
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
       "score": 7.5
