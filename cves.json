@@ -32,6 +32,14 @@
     "ghsa_id": "GHSA-66r7-m7xm-v49h"
   },
   {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
+  },
+  {
     "cve_id": "CVE-2026-22171",
     "severity": "HIGH",
     "cvss": 8.8,
@@ -46,14 +54,6 @@
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
-  },
-  {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-28462",
@@ -80,20 +80,20 @@
     "ghsa_id": "GHSA-553v-f69r-656j"
   },
   {
-    "cve_id": "CVE-2026-32060",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.14 - Path Traversal in apply_patch via Crafted Paths",
-    "date_published": "2026-03-11",
-    "ghsa_id": "GHSA-r5fq-947m-xm57"
-  },
-  {
     "cve_id": "CVE-2026-32049",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.2.22 - Denial of Service via Inbound Media Download Byte Limit Bypass",
     "date_published": "2026-03-21",
     "ghsa_id": "GHSA-rxxp-482v-7mrh"
+  },
+  {
+    "cve_id": "CVE-2026-32060",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.2.14 - Path Traversal in apply_patch via Crafted Paths",
+    "date_published": "2026-03-11",
+    "ghsa_id": "GHSA-r5fq-947m-xm57"
   },
   {
     "cve_id": "CVE-2026-32846",
@@ -528,6 +528,14 @@
     "ghsa_id": "GHSA-wc84-j36w-pw4x"
   },
   {
+    "cve_id": "CVE-2026-27004",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
+  },
+  {
     "cve_id": "CVE-2026-27523",
     "severity": "MEDIUM",
     "cvss": 6.9,
@@ -544,14 +552,6 @@
     "ghsa_id": "GHSA-f7ww-2725-qvw2"
   },
   {
-    "cve_id": "CVE-2026-27004",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
-  },
-  {
     "cve_id": "CVE-2026-28480",
     "severity": "MEDIUM",
     "cvss": 6.9,
@@ -560,20 +560,20 @@
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
   },
   {
-    "cve_id": "CVE-2026-32919",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.11 - Unauthorized Session Reset via agent Slash Commands",
-    "date_published": "2026-03-29",
-    "ghsa_id": "GHSA-jf6w-m8jw-jfxc"
-  },
-  {
     "cve_id": "CVE-2026-34510",
     "severity": "MEDIUM",
     "cvss": 6.9,
     "title": "OpenClaw < 2026.3.22 - Remote File URL Acceptance in Windows Media Loaders",
     "date_published": "2026-04-01",
     "ghsa_id": "GHSA-h3x4-hc5v-v2gm"
+  },
+  {
+    "cve_id": "CVE-2026-32919",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.11 - Unauthorized Session Reset via agent Slash Commands",
+    "date_published": "2026-03-29",
+    "ghsa_id": "GHSA-jf6w-m8jw-jfxc"
   },
   {
     "cve_id": "CVE-2026-35652",
@@ -1088,20 +1088,20 @@
     "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
-    "cve_id": "CVE-2026-53862",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
-  },
-  {
     "cve_id": "CVE-2026-53860",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw: BlueBubbles sender policy could match mutable conversation identifiers",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-8j37-5w68-wj2g"
+  },
+  {
+    "cve_id": "CVE-2026-53862",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
   },
   {
     "cve_id": "CVE-2026-62221",
