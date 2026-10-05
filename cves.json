@@ -24,6 +24,22 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
+    "cve_id": "CVE-2026-53814",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-6fvr-66p3-3qj4"
+  },
+  {
+    "cve_id": "CVE-2026-53819",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
+  },
+  {
     "cve_id": "CVE-2026-53817",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -40,28 +56,12 @@
     "ghsa_id": "GHSA-j472-gf56-x589"
   },
   {
-    "cve_id": "CVE-2026-53814",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Hook-triggered CLI runs could receive owner MCP tool authority",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-6fvr-66p3-3qj4"
-  },
-  {
     "cve_id": "CVE-2026-53843",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw: Pairing-scoped device session could restore revoked node token authority",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-q99w-vh6v-q3v7"
-  },
-  {
-    "cve_id": "CVE-2026-53819",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-53816",
@@ -128,20 +128,20 @@
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
   },
   {
-    "cve_id": "CVE-2026-53811",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-7hxm-f538-3xp6"
-  },
-  {
     "cve_id": "CVE-2026-53810",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-v6r2-jh58-xx6w"
+  },
+  {
+    "cve_id": "CVE-2026-53811",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-7hxm-f538-3xp6"
   },
   {
     "cve_id": "CVE-2026-53831",
@@ -240,6 +240,14 @@
     "ghsa_id": "GHSA-q7q8-3mgw-q67r"
   },
   {
+    "cve_id": "CVE-2026-43531",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw < 2026.4.9 - Environment Variable Injection via Workspace .env File",
+    "date_published": "2026-05-05",
+    "ghsa_id": "GHSA-7wv4-cc7p-jhxc"
+  },
+  {
     "cve_id": "CVE-2026-53842",
     "severity": "HIGH",
     "cvss": 7,
@@ -312,20 +320,20 @@
     "ghsa_id": "GHSA-g34w-4xqq-h79m"
   },
   {
-    "cve_id": "CVE-2026-53851",
-    "severity": "MEDIUM",
-    "cvss": 6.3,
-    "title": "OpenClaw < 2026.5.12 - Slack Reaction Event Notification Bypass",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
-  },
-  {
     "cve_id": "CVE-2026-53837",
     "severity": "MEDIUM",
     "cvss": 6.3,
     "title": "OpenClaw: Mattermost handlers could fall open when channel type was missing",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-gp79-m99v-gjmh"
+  },
+  {
+    "cve_id": "CVE-2026-53851",
+    "severity": "MEDIUM",
+    "cvss": 6.3,
+    "title": "OpenClaw < 2026.5.12 - Slack Reaction Event Notification Bypass",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-fcvx-5cxc-v5p8"
   },
   {
     "cve_id": "CVE-2026-53830",
@@ -344,20 +352,20 @@
     "ghsa_id": "GHSA-83w9-h5wv-j9xm"
   },
   {
-    "cve_id": "CVE-2026-53844",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-72fw-cqh5-f324"
-  },
-  {
     "cve_id": "CVE-2026-53840",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+  },
+  {
+    "cve_id": "CVE-2026-53844",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
     "cve_id": "CVE-2026-53854",
