@@ -72,20 +72,20 @@
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
   },
   {
-    "cve_id": "CVE-2026-32049",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.22 - Denial of Service via Inbound Media Download Byte Limit Bypass",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-rxxp-482v-7mrh"
-  },
-  {
     "cve_id": "CVE-2026-32042",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.2.25 - Privilege Escalation via Unpaired Device Identity in Shared Gateway Authentication",
     "date_published": "2026-03-21",
     "ghsa_id": "GHSA-553v-f69r-656j"
+  },
+  {
+    "cve_id": "CVE-2026-32049",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.2.22 - Denial of Service via Inbound Media Download Byte Limit Bypass",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-rxxp-482v-7mrh"
   },
   {
     "cve_id": "CVE-2026-32060",
@@ -136,20 +136,20 @@
     "ghsa_id": "GHSA-chr9-m4q2-76hw"
   },
   {
-    "cve_id": "CVE-2026-53822",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.5.18 - Command Argument Modification via Shell Wrapper Between Approval and Execution",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-2j8v-hwgc-x698"
-  },
-  {
     "cve_id": "CVE-2026-53819",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
+  },
+  {
+    "cve_id": "CVE-2026-53822",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.5.18 - Command Argument Modification via Shell Wrapper Between Approval and Execution",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-2j8v-hwgc-x698"
   },
   {
     "cve_id": "CVE-2026-53836",
@@ -520,20 +520,20 @@
     "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
   },
   {
-    "cve_id": "CVE-2026-53858",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env STATE_DIRECTORY could influence bundled runtime dependency roots",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-wc84-j36w-pw4x"
-  },
-  {
     "cve_id": "CVE-2026-53846",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-24vr-rprv-67rf"
+  },
+  {
+    "cve_id": "CVE-2026-53858",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env STATE_DIRECTORY could influence bundled runtime dependency roots",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-wc84-j36w-pw4x"
   },
   {
     "cve_id": "CVE-2026-27004",
@@ -576,20 +576,20 @@
     "ghsa_id": "GHSA-jf6w-m8jw-jfxc"
   },
   {
-    "cve_id": "CVE-2026-35652",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw < 2026.3.22 - Unauthorized Action Execution via Callback Dispatch",
-    "date_published": "2026-04-10",
-    "ghsa_id": "GHSA-8883-9w57-vwv6"
-  },
-  {
     "cve_id": "CVE-2026-34510",
     "severity": "MEDIUM",
     "cvss": 6.9,
     "title": "OpenClaw < 2026.3.22 - Remote File URL Acceptance in Windows Media Loaders",
     "date_published": "2026-04-01",
     "ghsa_id": "GHSA-h3x4-hc5v-v2gm"
+  },
+  {
+    "cve_id": "CVE-2026-35652",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw < 2026.3.22 - Unauthorized Action Execution via Callback Dispatch",
+    "date_published": "2026-04-10",
+    "ghsa_id": "GHSA-8883-9w57-vwv6"
   },
   {
     "cve_id": "CVE-2026-41301",
@@ -768,14 +768,6 @@
     "ghsa_id": "GHSA-7jm2-g593-4qrc"
   },
   {
-    "cve_id": "CVE-2026-53830",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.4.22 - Webhook Secret Revocation Bypass via secrets.reload",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-275c-xpvc-jgfw"
-  },
-  {
     "cve_id": "CVE-2026-53838",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -800,6 +792,14 @@
     "ghsa_id": "GHSA-72fw-cqh5-f324"
   },
   {
+    "cve_id": "CVE-2026-53830",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.4.22 - Webhook Secret Revocation Bypass via secrets.reload",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-275c-xpvc-jgfw"
+  },
+  {
     "cve_id": "CVE-2026-53854",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -808,20 +808,20 @@
     "ghsa_id": "GHSA-4hpg-mp64-x7xq"
   },
   {
-    "cve_id": "CVE-2026-53859",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
-  },
-  {
     "cve_id": "CVE-2026-53863",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw < 2026.4.25 - Unvalidated Group ID Acceptance in Tool Group Policy",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-985f-72mj-8gf7"
+  },
+  {
+    "cve_id": "CVE-2026-53859",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.5.26 - Hostname Validation Bypass via Trailing-Dot Inconsistency",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-gxg4-2rrr-jhc7"
   },
   {
     "cve_id": "CVE-2026-62205",
@@ -1104,20 +1104,20 @@
     "ghsa_id": "GHSA-8j37-5w68-wj2g"
   },
   {
-    "cve_id": "CVE-2026-62221",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw 2026.5.12 < 2026.5.26 Authorization Bypass via allowFrom",
-    "date_published": "2026-07-17",
-    "ghsa_id": "GHSA-fh8v-vgcv-pwh4"
-  },
-  {
     "cve_id": "CVE-2026-53862",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-9v8j-9c9g-w66c"
+  },
+  {
+    "cve_id": "CVE-2026-62221",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw 2026.5.12 < 2026.5.26 Authorization Bypass via allowFrom",
+    "date_published": "2026-07-17",
+    "ghsa_id": "GHSA-fh8v-vgcv-pwh4"
   },
   {
     "cve_id": "CVE-2026-53841",
