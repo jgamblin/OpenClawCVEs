@@ -96,20 +96,20 @@
     "ghsa_id": "GHSA-r5fq-947m-xm57"
   },
   {
-    "cve_id": "CVE-2026-35663",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.3.25 - Privilege Escalation via Backend Reconnect Scope Self-Claim",
-    "date_published": "2026-04-10",
-    "ghsa_id": "GHSA-9hjh-fr4f-gxc4"
-  },
-  {
     "cve_id": "CVE-2026-35639",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.3.22 - Privilege Escalation via device.pair.approve Scope Validation",
     "date_published": "2026-04-09",
     "ghsa_id": "GHSA-hf68-49fm-59cq"
+  },
+  {
+    "cve_id": "CVE-2026-35663",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.3.25 - Privilege Escalation via Backend Reconnect Scope Self-Claim",
+    "date_published": "2026-04-10",
+    "ghsa_id": "GHSA-9hjh-fr4f-gxc4"
   },
   {
     "cve_id": "CVE-2026-41349",
@@ -536,14 +536,6 @@
     "ghsa_id": "GHSA-wc84-j36w-pw4x"
   },
   {
-    "cve_id": "CVE-2026-27004",
-    "severity": "MEDIUM",
-    "cvss": 6.9,
-    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
-    "date_published": "2026-02-19",
-    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
-  },
-  {
     "cve_id": "CVE-2026-27523",
     "severity": "MEDIUM",
     "cvss": 6.9,
@@ -566,6 +558,14 @@
     "title": "OpenClaw Telegram allowlist authorization accepted mutable usernames",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-mj5r-hh7j-4gxf"
+  },
+  {
+    "cve_id": "CVE-2026-27004",
+    "severity": "MEDIUM",
+    "cvss": 6.9,
+    "title": "OpenClaw session tool visibility hardening and Telegram webhook secret fallback",
+    "date_published": "2026-02-19",
+    "ghsa_id": "GHSA-6hf3-mhgc-cm65"
   },
   {
     "cve_id": "CVE-2026-32919",
@@ -1016,20 +1016,20 @@
     "ghsa_id": "GHSA-wv26-j37q-2g7p"
   },
   {
-    "cve_id": "CVE-2026-35617",
-    "severity": "LOW",
-    "cvss": 2.3,
-    "title": "OpenClaw < 2026.3.25 - Authorization Bypass via Group Policy Rebinding with Mutable Space displayName",
-    "date_published": "2026-04-09",
-    "ghsa_id": "GHSA-52q4-3xjc-6778"
-  },
-  {
     "cve_id": "CVE-2026-35624",
     "severity": "LOW",
     "cvss": 2.3,
     "title": "OpenClaw < 2026.3.22 - Policy Confusion via Room Name Collision in Nextcloud Talk",
     "date_published": "2026-04-09",
     "ghsa_id": "GHSA-xhq5-45pm-2gjr"
+  },
+  {
+    "cve_id": "CVE-2026-35617",
+    "severity": "LOW",
+    "cvss": 2.3,
+    "title": "OpenClaw < 2026.3.25 - Authorization Bypass via Group Policy Rebinding with Mutable Space displayName",
+    "date_published": "2026-04-09",
+    "ghsa_id": "GHSA-52q4-3xjc-6778"
   },
   {
     "cve_id": "CVE-2026-41402",
