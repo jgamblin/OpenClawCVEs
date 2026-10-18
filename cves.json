@@ -40,20 +40,20 @@
     "ghsa_id": "GHSA-vj3g-5px3-gr46"
   },
   {
-    "cve_id": "CVE-2026-24763",
-    "severity": "HIGH",
-    "cvss": 8.8,
-    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
-    "date_published": "2026-02-02",
-    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
-  },
-  {
     "cve_id": "CVE-2026-25253",
     "severity": "HIGH",
     "cvss": 8.8,
     "title": "OpenClaw/Clawdbot has 1-Click RCE via Authentication Token Exfiltration From gatewayUrl",
     "date_published": "2026-02-01",
     "ghsa_id": "GHSA-g8p2-7wf7-98mq"
+  },
+  {
+    "cve_id": "CVE-2026-24763",
+    "severity": "HIGH",
+    "cvss": 8.8,
+    "title": "OpenClaw/Clawdbot Docker Execution has Authenticated Command Injection via PATH Environment Variable",
+    "date_published": "2026-02-02",
+    "ghsa_id": "GHSA-mc68-q9jw-2h3v"
   },
   {
     "cve_id": "CVE-2026-28462",
@@ -70,6 +70,14 @@
     "title": "OpenClaw affected by denial of service via unbounded webhook request body buffering",
     "date_published": "2026-03-05",
     "ghsa_id": "GHSA-q447-rj3r-2cgh"
+  },
+  {
+    "cve_id": "CVE-2026-32042",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw < 2026.2.25 - Privilege Escalation via Unpaired Device Identity in Shared Gateway Authentication",
+    "date_published": "2026-03-21",
+    "ghsa_id": "GHSA-553v-f69r-656j"
   },
   {
     "cve_id": "CVE-2026-32049",
@@ -104,14 +112,6 @@
     "ghsa_id": "GHSA-9hjh-fr4f-gxc4"
   },
   {
-    "cve_id": "CVE-2026-32042",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw < 2026.2.25 - Privilege Escalation via Unpaired Device Identity in Shared Gateway Authentication",
-    "date_published": "2026-03-21",
-    "ghsa_id": "GHSA-553v-f69r-656j"
-  },
-  {
     "cve_id": "CVE-2026-41349",
     "severity": "HIGH",
     "cvss": 8.7,
@@ -136,20 +136,20 @@
     "ghsa_id": "GHSA-chr9-m4q2-76hw"
   },
   {
-    "cve_id": "CVE-2026-53819",
-    "severity": "HIGH",
-    "cvss": 8.7,
-    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
-  },
-  {
     "cve_id": "CVE-2026-53822",
     "severity": "HIGH",
     "cvss": 8.7,
     "title": "OpenClaw < 2026.5.18 - Command Argument Modification via Shell Wrapper Between Approval and Execution",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-2j8v-hwgc-x698"
+  },
+  {
+    "cve_id": "CVE-2026-53819",
+    "severity": "HIGH",
+    "cvss": 8.7,
+    "title": "OpenClaw: Workspace .env could override Homebrew executable selection for skill install flows",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
     "cve_id": "CVE-2026-53836",
@@ -296,20 +296,20 @@
     "ghsa_id": "GHSA-82qx-6vj7-p8m2"
   },
   {
-    "cve_id": "CVE-2026-53810",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
-  },
-  {
     "cve_id": "CVE-2026-53806",
     "severity": "HIGH",
     "cvss": 7.7,
     "title": "OpenClaw < 2026.5.12 - Shell Option Parsing Bypass in Exec Revalidation",
     "date_published": "2026-06-11",
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
+  },
+  {
+    "cve_id": "CVE-2026-53810",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
     "cve_id": "CVE-2026-53811",
@@ -376,20 +376,20 @@
     "ghsa_id": "GHSA-mr32-vwc2-5j6h"
   },
   {
-    "cve_id": "CVE-2026-53833",
-    "severity": "HIGH",
-    "cvss": 7.4,
-    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-jvm4-4j77-39p6"
-  },
-  {
     "cve_id": "CVE-2026-53832",
     "severity": "HIGH",
     "cvss": 7.4,
     "title": "OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-rggc-m335-3wvj"
+  },
+  {
+    "cve_id": "CVE-2026-53833",
+    "severity": "HIGH",
+    "cvss": 7.4,
+    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-jvm4-4j77-39p6"
   },
   {
     "cve_id": "CVE-2026-42432",
@@ -824,20 +824,20 @@
     "ghsa_id": "GHSA-985f-72mj-8gf7"
   },
   {
-    "cve_id": "CVE-2026-62210",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.6.1 Denial of Service via Remote Media URLs",
-    "date_published": "2026-07-17",
-    "ghsa_id": "GHSA-4xwj-mcc7-x7x5"
-  },
-  {
     "cve_id": "CVE-2026-62205",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw 2026.4.12-beta.1 < 2026.6.6 Authorization Bypass via message actions",
     "date_published": "2026-07-17",
     "ghsa_id": "GHSA-p5xh-frrh-cmgj"
+  },
+  {
+    "cve_id": "CVE-2026-62210",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.6.1 Denial of Service via Remote Media URLs",
+    "date_published": "2026-07-17",
+    "ghsa_id": "GHSA-4xwj-mcc7-x7x5"
   },
   {
     "cve_id": "CVE-2026-32054",
@@ -880,20 +880,20 @@
     "ghsa_id": "GHSA-wpg9-4g4v-f9rc"
   },
   {
-    "cve_id": "CVE-2026-32977",
-    "severity": "MEDIUM",
-    "cvss": 5.8,
-    "title": "OpenClaw < 2026.3.11 - Sandbox Boundary Bypass via Unanchored writeFile Commit Path",
-    "date_published": "2026-03-31",
-    "ghsa_id": "GHSA-xvx8-77m6-gwg6"
-  },
-  {
     "cve_id": "CVE-2026-32988",
     "severity": "MEDIUM",
     "cvss": 5.8,
     "title": "OpenClaw < 2026.3.11 - Sandbox Boundary Bypass via Unvalidated Temporary File Creation",
     "date_published": "2026-03-31",
     "ghsa_id": "GHSA-mj4p-rc52-m843"
+  },
+  {
+    "cve_id": "CVE-2026-32977",
+    "severity": "MEDIUM",
+    "cvss": 5.8,
+    "title": "OpenClaw < 2026.3.11 - Sandbox Boundary Bypass via Unanchored writeFile Commit Path",
+    "date_published": "2026-03-31",
+    "ghsa_id": "GHSA-xvx8-77m6-gwg6"
   },
   {
     "cve_id": "CVE-2026-53856",
