@@ -1,5 +1,48 @@
 [
   {
+    "ghsa_id": "GHSA-3x84-qq85-fj65",
+    "cve_id": "CVE-2026-62197",
+    "severity": "medium",
+    "title": "OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs",
+    "published": "2026-10-21",
+    "html_url": "https://github.com/advisories/GHSA-3x84-qq85-fj65",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.6.6"
+    ],
+    "fixed_versions": [
+      "2026.6.6"
+    ],
+    "fixed_version": "2026.6.6",
+    "cwes": [
+      "CWE-284",
+      "CWE-918"
+    ]
+  },
+  {
+    "ghsa_id": "GHSA-jw7v-5mp7-ghgm",
+    "cve_id": null,
+    "severity": "medium",
+    "title": "Duplicate Advisory: Browser CDP discovery could accept blocked WebSocket URLs",
+    "published": "2026-07-14",
+    "html_url": "https://github.com/advisories/GHSA-jw7v-5mp7-ghgm",
+    "packages": [
+      "npm/openclaw"
+    ],
+    "affected_versions": [
+      "< 2026.6.6"
+    ],
+    "fixed_versions": [
+      "2026.6.6"
+    ],
+    "fixed_version": "2026.6.6",
+    "cwes": [
+      "CWE-918"
+    ]
+  },
+  {
     "ghsa_id": "GHSA-p73f-w79w-jqr5",
     "cve_id": null,
     "severity": "high",
@@ -2035,48 +2078,6 @@
     "fixed_version": "2026.5.12",
     "cwes": [
       "CWE-184"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-35c7-4r45-9gv3",
-    "cve_id": null,
-    "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
-    "published": "2026-06-13",
-    "html_url": "https://github.com/advisories/GHSA-35c7-4r45-9gv3",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.4.27"
-    ],
-    "fixed_versions": [
-      "2026.4.27"
-    ],
-    "fixed_version": "2026.4.27",
-    "cwes": [
-      "CWE-863"
-    ]
-  },
-  {
-    "ghsa_id": "GHSA-3qg8-hq7j-jj33",
-    "cve_id": null,
-    "severity": "high",
-    "title": "Duplicate Advisory: OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
-    "published": "2026-06-13",
-    "html_url": "https://github.com/advisories/GHSA-3qg8-hq7j-jj33",
-    "packages": [
-      "npm/openclaw"
-    ],
-    "affected_versions": [
-      "< 2026.5.18"
-    ],
-    "fixed_versions": [
-      "2026.5.18"
-    ],
-    "fixed_version": "2026.5.18",
-    "cwes": [
-      "CWE-290"
     ]
   },
   {

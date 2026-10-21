@@ -1,16 +1,17 @@
 # 📁 OpenClaw — Full Security Advisory List
 
-> Complete listing of all 212 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
+> Complete listing of all 211 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-10-21 16:53 UTC</sub>
+<sub>Last updated: 2026-10-21 21:25 UTC</sub>
 
 ---
 
-## GHSAs with CVE IDs (59)
+## GHSAs with CVE IDs (60)
 
 | GHSA | CVE | Severity | Title | Packages | Fixed in | Published |
 |------|-----|----------|-------|----------|----------|-----------|
+| [GHSA-3x84-qq85-fj65](https://github.com/advisories/GHSA-3x84-qq85-fj65) | CVE-2026-62197 | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs | npm/openclaw | 2026.6.6 | 2026-10-21 |
 | [GHSA-j472-gf56-x589](https://github.com/advisories/GHSA-j472-gf56-x589) | CVE-2026-53836 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks | npm/openclaw | 2026.5.12 | 2026-07-02 |
 | [GHSA-7hxm-f538-3xp6](https://github.com/advisories/GHSA-7hxm-f538-3xp6) | CVE-2026-53811 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Matrix allowFrom could bind to mutable display names | npm/openclaw | 2026.5.7 | 2026-07-02 |
 | [GHSA-3c6j-hq33-3jv4](https://github.com/advisories/GHSA-3c6j-hq33-3jv4) | CVE-2026-53816 | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw: Paired nodes could forge exec lifecycle events without system.run provenance | npm/openclaw | 2026.5.18 | 2026-07-02 |
@@ -73,15 +74,13 @@
 
 ---
 
-## GHSAs Without CVE — Potential Future CVEs (54)
+## GHSAs Without CVE — Potential Future CVEs (53)
 
 | GHSA | Severity | Title | CWEs | Fixed in | Published |
 |------|----------|-------|------|----------|-----------|
 | [GHSA-w4v6-g3wm-w36c](https://github.com/advisories/GHSA-w4v6-g3wm-w36c) | ![Critical](https://img.shields.io/badge/CRITICAL-8b0000?style=flat-square) | OpenClaw: QQBot admin commands could skip DM-only and allowFrom policy | CWE-863 | 2026.4.29 | 2026-07-02 |
 | [GHSA-r2c6-8jc8-g32w](https://github.com/advisories/GHSA-r2c6-8jc8-g32w) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: 1-Click RCE via Authentication Token Exfiltration From gatewayUrl | CWE-669 | 2026.1.29 | 2026-02-02 |
 | [GHSA-ffhm-8fwq-7q27](https://github.com/advisories/GHSA-ffhm-8fwq-7q27) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: PowerShell encoded-command aliases could miss exec allowlist checks | CWE-184 | 2026.5.12 | 2026-06-13 |
-| [GHSA-35c7-4r45-9gv3](https://github.com/advisories/GHSA-35c7-4r45-9gv3) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks | CWE-863 | 2026.4.27 | 2026-06-13 |
-| [GHSA-3qg8-hq7j-jj33](https://github.com/advisories/GHSA-3qg8-hq7j-jj33) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers | CWE-290 | 2026.5.18 | 2026-06-13 |
 | [GHSA-2w22-3f6x-3hf4](https://github.com/advisories/GHSA-2w22-3f6x-3hf4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Workspace-derived service PATH could influence trash command selection | CWE-426 | — | 2026-06-16 |
 | [GHSA-vr6h-vxqj-3pjx](https://github.com/advisories/GHSA-vr6h-vxqj-3pjx) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Host environment sanitizer missed two Node.js control variables | CWE-184 | — | 2026-06-16 |
 | [GHSA-v383-2wgg-v483](https://github.com/advisories/GHSA-v383-2wgg-v483) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Duplicate Advisory: Shell inline-command parsing could miss an allowlist check | CWE-862 | — | 2026-06-16 |
@@ -123,6 +122,7 @@
 | [GHSA-wv26-j37q-2g7p](https://github.com/advisories/GHSA-wv26-j37q-2g7p) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw's Slack plugin approvals used the exec approver gate for plugin actions | CWE-863 | 2026.5.12 | 2026-07-02 |
 | [GHSA-p2fh-f5fc-44hr](https://github.com/advisories/GHSA-p2fh-f5fc-44hr) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: memory-wiki ingest could read local files with operator.write scope | CWE-732 | 2026.5.12 | 2026-07-02 |
 | [GHSA-qh2f-99mv-mrcf](https://github.com/advisories/GHSA-qh2f-99mv-mrcf) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | OpenClaw: Bundle MCP loopback could miss its exec denylist on session spawn | CWE-78, CWE-284 | 2026.5.12 | 2026-07-02 |
+| [GHSA-jw7v-5mp7-ghgm](https://github.com/advisories/GHSA-jw7v-5mp7-ghgm) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Duplicate Advisory: Browser CDP discovery could accept blocked WebSocket URLs | CWE-918 | 2026.6.6 | 2026-07-14 |
 | [GHSA-chm2-m3w2-wcxm](https://github.com/advisories/GHSA-chm2-m3w2-wcxm) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | OpenClaw Google Chat spoofing access with allowlist authorized mutable email principal despite sender-ID mismatch | CWE-290, CWE-863 | 2026.2.14 | 2026-02-17 |
 | [GHSA-h9h6-pwqv-j9hv](https://github.com/advisories/GHSA-h9h6-pwqv-j9hv) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: Bootstrap token replay could widen pending pairing scopes | CWE-266 | — | 2026-06-16 |
 | [GHSA-8hj2-w4c9-fjfq](https://github.com/advisories/GHSA-8hj2-w4c9-fjfq) | ![Low](https://img.shields.io/badge/LOW-fdcb6e?style=flat-square) | Duplicate Advisory: BlueBubbles sender policy could match mutable conversation identifiers | CWE-807 | — | 2026-06-16 |
@@ -134,7 +134,7 @@
 
 ---
 
-## Repo-Only Advisories (99)
+## Repo-Only Advisories (98)
 
 These advisories are visible on the [repo security page](https://github.com/openclaw/openclaw/security/advisories) but are not indexed in the GitHub Advisory Database (no npm package mapping). They cannot be fetched via the Advisory Database API.
 
@@ -145,7 +145,6 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-3fp5-v549-9v66](https://github.com/openclaw/openclaw/security/advisories/GHSA-3fp5-v549-9v66) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | flock wrapper could bypass durable exec approval binding | 2026-06-30 |
 | [GHSA-3mq7-q27j-mq7q](https://github.com/openclaw/openclaw/security/advisories/GHSA-3mq7-q27j-mq7q) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Exec approvals could outlive their reviewed working directory | 2026-09-11 |
 | [GHSA-3pmr-x9g8-m55r](https://github.com/openclaw/openclaw/security/advisories/GHSA-3pmr-x9g8-m55r) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Discord guild actions could skip cross-provider requester authorization | 2026-06-30 |
-| [GHSA-3x84-qq85-fj65](https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Browser CDP discovery could accept blocked WebSocket URLs | 2026-06-30 |
 | [GHSA-4r25-35qc-fr6j](https://github.com/openclaw/openclaw/security/advisories/GHSA-4r25-35qc-fr6j) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Gateway upgrade-like requests could retain unauthenticated sockets | 2026-09-11 |
 | [GHSA-4wvr-f35r-f8w4](https://github.com/openclaw/openclaw/security/advisories/GHSA-4wvr-f35r-f8w4) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | message.action could trust spoofed requester provenance | 2026-09-11 |
 | [GHSA-52xj-c9p8-78cv](https://github.com/openclaw/openclaw/security/advisories/GHSA-52xj-c9p8-78cv) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | MCP loopback could expose owner-only tools to non-owner runs | 2026-06-30 |
@@ -859,6 +858,7 @@ Every CVE in [CVEProject/cvelistV5](https://github.com/CVEProject/cvelistV5) who
 | CVE-2026-53864 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |
 | CVE-2026-53865 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |
 | CVE-2026-53866 | ✅ **PUBLISHED** | ✅ | 2026-06-18 | VulnCheck |
+| CVE-2026-62197 | ✅ **PUBLISHED** | ✅ | 2026-10-21 | VulnCheck |
 
 ---
 

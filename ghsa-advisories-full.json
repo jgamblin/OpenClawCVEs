@@ -1,5 +1,166 @@
 [
   {
+    "ghsa_id": "GHSA-3x84-qq85-fj65",
+    "cve_id": "CVE-2026-62197",
+    "url": "https://api.github.com/advisories/GHSA-3x84-qq85-fj65",
+    "html_url": "https://github.com/advisories/GHSA-3x84-qq85-fj65",
+    "summary": "OpenClaw: Browser CDP discovery could accept blocked WebSocket URLs",
+    "description": "### Summary\n\nBrowser CDP discovery could accept blocked WebSocket URLs. In affected versions, a lower-trust caller or configured input path could reach network destinations that should have been blocked by OpenClaw policy.\n\nThis advisory is scoped to the named feature and configuration. It does not change OpenClaw's trusted-operator model: authenticated Gateway operators, installed plugins, and intentional local execution surfaces remain trusted unless a separate policy, approval, allowlist, sandbox, or auth boundary is crossed.\n\n### Impact\n\nWhen the affected feature is enabled and reachable, this could reach network destinations that should have been blocked by OpenClaw policy. Practical impact depends on the operator's configuration and whether lower-trust input can reach that path.\n\n### Patched Versions\n\nThe first stable patched version is `2026.6.6`.\n\n### Mitigations\n\nUpgrade to a patched OpenClaw release when one is listed. Before upgrading, restrict the affected feature to trusted operators or disable it when it is not needed. As general hardening, keep channel and tool allowlists narrow, avoid sharing one Gateway between mutually untrusted users, and disable the affected feature when it is not needed.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": "https://api.github.com/repos/openclaw/openclaw/security-advisories/GHSA-3x84-qq85-fj65",
+    "source_code_location": "https://github.com/openclaw/openclaw",
+    "identifiers": [
+      {
+        "value": "GHSA-3x84-qq85-fj65",
+        "type": "GHSA"
+      },
+      {
+        "value": "CVE-2026-62197",
+        "type": "CVE"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-62197",
+      "https://www.vulncheck.com/advisories/openclaw-policy-bypass-via-cdp-discovery",
+      "https://github.com/advisories/GHSA-3x84-qq85-fj65"
+    ],
+    "published_at": "2026-10-21T19:37:42Z",
+    "updated_at": "2026-10-21T19:37:44Z",
+    "github_reviewed_at": "2026-10-21T19:37:42Z",
+    "nvd_published_at": null,
+    "withdrawn_at": null,
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.6.6",
+        "first_patched_version": "2026.6.6",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "score": 8.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N",
+        "score": 6.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-284",
+        "name": "Improper Access Control"
+      },
+      {
+        "cwe_id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      }
+    ],
+    "credits": [
+      {
+        "user": {
+          "login": "jason-allen-oneal",
+          "id": 8335428,
+          "node_id": "MDQ6VXNlcjgzMzU0Mjg=",
+          "avatar_url": "https://avatars.githubusercontent.com/u/8335428?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/jason-allen-oneal",
+          "html_url": "https://github.com/jason-allen-oneal",
+          "followers_url": "https://api.github.com/users/jason-allen-oneal/followers",
+          "following_url": "https://api.github.com/users/jason-allen-oneal/following{/other_user}",
+          "gists_url": "https://api.github.com/users/jason-allen-oneal/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/jason-allen-oneal/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/jason-allen-oneal/subscriptions",
+          "organizations_url": "https://api.github.com/users/jason-allen-oneal/orgs",
+          "repos_url": "https://api.github.com/users/jason-allen-oneal/repos",
+          "events_url": "https://api.github.com/users/jason-allen-oneal/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/jason-allen-oneal/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "type": "reporter"
+      }
+    ],
+    "comments": 3,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "score": 8.5
+    },
+    "epss": {
+      "percentage": 0.00334,
+      "percentile": 0.24521
+    }
+  },
+  {
+    "ghsa_id": "GHSA-jw7v-5mp7-ghgm",
+    "cve_id": null,
+    "url": "https://api.github.com/advisories/GHSA-jw7v-5mp7-ghgm",
+    "html_url": "https://github.com/advisories/GHSA-jw7v-5mp7-ghgm",
+    "summary": "Duplicate Advisory: Browser CDP discovery could accept blocked WebSocket URLs",
+    "description": "## Duplicate Advisory\n\nThis advisory has been withdrawn because it is a duplicate of\u00a0GHSA-3x84-qq85-fj65. This link is maintained to preserve external references.\n\n## Original Description\nOpenClaw before 2026.6.6 contains a policy bypass vulnerability in browser CDP discovery that accepts blocked WebSocket URLs. Attackers with lower-trust access can reach network destinations that should have been blocked by OpenClaw policy when the affected feature is enabled.",
+    "type": "reviewed",
+    "severity": "medium",
+    "repository_advisory_url": null,
+    "source_code_location": "",
+    "identifiers": [
+      {
+        "value": "GHSA-jw7v-5mp7-ghgm",
+        "type": "GHSA"
+      }
+    ],
+    "references": [
+      "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65",
+      "https://nvd.nist.gov/vuln/detail/CVE-2026-62197",
+      "https://www.vulncheck.com/advisories/openclaw-policy-bypass-via-cdp-discovery",
+      "https://github.com/advisories/GHSA-jw7v-5mp7-ghgm"
+    ],
+    "published_at": "2026-07-14T00:31:04Z",
+    "updated_at": "2026-10-21T19:34:52Z",
+    "github_reviewed_at": "2026-10-21T19:34:50Z",
+    "nvd_published_at": "2026-07-13T22:16:51Z",
+    "withdrawn_at": "2026-10-21T19:34:50Z",
+    "vulnerabilities": [
+      {
+        "package": {
+          "ecosystem": "npm",
+          "name": "openclaw"
+        },
+        "vulnerable_version_range": "< 2026.6.6",
+        "first_patched_version": "2026.6.6",
+        "vulnerable_functions": []
+      }
+    ],
+    "cvss_severities": {
+      "cvss_v3": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+        "score": 8.5
+      },
+      "cvss_v4": {
+        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:N/SC:H/SI:L/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
+        "score": 6.3
+      }
+    },
+    "cwes": [
+      {
+        "cwe_id": "CWE-918",
+        "name": "Server-Side Request Forgery (SSRF)"
+      }
+    ],
+    "credits": [],
+    "comments": 0,
+    "cvss": {
+      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:L/A:N",
+      "score": 8.5
+    }
+  },
+  {
     "ghsa_id": "GHSA-p73f-w79w-jqr5",
     "cve_id": null,
     "url": "https://api.github.com/advisories/GHSA-p73f-w79w-jqr5",
@@ -9259,130 +9420,6 @@
     "cvss": {
       "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
       "score": 8.8
-    }
-  },
-  {
-    "ghsa_id": "GHSA-35c7-4r45-9gv3",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-35c7-4r45-9gv3",
-    "html_url": "https://github.com/advisories/GHSA-35c7-4r45-9gv3",
-    "summary": "Duplicate Advisory: OpenClaw: QQBot pre-dispatch slash commands could skip allowFrom checks",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-77pv-3w4q-vrj5. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.4.27 contains an authorization bypass vulnerability in QQBot pre-dispatch slash commands that allows authenticated senders to skip allowFrom policy checks. Attackers can invoke slash commands before configured access control policies are applied, potentially triggering command handling from blocked senders depending on operator configuration.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-35c7-4r45-9gv3",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-77pv-3w4q-vrj5",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-53834",
-      "https://www.vulncheck.com/advisories/openclaw-authorization-bypass-in-qqbot-pre-dispatch-slash-commands",
-      "https://github.com/advisories/GHSA-35c7-4r45-9gv3"
-    ],
-    "published_at": "2026-06-13T00:34:32Z",
-    "updated_at": "2026-08-28T15:55:18Z",
-    "github_reviewed_at": "2026-08-28T15:55:16Z",
-    "nvd_published_at": "2026-06-12T22:16:55Z",
-    "withdrawn_at": "2026-08-28T15:55:16Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.4.27",
-        "first_patched_version": "2026.4.27",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-        "score": 7.5
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 8.2
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-863",
-        "name": "Incorrect Authorization"
-      }
-    ],
-    "credits": [],
-    "comments": 0,
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
-      "score": 7.5
-    }
-  },
-  {
-    "ghsa_id": "GHSA-3qg8-hq7j-jj33",
-    "cve_id": null,
-    "url": "https://api.github.com/advisories/GHSA-3qg8-hq7j-jj33",
-    "html_url": "https://github.com/advisories/GHSA-3qg8-hq7j-jj33",
-    "summary": "Duplicate Advisory: OpenClaw: Same-host trusted-proxy deployments could accept local forged identity headers",
-    "description": "### Duplicate Advisory\nThis advisory has been withdrawn because it is a duplicate of GHSA-rggc-m335-3wvj. This link is maintained to preserve external references.\n\n### Original Description\nOpenClaw before 2026.5.18 contains an identity header validation vulnerability allowing local same-host callers to forge trusted-proxy identity headers. Attackers with access to the proxy-facing Gateway port can supply forged identity headers to assume operator identity and potentially escalate privileges.",
-    "type": "reviewed",
-    "severity": "high",
-    "repository_advisory_url": null,
-    "source_code_location": "https://github.com/openclaw/openclaw",
-    "identifiers": [
-      {
-        "value": "GHSA-3qg8-hq7j-jj33",
-        "type": "GHSA"
-      }
-    ],
-    "references": [
-      "https://github.com/openclaw/openclaw/security/advisories/GHSA-rggc-m335-3wvj",
-      "https://nvd.nist.gov/vuln/detail/CVE-2026-53832",
-      "https://www.vulncheck.com/advisories/openclaw-identity-header-forgery-via-trusted-proxy-configuration",
-      "https://github.com/advisories/GHSA-3qg8-hq7j-jj33"
-    ],
-    "published_at": "2026-06-13T00:34:32Z",
-    "updated_at": "2026-08-28T15:55:43Z",
-    "github_reviewed_at": "2026-08-28T15:55:42Z",
-    "nvd_published_at": "2026-06-12T22:16:54Z",
-    "withdrawn_at": "2026-08-28T15:55:42Z",
-    "vulnerabilities": [
-      {
-        "package": {
-          "ecosystem": "npm",
-          "name": "openclaw"
-        },
-        "vulnerable_version_range": "< 2026.5.18",
-        "first_patched_version": "2026.5.18",
-        "vulnerable_functions": []
-      }
-    ],
-    "cvss_severities": {
-      "cvss_v3": {
-        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-        "score": 7.7
-      },
-      "cvss_v4": {
-        "vector_string": "CVSS:4.0/AV:L/AC:L/AT:P/PR:N/UI:N/VC:H/VI:H/VA:N/SC:N/SI:N/SA:N/E:X/CR:X/IR:X/AR:X/MAV:X/MAC:X/MAT:X/MPR:X/MUI:X/MVC:X/MVI:X/MVA:X/MSC:X/MSI:X/MSA:X/S:X/AU:X/R:X/V:X/RE:X/U:X",
-        "score": 7.4
-      }
-    },
-    "cwes": [
-      {
-        "cwe_id": "CWE-290",
-        "name": "Authentication Bypass by Spoofing"
-      }
-    ],
-    "credits": [],
-    "comments": 0,
-    "cvss": {
-      "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
-      "score": 7.7
     }
   },
   {

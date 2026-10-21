@@ -35,13 +35,6 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3pmr-x9g8-m55r"
   },
   {
-    "ghsa_id": "GHSA-3x84-qq85-fj65",
-    "severity": "HIGH",
-    "title": "Browser CDP discovery could accept blocked WebSocket URLs",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-3x84-qq85-fj65"
-  },
-  {
     "ghsa_id": "GHSA-4r25-35qc-fr6j",
     "severity": "HIGH",
     "title": "Gateway upgrade-like requests could retain unauthenticated sockets",
