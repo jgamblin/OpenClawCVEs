@@ -9529,8 +9529,8 @@
       "score": 5.9
     },
     "epss": {
-      "percentage": 0.00378,
-      "percentile": 0.30536
+      "percentage": 0.00387,
+      "percentile": 0.31524
     }
   },
   {
@@ -9639,8 +9639,8 @@
       "score": 9.8
     },
     "epss": {
-      "percentage": 0.00514,
-      "percentile": 0.42514
+      "percentage": 0.00525,
+      "percentile": 0.43701
     }
   },
   {
@@ -9846,8 +9846,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.00824,
-      "percentile": 0.56501
+      "percentage": 0.00842,
+      "percentile": 0.57495
     }
   },
   {
@@ -9957,8 +9957,8 @@
       "score": 6.5
     },
     "epss": {
-      "percentage": 0.00465,
-      "percentile": 0.38526
+      "percentage": 0.00475,
+      "percentile": 0.40095
     }
   },
   {
@@ -10067,8 +10067,8 @@
       "score": 5.5
     },
     "epss": {
-      "percentage": 0.00491,
-      "percentile": 0.40662
+      "percentage": 0.00502,
+      "percentile": 0.42027
     }
   },
   {
@@ -10829,8 +10829,8 @@
       "score": 7.5
     },
     "epss": {
-      "percentage": 0.00454,
-      "percentile": 0.37516
+      "percentage": 0.00464,
+      "percentile": 0.39236
     }
   }
 ]
