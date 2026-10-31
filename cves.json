@@ -32,12 +32,12 @@
     "ghsa_id": "GHSA-6fvr-66p3-3qj4"
   },
   {
-    "cve_id": "CVE-2026-53836",
+    "cve_id": "CVE-2026-53817",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-j472-gf56-x589"
+    "title": "OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-chr9-m4q2-76hw"
   },
   {
     "cve_id": "CVE-2026-53819",
@@ -48,12 +48,12 @@
     "ghsa_id": "GHSA-8wg3-5mcm-fjq8"
   },
   {
-    "cve_id": "CVE-2026-53817",
+    "cve_id": "CVE-2026-53836",
     "severity": "HIGH",
     "cvss": 8.7,
-    "title": "OpenClaw < 2026.5.22 - Control UI Locality Spoofing in Device Pairing",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-chr9-m4q2-76hw"
+    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass via PowerShell Encoded-Command Aliases",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-j472-gf56-x589"
   },
   {
     "cve_id": "CVE-2026-53843",
@@ -128,14 +128,6 @@
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
   },
   {
-    "cve_id": "CVE-2026-53810",
-    "severity": "HIGH",
-    "cvss": 7.7,
-    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
-    "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
-  },
-  {
     "cve_id": "CVE-2026-53811",
     "severity": "HIGH",
     "cvss": 7.7,
@@ -144,20 +136,20 @@
     "ghsa_id": "GHSA-7hxm-f538-3xp6"
   },
   {
+    "cve_id": "CVE-2026-53810",
+    "severity": "HIGH",
+    "cvss": 7.7,
+    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
+    "date_published": "2026-06-11",
+    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
+  },
+  {
     "cve_id": "CVE-2026-53831",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw's POSIX node system.run safe-bin allowlist could be widened by shell expansion",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-mhq8-78pj-5j79"
-  },
-  {
-    "cve_id": "CVE-2026-53855",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-5cj2-3jr2-5h77"
   },
   {
     "cve_id": "CVE-2026-53853",
@@ -176,6 +168,14 @@
     "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
   },
   {
+    "cve_id": "CVE-2026-53855",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw < 2026.4.2 - Shell Positional Parameters Bypass in Inline-Eval Checks",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-5cj2-3jr2-5h77"
+  },
+  {
     "cve_id": "CVE-2026-53866",
     "severity": "HIGH",
     "cvss": 7.6,
@@ -192,20 +192,20 @@
     "ghsa_id": "GHSA-mr32-vwc2-5j6h"
   },
   {
-    "cve_id": "CVE-2026-53833",
-    "severity": "HIGH",
-    "cvss": 7.4,
-    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-jvm4-4j77-39p6"
-  },
-  {
     "cve_id": "CVE-2026-53832",
     "severity": "HIGH",
     "cvss": 7.4,
     "title": "OpenClaw < 2026.5.18 - Identity Header Forgery via Trusted-Proxy Configuration",
     "date_published": "2026-06-12",
     "ghsa_id": "GHSA-rggc-m335-3wvj"
+  },
+  {
+    "cve_id": "CVE-2026-53833",
+    "severity": "HIGH",
+    "cvss": 7.4,
+    "title": "OpenClaw: QQBot streaming command could mutate config without explicit allowFrom",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-jvm4-4j77-39p6"
   },
   {
     "cve_id": "CVE-2026-53813",
@@ -240,20 +240,20 @@
     "ghsa_id": "GHSA-q7q8-3mgw-q67r"
   },
   {
-    "cve_id": "CVE-2026-53846",
-    "severity": "HIGH",
-    "cvss": 7,
-    "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-24vr-rprv-67rf"
-  },
-  {
     "cve_id": "CVE-2026-53842",
     "severity": "HIGH",
     "cvss": 7,
     "title": "OpenClaw: Workspace .env CLOUDSDK_PYTHON could influence Gmail setup gcloud execution",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-fq9j-vw4w-fr6v"
+  },
+  {
+    "cve_id": "CVE-2026-53846",
+    "severity": "HIGH",
+    "cvss": 7,
+    "title": "OpenClaw: Workspace .env npm_execpath could influence bundled runtime dependency install",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-24vr-rprv-67rf"
   },
   {
     "cve_id": "CVE-2026-53858",
@@ -352,20 +352,20 @@
     "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
   },
   {
-    "cve_id": "CVE-2026-53838",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw < 2026.5.27 - Node Pairing State Mutation via Reconnection",
-    "date_published": "2026-06-12",
-    "ghsa_id": "GHSA-83w9-h5wv-j9xm"
-  },
-  {
     "cve_id": "CVE-2026-53844",
     "severity": "MEDIUM",
     "cvss": 6,
     "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-72fw-cqh5-f324"
+  },
+  {
+    "cve_id": "CVE-2026-53838",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw < 2026.5.27 - Node Pairing State Mutation via Reconnection",
+    "date_published": "2026-06-12",
+    "ghsa_id": "GHSA-83w9-h5wv-j9xm"
   },
   {
     "cve_id": "CVE-2026-53854",
@@ -448,12 +448,12 @@
     "ghsa_id": "GHSA-cwpp-5962-q4f6"
   },
   {
-    "cve_id": "CVE-2026-53862",
+    "cve_id": "CVE-2026-53852",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
+    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
+    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
   },
   {
     "cve_id": "CVE-2026-53860",
@@ -464,12 +464,12 @@
     "ghsa_id": "GHSA-8j37-5w68-wj2g"
   },
   {
-    "cve_id": "CVE-2026-53852",
+    "cve_id": "CVE-2026-53862",
     "severity": "LOW",
     "cvss": 2.3,
-    "title": "OpenClaw < 2026.4.25 - Scope Bypass via Empty-Scope Device Re-pairing",
+    "title": "OpenClaw < 2026.5.12 - Bootstrap Token Replay via Pending Pairing Scope Widening",
     "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-8mg9-j9cf-54cj"
+    "ghsa_id": "GHSA-9v8j-9c9g-w66c"
   },
   {
     "cve_id": "CVE-2026-53841",
