@@ -59,7 +59,7 @@
       },
       {
         "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
+        "name": "Server-Side Request Forgery"
       }
     ],
     "credits": [
@@ -150,7 +150,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
+        "name": "Server-Side Request Forgery"
       }
     ],
     "credits": [],
@@ -2344,7 +2344,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-636",
-        "name": "Not Failing Securely ('Failing Open')"
+        "name": "Not Failing Securely"
       }
     ],
     "credits": [
@@ -3291,7 +3291,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       },
       {
         "cwe_id": "CWE-200",
@@ -3886,11 +3886,11 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       },
       {
         "cwe_id": "CWE-94",
-        "name": "Improper Control of Generation of Code ('Code Injection')"
+        "name": "Improper Control of Generation of Code"
       },
       {
         "cwe_id": "CWE-284",
@@ -4021,7 +4021,7 @@
       },
       {
         "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
+        "name": "Server-Side Request Forgery"
       }
     ],
     "credits": [
@@ -4194,7 +4194,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       },
       {
         "cwe_id": "CWE-284",
@@ -4527,7 +4527,7 @@
       },
       {
         "cwe_id": "CWE-601",
-        "name": "URL Redirection to Untrusted Site ('Open Redirect')"
+        "name": "URL Redirection to Untrusted Site"
       }
     ],
     "credits": [
@@ -4761,7 +4761,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-636",
-        "name": "Not Failing Securely ('Failing Open')"
+        "name": "Not Failing Securely"
       }
     ],
     "credits": [
@@ -6215,7 +6215,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-79",
-        "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        "name": "Improper Neutralization of Input During Web Page Generation"
       }
     ],
     "credits": [
@@ -6500,7 +6500,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       },
       {
         "cwe_id": "CWE-269",
@@ -6635,7 +6635,7 @@
       },
       {
         "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
+        "name": "Server-Side Request Forgery"
       }
     ],
     "credits": [
@@ -6730,7 +6730,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       },
       {
         "cwe_id": "CWE-184",
@@ -8048,7 +8048,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-918",
-        "name": "Server-Side Request Forgery (SSRF)"
+        "name": "Server-Side Request Forgery"
       }
     ],
     "credits": [],
@@ -8234,7 +8234,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-636",
-        "name": "Not Failing Securely ('Failing Open')"
+        "name": "Not Failing Securely"
       }
     ],
     "credits": [],
@@ -9350,7 +9350,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-636",
-        "name": "Not Failing Securely ('Failing Open')"
+        "name": "Not Failing Securely"
       }
     ],
     "credits": [],
@@ -9709,7 +9709,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-352",
-        "name": "Cross-Site Request Forgery (CSRF)"
+        "name": "Cross-Site Request Forgery"
       }
     ],
     "credits": [
@@ -10336,7 +10336,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       }
     ],
     "credits": [
@@ -10577,7 +10577,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-78",
-        "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        "name": "Improper Neutralization of Special Elements used in an OS Command"
       }
     ],
     "credits": [
@@ -10746,7 +10746,7 @@
     "cwes": [
       {
         "cwe_id": "CWE-306",
-        "name": "Missing Authentication for Critical Function"
+        "name": "Missing Authentication for Critical Functionality"
       }
     ],
     "credits": [
