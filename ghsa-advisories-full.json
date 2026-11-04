@@ -1802,7 +1802,7 @@
     },
     "epss": {
       "percentage": 0.00298,
-      "percentile": 0.22238
+      "percentile": 0.22528
     }
   },
   {
@@ -5537,7 +5537,7 @@
     },
     "epss": {
       "percentage": 0.00171,
-      "percentile": 0.06472
+      "percentile": 0.06516
     }
   },
   {
@@ -6251,7 +6251,7 @@
     },
     "epss": {
       "percentage": 0.00188,
-      "percentile": 0.08353
+      "percentile": 0.08518
     }
   },
   {
