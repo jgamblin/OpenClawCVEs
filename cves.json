@@ -120,12 +120,12 @@
     "ghsa_id": "GHSA-q284-4pvr-m585"
   },
   {
-    "cve_id": "CVE-2026-53811",
+    "cve_id": "CVE-2026-53810",
     "severity": "HIGH",
     "cvss": 7.7,
-    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
+    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-7hxm-f538-3xp6"
+    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
   },
   {
     "cve_id": "CVE-2026-53806",
@@ -136,12 +136,12 @@
     "ghsa_id": "GHSA-vxx3-6hc9-7cc3"
   },
   {
-    "cve_id": "CVE-2026-53810",
+    "cve_id": "CVE-2026-53811",
     "severity": "HIGH",
     "cvss": 7.7,
-    "title": "OpenClaw's marketplace runtime extension metadata could point at unscanned payloads",
+    "title": "OpenClaw: Matrix allowFrom could bind to mutable display names",
     "date_published": "2026-06-11",
-    "ghsa_id": "GHSA-v6r2-jh58-xx6w"
+    "ghsa_id": "GHSA-7hxm-f538-3xp6"
   },
   {
     "cve_id": "CVE-2026-53831",
@@ -152,14 +152,6 @@
     "ghsa_id": "GHSA-mhq8-78pj-5j79"
   },
   {
-    "cve_id": "CVE-2026-53853",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
-  },
-  {
     "cve_id": "CVE-2026-53855",
     "severity": "HIGH",
     "cvss": 7.6,
@@ -168,20 +160,28 @@
     "ghsa_id": "GHSA-5cj2-3jr2-5h77"
   },
   {
-    "cve_id": "CVE-2026-53866",
-    "severity": "HIGH",
-    "cvss": 7.6,
-    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-f397-5vjw-v2c2"
-  },
-  {
     "cve_id": "CVE-2026-53864",
     "severity": "HIGH",
     "cvss": 7.6,
     "title": "OpenClaw: Host environment sanitizer missed two Node.js control variables",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-ccwh-wwpp-6wg5"
+  },
+  {
+    "cve_id": "CVE-2026-53853",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw: Linux and macOS exec allowlists skipped configured argument patterns",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-v2ww-5rh7-2h5v"
+  },
+  {
+    "cve_id": "CVE-2026-53866",
+    "severity": "HIGH",
+    "cvss": 7.6,
+    "title": "OpenClaw < 2026.5.12 - Allowlist Bypass in Shell Inline-Command Parsing",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-f397-5vjw-v2c2"
   },
   {
     "cve_id": "CVE-2026-28458",
@@ -344,6 +344,14 @@
     "ghsa_id": "GHSA-275c-xpvc-jgfw"
   },
   {
+    "cve_id": "CVE-2026-53840",
+    "severity": "MEDIUM",
+    "cvss": 6,
+    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
+    "date_published": "2026-06-16",
+    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
+  },
+  {
     "cve_id": "CVE-2026-53838",
     "severity": "MEDIUM",
     "cvss": 6,
@@ -358,14 +366,6 @@
     "title": "OpenClaw < 2026.4.29 - Session Visibility Check Bypass in Shared Memory Search",
     "date_published": "2026-06-16",
     "ghsa_id": "GHSA-72fw-cqh5-f324"
-  },
-  {
-    "cve_id": "CVE-2026-53840",
-    "severity": "MEDIUM",
-    "cvss": 6,
-    "title": "OpenClaw: MCP Streamable HTTP redirects could forward configured custom headers to another origin",
-    "date_published": "2026-06-16",
-    "ghsa_id": "GHSA-rjxq-qqhf-8hwh"
   },
   {
     "cve_id": "CVE-2026-53854",

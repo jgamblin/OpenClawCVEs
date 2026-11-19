@@ -280,6 +280,13 @@
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pjjr-5qhr-5w6r"
   },
   {
+    "ghsa_id": "GHSA-pw3x-g8v8-fvj2",
+    "severity": "HIGH",
+    "title": "OpenClaw delegation could skip approval for restricted agents",
+    "published": "2026-11-19",
+    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-pw3x-g8v8-fvj2"
+  },
+  {
     "ghsa_id": "GHSA-qgj5-6x35-9g6f",
     "severity": "HIGH",
     "title": "Config revision hashes could expose password verifiers",
@@ -390,13 +397,6 @@
     "title": "Diagnostics export could omit owner authorization",
     "published": "2026-09-11",
     "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4hwv-rj92-h7rp"
-  },
-  {
-    "ghsa_id": "GHSA-4xwj-mcc7-x7x5",
-    "severity": "MEDIUM",
-    "title": "Remote media URLs could slow-read exhaust tool workers",
-    "published": "2026-06-30",
-    "html_url": "https://github.com/openclaw/openclaw/security/advisories/GHSA-4xwj-mcc7-x7x5"
   },
   {
     "ghsa_id": "GHSA-5fwv-rrvp-8xvr",

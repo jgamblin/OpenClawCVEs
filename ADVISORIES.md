@@ -3,7 +3,7 @@
 > Complete listing of all 211 security advisories tracked for [OpenClaw](https://github.com/openclaw/openclaw).
 > For the summary dashboard, see the [main README](README.md).
 
-<sub>Last updated: 2026-11-19 00:02 UTC</sub>
+<sub>Last updated: 2026-11-19 15:28 UTC</sub>
 
 ---
 
@@ -180,6 +180,7 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-p5g8-m35v-7m82](https://github.com/openclaw/openclaw/security/advisories/GHSA-p5g8-m35v-7m82) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Claude permission replies could omit owner authorization | 2026-09-11 |
 | [GHSA-p5xh-frrh-cmgj](https://github.com/openclaw/openclaw/security/advisories/GHSA-p5xh-frrh-cmgj) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | MS Teams message actions could miss requester authorization | 2026-06-30 |
 | [GHSA-pjjr-5qhr-5w6r](https://github.com/openclaw/openclaw/security/advisories/GHSA-pjjr-5qhr-5w6r) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Codex computer-use install could omit owner authorization | 2026-09-11 |
+| [GHSA-pw3x-g8v8-fvj2](https://github.com/openclaw/openclaw/security/advisories/GHSA-pw3x-g8v8-fvj2) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | OpenClaw delegation could skip approval for restricted agents | 2026-11-19 |
 | [GHSA-qgj5-6x35-9g6f](https://github.com/openclaw/openclaw/security/advisories/GHSA-qgj5-6x35-9g6f) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Config revision hashes could expose password verifiers | 2026-09-11 |
 | [GHSA-qw7m-h363-33qw](https://github.com/openclaw/openclaw/security/advisories/GHSA-qw7m-h363-33qw) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | chat.send could expose owner-only infrastructure tools | 2026-09-11 |
 | [GHSA-r88x-r7jj-f2cf](https://github.com/openclaw/openclaw/security/advisories/GHSA-r88x-r7jj-f2cf) | ![High](https://img.shields.io/badge/HIGH-d63031?style=flat-square) | Signal reactions could bind to the wrong approval | 2026-09-11 |
@@ -196,7 +197,6 @@ These advisories are visible on the [repo security page](https://github.com/open
 | [GHSA-39hf-qg99-f4qv](https://github.com/openclaw/openclaw/security/advisories/GHSA-39hf-qg99-f4qv) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Google Meet attendance CSV could interpret names as formulas | 2026-09-11 |
 | [GHSA-4g58-43jr-6738](https://github.com/openclaw/openclaw/security/advisories/GHSA-4g58-43jr-6738) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Browser wait predicates could reach blocked destinations | 2026-09-11 |
 | [GHSA-4hwv-rj92-h7rp](https://github.com/openclaw/openclaw/security/advisories/GHSA-4hwv-rj92-h7rp) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Diagnostics export could omit owner authorization | 2026-09-11 |
-| [GHSA-4xwj-mcc7-x7x5](https://github.com/openclaw/openclaw/security/advisories/GHSA-4xwj-mcc7-x7x5) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Remote media URLs could slow-read exhaust tool workers | 2026-06-30 |
 | [GHSA-5fwv-rrvp-8xvr](https://github.com/openclaw/openclaw/security/advisories/GHSA-5fwv-rrvp-8xvr) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Session filename generation could regain denied tools | 2026-09-11 |
 | [GHSA-5j27-v2pw-cj9m](https://github.com/openclaw/openclaw/security/advisories/GHSA-5j27-v2pw-cj9m) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | Talk Voice changes could omit admin authorization | 2026-09-11 |
 | [GHSA-5j57-84cx-r295](https://github.com/openclaw/openclaw/security/advisories/GHSA-5j57-84cx-r295) | ![Medium](https://img.shields.io/badge/MEDIUM-e17055?style=flat-square) | iOS deep-link logs could expose unattended credentials | 2026-09-11 |
